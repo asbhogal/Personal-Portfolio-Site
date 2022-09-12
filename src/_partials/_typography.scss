@@ -30,11 +30,11 @@ The following fonts are used under the personal license:
 h1, h2, h3 {
     font-family: 'The Billion', cursive;
     font-weight: 200;
-    &:not(h2, h3) {
-        color: $main-color-03;
-    }
     &:not(h1) {
         color: $main-color-02;
+    }
+    &:not(h2, h3) {
+        color: $main-color-03;
     }
 }
 

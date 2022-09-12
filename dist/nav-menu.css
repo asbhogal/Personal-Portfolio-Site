@@ -24,11 +24,11 @@ h1, h2, h3 {
   font-family: "The Billion", cursive;
   font-weight: 200;
 }
-h1:not(h2, h3), h2:not(h2, h3), h3:not(h2, h3) {
-  color: #926c15;
-}
 h1:not(h1), h2:not(h1), h3:not(h1) {
   color: #737373;
+}
+h1:not(h2, h3), h2:not(h2, h3), h3:not(h2, h3) {
+  color: #926c15;
 }
 
 body, p, span, a {
