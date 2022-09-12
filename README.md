@@ -1,5 +1,7 @@
 <h1>Personal Portfolio Site</h1>
 
+![](https://api.checklyhq.com/v1/badges/checks/964be065-c7c8-4d2e-b4f4-6338ba80de87?style=for-the-badge&theme=dark) ![](https://api.checklyhq.com/v1/badges/checks/964be065-c7c8-4d2e-b4f4-6338ba80de87?style=for-the-badge&theme=dark&responseTime=true)
+
 A personal portfolio site created for the repo owner to showcase his skills, experience and reviews. The site features an 'About', 'Contact', 'Web Portfolio' and 'Whisky Review' page and leverages jQuery AJAX to request individual elements. 
 
 <strong>Features</strong><br>
