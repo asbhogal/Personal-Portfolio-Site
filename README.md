@@ -2,11 +2,12 @@
 
 ![](https://api.checklyhq.com/v1/badges/checks/964be065-c7c8-4d2e-b4f4-6338ba80de87?style=for-the-badge&theme=dark) ![](https://api.checklyhq.com/v1/badges/checks/964be065-c7c8-4d2e-b4f4-6338ba80de87?style=for-the-badge&theme=dark&responseTime=true)
 
-A personal portfolio site created for the repo owner to showcase his skills, experience and reviews. The site features an 'About', 'Contact', 'Web Portfolio' and 'Whisky Review' page and leverages jQuery AJAX to request individual elements. 
+A personal portfolio site created for the repo owner to showcase his skills, experience and reviews. The site features an 'About', 'Contact', 'Web Portfolio' and 'Whisky Review' page and leverages jQuery AJAX to request individual elements. This repo is currently under development.
 
-<strong>Features</strong><br>
-    -   Stylish, modern interface
-    -   Full responsiveness
+<strong>Features:</strong><br>
+  - Stylish, modern interface
+  - Fully responsive
+  - Optimised for the web
 
 <strong>Stacks Used</strong>
 
@@ -19,5 +20,5 @@ A personal portfolio site created for the repo owner to showcase his skills, exp
 <strong>Credits</strong><br>
 
 The author of this repo gives credit to the following creators:
-    -   , for The Billion, under personal, non-commercial usage
+    -   <a href="https://www.behance.net/gallery/137539009/FREE-The-Billion-Font">Lemonthe</a>, for The Billion font, licensed under personal, non-commercial usage
     -   , for Flat Level, under personal, non-commercial usage
