@@ -1,0 +1,44 @@
+/* == DISCLAIMER ==
+
+The following fonts are used under the personal license:
+    -   Amsterdam Four
+    -   Flat Level
+*/
+
+@import 'variables';
+
+/****** THE BILLION - 300 LIGHT ******/
+
+@font-face {
+    font-family: 'The Billion';
+    font-weight: 300;
+    src:    url('/src/assets/fonts/The Billion.woff') format('woff'),
+            url('/src/assets/fonts/The Billion.woff2') format('woff2');
+    font-display: swap;
+}
+
+/****** FLAT LEVEL - 300 LIGHT ******/
+
+@font-face {
+    font-family: 'Flat Level';
+    src:    url('/src/assets/fonts/Flat_Level_Light.woff') format('woff'),
+            url('/src/assets/fonts/Flat_Level_Light.woff2') format('woff2');
+}
+
+/****** TYPOGRAPHY ASSIGNMENT ******/
+
+h1, h2, h3 {
+    font-family: 'The Billion', cursive;
+    font-weight: 200;
+    &:not(h2, h3) {
+        color: $main-color-03;
+    }
+    &:not(h1) {
+        color: $main-color-02;
+    }
+}
+
+body, p, span, a {
+    font-family: 'Flat Level', monospace;
+    color: $main-color-02;
+}

@@ -1,0 +1,162 @@
+/******** IMPORT PARTIAL STYLESHEETS ********/ /****** COLORS ******/
+/****** POSITIONING ******/
+/****** TRANSITIONS & ANIMATIONS ******/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: crosshair;
+}
+
+/* == DISCLAIMER ==
+
+The following fonts are used under the personal license:
+    -   Amsterdam Four
+    -   Flat Level
+*/
+/****** COLORS ******/
+/****** POSITIONING ******/
+/****** TRANSITIONS & ANIMATIONS ******/
+/****** THE BILLION - 300 LIGHT ******/
+@font-face {
+  font-family: "The Billion";
+  font-weight: 300;
+  src: url("/src/assets/fonts/The Billion.woff") format("woff"), url("/src/assets/fonts/The Billion.woff2") format("woff2");
+  font-display: swap;
+}
+/****** FLAT LEVEL - 300 LIGHT ******/
+@font-face {
+  font-family: "Flat Level";
+  src: url("/src/assets/fonts/Flat_Level_Light.woff") format("woff"), url("/src/assets/fonts/Flat_Level_Light.woff2") format("woff2");
+}
+/****** TYPOGRAPHY ASSIGNMENT ******/
+h1, h2, h3 {
+  font-family: "The Billion", cursive;
+  font-weight: 200;
+}
+h1:not(h2, h3), h2:not(h2, h3), h3:not(h2, h3) {
+  color: #926c15;
+}
+h1:not(h1), h2:not(h1), h3:not(h1) {
+  color: #737373;
+}
+
+body, p, span, a {
+  font-family: "Flat Level", monospace;
+  color: #737373;
+}
+
+/****** COLORS ******/
+/****** POSITIONING ******/
+/****** TRANSITIONS & ANIMATIONS ******/
+/******** MAIN STYLING ********/
+body {
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.background-face {
+  background-image: url("/src/assets/images/New Portfolio Website Mockup.jpg");
+  height: 100%;
+  background-size: cover;
+}
+
+.top-section {
+  padding: 20px;
+  height: 100vh;
+}
+.top-section #site-title {
+  padding: 40px 30px 0 70px;
+  font-size: 62px;
+  display: inline-block;
+}
+.top-section #subheading {
+  text-transform: uppercase;
+  line-height: 3em;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px 0 20px;
+  width: fit-content;
+}
+.top-section #subheading .typed-out {
+  font-size: 42px;
+  overflow: hidden;
+  width: 0;
+  white-space: nowrap;
+  border-right: 0.15em solid #926c15;
+  animation-delay: 20 !important;
+  animation: typing-effect 2s steps(70, end) forwards;
+}
+.top-section #subheading #subheading-2 {
+  animation-delay: 2s;
+}
+
+.home-page-link-list {
+  width: 75%;
+}
+.home-page-link-list ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 20px;
+}
+.home-page-link-list ul .home-page-item {
+  padding: 35px 55px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+.home-page-link-list ul .home-page-item:after {
+  content: "";
+  background: red;
+  height: 90px;
+  width: 30%;
+  top: -40px;
+  left: -60px;
+  background: #926c15;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+.home-page-link-list ul .home-page-item:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.home-page-link-list ul .home-page-item .page_link {
+  position: relative;
+  top: -20px;
+  left: -30px;
+  text-decoration: none;
+  font-size: 28px;
+}
+.home-page-link-list ul .home-page-item .page_link:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  top: 100%;
+  left: 0;
+  background: #926c15;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+.home-page-link-list ul .home-page-item .page_link:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+hr.base-line {
+  bottom: -88px;
+  position: relative;
+  width: 60%;
+}
+
+/******** KEYFRAMES ********/
+@keyframes typing-effect {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
