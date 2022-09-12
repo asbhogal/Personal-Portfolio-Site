@@ -28,6 +28,7 @@ The following fonts are used under the personal, non-commercial license:
 @font-face {
   font-family: "Flat Level";
   src: url("/src/assets/fonts/Flat_Level_Light.woff") format("woff"), url("/src/assets/fonts/Flat_Level_Light.woff2") format("woff2");
+  font-display: swap;
 }
 /****** TYPOGRAPHY ASSIGNMENT ******/
 h1, h2, h3 {
