@@ -2,7 +2,7 @@
 
 A personal portfolio site created for the repo owner to showcase his skills, experience and reviews. The site features an 'About', 'Contact', 'Web Portfolio' and 'Whisky Review' page and leverages jQuery AJAX to request individual elements. 
 
-<strong>Features</strong>
+<strong>Features</strong><br>
     -   Stylish, modern interface
     -   Full responsiveness
 
@@ -14,10 +14,8 @@ A personal portfolio site created for the repo owner to showcase his skills, exp
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg"><img src="https://github.com/devicons/devicon/raw/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="50" height="50" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/jquery/jquery-plain.svg"><img src="https://github.com/devicons/devicon/blob/master/icons/jquery/jquery-plain.svg" alt="JavaScript" width="50" height="50" style="max-width:100%;"></a>
 
-<strong>Credits</strong>
+<strong>Credits</strong><br>
 
 The author of this repo gives credit to the following creators:
-    -   , for the Amsterdam Four font, used under personal license
-    -   , for the Neue Machina
-    -   , for the Full Page JS Scroll
-    -   , 
+    -   , for The Billion, under personal, non-commercial usage
+    -   , for Flat Level, under personal, non-commercial usage
