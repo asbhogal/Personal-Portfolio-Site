@@ -23,15 +23,27 @@ body {
     position: absolute;
     border-right: 1px solid $main-color-02;
     height: calc(100vh - 80px);
-    left: 70px;
+    left: 25px;
     top: 40px;
+    p#connect-panel {
+        transform: rotate(180deg);
+        writing-mode: vertical-lr;
+        margin-right: 30px;
+        bottom: -365px;
+        position: relative;
+        a {
+            text-decoration: none;
+            padding-inline: 30px;
+        }
+    }
 }
 
 #bottom-divider {
     position: absolute;
-    width: calc(100vw - 40px);
-    border-top: 1px solid $main-color;
-    top: 80px;
+    width: 65%;
+    border-top: 1px solid #737373;
+    bottom: 29px;
+    left: 110px;
 }
 
 .top-section {
