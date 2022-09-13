@@ -19,14 +19,19 @@ body {
     background-size: cover;
 }
 
-
-
 #left-divider {
-    border-right: 1px solid $main-color-02;
     position: absolute;
+    border-right: 1px solid $main-color-02;
     height: calc(100vh - 80px);
     left: 70px;
     top: 40px;
+}
+
+#bottom-divider {
+    position: absolute;
+    width: calc(100vw - 40px);
+    border-top: 1px solid $main-color;
+    top: 80px;
 }
 
 .top-section {
@@ -34,7 +39,7 @@ body {
     padding-bottom: 35px;
     height: 100vh;
     #site-title {
-        padding: 40px 30px 0 70px;
+        padding: 40px 30px 0 110px;
         font-size: 62px;
         display: inline-block;
     }
@@ -43,7 +48,7 @@ body {
         line-height: 3em;
         display: flex;
         flex-direction: column;
-        padding: 40px 30px 0 75px;
+        padding: 40px 30px 0 110px;
         width: fit-content;
         .typed-out {
             font-size: 21px;
@@ -65,7 +70,7 @@ body {
     ul {
         display: flex;
         justify-content: flex-start;
-        margin: 40px 75px;
+        margin: 40px 110px;
         .home-page-item {
             padding: 35px 30px;
             list-style-type: none;
