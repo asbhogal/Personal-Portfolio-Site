@@ -21,4 +21,4 @@ A personal portfolio site created for the repo owner to showcase his skills, exp
 
 The author of this repo gives credit to the following creators:
   - <a href="https://www.behance.net/gallery/137539009/FREE-The-Billion-Font">Lemonthe</a>, for The Billion font, licensed under personal, non-commercial usage
-  - <a href="https://www.behance.net/gallery/126243451/Flat-Level-Typeface-v20">slarpec<a>, for Flat Level font, licensed under personal, non-commercial usage
+  - <a href="https://www.behance.net/gallery/143935055/Neue-Machina-v20-Free-Font">Mathieu Desjardins<a>, for Neue Machina font, licensed under personal, non-commercial usage
