@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /******** IMPORT PARTIAL STYLESHEETS ********/ /****** COLORS ******/
 /****** POSITIONING ******/
 /****** TRANSITIONS & ANIMATIONS ******/
@@ -19,7 +20,7 @@
 }
 
 #cursor-follower::before {
-  content: "x";
+  content: "×";
 }
 
 /* == DISCLAIMER ==
