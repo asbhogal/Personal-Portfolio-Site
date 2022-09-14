@@ -4,5 +4,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: crosshair;
+    cursor: none;
 }
+
+#cursor-follower{
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    color: white;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  #cursor-follower::before {
+    content: "x";
+  }
