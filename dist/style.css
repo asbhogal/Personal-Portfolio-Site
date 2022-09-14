@@ -12,7 +12,7 @@
 
 The following fonts are used under the personal, non-commercial license:
     -   The Billion
-    -   Flat Level
+    -   Neue Machina
 */
 /****** COLORS ******/
 /****** POSITIONING ******/
@@ -24,10 +24,10 @@ The following fonts are used under the personal, non-commercial license:
   src: url("/src/assets/fonts/The Billion.woff") format("woff"), url("/src/assets/fonts/The Billion.woff2") format("woff2");
   font-display: swap;
 }
-/****** FLAT LEVEL - 300 LIGHT ******/
+/****** NEUE MACHINA - 300 LIGHT ******/
 @font-face {
-  font-family: "Flat Level";
-  src: url("/src/assets/fonts/Flat_Level_Light.woff") format("woff"), url("/src/assets/fonts/Flat_Level_Light.woff2") format("woff2");
+  font-family: "Neue Machina";
+  src: url("/src/assets/fonts/PPNeueMachina-Light.woff") format("woff"), url("/src/assets/fonts/PPNeueMachina-Light.woff2") format("woff2");
   font-display: swap;
 }
 /****** TYPOGRAPHY ASSIGNMENT ******/
@@ -43,7 +43,7 @@ h1:not(h2, h3), h2:not(h2, h3), h3:not(h2, h3) {
 }
 
 body, p, span, a {
-  font-family: "Flat Level", monospace;
+  font-family: "Neue Machina", monospace;
   color: #737373;
 }
 
