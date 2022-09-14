@@ -81,14 +81,16 @@ body {
   position: absolute;
   border-right: 1px solid #737373;
   height: calc(100vh - 80px);
-  left: 25px;
+  /* left: 25px; */
   top: 40px;
+  width: 78px;
 }
 #left-divider p#connect-panel {
   transform: rotate(180deg);
   writing-mode: vertical-lr;
   margin-right: 30px;
   bottom: -365px;
+  left: 25%;
   position: relative;
 }
 #left-divider p#connect-panel a {
