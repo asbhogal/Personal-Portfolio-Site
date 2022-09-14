@@ -7,6 +7,10 @@
     cursor: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 #cursor-follower{
     height: 24px;
     width: 24px;

@@ -139,6 +139,23 @@ hr.base-line {
     width: 60%;
 }
 
+.content-section {
+    position: relative;
+    height: 100vh;
+}
+
+#home-page-2 {
+    background-color: red;
+}
+
+#home-page-3 {
+    background-color: blue;
+}
+
+#home-page-4 {
+    background-color: green;
+}
+
 /******** KEYFRAMES ********/
 
 @keyframes typing-effect {
