@@ -40,12 +40,6 @@ body, p, span, a {
 /****** COLORS ******/
 /****** POSITIONING ******/
 /****** TRANSITIONS & ANIMATIONS ******/
-body {
-  background: #000;
-  min-height: 100vh;
-  position: relative;
-}
-
 /* NAV BAR TOGGLE BUTTON */
 #nav-bar-btn {
   position: absolute;

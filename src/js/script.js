@@ -1,13 +1,13 @@
 /******** PAGE LOAD ********/
 
 
-/* NAV BAR INTEGRATION */
+/******** NAV BAR INTEGRATION ********/
 
-$.get("/src/elements/nav-menu/nav-menu.html", function(data) {
+/*$.get("/src/elements/nav-menu/nav-menu.html", function(data) {
     $("#nav-bar").replaceWith(data);
-});
+});*/
 
-/* CUSTOM CURSOR */
+/******** CUSTOM CURSOR ********/
 
 var mouseX=window.innerWidth/2,
     mouseY=window.innerHeight/2;

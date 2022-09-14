@@ -1,11 +1,5 @@
-@import     '../../_partials/typography',
-            '../../_partials/variables';
-
-body {
-    background: #000;
-    min-height: 100vh;
-    position: relative;
-}
+@import     'src/_partials/typography',
+            'src/_partials/variables';
 
 /* NAV BAR TOGGLE BUTTON */
 

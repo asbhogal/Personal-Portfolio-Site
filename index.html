@@ -15,19 +15,54 @@
     <script src="/src/js/jquery-3.6.1.min.js" defer></script>
     <!-- MAIN SCRIPT -->
     <script src="/src/js/script.js" defer></script>
+    <!--NAV MENU STYLING -->
+    <link rel="stylesheet" href="dist/nav-menu.css">
+    <!--NAV MENU SCRIPT -->
+    <script src="/nav-menu.js" defer></script>
 </head>
 <body onload="document.body.style.opacity='1'">
     <div id="cursor-follower"></div>
-    <div id="left-divider">
-        <div id="site-icon">
-            <img src="/src/assets/images/New Portfolio - Logo.jpg" alt="" width="80px">
-        </div>
-        <p id="connect-panel"><a href="https://www.linkedin.com/in/amansinghbhogal/">LinkedIn</a>&#47;<a href="https://github.com/asbhogal">GitHub</a>&#47;<a href="mailto:amansinghbhogal1@gmail.com">Email</a></p>
-    </div>
-    <div id="bottom-divider"></div>
-    <div id="nav-bar"></div>
     <div class="background-face">
     <section id="home-page-1" class="top-section">
+        <a href="javascript:;" id="nav-bar-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        
+        <nav id="nav-menu">
+            <ul id="menu_list">
+                <li class="menu_item">
+                    <a href="/index.html" class="menu_link"><span class=angle-line>/</span>Home</a>
+                </li>
+                <li class="menu_item">
+                    <a href="/about.html" class="menu_link"><span class=angle-line>/</span>About</a>
+                </li>
+                <li class="menu_item">
+                    <a href="/web-portfolio.html" class="menu_link"><span class=angle-line>/</span>Web Portfolio</a>
+                </li>
+                <li class="menu_item">
+                    <a href="/whisky-reviews.html" class="menu_link"><span class=angle-line>/</span>Whisky Reviews</a>
+                    <li><a href="#">/</span>SCOTCH</a></li>
+                    <li><a href="#">/</span>/ IRISH</a></li>
+                    <li><a href="#">/</span>/ WELSH</a></li>
+                    <li><a href="#">/ ENGLISH</a></li>
+                    <li><a href="#">/ AMERICAN</a></li>
+                    <li><a href="#">/ CANADIAN</a></li>
+                    <li><a href="#">/ WORLD</a></li>
+                </li>
+                <li class="menu_item">
+                    <a href="/contact.html" class="menu_link">/ Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="left-divider">
+            <div id="site-icon">
+                <img src="/src/assets/images/New Portfolio - Logo.jpg" alt="" width="80px">
+            </div>
+            <p id="connect-panel"><a href="https://www.linkedin.com/in/amansinghbhogal/">LinkedIn</a>&#47;<a href="https://github.com/asbhogal">GitHub</a>&#47;<a href="mailto:amansinghbhogal1@gmail.com">Email</a></p>
+        </div>
+        <div id="bottom-divider"></div>
         <div id="site-title">
             <h1>Aman Singh Bhogal</h1>
         </div>

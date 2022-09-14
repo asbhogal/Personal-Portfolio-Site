@@ -30,9 +30,10 @@ body {
         transform: rotate(180deg);
         writing-mode: vertical-lr;
         margin-right: 30px;
-        bottom: -365px;
+        /* bottom: -365px; */
         left: 25%;
         position: relative;
+        top: 35%;
         a {
             text-decoration: none;
             padding-inline: 30px;
