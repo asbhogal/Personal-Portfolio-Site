@@ -32,7 +32,7 @@ $(window).mousemove (function(e){
 		mouseY = e.clientY;
 })
 
-setInterval (move,280/60)
+setInterval (move,250/60)
 function move(){
 		circle.x = lerp (circle.x, mouseX, 0.1);
 		circle.y = lerp (circle.y, mouseY, 0.1);

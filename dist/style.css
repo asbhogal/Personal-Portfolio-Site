@@ -6,7 +6,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none;
 }
 
 html {
@@ -17,14 +16,16 @@ html {
   height: 24px;
   width: 24px;
   display: inline-block;
-  color: white;
+  color: #737373;
   font-size: 24px;
   line-height: 24px;
   text-align: center;
+  z-index: 9999;
 }
 
 #cursor-follower::before {
   content: "×";
+  z-index: 9999;
 }
 
 /* == DISCLAIMER ==
