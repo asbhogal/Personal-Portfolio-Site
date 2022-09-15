@@ -1,1 +1,11 @@
-/*# sourceMappingURL=footer.css.map */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+}
+footer li {
+  display: inline-block;
+  list-style-type: none;
+  padding-inline: 40px;
+}/*# sourceMappingURL=footer.css.map */
