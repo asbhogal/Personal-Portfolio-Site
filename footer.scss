@@ -1,0 +1,31 @@
+@import 'src/_partials/variables';
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $background-color;
+    width: 100%;
+    li {
+        display: inline-block;
+        list-style-type: none;
+        padding-inline: 40px;
+        color: $body-text-color;
+    }
+    #footer-separator {
+        border: none;
+        height: 0.1em;
+        background: red;
+        margin: 1em 0;
+        width: 70em;
+    }
+    #top-footer {
+        padding-top: 1em;
+        .footer_menu_link {
+            text-decoration: none;
+        }
+    }
+    #bottom-footer {
+        padding-bottom: 1em;
+    }
+}

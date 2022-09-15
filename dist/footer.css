@@ -1,11 +1,32 @@
+/****** COLORS ******/
+/****** POSITIONING ******/
+/****** TRANSITIONS & ANIMATIONS ******/
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #000;
+  width: 100%;
 }
 footer li {
   display: inline-block;
   list-style-type: none;
   padding-inline: 40px;
+  color: #737373;
+}
+footer #footer-separator {
+  border: none;
+  height: 0.1em;
+  background: red;
+  margin: 1em 0;
+  width: 70em;
+}
+footer #top-footer {
+  padding-top: 1em;
+}
+footer #top-footer .footer_menu_link {
+  text-decoration: none;
+}
+footer #bottom-footer {
+  padding-bottom: 1em;
 }/*# sourceMappingURL=footer.css.map */
