@@ -6,15 +6,30 @@
         font-size: 42px;
         padding: 10px 30px;
     }
-    .top-section {
-        #subheading {
-            padding: 0;
-        }
-    }
 }
 
 @media screen and (max-width: 560px) {
+    .top-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
     #connect-panel a {
         padding-inline: 30px;
+    }
+    .top-section {
+        #site-title {
+            padding: 0 !important;
+            font-size: 42px !important;
+        }
+
+    } 
+    #subheading {
+        padding: 40px 30px !important;
     }
 }
