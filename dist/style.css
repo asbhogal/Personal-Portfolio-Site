@@ -121,18 +121,20 @@ body {
   top: 40px;
   width: 78px;
 }
-#left-divider p#connect-panel {
+
+p#connect-panel {
   transform: rotate(180deg);
   writing-mode: vertical-lr;
   margin-right: 30px;
-  /* bottom: -365px; */
-  left: 25%;
-  position: relative;
-  top: 35%;
 }
-#left-divider p#connect-panel a {
+p#connect-panel a {
   text-decoration: none;
   padding-inline: 30px;
+}
+
+#middle-column {
+  position: absolute;
+  top: 5px;
 }
 
 #bottom-divider {
