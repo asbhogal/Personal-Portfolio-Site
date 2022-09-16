@@ -28,6 +28,15 @@ html {
   z-index: 9999;
 }
 
+@media screen and (max-width: 600px) {
+  #left-divider {
+    display: none;
+  }
+  #site-title {
+    font-size: 42px;
+    padding: 10px 30px;
+  }
+}
 /* == DISCLAIMER ==
 
 The following fonts are used under the personal, non-commercial license:
@@ -152,7 +161,7 @@ body {
   margin: 40px 110px;
 }
 .home-page-link-list ul .home-page-item {
-  padding: 35px 30px;
+  padding: 35px 10px 35px 35px;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
