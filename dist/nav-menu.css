@@ -88,8 +88,6 @@ body, p, span, a {
 /* NAV MENU */
 #nav-menu {
   background-color: #000;
-  display: flex;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
