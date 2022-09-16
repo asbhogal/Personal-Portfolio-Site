@@ -36,6 +36,14 @@ html {
     font-size: 42px;
     padding: 10px 30px;
   }
+  .top-section #subheading {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 560px) {
+  #connect-panel a {
+    padding-inline: 30px;
+  }
 }
 /* == DISCLAIMER ==
 

@@ -23,6 +23,11 @@
     <link rel="stylesheet" href="dist/footer.css">
 </head>
 <body onload="document.body.style.opacity='1'">
+    <a href="javascript:;" id="nav-bar-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
     <div class="background-face">
         <nav id="nav-menu">
             <ul id="menu_list">
@@ -51,45 +56,48 @@
             </ul>
         </nav>
     <section id="home-page-1" class="top-section">
-        <a href="javascript:;" id="nav-bar-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
-        
-        <div id="left-divider">
+        <!-- LEFT COLUMN --> 
+        <div id="left-column" class="column">
             <div id="site-icon">
-                <img src="/src/assets/images/New Portfolio - Logo.jpg" alt="" width="80px">
-            </div>
+                <div id="left-divider"></div>
+                <a href="/index.html"><img src="/src/assets/images/New Portfolio - Logo.jpg" alt="" width="80px"></a>
+            </div>            
             <p id="connect-panel"><a href="https://www.linkedin.com/in/amansinghbhogal/">LinkedIn</a>&#47;<a href="https://github.com/asbhogal">GitHub</a>&#47;<a href="mailto:amansinghbhogal1@gmail.com">Email</a></p>
         </div>
-        <div id="bottom-divider"></div>
-        <div id="site-title">
-            <h1>Aman Singh Bhogal</h1>
-        </div>
-        <div id="subheading">
-            <div id="subheading-1" class="typed-out">
-                Web Designer &#38; Developer //
+        <!-- MIDDLE COLUMN --> 
+        <div id="middle-column" class="column">
+            <div id="bottom-divider"></div>
+            <div id="site-title">
+                <h1>Aman Singh Bhogal</h1>
             </div>
-            <div id="subheading-2" class="typed-out">
-                Whisky Writer &#38; Reviewer<span id="underline">&#95;</span>
+            <div id="subheading">
+                <div id="subheading-1" class="typed-out">
+                    Web Designer &#38; Developer //
+                </div>
+                <div id="subheading-2" class="typed-out">
+                    Whisky Writer &#38; Reviewer<span id="underline">&#95;</span>
+                </div>
+            </div>
+            <div class="home-page-link-list">
+                <ul>
+                    <li class="home-page-item">
+                        <a href="/about.html" class="page_link">01 &#47; About</a>
+                    </li> 
+                    <li class="home-page-item">
+                        <a href="/web-portfolio.html" class="page_link">02 &#47; Web Portfolio</a>
+                    </li> 
+                    <li class="home-page-item">
+                        <a href="/whisky-reviews.html" class="page_link">03 &#47; Whisky Reviews</a>
+                    </li> 
+                    <li class="home-page-item">
+                        <a href="/contact.html" class="page_link">04 &#47; Contact</a>
+                    </li> 
+                </ul>
             </div>
         </div>
-        <div class="home-page-link-list">
-            <ul>
-                <li class="home-page-item">
-                    <a href="/about.html" class="page_link">01 &#47; About</a>
-                </li> 
-                <li class="home-page-item">
-                    <a href="/web-portfolio.html" class="page_link">02 &#47; Web Portfolio</a>
-                </li> 
-                <li class="home-page-item">
-                    <a href="/whisky-reviews.html" class="page_link">03 &#47; Whisky Reviews</a>
-                </li> 
-                <li class="home-page-item">
-                    <a href="/contact.html" class="page_link">04 &#47; Contact</a>
-                </li> 
-            </ul>
+        <!-- RIGHT COLUMN --> 
+        <div id="right-column" class="column">
+
         </div>
     </div>
     </section>
