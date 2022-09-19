@@ -17,7 +17,7 @@ The following fonts are used under the personal, non-commercial license:
     font-display: swap;
 }
 
-/****** OATMEAL SANS - 300 LIGHT ******/
+/****** OATMEAL SANS - 400 REGULAR ******/
 
 @font-face {
     font-family: 'Oatmeal Sans';
@@ -28,15 +28,17 @@ The following fonts are used under the personal, non-commercial license:
 
 /****** TYPOGRAPHY ASSIGNMENT ******/
 
-h1, h2, h3 {
+h1 {
     font-family: 'The Billion', cursive;
     font-weight: 200;
-    &:not(h1) {
-        color: $main-color-02;
-    }
-    &:not(h2, h3) {
-        color: $main-color-03;
-    }
+    font-size: 64px;
+
+}
+
+h2 {
+    font-family: 'Oatmeal Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 200;
 }
 
 body, p, span, a {

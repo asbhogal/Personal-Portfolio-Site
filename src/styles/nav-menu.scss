@@ -24,9 +24,13 @@
             display: flex;
             justify-content: space-between;
         }
-        > ul > li > ul {
+        > ul > li > ul.dropdown-list {
             flex-direction: column;
             position: absolute;
+            display: none;
+            &:hover {
+                display: block !important;
+            }
             .dropdown-line {
                 border-right: 1px solid #000;
                 height: 3.75rem;

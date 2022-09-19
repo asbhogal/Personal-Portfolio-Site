@@ -14,22 +14,23 @@ The following fonts are used under the personal, non-commercial license:
   src: url("/src/assets/fonts/The Billion.woff") format("woff"), url("/src/assets/fonts/The Billion.woff2") format("woff2");
   font-display: swap;
 }
-/****** OATMEAL SANS - 300 LIGHT ******/
+/****** OATMEAL SANS - 400 REGULAR ******/
 @font-face {
   font-family: "Oatmeal Sans";
   src: url("/src/assets/fonts/Oatmeal Sans.woff") format("woff"), url("/src/assets/fonts/Oatmeal Sans.woff2") format("woff2");
   font-display: swap;
 }
 /****** TYPOGRAPHY ASSIGNMENT ******/
-h1, h2, h3 {
+h1 {
   font-family: "The Billion", cursive;
   font-weight: 200;
+  font-size: 64px;
 }
-h1:not(h1), h2:not(h1), h3:not(h1) {
-  color: #737373;
-}
-h1:not(h2, h3), h2:not(h2, h3), h3:not(h2, h3) {
-  color: #926c15;
+
+h2 {
+  font-family: "Oatmeal Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 200;
 }
 
 body, p, span, a {
@@ -63,22 +64,26 @@ body, p, span, a {
   display: flex;
   justify-content: space-between;
 }
-.navbar .navbar-links > ul > li > ul {
+.navbar .navbar-links > ul > li > ul.dropdown-list {
   flex-direction: column;
   position: absolute;
+  display: none;
 }
-.navbar .navbar-links > ul > li > ul .dropdown-line {
+.navbar .navbar-links > ul > li > ul.dropdown-list:hover {
+  display: block !important;
+}
+.navbar .navbar-links > ul > li > ul.dropdown-list .dropdown-line {
   border-right: 1px solid #000;
   height: 3.75rem;
   position: absolute;
   top: 0.3125rem;
   left: 0.625rem;
 }
-.navbar .navbar-links > ul > li > ul li {
+.navbar .navbar-links > ul > li > ul.dropdown-list li {
   position: relative;
   left: 1.3rem;
 }
-.navbar .navbar-links > ul > li > ul li:nth-child(2) {
+.navbar .navbar-links > ul > li > ul.dropdown-list li:nth-child(2) {
   padding: 0.75rem 0;
 }
 

@@ -13,6 +13,29 @@ body {
     transition: opacity 1.5s;
 }
 
+.container {
+    display: absolute;
+    height: 100vh;
+    #home-page {
+        background: #d6ccc2;
+        position: absolute;
+        width: calc(100% - 15rem);
+        height: calc(100vh - 5.625rem);
+        top: 4rem;
+        #home-page-title-info {
+            padding: 1.875rem 3.75rem;
+        }
+    }
+    #owner-bio {
+        position: absolute;
+        right: 20px;
+        background: #000;
+        width: 200px;
+        height: 200px;
+        top: 10rem;
+        right: 0;
+    }
+}
 
 /******** KEYFRAMES ********/
 
