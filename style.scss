@@ -16,7 +16,7 @@ body {
 .container {
     #home-page {
         background: #d6ccc2;
-        position: absolute;
+        position: $absolute-position;
         width: calc(100% - 15rem);
         height: calc(100vh - 5.625rem);
         top: 4rem;
@@ -32,7 +32,7 @@ body {
         }
     }
     #owner-bio {
-        position: absolute;
+        position: $absolute-position;
         right: 20px;
         background: #000;
         width: 200px;
@@ -41,7 +41,7 @@ body {
         right: 0;
     }
     .stack-snapshot {
-        position: absolute;
+        position: $absolute-position;
         width: 500px;
         top: 350px;
         left: 880px;
@@ -53,9 +53,9 @@ body {
         }
         .stacks-list {
             list-style-type: none;
-            display: flex;
+            display: $flex-display;
             li {
-                position: relative;
+                position: $relative-position;
                 top: 15px;
             }
             a {

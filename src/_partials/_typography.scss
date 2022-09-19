@@ -21,12 +21,17 @@ The following fonts are used under the personal, non-commercial license:
 
 @font-face {
     font-family: 'Oatmeal Sans';
+    font-weight: 400;
     src:    url('/src/assets/fonts/Oatmeal\ Sans.woff') format('woff'),
             url('/src/assets/fonts/Oatmeal\ Sans.woff2') format('woff2');
     font-display: swap;
 }
 
 /****** TYPOGRAPHY ASSIGNMENT ******/
+
+h1, h2, h3, body, p, span, a {
+    color: #283618;
+}
 
 h1 {
     font-family: 'The Billion', cursive;
@@ -43,5 +48,4 @@ h2 {
 
 body, p, span, a {
     font-family: 'Oatmeal Sans', sans-serif;
-    color: $main-color-02;
 }

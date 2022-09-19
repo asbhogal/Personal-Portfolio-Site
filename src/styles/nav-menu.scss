@@ -6,7 +6,7 @@
 /* NAV MENU */
 
 .navbar {
-    display: flex;
+    display: $flex-display;
     justify-content: space-between;
     align-items: center;
     margin: auto;
@@ -16,7 +16,7 @@
             text-decoration: none;
             &:after {
                 content: "";
-                position: relative;
+                position: $relative-position;
                 bottom: -1px;
                 left: 0;
                 top: -15px;
@@ -39,12 +39,12 @@
             font-size: 1.25rem;
         }
         ul {
-            display: flex;
+            display: $flex-display;
             justify-content: space-between;
         }
         > ul > li > ul.dropdown-list {
             flex-direction: column;
-            position: absolute;
+            position: $absolute-position;
             display: none;
             &:hover {
                 display: block !important;
@@ -52,12 +52,12 @@
             .dropdown-line {
                 border-right: 1px solid #000;
                 height: 3.75rem;
-                position: absolute;
+                position: $absolute-position;
                 top: 0.3125rem;
                 left: 0.625rem;
             }
             li {
-                position: relative;
+                position: $relative-position;
                 left: 1.3rem;
             }
             li:nth-child(2) {
