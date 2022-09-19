@@ -96,10 +96,6 @@ body {
   transition: opacity 1.5s;
 }
 
-.container {
-  display: absolute;
-  height: 100vh;
-}
 .container #home-page {
   background: #d6ccc2;
   position: absolute;
@@ -125,6 +121,33 @@ body {
   height: 200px;
   top: 10rem;
   right: 0;
+}
+.container .stack-snapshot {
+  position: absolute;
+  width: 500px;
+  top: 350px;
+  left: 880px;
+}
+.container .stack-snapshot #stacks-separator {
+  background: blue;
+  border: none;
+  height: 0.1rem;
+  width: 40%;
+}
+.container .stack-snapshot .stacks-list {
+  list-style-type: none;
+  display: flex;
+}
+.container .stack-snapshot .stacks-list li {
+  position: relative;
+  top: 15px;
+}
+.container .stack-snapshot .stacks-list a {
+  padding-inline: 10px;
+}
+.container .stack-snapshot p {
+  font-size: 21px;
+  padding-bottom: 10px;
 }
 
 /******** KEYFRAMES ********/

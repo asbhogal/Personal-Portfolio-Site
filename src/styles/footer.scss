@@ -1,31 +1,36 @@
 @import '../_partials/variables';
 
-footer {
+.main-footer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $background-color;
-    width: 100%;
-    li {
-        display: inline-block;
-        list-style-type: none;
-        padding-inline: 40px;
-        color: $body-text-color;
-    }
-    #footer-separator {
-        border: none;
-        height: 0.1em;
-        background: blue;
-        margin: 1em 0;
-        width: 70%;
-    }
-    #top-footer {
-        padding-top: 1em;
-        .footer_menu_link {
-            text-decoration: none;
+    justify-content: space-evenly;
+    width: 40%;
+    right: 0;
+    position: absolute;
+    padding: 1.5625rem 0;
+    bottom: 0;
+    background-color: yellow;
+    .footer-link {
+        text-decoration: none;
+        &:after {
+            content: "";
+            position: relative;
+            bottom: -1px;
+            left: 0;
+            top: 5px;
+            width: 0;
+            height: 1px;
+            display: flex;
+            background: #926c15;
+            transition: $transition-03;
+        }
+        &:hover {
+            transition: $transition-03;
+            &:after {
+                width: 75%;
+            }
         }
     }
-    #bottom-footer {
-        padding-bottom: 1em;
+    li {
+        list-style-type: none;
     }
 }

@@ -14,8 +14,6 @@ body {
 }
 
 .container {
-    display: absolute;
-    height: 100vh;
     #home-page {
         background: #d6ccc2;
         position: absolute;
@@ -41,6 +39,33 @@ body {
         height: 200px;
         top: 10rem;
         right: 0;
+    }
+    .stack-snapshot {
+        position: absolute;
+        width: 500px;
+        top: 350px;
+        left: 880px;
+        #stacks-separator {
+            background: blue;
+            border: none;
+            height: 0.1rem;
+            width: 40%;
+        }
+        .stacks-list {
+            list-style-type: none;
+            display: flex;
+            li {
+                position: relative;
+                top: 15px;
+            }
+            a {
+                padding-inline: 10px;
+            }
+        }
+        p {
+            font-size: 21px;
+            padding-bottom: 10px;
+        }
     }
 }
 
