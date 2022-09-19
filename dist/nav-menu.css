@@ -62,4 +62,41 @@ body, p, span, a {
 .navbar .navbar-links ul {
   display: flex;
   justify-content: space-between;
-}/*# sourceMappingURL=nav-menu.css.map */
+}
+.navbar .navbar-links > ul > li > ul {
+  flex-direction: column;
+  position: absolute;
+}
+.navbar .navbar-links > ul > li > ul .dropdown-line {
+  border-right: 1px solid #000;
+  height: 3.75rem;
+  position: absolute;
+  top: 0.3125rem;
+  left: 0.625rem;
+}
+.navbar .navbar-links > ul > li > ul li {
+  position: relative;
+  left: 1.3rem;
+}
+.navbar .navbar-links > ul > li > ul li:nth-child(2) {
+  padding: 0.75rem 0;
+}
+
+/*
+.navbar-links ul li:after {
+    content: "";
+    background: #000;
+    height: 90px;
+    width: 30%;
+    top: -40px;
+    left: -60px;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.navbar-links ul li:hover:after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+*//*# sourceMappingURL=nav-menu.css.map */
