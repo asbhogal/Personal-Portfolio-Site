@@ -20,5 +20,8 @@ A personal portfolio site created for the repo owner to showcase his skills, exp
 <strong>Credits</strong><br>
 
 The author of this repo gives credit to the following creators:
-  - <a href="https://www.behance.net/gallery/137539009/FREE-The-Billion-Font">Lemonthe</a>, for The Billion font, licensed under personal, non-commercial usage
-  - <a href="https://www.behance.net/gallery/143935055/Neue-Machina-v20-Free-Font">Mathieu Desjardins<a>, for Neue Machina font, licensed under personal, non-commercial usage
+
+== FONTS ==
+
+  - <a href="https://www.behance.net/dwiahidian">Lemonthe</a>, for <a href="https://www.behance.net/gallery/137539009/FREE-The-Billion-Font">The Billion font</a>, licensed under personal, non-commercial usage
+  - <a href="https://www.behance.net/boulevardlab">Boulevard Lab<a>, for <a href="https://boulevardlab.com/oatmeal-sans">>Oatmeal Sans</a>, licensed under personal, non-commercial usage
