@@ -89,10 +89,9 @@ body, p, span, a {
 .navbar .navbar-links > ul > li > ul {
   flex-direction: column;
   position: absolute;
-  opacity: 0;
 }
-.navbar .navbar-links > ul > li > ul:hover {
-  opacity: 1 !important;
+.navbar .navbar-links > ul > li > ul .menu-link {
+  text-decoration: none;
 }
 .navbar .navbar-links > ul > li > ul .dropdown-line {
   border-right: 1px solid #000;

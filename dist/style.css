@@ -113,10 +113,10 @@ body {
   overflow: hidden;
   border-right: 0.15em solid #99582a;
   font-size: 1.6rem;
-  width: 40px;
+  width: 0;
   white-space: nowrap;
   animation: typing-effect 3s steps(1200, end) forwards, blinking-effect 1s infinite;
-  animation-delay: 1.5s;
+  /*animation-delay: 1.5s;*/
 }
 .container #home-page #home-page-title-info #home-page-title-separator {
   margin-bottom: 0.75rem;
@@ -139,6 +139,7 @@ body {
   position: absolute;
   width: 500px;
   left: calc(100% - 300px);
+  bottom: 218px;
 }
 .container .stack-snapshot #stacks-separator {
   background: #99582a;

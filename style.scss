@@ -25,12 +25,12 @@ body {
                 overflow: hidden;
                 border-right: 0.15em solid $main-color-03;
                 font-size: 1.6rem;
-                width: 40px;
+                width: 0;
                 white-space: nowrap;
                 animation: 
                     typing-effect 3s steps(1200, end) forwards,
                     blinking-effect 1s infinite;
-                animation-delay: 1.5s;
+                /*animation-delay: 1.5s;*/
             }
             #home-page-title-separator {
                 margin-bottom: 0.75rem;
@@ -55,6 +55,7 @@ body {
         position: $absolute-position;
         width: 500px;
         left: calc(100% - 300px);
+        bottom: 218px;
         #stacks-separator {
             background: $main-color-03;
             border: none;

@@ -45,9 +45,8 @@
         > ul > li > ul {
             flex-direction: column;
             position: $absolute-position;
-            opacity: 0;
-            &:hover {
-                opacity: 1 !important;
+            .menu-link {
+                text-decoration: none;
             }
             .dropdown-line {
                 border-right: 1px solid #000;
