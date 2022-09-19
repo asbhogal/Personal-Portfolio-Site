@@ -24,4 +24,4 @@ The author of this repo gives credit to the following creators:
 == FONTS ==
 
   - <a href="https://www.behance.net/dwiahidian">Lemonthe</a>, for <a href="https://www.behance.net/gallery/137539009/FREE-The-Billion-Font">The Billion font</a>, licensed under personal, non-commercial usage
-  - <a href="https://www.behance.net/boulevardlab">Boulevard Lab<a>, for <a href="https://boulevardlab.com/oatmeal-sans">>Oatmeal Sans</a>, licensed under personal, non-commercial usage
+  - <a href="https://www.behance.net/boulevardlab">Boulevard Lab<a>, for <a href="https://boulevardlab.com/oatmeal-sans">Oatmeal Sans</a>, licensed under personal, non-commercial usage
