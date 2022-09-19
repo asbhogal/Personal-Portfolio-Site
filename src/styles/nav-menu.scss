@@ -12,10 +12,28 @@
     margin: auto;
     padding: 0.5rem 1.5rem;
     .navbar-links {
-        width: 100%;
-        a {
+        .menu-link {
             text-decoration: none;
+            &:after {
+                content: "";
+                position: relative;
+                bottom: -1px;
+                left: 0;
+                top: -15px;
+                width: 0;
+                height: 1px;
+                display: inline-flex;
+                background: #926c15;
+                transition: $transition-03;
+            }
+            &:hover {
+                transition: $transition-03;
+                &:after {
+                    width: 75%;
+                }
+            }
         }
+        width: 100%;
         li {
             list-style-type: none;
             font-size: 1.25rem;
@@ -49,26 +67,8 @@
     }
 }
 
-.menu-link:after {
-    content: "";
-    position: relative;
-    bottom: -1px;
-    left: 0;
-    top: -15px;
-    width: 0;
-    height: 1px;
-    display: inline-flex;
-    background: #926c15;
-    transition: all 0.3s ease-in-out;
-}
 
-.menu-link:hover {
-    transition: $transition-03;
-}
 
-.menu-link:hover:after {
-    width: 75%;
-}
 
 /*
 .navbar-links ul li:after {
