@@ -21,17 +21,16 @@ body {
         top: 4rem;
         #home-page-title-info {
             padding: 1.875rem 3.75rem;
-            display: inline-block;
             .typed-out {
                 overflow: hidden;
                 border-right: 0.15em solid $main-color-03;
                 font-size: 1.6rem;
-                width: 0;
+                width: 40px;
                 white-space: nowrap;
                 animation: 
-                    typing-effect 3s steps(80, end) forwards,
-                    blinking-effect 0.8s infinte;
-                animation-delay: 2s;
+                    typing-effect 3s steps(1200, end) forwards,
+                    blinking-effect 1s infinite;
+                animation-delay: 1.5s;
             }
             #home-page-title-separator {
                 margin-bottom: 0.75rem;
