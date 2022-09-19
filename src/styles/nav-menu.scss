@@ -37,6 +37,9 @@
         li {
             list-style-type: none;
             font-size: 1.25rem;
+            .active {
+                font-weight: 800;
+            }
         }
         ul {
             display: $flex-display;

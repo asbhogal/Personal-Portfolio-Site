@@ -82,6 +82,9 @@ body, p, span, a {
   list-style-type: none;
   font-size: 1.25rem;
 }
+.navbar .navbar-links li .active {
+  font-weight: 800;
+}
 .navbar .navbar-links ul {
   display: flex;
   justify-content: space-between;
