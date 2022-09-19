@@ -24,6 +24,13 @@ body {
         top: 4rem;
         #home-page-title-info {
             padding: 1.875rem 3.75rem;
+            #home-page-title-separator {
+                margin-bottom: 0.75rem;
+                background: blue;
+                border: none;
+                height: 0.1rem;
+                width: calc(100% - 75rem);
+                }
         }
     }
     #owner-bio {

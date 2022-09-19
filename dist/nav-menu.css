@@ -87,6 +87,27 @@ body, p, span, a {
   padding: 0.75rem 0;
 }
 
+.menu-link:after {
+  content: "";
+  position: relative;
+  bottom: -1px;
+  left: 0;
+  top: -15px;
+  width: 0;
+  height: 1px;
+  display: inline-flex;
+  background: #926c15;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-link:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-link:hover:after {
+  width: 75%;
+}
+
 /*
 .navbar-links ul li:after {
     content: "";
