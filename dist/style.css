@@ -47,6 +47,17 @@ html {
     padding: 40px 30px !important;
   }
 }
+/********** TABLET WIDTHS **********/
+@media (max-width: 1200px) {
+  #home-page-title-info {
+    scale: 0.8;
+  }
+  .stack-snapshot {
+    position: static !important;
+    width: 500px !important;
+    left: 60px !important;
+  }
+}
 /* == DISCLAIMER ==
 
 The following fonts are used under the personal, non-commercial license:
