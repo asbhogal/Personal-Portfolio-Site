@@ -111,21 +111,31 @@ body, p, span, a {
   padding: 0.75rem 0;
 }
 
-/*
 .navbar-links ul li:after {
-    content: "";
-    background: #000;
-    height: 90px;
-    width: 30%;
-    top: -40px;
-    left: -60px;
-    transition: transform 0.5s;
-    transform: scaleX(0);
-    transform-origin: right;
+  content: "";
+  background: #000;
+  height: 90px;
+  width: 30%;
+  top: -40px;
+  left: -60px;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
 }
 
 .navbar-links ul li:hover:after {
-    transform: scaleX(1);
-    transform-origin: left;
+  transform: scaleX(1);
+  transform-origin: left;
 }
-*//*# sourceMappingURL=nav-menu.css.map */
+
+.dropdown-list {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.sub-menu:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+}/*# sourceMappingURL=nav-menu.css.map */

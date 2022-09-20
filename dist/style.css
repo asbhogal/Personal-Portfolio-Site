@@ -108,7 +108,7 @@ body, p, span, a {
 /******** MAIN STYLING ********/
 body {
   opacity: 0;
-  transition: opacity 1.5s;
+  transition: opacity 2s;
 }
 
 .container #home-page {
@@ -118,6 +118,7 @@ body {
   top: 4rem;
 }
 .container #home-page #home-page-title-info {
+  width: fit-content;
   padding: 1.875rem 3.75rem;
 }
 .container #home-page #home-page-title-info .typed-out {

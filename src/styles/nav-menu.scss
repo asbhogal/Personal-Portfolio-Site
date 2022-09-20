@@ -70,12 +70,6 @@
 }
 
 
-.menu-link a {}
-
-
-
-
-/*
 .navbar-links ul li:after {
     content: "";
     background: #000;
@@ -92,4 +86,15 @@
     transform: scaleX(1);
     transform-origin: left;
 }
-*/
+
+.dropdown-list {
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition-03;
+}
+
+.sub-menu:hover > ul {
+    opacity: 1;
+    visibility: visible ;
+    transition: $transition-03;
+}
