@@ -19,6 +19,7 @@ body {
         width: calc(100% - 15rem);
         height: calc(100vh - 4rem);
         top: 4rem;
+        z-index: -1;
         #home-page-title-info {
             width: fit-content;
             padding: 1.875rem 3.75rem;

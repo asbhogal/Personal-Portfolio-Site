@@ -116,6 +116,7 @@ body {
   width: calc(100% - 15rem);
   height: calc(100vh - 4rem);
   top: 4rem;
+  z-index: -1;
 }
 .container #home-page #home-page-title-info {
   width: fit-content;
