@@ -1,7 +1,13 @@
 /****** COLORS ******/
 /****** POSITIONING ******/
 /****** TRANSITIONS & ANIMATIONS ******/
-.main-footer {
+#wcb {
+  position: absolute;
+  bottom: 0;
+  left: 4.25rem;
+}
+
+.footer-profile-links {
   display: flex;
   justify-content: space-evenly;
   width: 40%;
@@ -10,10 +16,10 @@
   padding: 1.5625rem 0;
   bottom: 0;
 }
-.main-footer .footer-link {
+.footer-profile-links .footer-link {
   text-decoration: none;
 }
-.main-footer .footer-link:after {
+.footer-profile-links .footer-link:after {
   content: "";
   position: relative;
   bottom: -1px;
@@ -25,12 +31,12 @@
   background: #926c15;
   transition: all 0.3s ease-in-out;
 }
-.main-footer .footer-link:hover {
+.footer-profile-links .footer-link:hover {
   transition: all 0.3s ease-in-out;
 }
-.main-footer .footer-link:hover:after {
+.footer-profile-links .footer-link:hover:after {
   width: 75%;
 }
-.main-footer li {
+.footer-profile-links li {
   list-style-type: none;
 }/*# sourceMappingURL=footer.css.map */
