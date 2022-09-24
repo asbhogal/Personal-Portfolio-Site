@@ -183,13 +183,29 @@ body {
   background: red;
   min-width: 45px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .mode-toggle .switch {
   position: relative;
   display: inline-block;
   border-radius: 25px;
-  height: 22px;
-  width: 40px;
+  height: 40px;
+  width: 22px;
+  background-color: #99582a;
+}
+.mode-toggle .switch:before {
+  content: "";
+  position: absolute;
+  transform: translateY(-50%);
+  height: 15px;
+  width: 15px;
+  left: 5px;
+  top: 50%;
+  background-color: blue;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
 }
 
 /******** KEYFRAMES ********/
