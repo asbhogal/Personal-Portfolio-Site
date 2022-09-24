@@ -1,32 +1,42 @@
 /****** COLORS ******/
 /****** POSITIONING ******/
 /****** TRANSITIONS & ANIMATIONS ******/
-footer {
+#wcb {
+  position: absolute;
+  bottom: 0;
+  left: 4.25rem;
+}
+
+.footer-profile-links {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #000;
-  width: 100%;
+  justify-content: space-evenly;
+  width: 40%;
+  right: 0;
+  position: absolute;
+  padding: 1.5625rem 0;
+  bottom: 0;
 }
-footer li {
-  display: inline-block;
-  list-style-type: none;
-  padding-inline: 40px;
-  color: #737373;
-}
-footer #footer-separator {
-  border: none;
-  height: 0.1em;
-  background: red;
-  margin: 1em 0;
-  width: 70%;
-}
-footer #top-footer {
-  padding-top: 1em;
-}
-footer #top-footer .footer_menu_link {
+.footer-profile-links .footer-link {
   text-decoration: none;
 }
-footer #bottom-footer {
-  padding-bottom: 1em;
+.footer-profile-links .footer-link:after {
+  content: "";
+  position: relative;
+  bottom: -1px;
+  left: 0;
+  top: 5px;
+  width: 0;
+  height: 1px;
+  display: flex;
+  background: #926c15;
+  transition: all 0.3s ease-in-out;
+}
+.footer-profile-links .footer-link:hover {
+  transition: all 0.3s ease-in-out;
+}
+.footer-profile-links .footer-link:hover:after {
+  width: 75%;
+}
+.footer-profile-links li {
+  list-style-type: none;
 }/*# sourceMappingURL=footer.css.map */

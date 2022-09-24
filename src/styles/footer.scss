@@ -1,0 +1,41 @@
+@import '../_partials/variables';
+
+#wcb {
+    position: absolute;
+    bottom: 0;
+    left: 4.25rem;
+}
+
+.footer-profile-links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    right: 0;
+    position: absolute;
+    padding: 1.5625rem 0;
+    bottom: 0;
+    .footer-link {
+        text-decoration: none;
+        &:after {
+            content: "";
+            position: relative;
+            bottom: -1px;
+            left: 0;
+            top: 5px;
+            width: 0;
+            height: 1px;
+            display: flex;
+            background: #926c15;
+            transition: $transition-03;
+        }
+        &:hover {
+            transition: $transition-03;
+            &:after {
+                width: 75%;
+            }
+        }
+    }
+    li {
+        list-style-type: none;
+    }
+}

@@ -6,22 +6,11 @@
     box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 html {
     scroll-behavior: smooth;
 }
-
-#cursor-follower{
-    height: 24px;
-    width: 24px;
-    display: inline-block;
-    color: $main-color-02;
-    font-size: 24px;
-    line-height: 24px;
-    text-align: center;
-    z-index: 9999;
-  }
-  
-  #cursor-follower::before {
-    content: "×";
-    z-index: 9999;
-  }

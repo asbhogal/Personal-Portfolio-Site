@@ -2,7 +2,7 @@
 
 The following fonts are used under the personal, non-commercial license:
     -   The Billion
-    -   Neue Machina
+    -   Oatmeal Sans
 */
 
 @import 'variables';
@@ -17,29 +17,35 @@ The following fonts are used under the personal, non-commercial license:
     font-display: swap;
 }
 
-/****** NEUE MACHINA - 300 LIGHT ******/
+/****** OATMEAL SANS - 400 REGULAR ******/
 
 @font-face {
-    font-family: 'Neue Machina';
-    src:    url('/src/assets/fonts/PPNeueMachina-Light.woff') format('woff'),
-            url('/src/assets/fonts/PPNeueMachina-Light.woff2') format('woff2');
+    font-family: 'Oatmeal Sans';
+    font-weight: 400;
+    src:    url('/src/assets/fonts/Oatmeal Sans.woff') format('woff'),
+            url('/src/assets/fonts/Oatmeal Sans.woff2') format('woff2');
     font-display: swap;
 }
 
 /****** TYPOGRAPHY ASSIGNMENT ******/
 
-h1, h2, h3 {
+h1, h2, h3, body, p, span, a {
+    color: #283618;
+}
+
+h1 {
     font-family: 'The Billion', cursive;
     font-weight: 200;
-    &:not(h1) {
-        color: $main-color-02;
-    }
-    &:not(h2, h3) {
-        color: $main-color-03;
-    }
+    font-size: 64px;
+
+}
+
+h2 {
+    font-family: 'Oatmeal Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 200;
 }
 
 body, p, span, a {
-    font-family: 'Neue Machina', monospace;
-    color: $main-color-02;
+    font-family: 'Oatmeal Sans', sans-serif;
 }

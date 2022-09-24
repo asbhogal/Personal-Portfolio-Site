@@ -2,7 +2,7 @@
 
 The following fonts are used under the personal, non-commercial license:
     -   The Billion
-    -   Neue Machina
+    -   Oatmeal Sans
 */
 /****** COLORS ******/
 /****** POSITIONING ******/
@@ -14,158 +14,128 @@ The following fonts are used under the personal, non-commercial license:
   src: url("/src/assets/fonts/The Billion.woff") format("woff"), url("/src/assets/fonts/The Billion.woff2") format("woff2");
   font-display: swap;
 }
-/****** NEUE MACHINA - 300 LIGHT ******/
+/****** OATMEAL SANS - 400 REGULAR ******/
 @font-face {
-  font-family: "Neue Machina";
-  src: url("/src/assets/fonts/PPNeueMachina-Light.woff") format("woff"), url("/src/assets/fonts/PPNeueMachina-Light.woff2") format("woff2");
+  font-family: "Oatmeal Sans";
+  font-weight: 400;
+  src: url("/src/assets/fonts/Oatmeal Sans.woff") format("woff"), url("/src/assets/fonts/Oatmeal Sans.woff2") format("woff2");
   font-display: swap;
 }
 /****** TYPOGRAPHY ASSIGNMENT ******/
-h1, h2, h3 {
+h1, h2, h3, body, p, span, a {
+  color: #283618;
+}
+
+h1 {
   font-family: "The Billion", cursive;
   font-weight: 200;
+  font-size: 64px;
 }
-h1:not(h1), h2:not(h1), h3:not(h1) {
-  color: #737373;
-}
-h1:not(h2, h3), h2:not(h2, h3), h3:not(h2, h3) {
-  color: #926c15;
+
+h2 {
+  font-family: "Oatmeal Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 200;
 }
 
 body, p, span, a {
-  font-family: "Neue Machina", monospace;
-  color: #737373;
+  font-family: "Oatmeal Sans", sans-serif;
 }
 
 /****** COLORS ******/
 /****** POSITIONING ******/
 /****** TRANSITIONS & ANIMATIONS ******/
 /* NAV BAR TOGGLE BUTTON */
-#nav-bar-btn {
-  position: fixed;
-  top: 25px;
-  right: 25px;
-  z-index: 2;
-  display: flex;
-  width: 20px;
-  height: 20px;
-}
-#nav-bar-btn span {
-  width: 20px;
-  height: 2px;
-  background-color: #f5f5f5;
-  display: flex;
-  position: absolute;
-  transition: all 0.3s ease-in-out;
-}
-#nav-bar-btn span:nth-child(1) {
-  top: 30%;
-}
-#nav-bar-btn span:nth-child(2) {
-  top: 60%;
-}
-#nav-bar-btn span:nth-child(3) {
-  top: 90%;
-}
-#nav-bar-btn.is-active span {
-  background-color: #f5f5f5;
-}
-#nav-bar-btn.is-active span:nth-child(1) {
-  top: 50%;
-  transform: rotate(-45deg);
-  background-color: #926c15;
-}
-#nav-bar-btn.is-active span:nth-child(2) {
-  top: 50%;
-  opacity: 0;
-}
-#nav-bar-btn.is-active span:nth-child(3) {
-  top: 50%;
-  transform: rotate(45deg);
-  background-color: #926c15;
-}
-
 /* NAV MENU */
-#nav-menu {
-  background-color: #000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 100px;
-  z-index: 1;
-  transition: all 0.5s ease-in-out;
-  opacity: 0;
-  visibility: hidden;
-}
-#nav-menu.is-active {
+.navbar {
   display: flex;
-  justify-content: center;
-  opacity: 1;
-  visibility: visible;
-}
-#nav-menu #menu_list {
+  justify-content: space-between;
   align-items: center;
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
+  margin: auto;
+  padding: 0.5rem 1.5rem;
 }
-#nav-menu #menu_list .menu_item:not(:last-child) {
-  margin-bottom: 30px;
+.navbar .navbar-links {
+  width: 100%;
 }
-#nav-menu #menu_list .menu_item > .menu_link {
-  position: relative;
-  display: inline-flex;
-  font-size: 28px;
-  color: #545454;
-  text-transform: uppercase;
+.navbar .navbar-links .menu-link, .navbar .navbar-links .sub-menu {
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
 }
-#nav-menu #menu_list .menu_item > .menu_link:hover {
-  color: #737373;
-  transition: all 0.3s ease-in-out;
-}
-#nav-menu #menu_list .menu_item > .menu_link:after {
+.navbar .navbar-links .menu-link:after, .navbar .navbar-links .sub-menu:after {
   content: "";
-  position: absolute;
-  bottom: -10px;
+  position: relative;
+  bottom: -1px;
   left: 0;
+  top: 2px;
   width: 0;
   height: 1px;
-  display: inline-flex;
+  display: flex;
   background: #926c15;
   transition: all 0.3s ease-in-out;
 }
-#nav-menu #menu_list .menu_item > .menu_link:hover:after {
-  width: 75%;
-}
-#nav-menu #menu_list .menu_item > .menu_link span.angle-line {
+.navbar .navbar-links .menu-link:hover, .navbar .navbar-links .sub-menu:hover {
   transition: all 0.3s ease-in-out;
 }
-#nav-menu #menu_list .menu_item > .menu_link span.angle-line:hover {
-  rotate: 90deg;
+.navbar .navbar-links .menu-link:hover:after, .navbar .navbar-links .sub-menu:hover:after {
+  width: 75%;
+}
+.navbar .navbar-links li {
+  list-style-type: none;
+  font-size: 1.25rem;
+}
+.navbar .navbar-links li .active {
+  font-weight: 800;
+}
+.navbar .navbar-links ul {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .navbar-links > ul > li > ul {
+  flex-direction: column;
+  position: absolute;
+}
+.navbar .navbar-links > ul > li > ul .menu-link {
+  text-decoration: none;
+}
+.navbar .navbar-links > ul > li > ul .dropdown-line {
+  border-right: 1px solid #000;
+  height: 3.75rem;
+  position: absolute;
+  top: 0.3125rem;
+  left: 0.625rem;
+}
+.navbar .navbar-links > ul > li > ul li {
+  position: relative;
+  left: 1.3rem;
+}
+.navbar .navbar-links > ul > li > ul li:nth-child(2) {
+  padding: 0.75rem 0;
 }
 
-.menu_link a {
-  animation: slideIn 2s forward;
+.navbar-links ul li:after {
+  content: "";
+  background: #000;
+  height: 90px;
+  width: 30%;
+  top: -40px;
+  left: -60px;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
 }
 
-@keyframes slideIn {
-  0% {
-    transform: translateX(-900px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+.navbar-links ul li:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
-/* RESPONSIVE */
-@media (max-width: 560px) {
-  body {
-    text-align: center !important;
-  }
-  body #nav-menu.is-active {
-    justify-content: center;
-  }
+
+.dropdown-list {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.sub-menu:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
 }/*# sourceMappingURL=nav-menu.css.map */

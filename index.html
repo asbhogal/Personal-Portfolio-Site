@@ -4,119 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home &#124; Aman Singh Bhogal</title>
     <meta name="author" content="Aman Singh Bhogal">
     <meta http-equiv="Pragma" content="no-cache">
     <!-- add icon link -->
-    <link rel="icon" href="/src/assets/images/New Portfolio - Logo.jpg" type="image/x-icon">
+    <link rel="icon" href="" type="image/x-icon">
     <!-- MAIN STYLING -->
     <link rel="stylesheet" href="/dist/style.css">
     <!-- JQUERY SCRIPT -->
     <script src="/src/js/jquery-3.6.1.min.js" defer></script>
     <!-- MAIN SCRIPT -->
     <script src="/src/js/script.js" defer></script>
-    <!--NAV MENU STYLING -->
+    <!-- NAV BAR STYLING -->
     <link rel="stylesheet" href="dist/nav-menu.css">
-    <!--NAV MENU SCRIPT -->
-    <script src="/nav-menu.js" defer></script>
     <!-- FOOTER STYLING -->
     <link rel="stylesheet" href="dist/footer.css">
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
 </head>
 
 <body onload="document.body.style.opacity='1'">
-    <a href="javascript:;" id="nav-bar-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-    </a>
-    <div class="background-face">
-        <nav id="nav-menu">
-            <ul id="menu_list">
-                <li class="menu_item">
-                    <a href="/index.html" class="menu_link">Home</a>
-                </li>
-                <li class="menu_item">
-                    <a href="/about.html" class="menu_link">About</a>
-                </li>
-                <li class="menu_item">
-                    <a href="/web-portfolio.html" class="menu_link">Web Portfolio</a>
-                </li>
-                <li class="menu_item">
-                    <a href="/whisky-reviews.html" class="menu_link">Whisky Reviews</a>
-                    <li><a href="#">/</span>SCOTCH</a></li>
-                    <li><a href="#">/</span>/ IRISH</a></li>
-                    <li><a href="#">/</span>/ WELSH</a></li>
-                    <li><a href="#">/ ENGLISH</a></li>
-                    <li><a href="#">/ AMERICAN</a></li>
-                    <li><a href="#">/ CANADIAN</a></li>
-                    <li><a href="#">/ WORLD</a></li>
-                </li>
-                <li class="menu_item">
-                    <a href="/contact.html" class="menu_link">/ Contact</a>
-                </li>
-            </ul>
-        </nav>
-    <section id="home-page-1" class="top-section">
-        <!-- LEFT COLUMN --> 
-        <div id="left-column" class="column">
-            <div id="site-icon">
-                <div id="left-divider"></div>
-                <a href="index.html"><img src="/src/assets/images/New Portfolio - Logo.jpg" alt="" width="80px"></a>
-            </div>            
-            <p id="connect-panel"><a href="https://www.linkedin.com/in/amansinghbhogal/">LinkedIn</a>&#47;<a href="https://github.com/asbhogal">GitHub</a>&#47;<a href="mailto:amansinghbhogal1@gmail.com">Email</a></p>
-        </div>
-        <!-- MIDDLE COLUMN --> 
-        <div id="middle-column" class="column">
-            <div id="bottom-divider"></div>
-            <div id="site-title">
-                <h1>Aman Singh Bhogal</h1>
-            </div>
-            <div id="subheading">
-                <div id="subheading-1" class="typed-out">
-                    Web Designer &#38; Developer //
-                </div>
-                <div id="subheading-2" class="typed-out">
-                    Whisky Writer &#38; Reviewer<span id="underline">&#95;</span>
-                </div>
-            </div>
-            <div class="home-page-link-list">
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar-links">
                 <ul>
-                    <li class="home-page-item">
-                        <a href="/about.html" class="page_link">01 &#47; About</a>
-                    </li> 
-                    <li class="home-page-item">
-                        <a href="/web-portfolio.html" class="page_link">02 &#47; Web Portfolio</a>
-                    </li> 
-                    <li class="home-page-item">
-                        <a href="/whisky-reviews.html" class="page_link">03 &#47; Whisky Reviews</a>
-                    </li> 
-                    <li class="home-page-item">
-                        <a href="/contact.html" class="page_link">04 &#47; Contact</a>
-                    </li> 
+                    <li class="nav-bar-li"><a class="active menu-link" href="index.html">home</a></li>
+                    <li class="nav-bar-li"><a class="menu-link" href="about.html">about</a></li>
+                    <li class="nav-bar-li sub-menu"><a class="menu-link" href="#">work</a>
+                        <ul class="dropdown-list">
+                            <div class="dropdown-line"></div>
+                            <li class=><a class="menu-link" href="web-portfolio.html">web d&#38;d</a></li>
+                            <li class=><a class="menu-link" href="whisky-reviews.html">whisky</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-bar-li"><a class="menu-link" href="contact.html">contact</a></li>
                 </ul>
             </div>
-        </div>
-        <!-- RIGHT COLUMN --> 
-        <div id="right-column" class="column">
-
-        </div>
+        </nav>
+        <section id="home-page" class="section">
+            <div id="home-page-title-info">
+                <h1>
+                    Aman Singh Bhogal          A
+                </h1>
+                <hr id="home-page-title-separator">
+                <h2 class="typed-out">
+                    Web Designer Developer &#124; Whisky Writer &#38; Reviewer
+                </h2>
+            </div>
+            <div class="stack-snapshot">
+                <p>Stacks</p>
+                <hr id="stacks-separator">
+                <div class="stacks-list">
+                    <li><a href="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/html5/html5-original.svg" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/html5/html5-original.svg" width="50px;" alt=""></a></li>
+                    <li><a href="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/css3/css3-original.svg" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/css3/css3-original.svg" width="50px;" alt=""></a></li>
+                    <li><a href="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/sass/sass-original.svg" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/sass/sass-original.svg" width="50px;" alt=""></a></li>
+                    <li><a href="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/bootstrap/bootstrap-original.svg" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/bootstrap/bootstrap-original.svg" width="50px;" alt=""></a></li>
+                    <li><a href="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg" width="50px;" alt=""></a></li>
+                    <li><a href="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/jquery/jquery-original.svg" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/jquery/jquery-original.svg" width="50px;" alt=""></a></li>
+                    <li><a href="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/php/php-original.svg" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/php/php-original.svg" width="50px;" alt=""></a></li>
+                </div>
+            </div>
+        </section>
+        <aside id="owner-bio" class="aside"></aside>
+        <footer class="main-footer">
+            <div id="wcb" class="carbonbadge wcb-d"></div>
+            <div class="footer-profile-links">
+                <li><a class="footer-link" href="https://www.linkedin.com/in/amansinghbhogal/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a class="footer-link" href="https://github.com/asbhogal" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a class="footer-link" href="https://amansinghbhogal.medium.com/" target="_blank" rel="noopener noreferrer">Medium</a></li>
+            </div>
+        </footer>
     </div>
-    </section>
-    <section id="home-page-2" class="content-section"></section>
-    <section id="home-page-3" class="content-section"></section>
-    <section id="home-page-4" class="content-section"></section>
-    <footer>
-        <!-- CONTACT MENU -->
-        <ul id="top-footer">
-            <li><a href="https://www.linkedin.com/in/amansinghbhogal/" class="footer_menu_link">&#47; LinkedIn</a></li>
-            <li><a href="https://github.com/asbhogal" class="footer_menu_link">&#47; GitHub</a></li>
-            <li><a href="mailto:amansinghbhogal1@gmail.com" class="footer_menu_link">&#47; Email</a></li>
-        </ul>
-        <hr id="footer-separator">
-        <ul id="bottom-footer">
-            <li> / Cookie Policy</li>
-            <li> / Privacy Policy</li>
-        </ul>
-    </footer>
 </body>
 </html>

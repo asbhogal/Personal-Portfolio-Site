@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /******** IMPORT PARTIAL STYLESHEETS ********/ /****** COLORS ******/
 /****** POSITIONING ******/
 /****** TRANSITIONS & ANIMATIONS ******/
@@ -8,24 +7,13 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
-}
-
-#cursor-follower {
-  height: 24px;
-  width: 24px;
-  display: inline-block;
-  color: #737373;
-  font-size: 24px;
-  line-height: 24px;
-  text-align: center;
-  z-index: 9999;
-}
-
-#cursor-follower::before {
-  content: "×";
-  z-index: 9999;
 }
 
 @media screen and (max-width: 600px) {
@@ -59,11 +47,22 @@ html {
     padding: 40px 30px !important;
   }
 }
+/********** TABLET WIDTHS **********/
+@media (max-width: 1200px) {
+  #home-page-title-info {
+    scale: 0.8;
+  }
+  .stack-snapshot {
+    position: static !important;
+    width: 500px !important;
+    left: 60px !important;
+  }
+}
 /* == DISCLAIMER ==
 
 The following fonts are used under the personal, non-commercial license:
     -   The Billion
-    -   Neue Machina
+    -   Oatmeal Sans
 */
 /****** COLORS ******/
 /****** POSITIONING ******/
@@ -75,27 +74,32 @@ The following fonts are used under the personal, non-commercial license:
   src: url("/src/assets/fonts/The Billion.woff") format("woff"), url("/src/assets/fonts/The Billion.woff2") format("woff2");
   font-display: swap;
 }
-/****** NEUE MACHINA - 300 LIGHT ******/
+/****** OATMEAL SANS - 400 REGULAR ******/
 @font-face {
-  font-family: "Neue Machina";
-  src: url("/src/assets/fonts/PPNeueMachina-Light.woff") format("woff"), url("/src/assets/fonts/PPNeueMachina-Light.woff2") format("woff2");
+  font-family: "Oatmeal Sans";
+  font-weight: 400;
+  src: url("/src/assets/fonts/Oatmeal Sans.woff") format("woff"), url("/src/assets/fonts/Oatmeal Sans.woff2") format("woff2");
   font-display: swap;
 }
 /****** TYPOGRAPHY ASSIGNMENT ******/
-h1, h2, h3 {
+h1, h2, h3, body, p, span, a {
+  color: #283618;
+}
+
+h1 {
   font-family: "The Billion", cursive;
   font-weight: 200;
+  font-size: 64px;
 }
-h1:not(h1), h2:not(h1), h3:not(h1) {
-  color: #737373;
-}
-h1:not(h2, h3), h2:not(h2, h3), h3:not(h2, h3) {
-  color: #926c15;
+
+h2 {
+  font-family: "Oatmeal Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 200;
 }
 
 body, p, span, a {
-  font-family: "Neue Machina", monospace;
-  color: #737373;
+  font-family: "Oatmeal Sans", sans-serif;
 }
 
 /****** COLORS ******/
@@ -104,156 +108,83 @@ body, p, span, a {
 /******** MAIN STYLING ********/
 body {
   opacity: 0;
-  transition: opacity 1.5s;
+  transition: opacity 2s;
 }
 
-.background-face {
-  background-image: url("/src/assets/images/New Portfolio Website Mockup.jpg");
-  height: 100%;
-  background-size: cover;
-}
-
-#left-divider {
+.container #home-page {
   position: absolute;
-  border-right: 1px solid #737373;
-  height: calc(100vh - 80px);
-  /* left: 25px; */
-  top: 40px;
-  width: 78px;
+  width: calc(100% - 15rem);
+  height: calc(100vh - 4rem);
+  top: 4rem;
+  z-index: -1;
 }
-
-p#connect-panel {
-  transform: rotate(180deg);
-  writing-mode: vertical-lr;
-  margin-right: 30px;
-}
-p#connect-panel a {
-  text-decoration: none;
-  padding-inline: 30px;
-}
-
-#middle-column {
-  position: absolute;
-  top: 5px;
-}
-
-#bottom-divider {
-  position: absolute;
-  width: 65%;
-  border-top: 1px solid #737373;
-  bottom: 29px;
-  left: 110px;
-}
-
-.top-section {
-  padding-top: 10px;
-  padding-bottom: 35px;
-  height: 100vh;
-}
-.top-section #site-title {
-  padding: 40px 30px 0 110px;
-  font-size: 62px;
-  display: inline-block;
-}
-.top-section #subheading {
-  text-transform: uppercase;
-  line-height: 3em;
-  display: flex;
-  flex-direction: column;
-  padding: 40px 30px 0 110px;
+.container #home-page #home-page-title-info {
   width: fit-content;
+  padding: 1.875rem 3.75rem;
 }
-.top-section #subheading .typed-out {
-  font-size: 21px;
+.container #home-page #home-page-title-info .typed-out {
   overflow: hidden;
+  border-right: 0.15em solid #99582a;
+  font-size: 1.6rem;
   width: 0;
   white-space: nowrap;
-  border-right: 0.15em solid #926c15;
-  animation-delay: 20 !important;
-  animation: typing-effect 1.5s steps(70, end) forwards;
+  animation: typing-effect 3s steps(1200, end) forwards, blinking-effect 1s infinite;
+  /*animation-delay: 1.5s;*/
 }
-.top-section #subheading #subheading-2 {
-  animation-delay: 1.5s;
+.container #home-page #home-page-title-info #home-page-title-separator {
+  margin-bottom: 0.75rem;
+  background: #99582a;
+  border: none;
+  height: 0.1rem;
+  width: calc(100% - 75rem);
 }
-
-.home-page-link-list {
-  width: 75%;
+.container #owner-bio {
+  display: none;
+  position: absolute;
+  right: 20px;
+  background: #000;
+  width: 200px;
+  height: 200px;
+  top: 10rem;
+  right: 0;
 }
-.home-page-link-list ul {
-  display: flex;
-  justify-content: flex-start;
-  margin: 40px 110px;
+.container .stack-snapshot {
+  position: absolute;
+  width: 500px;
+  left: calc(100% - 300px);
+  bottom: 218px;
 }
-.home-page-link-list ul .home-page-item {
-  padding: 35px 10px 35px 35px;
+.container .stack-snapshot #stacks-separator {
+  background: #99582a;
+  border: none;
+  height: 0.1rem;
+  width: 40%;
+}
+.container .stack-snapshot .stacks-list {
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
 }
-.home-page-link-list ul .home-page-item:after {
-  content: "";
-  background: red;
-  height: 90px;
-  width: 30%;
-  top: -40px;
-  left: -60px;
-  background: #926c15;
-  transition: transform 0.5s;
-  transform: scaleX(0);
-  transform-origin: right;
-}
-.home-page-link-list ul .home-page-item:hover:after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-.home-page-link-list ul .home-page-item .page_link {
+.container .stack-snapshot .stacks-list li {
   position: relative;
-  top: -20px;
-  left: -30px;
-  text-decoration: none;
-  font-size: 18px;
+  top: 15px;
 }
-.home-page-link-list ul .home-page-item .page_link:after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 3px;
-  top: 100%;
-  left: 0;
-  background: #926c15;
-  transition: transform 0.5s;
-  transform: scaleX(0);
-  transform-origin: right;
+.container .stack-snapshot .stacks-list a {
+  padding-inline: 10px;
 }
-.home-page-link-list ul .home-page-item .page_link:hover:after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-hr.base-line {
-  bottom: -88px;
-  position: relative;
-  width: 60%;
-}
-
-.content-section {
-  position: relative;
-  height: 100vh;
-}
-
-#home-page-2 {
-  background-color: #000;
-}
-
-#home-page-3 {
-  background-color: #000;
-}
-
-#home-page-4 {
-  background-color: #000;
+.container .stack-snapshot p {
+  font-size: 21px;
+  padding-bottom: 10px;
 }
 
 /******** KEYFRAMES ********/
+@keyframes blinking-effect {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #99582a;
+  }
+}
 @keyframes typing-effect {
   from {
     width: 0;
