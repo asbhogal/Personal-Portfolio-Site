@@ -131,11 +131,11 @@ body, p, span, a {
 .dropdown-list {
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .sub-menu:hover > ul {
   opacity: 1;
   visibility: visible;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }/*# sourceMappingURL=nav-menu.css.map */

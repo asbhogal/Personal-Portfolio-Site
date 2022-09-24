@@ -90,11 +90,11 @@
 .dropdown-list {
     opacity: 0;
     visibility: hidden;
-    transition: $transition-03;
+    transition: $transition-05;
 }
 
 .sub-menu:hover > ul {
     opacity: 1;
     visibility: visible ;
-    transition: $transition-03;
+    transition: $transition-05;
 }
