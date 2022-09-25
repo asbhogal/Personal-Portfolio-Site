@@ -180,8 +180,8 @@ body {
   position: absolute;
   right: 30px;
   height: 50px;
-  background: red;
   min-width: 45px;
+  top: 40%;
   cursor: pointer;
   display: flex;
   align-items: center;
