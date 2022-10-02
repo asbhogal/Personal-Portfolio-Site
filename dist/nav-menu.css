@@ -1,3 +1,110 @@
+/****** COLORS ******/
+/****** POSITIONING ******/
+/****** TRANSITIONS & ANIMATIONS ******/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 600px) {
+  #left-divider {
+    display: none;
+  }
+  #site-title {
+    font-size: 42px;
+    padding: 10px 30px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .top-section .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #connect-panel a {
+    padding-inline: 30px;
+  }
+  .top-section #site-title {
+    padding: 0 !important;
+    font-size: 42px !important;
+  }
+  #subheading {
+    padding: 40px 30px !important;
+  }
+}
+/********** TABLET WIDTHS **********/
+@media (max-width: 1200px) {
+  #home-page-title-info {
+    scale: 0.8;
+  }
+  .stack-snapshot {
+    position: static !important;
+    width: 500px !important;
+    left: 60px !important;
+  }
+}
+/* == DISCLAIMER ==
+
+The following fonts are used under the personal, non-commercial license:
+    -   The Billion
+    -   Oatmeal Sans
+*/
+/****** COLORS ******/
+/****** POSITIONING ******/
+/****** TRANSITIONS & ANIMATIONS ******/
+/****** THE BILLION - 300 LIGHT ******/
+@font-face {
+  font-family: "The Billion";
+  font-weight: 300;
+  src: url("/src/assets/fonts/The Billion.woff") format("woff"), url("/src/assets/fonts/The Billion.woff2") format("woff2");
+  font-display: swap;
+}
+/****** OATMEAL SANS - 400 REGULAR ******/
+@font-face {
+  font-family: "Oatmeal Sans";
+  font-weight: 400;
+  src: url("/src/assets/fonts/Oatmeal Sans.woff") format("woff"), url("/src/assets/fonts/Oatmeal Sans.woff2") format("woff2");
+  font-display: swap;
+}
+/****** TYPOGRAPHY ASSIGNMENT ******/
+h1, h2, h3, body, p, span, a {
+  color: #283618;
+}
+
+h1 {
+  font-family: "The Billion", cursive;
+  font-weight: 200;
+  font-size: 64px;
+}
+
+h2 {
+  font-family: "Oatmeal Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 200;
+}
+
+body, p, span, a {
+  font-family: "Oatmeal Sans", sans-serif;
+}
+
+/****** COLORS ******/
+/****** POSITIONING ******/
+/****** TRANSITIONS & ANIMATIONS ******/
 .main-nav-bar {
   display: flex;
   justify-content: flex-end;
@@ -6,7 +113,9 @@
 .main-nav-bar a {
   text-decoration: none;
   display: inline-block;
-  color: #333;
+}
+.main-nav-bar ul {
+  list-style-type: none;
 }
 .main-nav-bar #cubic-scroll {
   color: #ccc;

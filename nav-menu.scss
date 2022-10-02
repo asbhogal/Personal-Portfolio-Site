@@ -1,3 +1,9 @@
+@import     'src/_partials/globals',
+            'src/_partials/mixins',
+            'src/_partials/responsive',
+            'src/_partials/typography',
+            'src/_partials/variables';
+
 .main-nav-bar {
 	display: flex;
 	justify-content: flex-end;
@@ -5,7 +11,9 @@
     a {
         text-decoration: none;
         display: inline-block;
-        color: #333;
+    }
+    ul {
+        list-style-type: none;
     }
     #cubic-scroll {
         color: #ccc;
