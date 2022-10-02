@@ -19,9 +19,20 @@
   -o-perspective: 300px;
   perspective: 280px;
 }
+.main-nav-bar #cubic-scroll:hover span {
+  background: #000;
+  -webkit-transform: translate3d(0px, 0px, -60px) rotateX(90deg);
+  -moz-transform: translate3d(0px, 0px, -60px) rotateX(90deg);
+  -ms-transform: translate3d(0px, 0px, -60px) rotateX(90deg);
+  -o-transform: translate3d(0px, 0px, -60px) rotateX(90deg);
+  transform: translate3d(0px, 0px, -60px) rotateX(90deg);
+}
+.main-nav-bar #cubic-scroll:hover span:after {
+  background: #000;
+}
 .main-nav-bar #cubic-scroll span {
   display: block;
-  background: black;
+  background: #000;
   padding: 20px 50px;
   top: 0;
   transition: all 0.5s ease-in-out;
@@ -69,19 +80,6 @@
   -ms-transform: translate3d(0px, 100%, 0) rotateX(-90deg);
   -o-transform: translate3d(0px, 100%, 0) rotateX(-90deg);
   transform: translate3d(0px, 100%, 0) rotateX(-90deg);
-}
-
-#cubic-scroll:hover span {
-  background: #000;
-  -webkit-transform: translate3d(0px, 0px, -60px) rotateX(90deg);
-  -moz-transform: translate3d(0px, 0px, -60px) rotateX(90deg);
-  -ms-transform: translate3d(0px, 0px, -60px) rotateX(90deg);
-  -o-transform: translate3d(0px, 0px, -60px) rotateX(90deg);
-  transform: translate3d(0px, 0px, -60px) rotateX(90deg);
-}
-
-#cubic-scroll:hover span:after {
-  background: #000;
 }
 
 [class~=nav-bar-hover-text]:after {
