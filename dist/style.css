@@ -121,4 +121,32 @@ body, p, span, a {
   position: absolute;
   bottom: 0;
   padding-bottom: 50px;
+}
+
+.stack-snapshot {
+  position: absolute;
+  width: 500px;
+  left: calc(100% - 300px);
+  bottom: 218px;
+}
+.stack-snapshot #stacks-separator {
+  background: #99582a;
+  border: none;
+  height: 0.1rem;
+  width: 40%;
+}
+.stack-snapshot .stacks-list {
+  list-style-type: none;
+  display: flex;
+}
+.stack-snapshot .stacks-list li {
+  position: relative;
+  top: 15px;
+}
+.stack-snapshot .stacks-list a {
+  padding-inline: 10px;
+}
+.stack-snapshot p {
+  font-size: 21px;
+  padding-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */
