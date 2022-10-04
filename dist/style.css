@@ -107,4 +107,18 @@ body, p, span, a {
 
 /****** COLORS ******/
 /****** POSITIONING ******/
-/****** TRANSITIONS & ANIMATIONS ******//*# sourceMappingURL=style.css.map */
+/****** TRANSITIONS & ANIMATIONS ******/
+#container {
+  background: #000;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: -1;
+  padding: 10px 30px;
+}
+#container #home-page-title {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 50px;
+}/*# sourceMappingURL=style.css.map */
