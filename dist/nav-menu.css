@@ -116,6 +116,7 @@ body, p, span, a {
 .main-nav-bar a {
   text-decoration: none;
   display: inline-block;
+  font-size: 1.4rem;
 }
 .main-nav-bar ul {
   list-style-type: none;
