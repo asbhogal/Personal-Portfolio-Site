@@ -10,6 +10,9 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 2s;
 }
 
 html {
@@ -83,7 +86,7 @@ The following fonts are used under the personal, non-commercial license:
 }
 /****** TYPOGRAPHY ASSIGNMENT ******/
 h1, h2, h3, body, p, span, a {
-  color: #283618;
+  color: #ccc;
 }
 
 h1 {
