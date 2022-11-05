@@ -8,128 +8,38 @@
 
 /******** MAIN STYLING ********/
 
-body {
-    opacity: 0;
-    transition: opacity 2s;
-}
-
 .container {
-    #home-page {
-        position: $absolute-position;
-        width: calc(100% - 15rem);
-        height: calc(100vh - 4rem);
-        top: 4rem;
-        z-index: -1;
-        #home-page-title-info {
-            width: fit-content;
-            padding: 1.875rem 3.75rem;
-            .typed-out {
-                overflow: hidden;
-                border-right: 0.15em solid $main-color-03;
-                font-size: 1.6rem;
-                width: 0;
-                white-space: nowrap;
-                animation: 
-                    typing-effect 3s steps(1200, end) forwards,
-                    blinking-effect 1s infinite;
-                /*animation-delay: 1.5s;*/
-            }
-            #home-page-title-separator {
-                margin-bottom: 0.75rem;
-                background: $main-color-03;
-                border: none;
-                height: 0.1rem;
-                width: calc(100% - 75rem);
-                }
-        }
-    }
-    #owner-bio {
-        display: none;
-        position: $absolute-position;
-        right: 20px;
-        background: #000;
-        width: 200px;
-        height: 200px;
-        top: 10rem;
-        right: 0;
-    }
-    .stack-snapshot {
-        position: $absolute-position;
-        width: 500px;
-        left: calc(100% - 300px);
-        bottom: 218px;
-        #stacks-separator {
-            background: $main-color-03;
-            border: none;
-            height: 0.1rem;
-            width: 40%;
-        }
-        .stacks-list {
-            list-style-type: none;
-            display: $flex-display;
-            li {
-                position: $relative-position;
-                top: 15px;
-            }
-            a {
-                padding-inline: 10px;
-            }
-        }
-        p {
-            font-size: 21px;
-            padding-bottom: 10px;
-        }
-    }
-}
-
-.mode-toggle {
-    position: absolute;
-    right: 30px;
-    height: 50px;
-    min-width: 45px;
-    top: 40%;
-    cursor: pointer;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    align-content: center;
     justify-content: center;
-    .switch {
+    text-align: center;
+    height: 100vh;
+    padding: 0 40px;
+    :not(:last-child, li) {
+        padding-bottom: 40px;
+    }
+    #wcb_p {
         position: relative;
-        display: inline-block;
-        border-radius: 25px;
-        height: 40px;
-        width: 22px;
-        background-color: $main-color-03;
-        &:before {
-            content: "";
-            position: absolute;
-            transform: translateY(-50%);
-            height: 15px;
-            width: 15px;
-            left: 5px;
-            top: 50%;
-            background-color: blue;
-            border-radius: 50%;
-            transition: $transition-05;
+        bottom: -100%;
+        #wcb_a {
+            background-color: #111 !important;
+            border: none !important;
+        }
+        #wcb_g {
+            border: none !important;
         }
     }
 }
-
-/******** KEYFRAMES ********/
-
-@keyframes blinking-effect {
-    from {
-        border-color: transparent;
-    }
-    to {
-        border-color: $main-color-03;
-    }
+nav {
+    width: 100%;
 }
-
-@keyframes typing-effect {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    li {
+        display: flex;
     }
 }

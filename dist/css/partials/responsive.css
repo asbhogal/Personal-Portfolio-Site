@@ -1,0 +1,44 @@
+@media screen and (max-width: 600px) {
+  #left-divider {
+    display: none;
+  }
+  #site-title {
+    font-size: 42px;
+    padding: 10px 30px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .top-section .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #connect-panel a {
+    padding-inline: 30px;
+  }
+  .top-section #site-title {
+    padding: 0 !important;
+    font-size: 42px !important;
+  }
+  #subheading {
+    padding: 40px 30px !important;
+  }
+}
+/********** TABLET WIDTHS **********/
+@media (max-width: 1200px) {
+  #home-page-title-info {
+    scale: 0.8;
+  }
+  .stack-snapshot {
+    position: static !important;
+    width: 500px !important;
+    left: 60px !important;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

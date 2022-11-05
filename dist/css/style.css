@@ -1,0 +1,226 @@
+@charset "UTF-8";
+/****** COLORS ******/
+/****** POSITIONING ******/
+/****** TRANSITIONS & ANIMATIONS ******/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 600px) {
+  #left-divider {
+    display: none;
+  }
+  #site-title {
+    font-size: 42px;
+    padding: 10px 30px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .top-section .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #connect-panel a {
+    padding-inline: 30px;
+  }
+  .top-section #site-title {
+    padding: 0 !important;
+    font-size: 42px !important;
+  }
+  #subheading {
+    padding: 40px 30px !important;
+  }
+}
+/********** TABLET WIDTHS **********/
+@media (max-width: 1200px) {
+  #home-page-title-info {
+    scale: 0.8;
+  }
+  .stack-snapshot {
+    position: static !important;
+    width: 500px !important;
+    left: 60px !important;
+  }
+}
+/* == DISCLAIMER == */
+/**
+ * @license
+ *
+ * Font Family: Azeret Mono
+ * Designed by: Displaay, Martin Vácha, Daniel Quisek
+ * URL: https://www.fontshare.com/fonts/azeret-mono
+ * © 2022 Indian Type Foundry
+ *
+ * Font Style:
+ * Azeret Mono Thin
+ *
+*/
+/****** AZERET MONO - 100 THIN ******/
+@font-face {
+  font-family: "AzeretMono-Thin";
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/AzeretMono-Thin.woff2") format("woff2"), url("../fonts/AzeretMono-Thin.woff") format("woff");
+}
+/****** TYPOGRAPHY ASSIGNMENT ******/
+h1, h2, h3, body, p, span, a {
+  color: #283618;
+}
+
+h1 {
+  font-family: "The Billion", cursive;
+  font-weight: 200;
+  font-size: 64px;
+}
+
+h2 {
+  font-family: "Oatmeal Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 200;
+}
+
+body, p, span, a {
+  font-family: "Oatmeal Sans", sans-serif;
+}
+
+/******** IMPORT PARTIAL STYLESHEETS ********/
+/******** MAIN STYLING ********/
+body {
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.container #home-page {
+  position: absolute;
+  width: calc(100% - 15rem);
+  height: calc(100vh - 4rem);
+  top: 4rem;
+  z-index: -1;
+}
+.container #home-page #home-page-title-info {
+  width: fit-content;
+  padding: 1.875rem 3.75rem;
+}
+.container #home-page #home-page-title-info .typed-out {
+  overflow: hidden;
+  border-right: 0.15em solid #99582a;
+  font-size: 1.6rem;
+  width: 0;
+  white-space: nowrap;
+  animation: typing-effect 3s steps(1200, end) forwards, blinking-effect 1s infinite;
+  /*animation-delay: 1.5s;*/
+}
+.container #home-page #home-page-title-info #home-page-title-separator {
+  margin-bottom: 0.75rem;
+  background: #99582a;
+  border: none;
+  height: 0.1rem;
+  width: calc(100% - 75rem);
+}
+.container #owner-bio {
+  display: none;
+  position: absolute;
+  right: 20px;
+  background: #000;
+  width: 200px;
+  height: 200px;
+  top: 10rem;
+  right: 0;
+}
+.container .stack-snapshot {
+  position: absolute;
+  width: 500px;
+  left: calc(100% - 300px);
+  bottom: 218px;
+}
+.container .stack-snapshot #stacks-separator {
+  background: #99582a;
+  border: none;
+  height: 0.1rem;
+  width: 40%;
+}
+.container .stack-snapshot .stacks-list {
+  list-style-type: none;
+  display: flex;
+}
+.container .stack-snapshot .stacks-list li {
+  position: relative;
+  top: 15px;
+}
+.container .stack-snapshot .stacks-list a {
+  padding-inline: 10px;
+}
+.container .stack-snapshot p {
+  font-size: 21px;
+  padding-bottom: 10px;
+}
+
+.mode-toggle {
+  position: absolute;
+  right: 30px;
+  height: 50px;
+  min-width: 45px;
+  top: 40%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mode-toggle .switch {
+  position: relative;
+  display: inline-block;
+  border-radius: 25px;
+  height: 40px;
+  width: 22px;
+  background-color: #99582a;
+}
+.mode-toggle .switch:before {
+  content: "";
+  position: absolute;
+  transform: translateY(-50%);
+  height: 15px;
+  width: 15px;
+  left: 5px;
+  top: 50%;
+  background-color: blue;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+
+/******** KEYFRAMES ********/
+@keyframes blinking-effect {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #99582a;
+  }
+}
+@keyframes typing-effect {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
