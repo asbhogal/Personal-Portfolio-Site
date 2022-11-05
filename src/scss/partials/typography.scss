@@ -1,0 +1,51 @@
+/* == DISCLAIMER == */
+
+/**
+ * @license
+ *
+ * Font Family: Azeret Mono
+ * Designed by: Displaay, Martin Vácha, Daniel Quisek
+ * URL: https://www.fontshare.com/fonts/azeret-mono
+ * © 2022 Indian Type Foundry
+ *
+ * Font Style:
+ * Azeret Mono Thin
+ *
+*/
+
+@use 'variables' as *;
+
+/****** AZERET MONO - 100 THIN ******/
+
+@font-face {
+    font-family: 'AzeretMono-Thin';
+    font-weight: 100;
+    font-display: swap;
+    font-style: normal;
+    src: url('../fonts/AzeretMono-Thin.woff2') format('woff2'),
+         url('../fonts/AzeretMono-Thin.woff') format('woff');
+  }
+  
+
+/****** TYPOGRAPHY ASSIGNMENT ******/
+
+h1, h2, h3, body, p, span, a {
+    color: #283618;
+}
+
+h1 {
+    font-family: 'The Billion', cursive;
+    font-weight: 200;
+    font-size: 64px;
+
+}
+
+h2 {
+    font-family: 'Oatmeal Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 200;
+}
+
+body, p, span, a {
+    font-family: 'Oatmeal Sans', sans-serif;
+}

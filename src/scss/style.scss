@@ -1,10 +1,10 @@
 /******** IMPORT PARTIAL STYLESHEETS ********/
 
-@import 'src/_partials/globals',
-        'src/_partials/mixins',
-        'src/_partials/responsive',
-        'src/_partials/typography',
-        'src/_partials/variables';
+@use 'partials/globals' as *;
+@use 'partials/mixins' as *;
+@use 'partials/responsive' as *;
+@use 'partials/typography' as *;
+@use 'partials/variables' as *;
 
 /******** MAIN STYLING ********/
 
