@@ -88,6 +88,10 @@ body a:hover {
   border: none !important;
 }
 
+.container #wcb_p #wcb_g span {
+  color: #000 !important;
+}
+
 nav {
   width: 100%;
 }

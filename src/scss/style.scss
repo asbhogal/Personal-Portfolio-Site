@@ -29,6 +29,9 @@
         }
         #wcb_g {
             border: none !important;
+            span {
+                color: $background-color !important;
+            }
         }
     }
 }

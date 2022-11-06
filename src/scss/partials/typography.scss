@@ -44,15 +44,9 @@ body {
     a {
         text-decoration: none;
         color: $text-color;
-        transition: 0.3s all ease-in;
-        -webkit-transition: 0.3s all ease-in;
-        -moz-transition: 0.3s all ease-in;
-        -o-transition: 0.3s all ease-in;
+        @include cross-browser-transition-support-set;
         &:hover {
-            transition: 0.3s all ease-in;
-            -webkit-transition: 0.3s all ease-in;
-            -moz-transition: 0.3s all ease-in;
-            -o-transition: 0.3s all ease-in;
+            @include cross-browser-transition-support-set;
             color: #723de3;
         }
     }
