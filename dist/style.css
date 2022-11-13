@@ -1,0 +1,152 @@
+/****** COLORS ******/
+/****** POSITIONING ******/
+/****** TRANSITIONS & ANIMATIONS ******/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 600px) {
+  #left-divider {
+    display: none;
+  }
+  #site-title {
+    font-size: 42px;
+    padding: 10px 30px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .top-section .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #connect-panel a {
+    padding-inline: 30px;
+  }
+  .top-section #site-title {
+    padding: 0 !important;
+    font-size: 42px !important;
+  }
+  #subheading {
+    padding: 40px 30px !important;
+  }
+}
+/********** TABLET WIDTHS **********/
+@media (max-width: 1200px) {
+  #home-page-title-info {
+    scale: 0.8;
+  }
+  .stack-snapshot {
+    position: static !important;
+    width: 500px !important;
+    left: 60px !important;
+  }
+}
+/* == DISCLAIMER ==
+
+The following fonts are used under the personal, non-commercial license:
+    -   The Billion
+    -   Oatmeal Sans
+*/
+/****** COLORS ******/
+/****** POSITIONING ******/
+/****** TRANSITIONS & ANIMATIONS ******/
+/****** THE BILLION - 300 LIGHT ******/
+@font-face {
+  font-family: "The Billion";
+  font-weight: 300;
+  src: url("/src/assets/fonts/The Billion.woff") format("woff"), url("/src/assets/fonts/The Billion.woff2") format("woff2");
+  font-display: swap;
+}
+/****** OATMEAL SANS - 400 REGULAR ******/
+@font-face {
+  font-family: "Oatmeal Sans";
+  font-weight: 400;
+  src: url("/src/assets/fonts/Oatmeal Sans.woff") format("woff"), url("/src/assets/fonts/Oatmeal Sans.woff2") format("woff2");
+  font-display: swap;
+}
+/****** TYPOGRAPHY ASSIGNMENT ******/
+h1, h2, h3, body, p, span, a {
+  color: #ccc;
+}
+
+h1 {
+  font-family: "The Billion", cursive;
+  font-weight: 200;
+  font-size: 64px;
+}
+
+h2 {
+  font-family: "Oatmeal Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 200;
+}
+
+body, p, span, a {
+  font-family: "Oatmeal Sans", sans-serif;
+}
+
+/****** COLORS ******/
+/****** POSITIONING ******/
+/****** TRANSITIONS & ANIMATIONS ******/
+#container {
+  background: #000;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: -1;
+  padding: 10px 30px;
+}
+#container #home-page-title {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 50px;
+}
+
+.stack-snapshot {
+  position: absolute;
+  width: 500px;
+  left: calc(100% - 300px);
+  bottom: 218px;
+}
+.stack-snapshot #stacks-separator {
+  background: #99582a;
+  border: none;
+  height: 0.1rem;
+  width: 40%;
+}
+.stack-snapshot .stacks-list {
+  list-style-type: none;
+  display: flex;
+}
+.stack-snapshot .stacks-list li {
+  position: relative;
+  top: 15px;
+}
+.stack-snapshot .stacks-list a {
+  padding-inline: 10px;
+}
+.stack-snapshot p {
+  font-size: 21px;
+  padding-bottom: 10px;
+}/*# sourceMappingURL=style.css.map */

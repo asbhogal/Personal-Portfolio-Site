@@ -1,0 +1,96 @@
+@import     'src/_partials/globals',
+            'src/_partials/mixins',
+            'src/_partials/responsive',
+            'src/_partials/typography',
+            'src/_partials/variables';
+
+.main-nav-bar {
+	display: flex;
+	justify-content: flex-end;
+	text-align: right;
+    a {
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.4rem;
+    }
+    ul {
+        list-style-type: none;
+    }
+    #cubic-scroll {
+        color: #ccc;
+        text-transform: lowercase;
+        position: relative;
+        overflow: hidden;
+        -webkit-perspective: 	        300px;
+        -moz-perspective: 		        300px;
+        -ms-perspective: 			    300px;
+        -o-perspective: 			    300px;
+        perspective: 					280px;
+        &:hover span {
+            background: #000;
+            -webkit-transform: 	        translate3d(0px,0px,-60px) rotateX(90deg);
+            -moz-transform: 		    translate3d(0px,0px,-60px) rotateX(90deg);
+            -ms-transform: 			    translate3d(0px,0px,-60px) rotateX(90deg);
+            -o-transform: 			    translate3d(0px,0px,-60px) rotateX(90deg);
+            transform: 					translate3d(0px,0px,-60px) rotateX(90deg);
+            &:after {
+                background: #000;
+            }
+        }
+        span {
+            display: block;
+            background: #000;
+            padding: 20px 50px;
+            top: 0;
+            transition: 					all 0.5s ease-in-out;
+            -webkit-transition: 		    all 0.5s ease-in-out;
+            -moz-transition:    			all 0.5s ease-in-out;
+            -o-transition:      			all 0.5s ease-in-out;
+            -ms-transition:     			all 0.5s ease-in-out;
+            -webkit-transform-origin:       50% 0;
+            -moz-transform-origin: 		    50% 0;
+            -ms-transform-origin: 		    50% 0;
+            -o-transform-origin: 			50% 0;
+            transform-origin: 				50% 0;
+            -webkit-transform: 				rotateX(0deg);
+            -moz-transform: 				rotateX(0deg);
+            -ms-transform: 					rotateX(0deg);
+            -o-transform: 					rotateX(0deg);
+            transform: 						rotateX(0deg);
+            -webkit-transform-style: 	    preserve-3d;
+            -moz-transform-style: 		    preserve-3d;
+            -ms-transform-style: 		    preserve-3d;
+            -o-transform-style: 		    preserve-3d;
+            transform-style: 			    preserve-3d;
+            &:after {
+                content: attr(title);
+                display: block;
+                width: 100%;
+                padding: 20px 0px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #000;
+                transition: 					all 0.5s ease-in-out;;
+                  -webkit-transition: 			all 0.5s ease-in-out;
+                -moz-transition:    			all 0.5s ease-in-out;
+                -o-transition:      			all 0.5s ease-in-out;
+                -ms-transition:     			all 0.5s ease-in-out;
+                -webkit-transform-origin:       50% 0;
+                -moz-transform-origin: 		    50% 0;
+                -ms-transform-origin: 		    50% 0;
+                -o-transform-origin: 			50% 0;
+                transform-origin: 				50% 0;
+                -webkit-transform: 				translate3d(0px, 100%,0) rotateX(-90deg);
+                -moz-transform: 				translate3d(0px, 100%,0) rotateX(-90deg);
+                -ms-transform: 					translate3d(0px, 100%,0) rotateX(-90deg);
+                -o-transform: 					translate3d(0px, 100%,0) rotateX(-90deg);
+                transform: 						translate3d(0px, 100%,0) rotateX(-90deg);
+            }
+        }
+    }
+}
+
+[class~="nav-bar-hover-text"]:after {
+	text-align: center;
+}

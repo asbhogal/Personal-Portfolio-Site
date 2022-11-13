@@ -1,0 +1,48 @@
+@import 'src/_partials/globals',
+        'src/_partials/mixins',
+        'src/_partials/responsive',
+        'src/_partials/typography',
+        'src/_partials/variables';
+
+#container {
+    background: $background-color;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: -1;
+    padding: 10px 30px;
+    #home-page-title {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 50px;
+    }
+}
+
+.stack-snapshot {
+    position: $absolute-position;
+    width: 500px;
+    left: calc(100% - 300px);
+    bottom: 218px;
+    #stacks-separator {
+        background: $main-color-03;
+        border: none;
+        height: 0.1rem;
+        width: 40%;
+    }
+    .stacks-list {
+        list-style-type: none;
+        display: $flex-display;
+        li {
+            position: $relative-position;
+            top: 15px;
+        }
+        a {
+            padding-inline: 10px;
+        }
+    }
+    p {
+        font-size: 21px;
+        padding-bottom: 10px;
+    }
+}
