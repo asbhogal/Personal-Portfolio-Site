@@ -16,9 +16,9 @@
     justify-content: center;
     text-align: center;
     height: 100vh;
-    padding: 0 40px;
+    padding: 0 2.5rem;
     :not(:last-child, li) {
-        padding-bottom: 40px;
+        padding-bottom: 2.5rem;
     }
     #wcb_p {
         position: relative;
@@ -33,6 +33,11 @@
                 color: $background-color !important;
             }
         }
+    }
+    #wcb_2 {
+        color: $text-color !important;
+        text-transform: uppercase !important;
+        padding-bottom: .25rem !important;
     }
 }
 nav {
