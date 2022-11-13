@@ -49,15 +49,15 @@ body h2 {
 
 body a {
   color: #ccc;
-  -o-transition: .3s all ease-in;
+  -o-transition: all .3s ease-in-out;
   text-decoration: none;
-  transition: all .3s ease-in;
+  transition: all .3s ease-in-out;
 }
 
 body a:hover {
-  -o-transition: .3s all ease-in;
+  -o-transition: all .3s ease-in-out;
   color: #723de3;
-  transition: all .3s ease-in;
+  transition: all .3s ease-in-out;
 }
 
 .container {
