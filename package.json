@@ -1,0 +1,30 @@
+{
+  "name": "personal-portfolio-website-construction-site-mode",
+  "version": "1.0.0",
+  "description": "A personal portfolio site created for the repo owner (Aman Singh Bhogal.)",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asbhogal/Personal-Portfolio-Site.git"
+  },
+  "keywords": [],
+  "author": "Aman Singh Bhogal",
+  "license": "UNLICENSED",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/asbhogal/Personal-Portfolio-Site/issues"
+  },
+  "homepage": "https://github.com/asbhogal/Personal-Portfolio-Site",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0",
+    "sass": "^1.56.0",
+    "terser": "^5.15.1"
+  },
+  "resolutions": {
+    "node-forge": "0.10.0"
+  }
+}
