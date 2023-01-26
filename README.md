@@ -6,24 +6,21 @@
 
 </div>
 
-A personal portfolio site created for the repo owner to showcase his skills, experience and reviews. The site features an 'About', 'Contact', 'Web Portfolio' and 'Whisky Review' page. This repo is currently under development.
+A personal portfolio site created for the repo owner to showcase his projects, built using React, SASS and Babel with Webpack and deployed via Vercel. This repo is currently under development.
 
 <strong>Features:</strong><br>
   - Stylish, modern interface
   - Fully responsive
   - Optimised for the web
 
-<strong>Stacks Used</strong>
-
-<a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg"><img src="https://github.com/devicons/devicon/raw/master/icons/html5/html5-original.svg" alt="html5" width="50" height="50" style="max-width:100%;"></a>
-<a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg"><img src="https://github.com/devicons/devicon/raw/master/icons/css3/css3-original.svg" alt="css3" width="50" height="50" style="max-width:100%;"></a>
-<a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg"><img src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg" alt="sass" width="50" height="50" style="max-width:100%;"></a>
+<strong>Stacks &#38; Tools Used:</strong><br>
+<br>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg"><img src="https://github.com/devicons/devicon/raw/master/icons/html5/html5-original.svg" alt="html5 logo" width="50" height="50" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg"><img src="https://github.com/devicons/devicon/raw/master/icons/css3/css3-original.svg" alt="css3 logo" width="50" height="50" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg"><img src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg" alt="sass logo" width="50" height="50" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/postcss/brand/blob/master/dist/postcss-logo-symbol.svg"><img src="https://github.com/postcss/brand/blob/master/dist/postcss-logo-symbol.svg" alt="postcss logo" width="50" height="50" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg"><img src="https://github.com/devicons/devicon/raw/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="50" height="50" style="max-width:100%;"></a>
-
-<strong>Credits</strong><br>
-
-The author of this repo gives credit to the following creators:
-
-== FONTS ==
-
-  - <a href="https://www.fontshare.com/">Font Share</a>, for <a href="https://www.fontshare.com/fonts/azeret-mono">Azerat Mono</a>, licensed under freeware, non-commercial usage
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg"><img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" alt="React logo" width="50" height="50" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/babel/babel-original.svg"><img src="https://github.com/devicons/devicon/blob/master/icons/babel/babel-original.svg" alt="Babel logo" width="50" height="50" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/webpack/webpack-original.svg"><img src="https://github.com/devicons/devicon/blob/master/icons/webpack/webpack-original.svg" alt="Webpack logo" width="50" height="50" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/figma/figma-original.svg"><img src="https://github.com/devicons/devicon/blob/master/icons/figma/figma-original.svg" alt="Figma logo" width="50" height="50" style="max-width:100%;"></a>
