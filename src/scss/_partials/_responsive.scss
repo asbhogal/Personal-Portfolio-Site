@@ -3,7 +3,11 @@
 @media only screen and (1441px <= width) {
     #root {
         .MainContainer {
-            background-color: yellow;
+            display: grid;
+            grid-template-columns: 0.5fr 1.5fr;
+            .MainHeadline {
+                order: 1;
+            }
         }
     }
 }

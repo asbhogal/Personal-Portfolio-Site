@@ -1,0 +1,50 @@
+/****** MONSIEUR LA DOULAISE - 400 REGULAR ******/
+
+@font-face {
+    font-family: 'Monsieur La Doulaise';
+    font-weight: 400;
+    font-style: normal;
+    src:    url('../assets/fonts/Monsieur_La_Doulaise/MonsieurLaDoulaise-Regular.woff') format('woff'),
+            url('../assets/fonts/Monsieur_La_Doulaise/MonsieurLaDoulaise-Regular.woff2') format('woff2');
+    font-display: swap;
+}
+
+/****** QUESTA GRANDE - 400 REGULAR ******/
+
+@font-face {
+    font-family: 'Questa Grande';
+    font-weight: 400;
+    font-style: normal;
+    src:    url('../assets/fonts/questagrande_regular_macroman/2-questa_grande_regular_31-webfont.woff') format('woff'),
+            url('../assets/fonts/questagrande_regular_macroman/2-questa_grande_regular_31-webfont.woff2') format('woff2');
+    font-display: swap;
+}
+
+/****** SWITZER - 200 EXTRA LIGHT ******/
+
+@font-face {
+    font-family: 'Switzer';
+    font-weight: 200;
+    font-style: normal;
+    src:    url('../assets/fonts/Switzer_Complete/Fonts/WEB/fonts/Switzer-Extralight.woff') format('woff'),
+            url('../assets/fonts/Switzer_Complete/Fonts/WEB/fonts/Switzer-Extralight.woff2') format('woff2');
+    font-display: swap;
+}
+
+/****** SWITZER - 300 LIGHT ******/
+
+@font-face {
+    font-family: 'Switzer';
+    font-weight: 300;
+    font-style: normal;
+    src:    url('../assets/fonts/Switzer_Complete/Fonts/WEB/fonts/Switzer-Light.woff') format('woff'),
+            url('../assets/fonts/Switzer_Complete/Fonts/WEB/fonts/Switzer-Light.woff') format('woff2');
+    font-display: swap;
+}
+
+h1 {
+    font-family: 'Questa Grande', serif;
+    text-transform: uppercase;
+    font-size: 128px;
+    text-align: end;
+}
