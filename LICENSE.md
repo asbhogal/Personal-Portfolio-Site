@@ -1,7 +1,4 @@
 <strong>Fonts</strong>
 
--   The Billion is used under the personal, non-commercial use license
--   Neue Machina is used under the personal, non-commercial license
--   Amsterdam Four is used under the freeware, non-commercial license
-
-The website owner strongly advises consulting the original license holders of these above assets for own use. This also includes forking the repo.
+-   Questa Grande (Regular) is licensed under the EULA 2.0 (see src folder)
+-   Switzer is licensed under the EULA 2.0 (see src folder)
