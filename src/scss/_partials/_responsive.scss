@@ -2,7 +2,9 @@
 
 @media only screen and (1441px <= width) {
     #root {
-        background-color: red;
+        .MainContainer {
+            background-color: yellow;
+        }
     }
 }
 
