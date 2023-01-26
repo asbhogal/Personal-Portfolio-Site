@@ -1,15 +1,15 @@
 import "../scss/index.scss";
-import Navbar from "../components/Navbar";
-import Container from "../components/Container"
-import Footer from "../components/Footer"
+import HomePage from "./Home"
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
     return (
-        <>
-            <Navbar />
-            <Container />
-            <Footer />
-        </>
+        <Router>
+            <Routes>
+                <Route path='/' element={ <HomePage /> } />
+            </Routes>
+        </Router>
     )
 }
 export default App;
