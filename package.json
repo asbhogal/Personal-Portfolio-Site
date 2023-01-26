@@ -1,10 +1,15 @@
 {
-  "name": "personal-portfolio-website-construction-site-mode",
-  "version": "1.0.0",
+  "name": "personal-portfolio-website",
+  "version": "2.0.0",
   "description": "A personal portfolio site created for the repo owner (Aman Singh Bhogal.)",
+  "main": "index.js",
+  "private": true,
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "start-server": "cross-env SERVE=true webpack serve",
+    "watch-changes": "webpack --watch",
+    "build-prod": "cross-env NODE_ENV=production webpack",
+    "build-dev": "webpack",
+    "clean-dist": "rd /s dist"
   },
   "repository": {
     "type": "git",
@@ -13,18 +18,33 @@
   "keywords": [],
   "author": "Aman Singh Bhogal",
   "license": "UNLICENSED",
-  "private": true,
   "bugs": {
     "url": "https://github.com/asbhogal/Personal-Portfolio-Site/issues"
   },
   "homepage": "https://github.com/asbhogal/Personal-Portfolio-Site",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.7.0",
-    "parcel": "^2.7.0",
-    "sass": "^1.56.0",
-    "terser": "^5.15.1"
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.9",
+    "babel-loader": "^9.1.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.2",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss": "^8.4.19",
+    "postcss-loader": "^7.0.1",
+    "postcss-preset-env": "^7.8.3",
+    "react-refresh": "^0.14.0",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
   },
-  "resolutions": {
-    "node-forge": "0.10.0"
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
