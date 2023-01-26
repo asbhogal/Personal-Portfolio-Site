@@ -59,7 +59,7 @@ h1 {
     text-align: right;
     line-height: 200px;
     color: $White;
-    font-variant-caps: small-caps;
+    font-variant-caps: all-small-caps;
     &::first-letter {
         font-family: 'Monsieur La Doulaise', cursive;
         text-transform: capitalize;
