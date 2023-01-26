@@ -2,7 +2,31 @@
 
 .Navbar {
     display: grid;
+    grid-template-columns: 49.25px 62.1px 52px;
+    justify-content: space-between;
     background-color: $RaisinBlack-02;
     width: auto;
     height: 80.1px;
+    .HamburgerMenu {
+        background-color: red;
+        .NavbarLine {
+            width: 34.38px;
+            background-color: $White;
+            &:first-child {
+                top: 30%;
+            }
+            &:nth-child(2) {
+                top: 60%;
+            }
+            &:nth-child(3) {
+                top: 90%;
+            }
+        }
+    }
+    .MainLogo {
+        background-color: yellow;
+    }
+    .HireCTAButton {
+        background-color: blue;
+    }
 }
