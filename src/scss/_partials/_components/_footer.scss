@@ -1,0 +1,20 @@
+@use '../variables' as *;
+
+.Footer {
+    display: grid;
+    grid-template-columns: auto;
+    position: fixed;
+    bottom: 0;
+    background-color: $RaisinBlack-02;
+    height: 60px;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    .SocialIcons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 180px;
+        cursor: pointer;
+    }
+}
