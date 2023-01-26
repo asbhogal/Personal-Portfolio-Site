@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 /****** MONSIEUR LA DOULAISE - 400 REGULAR ******/
 
 @font-face {
@@ -42,9 +44,24 @@
     font-display: swap;
 }
 
+#AccentLetter {
+    font-family: 'Monsieur La Doulaise', cursive;
+    text-transform: capitalize;
+    font-size: 128px;
+    color: $White;
+}
+
 h1 {
     font-family: 'Questa Grande', serif;
     text-transform: uppercase;
     font-size: 128px;
-    text-align: end;
+    font-weight: 400;
+    text-align: right;
+    line-height: 200px;
+    color: $White;
+    font-variant-caps: small-caps;
+    &::first-letter {
+        font-family: 'Monsieur La Doulaise', cursive;
+        text-transform: capitalize;
+    }
 }
