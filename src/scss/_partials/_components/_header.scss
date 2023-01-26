@@ -1,0 +1,8 @@
+@use '../variables' as *;
+
+.Navbar {
+    display: grid;
+    background-color: $RaisinBlack-02;
+    width: auto;
+    height: 80.1px;
+}
