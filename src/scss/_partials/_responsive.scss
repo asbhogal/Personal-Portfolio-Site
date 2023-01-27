@@ -30,7 +30,13 @@
 
 @media only screen and (745px <= width <= 1024px) {
     #root {
-        background-color: blue;
+        .MainContainer {
+            display: grid;
+            grid-template-columns: 0.5fr 1.5fr;
+            .MainHeadline {
+                order: 1;
+            }
+        }
     }
 }
 
@@ -38,7 +44,16 @@
 
 @media only screen and (376px <= width <= 744px) {
     #root {
-        background-color: bisque;
+        .MainContainer {
+            display: grid;
+            grid-template-columns: auto;
+            .MainHeadline {
+                h1 {
+                    font-size: 96px;
+                    line-height: 150px;
+                }
+            }
+        }
     }
 }
 
@@ -46,6 +61,15 @@
 
 @media only screen and (width <= 375px) {
     #root {
-        background-color: darkgreen;
+        .MainContainer {
+            display: grid;
+            grid-template-columns: auto;
+            .MainHeadline {
+                h1 {
+                    font-size: 52px;
+                    line-height: 65px;
+                }
+            }
+        }
     }
 }
