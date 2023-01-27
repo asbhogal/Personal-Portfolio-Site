@@ -2,7 +2,7 @@ import mainLogo from "../assets/images/logos/Personal Brand Logo (Latest)-Transp
 
 const Navbar = () => {
     return (
-        <div className="Navbar">
+        <nav className="Navbar">
             <div className="HamburgerMenu">
                 <span className="NavbarLine"></span>
                 <span className="NavbarLine"></span>
@@ -12,7 +12,7 @@ const Navbar = () => {
                 <img src={ mainLogo }></img>
             </div>
             <div className="HireCTAButton"></div>
-        </div>
+        </nav>
     )
 }
 

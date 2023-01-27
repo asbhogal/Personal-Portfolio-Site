@@ -6,7 +6,7 @@ import LinkedInIcon from "../assets/images/icons/Vector-LinkedIn.svg";
 
 const Footer = () => {
     return (
-        <div className="Footer">
+        <footer className="Footer">
             <div className="SocialIcons">
                 <a href="tel:+447517990390" target="_blank"><img src={ cellIcon }></img></a>
                 <a href="mailto:business@amansinghbhogal.com" target="_blank"><img src={ emailIcon }></img></a>
@@ -14,7 +14,7 @@ const Footer = () => {
                 <a href="https://github.com/asbhogal" target="_blank"><img src={ GitHubIcon }></img></a>
                 <a href="https://www.linkedin.com/in/amansinghbhogal/" target="_blank"><img src={ LinkedInIcon }></img></a>
             </div>
-        </div>
+        </footer>
     )
 }
 
