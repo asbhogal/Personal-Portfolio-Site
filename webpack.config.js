@@ -10,6 +10,7 @@ const   path = require("path"),
                 title: "Personal Portfolio Site",
                 author: "Aman Singh Bhogal",
                 template: "./src/index.html",
+                description: "The personal portfolio site of Aman Singh Bhogal. Front End Developer & UI Engineer"
             }),
         ];
 
@@ -67,6 +68,7 @@ module.exports = {
     devtool: "source-map",
     devServer: {
         static: "./dist",
-        hot: true
+        hot: true,
+        historyApiFallback: true
     },
 };

@@ -33,14 +33,14 @@
     font-display: swap;
 }
 
-/****** SWITZER - 300 LIGHT ******/
+/****** SWITZER - 100 LIGHT ******/
 
 @font-face {
     font-family: 'Switzer';
-    font-weight: 300;
+    font-weight: 100;
     font-style: normal;
-    src:    url('../assets/fonts/Switzer_Complete/Fonts/WEB/fonts/Switzer-Light.woff') format('woff'),
-            url('../assets/fonts/Switzer_Complete/Fonts/WEB/fonts/Switzer-Light.woff') format('woff2');
+    src:    url('../assets/fonts/Switzer_Complete/Fonts/WEB/fonts/Switzer-Thin.woff') format('woff'),
+            url('../assets/fonts/Switzer_Complete/Fonts/WEB/fonts/Switzer-Thin.woff') format('woff2');
     font-display: swap;
 }
 
@@ -51,7 +51,7 @@
     color: $White;
 }
 
-h1 {
+.MainHomeTitle {
     font-family: 'Questa Grande', serif;
     text-transform: uppercase;
     font-size: 128px;
@@ -64,4 +64,27 @@ h1 {
         font-family: 'Monsieur La Doulaise', cursive;
         text-transform: capitalize;
     }
+}
+
+.PageHeaderTitle {
+    font-family: 'Questa Grande', serif;
+    font-weight: 400;
+    font-size: 168px;
+    color: #373737;
+    text-align: right;
+}
+
+.PageSubTitleText {
+    font-family: 'Questa Grande', serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: $White;
+    text-transform: uppercase;
+}
+
+.AboutText {
+    font-family: 'Switzer', sans-serif;
+    font-weight: 100;
+    font-size: 32px;
+    color: $White;
 }
