@@ -10,7 +10,6 @@ const   path = require("path"),
                 title: "Personal Portfolio Site",
                 author: "Aman Singh Bhogal",
                 template: "./src/index.html",
-                favicon: "./src/assets/images/logos/Personal Brand Logo-Black.png"
             }),
         ];
 
