@@ -10,7 +10,7 @@ const CTAButtons = () => {
             <button className="Contact">
                 contact
                 <img src={ chevronRight }></img>
-                </button>
+            </button>
         </section>
     )
 }

@@ -69,9 +69,17 @@
 .PageHeaderTitle {
     font-family: 'Questa Grande', serif;
     font-weight: 400;
-    font-size: 168px;
-    color: #373737;
+    font-size: 200px;
     text-align: right;
+    color: $Onyx;
+}
+
+#AboutPageTitle1 {
+    margin-left: 53px;
+}
+
+#AboutPageTitle2 {
+    margin-left: 532px;
 }
 
 .PageSubTitleText {
@@ -80,11 +88,17 @@
     font-size: 32px;
     color: $White;
     text-transform: uppercase;
+    margin-top: -145px;
 }
 
 .AboutText {
     font-family: 'Switzer', sans-serif;
     font-weight: 100;
     font-size: 32px;
+    line-height: 42.24px;
     color: $White;
+    &::first-letter {
+        font-family: 'Monsieur La Doulaise';
+        font-size: 128px;
+    }
 }
