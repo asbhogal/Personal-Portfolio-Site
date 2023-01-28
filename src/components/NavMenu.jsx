@@ -1,6 +1,9 @@
+import bgLogo from "../assets/images/logos/Personal Brand Logo-bg.png";
+
 const NavMenu = () => {
     return (
         <div className="FullScreenNavMenuContainer">
+            <img src={ bgLogo }></img>
             <nav className="ToggleBtn">X</nav>
             <section className="NavMenu">
                 <ul className="NavMenuList">

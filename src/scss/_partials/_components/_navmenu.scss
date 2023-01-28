@@ -1,17 +1,25 @@
+@use '../variables' as *;
+
 .FullScreenNavMenuContainer {
     display: grid;
     height: 100vh;
     grid-template-rows: 0.2fr auto;
-    background-color: #222222;
+    background-color: $RaisinBlack-03;
 }
 
 ul {
     font-family: 'Questa Grande', serif;
     font-size: 96px;
-    color: white;
+    color:$White;
     li {
+        cursor: pointer;
+        transition: $transition-03;
         &:not(:last-child) {
             padding-bottom: 15px;
+        }
+        &:hover {
+            padding-left: 5px;
+            transition: $transition-03;
         }
     }
 }
