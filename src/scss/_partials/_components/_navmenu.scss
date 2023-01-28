@@ -4,6 +4,7 @@
     display: grid;
     height: 100vh;
     grid-template-rows: 0.2fr auto;
+    margin: 0 18px;
     background-color: $RaisinBlack-03;
     img {
         display: none;
@@ -13,6 +14,7 @@
 ul {
     font-family: 'Questa Grande', serif;
     font-size: 96px;
+    list-style-type: none;
     li {
         cursor: pointer;
         transition: $transition-03;

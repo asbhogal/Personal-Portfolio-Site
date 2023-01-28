@@ -8,8 +8,14 @@
     width: auto;
     height: 80px;
     .HamburgerMenu {
-        .NavbarLine {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        cursor: pointer;
+        .HamburgerBar {
             width: 34.38px;
+            height: 2px;
             background-color: $White;
             &:first-child {
                 top: 30%;
