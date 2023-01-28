@@ -5,7 +5,7 @@ const Projects = () => {
     return (
         <>
             <Navbar />
-            Test
+            <Container />
             <Footer />
         </>
     )

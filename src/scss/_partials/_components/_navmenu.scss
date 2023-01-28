@@ -1,0 +1,17 @@
+.FullScreenNavMenuContainer {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 0.2fr auto;
+    background-color: #222222;
+}
+
+ul {
+    font-family: 'Questa Grande', serif;
+    font-size: 96px;
+    color: white;
+    li {
+        &:not(:last-child) {
+            padding-bottom: 15px;
+        }
+    }
+}
