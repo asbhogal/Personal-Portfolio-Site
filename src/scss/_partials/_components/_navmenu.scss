@@ -5,21 +5,28 @@
     height: 100vh;
     grid-template-rows: 0.2fr auto;
     background-color: $RaisinBlack-03;
+    img {
+        display: none;
+    }
 }
 
 ul {
     font-family: 'Questa Grande', serif;
     font-size: 96px;
-    color:$White;
     li {
         cursor: pointer;
         transition: $transition-03;
+        color: $White;
         &:not(:last-child) {
             padding-bottom: 15px;
         }
         &:hover {
             padding-left: 5px;
             transition: $transition-03;
+        }
+        a {
+            text-decoration: none;
+            color: $White;
         }
     }
 }

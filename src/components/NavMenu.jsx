@@ -1,4 +1,6 @@
+import { NavLink } from "react-router-dom";
 import bgLogo from "../assets/images/logos/Personal Brand Logo-bg.png";
+import { Link } from "react-router-dom";
 
 const NavMenu = () => {
     return (
@@ -7,12 +9,12 @@ const NavMenu = () => {
             <nav className="ToggleBtn">X</nav>
             <section className="NavMenu">
                 <ul className="NavMenuList">
-                    <li>&#38;&#46;about</li>
-                    <li>&#38;&#46;projects</li>
-                    <li>&#38;&#46;logofolio</li>
-                    <li>&#38;&#46;testimonials</li>
-                    <li>&#38;&#46;connect</li>
-                    <li>&#38;&#46;hire</li>
+                    <li><Link to='/about'>&#38;&#46;about</Link></li>
+                    <li><Link to='/projects'>&#38;&#46;projects</Link></li>
+                    <li><Link to='/logofolio'>&#38;&#46;logofolio</Link></li>
+                    <li><Link to='/testimonials'>&#38;&#46;testimonials</Link></li>
+                    <li><Link to='/connect'>&#38;&#46;connect</Link></li>
+                    <li><Link to='/hire'>&#38;&#46;hire</Link></li>
                 </ul>
             </section>
         </div>
