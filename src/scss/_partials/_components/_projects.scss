@@ -1,0 +1,137 @@
+@use '../variables' as *;
+
+.Projects {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 95px;
+    width: 100%;
+    > * {
+        display: flex;
+    }
+    .ProjectCover {
+        background: yellow;
+        height: calc(100vh - 95px);
+        padding-top: 200px;
+        justify-content: flex-end;
+        h1 {
+            font-family: 'Questa Grande';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 128px;
+            line-height: 160px;
+            text-align: right;
+            text-transform: lowercase;
+            color: $Onyx;
+        }
+    }
+    .ProjectSection {
+        background: blue;
+        height: calc(100vh - 95px);
+        flex-direction: column;
+        .ProjectInfo {
+            display: flex;
+            flex-direction: column;
+            h2 {
+                font-family: 'Questa Grande';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 48px;
+                line-height: 60px;
+            }
+            h3 {
+                font-family: 'Questa Grande';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 40px;
+                text-transform: uppercase;
+            }
+            p {
+                font-family: 'Switzer';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 24px;
+            }
+        }
+        .Guides {
+            display: flex;
+            gap: 30px;
+            .BrandGuideSection,
+            .StyleGuideSection {
+                display: flex;
+                flex-direction: column;
+                width: 430px;
+                height: 300px;
+                background: green;
+                h3 {
+                    font-family: 'Questa Grande';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 32px;
+                    line-height: 40px;
+                    text-transform: uppercase;
+                }
+            }
+            .StyleGuideSection > .ColorPalate {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                p {
+                    font-size: 12px;
+                }
+                > * {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .ColorTitle,
+                .ColorInfo {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .ColorTitle {
+                    p:first-child {
+                        font-weight: 600;
+                    }
+                }
+                .ColorInfo {
+                    flex-direction: column;
+                    gap: 5px;
+                    span {
+                        font-weight: 600;
+                    }
+                }
+                .Color-1 {
+                    background-color: $ChineseViolet;
+                    justify-content: space-between;
+                    padding: 5px;
+                }
+                .Color-2 {
+                    background-color: $MountbattenPink;
+                    @extend .Color-1;
+                }
+                .Color-3 {
+                    background-color: $AfricanViolet;
+                    @extend .Color-1;
+                }
+                .Color-4 {
+                    background-color: $Thistle;
+                    @extend .Color-1;
+                }
+            }
+        }
+    }
+}
+
+@for $i from 1 through 4 {
+    .Color-#{$i} {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* $colors: (Color1: $ChineseViolet, Color2: $MountbattenPink, Color3: $AfricanViolet, $Color4: $Thistle);
+
+@each $key, $color in $colors {
+    
+} */
