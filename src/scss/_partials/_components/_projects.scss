@@ -19,7 +19,6 @@
         }
     }
     .ProjectSection {
-        height: 100vh;
         flex-direction: column;
         justify-content: center;
         color: #2C2723;
@@ -55,7 +54,6 @@
         .Guides {
             display: flex;
             gap: 30px;
-            justify-content: space-between;
             .BrandGuideSection,
             .StyleGuideSection {
                 display: flex;
@@ -93,6 +91,9 @@
                 .ColorTitle {
                     p:first-child {
                         font-weight: 600;
+                    }
+                    p:last-child {
+                        text-align: right;
                     }
                 }
                 .ColorInfo {

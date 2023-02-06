@@ -1,6 +1,9 @@
 /****** WIDE - 1440px+ ******/
 
 @media only screen and (1441px <= width) {
+  .ProjectSection {
+    height: 100vh;
+  }
   .ProjectInfo {
     width: 1110px;
     margin: 0 auto;
@@ -9,37 +12,54 @@
   .MainHomeTitle {
     font-size: 128px;
   }
+  .Guides {
+    justify-content: space-between;
+  }
 }
 
 /****** DESKTOP - 1025PX -> 1440px ******/
 
 @media only screen and (1025px <= width <= 1440px) {
+  .ProjectSection {
+    height: 100vh;
+  }
   .ProjectInfo {
     padding: 40px 165px;
+  }
+  .Guides {
+    justify-content: space-between;
   }
 }
 
 /****** TABLET (LARGE) - 745px --> 1024px ******/
 
 @media only screen and (745px <= width <= 1024px) {
+  .ProjectSection {
+    height: 100vh;
+  }
   .ProjectInfo {
     padding: 32px;
   }
   .Guides {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    text-align: center;
   }
 }
 
 /****** TABLET (SMALL) - 376px --> 744px ******/
 
 @media only screen and (376px <= width <= 744px) {
+  .ProjectSection {
+    height: 100vh;
+  }
   .ProjectInfo {
     padding: 24px;
   }
   .Guides {
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
   }
 }
 
@@ -49,9 +69,13 @@
   .ProjectInfo {
     padding: 24px;
   }
+  .ProjectCover h1{
+    font-size: 72px !important;
+  }
   .Guides {
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
   }
   .CTAButtons {
     flex-direction: column;
