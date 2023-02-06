@@ -12,7 +12,7 @@
     }
     .ProjectCover {
         background-color: $Black;
-        height: calc(100vh - 95px);
+        height: 100vh;
         justify-content: flex-end;
         h1 {
             font-family: 'Questa Grande';
@@ -27,9 +27,13 @@
         }
     }
     .ProjectSection {
-        background: blue;
-        height: calc(100vh - 95px);
+        height: 100vh;
         flex-direction: column;
+        justify-content: center;
+        color: $White;
+        background-image: url(/src/assets/images/logos/KMC_Birmingham_Logo.svg);
+        background-repeat: no-repeat;
+        background-position: right;
         .ProjectInfo {
             display: flex;
             flex-direction: column;
@@ -58,7 +62,7 @@
                 display: flex;
                 flex-direction: column;
                 width: 430px;
-                background: green;
+                background-color: #1c1c1c;
                 h3 {
                     font-family: 'Questa Grande';
                     font-style: normal;
