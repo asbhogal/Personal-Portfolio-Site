@@ -1,5 +1,6 @@
 import navLogo from "../assets/images/logos/Website Nav Icon.svg";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -24,7 +25,47 @@ const Header = () => {
                     style={ { 
                         top: navOpen ? "0" : "-100%",
                         transitionDelay: navOpen ? "0s" : "0s"
-                    } }></div>
+                    } }>
+                        <ul className="NavLinks">
+                            <li className="NavItems">
+                                <Link to="./home">Home</Link>
+                                <div className="NavItemWrapper"></div>
+                            </li>
+                            <li className="NavItems">
+                                <Link to="./about">About</Link>
+                                <div className="NavItemWrapper"></div>
+                            </li>
+                            <li className="NavItems">
+                                <Link to="./projects">Projects</Link>
+                                <div className="NavItemWrapper"></div>
+                            </li>
+                            <li className="NavItems">
+                                <Link to="./additionalservices">Additional Services</Link>
+                                <div className="NavItemWrapper"></div>
+                            </li>
+                        </ul>
+                        <div className="NavScreenFooter">
+                            <div className="SocialLinkNames">
+                                <ul className="NavFooterSocialLinks">
+                                    <li>
+                                        <a href="mailto:business@amansinghbhogal.com">Email</a>
+                                    </li>
+                                    <li>
+                                        <a href="www.linkedin.com/in/amansinghbhogal">LinkedIn</a>
+                                    </li>
+                                    <li>
+                                        <a href="www.github.com/asbhogal">GitHub</a>
+                                    </li>
+                                    <li>
+                                        <a href="www.figma.com/@amansinghbhogal">Figma</a>
+                                    </li>
+                                    <li>
+                                        <a href="www.instagram.com/amanuiux">Instagram</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
             </div>       
         </nav>
             
