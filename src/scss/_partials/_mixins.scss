@@ -1,3 +1,17 @@
+@use './variables' as *;
+
+@mixin HeadingOneTitle {
+    font-family: 'Questa Grande';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 200px;
+            line-height: 160px;
+            text-align: right;
+            text-transform: lowercase;
+            color: $Onyx;
+            padding-top: 200px;
+}
+
 @mixin HeadingTwoAccentLetter {
     font-family: 'Monsieur La Doulaise', cursive;
     font-style: normal;

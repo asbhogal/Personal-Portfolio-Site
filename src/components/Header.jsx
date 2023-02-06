@@ -19,6 +19,8 @@ const Header = () => {
                             <span className={ navOpen ? "LineBottom Spin" : "LineBottom" }></span>
                         </div>
                     </div>
+                    <button className="HeaderCTAButton"></button>
+                    
                 </div>
                 <div 
                     className="NavOverlay" 

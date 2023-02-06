@@ -12,13 +12,17 @@
     .CTAButtons {
         height: 100%;
         align-items: flex-end;
-        .ViewProjects img,
-        .Contact img {
+        .ViewProjects,
+        .Contact {
             transition: $Transition-03;
             &:hover {
-                transform: translateX(5px);
                 transition: $Transition-03;
+                img {
+                    transform: translateX(5px);
+                    transition: $Transition-03;
+                }
             }
         }
     }
 }
+

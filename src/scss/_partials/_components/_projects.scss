@@ -11,29 +11,19 @@
         display: flex;
     }
     .ProjectCover {
-        background-color: $Black;
+        background-color: $Grullo;
         height: 100vh;
         justify-content: flex-end;
         h1 {
-            font-family: 'Questa Grande';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 128px;
-            line-height: 160px;
-            text-align: right;
-            text-transform: lowercase;
-            color: $Onyx;
-            padding-top: 200px;
+            @include HeadingOneTitle;
         }
     }
     .ProjectSection {
         height: 100vh;
         flex-direction: column;
         justify-content: center;
-        color: $White;
-        background-image: url(/src/assets/images/logos/KMC_Birmingham_Logo.svg);
-        background-repeat: no-repeat;
-        background-position: right;
+        color: #2C2723;
+        background-color: $Grullo;
         .ProjectInfo {
             display: flex;
             flex-direction: column;
@@ -51,18 +41,19 @@
                 font-family: 'Switzer';
                 font-style: normal;
                 font-weight: 300;
-                font-size: 24px;
+                font-size: 12px;
             }
         }
         .Guides {
             display: flex;
             gap: 30px;
+            justify-content: space-between;
             .BrandGuideSection,
             .StyleGuideSection {
                 display: flex;
                 flex-direction: column;
                 width: 430px;
-                background-color: #1c1c1c;
+                background-color: #1B150D;
                 h3 {
                     font-family: 'Questa Grande';
                     font-style: normal;
@@ -77,6 +68,7 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
                 width: 100%;
+                color: $Black;
                 p {
                     font-size: 12px;
                 }

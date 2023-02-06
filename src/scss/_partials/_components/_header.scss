@@ -11,7 +11,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: $Black;
+        background-color: $Grullo;
         // padding: 2em;
     }
 
@@ -21,7 +21,7 @@
 
     .NavContainer > .NavOverlay {
         position: fixed;
-        background: $Black;
+        background: $Grullo;
         z-index: -2;
         top: -100%;
         left: 0;
@@ -41,7 +41,7 @@
         transition: $Transition-03;
         padding: 2.4em;
         .HamburgerContainerOpen {
-            background-color: #2a2a2f;
+            background-color: $Grullo;
         }
     }
 }
@@ -54,7 +54,7 @@
     width: 1.5rem;
     height: .125rem;
     border-radius: .625rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #2C2723;
     left: 0;
     right: 0;
     transform: rotate(0deg);
@@ -81,6 +81,11 @@
     background-color: $White;
 }
 
+.HeaderCTAButton {
+    width: 60px;
+    height: 50px;
+    background: #2C2723;
+}
 
 
 

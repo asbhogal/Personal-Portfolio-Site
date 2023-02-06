@@ -6,6 +6,9 @@
     margin: 0 auto;
     padding: 40px 0;
   }
+  .MainHomeTitle {
+    font-size: 128px;
+  }
 }
 
 /****** DESKTOP - 1025PX -> 1440px ******/
@@ -22,6 +25,10 @@
   .ProjectInfo {
     padding: 32px;
   }
+  .Guides {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 /****** TABLET (SMALL) - 376px --> 744px ******/
@@ -29,6 +36,10 @@
 @media only screen and (376px <= width <= 744px) {
   .ProjectInfo {
     padding: 24px;
+  }
+  .Guides {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -38,7 +49,33 @@
   .ProjectInfo {
     padding: 24px;
   }
+  .Guides {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .CTAButtons {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .NavLinks > .NavItems > a {
+    font-size: 32px;
+  }
+
+  .NavLinks {
+    padding-top: 40px !important;
+  }
+
+  .SocialLinkNames {
+    height: auto;
+    text-align: right;
+    .NavFooterSocialLinks {
+      flex-direction: column;
+    }
+  }
 }
+
+/*********************************************************************/
 
 @media screen and (min-width: 375px) {
     .MainHomeTitle {
