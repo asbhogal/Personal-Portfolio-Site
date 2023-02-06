@@ -2,14 +2,14 @@
 
 @mixin HeadingOneTitle {
     font-family: 'Questa Grande';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 200px;
-            line-height: 160px;
-            text-align: right;
-            text-transform: lowercase;
-            color: $Onyx;
-            padding-top: 200px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 200px;
+    line-height: 160px;
+    text-align: right;
+    text-transform: lowercase;
+    color: $Onyx;
+    padding-top: 200px;
 }
 
 @mixin HeadingTwoAccentLetter {
@@ -26,6 +26,7 @@
     font-weight: 400;
     font-size: 48px;
     line-height: 60px;
+    border-bottom: 1px solid $BlackChocolate;
 }
 
 @mixin HeadingThreeProject {
@@ -35,4 +36,11 @@
     font-size: 32px;
     line-height: 40px;
     text-transform: uppercase;
+}
+
+@mixin BodyTextProject {
+    font-family: 'Switzer';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
 }

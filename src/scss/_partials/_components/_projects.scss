@@ -27,6 +27,7 @@
         .ProjectInfo {
             display: flex;
             flex-direction: column;
+            gap: 10px;
             h2 {
                 @include HeadingTwoProject;
                 &::first-letter,
@@ -34,14 +35,21 @@
                     @include HeadingTwoAccentLetter;
                 }
             }
+            .ProjectTimeDuration {
+                text-align: right;
+                font-size: 18px;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-family: 'Switzer', sans-serif;
+            }
             h3 {
                 @include HeadingThreeProject;
             }
-            p {
-                font-family: 'Switzer';
-                font-style: normal;
-                font-weight: 300;
-                font-size: 12px;
+            .ProjectSummary {
+                @include BodyTextProject;
+            }
+            .DesignBrief > .DesignBriefSummary {
+                @include BodyTextProject;
             }
         }
         .Guides {
@@ -52,8 +60,6 @@
             .StyleGuideSection {
                 display: flex;
                 flex-direction: column;
-                width: 430px;
-                background-color: #1B150D;
                 h3 {
                     font-family: 'Questa Grande';
                     font-style: normal;
@@ -68,9 +74,12 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
                 width: 100%;
-                color: $Black;
+                color: $BlackChocolate;
+                gap: 10px;
                 p {
+                    font-family: 'Switzer', sans-serif;
                     font-size: 12px;
+                    text-transform: lowercase;
                 }
                 > * {
                     display: flex;
