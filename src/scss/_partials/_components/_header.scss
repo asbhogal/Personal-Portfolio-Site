@@ -1,7 +1,6 @@
 @use '../variables' as *;
 
 .Navbar {
-    display: grid;
     grid-template-columns: 49.25px 62.1px 52px;
     justify-content: space-between;
     background-color: $RaisinBlack-02;

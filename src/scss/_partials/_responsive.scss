@@ -1,81 +1,29 @@
 /****** WIDE - 1440px+ ******/
 
 @media only screen and (1441px <= width) {
-    #root {
-        .MainContainer {
-            display: grid;
-            grid-template-columns: 0.5fr 1.5fr;
-            .MainHeadline {
-                order: 1;
-            }
-        }
-    }
+
 }
 
 /****** DESKTOP - 1025PX -> 1440px ******/
 
 @media only screen and (1025px <= width <= 1440px) {
-    #root {
-        .MainContainer {
-            display: grid;
-            grid-template-columns: 0.5fr 1.5fr;
-            .MainHeadline {
-                order: 1;
-            }
-        }
-    }
+
 }
 
 /****** TABLET (LARGE) - 745px --> 1024px ******/
 
 @media only screen and (745px <= width <= 1024px) {
-    #root {
-        .MainContainer {
-            display: grid;
-            grid-template-columns: 0.5fr 1.5fr;
-            .MainHeadline {
-                order: 1;
-            }
-        }
-    }
+
 }
 
 /****** TABLET (SMALL) - 376px --> 744px ******/
 
 @media only screen and (376px <= width <= 744px) {
-    #root {
-        .MainContainer {
-            display: grid;
-            grid-template-columns: auto;
-            .MainHeadline {
-                h1 {
-                    font-size: 96px;
-                    line-height: 150px;
-                }
-            }
-        }
-        .FullScreenNavMenuContainer > .NavMenu > .NavMenuList {
-            font-size: 54px;
-        }
-    }
+
 }
 
 /****** TABLET (SMALL) - 0px -> 375px ******/
 
 @media only screen and (width <= 375px) {
-    #root {
-        .MainContainer {
-            display: grid;
-            grid-template-columns: auto;
-            .MainHeadline {
-                h1 {
-                    font-size: 52px;
-                    line-height: 65px;
-                }
-            }
-        }
-        .FullScreenNavMenuContainer > .NavMenu > .NavMenuList {
-            font-size: 48px;
-        }
-    }
+
 }

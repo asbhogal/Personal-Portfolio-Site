@@ -1,15 +1,13 @@
 @use '../variables' as *;
 
 .Footer {
-    display: grid;
-    grid-template-columns: auto;
     position: fixed;
     bottom: 0;
-    background-color: $RaisinBlack-02;
+    background-color: #000000;
     height: 60px;
     width: 100%;
-    justify-items: center;
     align-items: center;
+    justify-content: center;
     .SocialIcons {
         display: flex;
         justify-content: space-between;

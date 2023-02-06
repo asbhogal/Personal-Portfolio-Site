@@ -1,8 +1,7 @@
 #root {
-    display: grid;
+    display: flex;
     height: 100vh;
-}
-
-#testContainer {
-    background: blue !important;
+    > * {
+        display: flex;
+    }
 }
