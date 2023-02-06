@@ -3,4 +3,17 @@
     top: 80px;
     width: 100%;
     height: calc(100% - 140px);
+    flex-direction: row-reverse;
+    > * {
+        display: flex;
+    }
+    .CTAButtons {
+        height: 100%;
+        align-items: flex-end;
+        .ViewProjects img {
+            &:hover {
+                padding-left: 4px;
+            }
+        }
+    }
 }

@@ -27,3 +27,23 @@
 @media only screen and (width <= 375px) {
 
 }
+
+@media screen and (min-width: 375px) {
+    .MainHomeTitle {
+      font-size: calc(64px + 6 * ((100vw - 320px) / 680));
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .MainContainer {
+        flex-direction: column !important;
+    }
+    .MainHomeTitle {
+        font-size: calc(72px + 6 * ((100vw - 320px) / 680));
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .MainHomeTitle {
+        font-size: clamp(112px, 10vw, 32px);     }
+  }
