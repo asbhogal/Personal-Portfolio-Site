@@ -11,7 +11,7 @@ const Projects = () => {
                 </div>
                 <div className="ProjectSection">
                     <div className="ProjectInfo">
-                        <h2>Kadampa Meditation Centre Birmingham</h2>
+                        <h2>Kadampa <span className="FirstLetterAccent">M</span>editation <span className="FirstLetterAccent">C</span>entre <span className="FirstLetterAccent">B</span>irmingham</h2>
                         <span>May 2020 - Feb 2021</span>
                         <p>Kadampa Meditation Centre is part of a nonprofit organisation which delivers a modern form of Buddhism to their local community. When the pandemic started, their centre closed and they required a revamp of their current site to allow class and course bookings and membership subscriptions. The site was designed and developed using Astra Pro and Elementor Pro with WooCommerce and Stripe. The site was successfully launched on 19th December 2020."</p>
                         <h3>Design Brief</h3>

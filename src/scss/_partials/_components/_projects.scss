@@ -1,4 +1,5 @@
 @use '../variables' as *;
+@use '../mixins' as *;
 
 .Projects {
     display: flex;
@@ -10,9 +11,8 @@
         display: flex;
     }
     .ProjectCover {
-        background: yellow;
+        background-color: $Black;
         height: calc(100vh - 95px);
-        padding-top: 200px;
         justify-content: flex-end;
         h1 {
             font-family: 'Questa Grande';
@@ -23,6 +23,7 @@
             text-align: right;
             text-transform: lowercase;
             color: $Onyx;
+            padding-top: 200px;
         }
     }
     .ProjectSection {
@@ -33,19 +34,14 @@
             display: flex;
             flex-direction: column;
             h2 {
-                font-family: 'Questa Grande';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 48px;
-                line-height: 60px;
+                @include HeadingTwoProject;
+                &::first-letter,
+                .FirstLetterAccent {
+                    @include HeadingTwoAccentLetter;
+                }
             }
             h3 {
-                font-family: 'Questa Grande';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 32px;
-                line-height: 40px;
-                text-transform: uppercase;
+                @include HeadingThreeProject;
             }
             p {
                 font-family: 'Switzer';
@@ -62,7 +58,6 @@
                 display: flex;
                 flex-direction: column;
                 width: 430px;
-                height: 300px;
                 background: green;
                 h3 {
                     font-family: 'Questa Grande';
@@ -75,6 +70,7 @@
             }
             .StyleGuideSection > .ColorPalate {
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: space-between;
                 width: 100%;
                 p {

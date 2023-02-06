@@ -1,31 +1,43 @@
 /****** WIDE - 1440px+ ******/
 
 @media only screen and (1441px <= width) {
-
+  .ProjectInfo {
+    width: 1110px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
 }
 
 /****** DESKTOP - 1025PX -> 1440px ******/
 
 @media only screen and (1025px <= width <= 1440px) {
-
+  .ProjectInfo {
+    padding: 40px 165px;
+  }
 }
 
 /****** TABLET (LARGE) - 745px --> 1024px ******/
 
 @media only screen and (745px <= width <= 1024px) {
-
+  .ProjectInfo {
+    padding: 32px;
+  }
 }
 
 /****** TABLET (SMALL) - 376px --> 744px ******/
 
 @media only screen and (376px <= width <= 744px) {
-
+  .ProjectInfo {
+    padding: 24px;
+  }
 }
 
 /****** TABLET (SMALL) - 0px -> 375px ******/
 
 @media only screen and (width <= 375px) {
-
+  .ProjectInfo {
+    padding: 24px;
+  }
 }
 
 @media screen and (min-width: 375px) {
