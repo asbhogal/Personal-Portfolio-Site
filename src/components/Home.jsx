@@ -1,5 +1,5 @@
 import "../scss/index.scss";
-import Navbar from "../components/Navbar";
+import Navbar from "./Header";
 import Container from "../components/Container"
 import Footer from "../components/Footer"
 

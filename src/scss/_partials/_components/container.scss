@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 .MainContainer {
     position: absolute;
     top: 80px;
@@ -10,9 +12,12 @@
     .CTAButtons {
         height: 100%;
         align-items: flex-end;
-        .ViewProjects img {
+        .ViewProjects img,
+        .Contact img {
+            transition: $Transition-03;
             &:hover {
-                padding-left: 4px;
+                transform: translateX(5px);
+                transition: $Transition-03;
             }
         }
     }

@@ -5,6 +5,7 @@ import ProjectsPage from "./Projects";
 import NavMenu from "./NavMenu";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AdditionalServices from "./AdditionalServices";
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
                 <Route path='/about' element={ <AboutPage /> } />
                 <Route path='/projects' element={ <ProjectsPage /> } />
                 <Route path='/navmenu' element={ <NavMenu /> } />
+                <Route path='/additionalservices' element={ <AdditionalServices /> } />
             </Routes>
         </Router>
     )

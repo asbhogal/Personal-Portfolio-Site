@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import bgLogo from "../assets/images/logos/Personal Brand Logo-bg.png";
 import { Link } from "react-router-dom";
 

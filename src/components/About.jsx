@@ -1,5 +1,5 @@
 import "../scss/index.scss";
-import Navbar from "./Navbar";
+import Navbar from "./Header";
 import Footer from "./Footer";
 import CTAButtons from "./Buttons";
 
