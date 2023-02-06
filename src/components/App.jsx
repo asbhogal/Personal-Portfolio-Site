@@ -1,8 +1,8 @@
 import "../scss/index.scss";
-import HomePage from "./Home";
-import AboutPage from "./About";
-import ProjectsPage from "./Projects";
-import NavMenu from "./NavMenu";
+import Home from "./Home";
+import About from "./About";
+import Projects from "./Projects";
+import Header from "./Header";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AdditionalServices from "./AdditionalServices";
@@ -10,11 +10,11 @@ import AdditionalServices from "./AdditionalServices";
 const App = () => {
     return (
         <Router>
+            <Header />
             <Routes>
-                <Route path='/' element={ <HomePage /> } />
-                <Route path='/about' element={ <AboutPage /> } />
-                <Route path='/projects' element={ <ProjectsPage /> } />
-                <Route path='/navmenu' element={ <NavMenu /> } />
+                <Route path='/' element={ <Home /> } />
+                <Route path='/about' element={ <About /> } />
+                <Route path='/projects' element={ <Projects /> } />
                 <Route path='/additionalservices' element={ <AdditionalServices /> } />
             </Routes>
         </Router>

@@ -27,7 +27,8 @@ module.exports = {
 
     output: {
         path: path.resolve(__dirname, "dist"),
-        assetModuleFilename: "images/[hash][ext][query]"
+        assetModuleFilename: "images/[hash][ext][query]",
+        publicPath: '/'
     },
 
     module: {
