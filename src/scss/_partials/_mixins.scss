@@ -1,7 +1,7 @@
 @use './variables' as *;
 
 @mixin HeadingOneTitle {
-    font-family: 'Questa Grande';
+    font-family: 'Questa Grande', serif;
     font-style: normal;
     font-weight: 400;
     font-size: clamp(4.25rem, -9.5rem + 24.4444vw, 12.5rem);
@@ -21,7 +21,7 @@
 }
 
 @mixin HeadingTwoProject {
-    font-family: 'Questa Grande';
+    font-family: 'Questa Grande', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -30,7 +30,7 @@
 }
 
 @mixin HeadingThreeProject {
-    font-family: 'Questa Grande';
+    font-family: 'Questa Grande', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -38,8 +38,16 @@
     text-transform: uppercase;
 }
 
-@mixin BodyTextProject {
-    font-family: 'Switzer';
+@mixin SubtitleText {
+    font-family: 'Switzer', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+@mixin BodyText {
+    font-family: 'Switzer', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;

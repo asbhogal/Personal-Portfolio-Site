@@ -45,10 +45,10 @@
                 @include HeadingThreeProject;
             }
             .ProjectSummary {
-                @include BodyTextProject;
+                @include BodyText;
             }
             .DesignBrief > .DesignBriefSummary {
-                @include BodyTextProject;
+                @include BodyText;
             }
         }
         .Guides {
@@ -58,6 +58,8 @@
             .StyleGuideSection {
                 display: flex;
                 flex-direction: column;
+                flex-basis: 0;
+                flex: 1 1 0px;
                 h3 {
                     font-family: 'Questa Grande';
                     font-style: normal;
@@ -66,6 +68,18 @@
                     line-height: 40px;
                     text-transform: uppercase;
                 }
+                .KMCTypography {
+                    font-family: 'Montserrat', sans-serif;
+                }
+            }
+            .BrandGuideSection {
+                .BrandGuideInfo {
+                    display: flex;
+                    flex-wrap: wrap;
+                    img {
+                        width: 150px;
+                    }
+                }
             }
             .StyleGuideSection {
                 gap: 10px;
@@ -73,7 +87,7 @@
             .StyleGuideSection > .ColorPalate {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                justify-content: center;
                 width: 100%;
                 color: $BlackChocolate;
                 gap: 10px;

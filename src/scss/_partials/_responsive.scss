@@ -1,6 +1,12 @@
 /****** WIDE - 1440px+ ******/
 
 @media only screen and (1441px <= width) {
+  .MainContainer {
+    width: 1120px;
+  }
+  .AboutSection > .PageSubTitleText {
+      padding-inline: 40px;
+  }
   .ProjectSection {
     height: 100vh;
   }
@@ -20,20 +26,29 @@
 /****** DESKTOP - 1025PX -> 1440px ******/
 
 @media only screen and (1025px <= width <= 1440px) {
+  .MainContainer {
+    padding: 0 150px;
+  }
+  .AboutSection > .PageSubTitleText {
+    padding-inline: 40px;
+  }
   .ProjectSection {
     height: 100vh;
   }
   .ProjectInfo {
     padding: 40px 165px;
   }
-  .Guides {
-    justify-content: space-between;
-  }
 }
 
 /****** TABLET (LARGE) - 745px --> 1024px ******/
 
 @media only screen and (745px <= width <= 1024px) {
+  .MainContainer {
+    padding: 32px;
+  }
+  .AboutSection > .PageSubTitleText {
+    padding-inline: 40px;
+  }
   .ProjectSection {
     height: 100vh;
   }
@@ -50,6 +65,12 @@
 /****** TABLET (SMALL) - 376px --> 744px ******/
 
 @media only screen and (376px <= width <= 744px) {
+  .MainContainer {
+    padding: 24px;
+  }
+  .AboutSection > .PageSubTitleText {
+    padding-inline: 40px;
+  }
   .ProjectSection {
     height: 100vh;
   }
@@ -66,6 +87,12 @@
 /****** TABLET (SMALL) - 0px -> 375px ******/
 
 @media only screen and (width <= 375px) {
+  .MainContainer {
+    padding: 24px;
+  }
+  .AboutSection > .PageSubTitleText {
+    text-align: center;
+  }
   .ProjectInfo {
     padding: 24px;
   }

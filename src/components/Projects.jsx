@@ -1,5 +1,6 @@
 import Footer from "./Footer";
 import Navbar from "./Header";
+import kmcLogo from "../assets/images/logos/KMC_Birmingham_Logo.svg";
 
 const Projects = () => {
     return (
@@ -16,11 +17,30 @@ const Projects = () => {
                         <p className="ProjectSummary">Kadampa Meditation Centre is part of a nonprofit organisation which delivers a modern form of Buddhism to their local community. When the pandemic started, their centre closed and they required a revamp of their current site to allow class and course bookings and membership subscriptions. The site was designed and developed using Astra Pro and Elementor Pro with WooCommerce and Stripe.</p>
                         <div className="DesignBrief">
                             <h3>Design Brief</h3>
-                            <p className="DesignBriefSummary">"The Resident Teacher required a site which provided a ‘window’ to the center for people; making class and course sessions accessible for everyone. Information provided was used to populate the pages. An alternative version of the logo was located within the archives and chosen for it’s rounded vectors and soothing appearance. Accents derived from this dictated the color scheme.</p>
+                            <p className="DesignBriefSummary">"The Resident Teacher required a site which provided a ‘window’ to the center for people; making class and course sessions accessible for everyone. Information provided was used to populate the pages. An alternative version of the logo was located within the archives and chosen for it’s rounded vectors and soothing appearance. Accents derived from this dictated the color scheme. Montserrat was chosen for its clean, harmonious look which renders well across different devices and offers versatility in its weighting, kernel spacing and _____.</p>
                         </div>
                         <div className="Guides">
                             <div className="BrandGuideSection">
                                 <h3>Brand Guide</h3>
+                                <div className="BrandGuideInfo">
+                                    <div className="LogoMarks">
+                                        <img src={ kmcLogo }></img>
+                                    </div>
+                                    <div className="Typography">
+                                        <p>Primary Font: Montserrat</p>
+                                        <p>Font Style: Lowercase</p>
+                                        <ul className="KMCTypography TypographyList">
+                                            <p>Weights</p>
+                                            <p className="KMCTypography">Light</p>
+                                            <p className="KMCTypography">Regular</p>
+                                            <p className="KMCTypography">Medium</p>
+                                            <li className="KMCTypography TypographyListItem">Heading One<br></br>ABC abc 123</li>
+                                            <li className="KMCTypography TypographyListItem">Heading Two</li>
+                                            <li className="KMCTypography TypographyListItem">Heading Three</li>
+                                            <li className="KMCTypography TypographyListItem">Body / p / span</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                             <div className="StyleGuideSection">
                                 <h3>Style Guide</h3>

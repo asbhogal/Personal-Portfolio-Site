@@ -44,6 +44,39 @@
     font-display: swap;
 }
 
+/****** MONTSERRAT - 500 MEDIUM ******/
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-style: normal;
+    src:    url('../assets/fonts/Montserrat/Montserrat-Medium.woff') format('woff'),
+            url('../assets/fonts/Montserrat/Montserrat-Medium.woff2') format('woff2');
+    font-display: swap;
+}
+
+/****** MONTSERRAT - 400 REGULAR ******/
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-style: normal;
+    src:    url('../assets/fonts/Montserrat/Montserrat-Regular.woff') format('woff'),
+            url('../assets/fonts/Montserrat/Montserrat-Regular.woff2') format('woff2');
+    font-display: swap;
+}
+
+/****** MONTSERRAT - 300 LIGHT ******/
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-style: normal;
+    src:    url('../assets/fonts/Montserrat/Montserrat-Light.woff') format('woff'),
+            url('../assets/fonts/Montserrat/Montserrat-Light.woff2') format('woff2');
+    font-display: swap;
+}
+
 #AccentLetter {
     font-family: 'Monsieur La Doulaise', cursive;
     text-transform: capitalize;

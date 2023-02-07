@@ -4,8 +4,8 @@
 
 .AboutCover {
     background-color: $Grullo;
-        height: 100vh;
-        justify-content: flex-end;
+    height: 100vh;
+    justify-content: flex-end;
     h1 {
         @include HeadingOneTitle;
     }
@@ -16,10 +16,18 @@
     top: 370px;
     flex-direction: column;
     gap: 20px;
-    #AboutPageTitle2 {
-        text-align: right;
+    .AboutText {
+        @include BodyText;
     }
     .PageSubTitleText {
-        padding-inline: 40px;
+        font-family: 'Questa Grande', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 60px;
+        text-transform: uppercase;
+    }
+    #AboutPageTitle2 {
+        text-align: right;
     }
 }
