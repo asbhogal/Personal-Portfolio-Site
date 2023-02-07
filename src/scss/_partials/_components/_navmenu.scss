@@ -24,6 +24,9 @@
         font-size: 96px;
         padding-top: 110px;
         list-style-type: none;
+        .NavItems {
+            font-size: clamp(1.5rem, -0.8936rem + 7.6596vw, 6rem);
+        }
         .NavItems > a {
             text-decoration: none;
             color: #2C2723;
@@ -41,7 +44,6 @@
         width: 100%;
         justify-content: center;
         align-items: center;
-        height: 40px;
         > * {
             display: flex;
         }

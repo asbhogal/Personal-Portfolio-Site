@@ -7,6 +7,7 @@ const Header = () => {
     const [navOpen, setNavOpen] = useState(false);
 
     return (
+        <header class="Header">
         <nav className="Nav">
             <div className="NavContainer">
                 <div className="NavBar">
@@ -70,7 +71,7 @@ const Header = () => {
                     </div>
             </div>       
         </nav>
-            
+    </header>       
     )
 };
 

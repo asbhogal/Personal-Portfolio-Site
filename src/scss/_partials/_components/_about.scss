@@ -1,0 +1,25 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+
+.AboutCover {
+    background-color: $Grullo;
+        height: 100vh;
+        justify-content: flex-end;
+    h1 {
+        @include HeadingOneTitle;
+    }
+}
+
+.AboutSection {
+    position: absolute;
+    top: 370px;
+    flex-direction: column;
+    gap: 20px;
+    #AboutPageTitle2 {
+        text-align: right;
+    }
+    .PageSubTitleText {
+        padding-inline: 40px;
+    }
+}

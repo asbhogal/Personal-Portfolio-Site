@@ -5,7 +5,7 @@
     top: 80px;
     width: 100%;
     height: calc(100% - 140px);
-    flex-direction: row-reverse;
+    flex-direction: column;
     > * {
         display: flex;
     }

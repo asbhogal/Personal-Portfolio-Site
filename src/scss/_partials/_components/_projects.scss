@@ -67,6 +67,9 @@
                     text-transform: uppercase;
                 }
             }
+            .StyleGuideSection {
+                gap: 10px;
+            }
             .StyleGuideSection > .ColorPalate {
                 display: flex;
                 flex-wrap: wrap;

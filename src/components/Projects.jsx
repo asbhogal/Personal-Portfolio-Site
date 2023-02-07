@@ -13,10 +13,10 @@ const Projects = () => {
                     <div className="ProjectInfo">
                         <h2>Kadampa <span className="FirstLetterAccent">M</span>editation <span className="FirstLetterAccent">C</span>entre <span className="FirstLetterAccent">B</span>irmingham</h2>
                         <span className="ProjectTimeDuration">May 2020 - Feb 2021</span>
-                        <p className="ProjectSummary">Kadampa Meditation Centre is part of a nonprofit organisation which delivers a modern form of Buddhism to their local community. When the pandemic started, their centre closed and they required a revamp of their current site to allow class and course bookings and membership subscriptions. The site was designed and developed using Astra Pro and Elementor Pro with WooCommerce and Stripe. The site was successfully launched on 19th December 2020."</p>
+                        <p className="ProjectSummary">Kadampa Meditation Centre is part of a nonprofit organisation which delivers a modern form of Buddhism to their local community. When the pandemic started, their centre closed and they required a revamp of their current site to allow class and course bookings and membership subscriptions. The site was designed and developed using Astra Pro and Elementor Pro with WooCommerce and Stripe.</p>
                         <div className="DesignBrief">
                             <h3>Design Brief</h3>
-                            <p className="DesignBriefSummary">"The Resident Teacher required a site which provided a ‘window’ to the center for people; making class and course sessions and doctrine accessible for everyone. Information provided by them were used to populate the pages. An alternative version of the logo was located within the archives and chosen for it’s rounded vectors and soothing appearance. Accents derived from this dictated the color scheme.</p>
+                            <p className="DesignBriefSummary">"The Resident Teacher required a site which provided a ‘window’ to the center for people; making class and course sessions accessible for everyone. Information provided was used to populate the pages. An alternative version of the logo was located within the archives and chosen for it’s rounded vectors and soothing appearance. Accents derived from this dictated the color scheme.</p>
                         </div>
                         <div className="Guides">
                             <div className="BrandGuideSection">
@@ -74,6 +74,6 @@ const Projects = () => {
             <Footer />
         </>
     )
-}
+};
 
 export default Projects;
