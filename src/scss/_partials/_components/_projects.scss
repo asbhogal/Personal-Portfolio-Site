@@ -9,7 +9,7 @@
         display: flex;
     }
     .ProjectCover {
-        height: 100vh;
+        height: 1024px;
         justify-content: flex-end;
         h1 {
             @include HeadingOneTitle;
@@ -27,20 +27,23 @@
             > * {
                 display: flex;
             }
-            h2 {
+            .ProjectTitle {
                 @include HeadingTwoProject;
                 &::first-letter,
                 .FirstLetterAccent {
                     @include HeadingTwoAccentLetter;
                 }
+                display: flex;
+                flex-wrap: wrap;
             }
             .ProjectToolsAndTechStacks {
                 display: flex;
                 justify-content: space-between;
                 font-family: 'Switzer', sans-serif;
+                font-weight: 600;
             }
             .ProjectTimeDuration {
-                text-align: right;
+                justify-content: flex-end;
                 font-size: 18px;
                 text-transform: uppercase;
                 font-weight: 600;
@@ -182,7 +185,6 @@
                 background: none;
                 border: none;
                 cursor: pointer;
-                transition: $Transition-03;
                 a {
                     text-decoration: none;
                     color: $Black;
@@ -200,7 +202,6 @@
     .VerticalDivider {
         height: 400px;
         border-right: 1px solid black;
-        position: relative;
         transform: translateX(-50%);
     }
 }

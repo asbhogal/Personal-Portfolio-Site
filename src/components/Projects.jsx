@@ -15,7 +15,25 @@ const Projects = () => {
                 </div>
                 <div className="ProjectSection">
                     <div className="ProjectInfo">
-                        <h2><span className="FirstLetterAccent">K</span>adampa <span className="FirstLetterAccent">M</span>editation <span className="FirstLetterAccent">C</span>entre <span className="FirstLetterAccent">B</span>irmingham</h2>
+                        <h2 className="ProjectTitle">
+                            <div className="WordUnit">
+                            <span className="FirstLetterAccent">K</span>
+                            adampa
+                            </div>
+                            <div className="WordUnit">
+                            <span className="FirstLetterAccent">M</span>
+                            editation
+                            </div>
+                            <div className="WordUnit">
+                            <span className="FirstLetterAccent">C</span>
+                            entre 
+                            </div>
+                            <div className="WordUnit">
+                            <span className="FirstLetterAccent">B</span>
+                            irmingham
+                            </div>
+
+                        </h2>
                         <span className="ProjectTimeDuration">May 2020 - Feb 2021</span>
                         <span className="ProjectToolsAndTechStacks">
                             <span className="ProjectTools">WordPress &#124; Astra Pro &#124; Elementor Pro &#124; WooCommerce &#124; Stripe</span>
