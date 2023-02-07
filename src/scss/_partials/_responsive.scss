@@ -84,6 +84,9 @@
   .ProjectInfo {
     padding: 24px;
   }
+  .ProjectTimeDuration {
+    justify-content: center !important;
+  }
   .ProjectToolsAndTechStacks{
     flex-direction: column;
     text-align: center;
@@ -178,4 +181,8 @@
   .MainHomeTitle {
       font-size: clamp(112px, 10vw, 32px);
   }
+}
+
+.FirstLetterAccent {
+  font-size: clamp(2.25rem, 1.205rem + 3.8vw, 4.625rem);
 }
