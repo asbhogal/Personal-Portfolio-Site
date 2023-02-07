@@ -180,22 +180,39 @@
                         font-weight: 600;
                     }
                 }
-                .Color-1 {
-                    background-color: $ChineseViolet;
+                .UniversalStyle {
                     justify-content: space-between;
                     padding: 5px;
                 }
-                .Color-2 {
+                #KMCColor1 {
+                    background-color: $ChineseViolet;
+                    @extend .UniversalStyle;
+                }
+                #KMCColor2 {
                     background-color: $MountbattenPink;
-                    @extend .Color-1;
+                    @extend .UniversalStyle;
                 }
-                .Color-3 {
+                #KMCColor3 {
                     background-color: $AfricanViolet;
-                    @extend .Color-1;
+                    @extend .UniversalStyle;
                 }
-                .Color-4 {
+                #KMCColor4 {
                     background-color: $Thistle;
-                    @extend .Color-1;
+                    @extend .UniversalStyle;
+                }
+                #BrandColor1 {
+                    background-color: $Black;
+                    @extend .UniversalStyle;
+                }
+                #BrandColor2 {
+                    background-color: #f3f3f3;
+                    @extend .UniversalStyle;
+                    color: $Black;
+                }
+                #BrandColor3 {
+                    background-color: $White;
+                    @extend .UniversalStyle;
+                    color: $Black;
                 }
             }
         }
@@ -248,3 +265,22 @@ $weights: (weight1: 300, weight2: 400, weight3: 500);
 @each $key, $color in $colors {
     
 } */
+
+#BrandGuideInfo {
+    gap: 30px;
+    .LogoMarks {
+        display: flex;
+        flex-direction: column;
+        background-color: lightgray;
+        padding: 5px;
+        #BrandIcons {
+            display: flex;
+            gap: 5px;
+            #BrandIconWhite,
+            #BrandIconBlack {
+                height: 40px;
+                width: fit-content;
+        }
+        }
+    }
+}
