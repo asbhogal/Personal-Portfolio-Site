@@ -1,9 +1,31 @@
+import { useEffect, useState } from "react";
+
 import Footer from "./Footer";
 import Navbar from "./Header";
 import kmcLogo from "../assets/images/logos/KMC_Birmingham_Logo.svg";
 import { TbChevronUpRight } from "react-icons/tb";
 
 const Projects = () => {
+
+    const [showButton, setShowButton] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300) {
+                setShowButton(true);
+            } else {
+                setShowButton(false);
+            }
+        });
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo ({
+            top: 0,
+            behaviour: "smooth"
+        });
+    };
+
     return (
         <>
             <Navbar />
@@ -363,6 +385,13 @@ const Projects = () => {
                 </div>
             </div>
             <Footer />
+
+            { showButton && (
+                <button onClick={ scrollToTop } className="ScrollToTop">
+                    &#8593;
+                </button>
+            ) }
+
         </>
     )
 };

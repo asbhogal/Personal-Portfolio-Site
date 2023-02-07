@@ -1,0 +1,16 @@
+@use '../variables' as *;
+
+.ScrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 42px;
+    background: none;
+    border: none;
+    color: $Black;
+    cursor: pointer;
+    transition: $Transition-03;
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
