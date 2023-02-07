@@ -218,6 +218,7 @@
         }
         .ProjectLinks {
             justify-content: flex-end;
+            gap: 10px;
             .ViewFiles {
                 display: flex;
                 align-items: center;
@@ -254,17 +255,25 @@
     }
 }
 
-$weights: (weight1: 300, weight2: 400, weight3: 500);
+$KMCWeights: (weight1: 300, weight2: 400, weight3: 500);
 
-@each $key, $weight in $weights {
-    .TypographyListItem-#{$weight} { font-weight: $weight; }
-}
+@each $key, $weight in $KMCWeights {
+    #KMCTypography-#{ $weight } { font-weight: $weight; }
+};
+
+$BrandWeights: (weight1: 400, weight2: 500, weight3: 600, weight4: 700, weight5: 900);
+
+@each $key, $weight in $BrandWeights {
+    #BrandTypography-#{ $weight } { font-weight: $weight; }
+};
 
 /* $colors: (Color1: $ChineseViolet, Color2: $MountbattenPink, Color3: $AfricanViolet, $Color4: $Thistle);
 
 @each $key, $color in $colors {
     
 } */
+
+/****** BRAND ******/
 
 #BrandGuideInfo {
     gap: 30px;
@@ -280,7 +289,13 @@ $weights: (weight1: 300, weight2: 400, weight3: 500);
             #BrandIconBlack {
                 height: 40px;
                 width: fit-content;
+            }
         }
+    }
+    .Typography > .TypographyInfo {
+        p:nth-child(2),
+        p:last-child {
+            font-family: 'Inter', sans-serif;
         }
     }
 }

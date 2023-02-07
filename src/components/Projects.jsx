@@ -71,21 +71,25 @@ const Projects = () => {
                                     <div className="Typography">
                                         <div className="TypographyInfo">
                                             <p>Font Family</p>
-                                            <p>Montserrat</p>
+                                            <p>Inter</p>
                                             <p>Case</p>
-                                            <p>lowercase</p>
+                                            <p>Sentence</p>
                                         </div>
                                         <p>Weights</p>
                                         <ul className="KMCTypography TypographyList">
                                             <div className="TypographyWeightSet">
-                                                <p className="KMCTypography TypographyListItem-300">Light</p>
-                                                <p className="KMCTypography TypographyListItem-400">Regular</p>
-                                                <p className="KMCTypography TypographyListItem-500">Medium</p>
+                                                <p id="BrandTypography-400" className="TypographyListItem-400">Regular</p>
+                                                <p id="BrandTypography-500" className="TypographyListItem-500">Medium</p>
+                                                <p id="BrandTypography-600" className="TypographyListItem-600">Semi Bold</p>
+                                                <p id="BrandTypography-700" className="TypographyListItem-700">Bold</p>
+                                                <p id="BrandTypography-900" className="TypographyListItem-900">Black</p>
                                             </div>
                                             <div className="TypographyFontSet">
-                                                <li className="KMCTypography TypographyListItem-300">abc 123</li>
-                                                <li className="KMCTypography TypographyListItem-400">abc 123</li>
-                                                <li className="KMCTypography TypographyListItem-500">abc 123</li>
+                                                <li id="BrandTypography-400" className="TypographyListItem-400">ABC abc 123</li>
+                                                <li id="BrandTypography-500" className="TypographyListItem-500">ABC abc 123</li>
+                                                <li id="BrandTypography-600" className="TypographyListItem-600">ABC abc 123</li>
+                                                <li id="BrandTypography-700" className="TypographyListItem-700">ABC abc 123</li>
+                                                <li id="BrandTypography-900" className="TypographyListItem-900">ABC abc 123</li>
                                             </div>
                                         </ul>
                                     </div>
@@ -129,11 +133,15 @@ const Projects = () => {
                         </div>
                         <div className="ProjectLinks">
                         <button className="ViewFiles">
-                            <a target="_blank" href="https://www.dropbox.com/sh/t6j0d882l18ajel/AAAuAl1ML0kWPePpuiCvudkma?dl=0">view templates</a>
+                            <a target="_blank" href="https://www.figma.com/community/file/1187868244670810561">templates</a>
                             <TbChevronUpRight />
                         </button>
                         <button className="ViewFiles">
-                            <a target="_blank" href="https://brand-responsive-web-page.vercel.app">view site</a>
+                            <a target="_blank" href="https://github.com/asbhogal/React-Brand-Responsive-Web-Page">code</a>
+                            <TbChevronUpRight />
+                        </button>
+                        <button className="ViewFiles">
+                            <a target="_blank" href="https://brand-responsive-web-page.vercel.app">site</a>
                             <TbChevronUpRight />
                         </button>
                         </div>
@@ -189,14 +197,14 @@ const Projects = () => {
                                         <p>Weights</p>
                                         <ul className="KMCTypography TypographyList">
                                             <div className="TypographyWeightSet">
-                                                <p className="KMCTypography TypographyListItem-300">Light</p>
-                                                <p className="KMCTypography TypographyListItem-400">Regular</p>
-                                                <p className="KMCTypography TypographyListItem-500">Medium</p>
+                                                <p id="KMCTypography-300" className="KMCTypography TypographyListItem-300">Light</p>
+                                                <p id="KMCTypography-400" className="KMCTypography TypographyListItem-400">Regular</p>
+                                                <p id="KMCTypography-500" className="KMCTypography TypographyListItem-500">Medium</p>
                                             </div>
                                             <div className="TypographyFontSet">
-                                                <li className="KMCTypography TypographyListItem-300">abc 123</li>
-                                                <li className="KMCTypography TypographyListItem-400">abc 123</li>
-                                                <li className="KMCTypography TypographyListItem-500">abc 123</li>
+                                                <li id="KMCTypography-300" className="KMCTypography TypographyListItem-300">abc 123</li>
+                                                <li id="KMCTypography-400" className="KMCTypography TypographyListItem-400">abc 123</li>
+                                                <li id="KMCTypography-500" className="KMCTypography TypographyListItem-500">abc 123</li>
                                             </div>
                                         </ul>
                                     </div>

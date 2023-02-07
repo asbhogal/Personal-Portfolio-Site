@@ -77,6 +77,62 @@
     font-display: swap;
 }
 
+/****** INTER - 400 REGULAR ******/
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-style: normal;
+    src:    url('../assets/fonts/Inter/Inter-Regular.woff') format('woff'),
+            url('../assets/fonts/Inter/Inter-Regular.woff2') format('woff2');
+    font-display: swap;
+}
+
+/****** INTER - 500 MEDIUM ******/
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-style: normal;
+    src:    url('../assets/fonts/Inter/Inter-Medium.woff') format('woff'),
+            url('../assets/fonts/Inter/Inter-Medium.woff2') format('woff2');
+    font-display: swap;
+}
+
+/****** INTER - 600 SEMIBOLD ******/
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-style: normal;
+    src:    url('../assets/fonts/Inter/Inter-SemiBold.woff') format('woff'),
+            url('../assets/fonts/Inter/Inter-SemiBold.woff2') format('woff2');
+    font-display: swap;
+}
+
+/****** INTER - 700 BOLD ******/
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-style: normal;
+    src:    url('../assets/fonts/Inter/Inter-Bold.woff') format('woff'),
+            url('../assets/fonts/Inter/Inter-Bold.woff2') format('woff2');
+    font-display: swap;
+}
+
+/****** INTER - 900 BLACK ******/
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 900;
+    font-style: normal;
+    src:    url('../assets/fonts/Inter/Inter-Black.woff') format('woff'),
+            url('../assets/fonts/Inter/Inter-Black.woff2') format('woff2');
+    font-display: swap;
+}
+
+
 #AccentLetter {
     font-family: 'Monsieur La Doulaise', cursive;
     text-transform: capitalize;
