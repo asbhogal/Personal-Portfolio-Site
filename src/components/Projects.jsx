@@ -52,8 +52,13 @@ const Projects = () => {
                                         <img src={ kmcLogo }></img>
                                     </div>
                                     <div className="Typography">
-                                        <p>Font Family: Montserrat</p>
-                                        <p>Font Style: lowercase</p>
+                                        <div className="TypographyInfo">
+                                            <p>Font Family</p>
+                                            <p>Montserrat</p>
+                                            <p>Case</p>
+                                            <p>lowercase</p>
+                                        </div>
+                                        <p>Weights</p>
                                         <ul className="KMCTypography TypographyList">
                                             <div className="TypographyWeightSet">
                                                 <p className="KMCTypography TypographyListItem-300">Light</p>
@@ -61,9 +66,9 @@ const Projects = () => {
                                                 <p className="KMCTypography TypographyListItem-500">Medium</p>
                                             </div>
                                             <div className="TypographyFontSet">
-                                                <li className="KMCTypography TypographyListItem-300">ABC abc 123</li>
-                                                <li className="KMCTypography TypographyListItem-400">ABC abc 123</li>
-                                                <li className="KMCTypography TypographyListItem-500">ABC abc 123</li>
+                                                <li className="KMCTypography TypographyListItem-300">abc 123</li>
+                                                <li className="KMCTypography TypographyListItem-400">abc 123</li>
+                                                <li className="KMCTypography TypographyListItem-500">abc 123</li>
                                             </div>
                                         </ul>
                                     </div>

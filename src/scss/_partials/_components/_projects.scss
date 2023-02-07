@@ -89,16 +89,30 @@
                 .BrandGuideInfo > .Typography {
                     display: flex;
                     flex-direction: column;
-                    gap: 15px;
-                    p:first-child,
-                    p:nth-child(2) {
-                        font-family: 'Montserrat', sans-serif;
-                    }
+                    gap: 5px;
                     ul {
                         display: flex;
                         flex-wrap: wrap;
                         list-style-type: none;
                         gap: 10px;
+                    }
+                }
+                .Typography > .TypographyInfo {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    p:first-child,
+                    p:nth-child(3) {
+                        font-family: 'Switzer', sans-serif;
+                        font-weight: 600;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        border-bottom: 1px solid black;
+                        padding: 5px 0;
+                    }
+                    p:nth-child(2),
+                    p:last-child {
+                        font-family: 'Montserrat', sans-serif;
                     }
                 }
                 .TypographyWeightSet,
@@ -110,6 +124,14 @@
                 .Typography,
                 .LogoMarks {
                     flex: 1 1 0px;
+                }
+                .Typography > p {
+                    font-family: 'Switzer', sans-serif;
+                    font-weight: 600;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    border-bottom: 1px solid black;
+                    padding: 5px 0;
                 }
             }
             .BrandGuideSection {
@@ -125,7 +147,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 width: 100%;
-                color: $BlackChocolate;
+                color: $White;
                 gap: 10px;
                 p {
                     font-family: 'Switzer', sans-serif;
