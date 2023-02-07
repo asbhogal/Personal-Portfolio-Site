@@ -51,10 +51,10 @@ const Projects = () => {
                             <span className="ProjectTools">Figma &#124; Webpack &#124; Vercel</span>
                             <span className="ProjectTechStacks">React &#124; JS &#124; SASS &#124;</span>
                         </span>
-                        <p className="ProjectSummary">Brand is an interior design company. This project was developed from an initial crash course provided by Flux Academy on responsive design.</p>
+                        <p className="ProjectSummary">Brand is an interior design company. This project was developed from an initial crash course provided by Flux Academy on responsive design. Assets, including images, buttons and typography, were used to generate components and a series of five templates in auto-layout format for breakpoints 1440px+, 1440px, 1024px, 744px and 375px.</p>
                         <div className="DesignBrief">
                             <h3>Design Brief</h3>
-                            <p className="DesignBriefSummary">Assets were provided by the course leader.</p>
+                            <p className="DesignBriefSummary">The templates were kept consistent in design, aesthetic and layout. The clean, minimalistic ______ with attention to whitespacing, legibility and heirarchy was also respected. The decision was made outside of this course to then render these templates as a responsive SPA (Single Page Application) using React with SASS, Babel and Webpack and deploy using Vercel.</p>
                         </div>
                         <div className="Guides">
                             <div className="BrandGuideSection">
