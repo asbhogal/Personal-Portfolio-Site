@@ -18,6 +18,9 @@
   .Guides {
     justify-content: space-between;
   }
+  .TypographyList {
+    justify-content: space-between !important;
+  }
 }
 
 /****** DESKTOP - 1025PX -> 1440px ******/
@@ -31,6 +34,9 @@
   }
   .ProjectInfo {
     padding: 40px 165px;
+  }
+  .TypographyList {
+    justify-content: space-between !important;
   }
 }
 
@@ -50,6 +56,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
+  }
+  .TypographyList {
+    justify-content: space-between;
   }
 }
 
@@ -83,6 +92,9 @@
   }
   .ColorPalette {
     justify-content: center;
+  }
+  .TypographyList {
+    justify-content: space-between;
   }
 }
 
