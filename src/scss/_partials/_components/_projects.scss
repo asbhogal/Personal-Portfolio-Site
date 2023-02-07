@@ -11,7 +11,6 @@
         display: flex;
     }
     .ProjectCover {
-        background-color: $Grullo;
         height: 100vh;
         justify-content: flex-end;
         h1 {
@@ -22,7 +21,6 @@
         flex-direction: column;
         justify-content: center;
         color: #2C2723;
-        background-color: $Grullo;
         .ProjectInfo {
             display: flex;
             flex-direction: column;
@@ -47,6 +45,11 @@
             .ProjectSummary {
                 @include BodyText;
             }
+            .DesignBrief {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
             .DesignBrief > .DesignBriefSummary {
                 @include BodyText;
             }
@@ -60,6 +63,7 @@
                 flex-direction: column;
                 flex-basis: 0;
                 flex: 1 1 0px;
+                gap: 10px;
                 h3 {
                     font-family: 'Questa Grande';
                     font-style: normal;
@@ -67,9 +71,33 @@
                     font-size: 32px;
                     line-height: 40px;
                     text-transform: uppercase;
+                    border-bottom: 1px solid black;
                 }
                 .KMCTypography {
                     font-family: 'Montserrat', sans-serif;
+                }
+                .BrandGuideInfo > .Typography {
+                    display: flex;
+                    flex-direction: column;
+                    p:first-child,
+                    p:nth-child(2) {
+                        font-family: 'Montserrat', sans-serif;
+                    }
+                    ul {
+                        display: flex;
+                        list-style-type: none;
+                        gap: 10px;
+                    }
+                }
+                .TypographyWeightSet,
+                .TypographyFontSet {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+                }
+                .Typography,
+                .LogoMarks {
+                    flex: 1 1 0px;
                 }
             }
             .BrandGuideSection {
@@ -81,13 +109,9 @@
                     }
                 }
             }
-            .StyleGuideSection {
-                gap: 10px;
-            }
             .StyleGuideSection > .ColorPalate {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: center;
                 width: 100%;
                 color: $BlackChocolate;
                 gap: 10px;
@@ -147,6 +171,12 @@
         width: 100px;
         height: 100px;
     }
+}
+
+$weights: (weight1: 300, weight2: 400, weight3: 500);
+
+@each $key, $weight in $weights {
+    .TypographyItem-#{$weight} { font-weight: $weight; }
 }
 
 /* $colors: (Color1: $ChineseViolet, Color2: $MountbattenPink, Color3: $AfricanViolet, $Color4: $Thistle);

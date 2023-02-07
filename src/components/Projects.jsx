@@ -30,14 +30,16 @@ const Projects = () => {
                                         <p>Primary Font: Montserrat</p>
                                         <p>Font Style: Lowercase</p>
                                         <ul className="KMCTypography TypographyList">
-                                            <p>Weights</p>
-                                            <p className="KMCTypography">Light</p>
-                                            <p className="KMCTypography">Regular</p>
-                                            <p className="KMCTypography">Medium</p>
-                                            <li className="KMCTypography TypographyListItem">Heading One<br></br>ABC abc 123</li>
-                                            <li className="KMCTypography TypographyListItem">Heading Two</li>
-                                            <li className="KMCTypography TypographyListItem">Heading Three</li>
-                                            <li className="KMCTypography TypographyListItem">Body / p / span</li>
+                                            <div className="TypographyWeightSet">
+                                                <p className="KMCTypography TypographyItem-300">Light</p>
+                                                <p className="KMCTypography TypographyItem-400">Regular</p>
+                                                <p className="KMCTypography TypographyItem-500">Medium</p>
+                                            </div>
+                                            <div className="TypographyFontSet">
+                                                <li className="KMCTypography TypographyListItem">ABC abc 123</li>
+                                                <li className="KMCTypography TypographyListItem">ABC abc 123</li>
+                                                <li className="KMCTypography TypographyListItem">ABC abc 123</li>
+                                            </div>
                                         </ul>
                                     </div>
                                 </div>
