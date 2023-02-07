@@ -7,9 +7,6 @@
   .AboutSection > .PageSubTitleText {
       padding-inline: 40px;
   }
-  .ProjectSection {
-    height: 100vh;
-  }
   .ProjectInfo {
     width: 1110px;
     margin: 0 auto;
@@ -32,9 +29,6 @@
   .AboutSection > .PageSubTitleText {
     padding-inline: 40px;
   }
-  .ProjectSection {
-    height: 100vh;
-  }
   .ProjectInfo {
     padding: 40px 165px;
   }
@@ -48,9 +42,6 @@
   }
   .AboutSection > .PageSubTitleText {
     padding-inline: 40px;
-  }
-  .ProjectSection {
-    height: 100vh;
   }
   .ProjectInfo {
     padding: 32px;
@@ -74,13 +65,24 @@
   .ProjectSection {
     height: 100vh;
   }
+  .VerticalDivider {
+    display: none !important;
+  }
   .ProjectInfo {
     padding: 24px;
+  }
+  .ProjectToolsAndTechStacks{
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
   }
   .Guides {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+  }
+  .ColorPalette {
+    justify-content: center;
   }
 }
 
@@ -104,6 +106,9 @@
     justify-content: center;
     text-align: center;
   }
+  .ColorPalette {
+    justify-content: center;
+  }
   .CTAButtons {
     flex-direction: column;
     justify-content: flex-start;
@@ -123,6 +128,12 @@
     .NavFooterSocialLinks {
       flex-direction: column;
     }
+  }
+}
+
+@media only screen and (width <= 1060px) {
+  .TypographyList {
+    justify-content: center;
   }
 }
 

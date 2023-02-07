@@ -14,6 +14,10 @@ const Projects = () => {
                     <div className="ProjectInfo">
                         <h2>Kadampa <span className="FirstLetterAccent">M</span>editation <span className="FirstLetterAccent">C</span>entre <span className="FirstLetterAccent">B</span>irmingham</h2>
                         <span className="ProjectTimeDuration">May 2020 - Feb 2021</span>
+                        <span className="ProjectToolsAndTechStacks">
+                            <span className="ProjectTools">WordPress &#124; Astra Pro &#124; Elementor Pro &#124; WooCommerce &#124; Stripe</span>
+                            <span className="ProjectTechStacks">HTML5 &#124; CSS3 &#124; JS &#124; PHP</span>
+                        </span>
                         <p className="ProjectSummary">Kadampa Meditation Centre is part of a nonprofit organisation which delivers a modern form of Buddhism to their local community. When the pandemic started, their centre closed and they required a revamp of their current site to allow class and course bookings and membership subscriptions. The site was designed and developed using Astra Pro and Elementor Pro with WooCommerce and Stripe.</p>
                         <div className="DesignBrief">
                             <h3>Design Brief</h3>
@@ -27,18 +31,18 @@ const Projects = () => {
                                         <img src={ kmcLogo }></img>
                                     </div>
                                     <div className="Typography">
-                                        <p>Primary Font: Montserrat</p>
-                                        <p>Font Style: Lowercase</p>
+                                        <p>Font Family: Montserrat</p>
+                                        <p>Font Style: lowercase</p>
                                         <ul className="KMCTypography TypographyList">
                                             <div className="TypographyWeightSet">
-                                                <p className="KMCTypography TypographyItem-300">Light</p>
-                                                <p className="KMCTypography TypographyItem-400">Regular</p>
-                                                <p className="KMCTypography TypographyItem-500">Medium</p>
+                                                <p className="KMCTypography TypographyListItem-300">Light</p>
+                                                <p className="KMCTypography TypographyListItem-400">Regular</p>
+                                                <p className="KMCTypography TypographyListItem-500">Medium</p>
                                             </div>
                                             <div className="TypographyFontSet">
-                                                <li className="KMCTypography TypographyListItem">ABC abc 123</li>
-                                                <li className="KMCTypography TypographyListItem">ABC abc 123</li>
-                                                <li className="KMCTypography TypographyListItem">ABC abc 123</li>
+                                                <li className="KMCTypography TypographyListItem-300">ABC abc 123</li>
+                                                <li className="KMCTypography TypographyListItem-400">ABC abc 123</li>
+                                                <li className="KMCTypography TypographyListItem-500">ABC abc 123</li>
                                             </div>
                                         </ul>
                                     </div>
@@ -46,7 +50,7 @@ const Projects = () => {
                             </div>
                             <div className="StyleGuideSection">
                                 <h3>Style Guide</h3>
-                                <div className="ColorPalate">
+                                <div className="ColorPalette">
                                     <div className="Color-1">
                                         <div className="ColorTitle">
                                             <p>01</p>
@@ -92,6 +96,7 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
+                <div className="VerticalDivider"></div>
             </div>
             <Footer />
         </>

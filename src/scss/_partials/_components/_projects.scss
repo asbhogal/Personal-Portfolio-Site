@@ -20,6 +20,7 @@
     .ProjectSection {
         flex-direction: column;
         justify-content: center;
+        padding: 40px;
         color: #2C2723;
         .ProjectInfo {
             display: flex;
@@ -31,6 +32,11 @@
                 .FirstLetterAccent {
                     @include HeadingTwoAccentLetter;
                 }
+            }
+            .ProjectToolsAndTechStacks {
+                display: flex;
+                justify-content: space-between;
+                font-family: 'Switzer', sans-serif;
             }
             .ProjectTimeDuration {
                 text-align: right;
@@ -79,12 +85,14 @@
                 .BrandGuideInfo > .Typography {
                     display: flex;
                     flex-direction: column;
+                    gap: 15px;
                     p:first-child,
                     p:nth-child(2) {
                         font-family: 'Montserrat', sans-serif;
                     }
                     ul {
                         display: flex;
+                        flex-wrap: wrap;
                         list-style-type: none;
                         gap: 10px;
                     }
@@ -109,7 +117,7 @@
                     }
                 }
             }
-            .StyleGuideSection > .ColorPalate {
+            .StyleGuideSection > .ColorPalette {
                 display: flex;
                 flex-wrap: wrap;
                 width: 100%;
@@ -164,6 +172,12 @@
             }
         }
     }
+    .VerticalDivider {
+        height: 400px;
+        border-right: 1px solid black;
+        position: relative;
+        transform: translateX(-50%);
+    }
 }
 
 @for $i from 1 through 4 {
@@ -176,7 +190,7 @@
 $weights: (weight1: 300, weight2: 400, weight3: 500);
 
 @each $key, $weight in $weights {
-    .TypographyItem-#{$weight} { font-weight: $weight; }
+    .TypographyListItem-#{$weight} { font-weight: $weight; }
 }
 
 /* $colors: (Color1: $ChineseViolet, Color2: $MountbattenPink, Color3: $AfricanViolet, $Color4: $Thistle);
