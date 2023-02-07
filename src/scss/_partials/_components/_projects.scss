@@ -4,8 +4,6 @@
 .Projects {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 95px;
     width: 100%;
     > * {
         display: flex;
@@ -185,6 +183,10 @@
                 border: none;
                 cursor: pointer;
                 transition: $Transition-03;
+                a {
+                    text-decoration: none;
+                    color: $Black;
+                }
                 &:hover {
                     transition: $Transition-03;
                     svg {

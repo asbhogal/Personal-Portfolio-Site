@@ -98,8 +98,8 @@ const Projects = () => {
                             </div>
                         </div>
                         <div className="ProjectLinks">
-                        <button className="ViewFiles" component={ Link } to="./projects">
-                            view links
+                        <button className="ViewFiles">
+                            <a href="https://www.dropbox.com/sh/t6j0d882l18ajel/AAAuAl1ML0kWPePpuiCvudkma?dl=0">view screens</a>
                             <TbChevronUpRight />
                         </button>
                         </div>

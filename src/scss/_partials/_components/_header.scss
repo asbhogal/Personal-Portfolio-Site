@@ -1,10 +1,10 @@
 @use '../variables' as *;
 
 .Nav {
-    position: fixed;
     z-index: 2;
+    width: 100%;
     .NavContainer > .NavBar {
-        position: fixed;
+        position: abs($number: 0);
         top: 0;
         left: 0;
         width: 100%;

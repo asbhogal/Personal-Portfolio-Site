@@ -1,9 +1,6 @@
 @use '../variables' as *;
 
 .Footer {
-    position: fixed;
-    bottom: 0;
-    background-color: $Grullo;
     height: 60px;
     width: 100%;
     align-items: center;
@@ -13,9 +10,10 @@
         justify-content: space-between;
         align-items: center;
         width: 180px;
-        cursor: pointer;
-        img {
-            color: red;
+        a {
+            display: flex;
+            color: $Black;
+            cursor: pointer;
         }
     }
 }

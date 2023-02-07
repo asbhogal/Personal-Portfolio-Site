@@ -1,21 +1,38 @@
-import cellIcon from "../assets/images/icons/Vector-Cell.svg";
-import emailIcon from "../assets/images/icons/Vector-Email.svg";
-import figmaIcon from "../assets/images/icons/Vector-Figma.svg";
-import GitHubIcon from "../assets/images/icons/Vector-GitHub.svg";
-import LinkedInIcon from "../assets/images/icons/Vector-LinkedIn.svg";
+import { MdAlternateEmail } from "react-icons/md";
+import { FaLinkedinIn } from "react-icons/fa";
+import { BsGithub } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
+import { FiFigma } from "react-icons/fi";
+
 
 const Footer = () => {
     return (
         <footer className="Footer">
             <div className="SocialIcons">
-                <a href="tel:+447517990390" target="_blank"><img src={ cellIcon }></img></a>
-                <a href="mailto:business@amansinghbhogal.com" target="_blank"><img src={ emailIcon }></img></a>
-                <a href="https://www.figma.com/@amansinghbhogal" target="blank"><img src={ figmaIcon }></img></a>
-                <a href="https://github.com/asbhogal" target="_blank"><img src={ GitHubIcon }></img></a>
-                <a href="https://www.linkedin.com/in/amansinghbhogal/" target="_blank"><img src={ LinkedInIcon }></img></a>
+            <a href="mailto:business@amansinghbhogal.com">
+                <MdAlternateEmail />
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/amansinghbhogal">
+                <FaLinkedinIn />
+            </a>
+            <a target="_blank" href="https://www.github.com/asbhogal">
+                <BsGithub />
+            </a>
+            <a target="_blank" href="https://www.instagram.com/amanuiux">
+                <BsInstagram />
+            </a>
+            <a target="_blank" href="https://www.figma.com/@amansinghbhogal">
+                <FiFigma />
+            </a> 
             </div>
         </footer>
     )
 }
 
 export default Footer;
+
+{/* <a href="tel:+447517990390" target="_blank"><img src={ cellIcon }></img></a>
+<a href="mailto:business@amansinghbhogal.com" target="_blank"><img src={ emailIcon }></img></a>
+<a href="https://www.figma.com/@amansinghbhogal" target="blank"><img src={ figmaIcon }></img></a>
+<a href="https://github.com/asbhogal" target="_blank"><img src={ GitHubIcon }></img></a>
+<a href="https://www.linkedin.com/in/amansinghbhogal/" target="_blank"><img src={ LinkedInIcon }></img></a> */}
