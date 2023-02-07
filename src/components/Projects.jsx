@@ -1,8 +1,6 @@
 import Footer from "./Footer";
 import Navbar from "./Header";
 import kmcLogo from "../assets/images/logos/KMC_Birmingham_Logo.svg";
-import { Link } from "react-router-dom";
-import chevronRight from "../assets/images/icons/ChevronRight.svg";
 import { TbChevronUpRight } from "react-icons/tb";
 
 const Projects = () => {
@@ -13,6 +11,7 @@ const Projects = () => {
                 <div className="ProjectCover">
                     <h1>&#38;&#46;projects</h1>
                 </div>
+                {/* KADAMPA MEDITATION CENTRE BIRMINGHAM */}
                 <div className="ProjectSection">
                     <div className="ProjectInfo">
                         <h2 className="ProjectTitle">
@@ -129,6 +128,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="VerticalDivider"></div>
+                {/* BRAND */}
                 <div className="ProjectSection">
                     <div className="ProjectInfo">
                         <h2 className="ProjectTitle">
@@ -245,6 +245,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="VerticalDivider"></div>
+                {/* OCEANICA */}
                 <div className="ProjectSection">
                     <div className="ProjectInfo">
                         <h2 className="ProjectTitle">
