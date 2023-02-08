@@ -13,7 +13,7 @@ const Header = () => {
             <div className="NavContainer">
                 <div className="NavBar">
                     <div className="MainLogo">
-                    <Link to='/'>
+                    <Link to='/' aria-label="Return to the home page">
                         <img src={ navLogo }></img>
                     </Link>
                     </div>

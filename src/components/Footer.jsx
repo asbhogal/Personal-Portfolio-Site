@@ -12,16 +12,16 @@ const Footer = () => {
             <a href="mailto:business@amansinghbhogal.com">
                 <MdAlternateEmail />
             </a>
-            <a target="_blank" href="https://www.linkedin.com/in/amansinghbhogal">
+            <a target="_blank" href="https://www.linkedin.com/in/amansinghbhogal" aria-label="Visit his LinkedIn page">
                 <FaLinkedinIn />
             </a>
-            <a target="_blank" href="https://www.github.com/asbhogal">
+            <a target="_blank" href="https://www.github.com/asbhogal" aria-label="Visit his GitHub page">
                 <BsGithub />
             </a>
-            <a target="_blank" href="https://www.instagram.com/amanuiux">
+            <a target="_blank" href="https://www.instagram.com/amanuiux" aria-label="Visit his Instagram page">
                 <BsInstagram />
             </a>
-            <a target="_blank" href="https://www.figma.com/@amansinghbhogal">
+            <a target="_blank" href="https://www.figma.com/@amansinghbhogal" aria-label="Visit his Figma profile">
                 <FiFigma />
             </a> 
             </div>
