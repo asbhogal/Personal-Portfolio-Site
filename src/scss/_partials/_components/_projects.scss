@@ -20,7 +20,7 @@
         justify-content: center;
         height: max-content;
         padding: 40px;
-        color: #2C2723;
+        color: $RaisinBlack-03;
         .ProjectInfo {
             display: flex;
             flex-direction: column;
@@ -255,7 +255,7 @@
                 cursor: pointer;
                 a {
                     text-decoration: none;
-                    color: $Black;
+                    color: $RaisinBlack-03;
                 }
                 &:hover {
                     transition: $Transition-03;
@@ -293,7 +293,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: $White;
 }
 
 #KMCBrandGuideInfo {
@@ -398,13 +398,3 @@ $BrandWeights: (weight1: 400, weight2: 500, weight3: 600, weight4: 700, weight5:
 @each $key, $weight in $BrandWeights {
     #BrandTypography-#{ $weight } { font-weight: $weight; }
 };
-
-//$OceanicaWeights: (weight1: )
-
-// bold, regular, medium, semi bold
-
-/* $colors: (Color1: $ChineseViolet, Color2: $MountbattenPink, Color3: $AfricanViolet, $Color4: $Thistle);
-
-@each $key, $color in $colors {
-    
-} */

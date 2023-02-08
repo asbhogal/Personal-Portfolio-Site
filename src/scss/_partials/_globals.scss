@@ -9,8 +9,8 @@
     outline: 1px red solid;
 }
 
-.MainContainer, html {
-    background-color: #F9F8F4;
+html {
+    background-color: $Canvas;
 }
 
 .CTAButtons {
@@ -28,7 +28,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: $Black;
+    color: $RaisinBlack-03;
     font-size: 32px;
     font-weight: 200;
     font-weight: 200;

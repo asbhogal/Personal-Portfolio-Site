@@ -9,7 +9,7 @@
         text-transform: uppercase;
         font-weight: 400;
         font-size: clamp(4.25rem, 3.1786rem + 5.3571vw, 8rem);        text-align: right;
-        color: $Black;
+        color: $RaisinBlack-03;
         font-variant-caps: all-small-caps;
         &::first-letter {
             font-family: 'Monsieur La Doulaise', cursive;
@@ -26,7 +26,7 @@
         cursor: pointer;
         a {
             text-decoration: none;
-            color: $Black;
+            color: $RaisinBlack-03;
         }
         &:hover {
             transition: $Transition-03;

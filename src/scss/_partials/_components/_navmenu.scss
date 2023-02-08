@@ -18,7 +18,7 @@
         }
         .NavItems > a {
             text-decoration: none;
-            color: #2C2723;
+            color: $RaisinBlack-03;
             transition: $Transition-03;
             &:hover {
                 transition: $Transition-03;
@@ -51,7 +51,7 @@
                 }
                 a {
                     text-decoration: none;
-                    color: $Black;
+                    color: $RaisinBlack-03;
                 }
             }
         }
