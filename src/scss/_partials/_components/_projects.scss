@@ -293,6 +293,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: white;
 }
 
 #KMCBrandGuideInfo {
@@ -339,7 +340,7 @@ $KMCWeights: (weight1: 300, weight2: 400, weight3: 500);
     justify-content: center;
     align-items: center;
     gap: 25px;
-    background: white;
+    background-color: #000408;
     padding: 10px;
 }
 

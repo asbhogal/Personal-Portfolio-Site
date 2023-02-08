@@ -4,6 +4,10 @@
   .MainContainer {
     width: 1120px;
   }
+  .AboutSection {
+    width: 1120px;
+    margin: 0 auto;
+  }
   .AboutSection > .PageSubTitleText {
       padding-inline: 40px;
   }
@@ -44,6 +48,9 @@
   .AboutSection > .PageSubTitleText {
     padding-inline: 40px;
   }
+  .AboutSection {
+    padding: 0 150px;
+  }
   .ProjectInfo {
     padding: 40px 165px;
   }
@@ -64,6 +71,9 @@
 @media only screen and (745px <= width <= 1024px) {
   .MainContainer {
     padding: 32px;
+  }
+  .AboutSection {
+    padding: 0 32px;
   }
   .AboutSection > .PageSubTitleText {
     padding-inline: 40px;
@@ -89,6 +99,9 @@
 @media only screen and (376px <= width <= 744px) {
   .MainContainer {
     padding: 24px;
+  }
+  .AboutSection {
+    padding: 0 24px;
   }
   .AboutSection > .PageSubTitleText {
     padding-inline: 40px;
@@ -131,6 +144,9 @@
 @media only screen and (width <= 375px) {
   .MainContainer {
     padding: 24px;
+  }
+  .AboutSection {
+    padding: 0 24px;
   }
   .AboutSection > .PageSubTitleText {
     text-align: center;

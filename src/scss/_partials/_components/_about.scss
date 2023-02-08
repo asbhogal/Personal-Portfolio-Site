@@ -5,7 +5,8 @@
 .AboutSection {
     height: calc(100vh - 152px);
     flex-direction: column;
-    gap: 25px;
+    justify-content: center;
+    gap: 30px;
     > * {
         display: flex;
     }
@@ -13,11 +14,37 @@
         flex-direction: column;
         @include HeadingOneTitle;
     }
-    .ExperienceList {
-        justify-content: center;
-        gap: 25px;
-        font-family: 'Questa Grande', sans-serif;
-        font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);        text-align: center;
+    .AboutContent {
+        gap: 20px;
+        > * {
+            display: flex;
+        }
+        flex-direction: column;
+        justify-content: flex-start;
+        #DesignSkills {
+            justify-content: center;
+            text-align: center;
+        }
+        #TechSkills {
+            justify-content: space-between;
+            text-align: center;
+        }
+        .ExperienceList {
+            gap: 25px;
+            font-family: 'Questa Grande', sans-serif;
+            font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);        text-align: left;
+        }
+        /* .FirstLetterAccent {
+            @include HeadingTwoAccentLetter;
+        } */
+        .AboutText {
+            font-family: 'Switzer', sans-serif;
+            p {
+                ::first-letter {
+                    color: red !important;
+                }
+            }
+        }
     }
 }
 
