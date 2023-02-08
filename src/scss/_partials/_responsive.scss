@@ -56,7 +56,9 @@
   .AboutSection > .PageSubTitleText {
     padding-inline: 40px;
   }
-  .HomePageSection,
+  .HomePageSection {
+    padding: 0 90px;
+  }
   .AboutSection {
     padding: 0 150px;
   }

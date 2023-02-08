@@ -18,6 +18,7 @@
     }
     .ViewFiles {
         display: flex;
+        flex-direction: row;
         align-items: center;
         font-family: 'Switzer', sans-serif;
         font-size: 16px;
