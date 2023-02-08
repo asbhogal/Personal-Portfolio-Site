@@ -87,6 +87,9 @@
                 .KMCTypography {
                     font-family: 'Montserrat', sans-serif;
                 }
+                .BrandGuideInfo {
+                    gap: 20px;
+                }
                 .BrandGuideInfo > .Typography {
                     display: flex;
                     flex-direction: column;
@@ -139,9 +142,6 @@
                 .BrandGuideInfo {
                     display: flex;
                     flex-wrap: wrap;
-                    img {
-                        width: 150px;
-                    }
                 }
             }
             .StyleGuideSection > .ColorPalette {
@@ -281,33 +281,34 @@
     }
 }
 
+/****** KMC BIRMINGHAM ******/
+
+.KMCIcon,
+.KMCLogo {
+    width: 150px;
+}
+
+#KMCLogoMarks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#KMCBrandGuideInfo {
+    gap: 20px;
+}
+
+#KMCTypographyFamily,
+#KMCTypographyCase {
+    font-family: 'Montserrat', sans-serif;
+}
+
 $KMCWeights: (weight1: 300, weight2: 400, weight3: 500);
 
 @each $key, $weight in $KMCWeights {
     #KMCTypography-#{ $weight } { font-weight: $weight; }
 };
-
-$BrandWeights: (weight1: 400, weight2: 500, weight3: 600, weight4: 700, weight5: 900);
-
-@each $key, $weight in $BrandWeights {
-    #BrandTypography-#{ $weight } { font-weight: $weight; }
-};
-
-$OceanicaWeights: (weight1: 400, weight2: 500, weight3: 600, weight4: 700);
-
-@each $key, $weight in $OceanicaWeights {
-    #OceanicaTypography-#{ $weight } {font-weight: $weight; }
-};
-
-//$OceanicaWeights: (weight1: )
-
-// bold, regular, medium, semi bold
-
-/* $colors: (Color1: $ChineseViolet, Color2: $MountbattenPink, Color3: $AfricanViolet, $Color4: $Thistle);
-
-@each $key, $color in $colors {
-    
-} */
 
 /****** OCEANICA ******/
 
@@ -315,21 +316,58 @@ $OceanicaWeights: (weight1: 400, weight2: 500, weight3: 600, weight4: 700);
     font-family: 'Manrope', sans-serif;
 }
 
-#OceanicaGuideInfo > .Typography > .TypographyInfo {
-    p:nth-child(2),
-    p:last-child {
-        font-family: 'Manrope', sans-serif;
-    }
+.OceanicaIcon {
+    width: 75px;
 }
 
+.OceanicaLogo {
+    width: 235px;
+}
+
+#OceanicaGuideInfo {
+    gap: 20px !important;
+}
+
+#OceanicaTypographyFamily,
+#OceanicaTypographyCase {
+    font-family: 'Manrope', sans-serif;
+}
+
+#OceanicaLogoMarks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background: white;
+}
+
+#OceanicaGuideInfo .LogoMarks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+$OceanicaWeights: (weight1: 400, weight2: 500, weight3: 600, weight4: 700);
+
+@each $key, $weight in $OceanicaWeights {
+    #OceanicaTypography-#{ $weight } {font-weight: $weight; }
+};
+
 /****** BRAND ******/
+
+.BrandProjectIcon,
+.BrandProjectLogo {
+    width: 150px;
+}
 
 .BrandProjectTypography {
     font-family: 'Inter', sans-serif;
 }
 
 #BrandGuideInfo {
-    gap: 30px;
     .LogoMarks {
         display: flex;
         flex-direction: column;
@@ -352,3 +390,19 @@ $OceanicaWeights: (weight1: 400, weight2: 500, weight3: 600, weight4: 700);
         }
     }
 }
+
+$BrandWeights: (weight1: 400, weight2: 500, weight3: 600, weight4: 700, weight5: 900);
+
+@each $key, $weight in $BrandWeights {
+    #BrandTypography-#{ $weight } { font-weight: $weight; }
+};
+
+//$OceanicaWeights: (weight1: )
+
+// bold, regular, medium, semi bold
+
+/* $colors: (Color1: $ChineseViolet, Color2: $MountbattenPink, Color3: $AfricanViolet, $Color4: $Thistle);
+
+@each $key, $color in $colors {
+    
+} */

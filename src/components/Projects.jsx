@@ -63,15 +63,15 @@ const Projects = () => {
                             <div className="BrandGuideSection">
                                 <h3>Brand Guide</h3>
                                 <div id="#OceanicaGuideInfo" className="BrandGuideInfo">
-                                    <div className="LogoMarks">
-                                        <img src={ oceanicaIcon }></img>
-                                        <img src={ oceanicaLogo }></img>                                    </div>
+                                    <div id="OceanicaLogoMarks" className="LogoMarks">
+                                        <img className="OceanicaIcon" src={ oceanicaIcon }></img>
+                                        <img className="OceanicaLogo" src={ oceanicaLogo }></img>                                    </div>
                                     <div className="Typography">
                                         <div className="TypographyInfo">
                                             <p>Font Family</p>
-                                            <p>Manrope</p>
-                                            <p>Case</p>
-                                            <p>Sentence</p>
+                                            <p id="OceanicaTypographyFamily">Manrope</p>
+                                            <p >Case</p>
+                                            <p id="OceanicaTypographyCase">Sentence</p>
                                         </div>
                                         <p>Weights</p>
                                         <ul className="KMCTypography TypographyList">
@@ -190,9 +190,9 @@ const Projects = () => {
                             <div className="BrandGuideSection">
                                 <h3>Brand Guide</h3>
                                 <div id="BrandGuideInfo" className="BrandGuideInfo">
-                                    <div className="LogoMarks">
-                                        <img id="BrandLogoBlack" src={ brandLogoBlack }></img>
-                                        <img id="BrandLogoWhite" src={ brandLogoWhite }></img>
+                                    <div id="BrandProjectLogoMarks" className="LogoMarks">
+                                        <img className="BrandProjectLogo" src={ brandLogoBlack }></img>
+                                        <img className="BrandProjectIcon" src={ brandLogoWhite }></img>
                                         <div id="BrandIcons">
                                             <img id="BrandIconBlack" src={ brandIconBlack }></img>
                                             <img id="BrandIconWhite" src={ brandIconWhite }></img>
@@ -313,16 +313,16 @@ const Projects = () => {
                         <div className="Guides">
                             <div className="BrandGuideSection">
                                 <h3>Brand Guide</h3>
-                                <div className="BrandGuideInfo">
-                                    <div className="LogoMarks">
-                                        <img src={ kmcLogo }></img>
+                                <div id="KMCBrandGuideInfo" className="BrandGuideInfo">
+                                    <div id="KMCLogoMarks" className="LogoMarks">
+                                        <img className="KMCLogo" src={ kmcLogo }></img>
                                     </div>
                                     <div className="Typography">
                                         <div className="TypographyInfo">
                                             <p>Font Family</p>
-                                            <p>Montserrat</p>
+                                            <p id="KMCTypographyFamily">Montserrat</p>
                                             <p>Case</p>
-                                            <p>lowercase</p>
+                                            <p id="KMCTypographyCase">lowercase</p>
                                         </div>
                                         <p>Weights</p>
                                         <ul className="KMCTypography TypographyList">
