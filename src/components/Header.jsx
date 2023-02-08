@@ -1,4 +1,4 @@
-import navLogo from "../assets/images/logos/Website Nav Icon.svg";
+import navLogo from "../assets/images/logos/Portfolio-Favicon.svg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Home from "./Home";
@@ -14,7 +14,7 @@ const Header = () => {
                 <div className="NavBar">
                     <div className="MainLogo">
                     <Link to='/' aria-label="Return to the home page">
-                        <img src={ navLogo }></img>
+                        <img src={ navLogo } width="75px" height="75px"></img>
                     </Link>
                     </div>
                     <div className="MenuToggle" onClick={ () => setNavOpen(!navOpen) }>
