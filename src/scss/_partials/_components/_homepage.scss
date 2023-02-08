@@ -16,4 +16,24 @@
             text-transform: capitalize;
         }
     }
+    .ViewFiles {
+        display: flex;
+        align-items: center;
+        font-family: 'Switzer', sans-serif;
+        font-size: 16px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        a {
+            text-decoration: none;
+            color: $Black;
+        }
+        &:hover {
+            transition: $Transition-03;
+            svg {
+                transition: $Transition-03;
+                transform: translateX(2px);
+            }
+        }
+    }
 }

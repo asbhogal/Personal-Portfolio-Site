@@ -1,10 +1,18 @@
 /****** WIDE - 1440px+ ******/
 
 @media only screen and (1441px <= width) {
+  .HomePageSection {
+    width: 1120px;
+    margin: 0 auto;
+  }
   .MainContainer {
     width: 1120px;
   }
   .AboutSection {
+    width: 1120px;
+    margin: 0 auto;
+  }
+  .AdditionalServices {
     width: 1120px;
     margin: 0 auto;
   }
@@ -48,7 +56,11 @@
   .AboutSection > .PageSubTitleText {
     padding-inline: 40px;
   }
+  .HomePageSection,
   .AboutSection {
+    padding: 0 150px;
+  }
+  .AdditionalServices {
     padding: 0 150px;
   }
   .ProjectInfo {
@@ -72,6 +84,7 @@
   .MainContainer {
     padding: 32px;
   }
+  .HomePageSection,
   .AboutSection {
     padding: 0 32px;
   }
@@ -80,6 +93,9 @@
   }
   .ProjectInfo {
     padding: 32px;
+  }
+  .AdditionalServices {
+    padding: 0 32px;
   }
   .Guides {
     flex-wrap: wrap;
@@ -100,11 +116,18 @@
   .MainContainer {
     padding: 24px;
   }
+  .HomePageSection,
   .AboutSection {
     padding: 0 24px;
   }
   .AboutSection > .PageSubTitleText {
     padding-inline: 40px;
+  }
+  .AdditionalServices {
+    padding: 0 24px;
+    .AdditionalServicesSection > .AdditionalServicesContent {
+      flex-direction: column;
+    }
   }
   .ProjectSection {
     height: 100vh;
@@ -145,6 +168,7 @@
   .MainContainer {
     padding: 24px;
   }
+  .HomePageSection,
   .AboutSection {
     padding: 0 24px;
   }
@@ -153,6 +177,12 @@
   }
   .ProjectInfo {
     padding: 24px;
+  }
+  .AdditionalServices {
+    padding: 0 24px;
+    .AdditionalServicesSection > .AdditionalServicesContent {
+      flex-direction: column;
+    }
   }
   .ProjectCover h1{
     font-size: 72px !important;
@@ -204,10 +234,6 @@
 @media screen and (max-width: 600px) {
   .MainContainer {
       flex-direction: column !important;
-  }
-
-  .CTAButtons > button {
-      font-size: 21px;
   }
 }
 
