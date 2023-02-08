@@ -79,7 +79,7 @@
                     font-family: 'Questa Grande';
                     font-style: normal;
                     font-weight: 400;
-                    font-size: 32px;
+                    font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
                     line-height: 40px;
                     text-transform: uppercase;
                     border-bottom: 1px solid black;

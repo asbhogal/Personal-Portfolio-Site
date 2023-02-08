@@ -10,7 +10,8 @@ const   path = require("path"),
                 title: "Personal Portfolio Site",
                 author: "Aman Singh Bhogal",
                 template: "./src/index.html",
-                description: "The personal portfolio site of Aman Singh Bhogal. Front End Developer & UI Engineer"
+                description: "The personal portfolio site of Aman Singh Bhogal. Front End Developer & UI Engineer",
+                favicon: "./src/assets/images/logos/Portfolio-Favicon.svg"
             }),
         ];
 
