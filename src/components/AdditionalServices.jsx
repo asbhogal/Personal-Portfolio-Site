@@ -7,7 +7,7 @@ const AdditionalServices = () => {
             <Header />
                 <main className="AdditionalServices">
                     <section className="AdditionalServicesCover">
-                        <h1>additional services</h1>
+                        <h1>&#38;&#46;additional services</h1>
                     </section>
                     <section className="AdditionalServicesSection">
                         <div className="AdditionalServicesContent">
@@ -28,19 +28,21 @@ const AdditionalServices = () => {
                                     <li className="WordPressDesignListItem">Child Themes</li>
                                     <li className="WordPressDesignListItem">Site Optimisation</li>
                                     <li className="WordPressDesignListItem">Core File Changes</li>
+                                    <li className="WordPressDesignListItem">Staging & Development Environments</li>
                                 </ul>
                             </div>
                             <div className="WebHostingManagementSection">
                                 <h2>Web Hosting, Security & Optimisation</h2>
                                 <ul className="WebHostingList">
-                                    <li className="WebHostingListItem">DNS Records</li>
-                                    <li className="WordPressDesignListItem">Domain Management</li>
+                                    <li className="WebHostingListItem">DNS Records & Domain Management</li>
+                                    <li className="WordPressDesignListItem">Site Migration</li>
                                     <li className="WordPressDesignListItem">Security Headers</li>
                                     <li className="WordPressDesignListItem">SSL & TLS</li>
                                     <li className="WordPressDesignListItem">Hotlink Protection</li>
                                 </ul>
                             </div>
                         </div>
+                        <h3>Please enquire for further information and prices</h3>
                     </section>
                 </main>
             <Footer />
