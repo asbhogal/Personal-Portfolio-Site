@@ -1,4 +1,4 @@
-import navLogo from "../assets/images/logos/Portfolio-Favicon.svg";
+import navLogo from "../assets/images/logos/Portfolio-Logo.svg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Home from "./Home";
