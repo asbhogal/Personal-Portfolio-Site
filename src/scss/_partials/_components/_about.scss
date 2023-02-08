@@ -2,14 +2,26 @@
 @use '../mixins' as *;
 
 
-.AboutCover {
+.AboutSection {
     height: calc(100vh - 152px);
-    h1 {
+    flex-direction: column;
+    gap: 25px;
+    > * {
+        display: flex;
+    }
+    .PageHeaderTitle {
+        flex-direction: column;
         @include HeadingOneTitle;
+    }
+    .ExperienceList {
+        justify-content: center;
+        gap: 25px;
+        font-family: 'Questa Grande', sans-serif;
+        font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);        text-align: center;
     }
 }
 
-.AboutSection {
+/* .AboutSection {
     position: absolute;
     top: 370px;
     flex-direction: column;
@@ -28,4 +40,4 @@
     #AboutPageTitle2 {
         text-align: right;
     }
-}
+} */
