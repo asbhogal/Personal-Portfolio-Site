@@ -1,4 +1,3 @@
-import chevronRight from "../assets/images/icons/ChevronRight.svg";
 import { Link } from "react-router-dom";
 
 const CTAButtons = () => {
@@ -10,7 +9,6 @@ const CTAButtons = () => {
             </button>
             <button className="Contact">
                 contact
-                <img src={ chevronRight }></img>
             </button>
         </section>
     )

@@ -25,6 +25,14 @@
   .TypographyList {
     justify-content: space-between !important;
   }
+  .ErrorPage {
+    width: 1120px;
+    margin: 0 auto;
+    h2 {
+      word-break: break-word;
+      width: 480px;
+    }
+  }
 }
 
 /****** DESKTOP - 1025PX -> 1440px ******/
@@ -41,6 +49,13 @@
   }
   .TypographyList {
     justify-content: space-between !important;
+  }
+  .ErrorPage {
+    padding: 0 150px;
+    h2 {
+      word-break: break-word;
+      width: 480px;
+    }
   }
 }
 
@@ -63,6 +78,9 @@
   }
   .TypographyList {
     justify-content: space-between;
+  }
+  .ErrorPage {
+    padding: 0 32px;
   }
 }
 
@@ -102,6 +120,9 @@
   }
   .TypographyList {
     justify-content: space-between;
+  }
+  .ErrorPage {
+    padding: 0 24px;
   }
 }
 
@@ -147,6 +168,9 @@
     .NavFooterSocialLinks {
       flex-direction: column;
     }
+  }
+  .ErrorPage {
+    padding: 0 24px;
   }
 }
 

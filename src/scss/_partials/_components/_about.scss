@@ -3,9 +3,7 @@
 
 
 .AboutCover {
-    background-color: $Grullo;
-    height: 100vh;
-    justify-content: flex-end;
+    height: calc(100vh - 152px);
     h1 {
         @include HeadingOneTitle;
     }

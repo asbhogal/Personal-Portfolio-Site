@@ -4,9 +4,7 @@
     z-index: 2;
     width: 100%;
     .NavContainer > .NavBar {
-        position: abs($number: 0);
-        top: 0;
-        left: 0;
+        height: 92px;
         width: 100%;
         display: flex;
         justify-content: space-between;
