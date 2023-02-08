@@ -1,0 +1,51 @@
+@use './variables' as *;
+
+@mixin HeadingOneTitle {
+    font-family: 'Questa Grande', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(4.25rem, -9.5rem + 24.4444vw, 12.5rem);
+    // line-height: 160px;
+    text-align: right;
+    text-transform: lowercase;
+    color: $RaisinBlack-03;
+}
+
+@mixin HeadingTwoAccentLetter {
+    font-family: 'Monsieur La Doulaise', cursive;
+    font-style: normal;
+    font-size: clamp(2.25rem, 1.205rem + 3.8vw, 4.625rem);
+    font-weight: 400;
+    line-height: 75px;
+}
+
+@mixin HeadingTwoProject {
+    font-family: 'Questa Grande', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    border-bottom: 1px solid $BlackChocolate;
+}
+
+@mixin HeadingThreeProject {
+    font-family: 'Questa Grande', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+    text-transform: uppercase;
+}
+
+@mixin SubtitleText {
+    font-family: 'Switzer', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+@mixin BodyText {
+    font-family: 'Switzer', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+}

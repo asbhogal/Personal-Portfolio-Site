@@ -1,0 +1,249 @@
+/****** WIDE - 1440px+ ******/
+
+@media only screen and (1441px <= width) {
+  .HomePageSection {
+    width: 1440px;
+    margin: 0 auto;
+  }
+  .MainContainer {
+    width: 1120px;
+  }
+  .AboutSection {
+    width: 1120px;
+    margin: 0 auto;
+  }
+  .AdditionalServices {
+    width: 1120px;
+    margin: 0 auto;
+  }
+  .AboutSection > .PageSubTitleText {
+      padding-inline: 40px;
+  }
+  .ProjectCover {
+    width: 1520px;
+    margin:0 auto;
+  }
+  .ProjectInfo {
+    width: 1110px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  .MainHomeTitle {
+    font-size: 128px;
+    &::first-letter {
+      font-size: 256px;
+    }
+  }
+  .Guides {
+    justify-content: space-between;
+  }
+  .TypographyList {
+    justify-content: space-between !important;
+  }
+  .ErrorPage {
+    width: 1120px;
+    margin: 0 auto;
+    h2 {
+      word-break: break-word;
+      width: 480px;
+    }
+  }
+}
+
+/****** DESKTOP - 1025PX -> 1440px ******/
+
+@media only screen and (1025px <= width <= 1440px) {
+  .MainContainer {
+    padding: 0 150px;
+  }
+  .AboutSection > .PageSubTitleText {
+    padding-inline: 40px;
+  }
+  .HomePageSection {
+    padding: 0 90px;
+  }
+  .AboutSection {
+    padding: 0 150px;
+  }
+  .AdditionalServices {
+    padding: 0 150px;
+  }
+  .ProjectInfo {
+    padding: 40px 165px;
+  }
+  .TypographyList {
+    justify-content: space-between !important;
+  }
+  .ErrorPage {
+    padding: 0 150px;
+    h2 {
+      word-break: break-word;
+      width: 480px;
+    }
+  }
+}
+
+/****** TABLET (LARGE) - 745px --> 1024px ******/
+
+@media only screen and (745px <= width <= 1024px) {
+  .MainContainer {
+    padding: 32px;
+  }
+  .HomePageSection,
+  .AboutSection {
+    padding: 0 32px;
+  }
+  .AboutSection > .PageSubTitleText {
+    padding-inline: 40px;
+  }
+  .ProjectInfo {
+    padding: 32px;
+  }
+  .AdditionalServices {
+    padding: 0 32px;
+  }
+  .Guides {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .TypographyList {
+    justify-content: space-between;
+  }
+  .ErrorPage {
+    padding: 0 32px;
+  }
+}
+
+/****** TABLET (SMALL) - 376px --> 744px ******/
+
+@media only screen and (376px <= width <= 744px) {
+  .MainContainer {
+    padding: 24px;
+  }
+  .HomePageSection {
+    flex-direction: column;
+  }
+  .HomePageSection,
+  .AboutSection {
+    padding: 0 24px;
+  }
+  .AboutSection > .PageSubTitleText {
+    padding-inline: 40px;
+  }
+  .AdditionalServices {
+    padding: 0 24px;
+    .AdditionalServicesSection > .AdditionalServicesContent {
+      flex-direction: column;
+    }
+  }
+  .ProjectSection {
+    height: 100vh;
+  }
+  .VerticalDivider {
+    display: none !important;
+  }
+  .ProjectInfo {
+    padding: 24px;
+  }
+  .ProjectTimeDuration {
+    justify-content: center !important;
+  }
+  .ProjectToolsAndTechStacks{
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .Guides {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .ColorPalette {
+    justify-content: center;
+  }
+  .TypographyList {
+    justify-content: space-between;
+  }
+  .ErrorPage {
+    padding: 0 24px;
+  }
+}
+
+/****** TABLET (SMALL) - 0px -> 375px ******/
+
+@media only screen and (width <= 375px) {
+  .MainContainer {
+    padding: 24px;
+  }
+  .HomePageSection {
+    flex-direction: column;
+  }
+  .HomePageSection,
+  .AboutSection {
+    padding: 0 24px;
+  }
+  .AboutSection > .PageSubTitleText {
+    text-align: center;
+  }
+  .ProjectInfo {
+    padding: 24px;
+  }
+  .AdditionalServices {
+    padding: 0 24px;
+    .AdditionalServicesSection > .AdditionalServicesContent {
+      flex-direction: column;
+    }
+  }
+  .ProjectCover h1{
+    font-size: 72px !important;
+  }
+  .Guides {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .ColorPalette {
+    justify-content: center;
+  }
+  .CTAButtons {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  #TechSkills {
+    flex-direction: column;
+  }
+
+  /* .NavLinks > .NavItems > a {
+    font-size: 32px;
+  }
+
+  .NavLinks {
+    padding-top: 40px !important;
+  } */
+
+  .SocialLinkNames {
+    height: auto;
+    text-align: right;
+    .NavFooterSocialLinks {
+      flex-direction: column;
+    }
+  }
+  .ErrorPage {
+    padding: 0 24px;
+  }
+}
+
+@media only screen and (width <= 1060px) {
+  .TypographyList {
+    justify-content: center;
+  }
+}
+
+/*********************************************************************/
+
+@media screen and (max-width: 600px) {
+  .MainContainer {
+      flex-direction: column !important;
+  }
+}

@@ -1,0 +1,20 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.ErrorPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 152px);
+    gap: 30px;
+    h1 {
+        @include HeadingOneTitle;
+    }
+    h2 {
+        @include HeadingThreeProject;
+        font-size: clamp(1.3125rem, 1.1161rem + 0.9821vw, 2rem);
+    }
+    p {
+        @include BodyText;
+    }
+}

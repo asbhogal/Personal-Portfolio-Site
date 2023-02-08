@@ -1,0 +1,44 @@
+@use '../variables' as *;
+
+.HomePageSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: calc(100vh - 152px);
+    .MainHomeTitle {
+        font-family: 'Questa Grande', serif;
+        text-transform: uppercase;
+        font-weight: 400;
+        // font-size: clamp(1rem, -1.1429rem + 10.7143vw, 16rem);
+        font-size: clamp(4.25rem, 3.1786rem + 5.3571vw, 8rem);  
+        text-align: right;
+        color: $RaisinBlack-03;
+        font-variant-caps: all-small-caps;
+        &::first-letter {
+            font-family: 'Monsieur La Doulaise', cursive;
+            text-transform: capitalize;
+            font-size: clamp(4rem, 0.5714rem + 17.1429vw, 16rem);            line-height: 0px;
+        }
+    }
+    .ViewFiles {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-family: 'Switzer', sans-serif;
+        font-size: 16px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        a {
+            text-decoration: none;
+            color: $RaisinBlack-03;
+        }
+        &:hover {
+            transition: $Transition-03;
+            svg {
+                transition: $Transition-03;
+                transform: translateX(2px);
+            }
+        }
+    }
+}

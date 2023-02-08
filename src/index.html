@@ -3,31 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="{ %=o.htmlWebpackPlugin.files.favicon% }">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SITE TITLE -->
-    <title>Site Under Construction | Aman Singh Bhogal</title>
-    <!--SITE LOGO -->
-    <link rel="shortcut icon" href="assets/images/New Site Logo.png" type="image/x-icon" sizes="32x32">
-    <!-- SITE AUTHOR -->
-    <meta name="AUTHOR" content="Aman Singh Bhogal">
-    <!-- SITE DESCRIPTION -->
-    <meta name="DESCRIPTION" content="This site is currently under maintenance">
-    <!-- MAIN STYLESHEET -->
-    <link rel="stylesheet" href="scss/style.scss">
-    <!-- WEBSITE CARBON BADGE SCRIPT -->
-    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+    <meta name="author" content="<%= htmlWebpackPlugin.options.author %>">
+    <meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
+    <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-    <div class="container">
-        <h1>This site is currently under construction</h1>
-        <h2>Apologies for the inconvenience caused. Please contact/connect with me via the channels below:</h2>
-        <nav>
-            <ul>
-                <li id="github-profile-link"><a aria-label="Visit the GitHub Profile page" target="_blank" href="https://github.com/asbhogal">&sol; GitHub</a></li>
-                <li id="linkedin-profile-link"><a aria-label="Visit the LinkedIn Profile page" target="_blank" href="https://www.linkedin.com/in/amansinghbhogal/">&sol; LinkedIn</a></li>
-                <li id="email-link"><a aria-label="Send an email" target="_blank" href="mailto:amansinghbhogal1@gmail.com">&sol; Email</a></li>
-            </ul>
-        </nav>
-        <div id="wcb" class="carbonbadge"></div>
-    </div>
+    <div id="root"></div>
+</body>
 </html>

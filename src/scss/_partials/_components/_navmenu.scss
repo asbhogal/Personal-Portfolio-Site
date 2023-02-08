@@ -1,0 +1,93 @@
+@use '../variables' as *;
+
+.NavOverlay {
+    display: flex;
+    flex-direction: column;
+    > * {
+        display: flex
+    }
+    .NavLinks {
+        flex-direction: column;
+        gap: 35px;
+        font-family: 'Questa Grande', serif;
+        font-size: 96px;
+        padding-top: 110px;
+        list-style-type: none;
+        .NavItems {
+            font-size: clamp(1.5rem, -0.8936rem + 7.6596vw, 6rem);
+        }
+        .NavItems > a {
+            text-decoration: none;
+            color: $RaisinBlack-03;
+            transition: $Transition-03;
+            &:hover {
+                transition: $Transition-03;
+                padding-left: 8px;
+            }
+        }
+    }
+    .NavScreenFooter > .SocialLinkNames {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        > * {
+            display: flex;
+        }
+        .NavFooterSocialLinks {
+            width: 450px;
+            justify-content: space-between;
+            list-style-type: none;
+            font-family: 'Switzer', sans-serif;
+            text-transform: uppercase;
+            li {
+                transition: $Transition-03;;
+                &:hover {
+                    transform: translateY(-2px);
+                    transition: $Transition-03;;
+                }
+                a {
+                    text-decoration: none;
+                    color: $RaisinBlack-03;
+                }
+            }
+        }
+    }
+}
+
+
+/* .FullScreenNavMenuContainer {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 0.2fr auto;
+    margin: 0 18px;
+    background-color: $RaisinBlack-03;
+    img {
+        display: none;
+    }
+} */
+
+/* ul {
+    font-family: 'Questa Grande', serif;
+    font-size: 96px;
+    list-style-type: none;
+    li {
+        cursor: pointer;
+        transition: $Transition-03;
+        color: $White;
+        &:not(:last-child) {
+            padding-bottom: 15px;
+        }
+        &:hover {
+            padding-left: 5px;
+            transition: $Transition-03;
+        }
+        a {
+            text-decoration: none;
+            color: $White;
+        }
+    }
+} */

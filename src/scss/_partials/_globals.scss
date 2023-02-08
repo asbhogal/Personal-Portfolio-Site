@@ -1,0 +1,38 @@
+@use './variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    &:is(&::after, &::before, *) {
+        box-sizing: border-box;
+    }
+    // outline: 1px red solid;
+}
+
+html {
+    background-color: $Timberwolf;
+}
+
+.CTAButtons {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    > * {
+        display: flex;
+    }
+}
+
+.ViewProjects,
+.Contact {
+    font-family: 'Switzer', sans-serif;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $RaisinBlack-03;
+    font-size: 32px;
+    font-weight: 200;
+    font-weight: 200;
+    font-size: 32px;
+    line-height: 42px;
+    text-transform: lowercase;
+}

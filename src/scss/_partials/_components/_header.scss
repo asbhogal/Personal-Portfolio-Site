@@ -1,0 +1,158 @@
+@use '../variables' as *;
+
+.Nav {
+    z-index: 2;
+    width: 100%;
+    .NavContainer > .NavBar {
+        height: 92px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // padding: 2em;
+    }
+
+    .MenuToggle {
+        cursor: pointer;
+    }
+
+    .NavContainer > .NavOverlay {
+        position: fixed;
+        background: $Grullo;
+        z-index: -2;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        //padding: 4em;
+        transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .MenuToggle > .HamburgerContainer {
+        position: relative;
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: $Transition-03;
+        padding: 2.4em;
+        .HamburgerContainerOpen {
+            background-color: $Grullo;
+        }
+    }
+}
+
+.LineTop,
+.LineBottom {
+    margin: 0 auto;
+    position: absolute;
+    display: block;
+    width: 1.5rem;
+    height: .125rem;
+    border-radius: .625rem;
+    background-color: $RaisinBlack-03;
+    left: 0;
+    right: 0;
+    transform: rotate(0deg);
+    transition: $Transition-03;
+}
+
+.LineTop {
+    top: 40px;
+}
+
+.LineTop.Spin {
+    top: 45px;
+    transform: rotate(135deg);
+    background-color: $White;
+}
+
+.LineBottom {
+    bottom: 40px;
+}
+
+.LineBottom.Spin {
+    bottom: 45px;
+    transform: rotate(225deg);
+    background-color: $White;
+}
+
+.HireCTAHeader {
+    font-family: 'Switzer', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    padding: 0 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $RaisinBlack-03;
+    transition: $Transition-03;
+    &:hover {
+        transform: translateX(-2px);
+        transition: $Transition-03;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .Nav {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 5rem;
+    > * {
+        display: flex;
+    }
+    .HamburgerMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        cursor: pointer;
+        .HamburgerBar {
+            width: 2.1488rem;
+            height: .125rem;
+            background-color: $White;
+            &:first-child {
+                top: 30%;
+            }
+            &:nth-child(2) {
+                top: 60%;
+            }
+            &:nth-child(3) {
+                top: 90%;
+            }
+        }
+    }
+    .MainLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scale: 0.7;
+        img {
+            height: 25%;
+            width: 25%;
+        }
+    }
+    .HireCTAButton {
+        height: 3.125rem;
+        width: 3.75rem;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        background-color: $Onyx;
+        color: white;
+    }
+} */
