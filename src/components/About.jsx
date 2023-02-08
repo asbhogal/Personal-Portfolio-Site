@@ -23,7 +23,10 @@ const About = () => {
                                 Responsive Web Design &#124; Low & High-Fidelity Wireframing &#124; Components &#124; UI Prototyping
                             </p>
                         </div>
-                    <p className="AboutText">A MAN SINGH BHOGAL is a UI Engineer with 2 1/2 years of client side experience in Front End Development. His work covers building CMS-based websites (WordPress and Hubspot) and static applications using vanilla HTML5, CSS3, SASS and JavaScript. He now works with international clients to design and develop interfaces using Adobe CC, Figma and React from existing and new design briefs, as well as offering consultancies.</p>
+                    <p className="AboutText"><span className="AboutName">AMAN SINGH BHOGAL</span> is a UI Engineer with 2 1/2 years of client side experience in Front End Development. His work covers designing, building and optimising CMS-based websites (WordPress and Hubspot) and static applications using vanilla HTML5, CSS3, SASS and JavaScript. Throughout the years, he has built a rapport with clients by establishing trust, maintaining transparent, consistent communication and translating and communicating brands with both clarity and creativity.
+                    <br></br>
+                    <br></br>
+                    He now works with international clients across a broad spectrum of web design and development services and creates interfaces using Adobe CC, Figma and React from existing and new design briefs, as well as offering consultancies and mentoring for junior developers.</p>
                 </div>
                 </section>
             <Footer />

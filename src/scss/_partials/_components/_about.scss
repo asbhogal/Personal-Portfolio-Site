@@ -4,6 +4,7 @@
 
 .AboutSection {
     height: calc(100vh - 152px);
+    display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 30px;
@@ -11,14 +12,12 @@
         display: flex;
     }
     .PageHeaderTitle {
+        display: flex;
         flex-direction: column;
         @include HeadingOneTitle;
     }
     .AboutContent {
         gap: 20px;
-        > * {
-            display: flex;
-        }
         flex-direction: column;
         justify-content: flex-start;
         #DesignSkills {
@@ -30,6 +29,8 @@
             text-align: center;
         }
         .ExperienceList {
+            display: flex;
+            justify-content: flex-start;
             gap: 25px;
             font-family: 'Questa Grande', sans-serif;
             font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);        text-align: left;
@@ -39,6 +40,9 @@
         } */
         .AboutText {
             font-family: 'Switzer', sans-serif;
+            .AboutName {
+                font-weight: 600;
+            }
         }
     }
 }

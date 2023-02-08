@@ -10,6 +10,7 @@ A personal portfolio site created for the repo owner to showcase his projects, b
 
 <strong>Features:</strong><br>
   - Stylish, modern interface
+  - React routing for internal links
   - Fully responsive
   - Optimised for the web
 
