@@ -214,6 +214,30 @@
                     @extend .UniversalStyle;
                     color: $Black;
                 }
+                #OceanicaColor1 {
+                    background-color: #000000;
+                    @extend .UniversalStyle;
+                }
+                #OceanicaColor2 {
+                    background-color: #000408;
+                    @extend .UniversalStyle;
+                }
+                #OceanicaColor3 {
+                    background-color: #262C31;
+                    @extend .UniversalStyle;
+                }
+                #OceanicaColor4 {
+                    background-color: #838D9B;
+                    @extend .UniversalStyle;
+                }
+                #OceanicaColor5 {
+                    background-color: #D9D9D9;
+                    @extend .UniversalStyle;
+                }
+                #OceanicaColor6 {
+                    background-color: #FFFFFF;
+                    @extend .UniversalStyle;
+                }
             }
         }
         .ProjectLinks {
@@ -248,7 +272,7 @@
     }
 }
 
-@for $i from 1 through 4 {
+@for $i from 1 through 6 {
     .Color-#{$i} {
         width: 100px;
         height: 100px;
@@ -267,11 +291,19 @@ $BrandWeights: (weight1: 400, weight2: 500, weight3: 600, weight4: 700, weight5:
     #BrandTypography-#{ $weight } { font-weight: $weight; }
 };
 
+//$OceanicaWeights: (weight1: )
+
+// bold, regular, medium, semi bold
+
 /* $colors: (Color1: $ChineseViolet, Color2: $MountbattenPink, Color3: $AfricanViolet, $Color4: $Thistle);
 
 @each $key, $color in $colors {
     
 } */
+
+/****** OCEANICA ******/
+
+
 
 /****** BRAND ******/
 
