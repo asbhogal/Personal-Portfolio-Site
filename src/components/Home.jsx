@@ -9,7 +9,7 @@ const Home = () => {
         <>
             <Navbar />
             <section className="HomePageSection">
-                <h1 className="MainHomeTitle">Creating bold, elegant &#38; humanistic interfaces &#124; est. 2020</h1>
+                <h1 className="MainHomeTitle">Creating bold, elegant &#38; humanistic interfaces <br></br>&#124; est. 2020</h1>
                 <aside className="CTAButtons">
                     <button className="ViewFiles">
                         <Link to='/projects'>

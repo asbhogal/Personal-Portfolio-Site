@@ -2,7 +2,7 @@
 
 @media only screen and (1441px <= width) {
   .HomePageSection {
-    width: 1120px;
+    width: 1440px;
     margin: 0 auto;
   }
   .MainContainer {
@@ -30,6 +30,9 @@
   }
   .MainHomeTitle {
     font-size: 128px;
+    &::first-letter {
+      font-size: 256px;
+    }
   }
   .Guides {
     justify-content: space-between;
@@ -118,6 +121,9 @@
   .MainContainer {
     padding: 24px;
   }
+  .HomePageSection {
+    flex-direction: column;
+  }
   .HomePageSection,
   .AboutSection {
     padding: 0 24px;
@@ -169,6 +175,9 @@
 @media only screen and (width <= 375px) {
   .MainContainer {
     padding: 24px;
+  }
+  .HomePageSection {
+    flex-direction: column;
   }
   .HomePageSection,
   .AboutSection {

@@ -86,6 +86,11 @@
     text-transform: uppercase;
     text-decoration: none;
     color: $RaisinBlack-03;
+    transition: $Transition-03;
+    &:hover {
+        transform: translateX(-2px);
+        transition: $Transition-03;
+    }
 }
 
 
