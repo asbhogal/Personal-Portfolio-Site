@@ -158,10 +158,10 @@ const Projects = () => {
                             </div>
                         </div>
                         <div className="ProjectLinks">
-                        <button className="ViewFiles">
-                            <a target="_blank" href="https://www.figma.com/community/file/1190467806509137896">templates</a>
-                            <TbChevronUpRight />
-                        </button>
+                            <button className="ViewFiles">
+                                <a target="_blank" href="https://www.figma.com/community/file/1190467806509137896">templates</a>
+                                <TbChevronUpRight />
+                            </button>
                         </div>
                     </div>
                 </div>

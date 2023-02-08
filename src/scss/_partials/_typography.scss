@@ -183,18 +183,7 @@
     color: $White;
 }
 
-.MainHomeTitle {
-    font-family: 'Questa Grande', serif;
-    text-transform: uppercase;
-    font-weight: 400;
-    text-align: right;
-    color: $White;
-    font-variant-caps: all-small-caps;
-    &::first-letter {
-        font-family: 'Monsieur La Doulaise', cursive;
-        text-transform: capitalize;
-    }
-}
+
 
 /* .PageHeaderTitle {
     font-family: 'Questa Grande', serif;

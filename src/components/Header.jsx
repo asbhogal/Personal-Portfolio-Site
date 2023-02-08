@@ -1,6 +1,7 @@
 import navLogo from "../assets/images/logos/Website Nav Icon.svg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Home from "./Home";
 
 const Header = () => {
 
@@ -12,7 +13,9 @@ const Header = () => {
             <div className="NavContainer">
                 <div className="NavBar">
                     <div className="MainLogo">
+                    <Link to='/'>
                         <img src={ navLogo }></img>
+                    </Link>
                     </div>
                     <div className="MenuToggle" onClick={ () => setNavOpen(!navOpen) }>
                         <div className={ navOpen ? "HamburgerContainer HamburgerContainerOpen" : "HamburgerContainer" }>

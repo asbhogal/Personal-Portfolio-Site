@@ -1,0 +1,19 @@
+@use '../variables' as *;
+
+.HomePageSection {
+    display: flex;
+    flex-direction: row-reverse;
+    height: calc(100vh - 152px);
+    .MainHomeTitle {
+        font-family: 'Questa Grande', serif;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: clamp(4.25rem, 3.1786rem + 5.3571vw, 8rem);        text-align: right;
+        color: $Black;
+        font-variant-caps: all-small-caps;
+        &::first-letter {
+            font-family: 'Monsieur La Doulaise', cursive;
+            text-transform: capitalize;
+        }
+    }
+}
