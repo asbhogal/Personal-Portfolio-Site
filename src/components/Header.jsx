@@ -30,19 +30,19 @@ const Header = () => {
                     } }>
                         <ul className="NavLinks">
                             <li className="NavItems">
-                                <Link to="./home">&#38;&#46;home</Link>
+                                <Link to="/">&#38;&#46;home</Link>
                                 <div className="NavItemWrapper"></div>
                             </li>
                             <li className="NavItems">
-                                <Link to="./about">&#38;&#46;about</Link>
+                                <Link to="/about">&#38;&#46;about</Link>
                                 <div className="NavItemWrapper"></div>
                             </li>
                             <li className="NavItems">
-                                <Link to="./projects">&#38;&#46;projects</Link>
+                                <Link to="/projects">&#38;&#46;projects</Link>
                                 <div className="NavItemWrapper"></div>
                             </li>
                             <li className="NavItems">
-                                <Link to="./additionalservices">&#38;&#46;additional services</Link>
+                                <Link to="/additionalservices">&#38;&#46;additional services</Link>
                                 <div className="NavItemWrapper"></div>
                             </li>
                         </ul>

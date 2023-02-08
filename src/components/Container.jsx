@@ -1,5 +1,3 @@
-import CTAButtons from "./Buttons";
-
 const Container = () => {
     return (
         <div className="MainContainer">
@@ -7,7 +5,6 @@ const Container = () => {
                 <h1 className="MainHomeTitle">Creating bold, elegant &#38;
  humanistic interfaces &#124; est. 2020</h1>
             </section>
-            <CTAButtons />
         </div>
     )
 }
