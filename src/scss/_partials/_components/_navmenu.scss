@@ -33,6 +33,7 @@
         width: 100%;
         justify-content: center;
         align-items: center;
+        padding: 10px 0;
         > * {
             display: flex;
         }
@@ -42,9 +43,16 @@
             list-style-type: none;
             font-family: 'Switzer', sans-serif;
             text-transform: uppercase;
-            li > a {
-                text-decoration: none;
-                color: $Black;
+            li {
+                transition: $Transition-03;;
+                &:hover {
+                    transform: translateY(-2px);
+                    transition: $Transition-03;;
+                }
+                a {
+                    text-decoration: none;
+                    color: $Black;
+                }
             }
         }
     }

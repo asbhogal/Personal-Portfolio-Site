@@ -20,8 +20,7 @@ const Header = () => {
                             <span className={ navOpen ? "LineBottom Spin" : "LineBottom" }></span>
                         </div>
                     </div>
-                    <button className="HeaderCTAButton"></button>
-                    
+                    <a className="HireCTAHeader" href="mailto:business@amansinghbhogal.com">Hire</a>
                 </div>
                 <div 
                     className="NavOverlay" 
