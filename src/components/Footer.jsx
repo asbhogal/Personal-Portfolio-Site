@@ -9,19 +9,19 @@ const Footer = () => {
     return (
         <footer className="Footer">
             <div className="SocialIcons">
-            <a href="mailto:business@amansinghbhogal.com">
+            <a href="mailto:business@amansinghbhogal.com" aria-label="Contact Aman by email">
                 <MdAlternateEmail />
             </a>
-            <a target="_blank" href="https://www.linkedin.com/in/amansinghbhogal" aria-label="Visit his LinkedIn page">
+            <a target="_blank" href="https://www.linkedin.com/in/amansinghbhogal" aria-label="Visit Aman's LinkedIn page">
                 <FaLinkedinIn />
             </a>
-            <a target="_blank" href="https://www.github.com/asbhogal" aria-label="Visit his GitHub page">
+            <a target="_blank" href="https://www.github.com/asbhogal" aria-label="Visit Aman's GitHub page">
                 <BsGithub />
             </a>
-            <a target="_blank" href="https://www.instagram.com/amanuiux" aria-label="Visit his Instagram page">
+            <a target="_blank" href="https://www.instagram.com/amanuiux" aria-label="Visit Aman's Instagram page">
                 <BsInstagram />
             </a>
-            <a target="_blank" href="https://www.figma.com/@amansinghbhogal" aria-label="Visit his Figma profile">
+            <a target="_blank" href="https://www.figma.com/@amansinghbhogal" aria-label="Visit Aman's Figma profile">
                 <FiFigma />
             </a> 
             </div>
