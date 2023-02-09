@@ -2,7 +2,7 @@
     "rewrites": [
         {
             "source": "/projects",
-            "destination": "/index.html"
+            "destination": "https://www.amansinghbbhogal.com/"
         }
     ]
 }
