@@ -53,19 +53,19 @@ const Header = () => {
                             <div className="SocialLinkNames">
                                 <ul className="NavFooterSocialLinks">
                                     <li>
-                                        <a href="mailto:business@amansinghbhogal.com">Email</a>
+                                        <a target="_blank" href="mailto:business@amansinghbhogal.com">Email</a>
                                     </li>
                                     <li>
-                                        <a href="www.linkedin.com/in/amansinghbhogal">LinkedIn</a>
+                                        <a target="_blank" href="https://www.linkedin.com/in/amansinghbhogal">LinkedIn</a>
                                     </li>
                                     <li>
-                                        <a href="www.github.com/asbhogal">GitHub</a>
+                                        <a target="_blank" href="https://www.github.com/asbhogal">GitHub</a>
                                     </li>
                                     <li>
-                                        <a href="www.figma.com/@amansinghbhogal">Figma</a>
+                                        <a target="_blank" href="https://www.figma.com/@amansinghbhogal">Figma</a>
                                     </li>
                                     <li>
-                                        <a href="www.instagram.com/amanuiux">Instagram</a>
+                                        <a target="_blank" href="https://www.instagram.com/amanuiux">Instagram</a>
                                     </li>
                                 </ul>
                             </div>
