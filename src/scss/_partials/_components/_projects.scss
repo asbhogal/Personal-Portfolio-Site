@@ -9,8 +9,9 @@
         display: flex;
     }
     .ProjectCover {
-        height: 1024px;
-        justify-content: flex-end;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
         h1 {
             @include HeadingOneTitle;
         }
