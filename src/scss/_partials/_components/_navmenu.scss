@@ -8,13 +8,14 @@
     }
     .NavLinks {
         flex-direction: column;
-        gap: 35px;
+        // gap: 35px;
         font-family: 'Questa Grande', serif;
         font-size: 96px;
         padding-top: 110px;
         list-style-type: none;
         .NavItems {
-            font-size: clamp(1.5rem, -0.8936rem + 7.6596vw, 6rem);
+            // font-size: clamp(1.5rem, -0.8936rem + 7.6596vw, 6rem);
+            font-size: clamp(2.625rem, 1.875rem + 3.75vw, 5.25rem);
         }
         .NavItems > a {
             text-decoration: none;
