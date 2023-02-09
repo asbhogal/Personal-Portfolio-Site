@@ -1,8 +1,8 @@
 {
     "rewrites": [
         {
-            "source": "/projects",
-            "destination": "/index.html"
+            "source": "/(*)",
+            "destination": "/"
         }
     ]
 }
