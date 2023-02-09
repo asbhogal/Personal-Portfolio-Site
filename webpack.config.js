@@ -4,6 +4,7 @@ const   path = require("path"),
         { CleanWebpackPlugin } = require("clean-webpack-plugin"),
         ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin"),
         FontPreloadPlugin = require("webpack-font-preload-plugin"),
+        CopyPlugin = require("copy-webpack-plugin"),
         plugins = [
             new CleanWebpackPlugin(),
             new MiniCSSExtractPlugin(),
@@ -15,6 +16,11 @@ const   path = require("path"),
                 description: "The personal portfolio site of Aman Singh Bhogal. Front End Developer & UI Engineer",
                 favicon: "./src/assets/images/logos/Portfolio-Favicon-Universal.svg"
             }),
+            new CopyPlugin({
+                patterns: [
+                    { from: "./vercel.json", to: "." }
+                ]
+            })
         ];
 
 let     mode = "development";
@@ -59,7 +65,7 @@ module.exports = {
             {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 type: "asset/resource",
-            },
+            }
         ],
     },
 
