@@ -18,7 +18,14 @@ const   path = require("path"),
             }),
             new CopyPlugin({
                 patterns: [
-                    { from: "./vercel.json", to: "." }
+                    { 
+                        from: "./vercel.json",
+                        to: "." 
+                    },
+                    { 
+                        from: "./sitemap.xml",
+                        to: "." 
+                    }
                 ]
             })
         ];
