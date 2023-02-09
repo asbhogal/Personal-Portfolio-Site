@@ -8,7 +8,7 @@ const Header = () => {
     const [navOpen, setNavOpen] = useState(false);
 
     return (
-        <header class="Header">
+        <header className="Header">
         <nav className="Nav">
             <div className="NavContainer">
                 <div className="NavBar">
