@@ -3,9 +3,11 @@ const   path = require("path"),
         HTMLWebpackPlugin = require("html-webpack-plugin"),
         { CleanWebpackPlugin } = require("clean-webpack-plugin"),
         ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin"),
+        FontPreloadPlugin = require("webpack-font-preload-plugin"),
         plugins = [
             new CleanWebpackPlugin(),
             new MiniCSSExtractPlugin(),
+            new FontPreloadPlugin(),
             new HTMLWebpackPlugin({
                 title: "Personal Portfolio Site",
                 author: "Aman Singh Bhogal",
