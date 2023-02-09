@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/asbhogal/Personal-Portfolio-Site/issues"
   },
-  "homepage": "https://github.com/asbhogal/Personal-Portfolio-Site",
+  "homepage": "",
   "devDependencies": {
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",
