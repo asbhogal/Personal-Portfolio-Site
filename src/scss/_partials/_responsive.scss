@@ -159,6 +159,15 @@
     justify-content: center;
     text-align: center;
   }
+  #BrandGuideInfo {
+    flex-direction: column;
+  }
+  #LiteLifeProjectGuideInfo {
+    flex-direction: column;
+    #LiteLifeProjectLogoMarks {
+      padding: 40px 0;
+    }
+  }
   .ColorPalette {
     justify-content: center;
   }
@@ -202,6 +211,12 @@
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+  }
+  #LiteLifeProjectGuideInfo {
+    flex-direction: column;
+    #LiteLifeProjectLogoMarks {
+      padding: 40px 0;
+    }
   }
   .ColorPalette {
     justify-content: center;

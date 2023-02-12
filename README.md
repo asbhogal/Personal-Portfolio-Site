@@ -6,7 +6,7 @@
 
 </div>
 
-A personal portfolio site created for the repo owner to showcase his projects, built using React, SASS and Babel with Webpack and deployed via Vercel. This repo is currently under development.
+A personal portfolio site created for the repo owner to showcase his projects, built using React, SASS and Babel with Webpack and deployed via Vercel.
 
 <strong>Features:</strong><br>
   - Stylish, modern interface
