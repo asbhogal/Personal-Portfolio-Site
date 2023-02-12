@@ -25,6 +25,10 @@ const   path = require("path"),
                     { 
                         from: "./sitemap.xml",
                         to: "." 
+                    },
+                    {
+                        from: "./robots.txt",
+                        to: "."
                     }
                 ]
             })
