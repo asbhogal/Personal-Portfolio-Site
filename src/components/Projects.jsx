@@ -128,6 +128,16 @@ const Projects = () => {
                                     <div id="OceanicaColor4" className="Color-4">
                                         <div className="ColorTitle">
                                             <p>04</p>
+                                            <p>moonstone<br></br>blue</p>
+                                        </div>
+                                        <div className="ColorInfo">
+                                            <p><span>hex</span>&#58; &#35;68B1C8</p>
+                                            <p><span>rgb</span>&#58; 38, 44, 49</p>
+                                        </div>
+                                    </div>
+                                    <div id="OceanicaColor5" className="Color-5">
+                                        <div className="ColorTitle">
+                                            <p>05</p>
                                             <p>roman silver</p>
                                         </div>
                                         <div className="ColorInfo">
@@ -135,9 +145,9 @@ const Projects = () => {
                                             <p><span>rgb</span>&#58; 131, 141, 155</p>
                                         </div>
                                     </div>
-                                    <div id="OceanicaColor5" className="Color-5">
+                                    <div id="OceanicaColor6" className="Color-6">
                                         <div className="ColorTitle">
-                                            <p>05</p>
+                                            <p>06</p>
                                             <p>light silver</p>
                                         </div>
                                         <div className="ColorInfo">
@@ -145,9 +155,9 @@ const Projects = () => {
                                             <p><span>rgb</span>&#58; 217, 217, 217</p>
                                         </div>
                                     </div>
-                                    <div id="OceanicaColor6" className="Color-6">
+                                    <div id="OceanicaColor7" className="Color-7">
                                         <div className="ColorTitle">
-                                            <p>06</p>
+                                            <p>07</p>
                                             <p>white</p>
                                         </div>
                                         <div className="ColorInfo">
@@ -186,7 +196,7 @@ const Projects = () => {
                         <p className="ProjectSummary">Lite Life is a minimalistic-focused online e-commerce store which sells a premium range of technological projects aimed towards the space-conscious individual looking to improve the quality of their working environment with simplistic, yet premium-quality products. The project was built using React with Commerce.js (a headless commerce system through API) with a Stripe gateway and styled using Material UI. React Router was configured for internal links, React Hook Form for the address and payment forms and DOMPurify for HTML content. This was rendered in the form of a SPA (Single Page Application) using Babel and Webpack and deployed using Vercel.</p>
                         <div className="DesignBrief">
                             <h3>Design Brief</h3>
-                            <p className="DesignBriefSummary">The templates were kept consistent in design, aesthetic and layout. The clean, minimalistic structure with attention to whitespacing, legibility and heirarchy was also respected, paralleling the affluence communicated by the brand. The logo itself is assured, sharp and rigid, to emphasise the nature and quality of their products. The anti-flash white provides a medium through which the two extremes of black and white fuse in different elements at play and merge across various content typesets, yet still manage to become two distinct entities in their own right, emboldened by the contrasting logos used. </p>
+                            <p className="DesignBriefSummary">Lite Life incorporates the simplistic tones of black, grey and white alongside the stark constrasts of red and violet-blue to consider both user immersion and ease-of-navigation during the checkout process (during the latter, distraction-free UX is incorporated to keep the customer on the pages until the transaction is complete.) The logo can be considered widely known and recognizable in this modern age. The stripped back, simple style reflects the design of the site, and the long branches complement the horizontal and vertical lines used in the UI. Roboto, by name, is synonymous with clean, modern technology, and this is in turn reflected through its short descenders and wide bowls, where the former aligns close to the baseline and keeps the space efficient and egonomic, akin to the technology Lite Life sells. The use of only one weight also reinforces consistency within simplicity. On the broader scale, this conveys two things: simple things can still be quality. And quality things can still be simple.</p>
                         </div>
                         <div className="Guides">
                             <div className="BrandGuideSection">
