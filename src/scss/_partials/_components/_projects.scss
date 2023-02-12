@@ -240,6 +240,33 @@
                     color: $Black;
                     @extend .UniversalStyle;
                 }
+                #LiteLifeColor1 {
+                    background-color: #000000;
+                    @extend .UniversalStyle;
+                }
+                #LiteLifeColor2 {
+                    background-color: #d2d2d2;
+                    @extend .UniversalStyle;
+                    color: $Black;
+                }
+                #LiteLifeColor3 {
+                    background-color: #fafafa;
+                    @extend .UniversalStyle;
+                    color: $Black;
+                }
+                #LiteLifeColor4 {
+                    background-color: #ffffff;
+                    @extend .UniversalStyle;
+                    color: $Black;
+                }
+                #LiteLifeColor5 {
+                    background-color: #F50057;
+                    @extend .UniversalStyle;
+                }
+                #LiteLifeColor6 {
+                    background-color: #3F51B5;
+                    @extend .UniversalStyle;
+                }
             }
         }
         .ProjectLinks {
@@ -278,6 +305,26 @@
     .Color-#{$i} {
         width: 100px;
         height: 100px;
+    }
+}
+
+/****** LITE LIFE ******/
+
+#LiteLifeTopgraphyFamily,
+#LiteLifeTypographyCase,
+#LiteLifeTypography-400 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+#LiteLifeProjectLogoMarks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    img {
+        width: 25px;
     }
 }
 

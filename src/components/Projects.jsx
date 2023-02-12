@@ -9,6 +9,7 @@ import brandIconBlack from "../assets/images/logos/brand-icon-black.svg";
 import brandIconWhite from "../assets/images/logos/brand-icon-white.svg";
 import oceanicaLogo from "../assets/images/logos/Oceanica-Logo.svg";
 import oceanicaIcon from "../assets/images/logos/Oceanica-Icon.svg";
+import liteLifeLogo from "../assets/images/logos/LiteLife-Logo.svg";
 import { TbChevronUpRight } from "react-icons/tb";
 
 const Projects = () => {
@@ -160,6 +161,132 @@ const Projects = () => {
                         <div className="ProjectLinks">
                             <button className="ViewFiles">
                                 <a target="_blank" href="https://www.figma.com/community/file/1190467806509137896">templates</a>
+                                <TbChevronUpRight />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="VerticalDivider"></div>
+                {/* LiteLife */}
+                <div className="ProjectSection">
+                    <div className="ProjectInfo">
+                        <h2 className="ProjectTitle">
+                            <div className="WordUnit">
+                            <span className="FirstLetterAccent">L</span>
+                            ite
+                            <span className="FirstLetterAccent">L</span>
+                            ife
+                            </div>
+                        </h2>
+                        <span className="ProjectTimeDuration">Jan 2022 &#45; Feb 2023</span>
+                        <span className="ProjectToolsAndTechStacks">
+                            <span className="ProjectTools">Commerce&#46;js &#124; Material UI &#124; Stripe &#124; Vercel</span>
+                            <span className="ProjectTechStacks">React &#124; React Router &#124; React Hook Form &#124; DOMPurify &#124; JS</span>
+                        </span>
+                        <p className="ProjectSummary">Lite Life is a minimalistic-focused online e-commerce store which sells a premium range of technological projects aimed towards the space-conscious individual looking to improve the quality of their working environment with simplistic, yet premium-quality products. The project was built using React with Commerce.js (a headless commerce system through API) with a Stripe gateway and styled using Material UI. React Router was configured for internal links, React Hook Form for the address and payment forms and DOMPurify for HTML content. This was rendered in the form of a SPA (Single Page Application) using Babel and Webpack and deployed using Vercel.</p>
+                        <div className="DesignBrief">
+                            <h3>Design Brief</h3>
+                            <p className="DesignBriefSummary">The templates were kept consistent in design, aesthetic and layout. The clean, minimalistic structure with attention to whitespacing, legibility and heirarchy was also respected, paralleling the affluence communicated by the brand. The logo itself is assured, sharp and rigid, to emphasise the nature and quality of their products. The anti-flash white provides a medium through which the two extremes of black and white fuse in different elements at play and merge across various content typesets, yet still manage to become two distinct entities in their own right, emboldened by the contrasting logos used. </p>
+                        </div>
+                        <div className="Guides">
+                            <div className="BrandGuideSection">
+                                <h3>Brand Guide</h3>
+                                <div id="LiteLifeProjectGuideInfo" className="BrandGuideInfo">
+                                    <div id="LiteLifeProjectLogoMarks" className="LogoMarks">
+                                        <img className="LiteLifeProjectLogo" src={ liteLifeLogo }></img>
+                                    </div>
+                                    <div className="Typography">
+                                        <div className="TypographyInfo">
+                                            <p>Font Family</p>
+                                            <p id="LiteLifeTopgraphyFamily">Roboto</p>
+                                            <p>Case</p>
+                                            <p id="LiteLifeTypographyCase">Sentence</p>
+                                        </div>
+                                        <p>Weights</p>
+                                        <ul className="BrandProjectTypography TypographyList">
+                                            <div className="TypographyWeightSet">
+                                                <p id="LiteLifeTypography-400" className="TypographyListItem-400">Regular</p>
+                                            </div>
+                                            <div className="TypographyFontSet">
+                                                <li id="LiteLifeTypography-400" className="TypographyListItem-400">ABC abc 123</li>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="StyleGuideSection">
+                                <h3>Style Guide</h3>
+                                <div className="ColorPalette">
+                                    <div id="LiteLifeColor1" className="Color-1">
+                                        <div className="ColorTitle">
+                                            <p>01</p>
+                                            <p>black</p>
+                                        </div>
+                                        <div className="ColorInfo">
+                                            <p><span>hex</span>&#58; &#35;000000</p>
+                                            <p><span>rgb</span>&#58; 0, 0, 0</p>
+                                        </div>
+                                    </div>
+                                    <div id="LiteLifeColor2" className="Color-2">
+                                    <div className="ColorTitle">
+                                            <p>02</p>
+                                            <p>light gray</p>
+                                        </div>
+                                        <div className="ColorInfo">
+                                            <p><span>hex</span>&#58; &#35;d2d2d2</p>
+                                            <p><span>rgb</span>&#58; 210, 210, 210</p>
+                                        </div>
+                                        </div>
+                                    <div id="LiteLifeColor3" className="Color-3">
+                                        <div className="ColorTitle">
+                                            <p>03</p>
+                                            <p>lotion</p>
+                                        </div>
+                                        <div className="ColorInfo">
+                                            <p><span>hex</span>&#58; &#35;fafafa</p>
+                                            <p><span>rgb</span>&#58; 250, 250, 250</p>
+                                        </div>
+                                    </div>
+                                    <div id="LiteLifeColor4" className="Color-4">
+                                        <div className="ColorTitle">
+                                            <p>04</p>
+                                            <p>white</p>
+                                        </div>
+                                        <div className="ColorInfo">
+                                            <p><span>hex</span>&#58; &#35;ffffff</p>
+                                            <p><span>rgb</span>&#58; 255, 255, 255</p>
+                                        </div>
+                                    </div>
+                                    <div id="LiteLifeColor5" className="Color-5">
+                                        <div className="ColorTitle">
+                                            <p>05</p>
+                                            <p>folly</p>
+                                        </div>
+                                        <div className="ColorInfo">
+                                            <p><span>hex</span>&#58; &#35;F50057</p>
+                                            <p><span>rgb</span>&#58; 245, 0, 87</p>
+                                        </div>
+                                    </div>
+                                    <div id="LiteLifeColor6" className="Color-6">
+                                        <div className="ColorTitle">
+                                            <p>06</p>
+                                            <p>violet-blue</p>
+                                        </div>
+                                        <div className="ColorInfo">
+                                            <p><span>hex</span>&#58; &#35;3F51B5</p>
+                                            <p><span>rgb</span>&#58; 63, 81, 181</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="ProjectLinks">
+                            <button className="ViewFiles">
+                                <a target="_blank" href="https://github.com/asbhogal/React-Tech-Commerce.Js-Site">code</a>
+                                <TbChevronUpRight />
+                            </button>
+                            <button className="ViewFiles">
+                                <a target="_blank" href="https://litelife.vercel.app">site</a>
                                 <TbChevronUpRight />
                             </button>
                         </div>

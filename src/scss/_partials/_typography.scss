@@ -176,13 +176,23 @@
     font-display: swap;
 }
 
+/****** ROBOTO - 400 REGULAR ******/
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    src:    url('../assets/fonts/Roboto/Roboto-Regular.woff') format('woff'),
+            url('../assets/fonts/Roboto/Roboto-Regular.woff2') format('woff2');
+    font-display: swap;
+}
+
 #AccentLetter {
     font-family: 'Monsieur La Doulaise', cursive;
     text-transform: capitalize;
     font-size: 128px;
     color: $White;
 }
-
 
 
 /* .PageHeaderTitle {
