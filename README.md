@@ -4,6 +4,8 @@
 
 ![](https://api.checklyhq.com/v1/badges/checks/964be065-c7c8-4d2e-b4f4-6338ba80de87?style=for-the-badge&theme=dark) ![](https://api.checklyhq.com/v1/badges/checks/964be065-c7c8-4d2e-b4f4-6338ba80de87?style=for-the-badge&theme=dark&responseTime=true) <br><br> ![GitHub deployments](https://img.shields.io/github/deployments/asbhogal/Personal-Portfolio-Site/production?label=DEPLOYMENT%20STATE&style=for-the-badge&labelColor=000) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/asbhogal/Personal-Portfolio-Site?style=for-the-badge&labelColor=000) ![GitHub repo size](https://img.shields.io/github/repo-size/asbhogal/Personal-Portfolio-Site?color=blueviolet&style=for-the-badge&labelColor=000)
 
+![Project-Cover](https://github.com/asbhogal/React-Brand-Responsive-Web-Page/blob/main/src/assets/images/GitHub%20Repo%20README%20Image%20-%20Personal%20Portfolio%20Site.png?raw=true)
+
 </div>
 
 A personal portfolio site created for the repo owner to showcase his projects, built using React, SASS and Babel with Webpack and deployed via Vercel.
