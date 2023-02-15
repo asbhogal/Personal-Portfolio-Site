@@ -45,6 +45,10 @@ const Header = () => {
                                 <div className="NavItemWrapper"></div>
                             </li>
                             <li className="NavItems">
+                                <Link to="/testimonials">&#38;&#46;testimonials</Link>
+                                <div className="NavItemWrapper"></div>
+                            </li>
+                            <li className="NavItems">
                                 <Link to="/additionalservices">&#38;&#46;additional services</Link>
                                 <div className="NavItemWrapper"></div>
                             </li>

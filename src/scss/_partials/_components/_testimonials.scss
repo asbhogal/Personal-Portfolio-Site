@@ -1,0 +1,63 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.swiper-pagination-bullet-active {
+    background: $RaisinBlack-03 !important;
+}
+
+.swiper-pagination-bullets {
+    position: relative;
+    top: 4px;
+}
+
+.TestimonialCard {
+    > div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 24px;
+        .HorizontalDivider {
+            width: 95px;
+        }
+    }
+    .TestimonialName {
+        @include HeadingThreeProject;
+    }
+    .TestimonialQuote {
+        @include BodyText;
+    }
+    .TestimonialTitle {
+        @include SubtitleText;
+    }
+}
+
+.TestimonialsCover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.TestimonialsSection {
+    height: 100vh;
+    align-items: center;
+}
+
+.PageHeaderTitle {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Questa Grande', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(1.5rem, -1.6429rem + 15.7143vw, 12.5rem);
+    // line-height: 160px;
+    text-align: right;
+    text-transform: lowercase;
+    color: $RaisinBlack-03;
+}
+
+.TestimonialImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
