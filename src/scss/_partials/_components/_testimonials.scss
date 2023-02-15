@@ -21,7 +21,11 @@
         }
     }
     .TestimonialName {
-        @include HeadingThreeProject;
+        font-family: 'Questa Grande', serif;
+        font-style: normal;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: clamp(1.125rem, 0.875rem + 1.25vw, 2rem);
     }
     .TestimonialQuote {
         @include BodyText;
@@ -49,7 +53,7 @@
     font-family: 'Questa Grande', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: clamp(1.5rem, -1.6429rem + 15.7143vw, 12.5rem);
+    font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
     // line-height: 160px;
     text-align: right;
     text-transform: lowercase;
