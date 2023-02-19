@@ -14,10 +14,6 @@
                     "value": "nosniff"
                 },
                 {
-                    "key": "Content-Security-Policy",
-                    "value": "default-src 'self', font-src 'self', style-src 'self'"
-                },
-                {
                     "key": "X-Frame-Options",
                     "value": "SAMEORIGIN"
                 },
