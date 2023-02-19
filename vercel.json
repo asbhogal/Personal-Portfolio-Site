@@ -15,7 +15,7 @@
                 },
                 {
                     "key": "Content-Security-Policy",
-                    "value": "default-src 'self', font-src 'self', style-src 'sha256-BZuiXmUyeDMe4RCNzBEmazwhjA5qJPJVUjCxPRBhCDc='"
+                    "value": "default-src 'self', font-src 'self', style-src 'self'"
                 },
                 {
                     "key": "X-Frame-Options",
