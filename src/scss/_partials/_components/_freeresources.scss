@@ -1,0 +1,78 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.FreeResourcesCover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.FreeResourcesSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    > div {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+        p {
+            @include BodyText;
+        }
+    }
+}
+
+.ResourceWord {
+    font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+}
+
+.ResponsiveWireframesCard,
+.BrandBoardCard {
+    flex: 1 1 0px;
+}
+
+.ImageSnapshot {
+    height: 100%;
+    width: 100%;
+}
+
+.ResourcesTitle {
+    @include HeadingTwoProject;
+    &::first-letter,
+    .FirstLetterAccent {
+        @include HeadingTwoAccentLetter;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.ResourceLinks {
+    justify-content: flex-end;
+    gap: 10px;
+    .ViewFiles {
+        display: flex;
+        align-items: center;
+        font-family: 'Switzer', sans-serif;
+        font-size: 16px;
+        background: none;
+        border: none;
+        cursor: none;
+        a {
+            text-decoration: none;
+            color: $RaisinBlack-03;
+        }
+        &:hover {
+            transition: $Transition-03;
+            svg {
+                transition: $Transition-03;
+                transform: translateX(2px);
+            }
+        }
+    }
+}

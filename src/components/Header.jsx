@@ -1,14 +1,17 @@
 import navLogo from "../assets/images/logos/Portfolio-Logo.svg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Home from "./Home";
+import { motion as m } from "framer-motion"
 
 const Header = () => {
 
     const [navOpen, setNavOpen] = useState(false);
 
     return (
-        <header className="Header">
+        <m.header 
+            initial={{opacity: 0}} 
+            animate={{opacity: 1}} 
+            className="Header">
         <nav className="Nav">
             <div className="NavContainer">
                 <div className="NavBar">
@@ -28,32 +31,54 @@ const Header = () => {
                 <div 
                     className="NavOverlay" 
                     style={ { 
-                        top: navOpen ? "0" : "-100%",
-                        transitionDelay: navOpen ? "0s" : "0s"
+                        opacity: navOpen ? "1" : "0",
+                        visibility: navOpen ? "visible" : "hidden"
                     } }>
                         <ul className="NavLinks">
                             <li className="NavItems">
-                                <Link to="/">&#38;&#46;home</Link>
+                                <Link to="/">
+                                    home
+                                </Link>
                                 <div className="NavItemWrapper"></div>
                             </li>
                             <li className="NavItems">
-                                <Link to="/about">&#38;&#46;about</Link>
+                                <Link to="/about">
+                                    about
+                                </Link>
                                 <div className="NavItemWrapper"></div>
                             </li>
                             <li className="NavItems">
-                                <Link to="/projects">&#38;&#46;projects</Link>
+                                <Link to="/projects">
+                                    projects
+                                </Link>
                                 <div className="NavItemWrapper"></div>
                             </li>
                             <li className="NavItems">
-                                <Link to="/testimonials">&#38;&#46;testimonials</Link>
+                                <Link to="/AmanSinghBhogal-Brand-Manifesto.pdf" target="_blank">
+                                    brand manifesto
+                                </Link>
                                 <div className="NavItemWrapper"></div>
                             </li>
                             <li className="NavItems">
-                                <Link to="/additionalservices">&#38;&#46;additional services</Link>
+                                <Link to="/testimonials">
+                                    testimonials
+                                </Link>
+                                <div className="NavItemWrapper"></div>
+                            </li>
+                            <li className="NavItems">
+                                <Link to="/additionalservices">
+                                    additional services
+                                </Link>
+                                <div className="NavItemWrapper"></div>
+                            </li>
+                            <li className="NavItems">
+                                <Link to="/freeresources">
+                                    free resources
+                                </Link>
                                 <div className="NavItemWrapper"></div>
                             </li>
                         </ul>
-                        <div className="NavScreenFooter">
+                        {/* <div className="NavScreenFooter">
                             <div className="SocialLinkNames">
                                 <ul className="NavFooterSocialLinks">
                                     <li>
@@ -73,11 +98,11 @@ const Header = () => {
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
             </div>       
         </nav>
-    </header>       
+    </m.header>       
     )
 };
 

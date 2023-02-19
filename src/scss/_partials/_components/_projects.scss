@@ -284,10 +284,11 @@
                 font-size: 16px;
                 background: none;
                 border: none;
-                cursor: pointer;
+                cursor: none;
                 a {
                     text-decoration: none;
                     color: $RaisinBlack-03;
+                    cursor: none;
                 }
                 &:hover {
                     transition: $Transition-03;

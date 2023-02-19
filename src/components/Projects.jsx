@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion as m } from "framer-motion";
 
 import Footer from "./Footer";
 import Navbar from "./Header";
@@ -36,9 +37,12 @@ const Projects = () => {
     return (
         <>
             <Navbar />
-            <div className="Projects">
+            <m.div 
+                initial={{opacity: 0}} 
+                animate={{opacity: 1}} 
+                className="Projects">
                 <div className="ProjectCover">
-                    <h1>&#38;&#46;projects</h1>
+                    <h1>projects</h1>
                 </div>
                 {/* OCEANICA */}
                 <div className="ProjectSection">
@@ -49,13 +53,13 @@ const Projects = () => {
                             ceanica
                             </div>
                         </h2>
-                        <span className="ProjectTimeDuration">Dec 2022 - Present</span>
+                        <span className="ProjectTimeDuration">Dec 2022 - Feb 2023</span>
                         <span className="ProjectToolsAndTechStacks">
                             <span className="ProjectTools">Figma &#124; Webpack &#124; Vercel</span>
                             <span className="ProjectTools">High-Fidelity Mockups &#124; Components &#124; UI Prototyping</span>
                             <span className="ProjectTechStacks">React &#124; JS &#124; SASS</span>
                         </span>
-                        <p className="ProjectSummary">Oceanica is travel company which offers exclusive, luxury resorts across the globe. The designs were first rendered as high-fidelity wireframes in Figma, using UI Prototyping and components to emulate the typical flow of a user navigation. This single page template was created in 5 different responsive forms, each with auto-layout and at breakpoints 1440px+, 1440px, 1024px, 744px and 375px and is currently being rendered as a SPA using React.</p>
+                        <p className="ProjectSummary">Oceanica is travel company which offers exclusive, luxury resorts across the globe. The designs were first rendered as high-fidelity wireframes in Figma, using UI Prototyping and components to emulate the typical flow of a user navigation. This single page template was created in 5 different responsive forms, each with auto-layout and at breakpoints 1440px+, 1440px, 1024px, 744px and 375px.  This was rendered using React, Babel and Webpack and deployed using Vercel.</p>
                         <div className="DesignBrief">
                             <h3>Design Brief</h3>
                             <p className="DesignBriefSummary">Luxury and allure were key factors behind the message of this brand. The font used symbolises the nature of the sea and open waters; vast and spacious yet defined and affirmed, further reinforced by the semi bold and bold weightings, broad shoulders and wide leading. The logo of a wave is simplistic and therefore easily memorable; it's character parallels that of the typography leveraged and against the rich black backdrop rings true the message of style and class, with its elliptical nature replicating that of the shape of the Earth and the wave line flowing into the brand name. The background calligraphic words carry this theme throughout the page with its swashes leaning on an axis akin to the Earth's own orbit, as the user is enveloped in this magnetism during their journey.</p>
@@ -173,6 +177,14 @@ const Projects = () => {
                                 <a target="_blank" href="https://www.figma.com/community/file/1190467806509137896">templates</a>
                                 <TbChevronUpRight />
                             </button>
+                            <button className="ViewFiles">
+                                <a target="_blank" href="https://github.com/asbhogal/React-Oceanica-Responsive-Web-Page">code</a>
+                                <TbChevronUpRight />
+                            </button>
+                            <button className="ViewFiles">
+                                <a target="_blank" href="https://oceanica.vercel.app/">site</a>
+                                <TbChevronUpRight />
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -267,7 +279,7 @@ const Projects = () => {
                                             <p><span>rgb</span>&#58; 255, 255, 255</p>
                                         </div>
                                     </div>
-                                    <div id="LiteLifeColor5" className="Color-5">
+                                    {/* <div id="LiteLifeColor5" className="Color-5">
                                         <div className="ColorTitle">
                                             <p>05</p>
                                             <p>folly</p>
@@ -286,7 +298,7 @@ const Projects = () => {
                                             <p><span>hex</span>&#58; &#35;3F51B5</p>
                                             <p><span>rgb</span>&#58; 63, 81, 181</p>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -318,7 +330,7 @@ const Projects = () => {
                             <span className="ProjectTools">High-Fidelity Mockups &#124; Components &#124; UI Prototyping</span>
                             <span className="ProjectTechStacks">React &#124; JS &#124; SASS</span>
                         </span>
-                        <p className="ProjectSummary">Brand is an interior design company. This project was developed from an initial crash course provided by Flux Academy on responsive design. Assets, including images, buttons, copy and typography, were used to generate components and a series of five templates in auto-layout format for breakpoints 1440px+, 1440px, 1024px, 744px and 375px. The decision was made to keep to the styling and transfer this across the different templates. These were then rendered in the form of a SPA (Single Page Application) using React with SASS, Babel and Webpack and deploy using Vercel.</p>
+                        <p className="ProjectSummary">Brand is an interior design company. This project was developed from an initial crash course provided by Flux Academy on responsive design. Assets, including images, buttons, copy and typography, were used to generate components and a series of five templates in auto-layout format for breakpoints 1440px+, 1440px, 1024px, 744px and 375px. The decision was made to keep to the styling and transfer this across the different templates. These were then rendered in the form of a SPA (Single Page Application) using React with SASS, Babel and Webpack and deployed using Vercel.</p>
                         <div className="DesignBrief">
                             <h3>Design Brief</h3>
                             <p className="DesignBriefSummary">The templates were kept consistent in design, aesthetic and layout. The clean, minimalistic structure with attention to whitespacing, legibility and heirarchy was also respected, paralleling the affluence communicated by the brand. The logo itself is assured, sharp and rigid, to emphasise the nature and quality of their products. The anti-flash white provides a medium through which the two extremes of black and white fuse in different elements at play and merge across various content typesets, yet still manage to become two distinct entities in their own right, emboldened by the contrasting logos used. </p>
@@ -399,18 +411,18 @@ const Projects = () => {
                             </div>
                         </div>
                         <div className="ProjectLinks">
-                        <button className="ViewFiles">
-                            <a target="_blank" href="https://www.figma.com/community/file/1187868244670810561">templates</a>
-                            <TbChevronUpRight />
-                        </button>
-                        <button className="ViewFiles">
-                            <a target="_blank" href="https://github.com/asbhogal/React-Brand-Responsive-Web-Page">code</a>
-                            <TbChevronUpRight />
-                        </button>
-                        <button className="ViewFiles">
-                            <a target="_blank" href="https://brand-responsive-web-page.vercel.app">site</a>
-                            <TbChevronUpRight />
-                        </button>
+                            <button className="ViewFiles">
+                                <a target="_blank" href="https://www.figma.com/community/file/1187868244670810561">templates</a>
+                                <TbChevronUpRight />
+                            </button>
+                            <button className="ViewFiles">
+                                <a target="_blank" href="https://github.com/asbhogal/React-Brand-Responsive-Web-Page">code</a>
+                                <TbChevronUpRight />
+                            </button>
+                            <button className="ViewFiles">
+                                <a target="_blank" href="https://brand-responsive-web-page.vercel.app">site</a>
+                                <TbChevronUpRight />
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -531,7 +543,7 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </m.div>
             <Footer />
 
             { showButton && (

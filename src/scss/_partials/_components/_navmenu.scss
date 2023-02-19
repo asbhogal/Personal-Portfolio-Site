@@ -8,7 +8,6 @@
     }
     .NavLinks {
         flex-direction: column;
-        // gap: 35px;
         font-family: 'Questa Grande', serif;
         font-size: 96px;
         padding-top: 110px;
@@ -16,11 +15,13 @@
         .NavItems {
             // font-size: clamp(1.5rem, -0.8936rem + 7.6596vw, 6rem);
             font-size: clamp(2.625rem, 1.875rem + 3.75vw, 5.25rem);
+            // border-bottom: 1px solid $RaisinBlack-03;
         }
         .NavItems > a {
             text-decoration: none;
             color: $RaisinBlack-03;
             transition: $Transition-03;
+            cursor: none;
             &:hover {
                 transition: $Transition-03;
                 padding-left: 8px;
@@ -32,7 +33,7 @@
         bottom: 0;
         display: flex;
         width: 100%;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         padding: 10px 0;
         > * {
@@ -58,37 +59,3 @@
         }
     }
 }
-
-
-/* .FullScreenNavMenuContainer {
-    display: grid;
-    height: 100vh;
-    grid-template-rows: 0.2fr auto;
-    margin: 0 18px;
-    background-color: $RaisinBlack-03;
-    img {
-        display: none;
-    }
-} */
-
-/* ul {
-    font-family: 'Questa Grande', serif;
-    font-size: 96px;
-    list-style-type: none;
-    li {
-        cursor: pointer;
-        transition: $Transition-03;
-        color: $White;
-        &:not(:last-child) {
-            padding-bottom: 15px;
-        }
-        &:hover {
-            padding-left: 5px;
-            transition: $Transition-03;
-        }
-        a {
-            text-decoration: none;
-            color: $White;
-        }
-    }
-} */

@@ -2,12 +2,17 @@ import "../scss/index.scss";
 import Header from "./Header";
 import Footer from "./Footer";
 
+import { motion as m } from "framer-motion";
+
 const About = () => {
     return (
         <>
             <Header />
-                <section className="AboutSection">
-                    <h1 className="PageHeaderTitle">&#38;&#46;about</h1>
+                <m.section
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    className="AboutSection">
+                    <h1 className="PageHeaderTitle">about</h1>
                     <div className="HorizontalDivider"></div>
                     <div className="AboutContent">
                         <div id="TechSkills" className="ExperienceList">
@@ -27,8 +32,8 @@ const About = () => {
                     <br></br>
                     <br></br>
                     He now works with international clients across a broad spectrum of web design and development services and creates interfaces using Adobe CC, Figma and React from existing and new design briefs, as well as offering consultancies and mentoring for junior developers.</p>
-                </div>
-                </section>
+                    </div>
+                </m.section>
             <Footer />
         </>
     )

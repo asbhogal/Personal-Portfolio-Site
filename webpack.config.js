@@ -29,6 +29,10 @@ const   path = require("path"),
                     {
                         from: "./robots.txt",
                         to: "."
+                    },
+                    {
+                        from: "./src/assets/AmanSinghBhogal-Brand-Manifesto.pdf",
+                        to: "."
                     }
                 ]
             })

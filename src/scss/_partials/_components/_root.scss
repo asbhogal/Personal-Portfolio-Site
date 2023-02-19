@@ -2,10 +2,17 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    cursor: none;
+}
+
 #root {
     display: flex;
     flex-direction: column;
     > * {
         display: flex;
+        cursor: none;
     }
+    cursor: none;
 }
+

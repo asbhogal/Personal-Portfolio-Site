@@ -5,6 +5,7 @@
 @use '_partials/variables' as *;
 
 @use '_partials/_components/404' as *;
+@use '_partials/_components/cursor' as *;
 @use '_partials/_components/root' as *;
 @use '_partials/_components/header' as *;
 @use '_partials/_components/navmenu' as *;
@@ -14,5 +15,6 @@
 @use '_partials/_components/about' as *;
 @use '_partials/_components/projects' as *;
 @use '_partials/_components/testimonials' as *;
+@use '_partials/_components/freeresources' as *;
 @use '_partials/_components/scrolltotop' as *;
 @use '_partials/_components/footer' as *;

@@ -1,13 +1,39 @@
 import Footer from "./Footer";
 import Header from "./Header"
+import { useEffect, useState } from "react";
+
+import { motion as m } from "framer-motion";
 
 const AdditionalServices = () => {
+
+    const [showButton, setShowButton] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300) {
+                setShowButton(true);
+            } else {
+                setShowButton(false);
+            }
+        });
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo ({
+            top: 0,
+            behaviour: "smooth"
+        });
+    };
+
     return (
         <>
             <Header />
-                <main className="AdditionalServices">
+                <m.main 
+                    initial={{opacity: 0}} 
+                    animate={{opacity: 1}} 
+                    className="AdditionalServices">
                     <section className="AdditionalServicesCover">
-                        <h1>&#38;&#46;additional services</h1>
+                        <h1>additional services</h1>
                     </section>
                     <section className="AdditionalServicesSection">
                         <div className="AdditionalServicesContent">
@@ -44,8 +70,15 @@ const AdditionalServices = () => {
                         </div>
                         <h3>Please enquire for further information and prices</h3>
                     </section>
-                </main>
+                </m.main>
             <Footer />
+
+            { showButton && (
+                <button onClick={ scrollToTop } className="ScrollToTop">
+                    &#8593;
+                </button>
+            ) }
+
         </>
     )
 };

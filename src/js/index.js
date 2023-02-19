@@ -6,5 +6,5 @@ const   rootElement = document.getElementById("root"),
         root = ReactDOM.createRoot(rootElement);
 
 root.render (
-    <App />
+        <App />
 )

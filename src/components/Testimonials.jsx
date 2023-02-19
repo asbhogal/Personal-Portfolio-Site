@@ -1,20 +1,53 @@
 import Footer from "./Footer";
-import Navbar from "./Header";
+import Header from "./Header";
 import "../scss/index.scss";
+
+import { motion as m } from "framer-motion";
+import { useEffect, useState } from "react";
 
 import TestimonialsCard from "./TestimonialsCard";
 
 const Testimonials = () => {
+
+    const [showButton, setShowButton] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300) {
+                setShowButton(true);
+            } else {
+                setShowButton(false);
+            }
+        });
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo ({
+            top: 0,
+            behaviour: "smooth"
+        });
+    };
+
     return (
         <>
-            <Navbar />
-            <section className="TestimonialsCover">
-                <h1 className="PageHeaderTitle">&#38;&#46;testimonials</h1>
-            </section>
-            <section className="TestimonialsSection">
+            <Header />
+            <m.section
+                initial={{opacity: 0}} 
+                animate={{opacity: 1}} 
+                className="TestimonialsCover">
+                <h1 className="PageHeaderTitle">testimonials</h1>
+            </m.section>
+            <m.section initial={{opacity: 0}} animate={{opacity: 1}} className="TestimonialsSection">
                 <TestimonialsCard />
-            </section>
+            </m.section>
             <Footer />
+
+            { showButton && (
+                <button onClick={ scrollToTop } className="ScrollToTop">
+                    &#8593;
+                </button>
+            ) }
+
         </>
     )
 };

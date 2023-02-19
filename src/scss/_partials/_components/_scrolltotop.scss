@@ -8,8 +8,8 @@
     background: none;
     border: none;
     color: $RaisinBlack-03;
-    cursor: pointer;
     transition: $Transition-03;
+    cursor: none;
     &:hover {
         transform: translateY(-5px);
     }
