@@ -6,7 +6,20 @@
     &:is(&::after, &::before, *) {
         box-sizing: border-box;
     }
-    // outline: 1px red solid;
+}
+
+::-webkit-scrollbar {
+    width: .625rem;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: transparent; 
+    border-radius: .625rem;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: .625rem;
+    background-color: $RaisinBlack-03;
 }
 
 html {
