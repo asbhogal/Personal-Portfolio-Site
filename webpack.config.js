@@ -10,7 +10,7 @@ const   path = require("path"),
             new MiniCSSExtractPlugin(),
             new FontPreloadPlugin(),
             new HTMLWebpackPlugin({
-                title: "Personal Portfolio Site",
+                title: "Aman Singh Bhogal | Front End Developer & UI Engineer",
                 author: "Aman Singh Bhogal",
                 template: "./src/index.html",
                 description: "The personal portfolio site of Aman Singh Bhogal. Front End Developer & UI Engineer",

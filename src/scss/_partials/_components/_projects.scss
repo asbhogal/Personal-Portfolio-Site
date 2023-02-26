@@ -272,6 +272,37 @@
                     background-color: #3F51B5;
                     @extend .UniversalStyle;
                 }
+                #KryptoColor1 {
+                    background-color: $RichBlack;
+                    @extend .UniversalStyle;
+                }
+                #KryptoColor2 {
+                    background-color: $CetaceanBlue;
+                    @extend .UniversalStyle;
+                }
+                #KryptoColor3 {
+                    background-color: $DeepKoamaru;
+                    @extend .UniversalStyle;
+                }
+                #KryptoColor4 {
+                    background-color: $Ceil;
+                    @extend .UniversalStyle;
+                }
+                #KryptoColor5 {
+                    background-color: $MiddleBlueGreen;
+                    color: $Black;
+                    @extend .UniversalStyle;
+                }
+                #KryptoColor6 {
+                    background-color: $Crystal;
+                    color: $Black;
+                    @extend .UniversalStyle;
+                }
+                #KryptoColor7 {
+                    background-color: $BrighGray;
+                    color: $Black;
+                    @extend .UniversalStyle;
+                }
             }
         }
         .ProjectLinks {
@@ -313,6 +344,77 @@
         height: 100px;
     }
 }
+
+/****** KRYPTO ******/
+
+#KryptoLogoMarks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: $RichBlack;
+    padding: 10px;
+    img {
+        width: 175px;
+        height: 100%;
+    }
+}
+
+#KryptoFamilyOutfitFont {
+    font-family: 'Outfit', sans-serif;
+}
+
+#KryptoFamilyRobotoFont {
+    font-family: 'Roboto', sans-serif;
+}
+
+.KryptoFontSet {
+    display: flex;
+    justify-content: space-between;
+}
+
+#KryptoH1H2TypographyCase {
+    font-family: 'Outfit', sans-serif;
+}
+
+#KryptoPTypographyCase {
+    font-family: 'Roboto', sans-serif;
+}
+
+#KryptoTypographyCase,
+#KryptoFontFamily {
+    font-family: "Switzer", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    padding: 5px 0;
+}
+
+.KryptoTypography {
+    flex-direction: column;
+    #KryptoOutfitFontSet,
+    #KryptoRobotoFontSet {
+        display: flex;
+        justify-content: space-between;
+    }
+    #KryptoOutfitFontSet {
+        font-family: 'Outfit', sans-serif;
+    }
+    #KryptoRobotoFontSet {
+        font-family: 'Roboto', sans-serif;
+
+    }
+}
+
+
+
+$KryptoWeights: (weight1: 400, weight2: 600, weight3: 700);
+
+@each $key, $weight in $KryptoWeights {
+    #KryptoTypography-#{ $weight } { font-weight: $weight; }
+};
 
 /****** LITE LIFE ******/
 

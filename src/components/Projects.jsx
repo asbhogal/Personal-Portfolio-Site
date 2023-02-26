@@ -11,6 +11,7 @@ import brandIconWhite from "../assets/images/logos/brand-icon-white.svg";
 import oceanicaLogo from "../assets/images/logos/Oceanica-Logo.svg";
 import oceanicaIcon from "../assets/images/logos/Oceanica-Icon.svg";
 import liteLifeLogo from "../assets/images/logos/LiteLife-Logo.svg";
+import kryptoLogo from "../assets/images/logos/Krypto-Logo.svg";
 import { TbChevronUpRight } from "react-icons/tb";
 
 const Projects = () => {
@@ -44,6 +45,170 @@ const Projects = () => {
                 <div className="ProjectCover">
                     <h1>projects</h1>
                 </div>
+                {/* KRYPTO */}
+                <div className="ProjectSection">
+                    <div className="ProjectInfo">
+                        <h2 className="ProjectTitle">
+                            <div className="WordUnit">
+                            <span className="FirstLetterAccent">K</span>
+                            rypto
+                            </div>
+                        </h2>
+                        <span className="ProjectTimeDuration">Dec 2022 - Feb 2023</span>
+                        <span className="ProjectToolsAndTechStacks">
+                            <span className="ProjectTools">Figma &#124; Webpack &#124; Vercel</span>
+                            <span className="ProjectTools">High-Fidelity Mockups &#124; Components &#124; UI Prototyping</span>
+                            <span className="ProjectTechStacks">React &#124; JS &#124; SASS</span>
+                        </span>
+                        <p className="ProjectSummary">KRYPTO is a cryptocurrency marketplace company that allows investors to buy and sell various crypto assets, monitor and track their financial behaviour. Wealth, assurity and trust were essential emotions and themes that were to be conveyed with this product. As the user follows the journey, a brief snapshot of each feature is meant to be shown in a way that is easy to digest and minimal in jargon. In a technical field such as asset investments, making this accessible to the everyday individual to bring newcomers on board was important. The designs were first rendered as high-fidelity templates in Figma, using UI Prototyping and components to emulate the typical flow of a user navigation. The single page template was created in 5 responsive versions at breakpoints 1440px+, 1440px, 1024px, 744px and 375px. This was then rendered using React, Babel and Vite and deployed using Vercel.</p>
+                        <div className="DesignBrief">
+                            <h3>Design Brief</h3>
+                            <p className="DesignBriefSummary">The logo itself symbolises power, assurity and confidence with its bold presence, minimal kerning and rigid baseline and capline. This represents structure and rigidness, evoking a sense that the company has a strict, regulatory approach; everything is contained, carefully monitored and built. The use of sans-serif brings the brand to the modern age which is essential for the market it operates in. This also gives a sense of sleekness and youthfulness. The logos of companies the marketplace has featured on placed in the hero section becomes one of the very first elements the user sees, thereby reinforcing trust. The deep blue undertones adds a sense of status, mystery and power, as well as calmness. The deep and mid purple symbolise wealth and evokes a sense of trust- two psychological factors here in the marketing of the product. If people are to part with their money and invest in a relatively new type of financial market, trust is to be garnered. <br></br><br></br>The minimal use of light shades - limited to the text and accents, create a spacious canvas that is soothing to the eyes, complemented further by the background blur/gradient objects. The animated CTA button in the header also draws attention to purchasing NFTs and creates a dynamic sense of motion, of progression, yet in a patient manner, akin to a heartbeat, or pulse. This gives the message of 'purchase in your own time, yet activity is always happening.' Some words are elevated in light blue/green accents to create a sense of empowerment and motivation. These are used sparingly to draw greater attention to them through their limited, targetted and intentional usage, particularly 'next big thing' - signifying the advent of a new age of the internet as Web 3.0 is ushered in. The overarching message here is - "something big is coming, and you could gain something from being part of it."
+</p>
+                        </div>
+                        <div className="Guides">
+                            <div className="BrandGuideSection">
+                                <h3>Brand Guide</h3>
+                                <div id="#KryptoGuideInfo" className="BrandGuideInfo">
+                                    <div id="KryptoLogoMarks" className="LogoMarks">
+                                        <img className="KryptoLogo" src={ kryptoLogo }></img>                                    
+                                    </div>
+                                    <div className="Typography">
+                                        <div className="KryptoTypographyInfo">
+                                            <p id="KryptoFontFamily">Font Family</p>
+                                            <div className="KryptoFontSet">
+                                                <div className="KryptoFontFamily">
+                                                    <p id="KryptoFamilyOutfitFont" className="KryptoTypographyFamily">Outfit</p>
+                                                    <p id="KryptoFamilyOutfitFont" className="KryptoTypographyFamily">Outfit</p>
+                                                    <p id="KryptoFamilyRobotoFont" className="KryptoTypographyFamily">Roboto</p>
+                                                </div>
+                                                <div className="KryptoFontHeirarchy">
+                                                    <p id="KryptoFamilyOutfitFont" className="KryptoFontHeirarchy">Heading One</p>
+                                                    <p id="KryptoFamilyOutfitFont" className="KryptoFontHeirarchy">Heading Two</p>
+                                                    <p id="KryptoFamilyRobotoFont" className="KryptoFontHeirarchy">Paragraph</p>
+                                                </div>
+                                            </div>
+                                            <p id="KryptoTypographyCase">Case</p>
+                                            <p id="KryptoH1H2TypographyCase">lowercase</p>
+                                            <p id="KryptoPTypographyCase">Sentence</p>
+                                        </div>
+                                        <p id="KryptoFontWeights">Weights</p>
+                                        <ul className="KryptoTypography TypographyList">
+                                            <div id="KryptoOutfitFontSet">
+                                                <div className="Krypto TypographyWeightSet">
+                                                    <p id="KryptoTypography-600" className="KryptoTypography TypographyListItem-600">Semi Bold</p>
+                                                    <p id="KryptoTypography-700" className="KryptoTypography TypographyListItem-700">Bold</p>
+                                                </div>
+                                                <div className="Krypto TypographyFontSet">
+                                                    <li id="KryptoTypography-600" className="KryptoTypography TypographyListItem-600">ABC abc 123</li>
+                                                    <li id="KryptoTypography-700" className="KryptoTypography TypographyListItem-700">ABC abc 123</li>
+                                                </div>
+                                            </div>
+                                            <div id="KryptoRobotoFontSet">
+                                                <div className="Krpyto TypographyWeightSet">
+                                                    <p id="KryptoTypography-400" className="KryptoTypography TypographyListItem-400">Regular</p>
+                                                </div>
+                                                <div className="Krypto TypographyFontSet">
+                                                    <li id="KryptoTypography-400" className="KryptoTypography TypographyListItem-400">ABC abc 123</li>
+                                                </div>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="StyleGuideSection">
+                                <h3>Style Guide</h3>
+                                <div className="ColorPalette">
+                                    <div id="KryptoColor1" className="Color-1">
+                                        <div className="ColorTitle">
+                                            <p>01</p>
+                                            <p>rich black</p>
+                                        </div>
+                                        <div className="ColorInfo">
+                                            <p><span>hex</span>&#58; &#35;010922</p>
+                                            <p><span>rgb</span>&#58; 1, 9, 34</p>
+                                        </div>
+                                    </div>
+                                    <div id="KryptoColor2" className="Color-2">
+                                        <div className="ColorTitle">
+                                            <p>02</p>
+                                            <p>cetacean blue</p>
+                                        </div>
+                                        <div className="ColorInfo">
+                                            <p><span>hex</span>&#58; &#35;0b0f2f</p>
+                                            <p><span>rgb</span>&#58; 11, 15, 47</p>
+                                        </div>
+                                    </div>
+                                    <div id="KryptoColor3" className="Color-3">
+                                        <div className="ColorTitle">
+                                            <p>03</p>
+                                            <p>deep koamaru</p>
+                                        </div>
+                                        <div className="ColorInfo">
+                                            <p><span>hex</span>&#58; &#35;312964</p>
+                                            <p><span>rgb</span>&#58; 49, 41, 100</p>
+                                        </div>
+                                    </div>
+                                    <div id="KryptoColor4" className="Color-4">
+                                        <div className="ColorTitle">
+                                            <p>04</p>
+                                            <p>ceil</p>
+                                        </div>
+                                        <div className="ColorInfo">
+                                            <p><span>hex</span>&#58; &#35;8f8fdb</p>
+                                            <p><span>rgb</span>&#58; 143, 143, 219</p>
+                                        </div>
+                                    </div>
+                                    <div id="KryptoColor5" className="Color-5">
+                                        <div className="ColorTitle">
+                                            <p>05</p>
+                                            <p>middle blue<br></br>green</p>
+                                        </div>
+                                        <div className="ColorInfo">
+                                            <p><span>hex</span>&#58; &#35;86cfd0</p>
+                                            <p><span>rgb</span>&#58; 134, 207, 208</p>
+                                        </div>
+                                    </div>
+                                    <div id="KryptoColor6" className="Color-6">
+                                        <div className="ColorTitle">
+                                            <p>06</p>
+                                            <p>crystal</p>
+                                        </div>
+                                        <div className="ColorInfo">
+                                            <p><span>hex</span>&#58; &#35;aed4db</p>
+                                            <p><span>rgb</span>&#58; 174, 212, 219</p>
+                                        </div>
+                                    </div>
+                                    <div id="KryptoColor7" className="Color-7">
+                                        <div className="ColorTitle">
+                                            <p>07</p>
+                                            <p>bright gray</p>
+                                        </div>
+                                        <div className="ColorInfo">
+                                            <p><span>hex</span>&#58; &#35;ebebeb</p>
+                                            <p><span>rgb</span>&#58; 235, 235, 235</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="ProjectLinks">
+                            <button className="ViewFiles">
+                                <a target="_blank" href="https://www.figma.com/community/file/1188263961246625436">templates</a>
+                                <TbChevronUpRight />
+                            </button>
+                            <button className="ViewFiles">
+                                <a target="_blank" href="https://github.com/asbhogal/React-KRYPTO-Responsive-Web-Page">code</a>
+                                <TbChevronUpRight />
+                            </button>
+                            <button className="ViewFiles">
+                                <a target="_blank" href="https://krypto-site.vercel.app/">site</a>
+                                <TbChevronUpRight />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="VerticalDivider"></div>
                 {/* OCEANICA */}
                 <div className="ProjectSection">
                     <div className="ProjectInfo">
@@ -136,7 +301,7 @@ const Projects = () => {
                                         </div>
                                         <div className="ColorInfo">
                                             <p><span>hex</span>&#58; &#35;68B1C8</p>
-                                            <p><span>rgb</span>&#58; 38, 44, 49</p>
+                                            <p><span>rgb</span>&#58; 104, 177, 200</p>
                                         </div>
                                     </div>
                                     <div id="OceanicaColor5" className="Color-5">
