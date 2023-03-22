@@ -8,15 +8,58 @@
     .BrandGuideInfo {
         flex-wrap: wrap;
         gap: 15px;
+        .LogoMarks {
+            display: flex;
+            flex-direction: column;
+            background-color: #d3d3d3;
+            padding: 5px;
+            width: 200px;
+        }
         .Typography {
-            // display: flex;
-            gap: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
             > * {
                 display: flex;
             }
             .TypographyInfo {
                 flex-direction: column;
                 gap: 5px;
+                p {
+                    &:first-child, &:nth-child(3) {
+                        font-family: 'Switzer', sans-serif;
+                        font-weight: 600;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        border-bottom: 1px solid black;
+                        padding: 5px 0;
+                    }
+                    &:nth-child(2), &:nth-child(4) {
+                        font-family: 'Inter', sans-serif;
+                    }
+                }
+            }
+            .TypographyStyles {
+                flex-direction: column;
+                gap: 5px;
+                .WeightsTitle {
+                    font-family: "Switzer", sans-serif;
+                    font-weight: 600;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    border-bottom: 1px solid black;
+                    padding: 5px 0;
+                }
+                .TypographyList {
+                    display: flex;
+                    gap: 30px;
+                    list-style-type: none;
+                    .TypographyWeightSet, .TypographyFontSet {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                    }
+                }
             }
         }
     }
@@ -29,14 +72,15 @@
     }
     .ColorPalette {
         width: 100%;
-        justify-content: space-between;
         .UniversalStyle {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             padding: 5px;
             font-family: 'Switzer', sans-serif;
-            font-size: 12px;
+            font-size: 14px;
+            width: 100px;
+            height: 100px;
             .ColorTitle {
                 display: flex;
                 justify-content: space-between;
@@ -58,5 +102,36 @@
             background-color: $White;
             color: $Black;
         }
+    }
+}
+
+/* @media only screen and (1441px <= width) {
+    .BrandContentSection {
+        width: calc(100% - 800px);
+        margin: 0 auto;
+    }
+} */
+
+@media only screen and (width <= 768px) {
+    .About,
+    .StacksAndTools,
+    .Mockups,
+    .DesignApproach,
+    .Branding {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 50px;
+    }
+}
+
+@media only screen and (769px <= width) {
+    .About,
+    .StacksAndTools,
+    .Mockups,
+    .DesignApproach,
+    .Branding {
+        flex-direction: row;
+        align-items: center;
+        gap: 125px;
     }
 }

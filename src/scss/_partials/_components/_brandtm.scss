@@ -31,8 +31,7 @@
         gap: 25px;
         .About {
             display: flex;
-            align-items: center;
-            gap: 50px;
+            border-bottom: 1px solid $RaisinBlack-03;
             .AboutHeadline {
                 font-family: 'Questa Grande', serif;
                 font-style: normal;
