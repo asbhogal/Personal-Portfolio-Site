@@ -27,7 +27,7 @@ const Brand = () => {
                             Project Type: Personal
                         </h3>
                         <p className="ProjectTimeline">
-                            Dec 2022 - Dec 2023
+                            Dec 2023 - Dec 2023
                         </p>
                         <p className="AboutSummary">
                         Brand is an interior design company. This project was developed from an initial crash course provided by Flux Academy on responsive design. Assets, including images, buttons, copy and typography, were used to generate components and a series of five templates in auto-layout format for breakpoints 1440px+, 1440px, 1024px, 744px and 375px. The decision was made to keep to the styling and transfer this across the different templates. These were then rendered in the form of a SPA (Single Page Application) using React with SASS, Babel and Webpack and deployed using Vercel.

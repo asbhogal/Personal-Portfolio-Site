@@ -6,7 +6,7 @@
         display: flex;
     }
     .BrandGuideInfo {
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: 15px;
         .LogoMarks {
             display: flex;
@@ -14,6 +14,12 @@
             background-color: #d3d3d3;
             padding: 5px;
             width: 200px;
+            .BrandProjectLogo,
+            .BrandProjectIcon {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
         .Typography {
             display: flex;
