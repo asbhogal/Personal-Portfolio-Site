@@ -1,0 +1,87 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+#HeaderPosition {
+    position: absolute;
+    width: 100%;
+}
+
+.BrandProject {
+    display: flex;
+    flex-direction: column;
+    > * {
+        display: flex;
+    }
+    .BrandProjectCover {
+        height: 100vh;
+        .CoverLayer {
+            width: 100%;
+            height: 100%;
+            background-color: #2929294a;
+            position: absolute;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .BrandContentSection {
+        flex-direction: column;
+        gap: 25px;
+        .About {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            .AboutHeadline {
+                font-family: 'Questa Grande', serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: clamp(4.25rem, -9.5rem + 24.4444vw, 12.5rem);
+                text-align: right;
+                text-transform: lowercase;
+                color: $RaisinBlack-03;
+            }
+            .AboutRightContent {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .AboutSubLine {
+                    @include HeadingThreeProject;
+                }
+                .ProjectTimeline {
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-family: "Switzer", sans-serif;
+                }
+                .AboutSummary {
+                    @include BodyText;
+                }
+            }
+        }
+        .StacksAndTools, .Mockups, .Branding, .DesignApproach {
+            @extend .About;
+            .StacksAndToolsHeadline, .MockupsHeadline, .BrandingHeadline, .DesignHeadline {
+                @extend .AboutHeadline;
+            }
+            .StacksAndToolsSummary {
+                @include HeadingThreeProject;
+            }
+            .BrandingSubLine {
+                @include HeadingThreeProject;
+            }
+        }
+        .MockupImage {
+            background-color: black;
+            height: 555px;
+            width: 100%;
+        }
+        .BrandingRightContent {
+            @extend .AboutRightContent;
+        }
+        .DesignSummary {
+            @include BodyText;
+        }
+    }
+}

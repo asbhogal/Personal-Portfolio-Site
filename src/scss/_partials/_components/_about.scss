@@ -8,7 +8,6 @@
     flex-direction: column;
     justify-content: center;
     gap: 30px;
-    //z-index: 2;
     > * {
         display: flex;
     }
@@ -36,9 +35,6 @@
             font-family: 'Questa Grande', sans-serif;
             font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);        text-align: left;
         }
-        /* .FirstLetterAccent {
-            @include HeadingTwoAccentLetter;
-        } */
         .AboutText {
             font-family: 'Switzer', sans-serif;
             .AboutName {
@@ -47,24 +43,3 @@
         }
     }
 }
-
-/* .AboutSection {
-    position: absolute;
-    top: 370px;
-    flex-direction: column;
-    gap: 20px;
-    .AboutText {
-        @include BodyText;
-    }
-    .PageSubTitleText {
-        font-family: 'Questa Grande', serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 26px;
-        line-height: 60px;
-        text-transform: uppercase;
-    }
-    #AboutPageTitle2 {
-        text-align: right;
-    }
-} */

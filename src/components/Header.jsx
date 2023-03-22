@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion"
 
-const Header = () => {
+const Header = (props) => {
 
     const [navOpen, setNavOpen] = useState(false);
 
@@ -11,6 +11,7 @@ const Header = () => {
         <m.header 
             initial={{opacity: 0}} 
             animate={{opacity: 1}} 
+            id={ props.HeaderPosition }
             className="Header">
         <nav className="Nav">
             <div className="NavContainer">
@@ -45,60 +46,39 @@ const Header = () => {
                                 <Link to="/about">
                                     about
                                 </Link>
-                                <div className="NavItemWrapper"></div>
+                                {/* <div className="NavItemWrapper"></div> */}
                             </li>
                             <li className="NavItems">
                                 <Link to="/projects">
                                     projects
                                 </Link>
-                                <div className="NavItemWrapper"></div>
+                                {/* <div className="NavItemWrapper"></div> */}
                             </li>
                             <li className="NavItems">
                                 <Link to="/AmanSinghBhogal-Brand-Manifesto.pdf" target="_blank">
                                     brand manifesto
                                 </Link>
-                                <div className="NavItemWrapper"></div>
+                                {/* <div className="NavItemWrapper"></div> */}
                             </li>
                             <li className="NavItems">
                                 <Link to="/testimonials">
                                     testimonials
                                 </Link>
-                                <div className="NavItemWrapper"></div>
+                                {/* <div className="NavItemWrapper"></div> */}
                             </li>
                             <li className="NavItems">
                                 <Link to="/additionalservices">
                                     additional services
                                 </Link>
-                                <div className="NavItemWrapper"></div>
+                                {/* <div className="NavItemWrapper"></div> */}
                             </li>
                             <li className="NavItems">
                                 <Link to="/freeresources">
                                     free resources
                                 </Link>
-                                <div className="NavItemWrapper"></div>
+                                {/* <div className="NavItemWrapper"></div> */}
                             </li>
                         </ul>
-                        {/* <div className="NavScreenFooter">
-                            <div className="SocialLinkNames">
-                                <ul className="NavFooterSocialLinks">
-                                    <li>
-                                        <a target="_blank" href="mailto:business@amansinghbhogal.com">Email</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://www.linkedin.com/in/amansinghbhogal">LinkedIn</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://www.github.com/asbhogal">GitHub</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://www.figma.com/@amansinghbhogal">Figma</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://www.instagram.com/amanuiux">Instagram</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div> */}
                     </div>
             </div>       
         </nav>

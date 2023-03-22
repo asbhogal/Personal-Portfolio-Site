@@ -39,8 +39,8 @@ const Projects = () => {
         <>
             <Navbar />
             <m.div 
-                initial={{opacity: 0}} 
-                animate={{opacity: 1}} 
+                initial={ { opacity: 0 } } 
+                animate={ { opacity: 1 } } 
                 className="Projects">
                 <div className="ProjectCover">
                     <h1>projects</h1>

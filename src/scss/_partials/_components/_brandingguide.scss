@@ -1,0 +1,62 @@
+@use '../variables' as *;
+
+.BrandGuideSection {
+    display: flex;
+    > * {
+        display: flex;
+    }
+    .BrandGuideInfo {
+        flex-wrap: wrap;
+        gap: 15px;
+        .Typography {
+            // display: flex;
+            gap: 15px;
+            > * {
+                display: flex;
+            }
+            .TypographyInfo {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    }
+}
+
+.StyleGuideSection {
+    display: flex;
+    > * {
+        display: flex;
+    }
+    .ColorPalette {
+        width: 100%;
+        justify-content: space-between;
+        .UniversalStyle {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 5px;
+            font-family: 'Switzer', sans-serif;
+            font-size: 12px;
+            .ColorTitle {
+                display: flex;
+                justify-content: space-between;
+                text-align: right;
+            }
+        }
+        #BrandColor1 {
+            background-color: $Black;
+            color: $White;
+            @extend .UniversalStyle;
+        }
+        #BrandColor2 {
+            @extend .UniversalStyle;
+            background-color: $AntiFlashWhite;
+            color: $Black;
+        }
+        #BrandColor3 {
+            @extend .UniversalStyle;
+            background-color: $White;
+            color: $Black;
+        }
+    }
+}

@@ -8,14 +8,6 @@
     > * {
         display: flex;
     }
-    .ProjectCover {
-        flex-direction: column;
-        height: 100vh;
-        justify-content: center;
-        h1 {
-            @include HeadingOneTitle;
-        }
-    }
     .ProjectSection {
         flex-direction: column;
         justify-content: center;
