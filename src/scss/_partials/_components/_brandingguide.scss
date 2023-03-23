@@ -1,6 +1,36 @@
 @use '../variables' as *;
 
 .BrandGuideSection {
+    flex-direction: column;
+    .Typeface {
+        font-size: clamp(4.25rem, -9.5rem + 24.4444vw, 12.5rem);
+    }
+    #BrandTypeface {
+        font-family: 'Inter', sans-serif;
+    }
+    .TypefaceSet {
+        justify-content: space-between;
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            list-style-type: none;
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(1rem, -0.5625rem + 5vw, 2.25rem);
+        }
+        .TypefaceExamples {
+            li {
+                display: flex;
+                gap: 20px;
+                span:nth-child(2) {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
+
+.BrandGuideSection {
     display: flex;
     > * {
         display: flex;
@@ -141,3 +171,9 @@
         gap: 125px;
     }
 }
+
+$BrandWeights: (weight1: 400, weight2: 500, weight3: 600, weight4: 700, weight5: 900);
+
+@each $key, $weight in $BrandWeights {
+    #BrandTypography-#{ $weight } { font-weight: $weight; }
+};

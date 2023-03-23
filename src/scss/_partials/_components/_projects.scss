@@ -540,8 +540,3 @@ $OceanicaWeights: (weight1: 400, weight2: 500, weight3: 600, weight4: 700);
     }
 }
 
-$BrandWeights: (weight1: 400, weight2: 500, weight3: 600, weight4: 700, weight5: 900);
-
-@each $key, $weight in $BrandWeights {
-    #BrandTypography-#{ $weight } { font-weight: $weight; }
-};

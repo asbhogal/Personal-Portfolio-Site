@@ -7,7 +7,50 @@ import brandIconWhite from "../assets/images/logos/brand-icon-white.svg";
 const BrandGuide = () => {
   return (
     <div className="BrandGuideSection">
-    <div id="BrandGuideInfo" className="BrandGuideInfo">
+        <div id="BrandTypeface" className="Typeface">
+            Inter
+        </div>
+        <div className="TypefaceSet">
+            <div className="TypefaceWeights">
+                <ul>
+                    <li id="BrandTypography-400">Regular</li>
+                    <li id="BrandTypography-500">Medium</li>
+                    <li id="BrandTypography-600">Semi Bold</li>
+                    <li id="BrandTypography-700">Bold</li>
+                    <li id="BrandTypography-900">Black</li>
+                </ul>
+            </div>
+            <div className="TypefaceExamples">
+                <ul>
+                    <li>
+                        <span id="BrandTypography-400">Aa</span>
+                        <span id="BrandTypography-400">Aa</span>
+                        <span id="BrandTypography-400">123</span>
+                    </li>
+                    <li>
+                        <span id="BrandTypography-500">Aa</span>
+                        <span id="BrandTypography-500">Aa</span>
+                        <span id="BrandTypography-500">123</span>
+                    </li>
+                    <li>
+                        <span id="BrandTypography-600">Aa</span>
+                        <span id="BrandTypography-600">Aa</span>
+                        <span id="BrandTypography-600">123</span>
+                    </li>
+                    <li>
+                        <span id="BrandTypography-700">Aa</span>
+                        <span id="BrandTypography-700">Aa</span>
+                        <span id="BrandTypography-700">123</span>
+                    </li>
+                    <li>
+                        <span id="BrandTypography-900">Aa</span>
+                        <span id="BrandTypography-900">Aa</span>
+                        <span id="BrandTypography-900">123</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    {/* <div id="BrandGuideInfo" className="BrandGuideInfo">
         <div id="BrandProjectLogoMarks" className="LogoMarks">
             <img className="BrandProjectLogo" src={ brandLogoBlack }></img>
             <img className="BrandProjectIcon" src={ brandLogoWhite }></img>
@@ -43,7 +86,7 @@ const BrandGuide = () => {
                 </ul>
             </div>
         </div>
-    </div>
+    </div> */}
 </div>
   )
 }
