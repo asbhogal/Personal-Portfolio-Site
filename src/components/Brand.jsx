@@ -4,7 +4,11 @@ import Header from "./Header";
 import Footer from "./Footer";
 import brandHeroLogo from "../assets/images/BRAND/BrandHeroLogo.svg";
 import brandHeroMockup from "../assets/images/BRAND/BrandHeroImage.png";
-import brandMockupCollectionImg from "../assets/images/BRAND/BrandMockupCollection.png";
+import brandiMacImage from "../assets/images/BRAND/mockups/Brand-iMacMockup.png";
+import brandMacBookImage from "../assets/images/BRAND/mockups/Brand-MacBookMockup.png";
+import brandiPhoneImage from "../assets/images/BRAND/mockups/Brand-iPhone14Mockup.png";
+import brandiPadImage from "../assets/images/BRAND/mockups/Brand-iPadMockup.png";
+import brandiPad2Image from "../assets/images/BRAND/mockups/Brand-iPad2Mockup.png";
 import brandGridWideImg from "../assets/images/BRAND/GridWide.png";
 import brandGridDesktopImg from "../assets/images/BRAND/GridDesktop.png";
 import brandGridTabletImg from "../assets/images/BRAND/GridTablet(Large).png";
@@ -81,15 +85,6 @@ const Brand = () => {
                         </p>
                     </div>
 
-                    <div className="Mockups">
-                        <h2 className="MockupsHeadline">
-                            Mockups
-                        </h2>
-                        <div className="MockupImage">
-                            <img src={ brandMockupCollectionImg } />
-                        </div>
-                    </div>
-
                     <div className="Grids">
                         <h2 className="GridsHeadline">
                             Grids
@@ -136,6 +131,35 @@ const Brand = () => {
                             <StyleGuide />
                         </div>
                     </div>
+
+                    <div className="Mockups">
+                        <h2 className="MockupsHeadline">
+                            Mockups
+                        </h2>
+                        <div className="MockupImages">
+                            <div className="MockupTable">
+                                <div className="MainMockupImage">
+                                    <img src={ brandiMacImage } />
+                                </div>
+                                <div className="MockupImageRow">
+                                    <div className="MockupImage">
+                                        <img src={ brandMacBookImage } />
+                                    </div>
+                                    <div className="MockupImage">
+                                        <img src={ brandiPhoneImage } />
+                                    </div>
+                                    <div className="MockupImage">
+                                        <img src={ brandiPadImage } />
+                                    </div>
+                                    <div className="MockupImage">
+                                        <img src={ brandiPad2Image } />
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
                 </section>
 
             </div>

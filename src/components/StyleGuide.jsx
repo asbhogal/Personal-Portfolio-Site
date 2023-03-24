@@ -1,38 +1,19 @@
-import React from 'react';
+import brandColor1 from "../assets/images/BRAND/Brand-DesignPalette1.svg";
+import brandColor2 from "../assets/images/BRAND/Brand-DesignPalette2.svg";
+import brandColor3 from "../assets/images/BRAND/Brand-DesignPalette3.svg";
 
 const StyleGuide = () => {
   return (
     <div className="StyleGuideSection">
         <div className="ColorPalette">
-            <div id="BrandColor1" className="Color-1">
-                <div className="ColorTitle">
-                    <p>01</p>
-                    <p>black</p>
-                </div>
-                <div className="ColorInfo">
-                    <p><span>hex</span>&#58; &#35;000000</p>
-                    <p><span>rgb</span>&#58; 0, 0, 0</p>
-                </div>
+            <div id="BrandColor1" className="ColorPalette">
+                <img className="ColorPalette" src={ brandColor1 } />
             </div>
-            <div id="BrandColor2" className="Color-2">
-            <div className="ColorTitle">
-                    <p>02</p>
-                    <p>anti-flash white</p>
-                </div>
-                <div className="ColorInfo">
-                    <p><span>hex</span>&#58; &#35;f3f3f3</p>
-                    <p><span>rgb</span>&#58; 243, 243, 243</p>
-                </div>
+            <div id="BrandColor2" className="ColorPalette">
+                <img className="ColorPalette" src={ brandColor2 } />
             </div>
-            <div id="BrandColor3" className="Color-3">
-            <div className="ColorTitle">
-                <p>03</p>
-                <p>white</p>
-            </div>
-            <div className="ColorInfo">
-                <p><span>hex</span>&#58; &#35;ffffff</p>
-                <p><span>rgb</span>&#58; 255, 255, 255</p>
-            </div>
+            <div id="BrandColor3" className="ColorPalette">
+                <img className="ColorPalette" src={ brandColor3 } />
         </div>
     </div>
 </div>

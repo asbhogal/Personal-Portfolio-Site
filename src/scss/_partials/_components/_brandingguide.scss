@@ -123,20 +123,10 @@
                 text-align: right;
             }
         }
-        #BrandColor1 {
-            background-color: $Black;
-            color: $White;
-            @extend .UniversalStyle;
-        }
-        #BrandColor2 {
-            @extend .UniversalStyle;
-            background-color: $AntiFlashWhite;
-            color: $Black;
-        }
-        #BrandColor3 {
-            @extend .UniversalStyle;
-            background-color: $White;
-            color: $Black;
+        .ColorPalette {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
         }
     }
 }
