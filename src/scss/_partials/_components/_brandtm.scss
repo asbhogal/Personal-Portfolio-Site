@@ -30,7 +30,6 @@
         gap: 25px;
         .About {
             display: flex;
-            border-top: 1px solid $RaisinBlack-03;
             border-bottom: 1px solid $RaisinBlack-03;
             .AboutHeadline {
                 font-family: 'Questa Grande', serif;
@@ -269,7 +268,6 @@
     .DesignApproach,
     .Branding {
         flex-direction: row;
-        align-items: center;
         gap: 125px;
     }
 }
