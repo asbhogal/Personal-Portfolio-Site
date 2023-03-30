@@ -30,6 +30,7 @@
         gap: 25px;
         .About {
             display: flex;
+            border-top: 1px solid $RaisinBlack-03;
             border-bottom: 1px solid $RaisinBlack-03;
             .AboutHeadline {
                 font-family: 'Questa Grande', serif;
@@ -57,9 +58,13 @@
                 }
             }
         }
-        .StacksAndTools, .Mockups, .Branding, .DesignApproach {
+        .StacksAndTools,
+        .Mockups,
+        .Branding,
+        .DesignApproach,
+        .Typefaces {
             @extend .About;
-            .StacksAndToolsHeadline, .MockupsHeadline, .BrandingHeadline, .DesignHeadline {
+            .StacksAndToolsHeadline, .MockupsHeadline, .BrandingHeadline, .DesignHeadline, .TypefaceHeadline {
                 @extend .AboutHeadline;
             }
             .StacksAndToolsSummary {
@@ -94,9 +99,14 @@
                 display: grid;
                 grid-template-columns: repeat(5, 1fr);
                 gap: 10px;
-                .GridCol > img {
+                .GridCol {
+                    p {
+                        @include BodyText;
+                    }
+                    img {
                     width: 100%;
-                    height: auto;
+                    height: 150px;
+                    }
                 }
             }
         }
@@ -108,3 +118,164 @@
         }
     }
 }
+
+.ProjectLinks {
+    background-color: #222222a1;
+    position: fixed;
+    right: 15px;
+    top: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        list-style-type: none;
+    }
+    a {
+        cursor: none;
+        color: #ccc;
+        transition: 0.3s all ease;
+        &:hover {
+            background: black;
+            padding: 5px;
+            display: flex;
+            border-radius: 50%;
+            transition: 0.3s all ease;
+        }
+    }
+}
+
+.Typefaces {
+    justify-content: space-between;
+    .Typeface {
+        font-size: clamp(4.25rem, -9.5rem + 24.4444vw, 12.5rem);
+    }
+    #BrandTypeface {
+        font-family: 'Inter', sans-serif;
+    }
+    .TypefaceSet {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            list-style-type: none;
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(1rem, -0.5625rem + 5vw, 2.25rem);
+        }
+        .TypefaceExamples {
+            li {
+                display: flex;
+                gap: 20px;
+                span:nth-child(2) {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
+
+.BrandGuideSection {
+    display: flex;
+    > * {
+        display: flex;
+    }
+    .BrandGuideInfo {
+        flex-direction: column;
+        gap: 15px;
+        .LogoMarks {
+            display: flex;
+            flex-direction: column;
+            background-color: #d3d3d3;
+            padding: 5px;
+            width: 200px;
+            .BrandProjectLogo,
+            .BrandProjectIcon {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .Typography {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            > * {
+                display: flex;
+            }
+            .TypographyInfo {
+                flex-direction: column;
+                gap: 5px;
+                p {
+                    &:first-child, &:nth-child(3) {
+                        font-family: 'Switzer', sans-serif;
+                        font-weight: 600;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        border-bottom: 1px solid black;
+                        padding: 5px 0;
+                    }
+                    &:nth-child(2), &:nth-child(4) {
+                        font-family: 'Inter', sans-serif;
+                    }
+                }
+            }
+            .TypographyStyles {
+                flex-direction: column;
+                gap: 5px;
+                .WeightsTitle {
+                    font-family: "Switzer", sans-serif;
+                    font-weight: 600;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    border-bottom: 1px solid black;
+                    padding: 5px 0;
+                }
+                .TypographyList {
+                    display: flex;
+                    gap: 30px;
+                    list-style-type: none;
+                    .TypographyWeightSet, .TypographyFontSet {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (width <= 768px) {
+    .About,
+    .StacksAndTools,
+    .Mockups,
+    .DesignApproach,
+    .Branding {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 50px;
+    }
+}
+
+@media only screen and (769px <= width) {
+    .About,
+    .StacksAndTools,
+    .Mockups,
+    .DesignApproach,
+    .Branding {
+        flex-direction: row;
+        align-items: center;
+        gap: 125px;
+    }
+}
+
+$BrandWeights: (weight1: 400, weight2: 500, weight3: 600, weight4: 700, weight5: 900);
+
+@each $key, $weight in $BrandWeights {
+    #BrandTypography-#{ $weight } { font-weight: $weight; }
+};

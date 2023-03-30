@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { BsGlobe2, BsCodeSlash, BsBrush } from "react-icons/bs";
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -65,7 +66,7 @@ const Brand = () => {
                                 Project Type: Personal
                             </h3>
                             <p className="ProjectTimeline">
-                                Dec 2023 - Dec 2023
+                                Dec 2022 - Feb 2023
                             </p>
                             <p className="AboutSummary">
                             Brand is an interior design company. This project was developed from an initial crash course provided by Flux Academy on responsive design. Assets, including images, buttons, copy and typography, were used to generate components and a series of five templates in auto-layout format for breakpoints 1440px+, 1440px, 1024px, 744px and 375px. The decision was made to keep to the styling and transfer this across the different templates. These were then rendered in the form of a SPA (Single Page Application) using React with SASS, Babel and Webpack and deployed using Vercel.
@@ -83,6 +84,76 @@ const Brand = () => {
                             <br />
                             Figma | Mockups | UI Prototyping | Components
                         </p>
+                    </div>
+
+                    <div className="DesignApproach">
+                        <h2 className="DesignHeadline">
+                            design
+                        </h2>
+                        <p className="DesignSummary">
+                        The templates were kept consistent in design, aesthetic and layout. The clean, minimalistic structure with attention to whitespacing, legibility and heirarchy was also respected, paralleling the affluence communicated by the brand. The logo itself is assured, sharp and rigid, to emphasise the nature and quality of their products. The anti-flash white provides a medium through which the two extremes of black and white fuse in different elements at play and merge across various content typesets, yet still manage to become two distinct entities in their own right, emboldened by the contrasting logos used.
+                        </p>
+                    </div>
+
+                    <div className="Branding">
+                        <h2 className="BrandingHeadline">
+                            Branding
+                        </h2>
+                        
+                        <div className="BrandingRightContent">
+                            <StyleGuide />
+                        </div>
+                    </div>
+
+                    <div className="Typefaces">
+                        <h2 className="TypefaceHeadline">
+                            Typeface
+                        </h2>
+                            <div className="TypefaceSection">
+                                <div id="BrandTypeface" className="Typeface">
+                                    Inter
+                                </div>
+                                <div className="TypefaceSet">
+                                <div className="TypefaceWeights">
+                                    <ul>
+                                        <li id="BrandTypography-400">Regular</li>
+                                        <li id="BrandTypography-500">Medium</li>
+                                        <li id="BrandTypography-600">Semi Bold</li>
+                                        <li id="BrandTypography-700">Bold</li>
+                                        <li id="BrandTypography-900">Black</li>
+                                    </ul>
+                                </div>
+                                <div className="TypefaceExamples">
+                                    <ul>
+                                        <li>
+                                            <span id="BrandTypography-400">Aa</span>
+                                            <span id="BrandTypography-400">Aa</span>
+                                            <span id="BrandTypography-400">123</span>
+                                        </li>
+                                        <li>
+                                            <span id="BrandTypography-500">Aa</span>
+                                            <span id="BrandTypography-500">Aa</span>
+                                            <span id="BrandTypography-500">123</span>
+                                        </li>
+                                        <li>
+                                            <span id="BrandTypography-600">Aa</span>
+                                            <span id="BrandTypography-600">Aa</span>
+                                            <span id="BrandTypography-600">123</span>
+                                        </li>
+                                        <li>
+                                            <span id="BrandTypography-700">Aa</span>
+                                            <span id="BrandTypography-700">Aa</span>
+                                            <span id="BrandTypography-700">123</span>
+                                        </li>
+                                        <li>
+                                            <span id="BrandTypography-900">Aa</span>
+                                            <span id="BrandTypography-900">Aa</span>
+                                            <span id="BrandTypography-900">123</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
                     </div>
 
                     <div className="Grids">
@@ -113,25 +184,6 @@ const Brand = () => {
                         </div>
                     </div>
 
-                    <div className="DesignApproach">
-                        <h2 className="DesignHeadline">
-                            design
-                        </h2>
-                        <p className="DesignSummary">
-                        The templates were kept consistent in design, aesthetic and layout. The clean, minimalistic structure with attention to whitespacing, legibility and heirarchy was also respected, paralleling the affluence communicated by the brand. The logo itself is assured, sharp and rigid, to emphasise the nature and quality of their products. The anti-flash white provides a medium through which the two extremes of black and white fuse in different elements at play and merge across various content typesets, yet still manage to become two distinct entities in their own right, emboldened by the contrasting logos used.
-                        </p>
-                    </div>
-
-                    <div className="Branding">
-                        <h2 className="BrandingHeadline">
-                            Branding
-                        </h2>
-                        <div className="BrandingRightContent">
-                            <BrandGuide />
-                            <StyleGuide />
-                        </div>
-                    </div>
-
                     <div className="Mockups">
                         <h2 className="MockupsHeadline">
                             Mockups
@@ -159,10 +211,29 @@ const Brand = () => {
                             </div>
                         </div>
                     </div>
-
                 </section>
-
             </div>
+
+            <div className="ProjectLinks">
+                <ul>
+                    <li>
+                        <a href="https://github.com/asbhogal/React-Brand-Responsive-Web-Page" target="_blank" aria-label="Link to Brand code">
+                            <BsCodeSlash />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.figma.com/community/file/1187868244670810561" target="_blank" aria-label="Link to Brand templates">
+                            <BsBrush />
+                        </a>
+                    </li>
+                    <li BsGlobe2>
+                        <a href="https://brand-tm.vercel.app/" target="_blank" aria-label="Link to Brand website">
+                            <BsGlobe2 />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
             <Footer />
 
             { showButton && (

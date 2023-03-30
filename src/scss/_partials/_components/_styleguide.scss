@@ -1,0 +1,43 @@
+.StyleGuideSection {
+    display: flex;
+    flex-direction: column;
+    > * {
+        display: flex;
+    }
+    .ColorPalette {
+        width: 100%;
+        .UniversalStyle {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 5px;
+            font-family: 'Switzer', sans-serif;
+            font-size: 14px;
+            width: 100px;
+            height: 100px;
+            .ColorTitle {
+                display: flex;
+                justify-content: space-between;
+                text-align: right;
+            }
+        }
+        .ColorPalette {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.Boards {
+    flex-direction: column;
+    .BrandLogoBoard, .BrandLogoMarkBoard {
+        height: 100%;
+        width: 100%;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}
