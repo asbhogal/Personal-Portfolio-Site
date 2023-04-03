@@ -2,40 +2,92 @@
 @use '../mixins' as *;
 
 .Projects {
-    display: flex;
-    flex-direction: column;
-    > * {
-        display: flex;
-    }
-    .Row {
-        flex: 1 1 0;
-    }
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     .ProjectSectionLink {
+        position: relative;
         height: 100%;
         width: 100%;
+        transition: 0.3s all ease-in-out;
+        z-index: 1;
         img {
             height: 100%;
             width: 100%;
             object-fit: cover;
+            transition: 0.3s all ease-in-out;
         }
-        &:hover .ProjectLinkOverlay {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        &:hover {
+            transition: 0.3s all ease-in-out;
+            .ProjectLinkOverlay {
+                display: flex;
+                transition: 0.3s all ease-in-out;
+                span {
+                    color: $Platinum;
+                    @include BodyText;
+                }
+            }
+            #BrandProjectLinkOverlay {
+                background-color: rgba(255, 255, 255, 0.474);
+            }
+            #LiteLifeProjectLinkOverlay {
+                background-color: rgba(38, 37, 37, 0.375);
+            }
+            #OceanicaProjectLinkOverlay {
+                background-color: #262c318f;
+            }
+            #KryptoProjectLinkOverlay {
+                background-color: rgb(11 15 47 / 73%);
+            }
+            .ProjectImage {
+                filter: blur(5px);
+                transition: 0.3s all ease-in-out;
+            }
         }
     }
 }
 
-.ProjectLinkOverlay {
-    position: relative;
-    background: red;
-    height: 100%;
-    width: 100%;
-    display: none;
+#BrandProjectLinkOverlay > span {
+    color: $RaisinBlack-03;
 }
 
-@media only screen and (width <= 600px) {
-    .Row {
-        flex-direction: column;
+#CryptoverseProjectSectionLink {
+    overflow: hidden;
+    > img {
+        scale: 1.4;
+        overflow: hidden;
+    }
+} 
+
+.ProjectLinkOverlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    display: none;
+    transition: 0.3s all ease-in-out;
+    .ProjectLogo {
+        width: 25% !important;
+        height: auto !important;
+    }
+    .ProjectIcons {
+        display: flex;
+        width: 40px;
+        > img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    button {
+        text-transform: uppercase;
+        outline: none;
+        border: none;
+        padding: 10px 20px;
+        background-color: $RaisinBlack-03;
+        color: $Platinum;
     }
 }
