@@ -4,12 +4,13 @@
 .Projects {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    transition: 0.3s all ease-in-out;
     .ProjectSectionLink {
         position: relative;
         height: 100%;
         width: 100%;
         transition: 0.3s all ease-in-out;
-        z-index: 1;
+        cursor: none;
         img {
             height: 100%;
             width: 100%;
@@ -30,7 +31,7 @@
                 background-color: rgba(255, 255, 255, 0.474);
             }
             #LiteLifeProjectLinkOverlay {
-                background-color: rgba(38, 37, 37, 0.375);
+                background-color: rgba(209, 208, 208, 0.554);
             }
             #OceanicaProjectLinkOverlay {
                 background-color: #262c318f;
@@ -46,7 +47,12 @@
     }
 }
 
-#BrandProjectLinkOverlay > span {
+.CursorLinkHovered {
+    border: 1px solid $Grullo !important;
+}
+
+#BrandProjectLinkOverlay > span,
+#LiteLifeProjectLinkOverlay > span {
     color: $RaisinBlack-03;
 }
 
@@ -57,6 +63,11 @@
         overflow: hidden;
     }
 } 
+
+#LiteLifeProjectLinkOverlay > .ProjectLogo {
+    width: 40px !important;
+    height: auto;
+}
 
 .ProjectLinkOverlay {
     position: absolute;

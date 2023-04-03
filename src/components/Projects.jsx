@@ -52,7 +52,7 @@ const Projects = () => {
                 initial={ { opacity: 0 } } 
                 animate={ { opacity: 1 } } 
                 className="Projects">
-                    <Link to="projects/brand" id="BrandProjectSectionLink" className="ProjectSectionLink">
+                    <Link to="brand" id="BrandProjectSectionLink" className="ProjectSectionLink">
                         <img className="ProjectImage" src={ brandProjectCoverLink } />
                         <div id="BrandProjectLinkOverlay" className="ProjectLinkOverlay">
                             <img className="ProjectLogo" src={ brandLogoBlack } />
