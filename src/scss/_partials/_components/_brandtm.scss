@@ -27,16 +27,15 @@
     }
     .BrandContentSection {
         flex-direction: column;
-        gap: 25px;
         .About {
             display: flex;
-            border-bottom: 1px solid $RaisinBlack-03;
+            // border-bottom: 1px solid $RaisinBlack-03;
             .AboutHeadline {
                 font-family: 'Questa Grande', serif;
-                font-style: normal;
+                font-style: italic;
                 font-weight: 400;
                 font-size: clamp(4.25rem, -9.5rem + 24.4444vw, 12.5rem);
-                text-transform: lowercase;
+                text-transform: uppercase;
                 color: $RaisinBlack-03;
             }
             .AboutRightContent {
@@ -53,9 +52,13 @@
                     font-family: "Switzer", sans-serif;
                 }
                 .AboutSummary {
+                    text-transform: uppercase;
                     @include BodyText;
                 }
             }
+        }
+        .Typefaces {
+            flex-direction: column;
         }
         .StacksAndTools,
         .Mockups,
@@ -78,9 +81,23 @@
             width: 100%;
             flex-direction: column;
             .MockupImages {
+                display: flex;
                 height: 100%;
                 width: 100%;
                 object-fit: contain;
+                > * {
+                    display: flex;
+                }
+                .MockupTable {
+                    flex-direction: column;
+                    .MockupImageRow {
+                        display: flex;
+                        flex-direction: column;
+                        .MockupImage {
+                            display: flex;
+                        }
+                    }
+                }
                 img {
                     height: 100%;
                     width: 100%;
@@ -113,6 +130,7 @@
             @extend .AboutRightContent;
         }
         .DesignSummary {
+            text-transform: uppercase;
             @include BodyText;
         }
     }
@@ -250,6 +268,9 @@
 }
 
 @media only screen and (width <= 768px) {
+    .BrandContentSection {
+        gap: 25px;
+    }
     .About,
     .StacksAndTools,
     .Mockups,
@@ -262,12 +283,14 @@
 }
 
 @media only screen and (769px <= width) {
+    .BrandContentSection {
+        gap: 250px;
+    }
     .About,
     .StacksAndTools,
     .Mockups,
     .DesignApproach,
     .Branding {
-        flex-direction: row;
         gap: 125px;
     }
 }

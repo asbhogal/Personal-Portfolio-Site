@@ -4,27 +4,25 @@ import { motion as m } from "framer-motion";
 
 import Footer from "./Footer";
 import Header from "./Header";
-import brandProjectCoverLink from "../assets/images/ProjectCovers/iPhone B07.png";
-import liteLifeProjectCoverLink from "../assets/images/ProjectCovers/LiteLife.png";
-import oceanicaProjectCoverLink from "../assets/images/ProjectCovers/Oceanica.png";
-import kryptoProjectCoverLink from "../assets/images/ProjectCovers/Krypto.png";
-import metaverseMadnessProjectCoverLink from "../assets/images/ProjectCovers/MetaverseMadness.png";
-import cryptoverseProjectCoverLink from "../assets/images/ProjectCovers/Cryptoverse.png";
+import brandProjectCoverLink from "../assets/images/ProjectCovers/iPhone B07.jpg";
+import liteLifeProjectCoverLink from "../assets/images/ProjectCovers/LiteLife.jpg";
+import oceanicaProjectCoverLink from "../assets/images/ProjectCovers/Oceanica.jpg";
+import kryptoProjectCoverLink from "../assets/images/ProjectCovers/Krypto.jpg";
+import metaverseMadnessProjectCoverLink from "../assets/images/ProjectCovers/MetaverseMadness.jpg";
+import cryptoverseProjectCoverLink from "../assets/images/ProjectCovers/Cryptoverse.jpg";
 
-import kmcLogo from "../assets/images/logos/KMC_Birmingham_Logo.svg";
 import brandLogoBlack from "../assets/images/logos/brand-logo-black.svg";
-import brandLogoWhite from "../assets/images/logos/brand-logo-white.svg";
-import brandIconBlack from "../assets/images/logos/brand-icon-black.svg";
-import brandIconWhite from "../assets/images/logos/brand-icon-white.svg";
 import oceanicaLogo from "../assets/images/logos/Oceanica-Logo.svg";
-import oceanicaIcon from "../assets/images/logos/Oceanica-Icon.svg";
 import liteLifeLogo from "../assets/images/logos/LiteLife-Logo.svg";
 import kryptoLogo from "../assets/images/logos/Krypto-Logo.svg";
 import metaversusLogo from "../assets/images/logos/Metaversus-Logo.svg";
 import cryptoverseLogo from "../assets/images/logos/Cryptoverse-Logo.svg";
 import { TbChevronUpRight } from "react-icons/tb";
+import { fadeIn } from "../../utils/motion";
 
-const Projects = () => {
+const Projects = ({}) => {
+
+    const MotionLink = m(Link)
 
     const [showButton, setShowButton] = useState(false);
 
@@ -48,18 +46,15 @@ const Projects = () => {
     return (
         <>
             <Header />
-            <m.div 
-                initial={ { opacity: 0 } } 
-                animate={ { opacity: 1 } } 
-                className="Projects">
-                    <Link to="brand" id="BrandProjectSectionLink" className="ProjectSectionLink">
+            <div className="Projects">
+                    <MotionLink transition={{ ease: 'easeOut', delay: 10 }} to="brand" id="BrandProjectSectionLink" className="ProjectSectionLink">
                         <img className="ProjectImage" src={ brandProjectCoverLink } />
                         <div id="BrandProjectLinkOverlay" className="ProjectLinkOverlay">
                             <img className="ProjectLogo" src={ brandLogoBlack } />
                             <span>Figma | React | JS | Babel | SASS/SCSS | PostCSS | Webpack | Vercel</span>
 {/*                             <button className="ProjectVisitButton">Visit</button>
  */}                        </div>
-                    </Link>
+                    </MotionLink>
                     <Link to="projects/litelife" id="LiteLifeProjectSectionLink" className="ProjectSectionLink">
                         <img className="ProjectImage" src={ liteLifeProjectCoverLink } />
                         <div id="LiteLifeProjectLinkOverlay" className="ProjectLinkOverlay">
@@ -101,7 +96,7 @@ const Projects = () => {
 {/*                             <button className="ProjectVisitButton">Visit</button>
  */}                        </div>
                     </Link>
-            </m.div>
+            </div>
             <Footer />
 
             { showButton && (

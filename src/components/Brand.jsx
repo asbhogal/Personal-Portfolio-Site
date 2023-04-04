@@ -59,7 +59,7 @@ const Brand = () => {
 
                     <div className="About">
                         <h2 className="AboutHeadline">
-                            About
+                            01 - About
                         </h2>
                         <div className="AboutRightContent">
                             <h3 className="AboutSubLine">
@@ -76,7 +76,7 @@ const Brand = () => {
 
                     <div className="StacksAndTools">
                         <h2 className="StacksAndToolsHeadline">
-                            Stacks
+                            02 - Stacks & tools
                         </h2>
                         <p className="StacksAndToolsSummary">
                             React | JS | SCSS | Babel | Webpack | Git | npm | Vercel
@@ -88,7 +88,7 @@ const Brand = () => {
 
                     <div className="DesignApproach">
                         <h2 className="DesignHeadline">
-                            design
+                            03 - design
                         </h2>
                         <p className="DesignSummary">
                         The templates were kept consistent in design, aesthetic and layout. The clean, minimalistic structure with attention to whitespacing, legibility and heirarchy was also respected, paralleling the affluence communicated by the brand. The logo itself is assured, sharp and rigid, to emphasise the nature and quality of their products. The anti-flash white provides a medium through which the two extremes of black and white fuse in different elements at play and merge across various content typesets, yet still manage to become two distinct entities in their own right, emboldened by the contrasting logos used.
@@ -97,7 +97,7 @@ const Brand = () => {
 
                     <div className="Branding">
                         <h2 className="BrandingHeadline">
-                            Branding
+                            04 - Branding
                         </h2>
                         
                         <div className="BrandingRightContent">
@@ -107,7 +107,7 @@ const Brand = () => {
 
                     <div className="Typefaces">
                         <h2 className="TypefaceHeadline">
-                            Typeface
+                            05 - Typeface
                         </h2>
                             <div className="TypefaceSection">
                                 <div id="BrandTypeface" className="Typeface">
@@ -158,7 +158,7 @@ const Brand = () => {
 
                     <div className="Grids">
                         <h2 className="GridsHeadline">
-                            Grids
+                            06 - Grids
                         </h2>
                         <div className="GridContainer">
                             <div className="GridCol">
@@ -186,7 +186,7 @@ const Brand = () => {
 
                     <div className="Mockups">
                         <h2 className="MockupsHeadline">
-                            Mockups
+                            07 - Mockups
                         </h2>
                         <div className="MockupImages">
                             <div className="MockupTable">
