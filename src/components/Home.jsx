@@ -4,62 +4,52 @@ import Footer from "../components/Footer"
 import { TbChevronUpRight } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
-import brandProjectCoverLink from "../assets/images/ProjectCovers/iPhone B07.jpg";
-import liteLifeProjectCoverLink from "../assets/images/ProjectCovers/LiteLife.jpg";
-import oceanicaProjectCoverLink from "../assets/images/ProjectCovers/Oceanica.jpg";
-import kryptoProjectCoverLink from "../assets/images/ProjectCovers/Krypto.jpg";
-import metaverseMadnessProjectCoverLink from "../assets/images/ProjectCovers/MetaverseMadness.jpg";
-import cryptoverseProjectCoverLink from "../assets/images/ProjectCovers/Cryptoverse.jpg";
+import brandLogo from "../assets/images/logos/brand-logo-white.svg";
+import cryptoverseLogo from "../assets/images/logos/Cryptoverse-Logo.svg";
+import oceanicaLogo from "../assets/images/logos/Oceanica-Logo.svg";
+import metaversusLogo from "../assets/images/logos/Metaversus-Logo.svg";
+import kryptoLogo from "../assets/images/logos/Krypto-Logo.svg";
+import liteLifeLogo from "../assets/images/logos/LiteLife-Logo.svg";
+import brandScreen from "../assets/images/Home/BrandScreen.png";
+import liteLifeScreen from "../assets/images/Home/LiteLifeScreen.png";
+import oceanicaScreen from "../assets/images/Home/OceanicaScreen.png";
+import cryptoverseScreen from "../assets/images/Home/CryptoverseScreen.png";
+import metaverseScreen from "../assets/images/Home/MetaverseScreen.png";
+import CTA from "./CTA";
 
 const Home = () => {
     return (
         <>
             <Navbar />
-            <m.section 
-                initial={{opacity: 0}} 
-                animate={{opacity: 1}} 
-                className="HomePageSection">
-                <h1 className="MainHomeTitle">Creating bold, elegant &#38; humanistic interfaces &#124; est. 2020</h1>
-                <aside className="CTAButtons">
-                    <button className="ViewFiles">
-                        <Link to='/projects'>
-                            projects
-                            <TbChevronUpRight />
-                        </Link>
-                    </button>
-                    <button className="ViewFiles">
-                        <a target="_blank" href="mailto:business@amansinghbhogal.com">contact</a>
-                        <TbChevronUpRight />
-                    </button>
-                </aside>
-                
-            </m.section>
-            <div className="ProjectsCarousel">
-                    <div id="BrandProjectCarouselItem" className="ProjectCarouselItem">
-                        <img src={ brandProjectCoverLink } />
-                        <h3>Brand</h3>
-                    </div>
-                    <div id="LiteLifeProjectCarouselItem" className="ProjectCarouselItem">
-                        <img src={ liteLifeProjectCoverLink } />
-                        <h3>Lite Life</h3>
-                    </div>
-                    <div id="OceanicaProjectCarouselItem" className="ProjectCarouselItem">
-                        <img src={ oceanicaProjectCoverLink } />
-                        <h3>Brand</h3>
-                    </div>
-                    <div id="KryptoProjectCarouselItem" className="ProjectCarouselItem">
-                    <img src={ oceanicaProjectCoverLink } />
-                        <h3>Brand</h3>
-                    </div>
-                    <div id="MetaversusProjectCarouselItem" className="ProjectCarouselItem">
-                        <img src={ oceanicaProjectCoverLink } />
-                        <h3>Brand</h3>
-                    </div>
-                    <div id="CryptoverseProjectCarouselItem" className="ProjectCarouselItem">
-                        <img src={ oceanicaProjectCoverLink } />
-                        <h3>Brand</h3>
-                    </div>
+            <section className="HomePageSection">
+                <h1 className="MainHomeTitle">
+                    Creating <span className="HeadlineAccent">bold</span>, 
+                    <span className="HeadlineAccent"> elegant </span> &#38;
+                    <span className="HeadlineAccent"> humanistic </span>
+                    interfaces 
+                    <br /> 
+                    <span className="HeadlineYear">- est. 2020-</span>
+                </h1>
+                <div className="HomePageProjectLogos">
+                    <img src={ brandLogo } />
+                    <img src={ cryptoverseLogo } />
+                    <img src={ oceanicaLogo } />
+                    <img src={ metaversusLogo } />
+                    <img src={ kryptoLogo } />
+                    <img src={ liteLifeLogo } />
                 </div>
+            </section>
+
+            <section className="ProjectScreens">
+                <img src={ brandScreen } />
+                <img src={ liteLifeScreen } />
+                <img src={ oceanicaScreen } />
+                <img src={ cryptoverseScreen } />
+                <img src={ metaverseScreen } />
+            </section>
+
+            <CTA />
+            
             <Footer />
         </>
     )

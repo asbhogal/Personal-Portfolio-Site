@@ -1,0 +1,45 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+.CTA {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    gap: 15px;
+    > * {
+        display: flex;
+    }
+    p {
+        font-family: 'Questa Grande', serif;
+        font-style: italic;
+        font-size: clamp(2rem, 0.9652rem + 5.174vw, 5.625rem);
+        text-transform: uppercase;
+        text-align: center;
+    }
+    div {
+        gap: 15px;
+        button {
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            padding: 10px 20px;
+            font-family: 'Anaheim', serif;
+            text-transform: uppercase;
+            text-decoration: none !important;
+            cursor: none;
+            &:first-child {
+                background-color: #C6C0C4;
+            }
+            &:nth-child(2) {
+                background-color: #C5B29A;
+            }
+            a {
+                cursor: none;
+                font-size: 24px;
+                text-decoration: none !important;
+            }
+        }
+    }
+}

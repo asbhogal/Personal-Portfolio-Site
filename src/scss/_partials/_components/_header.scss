@@ -80,17 +80,15 @@
 }
 
 .HireCTAHeader {
-    font-family: 'Switzer', sans-serif;
-    font-size: 21px;
-    font-weight: 600;
-    padding: 0 10px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-family: 'Anaheim', serif;
+    font-size: 24px;
     text-transform: uppercase;
     text-decoration: none;
-    color: $RaisinBlack-03;
-    transition: $Transition-03;
+    color: black;;
+    background-color: #C5B29A;
     cursor: none;
-    &:hover {
-        transform: translateX(-2px);
-        transition: $Transition-03;
-    }
 }

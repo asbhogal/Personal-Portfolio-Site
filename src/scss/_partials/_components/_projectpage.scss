@@ -64,7 +64,9 @@
         }
     }
     .ProjectTypefaces,
-    .ProjectAssetsAndBranding {
+    .ProjectAssetsAndBranding,
+    .ProjectMockups,
+    .ProjectScreens {
         @extend .ProjectAbout;
         .ProjectTypefaceInfo {
             display: flex;
@@ -89,6 +91,9 @@
                 }
             }
         }
+    }
+    .ProjectScreens > img {
+        border-radius: $ImgBorderRadius;
     }
 }
 

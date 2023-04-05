@@ -4,62 +4,38 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: calc(100vh - 152px);
+    height: calc(100vh - 92px);
     // z-index: 2;
     .MainHomeTitle {
         font-family: 'Questa Grande', serif;
         text-transform: uppercase;
         font-weight: 400;
-        // font-size: clamp(1rem, -1.1429rem + 10.7143vw, 16rem);
-        // font-size: clamp(4.25rem, 3.1786rem + 5.3571vw, 8rem); 
         font-size: clamp(1.5rem, 0.822rem + 3.3898vw, 3.875rem); 
         text-align: center;
-        color: $RaisinBlack-03;
-        font-variant-caps: all-small-caps;
-        &::first-letter {
-            font-family: 'Monsieur La Doulaise', cursive;
-            text-transform: capitalize;
-            font-size: clamp(4rem, 0.5714rem + 17.1429vw, 16rem);            line-height: 0px;
+        color: $Argent;
+        .HeadlineAccent {
+            font-size: clamp(2rem, 0.9295rem + 5.3524vw, 5.75rem);
+            font-style: italic;
+            color: #C5B29A;
+        }
+        .HeadlineYear {
+            font-size: 36px;
         }
     }
-    .ViewFiles {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        font-family: 'Switzer', sans-serif;
-        font-size: 16px;
-        background: none;
-        border: none;
-        // cursor: pointer;
-        a {
-            text-decoration: none;
-            color: $RaisinBlack-03;
-        }
-        &:hover {
-            transition: $Transition-03;
-            svg {
-                transition: $Transition-03;
-                transform: translateX(2px);
-            }
+    .HomePageProjectLogos {
+        background-color: #000;
+        border-radius: $ImgBorderRadius;
+        img {
+            width: 80px;
+            height: auto;
         }
     }
 }
 
-.ProjectsCarousel {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 40px;
-        .ProjectCarouselItem {
-            display: flex;
-            flex-direction: column;
-            flex: 1 1 0;
-            width: 100%;
-            height: 100%;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
+.ProjectScreens {
+    flex-direction: column;
+    gap: 10px;
+    img {
+        border-radius: $ImgBorderRadius;
     }
+}
