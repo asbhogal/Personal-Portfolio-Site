@@ -11,8 +11,9 @@
         text-transform: uppercase;
         font-weight: 400;
         // font-size: clamp(1rem, -1.1429rem + 10.7143vw, 16rem);
-        font-size: clamp(4.25rem, 3.1786rem + 5.3571vw, 8rem);  
-        text-align: right;
+        // font-size: clamp(4.25rem, 3.1786rem + 5.3571vw, 8rem); 
+        font-size: clamp(1.5rem, 0.822rem + 3.3898vw, 3.875rem); 
+        text-align: center;
         color: $RaisinBlack-03;
         font-variant-caps: all-small-caps;
         &::first-letter {
@@ -43,3 +44,22 @@
         }
     }
 }
+
+.ProjectsCarousel {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 40px;
+        .ProjectCarouselItem {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 0;
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }

@@ -7,7 +7,8 @@
     font-size: 42px;
     background: none;
     border: none;
-    color: $RaisinBlack-03;
+    filter: invert(1);
+    mix-blend-mode: difference;
     transition: $Transition-03;
     cursor: none;
     &:hover {

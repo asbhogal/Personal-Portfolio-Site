@@ -1,0 +1,109 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+.Project {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    > * {
+        display: flex;
+    }
+    .ProjectHero {
+        height: 665px;
+        width: 100%;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: $ImgBorderRadius;
+        }
+    }
+    .ProjectLinks {
+        justify-content: center;
+        gap: 45px;
+        .ProjectButton {
+            border: none;
+            outline: none;
+            background-color: #C6C0C4;
+            border-radius: 40px;
+            padding: 10px 20px;
+            font-family: 'Anaheim', serif;
+            text-transform: uppercase;
+        }
+    }
+    .ProjectAbout {
+        flex-direction: column;
+        gap: 10px;
+        border-top: 1px solid $Argent;
+        > * {
+            display: flex;
+        }
+        h2 {
+            font-family: 'Questa Grande', serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: clamp(1.5rem, 0.7864rem + 3.5682vw, 4rem);
+            text-transform: uppercase;
+            color: $Argent;
+        }
+        .ProjectDateAndType,
+        .ProjectStacksAndTools,
+        .ProjectLozenges {
+            justify-content: space-between;
+            font-family: 'Anaheim', serif;
+            text-transform: uppercase;
+        }
+        .ProjectLozenge {
+            border: 1px solid $Argent;
+            border-radius: 40px;
+            padding: 10px 20px;
+        }
+        .ProjectAboutContent {
+            font-family: 'Anaheim', serif;
+            text-align: justify;
+        }
+    }
+    .ProjectTypefaces,
+    .ProjectAssetsAndBranding {
+        @extend .ProjectAbout;
+        .ProjectTypefaceInfo {
+            display: flex;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 20px;
+            #BrandTypeface {
+                font-family: 'Inter', sans-serif;
+                &:first-child {
+                    font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
+                }
+            }
+            .TypefaceWeights {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .TypefaceWeightsList {
+                    display: flex;
+                    flex-wrap: wrap;
+                    list-style-type: none;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
+
+/****** BRAND WEIGHTINGS ******/
+
+$BrandWeights: (weight1: 400, weight2: 500, weight3: 600, weight4: 700, weight5: 900);
+
+@each $key, $weight in $BrandWeights {
+    #Weight-#{ $weight } {font-weight: $weight; }
+};
+
+@media only screen and (width <= 375px) {
+    .ProjectLinks {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px !important;
+    }
+}

@@ -23,7 +23,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
-    border-bottom: 1px solid $BlackChocolate;
+    border-bottom: 1px solid red;
 }
 
 @mixin HeadingThreeProject {
@@ -43,9 +43,9 @@
 }
 
 @mixin BodyText {
-    font-family: 'Switzer', sans-serif;
+    font-family: 'Anaheim', serif;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
 }
 

@@ -8,10 +8,10 @@ import { motion as m } from "framer-motion"
 
 const Footer = () => {
     return (
-        <m.footer 
-            initial={{opacity: 0}} 
-            animate={{opacity: 1}} 
-            className="Footer">
+        <footer className="Footer">
+            <div className="Copyright">
+                <p>©Aman Singh Bhogal - 2023</p>
+            </div>
             <div className="SocialIcons">
                 <a href="mailto:business@amansinghbhogal.com" aria-label="Contact Aman by email">
                     <MdAlternateEmail />
@@ -29,7 +29,7 @@ const Footer = () => {
                     <FiFigma />
                 </a> 
             </div>
-        </m.footer>
+        </footer>
     )
 }
 

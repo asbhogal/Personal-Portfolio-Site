@@ -4,16 +4,22 @@
     height: 60px;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    border-top: 1px solid $Argent;
     //z-index: 2;
+    .Copyright {
+        color: $Argent;
+        text-transform: uppercase;
+        font-family: 'Anaheim', serif;
+    }
     .SocialIcons {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 180px;
+        width: 120px;
         a {
             display: flex;
-            color: $Black;
+            color: $Argent;
             cursor: none;
             transition: $Transition-03;
             &:hover {
@@ -21,5 +27,12 @@
                 transition: $Transition-03;
             }
         }
+    }
+}
+
+@media only screen and (width <= 375px) {
+    .Footer {
+        flex-direction: column;
+        align-items: center;
     }
 }
