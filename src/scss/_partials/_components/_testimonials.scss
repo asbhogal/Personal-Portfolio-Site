@@ -2,7 +2,7 @@
 @use '../mixins' as *;
 
 .swiper-pagination-bullet-active {
-    background: $RaisinBlack-03 !important;
+    background: $RaisinBlack !important;
 }
 
 .swiper-pagination-bullets {
@@ -57,7 +57,7 @@
     // line-height: 160px;
     text-align: right;
     text-transform: lowercase;
-    color: $RaisinBlack-03;
+    color: $RaisinBlack;
 }
 
 .TestimonialImage {

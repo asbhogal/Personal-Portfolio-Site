@@ -1,0 +1,22 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+.SkillLozenges {
+    position: relative;
+    bottom: 24px;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    justify-content: space-between;
+    font-family: 'Anaheim', serif;
+    text-transform: uppercase;
+    .SkillLozenge {
+        background-color: #C5B29A;
+        color: black;
+        border: 1px solid $Argent;
+        border-radius: 40px;
+        padding: 10px 20px;
+        font-size: 24px;
+    }
+}

@@ -50,9 +50,15 @@ const Brand = () => {
                     <img src={ brandHeroImg }/>
                 </section>
                 <section className="ProjectLinks">
-                    <button className="ProjectButton">templates</button>
-                    <button className="ProjectButton">code</button>
-                    <button className="ProjectButton">site</button>
+                    <a target="_blank" href="#">
+                        <button className="ProjectButton">templates</button>
+                    </a>
+                    <a target="_blank" href="#">
+                        <button className="ProjectButton">code</button>
+                    </a>
+                    <a target="_blank" href="#">
+                        <button className="ProjectButton">site</button>
+                    </a>
                 </section>
                 <section className="ProjectAbout">
                     <h2>About</h2>

@@ -3,16 +3,16 @@ const CTA = () => {
     <section className="CTA">
         <p>Available for agency and freelance work</p>
         <div>
-            <button>
-                <a href="mailto:careers@amansinghbhogal.com">
+            <a href="mailto:careers@amansinghbhogal.com">
+                <button>
                     For Agencies
-                </a>
-            </button>
-            <button>
-                <a href="#">
-                    For Clients
-                </a>
-            </button>
+                </button>
+            </a>
+            <a href="mailto:business@amansinghbhogal.com">
+                <button>
+                        For Clients
+                </button>
+            </a>
         </div>
     </section>
   )

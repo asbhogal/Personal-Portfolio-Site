@@ -4,6 +4,7 @@ import Footer from "../components/Footer"
 import { TbChevronUpRight } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
+import { BsArrowUpRightSquare, BsCodeSlash } from "react-icons/bs";
 import brandLogo from "../assets/images/logos/brand-logo-white.svg";
 import cryptoverseLogo from "../assets/images/logos/Cryptoverse-Logo.svg";
 import oceanicaLogo from "../assets/images/logos/Oceanica-Logo.svg";
@@ -16,6 +17,8 @@ import oceanicaScreen from "../assets/images/Home/OceanicaScreen.png";
 import cryptoverseScreen from "../assets/images/Home/CryptoverseScreen.png";
 import metaverseScreen from "../assets/images/Home/MetaverseScreen.png";
 import CTA from "./CTA";
+import SkillLozenge from "./SkillLozenge";
+import CodeIcon from "./CodeIcon";
 
 const Home = () => {
     return (
@@ -32,20 +35,60 @@ const Home = () => {
                 </h1>
                 <div className="HomePageProjectLogos">
                     <img src={ brandLogo } />
-                    <img src={ cryptoverseLogo } />
                     <img src={ oceanicaLogo } />
+                    <img src={ cryptoverseLogo } />
                     <img src={ metaversusLogo } />
-                    <img src={ kryptoLogo } />
                     <img src={ liteLifeLogo } />
                 </div>
             </section>
 
+            <section className="SkillsOffered">
+                <div className="SkillBox">
+                    <div className="SkillBoxTopRow">
+                        <p>Logo & Branding</p>
+                        <CodeIcon />
+                    </div>
+                    <p>Abstract insofar truth moral pinnacle. Ubermensch inexpedient war dead play gains derive dead horror victorious love war. Zarathustra law.</p>
+                </div>
+                <div className="SkillBox">
+                    <p>Web Design</p>
+                    <p>Abstract insofar truth moral pinnacle. Ubermensch inexpedient war dead play gains derive dead horror victorious love war. Zarathustra law.</p>
+                </div>
+                <div className="SkillBox">
+                    <p>Web Development</p>
+                    <p>Abstract insofar truth moral pinnacle. Ubermensch inexpedient war dead play gains derive dead horror victorious love war. Zarathustra law.</p>
+                </div>
+                <div className="SkillBox">
+                    <p>Site Optimisation</p>
+                    <p>Abstract insofar truth moral pinnacle. Ubermensch inexpedient war dead play gains derive dead horror victorious love war. Zarathustra law.</p>
+                </div>
+            </section>
+
             <section className="ProjectScreens">
-                <img src={ brandScreen } />
-                <img src={ liteLifeScreen } />
-                <img src={ oceanicaScreen } />
-                <img src={ cryptoverseScreen } />
-                <img src={ metaverseScreen } />
+                <div className="HomePageSectionBar">
+                    <h2>Selected Work</h2>
+                    <BsArrowUpRightSquare size={ 40 } />
+                </div>
+                <Link className="ProjectLink" to="brand">
+                    <SkillLozenge />
+                    <img src={ brandScreen } />
+                </Link>
+                <Link className="ProjectLink" to="litelife">
+                    <SkillLozenge />
+                    <img src={ liteLifeScreen } />
+                </Link>
+                <Link className="ProjectLink" to="oceanica">
+                    <SkillLozenge />
+                    <img src={ oceanicaScreen } />
+                </Link>
+                <Link className="ProjectLink" to="cryptoverse">
+                    <SkillLozenge />
+                    <img src={ cryptoverseScreen } />
+                </Link>
+                <Link className="ProjectLink" to="metaverse">
+                    <SkillLozenge />
+                    <img src={ metaverseScreen } />
+                </Link>
             </section>
 
             <CTA />
