@@ -47,17 +47,17 @@
 
 .SkillsOffered {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit,minmax(225px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(265px,1fr));
     gap: 10px;
     padding: 10px 0;
     .SkillBox {
         border-radius: 10px;
         background: $ChineseBlack-01;
         border: 1px solid $Khaki;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        display: grid;
+        grid-gap: 10px;
         gap: 10px;
+        padding: 25px;
         padding: 20px;
         p:first-child {
             font-family: 'Questa Grande', serif;
@@ -87,11 +87,27 @@
     }
     .ProjectLink {
         position: relative;
+        align-items: center;
+        justify-content: center;
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: $ImgBorderRadius;
         }
+    }
+}
+
+.LinkOverlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        height: 150px;
+        width: 150px;
+        object-fit: contain;
     }
 }

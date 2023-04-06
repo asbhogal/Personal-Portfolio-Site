@@ -19,6 +19,7 @@ import metaverseScreen from "../assets/images/Home/MetaverseScreen.png";
 import CTA from "./CTA";
 import SkillLozenge from "./SkillLozenge";
 import CodeIcon from "./CodeIcon";
+import Arrow from "./Arrow";
 
 const Home = () => {
     return (
@@ -72,6 +73,9 @@ const Home = () => {
                 <Link className="ProjectLink" to="brand">
                     <SkillLozenge />
                     <img src={ brandScreen } />
+                    <div className="LinkOverlay">
+                        <Arrow />
+                    </div>
                 </Link>
                 <Link className="ProjectLink" to="litelife">
                     <SkillLozenge />
