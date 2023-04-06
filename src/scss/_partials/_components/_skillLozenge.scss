@@ -7,7 +7,6 @@
     display: flex;
     position: absolute;
     width: 100%;
-    z-index: 1;
     justify-content: space-between;
     font-family: 'Anaheim', serif;
     text-transform: uppercase;
@@ -15,8 +14,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #C5B29A;
-        color: black;
+        background-color: $ChineseBlack-01;
+        color: $Argent;
         border: 1px solid $Argent;
         border-radius: 40px;
         padding: 10px 20px;

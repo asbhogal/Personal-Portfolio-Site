@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { BsGlobe2, BsCodeSlash, BsBrush } from "react-icons/bs";
-
+import brandImages from "../assets/images/BRAND/BrandImages.png";
+import brandComponents from "../assets/images/BRAND/BrandComponents.svg";
+import brandColorPalette from "../assets/images/BRAND/BrandColorPalette.svg";
 import Header from "./Header";
 import Footer from "./Footer";
 import brandHeroImg from "../assets/images/BRAND/mockups/BrandHeroImg.png";
@@ -98,6 +100,17 @@ const Brand = () => {
                 </section>
                 <section className="ProjectAssetsAndBranding">
                     <h2>Branding & Assets</h2>
+                    <div className="ProjectAssetsAndBrandingContainer">
+                        <div className="AssetsAndBranding">
+                            <img src={ brandImages } />
+                        </div>
+                        <div className="AssetsAndBranding">
+                            <img src={ brandComponents } />
+                        </div>
+                        <div className="AssetsAndBranding">
+                            <img src={ brandColorPalette } />
+                        </div>
+                    </div>
                 </section>
 
                 <section className="ProjectMockups">

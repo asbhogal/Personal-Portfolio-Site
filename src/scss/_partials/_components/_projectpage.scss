@@ -83,6 +83,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
+                font-size: 24px;
                 .TypefaceWeightsList {
                     display: flex;
                     flex-wrap: wrap;
@@ -92,6 +93,25 @@
             }
         }
     }
+    .ProjectAssetsAndBranding {
+        display: flex;
+        > * {
+            display: flex;
+        }
+        .ProjectAssetsAndBrandingContainer {
+            .AssetsAndBranding {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            } 
+        }
+    }
+
     .ProjectScreens > img {
         border-radius: $ImgBorderRadius;
     }

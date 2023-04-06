@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import "../scss/index.scss";
 import Navbar from "./Header";
 import Footer from "../components/Footer"
@@ -22,6 +24,26 @@ import CodeIcon from "./CodeIcon";
 import Arrow from "./Arrow";
 
 const Home = () => {
+
+    const [showButton, setShowButton] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300) {
+                setShowButton(true);
+            } else {
+                setShowButton(false);
+            }
+        });
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo ({
+            top: 0,
+            behaviour: "smooth"
+        });
+    };
+
     return (
         <>
             <Navbar />
@@ -68,9 +90,9 @@ const Home = () => {
             <section className="ProjectScreens">
                 <div className="HomePageSectionBar">
                     <h2>Selected Work</h2>
-                    <BsArrowUpRightSquare size={ 40 } />
+                    <Arrow />
                 </div>
-                <Link className="ProjectLink" to="brand">
+                <Link className="ProjectLink" to="/projects/brand">
                     <SkillLozenge />
                     <img src={ brandScreen } />
                     <div className="LinkOverlay">
@@ -80,24 +102,43 @@ const Home = () => {
                 <Link className="ProjectLink" to="litelife">
                     <SkillLozenge />
                     <img src={ liteLifeScreen } />
+                    <div className="LinkOverlay">
+                        <Arrow />
+                    </div>
                 </Link>
                 <Link className="ProjectLink" to="oceanica">
                     <SkillLozenge />
                     <img src={ oceanicaScreen } />
+                    <div className="LinkOverlay">
+                        <Arrow />
+                    </div>
                 </Link>
                 <Link className="ProjectLink" to="cryptoverse">
                     <SkillLozenge />
                     <img src={ cryptoverseScreen } />
+                    <div className="LinkOverlay">
+                        <Arrow />
+                    </div>
                 </Link>
                 <Link className="ProjectLink" to="metaverse">
                     <SkillLozenge />
                     <img src={ metaverseScreen } />
+                    <div className="LinkOverlay">
+                        <Arrow />
+                    </div>
                 </Link>
             </section>
 
             <CTA />
             
             <Footer />
+
+            { showButton && (
+                <button onClick={ scrollToTop } className="ScrollToTop">
+                    &#8593;
+                </button>
+            ) }
+
         </>
     )
 }
