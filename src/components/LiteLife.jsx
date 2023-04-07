@@ -1,17 +1,21 @@
 import { useEffect, useState } from "react";
-import brandImages from "../assets/images/BRAND/BrandImages.png";
-import brandLogoBlack from "../assets/images/logos/brand-logo-black.svg";
-import brandLogoWhite from "../assets/images/logos/brand-logo-white.svg";
-import brandComponents from "../assets/images/BRAND/BrandComponents.svg";
-import brandColorPalette from "../assets/images/BRAND/BrandColorPalette.svg";
+
+import yamahaKeyboard from "../assets/images/LiteLife/assets/Yamaha.jpg";
+import screwdriverBlack from "../assets/images/LiteLife/assets/Screwdriver.jpg";
+import iMacWhite from "../assets/images/LiteLife/assets/iMacWhite.jpg";
+import earphonesCase from "../assets/images/LiteLife/assets/Earphones.jpg";
+import deskLamp from "../assets/images/LiteLife/assets/DeskLamp.jpg";
+import cordDark from "../assets/images/LiteLife/assets/Cord.jpg";
+import chargingBank from "../assets/images/LiteLife/assets/ChargingBank.jpg";
+import blackMacBook from "../assets/images/LiteLife/assets/BlackMacbook.jpg";
+import liteLifeColorPalette from "../assets/images/LiteLife/assets/LiteLifePalette.svg";
 import Header from "./Header";
 import Footer from "./Footer";
 import liteLifeHeroImg from "../assets/images/LiteLife/LiteLifeHeroImg.png";
-import brandiPhoneToggleImage from "../assets/images/BRAND/mockups/Brand-iPhoneToggleMockup.png";
-import brandiMacImage from "../assets/images/BRAND/mockups/Brand-iMacMockup.png";
-import brandMacBookImage from "../assets/images/BRAND/mockups/Brand-MacBookMockup.png";
-import brandiPadImage from "../assets/images/BRAND/mockups/Brand-iPadMockup.png";
-import brandiPad2Image from "../assets/images/BRAND/mockups/Brand-iPad2Mockup.png";
+import liteLifeGalaxyImage from "../assets/images/LiteLife/mockups/GalaxyMockup.png";
+import liteLifeMacbookAndIphoneImage from "../assets/images/LiteLife/mockups/MacbookAndiPhoneMockup.png";
+import liteLifeiPadImage from "../assets/images/LiteLife/mockups/iPadMockup.png";
+import liteLifeiMacImage from "../assets/images/LiteLife/mockups/iMacMockup.png";
 
 import CTA from "./CTA";
 
@@ -63,7 +67,7 @@ const LiteLife = () => {
                     </div>
                     <div className="ProjectStacksAndTools">
                         <span>Material UI</span>
-                        <span>REACT | JS | BABEL | WEBPACK | GIT | VERCEL</span>
+                        <span>REACT | JS | COMMERCE.JS | STRIPE | WEBPACK | GIT | VERCEL</span>
                     </div>
                     <p className="ProjectAboutContent">Merciful christian intentions philosophy marvelous. Mountains pious philosophy sea snare virtues faith faith eternal-return noble madness. Deceptions snare virtues victorious superiority free selfish enlightenment spirit self salvation. Philosophy gains prejudice holiest self eternal-return eternal-return law ocean faith grandeur.</p>
                 </section>
@@ -82,16 +86,21 @@ const LiteLife = () => {
                 <section className="ProjectAssetsAndBranding">
                     <h2>Branding & Assets</h2>
                     <div className="ProjectAssetsAndBrandingContainer">
-                        <div className="AssetsAndBranding">
-                            <img src={ brandImages } />
-                            <img src={ brandLogoBlack } />
-                            <img src={ brandLogoWhite } />
+                        <div id="LiteLifeAssets" className="AssetsAndBranding">
+                            <img src={ yamahaKeyboard } />
+                            <img src={ screwdriverBlack } />
+                            <img src={ cordDark } />
+                            <img src={ deskLamp } />
+                            <img src={ chargingBank } />
+                            <img src={ iMacWhite } />
+                            <img src={ blackMacBook } />
+                            <img src={ earphonesCase } />
                         </div>
-                        <div className="AssetsAndBranding">
+                        {/* <div className="AssetsAndBranding">
                             <img src={ brandComponents } />
-                        </div>
+                        </div> */}
                         <div className="AssetsAndBranding">
-                            <img src={ brandColorPalette } />
+                            <img className="LiteLifeColorPalette" src={ liteLifeColorPalette } />
                         </div>
                     </div>
                 </section>
@@ -103,11 +112,10 @@ const LiteLife = () => {
 
                 <section className="ProjectScreens">
                     <h2>Screens</h2>
-                    <img src={ brandiPhoneToggleImage } />
-                    <img src={ brandiMacImage } />
-                    <img src={ brandMacBookImage } />
-                    <img src={ brandiPadImage } />
-                    <img src={ brandiPad2Image } />
+                    <img src={ liteLifeGalaxyImage } />
+                    <img src={ liteLifeMacbookAndIphoneImage } />
+                    <img src={ liteLifeiPadImage } />
+                    <img src={ liteLifeiMacImage } />
                 </section>
                 <CTA />
             </div>

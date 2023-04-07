@@ -9,7 +9,7 @@
         display: flex;
     }
     .ProjectHero {
-        height: 665px;
+        height: 100%;
         width: 100%;
         img {
             height: 100%;
@@ -92,6 +92,12 @@
                     font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
                 }
             }
+            #OceanicaTypeface {
+                font-family: 'Manrope', sans-serif;
+                &:first-child {
+                    font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
+                }
+            }
             .TypefaceWeights {
                 display: flex;
                 flex-direction: column;
@@ -116,6 +122,14 @@
             padding: 10px;
             border-radius: $ImgBorderRadius;
             gap: 10px;
+            #LiteLifeAssets {
+                display: grid !important;
+                grid-template-columns: repeat(auto-fit,minmax(120px,1fr)) !important;
+                > img {
+                    object-fit: cover;
+                    border-radius: $ImgBorderRadius;
+                }
+            }
             .AssetsAndBranding {
                 display: flex;
                 flex-direction: column;
@@ -126,6 +140,10 @@
                     width: 100%;
                     height: 100%;
                     object-fit: contain;
+                }
+                .LiteLifeColorPalette {
+                    width: 50%;
+                    height: auto;
                 }
             } 
         }
