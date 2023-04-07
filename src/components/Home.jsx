@@ -74,15 +74,24 @@ const Home = () => {
                     <p>Abstract insofar truth moral pinnacle. Ubermensch inexpedient war dead play gains derive dead horror victorious love war. Zarathustra law.</p>
                 </div>
                 <div className="SkillBox">
-                    <p>Web Design</p>
+                <div className="SkillBoxTopRow">
+                        <p>Web Design</p>
+                        <CodeIcon />
+                    </div>
                     <p>Abstract insofar truth moral pinnacle. Ubermensch inexpedient war dead play gains derive dead horror victorious love war. Zarathustra law.</p>
                 </div>
                 <div className="SkillBox">
-                    <p>Web Development</p>
+                    <div className="SkillBoxTopRow">
+                        <p>Web Development</p>
+                        <CodeIcon />
+                    </div>
                     <p>Abstract insofar truth moral pinnacle. Ubermensch inexpedient war dead play gains derive dead horror victorious love war. Zarathustra law.</p>
                 </div>
                 <div className="SkillBox">
-                    <p>Site Optimisation</p>
+                    <div className="SkillBoxTopRow">
+                        <p>Site Optimisation</p>
+                        <CodeIcon />
+                    </div>
                     <p>Abstract insofar truth moral pinnacle. Ubermensch inexpedient war dead play gains derive dead horror victorious love war. Zarathustra law.</p>
                 </div>
             </section>
@@ -99,21 +108,21 @@ const Home = () => {
                         <Arrow />
                     </div>
                 </Link>
-                <Link className="ProjectLink" to="litelife">
+                <Link className="ProjectLink" to="/projects/litelife">
                     <SkillLozenge />
                     <img src={ liteLifeScreen } />
                     <div className="LinkOverlay">
                         <Arrow />
                     </div>
                 </Link>
-                <Link className="ProjectLink" to="oceanica">
+                <Link className="ProjectLink" to="/projects/oceanica">
                     <SkillLozenge />
                     <img src={ oceanicaScreen } />
                     <div className="LinkOverlay">
                         <Arrow />
                     </div>
                 </Link>
-                <Link className="ProjectLink" to="cryptoverse">
+                <Link className="ProjectLink" to="/projects/cryptoverse">
                     <SkillLozenge />
                     <img src={ cryptoverseScreen } />
                     <div className="LinkOverlay">

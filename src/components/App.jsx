@@ -12,17 +12,20 @@ import Testimonials from "./Testimonials";
 import FreeResources from "./FreeResources";
 
 import Cursor from "./Cursor"
+import ScrollRestoration from "./ScrollRestoration";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 
-const App = (router) => {
+const App = () => {
+
+    
 
     return (
         <>
             <Analytics />
-            <Router>
                 <Cursor />
+                <ScrollRestoration />
                 <Routes>
                     <Route path='/' element={ <Home /> } />
                     <Route path='/about' element={ <About /> } />
@@ -37,7 +40,6 @@ const App = (router) => {
                     <Route path='/freeresources' element={ <FreeResources /> } />
                     <Route path='*' element={ <ErrorPage /> } />
                 </Routes>
-                </Router>
         </>
     )
 };
