@@ -18,7 +18,7 @@
 
     .NavContainer > .NavOverlay {
         position: fixed;
-        background: $Grullo;
+        background:$VampireBlack;
         z-index: -2;
         top: 0;
         // left: 0;
@@ -38,9 +38,9 @@
         border-radius: 50%;
         transition: $Transition-03;
         padding: 2.4em;
-        .HamburgerContainerOpen {
+        /* .HamburgerContainerOpen {
             background-color: $Grullo;
-        }
+        } */
     }
 }
 
@@ -52,7 +52,7 @@
     width: 1.5rem;
     height: .125rem;
     border-radius: .625rem;
-    background-color: $RaisinBlack;
+    background-color: $Argent;
     left: 0;
     right: 0;
     transform: rotate(0deg);
@@ -66,7 +66,7 @@
 .LineTop.Spin {
     top: 45px;
     transform: rotate(135deg);
-    background-color: $Platinum;
+    background-color: $Argent;
 }
 
 .LineBottom {
@@ -76,19 +76,26 @@
 .LineBottom.Spin {
     bottom: 45px;
     transform: rotate(225deg);
-    background-color: $Platinum;
+    background-color: $Argent;
 }
 
 .HireCTAHeader {
-    border: none;
+    border: 1px solid $Khaki;
     outline: none;
     border-radius: 40px;
-    padding: 10px 20px;
+    padding: 5px 10px;
     font-family: 'Anaheim', serif;
-    font-size: 24px;
+    font-size: 21px;
     text-transform: uppercase;
     text-decoration: none;
-    color: black;;
-    background-color: #C5B29A;
+    color: $VampireBlack;
+    background-color: $Khaki;
+    transition: $Transition-03;
     cursor: none;
+    &:hover {
+        background-color: transparent;
+        border: 1px solid $Khaki;
+        color: $Khaki;
+        transition: $Transition-03;
+    }
 }

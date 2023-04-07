@@ -19,11 +19,13 @@
         }
         .NavItems > a {
             text-decoration: none;
-            color: $RaisinBlack;
+            text-transform: uppercase;
+            color: $Argent;
             transition: $Transition-03;
             cursor: none;
             &:hover {
                 transition: $Transition-03;
+                color: $Khaki;
                 padding-left: 8px;
             }
         }
@@ -53,7 +55,7 @@
                 }
                 a {
                     text-decoration: none;
-                    color: $RaisinBlack;
+                    color: $Argent;
                 }
             }
         }

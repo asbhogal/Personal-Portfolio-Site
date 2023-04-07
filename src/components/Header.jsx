@@ -18,7 +18,7 @@ const Header = (props) => {
                 <div className="NavBar">
                     <div className="MainLogo">
                     <Link to='/' aria-label="Return to the home page">
-                        <img src={ navLogo } width="75px" height="75px" alt="The initials A S B in elegant font, all connected to one another, in pale black"></img>
+                        <img src={ navLogo } width="45px" height="45px" alt="The initials A S B in elegant font, all connected to one another, in pale black"></img>
                     </Link>
                     </div>
                     <div className="MenuToggle" onClick={ () => setNavOpen(!navOpen) }>
