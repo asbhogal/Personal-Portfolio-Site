@@ -3,6 +3,9 @@ import Home from "./Home";
 import About from "./About";
 import Projects from "./Projects";
 import Brand from "./Brand";
+import LiteLife from "./LiteLife";
+import Oceanica from "./Oceanica";
+import Cryptoverse from "./Cryptoverse";
 import ErrorPage from "./404";
 import AdditionalServices from "./AdditionalServices";
 import Testimonials from "./Testimonials";
@@ -25,6 +28,9 @@ const App = (router) => {
                     <Route path='/about' element={ <About /> } />
                     <Route path='/projects' element={ <Projects /> } />
                     <Route path='/projects/brand' element={ <Brand /> } />
+                    <Route path='/projects/litelife' element={ <LiteLife /> } />
+                    <Route path='/projects/oceanica' element={ <Oceanica /> } />
+                    <Route path='/projects/cryptoverse' element={ <Cryptoverse /> } />
                     <Route path='/AmanSinghBhogal-Brand-Manifesto.png' element={ <FreeResources /> } />
                     <Route path='/testimonials' element={ <Testimonials /> } />
                     <Route path='/additionalservices' element={ <AdditionalServices /> } />
