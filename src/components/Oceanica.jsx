@@ -9,19 +9,10 @@ import Footer from "./Footer";
 import brandHeroImg from "../assets/images/BRAND/mockups/BrandHeroImg.png";
 import brandMockups from "../assets/images/BRAND/mockups/BrandMockups.png";
 import brandiPhoneToggleImage from "../assets/images/BRAND/mockups/Brand-iPhoneToggleMockup.png";
-import brandHeroLogo from "../assets/images/BRAND/BrandHeroLogo.svg";
-import brandHeroMockup from "../assets/images/BRAND/BrandHeroImage.png";
 import brandiMacImage from "../assets/images/BRAND/mockups/Brand-iMacMockup.png";
 import brandMacBookImage from "../assets/images/BRAND/mockups/Brand-MacBookMockup.png";
-import brandiPhoneImage from "../assets/images/BRAND/mockups/Brand-iPhone14Mockup.png";
 import brandiPadImage from "../assets/images/BRAND/mockups/Brand-iPadMockup.png";
 import brandiPad2Image from "../assets/images/BRAND/mockups/Brand-iPad2Mockup.png";
-import brandGridWideImg from "../assets/images/BRAND/GridWide.png";
-import brandGridDesktopImg from "../assets/images/BRAND/GridDesktop.png";
-import brandGridTabletImg from "../assets/images/BRAND/GridTablet(Large).png";
-import brandGridTabletSmallImg from "../assets/images/BRAND/GridTablet(Small).png";
-import brandGridMobileImg from "../assets/images/BRAND/GridMobile.png";
-import brandMobileMenuToggle from "../assets/images/BRAND/BrandMobileMenu.png";
 import CTA from "./CTA";
 
 const Brand = () => {

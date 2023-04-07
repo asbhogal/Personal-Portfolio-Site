@@ -86,6 +86,12 @@
                     font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
                 }
             }
+            #LiteLifeTypeface {
+                font-family: 'Roboto', sans-serif;
+                &:first-child {
+                    font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
+                }
+            }
             .TypefaceWeights {
                 display: flex;
                 flex-direction: column;
