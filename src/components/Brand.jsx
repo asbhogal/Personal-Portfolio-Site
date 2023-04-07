@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { BsGlobe2, BsCodeSlash, BsBrush } from "react-icons/bs";
 import brandImages from "../assets/images/BRAND/BrandImages.png";
+import brandLogoBlack from "../assets/images/logos/brand-logo-black.svg";
+import brandLogoWhite from "../assets/images/logos/brand-logo-white.svg";
 import brandComponents from "../assets/images/BRAND/BrandComponents.svg";
 import brandColorPalette from "../assets/images/BRAND/BrandColorPalette.svg";
 import Header from "./Header";
@@ -103,6 +105,8 @@ const Brand = () => {
                     <div className="ProjectAssetsAndBrandingContainer">
                         <div className="AssetsAndBranding">
                             <img src={ brandImages } />
+                            <img src={ brandLogoBlack } />
+                            <img src={ brandLogoWhite } />
                         </div>
                         <div className="AssetsAndBranding">
                             <img src={ brandComponents } />

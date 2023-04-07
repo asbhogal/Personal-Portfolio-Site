@@ -192,6 +192,9 @@
 /****** TABLET (SMALL) - 0px -> 375px ******/
 
 @media only screen and (width <= 375px) {
+  .ProjectAssetsAndBrandingContainer {
+    flex-direction: column;
+  }
   .MainContainer {
     padding: 24px;
   }
