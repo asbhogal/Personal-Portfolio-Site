@@ -7,7 +7,7 @@ import brandColorPalette from "../assets/images/BRAND/BrandColorPalette.svg";
 import Header from "./Header";
 import Footer from "./Footer";
 import brandHeroImg from "../assets/images/BRAND/mockups/BrandHeroImg.png";
-import brandMockups from "../assets/images/BRAND/mockups/BrandMockups.png";
+import oceanicaMockups from "../assets/images/Oceanica/mockups/OceanicaTemplates.png";
 import brandiPhoneToggleImage from "../assets/images/BRAND/mockups/Brand-iPhoneToggleMockup.png";
 import brandiMacImage from "../assets/images/BRAND/mockups/Brand-iMacMockup.png";
 import brandMacBookImage from "../assets/images/BRAND/mockups/Brand-MacBookMockup.png";
@@ -109,7 +109,7 @@ const Brand = () => {
 
                 <section className="ProjectMockups">
                     <h2>Mockups</h2>
-                    <img src={ brandMockups } />
+                    <img src={ oceanicaMockups } />
                 </section>
                 <section className="ProjectScreens">
                     <h2>Screens</h2>
