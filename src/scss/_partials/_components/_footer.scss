@@ -1,11 +1,14 @@
 @use '../variables' as *;
 
 .Footer {
-    height: 85px;
     width: 100%;
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid $Argent;
+    padding: 35px 0;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
     //z-index: 2;
     .Copyright {
         color: $Argent;
@@ -16,7 +19,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 120px;
+        gap: 10px;
         a {
             display: flex;
             color: $Argent;
@@ -30,9 +33,9 @@
     }
 }
 
-@media only screen and (width <= 375px) {
+/* @media only screen and (width <= 375px) {
     .Footer {
         flex-direction: column;
         align-items: center;
     }
-}
+} */
