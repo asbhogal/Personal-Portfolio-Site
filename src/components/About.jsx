@@ -24,20 +24,74 @@ const About = () => {
                                 Responsive Web Design &#124; Low & High-Fidelity Wireframing &#124; Components &#124; UI Prototyping
                             </p>
                         </div>
-                        <p className="AboutText">AMAN SINGH BHOGAL is a UI Engineer with 3 years of client side experience in Front End Development. His work covers designing, building and optimising CMS-based websites (WordPress and Hubspot) and static applications using vanilla HTML5, CSS3, SASS and JavaScript. Throughout the years, he has built a rapport with clients by establishing trust, maintaining transparent, consistent communication and translating and communicating brands with both clarity and creativity.
+                        <p className="AboutText">Aman Singh Bhogal is a UI Engineer with 3 years of client side experience in Front End Development. His work covers designing, building and optimising CMS-based websites (WordPress and Hubspot) and static applications using vanilla HTML5, CSS3, SASS and JavaScript. 
                         <br></br>
                         <br></br>
-                        He now works with international clients across a broad spectrum of web design and development services and creates interfaces using Adobe CC, Figma and React from existing and new design briefs, as well as offering consultancies and mentoring for junior developers.
+                        He now works with international clients across a broad spectrum of web design and development services and creates interfaces using Adobe CC, Figma, React and Next.js from existing and new design briefs, as well as offering consultancies and mentoring for junior developers.
                         </p>
                         <div className="AboutExperience">
-                            <div className="ExperienceSection">
-                                <span className="ExperienceLozenge">May 2020 - Feb 2021</span>
-                            </div>
-                            <div className="ExperienceSection">
-                                <span className="ExperienceLozenge">Feb 2021 - Oct 2022</span>
-                            </div>
-                            <div className="ExperienceSection">
-                                <span className="ExperienceLozenge">Oct 2022 - Present</span>
+                        <h3>Professional Experience</h3>
+                            <div className="ExperienceContainer">
+                                <div className="ExperienceSection">
+                                    <span className="ExperienceTitle">WordPress Designer & Developer</span>
+                                    <span className="ExperienceLozenge">May 2020 - Feb 2021</span>
+                                    <span className="ExperienceInfo">
+
+                                        <ul>
+                                            <li>Designed & developed using Astra Pro, Elementor Pro, WooCommerce and Stripe</li>
+                                            <li>Established branding which was used across the site and social media content</li>
+                                            <li>Created beta group testing forms and discussed feedback with stakeholders</li>
+                                            <li>Negotiated 10% off the annual subscription price for Securi Platform</li>
+                                            <li>Led the handover meeting with stakeholders and internal team</li>
+                                        </ul>
+                                    </span>
+                                    <div className="ExperienceSkills">
+                                        <span>WordPress</span>
+                                        <span>Elementor</span>
+                                        <span>Astra</span>
+                                        <span>WooCommerce</span>
+                                        <span>Stripe</span>
+                                        <span>YoastSEO</span>
+                                        <span>HTML5</span>
+                                        <span>CSS3</span>
+                                    </div>
+                                </div>
+                                <div className="ExperienceSection">
+                                    <span className="ExperienceTitle">Web Designer & Developer</span>
+                                    <span className="ExperienceLozenge">Feb 2021 - Oct 2022</span>
+                                    <div className="ExperienceSkills">
+                                        <span>HTML5</span>
+                                        <span>CSS3</span>
+                                        <span>JS</span>
+                                        <span>jquery</span>
+                                        <span>PHP</span>
+                                        <span>WordPress</span>
+                                        <span>Hubspot</span>
+                                    </div>
+                                </div>
+                                <div className="ExperienceSection">
+                                    <span className="ExperienceTitle">Front End Developer & UI Engineer</span>
+                                    <span className="ExperienceLozenge">Oct 2022 - Present</span>
+                                    <div className="ExperienceSkills">
+                                        <span>Figma</span>
+                                        <span>Adobe Illustrator</span>
+                                        <span>Adobe Photoshop</span>
+                                        <span>Adobe XD</span>
+                                        <span>React</span>
+                                        <span>Next.js</span>
+                                        <span>Redux</span>
+                                        <span>Toolkit/RTK</span>
+                                        <span>SASS (SCSS)</span>
+                                        <span>API</span>
+                                        <span>Webpack</span>
+                                        <span>Parcel</span>
+                                        <span>Git</span>
+                                        <span>NPM</span>
+                                        <span>CI/CD</span>
+                                        <span>HTML5</span>
+                                        <span>CSS3</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
