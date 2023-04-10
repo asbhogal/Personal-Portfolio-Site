@@ -7,12 +7,8 @@ import brandColorPalette from "../assets/images/BRAND/BrandColorPalette.svg";
 import Header from "./Header";
 import Footer from "./Footer";
 import cryptoverseHeroImg from "../assets/images/Cryptoverse/mockups/cryptoverseHeroImg.png";
-import brandMockups from "../assets/images/BRAND/mockups/BrandMockups.png";
-import brandiPhoneToggleImage from "../assets/images/BRAND/mockups/Brand-iPhoneToggleMockup.png";
-import brandiMacImage from "../assets/images/BRAND/mockups/Brand-iMacMockup.png";
-import brandMacBookImage from "../assets/images/BRAND/mockups/Brand-MacBookMockup.png";
-import brandiPadImage from "../assets/images/BRAND/mockups/Brand-iPadMockup.png";
-import brandiPad2Image from "../assets/images/BRAND/mockups/Brand-iPad2Mockup.png";
+import cryptoverseHPImage from "../assets/images/Cryptoverse/mockups/HPMockup.png"
+import cryptoverseiPadImages from "../assets/images/Cryptoverse/mockups/iPadMockups.png";
 
 import CTA from "./CTA";
 
@@ -45,14 +41,14 @@ const Brand = () => {
                     <img src={ cryptoverseHeroImg }/>
                 </section>
                 <section className="ProjectLinks">
-                    <a target="_blank" href="#">
+                    {/* <a target="_blank" href="#">
                         <button className="ProjectButton">templates</button>
+                    </a> */}
+                    <a target="_blank" href="https://github.com/asbhogal/Next.js-Cryptocurrency-App" className="ProjectButton">
+                        code
                     </a>
-                    <a target="_blank" href="#">
-                        <button className="ProjectButton">code</button>
-                    </a>
-                    <a target="_blank" href="#">
-                        <button className="ProjectButton">site</button>
+                    <a target="_blank" href="https://next-js-cryptocurrency-app.vercel.app/" className="ProjectButton">
+                        site
                     </a>
                 </section>
                 <section className="ProjectAbout">
@@ -104,17 +100,15 @@ const Brand = () => {
                     </div>
                 </section>
 
-                <section className="ProjectMockups">
+                {/* <section className="ProjectMockups">
                     <h2>Mockups</h2>
                     <img src={ brandMockups } />
-                </section>
+                </section> */}
+
                 <section className="ProjectScreens">
                     <h2>Screens</h2>
-                    <img src={ brandiPhoneToggleImage } />
-                    <img src={ brandiMacImage } />
-                    <img src={ brandMacBookImage } />
-                    <img src={ brandiPadImage } />
-                    <img src={ brandiPad2Image } />
+                    <img src={ cryptoverseiPadImages } />
+                    <img src={ cryptoverseHPImage } />
                 </section>
                 <CTA />
             </div>

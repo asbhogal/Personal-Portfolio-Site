@@ -22,13 +22,23 @@
         justify-content: space-between;
         gap: 45px;
         .ProjectButton {
-            border: none;
+            border: 1px solid $Argent;
             outline: none;
-            background-color: #C6C0C4;
+            background-color: $Argent;
+            color: $SmokyBlack;
             border-radius: 40px;
             padding: 10px 20px;
             font-family: 'Anaheim', serif;
             text-transform: uppercase;
+            text-decoration: none;
+            transition: $Transition-03;
+            &:hover {
+                background-color: transparent;
+                color: $Argent;
+                border: 1px solid $Argent;
+                transition: $Transition-03;
+                cursor: none;
+            }
         }
     }
     .ProjectAbout {
@@ -52,7 +62,7 @@
             justify-content: space-between;
             font-family: 'Anaheim', serif;
             text-transform: uppercase;
-            font-size: clamp(1rem, 0.6432rem + 1.7841vw, 2.25rem);
+            font-size: clamp(1rem, 0.9108rem + 0.446vw, 1.3125rem);
         }
         .ProjectLozenge {
             border: 1px solid $Argent;
@@ -61,7 +71,7 @@
         }
         .ProjectAboutContent {
             font-family: 'Anaheim', serif;
-            font-size: clamp(1rem, 0.6432rem + 1.7841vw, 2.25rem);
+            font-size: clamp(1rem, 0.9108rem + 0.446vw, 1.3125rem);
             text-align: justify;
             text-transform: uppercase;
         }
@@ -186,5 +196,11 @@ $CryptoverseWeights: (weight1: 200, weight2: 300, weight3: 700);
         flex-direction: column;
         align-items: center;
         gap: 10px !important;
+    }
+}
+
+@media only screen and (width <= 748px) {
+    #LiteLiteAssetsAndBranding {
+        flex-direction: column;
     }
 }

@@ -48,11 +48,11 @@ const LiteLife = () => {
                     <img src={ liteLifeHeroImg }/>
                 </section>
                 <section className="ProjectLinks">
-                    <a target="_blank" href="#">
-                        <button className="ProjectButton">code</button>
+                    <a target="_blank" href="https://github.com/asbhogal/React-Tech-Commerce.Js-Site" className="ProjectButton">
+                        code
                     </a>
-                    <a target="_blank" href="#">
-                        <button className="ProjectButton">site</button>
+                    <a target="_blank" href="https://litelife.vercel.app/" className="ProjectButton">
+                        site
                     </a>
                 </section>
                 <section className="ProjectAbout">
@@ -85,7 +85,7 @@ const LiteLife = () => {
                 </section>
                 <section className="ProjectAssetsAndBranding">
                     <h2>Branding & Assets</h2>
-                    <div className="ProjectAssetsAndBrandingContainer">
+                    <div id="LiteLiteAssetsAndBranding" className="ProjectAssetsAndBrandingContainer">
                         <div id="LiteLifeAssets" className="AssetsAndBranding">
                             <img src={ yamahaKeyboard } />
                             <img src={ screwdriverBlack } />
@@ -105,17 +105,12 @@ const LiteLife = () => {
                     </div>
                 </section>
 
-                {/* <section className="ProjectMockups">
-                    <h2>Mockups</h2>
-                    <img src={ brandMockups } />
-                </section> */}
-
                 <section className="ProjectScreens">
                     <h2>Screens</h2>
                     <img src={ liteLifeGalaxyImage } />
                     <img src={ liteLifeMacbookAndIphoneImage } />
-                    <img src={ liteLifeiPadImage } />
                     <img src={ liteLifeiMacImage } />
+                    <img src={ liteLifeiPadImage } />
                 </section>
                 <CTA />
             </div>

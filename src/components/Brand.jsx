@@ -7,22 +7,13 @@ import brandComponents from "../assets/images/BRAND/BrandComponents.svg";
 import brandColorPalette from "../assets/images/BRAND/BrandColorPalette.svg";
 import Header from "./Header";
 import Footer from "./Footer";
-import brandHeroImg from "../assets/images/BRAND/mockups/BrandHeroImg.png";
-import brandMockups from "../assets/images/BRAND/mockups/BrandMockups.png";
-import brandiPhoneToggleImage from "../assets/images/BRAND/mockups/Brand-iPhoneToggleMockup.png";
-import brandHeroLogo from "../assets/images/BRAND/BrandHeroLogo.svg";
-import brandHeroMockup from "../assets/images/BRAND/BrandHeroImage.png";
-import brandiMacImage from "../assets/images/BRAND/mockups/Brand-iMacMockup.png";
-import brandMacBookImage from "../assets/images/BRAND/mockups/Brand-MacBookMockup.png";
-import brandiPhoneImage from "../assets/images/BRAND/mockups/Brand-iPhone14Mockup.png";
-import brandiPadImage from "../assets/images/BRAND/mockups/Brand-iPadMockup.png";
-import brandiPad2Image from "../assets/images/BRAND/mockups/Brand-iPad2Mockup.png";
-import brandGridWideImg from "../assets/images/BRAND/GridWide.png";
-import brandGridDesktopImg from "../assets/images/BRAND/GridDesktop.png";
-import brandGridTabletImg from "../assets/images/BRAND/GridTablet(Large).png";
-import brandGridTabletSmallImg from "../assets/images/BRAND/GridTablet(Small).png";
-import brandGridMobileImg from "../assets/images/BRAND/GridMobile.png";
-import brandMobileMenuToggle from "../assets/images/BRAND/BrandMobileMenu.png";
+import brandHeroImg from "../assets/images/BRAND/mockups/optimised/BrandHeroImg.png";
+import brandMockups from "../assets/images/BRAND/mockups/optimised/BrandMockups.png";
+import brandiPhoneToggleImage from "../assets/images/BRAND/mockups/optimised/Brand-iPhoneToggleMockup.png";
+import brandiMacImage from "../assets/images/BRAND/mockups/optimised/Brand-iMacMockup.png";
+import brandMacBookImage from "../assets/images/BRAND/mockups/optimised/Brand-MacBookMockup.png";
+import brandiPadImage from "../assets/images/BRAND/mockups/optimised/Brand-iPadMockup.png";
+import brandiPad2Image from "../assets/images/BRAND/mockups/optimised/Brand-iPad2Mockup.png";
 import CTA from "./CTA";
 
 const Brand = () => {
@@ -54,14 +45,14 @@ const Brand = () => {
                     <img src={ brandHeroImg }/>
                 </section>
                 <section className="ProjectLinks">
-                    <a target="_blank" href="#">
-                        <button className="ProjectButton">templates</button>
+                    <a target="_blank" href="https://www.figma.com/community/file/1187868244670810561/" className="ProjectButton">
+                        templates
                     </a>
-                    <a target="_blank" href="#">
-                        <button className="ProjectButton">code</button>
+                    <a target="_blank" href="https://github.com/asbhogal/React-Brand-Responsive-Web-Page" className="ProjectButton">
+                        code
                     </a>
-                    <a target="_blank" href="#">
-                        <button className="ProjectButton">site</button>
+                    <a target="_blank" href="https://brand-tm.vercel.app/" className="ProjectButton">
+                        site
                     </a>
                 </section>
                 <section className="ProjectAbout">

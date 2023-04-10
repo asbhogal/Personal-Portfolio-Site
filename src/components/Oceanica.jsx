@@ -9,9 +9,9 @@ import Footer from "./Footer";
 import brandHeroImg from "../assets/images/BRAND/mockups/BrandHeroImg.png";
 import oceanicaMockups from "../assets/images/Oceanica/mockups/OceanicaTemplates.png";
 import oceanicaPrototypes from "../assets/images/Oceanica/OceanicaPrototypes.png";
-import oceanicaiPhoneMockup from "../assets/images/Oceanica/mockups/iPhoneMockup.png";
-import oceanicaiPadMockup from "../assets/images/Oceanica/mockups/iPadMockup.png";
-import oceanicaMacbookMockup from "../assets/images/Oceanica/mockups/MacbookMockup.png";
+import oceanicaiPhoneMockup from "../assets/images/Oceanica/mockups/iPhoneMockup.jpg";
+import oceanicaiPadMockup from "../assets/images/Oceanica/mockups/iPadMockup.jpg";
+import oceanicaMacbookMockup from "../assets/images/Oceanica/mockups/MacbookMockup.jpg";
 import CTA from "./CTA";
 
 const Brand = () => {
@@ -43,14 +43,14 @@ const Brand = () => {
                     <img src={ brandHeroImg }/>
                 </section>
                 <section className="ProjectLinks">
-                    <a target="_blank" href="#">
-                        <button className="ProjectButton">templates</button>
+                    <a target="_blank" href="https://www.figma.com/community/file/1190467806509137896/" className="ProjectButton">
+                        templates
                     </a>
-                    <a target="_blank" href="#">
-                        <button className="ProjectButton">code</button>
+                    <a target="_blank" href="https://github.com/asbhogal/React-Oceanica-Responsive-Web-Page" className="ProjectButton">
+                        code
                     </a>
-                    <a target="_blank" href="#">
-                        <button className="ProjectButton">site</button>
+                    <a target="_blank" href="https://oceanica.vercel.app/" className="ProjectButton">
+                        site
                     </a>
                 </section>
                 <section className="ProjectAbout">

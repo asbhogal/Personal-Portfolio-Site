@@ -2,6 +2,7 @@
 
 .ScrollToTop {
     position: fixed;
+    scroll-behavior: smooth;
     bottom: 20px;
     right: 20px;
     font-size: 42px;
