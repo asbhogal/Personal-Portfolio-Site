@@ -9,6 +9,10 @@
     outline: 1px solid red;
 }
 
+html {
+    background-color: $SmokyBlack;
+}
+
 ::-webkit-scrollbar {
     width: .625rem;
 }
