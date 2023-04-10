@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="Copyright">
                 <p>©Aman Singh Bhogal - 2023</p>
             </div>
-            <WebsiteCarbonBadge />
+            <WebsiteCarbonBadge url="www.amansinghbhogal.com" />
             <div className="SocialIcons">
                 <a target="_blank" href="https://www.linkedin.com/in/amansinghbhogal" aria-label="Visit Aman's LinkedIn page">
                     <FaLinkedinIn />

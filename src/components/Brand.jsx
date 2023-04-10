@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { BsGlobe2, BsCodeSlash, BsBrush } from "react-icons/bs";
 import brandImages from "../assets/images/BRAND/BrandImages.png";
 import brandLogoBlack from "../assets/images/logos/brand-logo-black.svg";
 import brandLogoWhite from "../assets/images/logos/brand-logo-white.svg";
