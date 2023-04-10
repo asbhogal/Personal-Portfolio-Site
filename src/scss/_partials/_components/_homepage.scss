@@ -89,7 +89,7 @@
         transition: $Transition-03;
         > img {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             object-fit: cover;
             border-radius: $ImgBorderRadius;
         }

@@ -16,6 +16,8 @@
         flex-direction: column;
         gap: 20px;
         padding: 24px;
+        border: 1px solid $Khaki;
+        border-radius: $ImgBorderRadius;
         .HorizontalDivider {
             width: 95px;
         }
@@ -29,9 +31,13 @@
     }
     .TestimonialQuote {
         @include BodyText;
+        text-transform: uppercase;
+        text-align: justify;
     }
     .TestimonialTitle {
-        @include SubtitleText;
+        font-family: 'Anaheim', serif;
+        text-transform: uppercase;
+        text-align: justify;
     }
 }
 

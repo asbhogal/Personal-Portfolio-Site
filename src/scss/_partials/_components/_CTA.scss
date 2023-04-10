@@ -39,13 +39,36 @@
 }
 
 .CTAAgencyButton {
+    font-family: 'Anaheim', serif;
     background-color: $Argent;
+    border: 1px solid $Argent;
+    color: $SmokyBlack;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    transition: $Transition-03;
+    border-radius: 40px;
     &:hover {
         background-color: transparent !important;
         border: 1px solid $Argent;
         color: $Argent;
+        transition: $Transition-03;
     }
 }
 .CTAClientButton {
-    background-color: #C5B29A;
+    font-family: 'Anaheim', serif;
+    background-color: $Khaki;
+    border: 1px solid $Khaki;
+    color: $SmokyBlack;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    transition: $Transition-03;
+    border-radius: 40px;
+    &:hover {
+        background-color: transparent !important;
+        border: 1px solid $Argent;
+        color: $Khaki;
+        transition: $Transition-03;
+    }
 }

@@ -6,13 +6,13 @@ import brandComponents from "../assets/images/BRAND/BrandComponents.svg";
 import brandColorPalette from "../assets/images/BRAND/BrandColorPalette.svg";
 import Header from "./Header";
 import Footer from "./Footer";
-import brandHeroImg from "../assets/images/BRAND/mockups/optimised/BrandHeroImg.png";
-import brandMockups from "../assets/images/BRAND/mockups/optimised/BrandMockups.png";
-import brandiPhoneToggleImage from "../assets/images/BRAND/mockups/optimised/Brand-iPhoneToggleMockup.png";
-import brandiMacImage from "../assets/images/BRAND/mockups/optimised/Brand-iMacMockup.png";
-import brandMacBookImage from "../assets/images/BRAND/mockups/optimised/Brand-MacBookMockup.png";
-import brandiPadImage from "../assets/images/BRAND/mockups/optimised/Brand-iPadMockup.png";
-import brandiPad2Image from "../assets/images/BRAND/mockups/optimised/Brand-iPad2Mockup.png";
+import brandHeroImg from "../assets/images/BRAND/mockups/optimised/BrandHeroImg.jpeg";
+import brandMockups from "../assets/images/BRAND/mockups/optimised/BrandMockups.jpeg";
+import brandiPhoneToggleImage from "../assets/images/BRAND/mockups/optimised/Brand-iPhoneToggleMockup.jpeg";
+import brandiMacImage from "../assets/images/BRAND/mockups/optimised/Brand-iMacMockup.jpeg";
+import brandMacBookImage from "../assets/images/BRAND/mockups/optimised/Brand-MacBookMockup.jpeg";
+import brandiPadImage from "../assets/images/BRAND/mockups/optimised/Brand-iPadMockup.jpeg";
+import brandiPad2Image from "../assets/images/BRAND/mockups/optimised/Brand-iPad2Mockup.jpg";
 import CTA from "./CTA";
 
 const Brand = () => {
