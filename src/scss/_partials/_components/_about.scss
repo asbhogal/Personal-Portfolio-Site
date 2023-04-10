@@ -37,7 +37,7 @@
         }
         .AboutText {
             font-family: 'Anaheim', sans-serif;
-            font-size: clamp(1.3125rem, 1.0449rem + 1.3381vw, 2.25rem);
+            font-size: clamp(1rem, 0.9108rem + 0.446vw, 1.3125rem);
             text-transform: uppercase;
             text-align: justify;
         }
@@ -68,13 +68,13 @@
                     color: $Argent;
                     border: 1px solid $Khaki;
                     border-radius: $ImgBorderRadius;
-                    .ExperienceLozenge {
+                    .ExperienceDate {
                         font-family: 'Anaheim', sans-serif;
                     }
                     .ExperienceTitle {
                         border: 1px solid $Khaki;
                         border-radius: 40px;
-                        padding: 10px 20px;
+                        padding: 5px 10px;
                         background-color: $Khaki;
                         color: $Black
                     }
@@ -89,7 +89,7 @@
                     }
                     
                     ul {
-                        list-style-type: none;
+                        padding-left: 20px;
                     }
                     .ExperienceSkills {
                         display: flex;

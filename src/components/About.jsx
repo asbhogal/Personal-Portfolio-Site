@@ -34,9 +34,8 @@ const About = () => {
                             <div className="ExperienceContainer">
                                 <div className="ExperienceSection">
                                     <span className="ExperienceTitle">WordPress Designer & Developer</span>
-                                    <span className="ExperienceLozenge">May 2020 - Feb 2021</span>
+                                    <span className="ExperienceDate">May 2020 - Feb 2021</span>
                                     <span className="ExperienceInfo">
-
                                         <ul>
                                             <li>Designed & developed using Astra Pro, Elementor Pro, WooCommerce and Stripe</li>
                                             <li>Established branding which was used across the site and social media content</li>
@@ -52,13 +51,23 @@ const About = () => {
                                         <span>WooCommerce</span>
                                         <span>Stripe</span>
                                         <span>YoastSEO</span>
+                                        <span>Optimisation</span>
                                         <span>HTML5</span>
                                         <span>CSS3</span>
                                     </div>
                                 </div>
                                 <div className="ExperienceSection">
                                     <span className="ExperienceTitle">Web Designer & Developer</span>
-                                    <span className="ExperienceLozenge">Feb 2021 - Oct 2022</span>
+                                    <span className="ExperienceDate">Feb 2021 - Oct 2022</span>
+                                    <span className="ExperienceInfo">
+                                        <ul>
+                                            <li>Leveraged HTML5, CSS3, SCSS, JavaScript (ES6), PHP, RESTful APIs, npm & Git for vanilla builds</li>
+                                            <li>Managed and deployed multiple applications on DigitalOcean via Cloudways hosting</li>
+                                            <li>Created bespoke WordPress themes and modifying off-the-shelf themes and plugins</li>
+                                            <li>Designed & developed a joint-client website on WordPress</li>
+                                            <li>Performing domain management, DNS record changes and propagation tests</li>
+                                        </ul>
+                                    </span>
                                     <div className="ExperienceSkills">
                                         <span>HTML5</span>
                                         <span>CSS3</span>
@@ -66,12 +75,28 @@ const About = () => {
                                         <span>jquery</span>
                                         <span>PHP</span>
                                         <span>WordPress</span>
+                                        <span>Astra</span>
+                                        <span>Gutenberg</span>
+                                        <span>CUSTOM THEMES</span>
+                                        <span>SEO</span>
                                         <span>Hubspot</span>
+                                        <span>RWD</span>
+                                        <span>PHP</span>
                                     </div>
                                 </div>
                                 <div className="ExperienceSection">
                                     <span className="ExperienceTitle">Front End Developer & UI Engineer</span>
-                                    <span className="ExperienceLozenge">Oct 2022 - Present</span>
+                                    <span className="ExperienceDate">Oct 2022 - Present</span>
+                                    <span className="ExperienceInfo">
+                                        <ul>
+                                            <li>Creating responsive, interactive prototypes, components and high-fidelity wireframes/mockups in Figma</li>
+                                            <li>Establishing branding, logos, typography, brand boards & UI mockups using Figma & Adobe CC</li>
+                                            <li>Translating designs and wireframes into high-quality, responsive builds using Next.js, Redux, React & SCSS</li>
+                                            <li>Consuming multiple RESTful APIs through GET requests across Next.js, React and JavaScript builds</li>
+                                            <li>Leveraging Redux (Toolkit & RTK), npm, Git, Babel, Webpack, Vite and Vercel (CI/CD)</li>
+                                            <li>Providing freelance designer/developer services and advice to international clientele</li>
+                                        </ul>
+                                    </span>
                                     <div className="ExperienceSkills">
                                         <span>Figma</span>
                                         <span>Adobe Illustrator</span>
