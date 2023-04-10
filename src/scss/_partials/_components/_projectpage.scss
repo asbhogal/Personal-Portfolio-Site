@@ -52,6 +52,7 @@
             justify-content: space-between;
             font-family: 'Anaheim', serif;
             text-transform: uppercase;
+            font-size: clamp(1rem, 0.6432rem + 1.7841vw, 2.25rem);
         }
         .ProjectLozenge {
             border: 1px solid $Argent;
@@ -60,9 +61,12 @@
         }
         .ProjectAboutContent {
             font-family: 'Anaheim', serif;
+            font-size: clamp(1rem, 0.6432rem + 1.7841vw, 2.25rem);
             text-align: justify;
+            text-transform: uppercase;
         }
         .ProjectStacksAndTools {
+            gap: 85px;
             span {
                 &:nth-child(2) {
                     text-align: right;
@@ -94,6 +98,12 @@
             }
             #OceanicaTypeface {
                 font-family: 'Manrope', sans-serif;
+                &:first-child {
+                    font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
+                }
+            }
+            #CryptoverseTypeface {
+                font-family: 'Noto Sans', sans-serif;
                 &:first-child {
                     font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
                 }
@@ -160,6 +170,14 @@ $BrandWeights: (weight1: 400, weight2: 500, weight3: 600, weight4: 700, weight5:
 
 @each $key, $weight in $BrandWeights {
     #Weight-#{ $weight } {font-weight: $weight; }
+};
+
+/****** CRYPTOVERSE WEIGHTINGS ******/
+
+$CryptoverseWeights: (weight1: 200, weight2: 300, weight3: 700);
+
+@each $key, $weight in $CryptoverseWeights {
+    #Weight-#{ $weight } {font-weight: $weight;}
 };
 
 @media only screen and (width <= 375px) {

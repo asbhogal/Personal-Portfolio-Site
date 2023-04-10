@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+/* import { Link } from "react-router-dom";
 
 const CTAButtons = () => {
     return (
@@ -14,4 +14,4 @@ const CTAButtons = () => {
     )
 }
 
-export default CTAButtons;
+export default CTAButtons; */

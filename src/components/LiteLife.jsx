@@ -59,7 +59,7 @@ const LiteLife = () => {
                     <h2>About</h2>
                     <div className="ProjectDateAndType">
                         <span>Project Type: Personal</span>
-                        <span>Dec 2022 - Jan 2023</span>
+                        <span>Jan 2023 - Feb 2023</span>
                     </div>
                     <div className="ProjectLozenges">
                         <span className="ProjectLozenge">Design</span>
@@ -69,15 +69,15 @@ const LiteLife = () => {
                         <span>Material UI</span>
                         <span>REACT | JS | COMMERCE.JS | STRIPE | WEBPACK | GIT | VERCEL</span>
                     </div>
-                    <p className="ProjectAboutContent">Merciful christian intentions philosophy marvelous. Mountains pious philosophy sea snare virtues faith faith eternal-return noble madness. Deceptions snare virtues victorious superiority free selfish enlightenment spirit self salvation. Philosophy gains prejudice holiest self eternal-return eternal-return law ocean faith grandeur.</p>
+                    <p className="ProjectAboutContent">Lite Life is a conceptualised e-commerce company which specialises in selling high quality, simplistic technological products for minimalistic working environments. Design for this project was handled by Material UI. The project was built using React and Commerce.js (a headless CMS) to handle the project catologue, cart system and ordering. Stripe payment gateway was also configured to handle the checkout process and order confirmation. This project was compiled using Webpack then shipped for production via Vercel.</p>
                 </section>
                 <section className="ProjectTypefaces">
                     <h2>Typeface</h2>
                     <div className="ProjectTypefaceInfo">
                         <span id="LiteLifeTypeface" className="Typeface">Roboto</span>
-                        <div id="BrandTypeface" className="TypefaceWeights">
+                        <div id="LiteLifeTypeface" className="TypefaceWeights">
                             <span>Singular</span>
-                            <ul className="TypefaceWeightsList">
+                            <ul id="LiteLifeTypeface" className="TypefaceWeightsList">
                                 <li className="Weight-400">04 Regular</li>
                             </ul>
                         </div>

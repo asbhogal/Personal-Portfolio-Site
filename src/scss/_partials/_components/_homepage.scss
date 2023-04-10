@@ -17,28 +17,26 @@
         .HeadlineAccent {
             font-size: clamp(2rem, 0.9295rem + 5.3524vw, 5.75rem);
             font-style: italic;
-            color: #C5B29A;
+            color: $Khaki;
         }
         .HeadlineYear {
-            font-size: 36px;
+            font-size: clamp(1.3125rem, 1.0449rem + 1.3381vw, 2.25rem);
         }
     }
     .HomePageProjectLogos {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        justify-items: center;
         align-items: center;
-        justify-content: space-around;
-        background-color: $ChineseBlack-01;
+        gap: 20px;
+        background-color: $ChineseBlack-02;
         border-radius: $ImgBorderRadius;
         padding: 45px 0;
-        flex-wrap: wrap;
         img {
-            width: auto;
+            width: 50%;
             height: auto;
             &:nth-child(5) {
                 height: 100px;
-                path {
-                    fill: red !important;
-                }
             }
         }
     }

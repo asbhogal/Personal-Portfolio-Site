@@ -78,7 +78,7 @@ const Brand = () => {
                         <span>Figma | UI Prototyping | Auto Layouts | Components</span>
                         <span>REACT | JS | BABEL | SASS | WEBPACK | GIT | VERCEL</span>
                     </div>
-                    <p className="ProjectAboutContent">Merciful christian intentions philosophy marvelous. Mountains pious philosophy sea snare virtues faith faith eternal-return noble madness. Deceptions snare virtues victorious superiority free selfish enlightenment spirit self salvation. Philosophy gains prejudice holiest self eternal-return eternal-return law ocean faith grandeur.</p>
+                    <p className="ProjectAboutContent">Oceanica is a conceptualised company which offers minimalistic interior decorating options inspired by Milanese design. Logos and assets were provided and from these, five responsive templates (for 5 breakpoints) were created using Figma. A responsive Web page from these was then built using React with SCSS, Babel and JS, compiled as a production build using Webpack and then shipped using Vercel.</p>
                 </section>
                 <section className="ProjectTypefaces">
                     <h2>Typeface</h2>
@@ -86,7 +86,7 @@ const Brand = () => {
                         <span id="BrandTypeface">Inter</span>
                         <div id="BrandTypeface" className="TypefaceWeights">
                             <span>Singular</span>
-                            <ul className="TypefaceWeightsList">
+                            <ul id="BrandTypeface" className="TypefaceWeightsList">
                                 <li className="Weight-400">04 Regular</li>
                                 ⋅ 
                                 <li id="Weight-500">05 Medium</li>

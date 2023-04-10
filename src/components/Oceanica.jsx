@@ -8,11 +8,9 @@ import Header from "./Header";
 import Footer from "./Footer";
 import brandHeroImg from "../assets/images/BRAND/mockups/BrandHeroImg.png";
 import oceanicaMockups from "../assets/images/Oceanica/mockups/OceanicaTemplates.png";
-import brandiPhoneToggleImage from "../assets/images/BRAND/mockups/Brand-iPhoneToggleMockup.png";
-import brandiMacImage from "../assets/images/BRAND/mockups/Brand-iMacMockup.png";
-import brandMacBookImage from "../assets/images/BRAND/mockups/Brand-MacBookMockup.png";
-import brandiPadImage from "../assets/images/BRAND/mockups/Brand-iPadMockup.png";
-import brandiPad2Image from "../assets/images/BRAND/mockups/Brand-iPad2Mockup.png";
+import oceanicaiPhoneMockup from "../assets/images/Oceanica/mockups/iPhoneMockup.png";
+import oceanicaiPadMockup from "../assets/images/Oceanica/mockups/iPadMockup.png";
+import oceanicaMacbookMockup from "../assets/images/Oceanica/mockups/MacbookMockup.png";
 import CTA from "./CTA";
 
 const Brand = () => {
@@ -58,7 +56,7 @@ const Brand = () => {
                     <h2>About</h2>
                     <div className="ProjectDateAndType">
                         <span>Project Type: Personal</span>
-                        <span>Dec 2022 - Jan 2023</span>
+                        <span>Dec 2022 - Feb 2023</span>
                     </div>
                     <div className="ProjectLozenges">
                         <span className="ProjectLozenge">Design</span>
@@ -68,15 +66,15 @@ const Brand = () => {
                         <span>Figma | UI Prototyping | Auto Layouts | Components</span>
                         <span>REACT | JS | BABEL | SASS | WEBPACK | GIT | VERCEL</span>
                     </div>
-                    <p className="ProjectAboutContent">Merciful christian intentions philosophy marvelous. Mountains pious philosophy sea snare virtues faith faith eternal-return noble madness. Deceptions snare virtues victorious superiority free selfish enlightenment spirit self salvation. Philosophy gains prejudice holiest self eternal-return eternal-return law ocean faith grandeur.</p>
+                    <p className="ProjectAboutContent">Oceanica is a conceptualised company which offers luxury travel resorts and activities around the world. Logos, assets and responsive templates (for 5 breakpoints) were created using Figma, including prototypes to simulate a booking screen. A responsive Web page from these was then built using React with SCSS, Babel and JS, compiled as a production build using Webpack and then shipped using Vercel.</p>
                 </section>
                 <section className="ProjectTypefaces">
                     <h2>Typeface</h2>
                     <div className="ProjectTypefaceInfo">
-                        <span id="BrandTypeface">Inter</span>
-                        <div id="BrandTypeface" className="TypefaceWeights">
+                        <span id="OceanicaTypeface">manrope</span>
+                        <div id="OceanicaTypeface" className="TypefaceWeights">
                             <span>Singular</span>
-                            <ul className="TypefaceWeightsList">
+                            <ul id="OceanicaTypeface" className="TypefaceWeightsList">
                                 <li className="Weight-400">04 Regular</li>
                                 ⋅ 
                                 <li id="Weight-500">05 Medium</li>
@@ -84,8 +82,6 @@ const Brand = () => {
                                 <li id="Weight-600">06 Semi Bold</li>
                                 ⋅ 
                                 <li id="Weight-700">07 Bold</li>
-                                ⋅ 
-                                <li id="Weight-900">09 Black</li>
                             </ul>
                         </div>
                     </div>
@@ -111,13 +107,17 @@ const Brand = () => {
                     <h2>Mockups</h2>
                     <img src={ oceanicaMockups } />
                 </section>
+
+                <section className="ProjectPrototypes">
+                    <h2>Prototypes</h2>
+                    <img src={ oceanicaPrototypes } />
+                </section>
+
                 <section className="ProjectScreens">
                     <h2>Screens</h2>
-                    <img src={ brandiPhoneToggleImage } />
-                    <img src={ brandiMacImage } />
-                    <img src={ brandMacBookImage } />
-                    <img src={ brandiPadImage } />
-                    <img src={ brandiPad2Image } />
+                    <img src={ oceanicaiPhoneMockup } />
+                    <img src={ oceanicaiPadMockup } />
+                    <img src={ oceanicaMacbookMockup } />
                 </section>
                 <CTA />
             </div>

@@ -279,3 +279,11 @@
       flex-direction: column !important;
   }
 }
+
+/*********************************************************************/
+
+@media screen and (width <= 1024px) {
+  .HomePageProjectLogos {
+    display: none !important;
+  }
+}

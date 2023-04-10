@@ -1,8 +1,8 @@
 @use '../variables' as *;
 
-html {
+/* html {
     scroll-behavior: smooth;
-}
+} */
 
 html, body {
     cursor: none;
@@ -11,11 +11,12 @@ html, body {
 #root {
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
     > * {
         display: flex;
         cursor: none;
     }
-    background-color: #0F0404;
+    background-color: $SmokyBlack;
     color: $Argent;
     padding: 0 10px;
     cursor: none;
