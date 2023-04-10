@@ -7,8 +7,10 @@ import brandColorPalette from "../assets/images/BRAND/BrandColorPalette.svg";
 import Header from "./Header";
 import Footer from "./Footer";
 import cryptoverseHeroImg from "../assets/images/Cryptoverse/mockups/cryptoverseHeroImg.png";
+import cryptoverseiMacImage from "../assets/images/Cryptoverse/mockups/iMacMockup.jpg"
 import cryptoverseHPImage from "../assets/images/Cryptoverse/mockups/HPMockup.png"
 import cryptoverseiPadImages from "../assets/images/Cryptoverse/mockups/iPadMockups.png";
+import cryptoverseiPhoneImage from "../assets/images/Cryptoverse/mockups/iPhoneMockup.jpg";
 
 import CTA from "./CTA";
 
@@ -107,6 +109,8 @@ const Brand = () => {
 
                 <section className="ProjectScreens">
                     <h2>Screens</h2>
+                    <img src={ cryptoverseiMacImage } />
+                    <img src={ cryptoverseiPhoneImage } />
                     <img src={ cryptoverseiPadImages } />
                     <img src={ cryptoverseHPImage } />
                 </section>
