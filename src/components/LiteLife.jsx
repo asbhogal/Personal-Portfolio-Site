@@ -11,11 +11,11 @@ import blackMacBook from "../assets/images/LiteLife/assets/BlackMacbook.jpg";
 import liteLifeColorPalette from "../assets/images/LiteLife/assets/LiteLifePalette.svg";
 import Header from "./Header";
 import Footer from "./Footer";
-import liteLifeHeroImg from "../assets/images/LiteLife/LiteLifeHeroImg.jpg";
-import liteLifeGalaxyImage from "../assets/images/LiteLife/mockups/GalaxyMockup.png";
-import liteLifeMacbookAndIphoneImage from "../assets/images/LiteLife/mockups/MacbookAndiPhoneMockup.png";
-import liteLifeiPadImage from "../assets/images/LiteLife/mockups/iPadMockup.png";
-import liteLifeiMacImage from "../assets/images/LiteLife/mockups/iMacMockup.png";
+import liteLifeHeroImg from "../assets/images/LiteLife//mockups/LiteLifeHeroImg.jpg";
+import liteLifeGalaxyImage from "../assets/images/LiteLife/mockups/GalaxyMockup.jpg";
+import liteLifeMacbookAndIphoneImage from "../assets/images/LiteLife/mockups/MacbookAndiPhoneMockup.jpg";
+import liteLifeiPadImage from "../assets/images/LiteLife/mockups/iPadMockup.jpg";
+import liteLifeiMacImage from "../assets/images/LiteLife/mockups/iMacMockup.jpg";
 
 import CTA from "./CTA";
 
@@ -107,9 +107,9 @@ const LiteLife = () => {
 
                 <section className="ProjectScreens">
                     <h2>Screens</h2>
+                    <img src={ liteLifeiMacImage } />
                     <img src={ liteLifeGalaxyImage } />
                     <img src={ liteLifeMacbookAndIphoneImage } />
-                    <img src={ liteLifeiMacImage } />
                     <img src={ liteLifeiPadImage } />
                 </section>
                 <CTA />
