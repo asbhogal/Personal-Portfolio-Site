@@ -3,7 +3,7 @@
 
 
 .AboutSection {
-    height: calc(100vh - 152px);
+    /* height: calc(100vh - 152px); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,10 +36,9 @@
             font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);        text-align: left;
         }
         .AboutText {
-            font-family: 'Switzer', sans-serif;
-            .AboutName {
-                font-weight: 600;
-            }
+            font-family: 'Anaheim', sans-serif;
+            font-size: clamp(1.3125rem, 1.0449rem + 1.3381vw, 2.25rem);
+            text-transform: uppercase;
         }
     }
 }

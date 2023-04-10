@@ -8,6 +8,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import brandHeroImg from "../assets/images/BRAND/mockups/BrandHeroImg.png";
 import oceanicaMockups from "../assets/images/Oceanica/mockups/OceanicaTemplates.png";
+import oceanicaPrototypes from "../assets/images/Oceanica/OceanicaPrototypes.png";
 import oceanicaiPhoneMockup from "../assets/images/Oceanica/mockups/iPhoneMockup.png";
 import oceanicaiPadMockup from "../assets/images/Oceanica/mockups/iPadMockup.png";
 import oceanicaMacbookMockup from "../assets/images/Oceanica/mockups/MacbookMockup.png";

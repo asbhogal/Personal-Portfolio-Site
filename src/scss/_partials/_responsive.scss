@@ -4,10 +4,6 @@
   .MainContainer {
     width: 1120px;
   }
-  .AboutSection {
-    width: 1120px;
-    margin: 0 auto;
-  }
   .FreeResourcesSection {
     width: 1120px;
     margin: 0 auto;
@@ -21,9 +17,7 @@
     width: 1365px;
     margin: 0 auto;
   }
-  .AboutSection > .PageSubTitleText {
-      padding-inline: 40px;
-  }
+  
   .ProjectCover {
     width: 1520px;
     margin:0 auto;
@@ -55,12 +49,7 @@
   .MainContainer {
     padding: 0 150px;
   }
-  .AboutSection > .PageSubTitleText {
-    padding-inline: 40px;
-  }
-  .AboutSection {
-    padding: 0 150px;
-  }
+  
   .AdditionalServices {
     padding: 0 150px;
   }
@@ -93,9 +82,6 @@
     padding: 32px;
   }
 
-  .AboutSection > .PageSubTitleText {
-    padding-inline: 40px;
-  }
   .ProjectInfo {
     padding: 32px;
   }
@@ -131,9 +117,7 @@
     flex-direction: column;
   }
 
-  .AboutSection > .PageSubTitleText {
-    padding-inline: 40px;
-  }
+  
   .AdditionalServices {
     padding: 0 24px;
     .AdditionalServicesSection > .AdditionalServicesContent {
@@ -202,9 +186,7 @@
     flex-direction: column;
   }
 
-  .AboutSection > .PageSubTitleText {
-    text-align: center;
-  }
+  
   .FreeResourcesSection {
     padding: 24px;
     flex-direction: column;
