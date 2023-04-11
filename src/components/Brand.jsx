@@ -78,7 +78,8 @@ const Brand = () => {
                     className="ProjectAbout">
                     <m.h2
                         initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}>About</m.h2>
+                        whileInView={{ opacity: 1 }}>
+                        About</m.h2>
                     <m.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
@@ -234,7 +235,9 @@ const Brand = () => {
                             <m.img 
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
-                                src={ brandColorPalette } />
+                                src={ brandColorPalette }
+                                alt="A color palette"
+                                />
                         </m.div>
                     </m.div>
                 </m.section>

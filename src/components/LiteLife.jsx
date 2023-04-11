@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import { motion as m } from "framer-motion";
 import yamahaKeyboard from "../assets/images/LiteLife/assets/Yamaha.jpg";
 import screwdriverBlack from "../assets/images/LiteLife/assets/Screwdriver.jpg";
 import iMacWhite from "../assets/images/LiteLife/assets/iMacWhite.jpg";
@@ -47,28 +47,54 @@ const LiteLife = () => {
         <>
             <Header />
             <div className="Project">
-                <section className="ProjectHero">
-                    <img src={ liteLifeHeroImg }/>
-                </section>
-                <section className="ProjectLinks">
+
+                <m.section
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectHero">
+                    <m.img
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        src={ liteLifeHeroImg } 
+                        alt="A top-down view of portrait and landscape oriented iPads with an ecommerce site on them"/>
+                </m.section>
+
+                <m.section
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}     
+                    className="ProjectLinks">
                     <a target="_blank" href="https://github.com/asbhogal/React-Tech-Commerce.Js-Site" className="ProjectButton">
                         code
                     </a>
                     <a target="_blank" href="https://litelife.vercel.app/" className="ProjectButton">
                         site
                     </a>
-                </section>
-                <section className="ProjectAbout">
-                    <h2>About</h2>
-                    <div className="ProjectDateAndType">
-                        <span>Project Type: Personal</span>
-                        <span>Jan 2023 - Feb 2023</span>
-                    </div>
-                    {/* <div className="ProjectLozenges">
-                        <span className="ProjectLozenge">Design</span>
-                        <span className="ProjectLozenge">Development</span>
-                    </div> */}
-                    <div className="ProjectStacksAndTools">
+                </m.section>
+
+                <m.section
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectAbout">
+                    <m.h2 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}>
+                        About</m.h2>
+                    <m.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} className="ProjectDateAndType">
+                        <m.span 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}>
+                            Project Type: Personal</m.span>
+                        <m.span 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}>
+                            Jan 2023 - Feb 2023</m.span>
+                    </m.div>
+                    <m.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        className="ProjectStacksAndTools">
                         <span className="StackToolLozenge">React</span>
                         <span className="StackToolLozenge">JS</span>
                         <span className="StackToolLozenge">Material UI</span>
@@ -80,56 +106,170 @@ const LiteLife = () => {
                         <span className="StackToolLozenge">Webpack</span>
                         <span className="StackToolLozenge">Git</span>
                         <span className="StackToolLozenge">Vercel</span>
-                    </div>
-                    <p className="ProjectAboutContent">Lite Life is a conceptualised e-commerce company which specialises in selling high quality, simplistic technological products for minimalistic working environments. Design for this project was handled by Material UI. The project is a Single Page Application built using React and React Router with Commerce.js (a headless CMS) and React Hook Form to handle the project catologue, cart system, ordering and customer data. Stripe payment gateway was also configured to handle the checkout process and order confirmation. This project was compiled using Webpack then shipped for production via Vercel.</p>
-                </section>
+                    </m.div>
+                    <m.p 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        className="ProjectAboutContent">Lite Life is a conceptualised e-commerce company which specialises in selling high quality, simplistic technological products for minimalistic working environments. Design for this project was handled by Material UI. The project is a Single Page Application built using React and React Router with Commerce.js (a headless CMS) and React Hook Form to handle the project catologue, cart system, ordering and customer data. Stripe payment gateway was also configured to handle the checkout process and order confirmation. This project was compiled using Webpack then shipped for production via Vercel.</m.p>
+                </m.section>
 
-                <section className="DesignDecisions">
-                    <h2>Design Decisions</h2>
-                    <p className="ProjectAboutContent">Lite Life incorporates the simplistic tones of black, grey and white alongside the stark constrasts of red and violet-blue to consider both user immersion and ease-of-navigation during the checkout process (during the latter, distraction-free UX is incorporated to keep the customer on the pages until the transaction is complete.) The logo can be considered widely known and recognizable in this modern age. The stripped back, simple style reflects the design of the site, and the long branches complement the horizontal and vertical lines used in the UI. Roboto, by name, is synonymous with clean, modern technology, and this is in turn reflected through its short descenders and wide bowls, where the former aligns close to the baseline and keeps the space efficient and egonomic, akin to the technology Lite Life sells. The use of only one weight also reinforces consistency within simplicity. On the broader scale, this conveys two things: simple things can still be quality. And quality things can still be simple.</p>
-                </section>
+                <m.section
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="DesignDecisions">
+                    <m.h2 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}>
+                        Design Decisions</m.h2>
+                    <m.p 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} className="ProjectAboutContent">Lite Life incorporates the simplistic tones of black, grey and white alongside the stark constrasts of red and violet-blue to consider both user immersion and ease-of-navigation during the checkout process (during the latter, distraction-free UX is incorporated to keep the customer on the pages until the transaction is complete.) The logo can be considered widely known and recognizable in this modern age. The stripped back, simple style reflects the design of the site, and the long branches complement the horizontal and vertical lines used in the UI. Roboto, by name, is synonymous with clean, modern technology, and this is in turn reflected through its short descenders and wide bowls, where the former aligns close to the baseline and keeps the space efficient and egonomic, akin to the technology Lite Life sells. The use of only one weight also reinforces consistency within simplicity. On the broader scale, this conveys two things: simple things can still be quality. And quality things can still be simple.</m.p>
+                </m.section>
 
-                <section className="ProjectTypefaces">
-                    <h2>Typeface</h2>
-                    <div className="ProjectTypefaceInfo">
-                        <span id="LiteLifeTypeface" className="Typeface">Roboto</span>
-                        <div id="LiteLifeTypeface" className="TypefaceWeights">
-                            <span>Singular</span>
-                            <ul id="LiteLifeTypeface" className="TypefaceWeightsList">
+                <m.section
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectTypefaces">
+                    <m.h2 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}>
+                        Typeface</m.h2>
+                    <m.div 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        className="ProjectTypefaceInfo">
+                        <m.span 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            id="LiteLifeTypeface" className="Typeface">
+                            Roboto</m.span>
+                        <m.div 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }} id="LiteLifeTypeface" className="TypefaceWeights">
+                            <m.span 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}>Singular</m.span>
+                            <m.ul 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                id="LiteLifeTypeface" className="TypefaceWeightsList">
                                 <li className="Weight-400">04 Regular</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-                <section className="ProjectAssetsAndBranding">
-                    <h2>Branding & Assets</h2>
-                    <div id="LiteLiteAssetsAndBranding" className="ProjectAssetsAndBrandingContainer">
-                        <div id="LiteLifeAssets" className="AssetsAndBranding">
-                            <img src={ yamahaKeyboard } />
-                            <img src={ screwdriverBlack } />
-                            <img src={ cordDark } />
-                            <img src={ deskLamp } />
-                            <img src={ chargingBank } />
-                            <img src={ iMacWhite } />
-                            <img src={ blackMacBook } />
-                            <img src={ earphonesCase } />
-                        </div>
-                        {/* <div className="AssetsAndBranding">
-                            <img src={ brandComponents } />
-                        </div> */}
-                        <div className="AssetsAndBranding">
-                            <img className="LiteLifeColorPalette" src={ liteLifeColorPalette } />
-                        </div>
-                    </div>
-                </section>
+                            </m.ul>
+                        </m.div>
+                    </m.div>
+                </m.section>
 
-                <section className="ProjectScreens">
-                    <h2>Screens</h2>
-                    <img src={ liteLifeiMacImage } />
-                    <img src={ liteLifeGalaxyImage } />
-                    <img src={ liteLifeMacbookAndIphoneImage } />
-                    <img src={ liteLifeiPadImage } />
-                </section>
+                <m.section 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectAssetsAndBranding">
+                    <m.h2 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}>Branding & Assets</m.h2>
+                    <m.div 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} id="LiteLiteAssetsAndBranding" className="ProjectAssetsAndBrandingContainer">
+                        <m.div 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }} id="LiteLifeAssets" className="AssetsAndBranding">
+                            <m.img 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }} 
+                                src={ yamahaKeyboard } 
+                                alt="A side view of a black Yamaha keyboard"
+                                />
+                            <m.img 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                src={ screwdriverBlack }
+                                alt="A black screwdriver, with various bits next to it"
+                                />
+                            <m.img 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                src={ cordDark }
+                                alt="A rolled up charging cable"
+                                />
+                            <m.img 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                src={ deskLamp }
+                                alt="A close up view of a matte black desk lamp head"
+                                />
+                            <m.img 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                src={ chargingBank }
+                                alt="A close up view of a power charging bank"
+                                />
+                            <m.img 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                src={ iMacWhite } 
+                                alt="A white iMac"
+                                />
+                            <m.img
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                src={ blackMacBook }
+                                alt="A black Macbook"
+                                />
+                            <m.img
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                src={ earphonesCase }
+                                alt="A black wireless earphones charging case"
+                                />
+                        </m.div>
+                        
+                        <m.div 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            className="AssetsAndBranding">
+                            <m.img 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }} 
+                                className="LiteLifeColorPalette" 
+                                src={ liteLifeColorPalette }
+                                alt="A color palette"
+                                />
+                        </m.div>
+                    </m.div>
+                </m.section>
+
+                <m.section 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }} 
+                    className="ProjectScreens">
+                    <m.h2 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}>
+                        Screens</m.h2>
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} 
+                        src={ liteLifeiMacImage } 
+                        alt="A white iMac with an ecommerce site open on the screen, on an office desk with a phone, coffee mug, plant and mouse"
+                        />
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} 
+                        src={ liteLifeGalaxyImage } 
+                        alt="A Galaxy smartphone with an ecommerce site open on the screen"
+                        />
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        src={ liteLifeMacbookAndIphoneImage }
+                        alt="A side view of a Macbook and iPhone with an ecommerce site open on the screens"
+                        />
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        src={ liteLifeiPadImage } 
+                        alt="An iPad resting on a cushion with an ecommerce site open on the screen and a stylus pen next to it"
+                        />
+                </m.section>
                 <CTA />
             </div>
 
