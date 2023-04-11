@@ -258,11 +258,13 @@ const Brand = () => {
                     <m.h2
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}>
-                    Mockups</m.h2>
+                        Mockups</m.h2>
                     <m.img 
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        src={ brandMockups } />
+                        src={ brandMockups } 
+                        alt="5 templates of a website design"
+                        />
                 </m.section>
 
                 <m.section
@@ -276,26 +278,37 @@ const Brand = () => {
                     <m.img 
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }} 
-                        src={ brandiPhoneToggleImage } />
+                        src={ brandiPhoneToggleImage } 
+                        alt="A mockup of a website menu toggle on an iPhone"
+                        />
                     <m.img 
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }} 
-                        src={ brandiMacImage } />
+                        src={ brandiMacImage } 
+                        alt="A mockup of a website on an iMac"
+                        />
                     <m.img 
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }} 
-                        src={ brandMacBookImage } />
+                        src={ brandMacBookImage } 
+                        alt="A mockup of a website on a Macbook"
+                        />
                     <m.img 
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }} 
-                        src={ brandiPadImage } />
+                        src={ brandiPadImage } 
+                        alt="A mockup of a website on an iPad"
+                        />
                     <m.img 
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }} 
-                        src={ brandiPad2Image } />
+                        src={ brandiPad2Image } 
+                        alt="A mockup of a website on an iPad"
+                        />
                 </m.section>
 
                 <CTA />
+
             </div>
 
             <Footer />

@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
-import brandImages from "../assets/images/BRAND/BrandImages.png";
-import brandLogoBlack from "../assets/images/logos/brand-logo-black.svg";
-import brandLogoWhite from "../assets/images/logos/brand-logo-white.svg";
-import brandComponents from "../assets/images/BRAND/BrandComponents.svg";
-import brandColorPalette from "../assets/images/BRAND/BrandColorPalette.svg";
+import { motion as m } from "framer-motion";
 import Header from "./Header";
 import Footer from "./Footer";
 import cryptoverseHeroImg from "../assets/images/Cryptoverse/mockups/cryptoverseHeroImg.png";
@@ -41,32 +37,67 @@ const Brand = () => {
     return (
         <>
             <Header />
+
             <div className="Project">
-                <section className="ProjectHero">
-                    <img src={ cryptoverseHeroImg }/>
-                </section>
-                <section className="ProjectLinks">
-                    {/* <a target="_blank" href="#">
-                        <button className="ProjectButton">templates</button>
-                    </a> */}
+
+                <m.section
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectHero">
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        src={ cryptoverseHeroImg } 
+                        alt="A close up of a Macbook with an application interface on the screen against a dark blue background"
+                        />
+                </m.section>
+
+                <m.section 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectLinks">
                     <a target="_blank" href="https://github.com/asbhogal/Next.js-Cryptocurrency-App" className="ProjectButton">
                         code
                     </a>
                     <a target="_blank" href="https://next-js-cryptocurrency-app.vercel.app/" className="ProjectButton">
                         site
                     </a>
-                </section>
-                <section className="ProjectAbout">
-                    <h2>About</h2>
-                    <div className="ProjectDateAndType">
-                        <span>Project Type: Personal</span>
-                        <span>March 2023 - Present</span>
-                    </div>
-                    <div className="ProjectLozenges">
-                        <span className="ProjectLozenge">Design</span>
-                        <span className="ProjectLozenge">Development</span>
-                    </div>
-                    <div className="ProjectStacksAndTools">
+                </m.section>
+
+                <m.section
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }} className="ProjectAbout">
+                    <m.h2 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}>About</m.h2>
+                    <m.div 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        className="ProjectDateAndType">
+                        <m.span
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}>Project Type: Personal</m.span>
+                        <m.span 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}>March 2023 - Present</m.span>
+                    </m.div>
+                    <m.div 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        className="ProjectLozenges">
+                        <m.span 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            className="ProjectLozenge">Design</m.span>
+                        <m.span 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            className="ProjectLozenge">Development</m.span>
+                    </m.div>
+                    <m.div 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} 
+                        className="ProjectStacksAndTools">
                         <span className="StackToolLozenge">Next.js</span>
                         <span className="StackToolLozenge">React</span>
                         <span className="StackToolLozenge">Redux</span>
@@ -78,55 +109,83 @@ const Brand = () => {
                         <span className="StackToolLozenge">Webpack</span>
                         <span className="StackToolLozenge">Git</span>
                         <span className="StackToolLozenge">Vercel</span>
-                    </div>
-                    <p className="ProjectAboutContent">Cryptoverse is a conceptualised company which offers data on different cryptocurrencies, including market capitalisation, exchanges and current news. The application was built using Next.js and leveraged Redux RTK Query to manage API calls from Coinranking, Coin Gecko and Bing News Search. The app was also styled using SCSS, compiled as a production build using Webpack and shipped via Vercel.</p>
-                </section>
-                <section className="ProjectTypefaces">
-                    <h2>Typeface</h2>
-                    <div className="ProjectTypefaceInfo">
-                        <span id="CryptoverseTypeface">Noto Sans</span>
-                        <div id="CryptoverseTypeface" className="TypefaceWeights">
-                            <span>Singular</span>
-                            <ul className="TypefaceWeightsList">
+                    </m.div>
+                    <m.p 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} 
+                        className="ProjectAboutContent">Cryptoverse is a conceptualised company which offers data on different cryptocurrencies, including market capitalisation, exchanges and current news. The application was built using Next.js and leveraged Redux RTK Query to manage API calls from Coinranking, Coin Gecko and Bing News Search. The app was also styled using SCSS, compiled as a production build using Webpack and shipped via Vercel.</m.p>
+                </m.section>
+
+                <m.section 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectTypefaces">
+                    <m.h2 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}>Typeface</m.h2>
+                    <m.div 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} 
+                        className="ProjectTypefaceInfo">
+                        <m.span 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }} 
+                            id="CryptoverseTypeface">Noto Sans</m.span>
+                        <m.div 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            id="CryptoverseTypeface" 
+                            className="TypefaceWeights">
+                            <m.span 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}>Singular</m.span>
+                            <m.ul
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                className="TypefaceWeightsList">
                                 <li className="Weight-200">02 Extra Light</li>
                                 ⋅ 
                                 <li id="Weight-300">03 Light</li>
                                 ⋅ 
                                 <li id="Weight-400">07 Bold</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-                
-                {/* <section className="ProjectAssetsAndBranding">
-                    <h2>Branding & Assets</h2>
-                    <div className="ProjectAssetsAndBrandingContainer">
-                        <div className="AssetsAndBranding">
-                            <img src={ brandImages } />
-                            <img src={ brandLogoBlack } />
-                            <img src={ brandLogoWhite } />
-                        </div>
-                        <div className="AssetsAndBranding">
-                            <img src={ brandComponents } />
-                        </div>
-                        <div className="AssetsAndBranding">
-                            <img src={ brandColorPalette } />
-                        </div>
-                    </div>
-                </section> */}
+                            </m.ul>
+                        </m.div>
+                    </m.div>
+                </m.section>
 
-                {/* <section className="ProjectMockups">
-                    <h2>Mockups</h2>
-                    <img src={ brandMockups } />
-                </section> */}
+                <m.section 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }} 
+                    className="ProjectScreens">
+                    <m.h2 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}>Screens</m.h2>
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} 
+                        src={ cryptoverseiMacImage } 
+                        alt="A mockup of a crypto application on an iMac"
+                        />
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} 
+                        src={ cryptoverseiPhoneImage } 
+                        alt="A mockup of a crypto application on an iPhone"
+                        />
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} 
+                        src={ cryptoverseiPadImages } 
+                        alt="A mockup of a crypto application on an iPad"
+                        />
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} 
+                        src={ cryptoverseHPImage } 
+                        alt="A mockup of a crypto application on an HP laptop"
+                        />
+                </m.section>
 
-                <section className="ProjectScreens">
-                    <h2>Screens</h2>
-                    <img src={ cryptoverseiMacImage } />
-                    <img src={ cryptoverseiPhoneImage } />
-                    <img src={ cryptoverseiPadImages } />
-                    <img src={ cryptoverseHPImage } />
-                </section>
                 <CTA />
             </div>
 

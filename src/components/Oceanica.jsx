@@ -243,23 +243,65 @@ const Brand = () => {
                     </m.div>
                 </m.section>
 
-                <section className="ProjectMockups">
-                    <h2>Mockups</h2>
-                    <img src={ oceanicaMockups } />
-                </section>
+                <m.section 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectMockups">
+                    <m.h2 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}>
+                        Mockups</m.h2>
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        src={ oceanicaMockups }
+                        alt="5 templates of a website design"
+                        />
+                </m.section>
 
-                <section className="ProjectPrototypes">
-                    <h2>Prototypes</h2>
-                    <img src={ oceanicaPrototypes } />
-                </section>
+                <m.section 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectPrototypes">
+                    <m.h2 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}>Prototypes</m.h2>
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        src={ oceanicaPrototypes }
+                        alt="6 screens showing prototype interaction" />
+                </m.section>
 
-                <section className="ProjectScreens">
-                    <h2>Screens</h2>
-                    <img src={ oceanicaiPhoneMockup } />
-                    <img src={ oceanicaiPadMockup } />
-                    <img src={ oceanicaMacbookMockup } />
-                </section>
+                <m.section
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectScreens">
+                    <m.h2 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}>Screens</m.h2>
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        src={ oceanicaiPhoneMockup } 
+                        alt="A mockup of a website on an iPhone"
+                        />
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        src={ oceanicaiPadMockup } 
+                        alt="A mockup of a website on an iPad"
+                        />
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        src={ oceanicaMacbookMockup } 
+                        alt="A mockup of a website on a Macbook"
+                        />
+                </m.section>
+
                 <CTA />
+                
             </div>
 
             <Footer />
