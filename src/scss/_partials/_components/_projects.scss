@@ -1,6 +1,17 @@
 @use '../variables' as *;
 @use '../mixins' as *;
 
+.ProjectsTitle {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 92px);
+    h1 {
+        @include HeadingOne;
+        justify-content: center;
+    }
+}
+
+
 .Projects {
     display: grid !important;
     grid-template-columns: repeat(auto-fit,minmax(290px,1fr));

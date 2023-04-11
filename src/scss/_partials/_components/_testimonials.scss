@@ -57,13 +57,12 @@
     display: flex;
     flex-direction: column;
     font-family: 'Questa Grande', serif;
-    font-style: normal;
+    font-style: italic;
     font-weight: 400;
     font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
-    // line-height: 160px;
-    text-align: right;
-    text-transform: lowercase;
-    color: $RaisinBlack;
+    text-align: center;
+    text-transform: uppercase;
+    color: $Argent;
 }
 
 .TestimonialImage {

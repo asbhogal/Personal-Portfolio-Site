@@ -10,6 +10,18 @@
     color: $Argent;
 }
 
+@mixin HeadingOne {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Questa Grande', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
+    text-align: center;
+    text-transform: uppercase;
+    color: $Argent;
+}
+
 @mixin HeadingTwoAccentLetter {
     font-family: 'Monsieur La Doulaise', cursive;
     font-style: normal;

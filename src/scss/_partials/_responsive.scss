@@ -7,7 +7,6 @@
   .FreeResourcesSection {
     width: 1120px;
     margin: 0 auto;
-    height: 100vh;
   }
   .AdditionalServices {
     width: 1120px;
@@ -55,7 +54,6 @@
   }
   .FreeResourcesSection {
     padding: 0 150px;
-    height: 100vh;
   }
   .TestimonialsSection {
     padding: 0 150px;
@@ -89,7 +87,7 @@
     padding: 0 32px;
   }
   .FreeResourcesSection {
-    padding: 32px;
+    padding: 10px;
   }
   .TestimonialsSection {
     padding: 0 32px;
@@ -125,8 +123,7 @@
     }
   }
   .FreeResourcesSection {
-    padding: 24px;
-    flex-direction: column;
+    padding: 10px;
   }
   .ProjectSection {
     height: 100vh;
@@ -187,10 +184,7 @@
   }
 
   
-  .FreeResourcesSection {
-    padding: 24px;
-    flex-direction: column;
-  }
+  
   .ProjectInfo {
     padding: 24px;
   }
@@ -228,13 +222,7 @@
     flex-direction: column;
   }
 
-  /* .NavLinks > .NavItems > a {
-    font-size: 32px;
-  }
 
-  .NavLinks {
-    padding-top: 40px !important;
-  } */
 
   .SocialLinkNames {
     height: auto;

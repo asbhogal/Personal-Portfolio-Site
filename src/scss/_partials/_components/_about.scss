@@ -14,7 +14,15 @@
     .PageHeaderTitle {
         display: flex;
         flex-direction: column;
-        @include HeadingOneTitle;
+        justify-content: center;
+        font-family: 'Questa Grande', serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
+        height: calc(100vh - 92px);
+        text-align: center;
+        text-transform: uppercase;
+        color: $Argent;
     }
     .AboutContent {
         gap: 20px;
@@ -56,7 +64,7 @@
             }
             .ExperienceContainer {
                 display: grid;
-                grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+                grid-template-columns: repeat(auto-fit,minmax(305px,1fr));
                 gap: 10px;
                 .ExperienceSection {
                     display: flex;

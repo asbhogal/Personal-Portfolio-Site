@@ -39,7 +39,10 @@ const Projects = ({}) => {
     return (
         <>
             <Header />
-            <div className="Projects">
+            <section className="ProjectsTitle">
+                <h1>Projects</h1>
+            </section>
+            <section className="Projects">
                     <Link to="brand" id="BrandProjectSectionLink" className="ProjectSectionLink">
                         <img className="ProjectImage" src={ brandProjectCoverLink } />
                         <div id="BrandProjectLinkOverlay" className="ProjectLinkOverlay">
@@ -73,7 +76,7 @@ const Projects = ({}) => {
 {/*                             <button className="ProjectVisitButton">Visit</button>
  */}                        </div>
                     </Link>
-            </div>
+            </section>
             <Footer />
 
             { showButton && (
