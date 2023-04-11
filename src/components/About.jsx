@@ -2,16 +2,40 @@ import "../scss/index.scss";
 import Header from "./Header";
 import Footer from "./Footer";
 
+import { useEffect, useState } from "react";
 import { motion as m } from "framer-motion";
 
 const About = () => {
+
+    const [showButton, setShowButton] = useState(false);
+
+    useEffect(() => {
+
+        document.title = 'About | Aman Singh Bhogal';
+
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300) {
+                setShowButton(true);
+            } else {
+                setShowButton(false);
+            }
+        });
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo ({
+            top: 0,
+            behaviour: "smooth"
+        });
+    };
+
     return (
         <>
             <Header />
                 <section className="AboutSection">
                     <h1 className="PageHeaderTitle">about</h1>
                     <div className="AboutContent">
-                        <div id="TechSkills" className="ExperienceList">
+                        {/* <div id="TechSkills" className="ExperienceList">
                             <p id="AboutPageTitle1" className="PageSubTitleText">  
                                 Figma &#124; Adobe Ai &#124; Adobe PS &#124; Adobe xD
                             </p>
@@ -23,7 +47,7 @@ const About = () => {
                             <p id="AboutPageTitle1" className="PageSubTitleText">  
                                 Responsive Web Design &#124; Low & High-Fidelity Wireframing &#124; Components &#124; UI Prototyping
                             </p>
-                        </div>
+                        </div> */}
                         <p className="AboutText">Aman Singh Bhogal is a UI Engineer with 3 years of client side experience in Front End Development. His work covers designing, building and optimising CMS-based websites (WordPress and Hubspot) and static applications using vanilla HTML5, CSS3, SASS and JavaScript. 
                         <br></br>
                         <br></br>
@@ -122,6 +146,13 @@ const About = () => {
                     </div>
                 </section>
             <Footer />
+
+            { showButton && (
+                <button onClick={ scrollToTop } className="ScrollToTop">
+                    &#8593;
+                </button>
+            ) }
+
         </>
     )
 }

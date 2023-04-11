@@ -5,32 +5,53 @@
     > * {
         display: flex;
     }
-    h1 {
-        @include HeadingOneTitle;
-    }
-    h2 {
-        @include HeadingTwoProject;
-    }
-    h3 {
-        @include HeadingThreeProject;
-    }
     flex-direction: column;
     align-items: center;
     .AdditionalServicesCover,
     .AdditionalServicesSection {
-        height: 100vh;
+        height: calc(100vh - 92px);
         align-items: center;
+    }
+    .AdditionalServicesCover h1 {
+        font-family: 'Questa Grande', serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
+        height: calc(100vh - 92px);
+        text-align: center;
+        text-transform: uppercase;
+        color: $Argent;
     }
     .AdditionalServicesSection {
         flex-direction: column;
         gap: 30px;
+        h3 {
+            font-family: 'Questa Grande', serif;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
     }
     .AdditionalServicesSection .AdditionalServicesContent {
-        display: flex;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(225px,1fr));
+        gap: 10px;
+        h2 {
+            font-family: 'Questa Grande', serif;
+            font-weight: 400;
+            text-transform: uppercase;
+            border-bottom: 1px solid $Argent;
+        }
         li {
             list-style-type: none;
             @include BodyText;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border: 1px solid $Khaki;
+            border-radius: 10px;
+            padding: 10px;
         }
     }
 }

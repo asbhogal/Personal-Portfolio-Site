@@ -13,6 +13,9 @@ const FreeResources = () => {
     const [showButton, setShowButton] = useState(false);
 
     useEffect(() => {
+
+        document.title = 'Free Resources | Aman Singh Bhogal';
+
         window.addEventListener("scroll", () => {
             if (window.pageYOffset > 300) {
                 setShowButton(true);

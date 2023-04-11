@@ -24,6 +24,9 @@ const LiteLife = () => {
     const [showButton, setShowButton] = useState(false);
 
     useEffect(() => {
+
+        document.title = 'Lite Life | Aman Singh Bhogal';
+
         window.addEventListener("scroll", () => {
             if (window.pageYOffset > 300) {
                 setShowButton(true);
@@ -61,10 +64,10 @@ const LiteLife = () => {
                         <span>Project Type: Personal</span>
                         <span>Jan 2023 - Feb 2023</span>
                     </div>
-                    <div className="ProjectLozenges">
+                    {/* <div className="ProjectLozenges">
                         <span className="ProjectLozenge">Design</span>
                         <span className="ProjectLozenge">Development</span>
-                    </div>
+                    </div> */}
                     <div className="ProjectStacksAndTools">
                         <span className="StackToolLozenge">React</span>
                         <span className="StackToolLozenge">JS</span>

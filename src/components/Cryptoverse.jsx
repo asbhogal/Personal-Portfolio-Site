@@ -19,6 +19,9 @@ const Brand = () => {
     const [showButton, setShowButton] = useState(false);
 
     useEffect(() => {
+
+        document.title = 'Cryptoverse | Aman Singh Bhogal';
+
         window.addEventListener("scroll", () => {
             if (window.pageYOffset > 300) {
                 setShowButton(true);

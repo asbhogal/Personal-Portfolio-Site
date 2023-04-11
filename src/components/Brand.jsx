@@ -20,6 +20,9 @@ const Brand = () => {
     const [showButton, setShowButton] = useState(false);
 
     useEffect(() => {
+
+        document.title = 'Brand | Aman Singh Bhogal';
+
         window.addEventListener("scroll", () => {
             if (window.pageYOffset > 300) {
                 setShowButton(true);
@@ -64,7 +67,7 @@ const Brand = () => {
                         <span className="ProjectLozenge">Design</span>
                         <span className="ProjectLozenge">Development</span>
                     </div>
-                    <div className="ProjectStacksAndTools">
+                    <div id="SingleRowStacksAndTools" className="ProjectStacksAndTools">
                         <span>
                             <span className="StackToolLozenge">Figma</span>
                             <span className="StackToolLozenge">UI Prototyping</span>

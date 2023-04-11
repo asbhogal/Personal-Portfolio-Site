@@ -9,7 +9,7 @@ import brandLogo from "../assets/images/logos/brand-logo-white.svg";
 import cryptoverseLogo from "../assets/images/logos/Cryptoverse-Logo.svg";
 import oceanicaLogo from "../assets/images/logos/Oceanica-Logo.svg";
 import metaversusLogo from "../assets/images/logos/Metaversus-Logo.svg";
-import liteLifeLogo from "../assets/images/logos/LiteLife-Logo.svg";
+import liteLifeWhiteLogo from "../assets/images/logos/LiteLife-Logo-White.svg";
 import brandScreen from "../assets/images/Home/BrandScreen.jpg";
 import liteLifeScreen from "../assets/images/Home/LiteLifeScreen.jpg";
 import oceanicaScreen from "../assets/images/Home/OceanicaScreen.jpg";
@@ -27,6 +27,9 @@ const Home = () => {
     const [showButton, setShowButton] = useState(false);
 
     useEffect(() => {
+
+        document.title = 'Aman Singh Bhogal | Front End Developer & UI Engineer';
+        
         window.addEventListener("scroll", () => {
             if (window.pageYOffset > 300) {
                 setShowButton(true);
@@ -60,7 +63,7 @@ const Home = () => {
                     <img src={ oceanicaLogo } />
                     <img src={ cryptoverseLogo } />
                     <img src={ metaversusLogo } />
-                    <img src={ liteLifeLogo } />
+                    <img src={ liteLifeWhiteLogo } />
                 </div>
             </section>
 
@@ -70,14 +73,14 @@ const Home = () => {
                         <p>Logos & Branding</p>
                         <PaintIcon />
                     </div>
-                    <p>Abstract insofar truth moral pinnacle. Ubermensch inexpedient war dead play gains derive dead horror victorious love war. Zarathustra law.</p>
+                    <p>Developing strong, consistent and recognisable branding which evokes emotions.</p>
                 </div>
                 <div className="SkillBox">
                 <div className="SkillBoxTopRow">
                         <p>Web Design</p>
                         <RulerIcon />
                     </div>
-                    <p>Designing UI wireframe-focused high fidelity mockups with prototyping</p>
+                    <p>Designing high fidelity, responsive mockups from sketches/wireframes and existing branding, with prototyping</p>
                 </div>
                 <div className="SkillBox">
                     <div className="SkillBoxTopRow">

@@ -92,8 +92,11 @@
                 text-align: center;
                 border: 1px solid $Khaki;
                 border-radius: 50px;
-                padding: 10px 12px;
+                padding: 10px;
             }
+        }
+        #SingleRowStacksAndTools {
+            flex-wrap: nowrap;
         }
     }
     .DesignDecisions,
@@ -220,5 +223,8 @@ $CryptoverseWeights: (weight1: 200, weight2: 300, weight3: 700);
 @media only screen and (width <= 748px) {
     #LiteLiteAssetsAndBranding {
         flex-direction: column;
+    }
+    .ProjectStacksAndTools {
+        display: none !important;
     }
 }

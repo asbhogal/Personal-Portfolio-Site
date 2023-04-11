@@ -9,9 +9,10 @@
 }
 
 .FreeResourcesSection {
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
     gap: 10px;
+    padding-bottom: 10px;
     .ResourcesCard {
         display: flex;
         flex-direction: column;

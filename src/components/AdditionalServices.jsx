@@ -9,6 +9,9 @@ const AdditionalServices = () => {
     const [showButton, setShowButton] = useState(false);
 
     useEffect(() => {
+
+        document.title = 'Additional Services | Aman Singh Bhogal';
+
         window.addEventListener("scroll", () => {
             if (window.pageYOffset > 300) {
                 setShowButton(true);

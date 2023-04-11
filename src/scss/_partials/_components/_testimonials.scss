@@ -1,13 +1,20 @@
 @use '../variables' as *;
 @use '../mixins' as *;
 
+.swiper {
+    padding: 50px 0;
+}
+
+.swiper-pagination-bullet {
+    background: $Argent !important;
+}
+
 .swiper-pagination-bullet-active {
-    background: $RaisinBlack !important;
+    background: $Khaki !important;
 }
 
 .swiper-pagination-bullets {
     position: relative;
-    top: 4px;
 }
 
 .TestimonialCard {
@@ -45,7 +52,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: calc(100vh - 92px);
 }
 
 .TestimonialsSection {
@@ -53,13 +60,13 @@
     align-items: center;
 }
 
-.PageHeaderTitle {
+.TestimonialsPageTitle {
     display: flex;
     flex-direction: column;
     font-family: 'Questa Grande', serif;
     font-style: italic;
     font-weight: 400;
-    font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
+    font-size: clamp(2.625rem, -2.6221rem + 16.7906vw, 12.5rem);
     text-align: center;
     text-transform: uppercase;
     color: $Argent;

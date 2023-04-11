@@ -46,19 +46,12 @@
     text-transform: uppercase;
 }
 
-@mixin SubtitleText {
-    font-family: 'Switzer', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
 @mixin BodyText {
     font-family: 'Anaheim', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
+    text-transform: uppercase;
 }
 
 @mixin ProjectStructure {

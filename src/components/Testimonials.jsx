@@ -12,6 +12,9 @@ const Testimonials = () => {
     const [showButton, setShowButton] = useState(false);
 
     useEffect(() => {
+
+        document.title = 'Testimonials | Aman Singh Bhogal';
+
         window.addEventListener("scroll", () => {
             if (window.pageYOffset > 300) {
                 setShowButton(true);
@@ -35,7 +38,7 @@ const Testimonials = () => {
                 initial={{opacity: 0}} 
                 animate={{opacity: 1}} 
                 className="TestimonialsCover">
-                <h1 className="PageHeaderTitle">testimonials</h1>
+                <h1 className="TestimonialsPageTitle">testimonials</h1>
             </m.section>
             <m.section initial={{opacity: 0}} animate={{opacity: 1}} className="TestimonialsSection">
                 <TestimonialsCard />
