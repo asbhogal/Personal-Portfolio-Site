@@ -66,11 +66,26 @@ const LiteLife = () => {
                         <span className="ProjectLozenge">Development</span>
                     </div>
                     <div className="ProjectStacksAndTools">
-                        <span>Material UI</span>
-                        <span>REACT | JS | COMMERCE.JS | STRIPE | WEBPACK | GIT | VERCEL</span>
+                        <span className="StackToolLozenge">React</span>
+                        <span className="StackToolLozenge">JS</span>
+                        <span className="StackToolLozenge">Material UI</span>
+                        <span className="StackToolLozenge">React Router</span>
+                        <span className="StackToolLozenge">React Hook Form</span>
+                        <span className="StackToolLozenge">Single Page Application</span>
+                        <span className="StackToolLozenge">Commerce.js</span>
+                        <span className="StackToolLozenge">Stripe</span>
+                        <span className="StackToolLozenge">Webpack</span>
+                        <span className="StackToolLozenge">Git</span>
+                        <span className="StackToolLozenge">Vercel</span>
                     </div>
-                    <p className="ProjectAboutContent">Lite Life is a conceptualised e-commerce company which specialises in selling high quality, simplistic technological products for minimalistic working environments. Design for this project was handled by Material UI. The project was built using React and Commerce.js (a headless CMS) to handle the project catologue, cart system and ordering. Stripe payment gateway was also configured to handle the checkout process and order confirmation. This project was compiled using Webpack then shipped for production via Vercel.</p>
+                    <p className="ProjectAboutContent">Lite Life is a conceptualised e-commerce company which specialises in selling high quality, simplistic technological products for minimalistic working environments. Design for this project was handled by Material UI. The project is a Single Page Application built using React and React Router with Commerce.js (a headless CMS) and React Hook Form to handle the project catologue, cart system, ordering and customer data. Stripe payment gateway was also configured to handle the checkout process and order confirmation. This project was compiled using Webpack then shipped for production via Vercel.</p>
                 </section>
+
+                <section className="DesignDecisions">
+                    <h2>Design Decisions</h2>
+                    <p className="ProjectAboutContent">Lite Life incorporates the simplistic tones of black, grey and white alongside the stark constrasts of red and violet-blue to consider both user immersion and ease-of-navigation during the checkout process (during the latter, distraction-free UX is incorporated to keep the customer on the pages until the transaction is complete.) The logo can be considered widely known and recognizable in this modern age. The stripped back, simple style reflects the design of the site, and the long branches complement the horizontal and vertical lines used in the UI. Roboto, by name, is synonymous with clean, modern technology, and this is in turn reflected through its short descenders and wide bowls, where the former aligns close to the baseline and keeps the space efficient and egonomic, akin to the technology Lite Life sells. The use of only one weight also reinforces consistency within simplicity. On the broader scale, this conveys two things: simple things can still be quality. And quality things can still be simple.</p>
+                </section>
+
                 <section className="ProjectTypefaces">
                     <h2>Typeface</h2>
                     <div className="ProjectTypefaceInfo">

@@ -13,13 +13,20 @@ import FreeResources from "./FreeResources";
 
 import Cursor from "./Cursor"
 import ScrollRestoration from "./ScrollRestoration";
+import useDocumentTitle from "./useDocumentTitle";
 
 import { Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 
-const App = () => {
+/* function Home() {
+    useDocumentTitle('Aman Singh Bhogal | Front End Developer')
+}
 
-    
+function About() {
+    useDocumentTitle('About | Aman Singh Bhogal')
+} */
+
+const App = () => {
 
     return (
         <>

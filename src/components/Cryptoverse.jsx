@@ -64,8 +64,17 @@ const Brand = () => {
                         <span className="ProjectLozenge">Development</span>
                     </div>
                     <div className="ProjectStacksAndTools">
-                        <span>Figma | UI Prototyping | Auto Layouts | Components</span>
-                        <span>REACT | JS | BABEL | SASS | WEBPACK | GIT | VERCEL</span>
+                        <span className="StackToolLozenge">Next.js</span>
+                        <span className="StackToolLozenge">React</span>
+                        <span className="StackToolLozenge">Redux</span>
+                        <span className="StackToolLozenge">RTK Query</span>
+                        <span className="StackToolLozenge">API</span>
+                        <span className="StackToolLozenge">Single Page Application</span>
+                        <span className="StackToolLozenge">State Management</span>
+                        <span className="StackToolLozenge">SASS</span>
+                        <span className="StackToolLozenge">Webpack</span>
+                        <span className="StackToolLozenge">Git</span>
+                        <span className="StackToolLozenge">Vercel</span>
                     </div>
                     <p className="ProjectAboutContent">Cryptoverse is a conceptualised company which offers data on different cryptocurrencies, including market capitalisation, exchanges and current news. The application was built using Next.js and leveraged Redux RTK Query to manage API calls from Coinranking, Coin Gecko and Bing News Search. The app was also styled using SCSS, compiled as a production build using Webpack and shipped via Vercel.</p>
                 </section>
@@ -85,7 +94,8 @@ const Brand = () => {
                         </div>
                     </div>
                 </section>
-                <section className="ProjectAssetsAndBranding">
+                
+                {/* <section className="ProjectAssetsAndBranding">
                     <h2>Branding & Assets</h2>
                     <div className="ProjectAssetsAndBrandingContainer">
                         <div className="AssetsAndBranding">
@@ -100,7 +110,7 @@ const Brand = () => {
                             <img src={ brandColorPalette } />
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 {/* <section className="ProjectMockups">
                     <h2>Mockups</h2>

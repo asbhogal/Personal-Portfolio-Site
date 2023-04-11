@@ -76,14 +76,27 @@
             text-transform: uppercase;
         }
         .ProjectStacksAndTools {
-            gap: 85px;
+            flex-wrap: wrap;
+            gap: 10px;
             span {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
                 &:nth-child(2) {
-                    text-align: right;
+                    justify-content: flex-end;
                 }
+            }
+            .StackToolLozenge {
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                border: 1px solid $Khaki;
+                border-radius: 50px;
+                padding: 10px 12px;
             }
         }
     }
+    .DesignDecisions,
     .ProjectTypefaces,
     .ProjectAssetsAndBranding,
     .ProjectMockups,

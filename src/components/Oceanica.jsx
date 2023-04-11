@@ -64,11 +64,30 @@ const Brand = () => {
                         <span className="ProjectLozenge">Development</span>
                     </div>
                     <div className="ProjectStacksAndTools">
-                        <span>Figma | UI Prototyping | Auto Layouts | Components</span>
-                        <span>REACT | JS | BABEL | SASS | WEBPACK | GIT | VERCEL</span>
+                        <span>
+                            <span className="StackToolLozenge">Figma</span>
+                            <span className="StackToolLozenge">UI Prototyping</span>
+                            <span className="StackToolLozenge">Auto Layouts</span>
+                            <span className="StackToolLozenge">Components</span>
+                        </span>
+                        <span>
+                            <span className="StackToolLozenge">React</span>
+                            <span className="StackToolLozenge">JS</span>
+                            <span className="StackToolLozenge">Babel</span>
+                            <span className="StackToolLozenge">SASS</span>
+                            <span className="StackToolLozenge">Webpack</span>
+                            <span className="StackToolLozenge">Git</span>
+                            <span className="StackToolLozenge">Vercel</span>
+                        </span>
                     </div>
                     <p className="ProjectAboutContent">Oceanica is a conceptualised company which offers luxury travel resorts and activities around the world. Logos, assets and responsive templates (for 5 breakpoints) were created using Figma, including prototypes to simulate a booking screen. A responsive Web page from these was then built using React with SCSS, Babel and JS, compiled as a production build using Webpack and then shipped using Vercel.</p>
                 </section>
+
+                <section className="DesignDecisions">
+                    <h2>Design Decisions</h2>
+                    <p className="ProjectAboutContent">Luxury and allure were key factors behind the message of this brand. The font used symbolises the nature of the sea and open waters; vast and spacious yet defined and affirmed, further reinforced by the semi bold and bold weightings, broad shoulders and wide leading. The logo of a wave is simplistic and therefore easily memorable; it's character parallels that of the typography leveraged and against the rich black backdrop rings true the message of style and class, with its elliptical nature replicating that of the shape of the Earth and the wave line flowing into the brand name. The background calligraphic words carry this theme throughout the page with its swashes leaning on an axis akin to the Earth's own orbit, as the user is enveloped in this magnetism during their journey.</p>
+                </section>
+
                 <section className="ProjectTypefaces">
                     <h2>Typeface</h2>
                     <div className="ProjectTypefaceInfo">
