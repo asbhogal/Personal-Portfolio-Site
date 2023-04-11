@@ -1,16 +1,32 @@
+import { motion as m } from "framer-motion";
+
 const CTA = () => {
   return (
-    <section className="CTA">
-        <p>Available for agency and freelance work</p>
-        <div>
-            <a className="CTAAgencyButton" href="mailto:careers@amansinghbhogal.com">
+    <m.section 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      className="CTA">
+        <m.p 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}>
+          Available for agency and freelance work</m.p>
+        <m.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}>
+            <m.a 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="CTAAgencyButton" href="mailto:careers@amansinghbhogal.com">
                 For Agencies
-            </a>
-            <a className="CTAClientButton" href="mailto:business@amansinghbhogal.com">
+            </m.a>
+            <m.a 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="CTAClientButton" href="mailto:business@amansinghbhogal.com">
                 For Clients
-            </a>
-        </div>
-    </section>
+            </m.a>
+        </m.div>
+    </m.section>
   )
 }
 

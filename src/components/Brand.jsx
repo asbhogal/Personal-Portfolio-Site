@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion as m } from "framer-motion";
 import brandImages from "../assets/images/BRAND/BrandImages.png";
 import brandLogoBlack from "../assets/images/logos/brand-logo-black.svg";
 import brandLogoWhite from "../assets/images/logos/brand-logo-white.svg";
@@ -42,11 +43,24 @@ const Brand = () => {
     return (
         <>
             <Header />
+
             <div className="Project">
-                <section className="ProjectHero">
-                    <img src={ brandHeroImg }/>
-                </section>
-                <section className="ProjectLinks">
+                <m.section 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectHero">
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        src={ brandHeroImg }
+                        alt="A series of iPhones face-down, with one in the middle faced-up, showing a website page"
+                        />
+                </m.section>
+
+                <m.section 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectLinks">
                     <a target="_blank" href="https://www.figma.com/community/file/1187868244670810561/" className="ProjectButton">
                         templates
                     </a>
@@ -56,25 +70,52 @@ const Brand = () => {
                     <a target="_blank" href="https://brand-tm.vercel.app/" className="ProjectButton">
                         site
                     </a>
-                </section>
-                <section className="ProjectAbout">
-                    <h2>About</h2>
-                    <div className="ProjectDateAndType">
-                        <span>Project Type: Personal</span>
-                        <span>Dec 2022 - Jan 2023</span>
-                    </div>
-                    <div className="ProjectLozenges">
-                        <span className="ProjectLozenge">Design</span>
-                        <span className="ProjectLozenge">Development</span>
-                    </div>
-                    <div id="SingleRowStacksAndTools" className="ProjectStacksAndTools">
-                        <span>
+                </m.section>
+
+                <m.section
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectAbout">
+                    <m.h2
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}>About</m.h2>
+                    <m.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        className="ProjectDateAndType">
+                        <m.span 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}>Project Type: Personal</m.span>
+                        <m.span 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}>Dec 2022 - Jan 2023</m.span>
+                    </m.div>
+                    <m.div 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} className="ProjectLozenges">
+                        <m.span 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }} className="ProjectLozenge">Design</m.span>
+                        <m.span 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            className="ProjectLozenge">Development</m.span>
+                    </m.div>
+                    <m.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        id="SingleRowStacksAndTools" className="ProjectStacksAndTools">
+                        <m.span 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}>
                             <span className="StackToolLozenge">Figma</span>
                             <span className="StackToolLozenge">UI Prototyping</span>
                             <span className="StackToolLozenge">Auto Layouts</span>
                             <span className="StackToolLozenge">Components</span>
-                        </span>
-                        <span>
+                        </m.span>
+                        <m.span 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}>
                             <span className="StackToolLozenge">React</span>
                             <span className="StackToolLozenge">JS</span>
                             <span className="StackToolLozenge">Babel</span>
@@ -82,23 +123,58 @@ const Brand = () => {
                             <span className="StackToolLozenge">Webpack</span>
                             <span className="StackToolLozenge">Git</span>
                             <span className="StackToolLozenge">Vercel</span>
-                        </span>
-                    </div>
-                    <p className="ProjectAboutContent">Brand is a conceptualised company which offers minimalistic interior decorating options inspired by Milanese design. Logos and assets were provided and from these, five responsive templates (for 5 breakpoints) were created using Figma. A responsive Web page from these was then built using React with SCSS, Babel and JS, compiled as a production build using Webpack and then shipped using Vercel.</p>
-                </section>
+                        </m.span>
+                    </m.div>
+                    <m.p 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        className="ProjectAboutContent">
+                        Brand is a conceptualised company which offers minimalistic interior decorating options inspired by Milanese design. Logos and assets were provided and from these, five responsive templates (for 5 breakpoints) were created using Figma. A responsive Web page from these was then built using React with SCSS, Babel and JS, compiled as a production build using Webpack and then shipped using Vercel.</m.p>
+                </m.section>
 
-                <section className="DesignDecisions">
-                    <h2>Design Decisions</h2>
-                    <p className="ProjectAboutContent">The templates were kept consistent in design, aesthetic and layout. The clean, minimalistic structure with attention to whitespacing, legibility and heirarchy was also respected, paralleling the affluence communicated by the brand. The logo itself is assured, sharp and rigid, to emphasise the nature and quality of their products. The anti-flash white provides a medium through which the two extremes of black and white fuse in different elements at play and merge across various content typesets, yet still manage to become two distinct entities in their own right, emboldened by the contrasting logos used.</p>
-                </section>
+                <m.section
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="DesignDecisions">
+                    <m.h2 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}>
+                        Design Decisions</m.h2>
+                    <m.p 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        className="ProjectAboutContent">
+                        The templates were kept consistent in design, aesthetic and layout. The clean, minimalistic structure with attention to whitespacing, legibility and heirarchy was also respected, paralleling the affluence communicated by the brand. The logo itself is assured, sharp and rigid, to emphasise the nature and quality of their products. The anti-flash white provides a medium through which the two extremes of black and white fuse in different elements at play and merge across various content typesets, yet still manage to become two distinct entities in their own right, emboldened by the contrasting logos used.</m.p>
+                </m.section>
 
-                <section className="ProjectTypefaces">
-                    <h2>Typeface</h2>
-                    <div className="ProjectTypefaceInfo">
-                        <span id="BrandTypeface">Inter</span>
-                        <div id="BrandTypeface" className="TypefaceWeights">
-                            <span>Singular</span>
-                            <ul id="BrandTypeface" className="TypefaceWeightsList">
+                <m.section
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectTypefaces">
+                    <m.h2 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}>
+                        Typeface</m.h2>
+                    <m.div 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        className="ProjectTypefaceInfo">
+                        <m.span
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            id="BrandTypeface">
+                            Inter</m.span>
+                        <m.div 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            id="BrandTypeface" className="TypefaceWeights">
+                            <m.span
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}>Singular</m.span>
+                            <m.ul 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                id="BrandTypeface" className="TypefaceWeightsList">
                                 <li className="Weight-400">04 Regular</li>
                                 ⋅ 
                                 <li id="Weight-500">05 Medium</li>
@@ -108,39 +184,105 @@ const Brand = () => {
                                 <li id="Weight-700">07 Bold</li>
                                 ⋅ 
                                 <li id="Weight-900">09 Black</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-                <section className="ProjectAssetsAndBranding">
-                    <h2>Branding & Assets</h2>
-                    <div className="ProjectAssetsAndBrandingContainer">
-                        <div className="AssetsAndBranding">
-                            <img src={ brandImages } />
-                            <img src={ brandLogoBlack } />
-                            <img src={ brandLogoWhite } />
-                        </div>
-                        <div className="AssetsAndBranding">
-                            <img src={ brandComponents } />
-                        </div>
-                        <div className="AssetsAndBranding">
-                            <img src={ brandColorPalette } />
-                        </div>
-                    </div>
-                </section>
+                            </m.ul>
+                        </m.div>
+                    </m.div>
+                </m.section>
 
-                <section className="ProjectMockups">
-                    <h2>Mockups</h2>
-                    <img src={ brandMockups } />
-                </section>
-                <section className="ProjectScreens">
-                    <h2>Screens</h2>
-                    <img src={ brandiPhoneToggleImage } />
-                    <img src={ brandiMacImage } />
-                    <img src={ brandMacBookImage } />
-                    <img src={ brandiPadImage } />
-                    <img src={ brandiPad2Image } />
-                </section>
+                <m.section
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectAssetsAndBranding">
+                    <m.h2
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}>
+                        Branding & Assets</m.h2>
+                    <m.div 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        className="ProjectAssetsAndBrandingContainer">
+                        <m.div 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            className="AssetsAndBranding">
+                            <m.img 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }} 
+                                src={ brandImages }
+                                alt="Images of Milanese-designed furniture" />
+                            <m.img 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                src={ brandLogoBlack }
+                                alt="The word BRAND in bold, black lettering" />
+                            <m.img 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                src={ brandLogoWhite }
+                                alt="The word BRAND in bold, white lettering" />
+                        </m.div>
+                        <m.div 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            className="AssetsAndBranding">
+                            <m.img src={ brandComponents } />
+                        </m.div>
+                        <m.div 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            className="AssetsAndBranding">
+                            <m.img 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                src={ brandColorPalette } />
+                        </m.div>
+                    </m.div>
+                </m.section>
+
+                <m.section 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectMockups">
+                    <m.h2
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}>
+                    Mockups</m.h2>
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        src={ brandMockups } />
+                </m.section>
+
+                <m.section
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectScreens">
+                    <m.h2 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}>
+                        Screens</m.h2>
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} 
+                        src={ brandiPhoneToggleImage } />
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} 
+                        src={ brandiMacImage } />
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} 
+                        src={ brandMacBookImage } />
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} 
+                        src={ brandiPadImage } />
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} 
+                        src={ brandiPad2Image } />
+                </m.section>
+
                 <CTA />
             </div>
 

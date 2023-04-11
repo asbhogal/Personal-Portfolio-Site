@@ -7,23 +7,36 @@ import { WebsiteCarbonBadge } from "react-websitecarbon-badge";
 
 const Footer = () => {
     return (
-        <footer className="Footer">
-            <div className="Copyright">
+        <m.footer 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="Footer">
+            <m.div 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="Copyright">
                 <p>©Aman Singh Bhogal - 2023</p>
-            </div>
+            </m.div>
             <WebsiteCarbonBadge url="www.amansinghbhogal.com" />
-            <div className="SocialIcons">
-                <a target="_blank" href="https://www.linkedin.com/in/amansinghbhogal" aria-label="Visit Aman's LinkedIn page">
+            <m.div 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="SocialIcons">
+                <m.a 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }} 
+                    target="_blank" 
+                    href="https://www.linkedin.com/in/amansinghbhogal" aria-label="Visit Aman's LinkedIn page">
                     <FaLinkedinIn />
-                </a>
-                <a target="_blank" href="https://www.github.com/asbhogal" aria-label="Visit Aman's GitHub page">
+                </m.a>
+                <m.a target="_blank" href="https://www.github.com/asbhogal" aria-label="Visit Aman's GitHub page">
                     <BsGithub />
-                </a>
-                <a target="_blank" href="https://www.figma.com/@amansinghbhogal" aria-label="Visit Aman's Figma profile">
+                </m.a>
+                <m.a target="_blank" href="https://www.figma.com/@amansinghbhogal" aria-label="Visit Aman's Figma profile">
                     <FiFigma />
-                </a> 
-            </div>
-        </footer>
+                </m.a> 
+            </m.div>
+        </m.footer>
     )
 }
 

@@ -8,7 +8,9 @@ const Header = (props) => {
     const [navOpen, setNavOpen] = useState(false);
 
     return (
-        <header
+        <m.header
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             id={ props.HeaderPosition }
             className="Header">
         <nav className="Nav">
@@ -80,7 +82,7 @@ const Header = (props) => {
                     </div>
             </div>       
         </nav>
-    </header>       
+    </m.header>       
     )
 };
 

@@ -49,7 +49,11 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <section className="HomePageSection">
+
+            <m.section 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="HomePageSection">
                 <h1 className="MainHomeTitle">
                     Creating <span className="HeadlineAccent">bold</span>, 
                     <span className="HeadlineAccent"> elegant </span> &#38;
@@ -65,9 +69,12 @@ const Home = () => {
                     <img src={ metaversusLogo } />
                     <img src={ liteLifeWhiteLogo } />
                 </div>
-            </section>
+            </m.section>
 
-            <section className="SkillsOffered">
+            <m.section 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="SkillsOffered">
                 <div className="SkillBox">
                     <div className="SkillBoxTopRow">
                         <p>Logos & Branding</p>
@@ -96,16 +103,23 @@ const Home = () => {
                     </div>
                     <p>Optimising website builds across performance, accessibility, SEO and stability</p>
                 </div>
-            </section>
+            </m.section>
 
-            <section className="ProjectScreens">
-                <div className="HomePageSectionBar">
+            <m.section 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="ProjectScreens">
+                <div 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="HomePageSectionBar">
                     <h2>Selected Work</h2>
                     <Link to="projects" className="AllProjectsLink">
                         <Arrow />
                     </Link>
                 </div>
-                <Link className="ProjectLink" to="/projects/brand">
+                <Link
+                    className="ProjectLink" to="/projects/brand">
                     <SkillLozenge />
                     <img src={ brandScreen } />
                     <div className="LinkOverlay">
@@ -133,7 +147,7 @@ const Home = () => {
                         <Arrow />
                     </div>
                 </Link>
-            </section>
+            </m.section>
 
             <CTA />
             
