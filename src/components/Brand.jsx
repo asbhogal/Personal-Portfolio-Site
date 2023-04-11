@@ -45,6 +45,7 @@ const Brand = () => {
             <Header />
 
             <div className="Project">
+
                 <m.section 
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -93,10 +94,12 @@ const Brand = () => {
                     </m.div>
                     <m.div 
                         initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }} className="ProjectLozenges">
+                        whileInView={{ opacity: 1 }} 
+                        className="ProjectLozenges">
                         <m.span 
                             initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }} className="ProjectLozenge">Design</m.span>
+                            whileInView={{ opacity: 1 }} 
+                            className="ProjectLozenge">Design</m.span>
                         <m.span 
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
@@ -105,7 +108,8 @@ const Brand = () => {
                     <m.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        id="SingleRowStacksAndTools" className="ProjectStacksAndTools">
+                        id="SingleRowStacksAndTools" 
+                        className="ProjectStacksAndTools">
                         <m.span 
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}>
@@ -175,7 +179,8 @@ const Brand = () => {
                             <m.ul 
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
-                                id="BrandTypeface" className="TypefaceWeightsList">
+                                id="BrandTypeface" 
+                                className="TypefaceWeightsList">
                                 <li className="Weight-400">04 Regular</li>
                                 ⋅ 
                                 <li id="Weight-500">05 Medium</li>
@@ -226,7 +231,11 @@ const Brand = () => {
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             className="AssetsAndBranding">
-                            <m.img src={ brandComponents } />
+                            <m.img 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                src={ brandComponents }
+                                alt="Various page components, including a testimonial card and buttons" />
                         </m.div>
                         <m.div 
                             initial={{ opacity: 0 }}
@@ -292,9 +301,12 @@ const Brand = () => {
             <Footer />
 
             { showButton && (
-                <button onClick={ scrollToTop } className="ScrollToTop">
+                <m.button 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }} 
+                    onClick={ scrollToTop } className="ScrollToTop">
                     &#8593;
-                </button>
+                </m.button>
             ) }
         </>
     )

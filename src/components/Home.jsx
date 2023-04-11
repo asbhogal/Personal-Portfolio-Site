@@ -154,9 +154,12 @@ const Home = () => {
             <Footer />
 
             { showButton && (
-                <button onClick={ scrollToTop } className="ScrollToTop">
+                <m.button 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }} 
+                    onClick={ scrollToTop } className="ScrollToTop">
                     &#8593;
-                </button>
+                </m.button>
             ) }
 
         </>
