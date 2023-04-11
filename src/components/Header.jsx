@@ -8,18 +8,16 @@ const Header = (props) => {
     const [navOpen, setNavOpen] = useState(false);
 
     return (
-        <m.header 
-            initial={{opacity: 0}} 
-            animate={{opacity: 1}} 
+        <header
             id={ props.HeaderPosition }
             className="Header">
         <nav className="Nav">
             <div className="NavContainer">
                 <div className="NavBar">
                     <div className="MainLogo">
-                    <Link to='/' aria-label="Return to the home page">
-                        <img src={ navLogo } width="45px" height="45px" alt="The initials A S B in elegant font, all connected to one another, in pale black"></img>
-                    </Link>
+                        <Link className="HomePageLogoLink" to='/' aria-label="Return to the home page">
+                            <img src={ navLogo } width="45px" height="45px" alt="The initials A S B in elegant font, all connected to one another, in pale black"></img>
+                        </Link>
                     </div>
                     <div className="MenuToggle" onClick={ () => setNavOpen(!navOpen) }>
                         <div className={ navOpen ? "HamburgerContainer HamburgerContainerOpen" : "HamburgerContainer" }>
@@ -82,7 +80,7 @@ const Header = (props) => {
                     </div>
             </div>       
         </nav>
-    </m.header>       
+    </header>       
     )
 };
 

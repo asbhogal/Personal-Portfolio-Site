@@ -9,17 +9,18 @@ import brandLogo from "../assets/images/logos/brand-logo-white.svg";
 import cryptoverseLogo from "../assets/images/logos/Cryptoverse-Logo.svg";
 import oceanicaLogo from "../assets/images/logos/Oceanica-Logo.svg";
 import metaversusLogo from "../assets/images/logos/Metaversus-Logo.svg";
-import kryptoLogo from "../assets/images/logos/Krypto-Logo.svg";
 import liteLifeLogo from "../assets/images/logos/LiteLife-Logo.svg";
 import brandScreen from "../assets/images/Home/BrandScreen.jpg";
 import liteLifeScreen from "../assets/images/Home/LiteLifeScreen.jpg";
 import oceanicaScreen from "../assets/images/Home/OceanicaScreen.jpg";
 import cryptoverseScreen from "../assets/images/Home/CryptoverseScreen.jpg";
-import metaverseScreen from "../assets/images/Home/MetaverseScreen.png";
 import CTA from "./CTA";
 import SkillLozenge from "./SkillLozenge";
 import CodeIcon from "./CodeIcon";
 import Arrow from "./Arrow";
+import PaintIcon from "./PaintIcon";
+import RulerIcon from "./RulerIcon";
+import SpeedIcon from "./SpeedIcon";
 
 const Home = () => {
 
@@ -66,38 +67,40 @@ const Home = () => {
             <section className="SkillsOffered">
                 <div className="SkillBox">
                     <div className="SkillBoxTopRow">
-                        <p>Logo & Branding</p>
-                        <CodeIcon />
+                        <p>Logos & Branding</p>
+                        <PaintIcon />
                     </div>
                     <p>Abstract insofar truth moral pinnacle. Ubermensch inexpedient war dead play gains derive dead horror victorious love war. Zarathustra law.</p>
                 </div>
                 <div className="SkillBox">
                 <div className="SkillBoxTopRow">
                         <p>Web Design</p>
-                        <CodeIcon />
+                        <RulerIcon />
                     </div>
-                    <p>Abstract insofar truth moral pinnacle. Ubermensch inexpedient war dead play gains derive dead horror victorious love war. Zarathustra law.</p>
+                    <p>Designing UI wireframe-focused high fidelity mockups with prototyping</p>
                 </div>
                 <div className="SkillBox">
                     <div className="SkillBoxTopRow">
                         <p>Web Development</p>
                         <CodeIcon />
                     </div>
-                    <p>Abstract insofar truth moral pinnacle. Ubermensch inexpedient war dead play gains derive dead horror victorious love war. Zarathustra law.</p>
+                    <p>Developing modern, front-end applications and websites from scratch or existing templates using React, Next.js, SASS and Webpack</p>
                 </div>
                 <div className="SkillBox">
                     <div className="SkillBoxTopRow">
                         <p>Site Optimisation</p>
-                        <CodeIcon />
+                        <SpeedIcon />
                     </div>
-                    <p>Abstract insofar truth moral pinnacle. Ubermensch inexpedient war dead play gains derive dead horror victorious love war. Zarathustra law.</p>
+                    <p>Optimising website builds across performance, accessibility, SEO and stability</p>
                 </div>
             </section>
 
             <section className="ProjectScreens">
                 <div className="HomePageSectionBar">
                     <h2>Selected Work</h2>
-                    <Arrow />
+                    <Link to="projects" className="AllProjectsLink">
+                        <Arrow />
+                    </Link>
                 </div>
                 <Link className="ProjectLink" to="/projects/brand">
                     <SkillLozenge />

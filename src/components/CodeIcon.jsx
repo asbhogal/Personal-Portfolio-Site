@@ -1,4 +1,4 @@
-import codeIcon from "../assets/images/icons/CodeCircular.svg";
+import codeIcon from "../assets/images/icons/CodeIcon.svg";
 
 const CodeIcon = () => {
   return (

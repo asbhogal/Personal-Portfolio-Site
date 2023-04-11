@@ -3,7 +3,9 @@
 
 .Projects {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+    gap: 10px;
+    padding-bottom: 10px;
     transition: 0.3s all ease-in-out;
     .ProjectSectionLink {
         position: relative;
@@ -15,6 +17,7 @@
             height: 100%;
             width: 100%;
             object-fit: cover;
+            border-radius: $ImgBorderRadius;
             transition: 0.3s all ease-in-out;
         }
         &:hover {
@@ -22,8 +25,10 @@
             .ProjectLinkOverlay {
                 display: flex;
                 transition: 0.3s all ease-in-out;
+                text-align: center;
+                border-radius: $ImgBorderRadius;
                 span {
-                    color: $Platinum;
+                    color: $Argent;
                     @include BodyText;
                 }
             }

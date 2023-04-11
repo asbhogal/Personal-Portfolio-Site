@@ -138,7 +138,9 @@
         > * {
             display: flex;
         }
-        .OceanicaAssetsAndBrandingContainer {
+        #OceanicaAssetsAndBrandingContainer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(225px,1fr));
             background-color: #384e51;
         }
         .ProjectAssetsAndBrandingContainer {

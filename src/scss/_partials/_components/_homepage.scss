@@ -63,11 +63,14 @@
         }
         p:nth-child(2) {
             font-family: 'Anaheim', serif;
+            text-transform: uppercase;
+            text-align: justify;
         }
         .SkillBoxTopRow {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 10px;
             border-bottom: 1px solid $Khaki;
             padding-bottom: 10px;
         }
@@ -81,6 +84,15 @@
     .HomePageSectionBar {
         align-items: center;
         justify-content: space-between;
+        .AllProjectsLink {
+            display: flex;
+            cursor: none;
+            transition: $Transition-03;
+            &:hover {
+                transform: rotate(45deg);
+                transition: $Transition-03;
+            }
+        }
     }
     .ProjectLink {
         position: relative;
@@ -123,5 +135,11 @@
     }
     &:hover {
         transition: $Transition-03;
+    }
+}
+
+@media only screen and (width <= 425px) {
+    .ProjectLink > img {
+        height: 215px !important;
     }
 }
