@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import brandImages from "../assets/images/BRAND/BrandImages.png";
-import brandLogoBlack from "../assets/images/logos/brand-logo-black.svg";
-import brandLogoWhite from "../assets/images/logos/brand-logo-white.svg";
-import brandComponents from "../assets/images/BRAND/BrandComponents.svg";
-import brandColorPalette from "../assets/images/BRAND/BrandColorPalette.svg";
+
 import Header from "./Header";
 import Footer from "./Footer";
-import brandHeroImg from "../assets/images/BRAND/mockups/BrandHeroImg.png";
+import oceanicaLogo from "../assets/images/Oceanica/assets/Logo.svg";
+import oceanicaColorPalette from "../assets/images/Oceanica/assets/OceanicaColorPalette.svg";
+import oceanicaTestimonialCard from "../assets/images/Oceanica/assets/TestimonialCard.svg";
+import oceanicaPackagesCard from "../assets/images/Oceanica/assets/PackagesCard.svg";
+import oceanicaHeroImg from "../assets/images/Oceanica/mockups/oceanicaHeroImg.jpg";
 import oceanicaMockups from "../assets/images/Oceanica/mockups/OceanicaTemplates.png";
 import oceanicaPrototypes from "../assets/images/Oceanica/OceanicaPrototypes.png";
 import oceanicaiPhoneMockup from "../assets/images/Oceanica/mockups/iPhoneMockup.jpg";
@@ -40,7 +40,7 @@ const Brand = () => {
             <Header />
             <div className="Project">
                 <section className="ProjectHero">
-                    <img src={ brandHeroImg }/>
+                    <img src={ oceanicaHeroImg }/>
                 </section>
                 <section className="ProjectLinks">
                     <a target="_blank" href="https://www.figma.com/community/file/1190467806509137896/" className="ProjectButton">
@@ -89,17 +89,16 @@ const Brand = () => {
                 </section>
                 <section className="ProjectAssetsAndBranding">
                     <h2>Branding & Assets</h2>
-                    <div className="ProjectAssetsAndBrandingContainer">
+                    <div id="OceanicaAssetsAndBrandingContainer" className="ProjectAssetsAndBrandingContainer">
                         <div className="AssetsAndBranding">
-                            <img src={ brandImages } />
-                            <img src={ brandLogoBlack } />
-                            <img src={ brandLogoWhite } />
+                            <img src={ oceanicaLogo } />
                         </div>
                         <div className="AssetsAndBranding">
-                            <img src={ brandComponents } />
+                            <img src={ oceanicaTestimonialCard } />
+                            <img src={ oceanicaPackagesCard } />
                         </div>
                         <div className="AssetsAndBranding">
-                            <img src={ brandColorPalette } />
+                            <img src={ oceanicaColorPalette } />
                         </div>
                     </div>
                 </section>
