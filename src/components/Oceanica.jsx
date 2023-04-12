@@ -270,6 +270,7 @@ const Brand = () => {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         src={ oceanicaPrototypes }
+                        className="OceanicaPrototypes"
                         alt="6 screens showing prototype interaction" />
                 </m.section>
 

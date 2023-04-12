@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { motion as m } from "framer-motion";
 import Header from "./Header";
 import Footer from "./Footer";
-import cryptoverseHeroImg from "../assets/images/Cryptoverse/mockups/cryptoverseHeroImg.png";
+import cryptoverseHeroImg from "../assets/images/Cryptoverse/mockups/cryptoverseHeroImg.jpg";
 import cryptoverseiMacImage from "../assets/images/Cryptoverse/mockups/iMacMockup.jpg"
-import cryptoverseHPImage from "../assets/images/Cryptoverse/mockups/HPMockup.png"
-import cryptoverseiPadImages from "../assets/images/Cryptoverse/mockups/iPadMockups.png";
+import cryptoverseHPImage from "../assets/images/Cryptoverse/mockups/HPMockup.jpg"
+import cryptoverseiPadImages from "../assets/images/Cryptoverse/mockups/iPadMockups.jpg";
 import cryptoverseiPhoneImage from "../assets/images/Cryptoverse/mockups/iPhoneMockup.jpg";
 
 import CTA from "./CTA";
