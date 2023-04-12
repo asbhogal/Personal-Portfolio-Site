@@ -22,7 +22,7 @@
         position: relative;
         height: 100%;
         width: 100%;
-        transition: 0.3s all ease-in-out;
+        transition: $Transition-03;
         cursor: none;
         img {
             height: 100%;
@@ -32,10 +32,10 @@
             transition: 0.3s all ease-in-out;
         }
         &:hover {
-            transition: 0.3s all ease-in-out;
+            transition: $Transition-03;
             .ProjectLinkOverlay {
                 display: flex;
-                transition: 0.3s all ease-in-out;
+                transition: $Transition-03;
                 text-align: center;
                 border-radius: $ImgBorderRadius;
                 span {
@@ -50,7 +50,7 @@
                 background-color: rgba(209, 208, 208, 0.554);
             }
             #OceanicaProjectLinkOverlay {
-                background-color: #262c318f;
+                background-color: #1e2a34d2;
             }
             #MetaverseProjectLinkOverlay {
                 background-color: rgb(26 35 46 / 89%);
@@ -60,7 +60,7 @@
             }
             .ProjectImage {
                 filter: blur(5px);
-                transition: 0.3s all ease-in-out;
+                transition: $Transition-03;
             }
         }
     }
@@ -99,7 +99,7 @@
     justify-content: center;
     gap: 15px;
     display: none;
-    transition: 0.3s all ease-in-out;
+    transition: $Transition-03;
     .ProjectLogo {
         width: 25% !important;
         height: auto !important;

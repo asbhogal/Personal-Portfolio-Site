@@ -55,6 +55,7 @@
             flex-direction: column;
             gap: 10px;
             border-top: 1px solid $Argent;
+            padding-bottom: 10px;
             h3 {
                 font-family: 'Questa Grande', serif;
                 font-style: normal;
@@ -74,16 +75,20 @@
                     padding: 10px;
                     font-family: 'Anaheim', serif;
                     text-transform: uppercase;
+                    text-align: justify;
                     color: $Argent;
                     border: 1px solid $Khaki;
                     border-radius: $ImgBorderRadius;
                     .ExperienceDate {
                         font-family: 'Anaheim', sans-serif;
+                        font-size: 21px;
+                        padding-left: 5px;
                     }
                     .ExperienceTitle {
                         border: 1px solid $Khaki;
                         border-radius: 40px;
-                        padding: 5px 10px;
+                        font-size: 18px;
+                        padding: 10px 14px;
                         background-color: $Khaki;
                         color: $Black
                     }
@@ -109,6 +114,28 @@
                             border: 1px solid $Khaki;
                             border-radius: 40px;;
                         }
+                    }
+                }
+                .WorkLinks {
+                    display: flex;
+                    border: 1px solid $Khaki;
+                    outline: none;
+                    width: min-content;
+                    border-radius: 40px;
+                    padding: 5px 10px;
+                    font-family: "Anaheim", serif;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $SmokyBlack;
+                    background-color: $Khaki;
+                    transition: all 0.3s ease-in;
+                    cursor: none;
+                    &:hover {
+                        background-color: transparent;
+                        border: 1px solid $Khaki;
+                        color: $Khaki;
+                        -webkit-transition: all 0.3s ease-in;
+                        transition: all 0.3s ease-in;
                     }
                 }
             }

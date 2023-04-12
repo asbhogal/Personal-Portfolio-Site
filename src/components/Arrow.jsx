@@ -1,8 +1,13 @@
 import circleArrow from "../assets/images/icons/CircleArrow.svg";
 
-const Arrow = () => {
+const Arrow = ({ size }) => {
   return (
-    <img src={ circleArrow } style={ { width: '40px', height: '50px' } } />
+    <img 
+      src={ circleArrow } 
+      width={ size }
+      height={ size }
+      alt="An arrow at an angle inside a circle"
+     />
   )
 }
 

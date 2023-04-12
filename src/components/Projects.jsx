@@ -42,25 +42,25 @@ const Projects = ({}) => {
     return (
         <>
             <Header />
-            <section className="ProjectsTitle">
-                <h1>Projects</h1>
-            </section>
-            <section className="Projects">
+            
+            <m.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="ProjectsTitle">
+                <m.h1 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>Projects</m.h1>
+            </m.section>
+
+            <m.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="Projects">
                     <Link to="brand" id="BrandProjectSectionLink" className="ProjectSectionLink">
                         <img className="ProjectImage" src={ brandProjectCoverLink } />
                         <div id="BrandProjectLinkOverlay" className="ProjectLinkOverlay">
                             <img className="ProjectLogo" src={ brandLogoBlack } />
                             <span>Figma | React | JS | Babel | SASS/SCSS | PostCSS | Webpack | Vercel</span>
-{/*                             <button className="ProjectVisitButton">Visit</button>
- */}                        </div>
+                      </div>
                     </Link>
                     <Link to="litelife" id="LiteLifeProjectSectionLink" className="ProjectSectionLink">
                         <img className="ProjectImage" src={ liteLifeProjectCoverLink } />
                         <div id="LiteLifeProjectLinkOverlay" className="ProjectLinkOverlay">
                             <img className="ProjectLogo" src={ liteLifeLogo } />
                             <span>React | JS | Babel | Material UI | Commerce.js | APIs | Stripe | Webpack | Vercel</span>
-{/*                             <button className="ProjectVisitButton">Visit</button>
- */}                        </div>
+                      </div>
                     </Link>
                     <Link to="oceanica" id="OceanicaProjectSectionLink" className="ProjectSectionLink">
                         <img className="ProjectImage" src={ oceanicaProjectCoverLink } />
@@ -68,24 +68,26 @@ const Projects = ({}) => {
                             <img className="ProjectLogo" src={ oceanicaLogo } />
                             <span>Figma | Auto Layouts | Components | UI Prototyping</span>
                             <span>React | JS | Babel | SASS/SCSS | PostCSS | Webpack | Vercel</span>
-{/*                             <button className="ProjectVisitButton">Visit</button>
- */}                        </div>
+                        </div>
                     </Link>
                     <Link to="cryptoverse" id="CryptoverseProjectSectionLink" className="ProjectSectionLink">
                         <img className="ProjectImage" src={ cryptoverseProjectCoverLink } />
                         <div id="CryptoverseProjectLinkOverlay" className="ProjectLinkOverlay">
                             <img className="ProjectLogo" src={ cryptoverseLogo } />
                             <span>Next | React | Redux | JS | SASS | Webpack | Vercel</span>
-{/*                             <button className="ProjectVisitButton">Visit</button>
- */}                        </div>
+                        </div>
                     </Link>
-            </section>
+            </m.section>
+            
             <Footer />
 
             { showButton && (
-                <button onClick={ scrollToTop } className="ScrollToTop">
+                <m.button 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }} 
+                    onClick={ scrollToTop } className="ScrollToTop">
                     &#8593;
-                </button>
+                </m.button>
             ) }
 
         </>
