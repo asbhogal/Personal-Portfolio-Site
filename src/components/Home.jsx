@@ -194,7 +194,7 @@ const Home = () => {
 
                 <div className="ProjectTitle">
                     <h3>Brand</h3>
-                    <Link to="projects" className="ProjectLinks">
+                    <Link to="projects" className="HomePageProjectLinks">
                         <Arrow size={ 30 } />
                     </Link>
                 </div>
@@ -209,7 +209,7 @@ const Home = () => {
 
                 <div className="ProjectTitle">
                     <h3>Lite Life</h3>
-                    <Link to="projects" className="ProjectLinks">
+                    <Link to="projects" className="HomePageProjectLinks">
                         <Arrow size={ 30 } />
                     </Link>
                 </div>
@@ -224,7 +224,7 @@ const Home = () => {
 
                 <div className="ProjectTitle">
                     <h3>Oceanica</h3>
-                    <Link to="projects" className="ProjectLinks">
+                    <Link to="projects" className="HomePageProjectLinks">
                         <Arrow size={ 30 } />
                     </Link>
                 </div>
@@ -239,7 +239,7 @@ const Home = () => {
 
                 <div className="ProjectTitle">
                     <h3>Cryptoverse</h3>
-                    <Link to="projects" className="ProjectLinks">
+                    <Link to="projects" className="HomePageProjectLinks">
                         <Arrow size={ 30 } />
                     </Link>
                 </div>
