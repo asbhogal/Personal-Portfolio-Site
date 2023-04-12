@@ -5,10 +5,21 @@
     font-style: normal;
     font-weight: 400;
     font-size: clamp(4.25rem, -9.5rem + 24.4444vw, 12.5rem);
-    // line-height: 160px;
     text-align: right;
-    text-transform: lowercase;
-    color: $RaisinBlack-03;
+    text-transform: uppercase;
+    color: $Argent;
+}
+
+@mixin HeadingOne {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Questa Grande', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
+    text-align: center;
+    text-transform: uppercase;
+    color: $Argent;
 }
 
 @mixin HeadingTwoAccentLetter {
@@ -24,7 +35,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
-    border-bottom: 1px solid $BlackChocolate;
+    border-bottom: 1px solid red;
 }
 
 @mixin HeadingThreeProject {
@@ -35,17 +46,35 @@
     text-transform: uppercase;
 }
 
-@mixin SubtitleText {
-    font-family: 'Switzer', sans-serif;
+@mixin BodyText {
+    font-family: 'Anaheim', serif;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16px;
     text-transform: uppercase;
 }
 
-@mixin BodyText {
-    font-family: 'Switzer', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
+@mixin ProjectStructure {
+    .Projects {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@mixin HeadlineStyle {
+    flex-direction: column;
+    gap: 10px;
+    border-top: 1px solid $Argent;
+    > * {
+        display: flex;
+    }
+    h2 {
+        font-family: 'Questa Grande', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(1.5rem, 0.7864rem + 3.5682vw, 4rem);
+        text-transform: uppercase;
+        color: $Argent;
+    }
 }

@@ -6,6 +6,11 @@
     &:is(&::after, &::before, *) {
         box-sizing: border-box;
     }
+    // outline: 1px solid red;
+}
+
+html {
+    background-color: $SmokyBlack;
 }
 
 ::-webkit-scrollbar {
@@ -19,11 +24,7 @@
  
 ::-webkit-scrollbar-thumb {
     border-radius: .625rem;
-    background-color: $RaisinBlack-03;
-}
-
-html {
-    background-color: $Platinum;
+    background-color: $RaisinBlack;
 }
 
 .CTAButtons {
@@ -41,7 +42,7 @@ html {
     background: none;
     border: none;
     cursor: none;
-    color: $RaisinBlack-03;
+    color: $RaisinBlack;
     font-size: 32px;
     font-weight: 200;
     font-weight: 200;

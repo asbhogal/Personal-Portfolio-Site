@@ -2,61 +2,50 @@ import "../scss/index.scss";
 import Home from "./Home";
 import About from "./About";
 import Projects from "./Projects";
+import Brand from "./Brand";
+import LiteLife from "./LiteLife";
+import Oceanica from "./Oceanica";
+import Cryptoverse from "./Cryptoverse";
 import ErrorPage from "./404";
 import AdditionalServices from "./AdditionalServices";
 import Testimonials from "./Testimonials";
 import FreeResources from "./FreeResources";
 
 import Cursor from "./Cursor"
+import ScrollRestoration from "./ScrollRestoration";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
-import { AnimatePresence } from "framer-motion";
 
-const App = (router) => {
+/* function Home() {
+    useDocumentTitle('Aman Singh Bhogal | Front End Developer')
+}
+
+function About() {
+    useDocumentTitle('About | Aman Singh Bhogal')
+} */
+
+const App = () => {
 
     return (
         <>
             <Analytics />
-            <Router>
                 <Cursor />
+                <ScrollRestoration />
                 <Routes>
-                    <Route path='/' element={ 
-                                                    <AnimatePresence>
-                                                        <Home key={ router.pathname } /> 
-                                                    </AnimatePresence> } 
-                    />
-                    <Route path='/about' element={ 
-                                                    <AnimatePresence>
-                                                        <About key={ router.pathname } />
-                                                    </AnimatePresence> } 
-                    />
-                    <Route path='/projects' element={ 
-                                                    <AnimatePresence>
-                                                        <Projects key={ router.pathname } /> 
-                                                    </AnimatePresence> } 
-                    />
-                    <Route path='/AmanSinghBhogal-Brand-Manifesto.png' element={
-                                                    <FreeResources /> }
-                    />
-                    <Route path='/testimonials' element={ 
-                                                    <AnimatePresence>
-                                                        <Testimonials key={ router.pathname } />
-                                                    </AnimatePresence> } 
-                    />
-                    <Route path='/additionalservices' element={ 
-                                                    <AnimatePresence>
-                                                        <AdditionalServices key={ router.pathname } />
-                                                    </AnimatePresence> } 
-                    />
-                    <Route path='/freeresources' element={
-                                                    <AnimatePresence>
-                                                        <FreeResources key={ router.pathname } />
-                                                    </AnimatePresence> }
-                    />
+                    <Route path='/' element={ <Home /> } />
+                    <Route path='/about' element={ <About /> } />
+                    <Route path='/projects' element={ <Projects /> } />
+                    <Route path='/projects/brand' element={ <Brand /> } />
+                    <Route path='/projects/litelife' element={ <LiteLife /> } />
+                    <Route path='/projects/oceanica' element={ <Oceanica /> } />
+                    <Route path='/projects/cryptoverse' element={ <Cryptoverse /> } />
+                    <Route path='/AmanSinghBhogal-Brand-Manifesto.png' element={ <FreeResources /> } />
+                    <Route path='/testimonials' element={ <Testimonials /> } />
+                    <Route path='/additionalservices' element={ <AdditionalServices /> } />
+                    <Route path='/freeresources' element={ <FreeResources /> } />
                     <Route path='*' element={ <ErrorPage /> } />
                 </Routes>
-                </Router>
         </>
     )
 };

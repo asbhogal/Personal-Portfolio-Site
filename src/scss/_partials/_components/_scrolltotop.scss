@@ -2,14 +2,17 @@
 
 .ScrollToTop {
     position: fixed;
-    bottom: 20px;
+    scroll-behavior: smooth;
+    bottom: 100px;
     right: 20px;
     font-size: 42px;
     background: none;
     border: none;
-    color: $RaisinBlack-03;
+    filter: invert(1);
+    mix-blend-mode: difference;
     transition: $Transition-03;
     cursor: none;
+    z-index: 5;
     &:hover {
         transform: translateY(-5px);
     }

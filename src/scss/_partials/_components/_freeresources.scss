@@ -5,74 +5,80 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: calc(100vh - 92px);
+    .PageHeaderTitle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'Questa Grande', serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
+        text-align: center;
+        text-transform: uppercase;
+        color: $Argent;
+    }
 }
 
 .FreeResourcesSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
-    > div {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+    gap: 10px;
+    padding-bottom: 10px;
+    .ResourcesCard {
         display: flex;
         flex-direction: column;
-        gap: 35px;
+        gap: 10px;
         img {
             height: 100%;
             width: 100%;
         }
         p {
             @include BodyText;
+            text-transform: uppercase;
+            text-align: justify;
         }
     }
 }
 
-.ResourceWord {
-    font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
-}
-
-.ResponsiveWireframesCard,
-.BrandBoardCard {
+.ResourcesSnapshot {
     flex: 1 1 0px;
-}
-
-.ImageSnapshot {
-    height: 100%;
     width: 100%;
+    height: 100%;
+    .ImageSnapshot {
+        height: 100%;
+        width: 100%;
+        border-radius: $ImgBorderRadius;
+    }
 }
 
 .ResourcesTitle {
-    @include HeadingTwoProject;
-    &::first-letter,
-    .FirstLetterAccent {
-        @include HeadingTwoAccentLetter;
-    }
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
+    font-family: 'Questa Grande', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-top: 1px solid $Argent;
 }
 
 .ResourceLinks {
-    justify-content: flex-end;
+    display: flex;
     gap: 10px;
-    .ViewFiles {
-        display: flex;
-        align-items: center;
-        font-family: 'Switzer', sans-serif;
-        font-size: 16px;
-        background: none;
-        border: none;
-        cursor: none;
-        a {
-            text-decoration: none;
-            color: $RaisinBlack-03;
-        }
+    .ResourceDownload {
+        font-family: 'Anaheim', serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        background-color: $Khaki;
+        border-radius: 40px;
+        border: 1px solid $Khaki;
+        color: $SmokyBlack;
+        padding: 5px 10px;
+        transition: $Transition-03;
         &:hover {
+            background-color: $SmokyBlack;
+            color: $Khaki;
+            border: 1px solid $Khaki;
             transition: $Transition-03;
-            svg {
-                transition: $Transition-03;
-                transform: translateX(2px);
-            }
         }
     }
 }

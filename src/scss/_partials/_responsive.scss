@@ -1,21 +1,12 @@
 /****** WIDE - 1440px+ ******/
 
 @media only screen and (1441px <= width) {
-  .HomePageSection {
-    width: 1440px;
-    margin: 0 auto;
-  }
   .MainContainer {
     width: 1120px;
-  }
-  .AboutSection {
-    width: 1120px;
-    margin: 0 auto;
   }
   .FreeResourcesSection {
     width: 1120px;
     margin: 0 auto;
-    height: 100vh;
   }
   .AdditionalServices {
     width: 1120px;
@@ -25,9 +16,6 @@
     width: 1365px;
     margin: 0 auto;
   }
-  .AboutSection > .PageSubTitleText {
-      padding-inline: 40px;
-  }
   .ProjectCover {
     width: 1520px;
     margin:0 auto;
@@ -36,12 +24,6 @@
     width: 1110px;
     margin: 0 auto;
     padding: 40px 0;
-  }
-  .MainHomeTitle {
-    font-size: 128px;
-    &::first-letter {
-      font-size: 256px;
-    }
   }
   .Guides {
     justify-content: space-between;
@@ -65,21 +47,12 @@
   .MainContainer {
     padding: 0 150px;
   }
-  .AboutSection > .PageSubTitleText {
-    padding-inline: 40px;
-  }
-  .HomePageSection {
-    padding: 0 90px;
-  }
-  .AboutSection {
-    padding: 0 150px;
-  }
+  
   .AdditionalServices {
     padding: 0 150px;
   }
   .FreeResourcesSection {
     padding: 0 150px;
-    height: 100vh;
   }
   .TestimonialsSection {
     padding: 0 150px;
@@ -105,20 +78,7 @@
   .MainContainer {
     padding: 32px;
   }
-  .HomePageSection,
-  .AboutSection {
-    padding: 0 32px;
-  }
-  .AboutSection > .PageSubTitleText {
-    padding-inline: 40px;
-  }
   .ProjectInfo {
-    padding: 32px;
-  }
-  .AdditionalServices {
-    padding: 0 32px;
-  }
-  .FreeResourcesSection {
     padding: 32px;
   }
   .TestimonialsSection {
@@ -144,23 +104,6 @@
     padding: 24px;
   }
   .HomePageSection {
-    flex-direction: column;
-  }
-  .HomePageSection,
-  .AboutSection {
-    padding: 0 24px;
-  }
-  .AboutSection > .PageSubTitleText {
-    padding-inline: 40px;
-  }
-  .AdditionalServices {
-    padding: 0 24px;
-    .AdditionalServicesSection > .AdditionalServicesContent {
-      flex-direction: column;
-    }
-  }
-  .FreeResourcesSection {
-    padding: 24px;
     flex-direction: column;
   }
   .ProjectSection {
@@ -211,21 +154,13 @@
 /****** TABLET (SMALL) - 0px -> 375px ******/
 
 @media only screen and (width <= 375px) {
+  .ProjectAssetsAndBrandingContainer {
+    flex-direction: column;
+  }
   .MainContainer {
     padding: 24px;
   }
   .HomePageSection {
-    flex-direction: column;
-  }
-  .HomePageSection,
-  .AboutSection {
-    padding: 0 24px;
-  }
-  .AboutSection > .PageSubTitleText {
-    text-align: center;
-  }
-  .FreeResourcesSection {
-    padding: 24px;
     flex-direction: column;
   }
   .ProjectInfo {
@@ -233,12 +168,6 @@
   }
   .TestimonialsSection {
     padding: 0 24px;
-  }
-  .AdditionalServices {
-    padding: 0 24px;
-    .AdditionalServicesSection > .AdditionalServicesContent {
-      flex-direction: column;
-    }
   }
   .ProjectCover h1{
     font-size: 72px !important;
@@ -264,15 +193,6 @@
   #TechSkills {
     flex-direction: column;
   }
-
-  /* .NavLinks > .NavItems > a {
-    font-size: 32px;
-  }
-
-  .NavLinks {
-    padding-top: 40px !important;
-  } */
-
   .SocialLinkNames {
     height: auto;
     text-align: right;
@@ -296,5 +216,13 @@
 @media screen and (max-width: 600px) {
   .MainContainer {
       flex-direction: column !important;
+  }
+}
+
+/*********************************************************************/
+
+@media screen and (width <= 1024px) {
+  .HomePageProjectLogos {
+    display: none !important;
   }
 }

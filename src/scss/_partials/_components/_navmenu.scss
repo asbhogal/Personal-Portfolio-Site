@@ -8,22 +8,28 @@
     }
     .NavLinks {
         flex-direction: column;
+        gap: 10px;
         font-family: 'Questa Grande', serif;
         font-size: 96px;
-        padding-top: 110px;
+        padding-top: 92px;
+        padding-right: 20px;    
+        margin-right: 10px;
         list-style-type: none;
         .NavItems {
             // font-size: clamp(1.5rem, -0.8936rem + 7.6596vw, 6rem);
-            font-size: clamp(2.625rem, 1.875rem + 3.75vw, 5.25rem);
-            // border-bottom: 1px solid $RaisinBlack-03;
+            //font-size: clamp(2.625rem, 1.875rem + 3.75vw, 5.25rem);
+            font-size: clamp(2.375rem, 1.5543rem + 4.1035vw, 5.25rem);
+            border-top: 1px solid $Argent;
         }
         .NavItems > a {
             text-decoration: none;
-            color: $RaisinBlack-03;
+            text-transform: uppercase;
+            color: $Argent;
             transition: $Transition-03;
             cursor: none;
             &:hover {
                 transition: $Transition-03;
+                color: $Khaki;
                 padding-left: 8px;
             }
         }
@@ -53,7 +59,7 @@
                 }
                 a {
                     text-decoration: none;
-                    color: $RaisinBlack-03;
+                    color: $Argent;
                 }
             }
         }

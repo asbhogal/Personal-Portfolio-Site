@@ -77,10 +77,7 @@ const Cursor = () => {
     );
 
     return (
-        <div className={ cursorClasses } style={ { 
-                                                left: `${position.x}px`,
-                                                top: `${position.y}px` 
-                                        } }
+        <div className={ cursorClasses } style={ { left: `${position.x}px`, top: `${position.y}px` } }
         />
     )
 };

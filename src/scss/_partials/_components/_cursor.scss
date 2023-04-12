@@ -3,7 +3,7 @@
 .Cursor {
     width: 12px;
     height: 12px;
-    background-color: $RaisinBlack-03;    
+    background-color: $Khaki;    
     border-radius: 100%;
     position: fixed;
     transform: translate(-50%, -50%);
@@ -22,11 +22,11 @@
   height: 10px;
   transition: $Transition-03;
   transform: translate(-50%, -50%) scale(0.9);
-  background-color: $Grullo;
+  background-color: $Khaki;
 }
 
 .CursorLinkHovered {
   transform: translate(-50%, -50%) scale(1.25);
   background: none;
-  border: 1px solid $RaisinBlack-03;
+  border: 1px solid $Argent;
 }

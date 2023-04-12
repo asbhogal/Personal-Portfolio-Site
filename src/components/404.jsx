@@ -1,7 +1,13 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import { useEffect } from "react";
 
 const errorPage = () => {
+
+    useEffect(() => {
+        document.title = 'Error 404 | Aman Singh Bhogal';
+    }, [])
+
     return (
         <>
             <Header />
