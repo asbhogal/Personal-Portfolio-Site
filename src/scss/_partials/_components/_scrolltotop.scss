@@ -12,6 +12,7 @@
     mix-blend-mode: difference;
     transition: $Transition-03;
     cursor: none;
+    z-index: 5;
     &:hover {
         transform: translateY(-5px);
     }
