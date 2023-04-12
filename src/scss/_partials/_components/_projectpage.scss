@@ -134,6 +134,9 @@
                 &:first-child {
                     font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
                 }
+                > #Weight-200 {
+                    display: none !important;
+                }
             }
             .TypefaceWeights {
                 display: flex;
@@ -206,10 +209,10 @@ $BrandWeights: (weight1: 400, weight2: 500, weight3: 600, weight4: 700, weight5:
 
 /****** CRYPTOVERSE WEIGHTINGS ******/
 
-$CryptoverseWeights: (weight1: 200, weight2: 300, weight3: 700);
+$CryptoverseWeights: (weight1: 200, weight2: 300, weight3: 400);
 
 @each $key, $weight in $CryptoverseWeights {
-    #Weight-#{ $weight } {font-weight: $weight;}
+    #Crypto-Weight-#{ $weight } {font-weight: $weight;}
 };
 
 @media only screen and (width <= 375px) {

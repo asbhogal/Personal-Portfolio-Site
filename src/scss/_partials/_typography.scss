@@ -131,3 +131,36 @@
             url('../assets/fonts/Roboto/Roboto-Regular.woff2') format('woff2');
     font-display: swap;
 }
+
+/****** NOTO SANS - 200 EXTRA LIGHT ******/
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-weight: 200;
+    font-style: normal;
+    src:    url('../assets/fonts/Noto Sans/NotoSans-ExtraLight.woff') format('woff'),
+            url('../assets/fonts/Noto Sans/NotoSans-ExtraLight.woff2') format('woff2');
+    font-display: swap;
+}
+
+/****** NOTO SANS - 300 LIGHT ******/
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-weight: 300;
+    font-style: normal;
+    src:    url('../assets/fonts/Noto Sans/NotoSans-Light.woff') format('woff'),
+            url('../assets/fonts/Noto Sans/NotoSans-Light.woff2') format('woff2');
+    font-display: swap;
+}
+
+/****** NOTO SANS - 400 REGULAR ******/
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-weight: 400;
+    font-style: normal;
+    src:    url('../assets/fonts/Noto Sans/NotoSans-Regular.woff') format('woff'),
+            url('../assets/fonts/Noto Sans/NotoSans-Regular.woff2') format('woff2');
+    font-display: swap;
+}

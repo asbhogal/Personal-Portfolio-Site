@@ -113,7 +113,7 @@ const Brand = () => {
                     <m.p 
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }} 
-                        className="ProjectAboutContent">Cryptoverse is a conceptualised company which offers data on different cryptocurrencies, including market capitalisation, exchanges and current news. The application was built using Next.js and leveraged Redux RTK Query to manage API calls from Coinranking, Coin Gecko and Bing News Search. The app was also styled using SCSS, compiled as a production build using Webpack and shipped via Vercel.</m.p>
+                        className="ProjectAboutContent">Cryptoverse is a conceptualised company which offers data on different cryptocurrencies, including market capitalisation, exchanges and current news. The application also allows users to look up the current stats of a cryptocurrency, including its ranking, price and market cap. The application was built using Next.js and leveraged Redux RTK Query to manage API calls from Coinranking, Coin Gecko and Bing News Search. The app was also styled using SCSS, compiled as a production build using Webpack and shipped via Vercel.</m.p>
                 </m.section>
 
                 <m.section 
@@ -143,11 +143,11 @@ const Brand = () => {
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 className="TypefaceWeightsList">
-                                <li className="Weight-200">02 Extra Light</li>
+                                <li id="Crypto-Weight-200">02 Extra Light</li>
                                 ⋅ 
-                                <li id="Weight-300">03 Light</li>
+                                <li id="Crypto-Weight-300">03 Light</li>
                                 ⋅ 
-                                <li id="Weight-400">07 Bold</li>
+                                <li id="Crypto-Weight-400">04 Regular</li>
                             </m.ul>
                         </m.div>
                     </m.div>
