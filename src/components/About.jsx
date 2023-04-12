@@ -35,12 +35,18 @@ const About = () => {
 
                 <m.section 
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }} 
-                    className="AboutSection">
+                    whileInView={{ opacity: 1 }}
+                    className="AboutCover" >
                     <m.h1 
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }} 
                         className="PageHeaderTitle">about</m.h1>
+                    </m.section>
+
+                <m.section 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }} 
+                    className="AboutSection">
                     <m.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }} 
@@ -48,11 +54,12 @@ const About = () => {
                         <m.p 
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}  
-                            className="AboutText">Aman Singh Bhogal is a UI Engineer with 3 years of client side experience in Front End Development. His work covers designing, building and optimising CMS-based websites (WordPress and Hubspot) and static applications using vanilla HTML5, CSS3, SASS and JavaScript. 
-                        <br></br>
-                        <br></br>
-                        He now works with international clients across a broad spectrum of web design and development services and creates interfaces using Adobe CC, Figma, React and Next.js from existing and new design briefs, as well as offering consultancies and mentoring for junior developers.
-                        </m.p>
+                            className="AboutText">Aman Singh Bhogal is a UI Engineer with 3 years of client side experience in Front End Development. His work covers designing, building and optimising CMS-based websites (WordPress and Hubspot) and static applications using vanilla HTML5, CSS3, SASS and JavaScript. </m.p>
+                        <m.p 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}  
+                            className="AboutText">
+                        He now works with international clients across a broad spectrum of web design and development services and creates interfaces using Adobe CC, Figma, React and Next.js from existing and new design briefs, as well as offering consultancies and mentoring for junior developers. </m.p>
                         <m.div
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }} 

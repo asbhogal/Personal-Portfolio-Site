@@ -1,16 +1,11 @@
 @use '../variables' as *;
 @use '../mixins' as *;
 
-
-.AboutSection {
-    /* height: calc(100vh - 152px); */
+.AboutCover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 30px;
-    > * {
-        display: flex;
-    }
+    height: calc(100vh - 92px);
     .PageHeaderTitle {
         display: flex;
         flex-direction: column;
@@ -19,11 +14,20 @@
         font-style: italic;
         font-weight: 400;
         font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
-        height: calc(100vh - 92px);
         text-align: center;
         text-transform: uppercase;
         color: $Argent;
     }
+}
+.AboutSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    > * {
+        display: flex;
+    }
+    
     .AboutContent {
         gap: 20px;
         flex-direction: column;
@@ -66,7 +70,7 @@
             }
             .ExperienceContainer {
                 display: grid;
-                grid-template-columns: repeat(auto-fit,minmax(305px,1fr));
+                grid-template-columns: repeat(auto-fit,minmax(265px,1fr));
                 gap: 10px;
                 .ExperienceSection {
                     display: flex;
@@ -90,7 +94,8 @@
                         font-size: 18px;
                         padding: 10px 14px;
                         background-color: $Khaki;
-                        color: $Black
+                        color: $Black;
+                        text-align: left;
                     }
                     .ExperienceInfo {
                         .ListDot {

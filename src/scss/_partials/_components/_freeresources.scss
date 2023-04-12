@@ -5,7 +5,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: calc(100vh - 92px);
+    .PageHeaderTitle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'Questa Grande', serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
+        text-align: center;
+        text-transform: uppercase;
+        color: $Argent;
+    }
 }
 
 .FreeResourcesSection {
@@ -16,7 +28,7 @@
     .ResourcesCard {
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 10px;
         img {
             height: 100%;
             width: 100%;
@@ -65,7 +77,7 @@
         &:hover {
             background-color: $SmokyBlack;
             color: $Khaki;
-            border: 1px solid $SmokyBlack;
+            border: 1px solid $Khaki;
             transition: $Transition-03;
         }
     }

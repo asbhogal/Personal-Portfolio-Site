@@ -59,7 +59,7 @@
         padding: 20px;
         p:first-child {
             font-family: 'Questa Grande', serif;
-            font-size: 32px;
+            font-size: clamp(1.3125rem, 1.1162rem + 0.9813vw, 2rem);
             text-transform: uppercase;
         }
         p:nth-child(2) {
@@ -150,7 +150,7 @@
     }
 }
 
-@media only screen and (width <= 425px) {
+@media only screen and (width <= 426px) {
     .ProjectLink > img {
         height: 215px !important;
     }
