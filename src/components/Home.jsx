@@ -65,7 +65,7 @@ const Home = () => {
                     <br /> 
                     <span className="HeadlineYear">- est. 2020-</span>
                 </m.h1>
-                <m.div 
+                {/* <m.div 
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }} 
                     className="HomePageProjectLogos">
@@ -99,7 +99,7 @@ const Home = () => {
                         src={ liteLifeWhiteLogo } 
                         alt="A logo of the USB symbol in white"
                         />
-                </m.div>
+                </m.div> */}
             </m.section>
 
             <m.section 
