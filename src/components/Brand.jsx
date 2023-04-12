@@ -7,7 +7,7 @@ import brandComponents from "../assets/images/BRAND/BrandComponents.svg";
 import brandColorPalette from "../assets/images/BRAND/BrandColorPalette.svg";
 import Header from "./Header";
 import Footer from "./Footer";
-import brandHeroImg from "../assets/images/BRAND/mockups/optimised/BrandHeroImg.jpeg";
+import brandHeroImg from "../assets/images/BRAND/mockups/optimised/BrandHeroImg.jpg";
 import brandMockups from "../assets/images/BRAND/mockups/optimised/BrandMockups.jpeg";
 import brandiPhoneToggleImage from "../assets/images/BRAND/mockups/optimised/Brand-iPhoneToggleMockup.jpeg";
 import brandiMacImage from "../assets/images/BRAND/mockups/optimised/Brand-iMacMockup.jpeg";

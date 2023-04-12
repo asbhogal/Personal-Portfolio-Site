@@ -5,15 +5,10 @@ import Navbar from "./Header";
 import Footer from "../components/Footer"
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
-import brandLogo from "../assets/images/logos/brand-logo-white.svg";
-import cryptoverseLogo from "../assets/images/logos/Cryptoverse-Logo.svg";
-import oceanicaLogo from "../assets/images/logos/Oceanica-Logo.svg";
-import metaversusLogo from "../assets/images/logos/Metaversus-Logo.svg";
-import liteLifeWhiteLogo from "../assets/images/logos/LiteLife-Logo-White.svg";
-import brandScreen from "../assets/images/Home/BrandScreen.jpeg";
-import liteLifeScreen from "../assets/images/Home/LiteLifeScreen.jpeg";
-import oceanicaScreen from "../assets/images/Home/OceanicaScreen.jpeg";
-import cryptoverseScreen from "../assets/images/Home/CryptoverseScreen.jpeg";
+import brandScreen from "../assets/images/Home/BrandScreen.jpg";
+import liteLifeScreen from "../assets/images/Home/LiteLifeScreen.jpg";
+import oceanicaScreen from "../assets/images/Home/OceanicaScreen.jpg";
+import cryptoverseScreen from "../assets/images/Home/CryptoverseScreen.jpg";
 import CTA from "./CTA";
 import SkillLozenge from "./SkillLozenge";
 import CodeIcon from "./CodeIcon";
@@ -65,41 +60,6 @@ const Home = () => {
                     <br /> 
                     <span className="HeadlineYear">- est. 2020-</span>
                 </m.h1>
-                {/* <m.div 
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }} 
-                    className="HomePageProjectLogos">
-                    <m.img 
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }} 
-                        src={ brandLogo } 
-                        alt="A logo of the word 'BRAND' in uppercase"
-                        />
-                    <m.img 
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }} 
-                        src={ oceanicaLogo } 
-                        alt="A logo of the word 'Oceanica' with a wave-shaped half-circle to the left"
-                        />
-                    <m.img 
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }} 
-                        src={ cryptoverseLogo } 
-                        alt="A logo made up of three different cryptocurrencies"
-                        />
-                    <m.img 
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }} 
-                        src={ metaversusLogo } 
-                        alt="A logo of the word 'METAVERSUS' in uppercase"
-                        />
-                    <m.img 
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }} 
-                        src={ liteLifeWhiteLogo } 
-                        alt="A logo of the USB symbol in white"
-                        />
-                </m.div> */}
             </m.section>
 
             <m.section 
@@ -186,63 +146,94 @@ const Home = () => {
                 <Link
                     className="ProjectLink" to="/projects/brand">
                     <SkillLozenge />
-                    <img src={ brandScreen } />
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} 
+                        src={ brandScreen } 
+                        alt="An iPhone resting on a concrete surface at an angle, with a website on the screen" />
                     <div className="LinkOverlay">
                         <Arrow />
                     </div>
                 </Link>
 
-                <div className="ProjectTitle">
+                <m.div 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectTitle">
                     <h3>Brand</h3>
                     <Link to="projects/brand" className="HomePageProjectLinks">
                         <Arrow size={ 30 } />
                     </Link>
-                </div>
+                </m.div>
 
                 <Link className="ProjectLink" to="/projects/litelife">
                     <SkillLozenge />
-                    <img src={ liteLifeScreen } />
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        src={ liteLifeScreen } 
+                        alt="A close up of an iPhone and Airpods with a website open on the screen"
+                        />
                     <div className="LinkOverlay">
                         <Arrow />
                     </div>
                 </Link>
 
-                <div className="ProjectTitle">
+                <m.div 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectTitle">
                     <h3>Lite Life</h3>
                     <Link to="projects/litelife" className="HomePageProjectLinks">
                         <Arrow size={ 30 } />
                     </Link>
-                </div>
+                </m.div>
 
                 <Link className="ProjectLink" to="/projects/oceanica">
                     <SkillLozenge />
-                    <img src={ oceanicaScreen } />
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        src={ oceanicaScreen } 
+                        alt="A Macbook with a website open on the screen, resting on a concrete surface next to a pool"
+                        />
                     <div className="LinkOverlay">
                         <Arrow />
                     </div>
                 </Link>
 
-                <div className="ProjectTitle">
+                <m.div 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectTitle">
                     <h3>Oceanica</h3>
                     <Link to="projects/oceanica" className="HomePageProjectLinks">
                         <Arrow size={ 30 } />
                     </Link>
-                </div>
+                </m.div>
 
                 <Link className="ProjectLink" to="/projects/cryptoverse">
                     <SkillLozenge />
-                    <img src={ cryptoverseScreen } />
+                    <m.img 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        src={ cryptoverseScreen } 
+                        alt="A Macbook with an application open on the screen, with a dark blue background"
+                        />
                     <div className="LinkOverlay">
                         <Arrow />
                     </div>
                 </Link>
 
-                <div className="ProjectTitle">
+                <m.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="ProjectTitle">
                     <h3>Cryptoverse</h3>
                     <Link to="projects/cryptoverse" className="HomePageProjectLinks">
                         <Arrow size={ 30 } />
                     </Link>
-                </div>
+                </m.div>
 
             </m.section>
 

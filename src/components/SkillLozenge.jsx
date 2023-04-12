@@ -1,13 +1,24 @@
+import { motion as m } from "framer-motion";
+
 const SkillLozenge = () => {
   return (
-    <div className="SkillLozenges">
-        <span className="SkillLozenge">
+    <m.div 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      className="SkillLozenges">
+        <m.span 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="SkillLozenge">
             WEB DESIGN
-        </span>
-        <span className="SkillLozenge">
+        </m.span>
+        <m.span 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="SkillLozenge">
             WEB DEVELOPMENT
-        </span>
-    </div>
+        </m.span>
+    </m.div>
   )
 }
 
