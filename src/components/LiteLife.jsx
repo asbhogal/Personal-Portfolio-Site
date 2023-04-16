@@ -96,7 +96,7 @@ const LiteLife = () => {
                         whileInView={{ opacity: 1 }}
                         className="ProjectStacksAndTools">
                         <span className="StackToolLozenge">React</span>
-                        <span className="StackToolLozenge">JS</span>
+                        <span className="StackToolLozenge">JavaScript</span>
                         <span className="StackToolLozenge">Material UI</span>
                         <span className="StackToolLozenge">React Router</span>
                         <span className="StackToolLozenge">React Hook Form</span>
@@ -123,7 +123,10 @@ const LiteLife = () => {
                         Design Decisions</m.h2>
                     <m.p 
                         initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }} className="ProjectAboutContent">Lite Life incorporates the simplistic tones of black, grey and white alongside the stark constrasts of red and violet-blue to consider both user immersion and ease-of-navigation during the checkout process (during the latter, distraction-free UX is incorporated to keep the customer on the pages until the transaction is complete.) The logo can be considered widely known and recognizable in this modern age. The stripped back, simple style reflects the design of the site, and the long branches complement the horizontal and vertical lines used in the UI. Roboto, by name, is synonymous with clean, modern technology, and this is in turn reflected through its short descenders and wide bowls, where the former aligns close to the baseline and keeps the space efficient and egonomic, akin to the technology Lite Life sells. The use of only one weight also reinforces consistency within simplicity. On the broader scale, this conveys two things: simple things can still be quality. And quality things can still be simple.</m.p>
+                        whileInView={{ opacity: 1 }} className="ProjectAboutContent">Lite Life incorporates the simplistic tones of black, grey and white alongside the stark constrasts of red and violet-blue to consider both user immersion and ease-of-navigation during the checkout process (during the latter, distraction-free UX is incorporated to keep the customer on the pages until the transaction is complete.) The logo can be considered widely known and recognizable in this modern age. The stripped back, simple style reflects the design of the site, and the long branches complement the horizontal and vertical lines used in the UI.</m.p>
+                        <m.p 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }} className="ProjectAboutContent">Roboto, by name, is synonymous with clean, modern technology, and this is in turn reflected through its short descenders and wide bowls, where the former aligns close to the baseline and keeps the space efficient and egonomic, akin to the technology Lite Life sells. The use of only one weight also reinforces consistency within simplicity. On the broader scale, this conveys two things: simple things can still be quality. And quality things can still be simple.</m.p>
                 </m.section>
 
                 <m.section
