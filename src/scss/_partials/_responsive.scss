@@ -63,13 +63,6 @@
   .TypographyList {
     justify-content: space-between !important;
   }
-  .ErrorPage {
-    padding: 0 150px;
-    h2 {
-      word-break: break-word;
-      width: 480px;
-    }
-  }
 }
 
 /****** TABLET (LARGE) - 745px --> 1024px ******/
@@ -91,9 +84,6 @@
   }
   .TypographyList {
     justify-content: space-between;
-  }
-  .ErrorPage {
-    padding: 0 32px;
   }
 }
 
@@ -146,9 +136,6 @@
   .TypographyList {
     justify-content: space-between;
   }
-  .ErrorPage {
-    padding: 0 24px;
-  }
 }
 
 /****** TABLET (SMALL) - 0px -> 375px ******/
@@ -199,9 +186,6 @@
     .NavFooterSocialLinks {
       flex-direction: column;
     }
-  }
-  .ErrorPage {
-    padding: 0 24px;
   }
 }
 

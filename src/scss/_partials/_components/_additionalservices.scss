@@ -35,8 +35,8 @@
     }
 }
 .AdditionalServicesSection .AdditionalServicesContent {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(225px,1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     h2 {
         font-family: 'Questa Grande', serif;
@@ -51,6 +51,7 @@
     div {
         display: flex;
         flex-direction: column;
+        flex: 1 1 250px;
         gap: 10px;
         border: 1px solid $Khaki;
         border-radius: 10px;
