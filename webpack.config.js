@@ -14,7 +14,7 @@ const   path = require("path"),
                 author: "Aman Singh Bhogal",
                 template: "./src/index.html",
                 description: "The personal portfolio site of Aman Singh Bhogal. Front End Developer & UI Engineer",
-                favicon: "./src/assets/images/logos/Portfolio-Favicon-Universal.svg"
+                favicon: "./src/assets/images/logos/WebsiteFavicon.svg"
             }),
             new CopyPlugin({
                 patterns: [
