@@ -1,24 +1,24 @@
-@use '../mixins' as *;
-@use '../variables' as *;
+@use "../mixins" as *;
+@use "../variables" as *;
 
 .SkillLozenges {
-    position: relative;
-    bottom: 5px;
+  position: relative;
+  bottom: 5px;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+  font-family: "Anaheim", serif;
+  text-transform: uppercase;
+  .SkillLozenge {
     display: flex;
-    position: absolute;
-    width: 100%;
-    justify-content: space-between;
-    font-family: 'Anaheim', serif;
-    text-transform: uppercase;
-    .SkillLozenge {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $ChineseBlack-01;
-        color: $Argent;
-        border: 1px solid $Argent;
-        border-radius: 40px;
-        padding: 10px 20px;
-        font-size: 16px;
-    }
+    align-items: center;
+    justify-content: center;
+    background-color: $ChineseBlack-01;
+    color: $Argent;
+    border: 1px solid $Argent;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
 }

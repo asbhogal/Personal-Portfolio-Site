@@ -1,236 +1,250 @@
-@use '../mixins' as *;
-@use '../variables' as *;
+@use "../mixins" as *;
+@use "../variables" as *;
 
 .Project {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  > * {
     display: flex;
+  }
+  .ProjectHero {
+    height: 100%;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: $ImgBorderRadius;
+    }
+  }
+  .ProjectLinks {
+    justify-content: space-between;
+    gap: 45px;
+    .ProjectButton {
+      border: 1px solid $Argent;
+      outline: none;
+      background-color: $Argent;
+      color: $SmokyBlack;
+      border-radius: 40px;
+      padding: 10px 20px;
+      font-family: "Anaheim", serif;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: $Transition-03;
+      &:hover {
+        background-color: transparent;
+        color: $Argent;
+        border: 1px solid $Argent;
+        transition: $Transition-03;
+        cursor: none;
+      }
+    }
+  }
+  .ProjectAbout {
     flex-direction: column;
     gap: 10px;
+    border-top: 1px solid $Argent;
     > * {
+      display: flex;
+    }
+    h2 {
+      font-family: "Questa Grande", serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(1.5rem, 0.7864rem + 3.5682vw, 4rem);
+      text-transform: uppercase;
+      color: $Argent;
+    }
+    .ProjectDateAndType,
+    .ProjectStacksAndTools,
+    .ProjectLozenges {
+      justify-content: space-between;
+      font-family: "Anaheim", serif;
+      text-transform: uppercase;
+      font-size: clamp(1rem, 0.9108rem + 0.446vw, 1.3125rem);
+    }
+    .ProjectLozenge {
+      border: 1px solid $Argent;
+      border-radius: 40px;
+      padding: 10px 20px;
+    }
+    .ProjectAboutContent {
+      font-family: "Anaheim", serif;
+      font-size: clamp(1rem, 0.9108rem + 0.446vw, 1.3125rem);
+      text-align: justify;
+      text-transform: uppercase;
+    }
+    .ProjectStacksAndTools {
+      flex-wrap: wrap;
+      gap: 10px;
+      span {
         display: flex;
-    }
-    .ProjectHero {
-        height: 100%;
-        width: 100%;
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            border-radius: $ImgBorderRadius;
+        flex-wrap: wrap;
+        gap: 10px;
+        &:nth-child(2) {
+          justify-content: flex-end;
         }
+      }
+      .StackToolLozenge {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: 1px solid $Khaki;
+        border-radius: 50px;
+        padding: 10px;
+      }
     }
-    .ProjectLinks {
-        justify-content: space-between;
-        gap: 45px;
-        .ProjectButton {
-            border: 1px solid $Argent;
-            outline: none;
-            background-color: $Argent;
-            color: $SmokyBlack;
-            border-radius: 40px;
-            padding: 10px 20px;
-            font-family: 'Anaheim', serif;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: $Transition-03;
-            &:hover {
-                background-color: transparent;
-                color: $Argent;
-                border: 1px solid $Argent;
-                transition: $Transition-03;
-                cursor: none;
-            }
+    #SingleRowStacksAndTools {
+      flex-wrap: nowrap;
+    }
+  }
+  .OceanicaPrototypes {
+    border-radius: $ImgBorderRadius;
+  }
+  .DesignDecisions,
+  .ProjectTypefaces,
+  .ProjectAssetsAndBranding,
+  .ProjectMockups,
+  .ProjectPrototypes,
+  .ProjectScreens {
+    @extend .ProjectAbout;
+    .ProjectTypefaceInfo {
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 20px;
+      #BrandTypeface {
+        font-family: "Inter", sans-serif;
+        &:first-child {
+          font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
         }
+      }
+      #LiteLifeTypeface {
+        font-family: "Roboto", sans-serif;
+        &:first-child {
+          font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
+        }
+      }
+      #OceanicaTypeface {
+        font-family: "Manrope", sans-serif;
+        &:first-child {
+          font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
+        }
+      }
+      #CryptoverseTypeface {
+        font-family: "Noto Sans", sans-serif;
+        &:first-child {
+          font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
+        }
+        > #Weight-200 {
+          display: none !important;
+        }
+      }
+      .TypefaceWeights {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-size: 18px;
+        .TypefaceWeightsList {
+          display: flex;
+          flex-wrap: wrap;
+          list-style-type: none;
+          gap: 10px;
+        }
+      }
     }
-    .ProjectAbout {
+  }
+  .ProjectAssetsAndBranding {
+    display: flex;
+    > * {
+      display: flex;
+    }
+    #OceanicaAssetsAndBrandingContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+      background-color: #47513f6b;
+    }
+    .ProjectAssetsAndBrandingContainer {
+      background-color: #3b3a3acc;
+      padding: 10px;
+      border-radius: $ImgBorderRadius;
+      gap: 10px;
+      #LiteLifeAssets {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+        > img {
+          object-fit: cover;
+          border-radius: $ImgBorderRadius;
+        }
+      }
+      .AssetsAndBranding {
+        display: flex;
         flex-direction: column;
         gap: 10px;
-        border-top: 1px solid $Argent;
-        > * {
-            display: flex;
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
         }
-        h2 {
-            font-family: 'Questa Grande', serif;
-            font-style: normal;
-            font-weight: 400;
-            font-size: clamp(1.5rem, 0.7864rem + 3.5682vw, 4rem);
-            text-transform: uppercase;
-            color: $Argent;
+        .LiteLifeColorPalette {
+          width: 50%;
+          height: auto;
         }
-        .ProjectDateAndType,
-        .ProjectStacksAndTools,
-        .ProjectLozenges {
-            justify-content: space-between;
-            font-family: 'Anaheim', serif;
-            text-transform: uppercase;
-            font-size: clamp(1rem, 0.9108rem + 0.446vw, 1.3125rem);
-        }
-        .ProjectLozenge {
-            border: 1px solid $Argent;
-            border-radius: 40px;
-            padding: 10px 20px;
-        }
-        .ProjectAboutContent {
-            font-family: 'Anaheim', serif;
-            font-size: clamp(1rem, 0.9108rem + 0.446vw, 1.3125rem);
-            text-align: justify;
-            text-transform: uppercase;
-        }
-        .ProjectStacksAndTools {
-            flex-wrap: wrap;
-            gap: 10px;
-            span {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                &:nth-child(2) {
-                    justify-content: flex-end;
-                }
-            }
-            .StackToolLozenge {
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                border: 1px solid $Khaki;
-                border-radius: 50px;
-                padding: 10px;
-            }
-        }
-        #SingleRowStacksAndTools {
-            flex-wrap: nowrap;
-        }
+      }
     }
-    .OceanicaPrototypes {
-        border-radius: $ImgBorderRadius;
-    }
-    .DesignDecisions,
-    .ProjectTypefaces,
-    .ProjectAssetsAndBranding,
-    .ProjectMockups,
-    .ProjectPrototypes,
-    .ProjectScreens {
-        @extend .ProjectAbout;
-        .ProjectTypefaceInfo {
-            display: flex;
-            align-items: flex-end;
-            flex-wrap: wrap;
-            gap: 20px;
-            #BrandTypeface {
-                font-family: 'Inter', sans-serif;
-                &:first-child {
-                    font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
-                }
-            }
-            #LiteLifeTypeface {
-                font-family: 'Roboto', sans-serif;
-                &:first-child {
-                    font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
-                }
-            }
-            #OceanicaTypeface {
-                font-family: 'Manrope', sans-serif;
-                &:first-child {
-                    font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
-                }
-            }
-            #CryptoverseTypeface {
-                font-family: 'Noto Sans', sans-serif;
-                &:first-child {
-                    font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
-                }
-                > #Weight-200 {
-                    display: none !important;
-                }
-            }
-            .TypefaceWeights {
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-                font-size: 18px;
-                .TypefaceWeightsList {
-                    display: flex;
-                    flex-wrap: wrap;
-                    list-style-type: none;
-                    gap: 10px;
-                }
-            }
-        }
-    }
-    .ProjectAssetsAndBranding {
-        display: flex;
-        > * {
-            display: flex;
-        }
-        #OceanicaAssetsAndBrandingContainer {
-            display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(225px,1fr));
-            background-color: #47513f6b;
-        }
-        .ProjectAssetsAndBrandingContainer {
-            background-color: #3b3a3acc;
-            padding: 10px;
-            border-radius: $ImgBorderRadius;
-            gap: 10px;
-            #LiteLifeAssets {
-                display: grid !important;
-                grid-template-columns: repeat(auto-fit,minmax(120px,1fr)) !important;
-                > img {
-                    object-fit: cover;
-                    border-radius: $ImgBorderRadius;
-                }
-            }
-            .AssetsAndBranding {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                width: 100%;
-                height: 100%;
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                }
-                .LiteLifeColorPalette {
-                    width: 50%;
-                    height: auto;
-                }
-            } 
-        }
-    }
+  }
 
-    .ProjectScreens > img {
-        border-radius: $ImgBorderRadius;
-    }
+  .ProjectScreens > img {
+    border-radius: $ImgBorderRadius;
+  }
 }
 
 /****** BRAND WEIGHTINGS ******/
 
-$BrandWeights: (weight1: 400, weight2: 500, weight3: 600, weight4: 700, weight5: 900);
+$BrandWeights: (
+  weight1: 400,
+  weight2: 500,
+  weight3: 600,
+  weight4: 700,
+  weight5: 900,
+);
 
 @each $key, $weight in $BrandWeights {
-    #Weight-#{ $weight } {font-weight: $weight; }
-};
+  #Weight-#{ $weight } {
+    font-weight: $weight;
+  }
+}
 
 /****** CRYPTOVERSE WEIGHTINGS ******/
 
-$CryptoverseWeights: (weight1: 200, weight2: 300, weight3: 400);
+$CryptoverseWeights: (
+  weight1: 200,
+  weight2: 300,
+  weight3: 400,
+);
 
 @each $key, $weight in $CryptoverseWeights {
-    #Crypto-Weight-#{ $weight } {font-weight: $weight;}
-};
+  #Crypto-Weight-#{ $weight } {
+    font-weight: $weight;
+  }
+}
 
 @media only screen and (width <= 375px) {
-    .ProjectLinks {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px !important;
-    }
+  .ProjectLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px !important;
+  }
 }
 
 @media only screen and (width <= 748px) {
-    #LiteLiteAssetsAndBranding {
-        flex-direction: column;
-    }
-    .ProjectStacksAndTools {
-        display: none !important;
-    }
+  #LiteLiteAssetsAndBranding {
+    flex-direction: column;
+  }
+  .ProjectStacksAndTools {
+    display: none !important;
+  }
 }

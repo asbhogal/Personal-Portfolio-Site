@@ -1,41 +1,33 @@
-@use '../variables' as *;
+@use "../variables" as *;
 
 .Footer {
-    width: 100%;
-    align-items: center;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid $Argent;
+  padding: 35px 0;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  .Copyright {
+    color: $Argent;
+    text-transform: uppercase;
+    font-family: "Anaheim", serif;
+  }
+  .SocialIcons {
+    display: flex;
     justify-content: space-between;
-    border-top: 1px solid $Argent;
-    padding: 35px 0;
-    flex-wrap: wrap;
-    gap: 15px;
     align-items: center;
-    //z-index: 2;
-    .Copyright {
-        color: $Argent;
-        text-transform: uppercase;
-        font-family: 'Anaheim', serif;
+    gap: 10px;
+    a {
+      display: flex;
+      color: $Argent;
+      cursor: none;
+      transition: $Transition-03;
+      &:hover {
+        transform: translateY(-5px);
+        transition: $Transition-03;
+      }
     }
-    .SocialIcons {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-        a {
-            display: flex;
-            color: $Argent;
-            cursor: none;
-            transition: $Transition-03;
-            &:hover {
-                transform: translateY(-5px);
-                transition: $Transition-03;
-            }
-        }
-    }
+  }
 }
-
-/* @media only screen and (width <= 375px) {
-    .Footer {
-        flex-direction: column;
-        align-items: center;
-    }
-} */

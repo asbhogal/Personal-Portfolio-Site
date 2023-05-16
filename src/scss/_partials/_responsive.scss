@@ -18,7 +18,7 @@
   }
   .ProjectCover {
     width: 1520px;
-    margin:0 auto;
+    margin: 0 auto;
   }
   .ProjectInfo {
     width: 1110px;
@@ -47,7 +47,7 @@
   .MainContainer {
     padding: 0 150px;
   }
-  
+
   .AdditionalServices {
     padding: 0 150px;
   }
@@ -111,7 +111,7 @@
   .ProjectTimeDuration {
     justify-content: center !important;
   }
-  .ProjectToolsAndTechStacks{
+  .ProjectToolsAndTechStacks {
     flex-direction: column;
     text-align: center;
     gap: 10px;
@@ -156,7 +156,7 @@
   .TestimonialsSection {
     padding: 0 24px;
   }
-  .ProjectCover h1{
+  .ProjectCover h1 {
     font-size: 72px !important;
   }
   .Guides {
@@ -199,7 +199,7 @@
 
 @media screen and (max-width: 600px) {
   .MainContainer {
-      flex-direction: column !important;
+    flex-direction: column !important;
   }
 }
 

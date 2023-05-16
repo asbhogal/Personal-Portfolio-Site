@@ -1,17 +1,17 @@
-@use '../variables' as *;
+@use "../variables" as *;
 
 .Cursor {
-    width: 12px;
-    height: 12px;
-    background-color: $Khaki;    
-    border-radius: 100%;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 9999;
-    transition: $Transition-03;
-    transition-property: opacity, background-color, transform;
-  }
+  width: 12px;
+  height: 12px;
+  background-color: $Khaki;
+  border-radius: 100%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: $Transition-03;
+  transition-property: opacity, background-color, transform;
+}
 
 .CursorHidden {
   opacity: 0;

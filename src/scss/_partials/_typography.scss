@@ -1,151 +1,153 @@
-@use './variables' as *;
+@use "./variables" as *;
 
 /****** QUESTA GRANDE - 400 REGULAR ******/
 
 @font-face {
-    font-family: 'Questa Grande';
-    font-weight: 400;
-    font-style: normal;
-    src: url('../assets/fonts/questagrande_regular_macroman/2-questa_grande_regular_31-webfont.woff2') format('woff2');
-    font-display: swap;
+  font-family: "Questa Grande";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../assets/fonts/questagrande_regular_macroman/2-questa_grande_regular_31-webfont.woff2")
+    format("woff2");
+  font-display: swap;
 }
 
 /****** ANAHEIM - 400 REGULAR ******/
 
 @font-face {
-    font-family: 'Anaheim';
-    font-weight: 400;
-    font-style: normal;
-    src: url('../assets/fonts/Anaheim/Anaheim-Regular.woff2') format('woff2');
-    font-display: swap;
+  font-family: "Anaheim";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../assets/fonts/Anaheim/Anaheim-Regular.woff2") format("woff2");
+  font-display: swap;
 }
 
 /****** INTER - 400 REGULAR ******/
 
 @font-face {
-    font-family: 'Inter';
-    font-weight: 400;
-    font-style: normal;
-    src: url('../assets/fonts/Inter/Inter-Regular.woff2') format('woff2');
-    font-display: swap;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../assets/fonts/Inter/Inter-Regular.woff2") format("woff2");
+  font-display: swap;
 }
 
 /****** INTER - 500 MEDIUM ******/
 
 @font-face {
-    font-family: 'Inter';
-    font-weight: 500;
-    font-style: normal;
-    src: url('../assets/fonts/Inter/Inter-Medium.woff2') format('woff2');
-    font-display: swap;
+  font-family: "Inter";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../assets/fonts/Inter/Inter-Medium.woff2") format("woff2");
+  font-display: swap;
 }
 
 /****** INTER - 600 SEMIBOLD ******/
 
 @font-face {
-    font-family: 'Inter';
-    font-weight: 600;
-    font-style: normal;
-    src: url('../assets/fonts/Inter/Inter-SemiBold.woff2') format('woff2');
-    font-display: swap;
+  font-family: "Inter";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../assets/fonts/Inter/Inter-SemiBold.woff2") format("woff2");
+  font-display: swap;
 }
 
 /****** INTER - 700 BOLD ******/
 
 @font-face {
-    font-family: 'Inter';
-    font-weight: 700;
-    font-style: normal;
-    src: url('../assets/fonts/Inter/Inter-Bold.woff2') format('woff2');
-    font-display: swap;
+  font-family: "Inter";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../assets/fonts/Inter/Inter-Bold.woff2") format("woff2");
+  font-display: swap;
 }
 
 /****** INTER - 900 BLACK ******/
 
 @font-face {
-    font-family: 'Inter';
-    font-weight: 900;
-    font-style: normal;
-    src: url('../assets/fonts/Inter/Inter-Black.woff2') format('woff2');
-    font-display: swap;
+  font-family: "Inter";
+  font-weight: 900;
+  font-style: normal;
+  src: url("../assets/fonts/Inter/Inter-Black.woff2") format("woff2");
+  font-display: swap;
 }
 
 /****** MANROPE - 400 REGULAR ******/
 
 @font-face {
-    font-family: 'Manrope';
-    font-weight: 400;
-    font-style: normal;
-    src: url('../assets/fonts/Manrope/Manrope-Regular.woff2') format('woff2');
-    font-display: swap;
+  font-family: "Manrope";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../assets/fonts/Manrope/Manrope-Regular.woff2") format("woff2");
+  font-display: swap;
 }
 
 /****** MANROPE - 500 MEDIUM ******/
 
 @font-face {
-    font-family: 'Manrope';
-    font-weight: 500;
-    font-style: normal;
-    src: url('../assets/fonts/Manrope/Manrope-Medium.woff2') format('woff2');
-    font-display: swap;
+  font-family: "Manrope";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../assets/fonts/Manrope/Manrope-Medium.woff2") format("woff2");
+  font-display: swap;
 }
 
 /****** MANROPE - 600 SEMI BOLD ******/
 
 @font-face {
-    font-family: 'Manrope';
-    font-weight: 600;
-    font-style: normal;
-    src: url('../assets/fonts/Manrope/Manrope-SemiBold.woff2') format('woff2');
-    font-display: swap;
+  font-family: "Manrope";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../assets/fonts/Manrope/Manrope-SemiBold.woff2") format("woff2");
+  font-display: swap;
 }
 
 /****** MANROPE - 700 BOLD ******/
 
 @font-face {
-    font-family: 'Manrope';
-    font-weight: 700;
-    font-style: normal;
-    src: url('../assets/fonts/Manrope/Manrope-Bold.woff2') format('woff2');
-    font-display: swap;
+  font-family: "Manrope";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../assets/fonts/Manrope/Manrope-Bold.woff2") format("woff2");
+  font-display: swap;
 }
 
 /****** ROBOTO - 400 REGULAR ******/
 
 @font-face {
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-style: normal;
-    src: url('../assets/fonts/Roboto/Roboto-Regular.woff2') format('woff2');
-    font-display: swap;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../assets/fonts/Roboto/Roboto-Regular.woff2") format("woff2");
+  font-display: swap;
 }
 
 /****** NOTO SANS - 200 EXTRA LIGHT ******/
 
 @font-face {
-    font-family: 'Noto Sans';
-    font-weight: 200;
-    font-style: normal;
-    src: url('../assets/fonts/Noto Sans/NotoSans-ExtraLight.woff2') format('woff2');
-    font-display: swap;
+  font-family: "Noto Sans";
+  font-weight: 200;
+  font-style: normal;
+  src: url("../assets/fonts/Noto Sans/NotoSans-ExtraLight.woff2")
+    format("woff2");
+  font-display: swap;
 }
 
 /****** NOTO SANS - 300 LIGHT ******/
 
 @font-face {
-    font-family: 'Noto Sans';
-    font-weight: 300;
-    font-style: normal;
-    src: url('../assets/fonts/Noto Sans/NotoSans-Light.woff2') format('woff2');
-    font-display: swap;
+  font-family: "Noto Sans";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../assets/fonts/Noto Sans/NotoSans-Light.woff2") format("woff2");
+  font-display: swap;
 }
 
 /****** NOTO SANS - 400 REGULAR ******/
 
 @font-face {
-    font-family: 'Noto Sans';
-    font-weight: 400;
-    font-style: normal;
-    src: url('../assets/fonts/Noto Sans/NotoSans-Regular.woff2') format('woff2');
-    font-display: swap;
+  font-family: "Noto Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../assets/fonts/Noto Sans/NotoSans-Regular.woff2") format("woff2");
+  font-display: swap;
 }

@@ -1,52 +1,52 @@
-@use './variables' as *;
+@use "./variables" as *;
 
 * {
-    margin: 0;
-    padding: 0;
-    &:is(&::after, &::before, *) {
-        box-sizing: border-box;
-    }
-    // outline: 1px solid red;
+  margin: 0;
+  padding: 0;
+  &:is(&::after, &::before, *) {
+    box-sizing: border-box;
+  }
+  outline: 1px solid red;
 }
 
 html {
-    background-color: $SmokyBlack;
+  background-color: $SmokyBlack;
 }
 
 ::-webkit-scrollbar {
-    width: .625rem;
+  width: 0.625rem;
 }
- 
+
 ::-webkit-scrollbar-track {
-    background-color: transparent; 
-    border-radius: .625rem;
+  background-color: transparent;
+  border-radius: 0.625rem;
 }
- 
+
 ::-webkit-scrollbar-thumb {
-    border-radius: .625rem;
-    background-color: $RaisinBlack;
+  border-radius: 0.625rem;
+  background-color: $RaisinBlack;
 }
 
 .CTAButtons {
-    height: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  > * {
     display: flex;
-    flex-direction: row;
-    > * {
-        display: flex;
-    }
+  }
 }
 
 .ViewProjects,
 .Contact {
-    font-family: 'Switzer', sans-serif;
-    background: none;
-    border: none;
-    cursor: none;
-    color: $RaisinBlack;
-    font-size: 32px;
-    font-weight: 200;
-    font-weight: 200;
-    font-size: 32px;
-    line-height: 42px;
-    text-transform: lowercase;
+  font-family: "Switzer", sans-serif;
+  background: none;
+  border: none;
+  cursor: none;
+  color: $RaisinBlack;
+  font-size: 32px;
+  font-weight: 200;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 42px;
+  text-transform: lowercase;
 }

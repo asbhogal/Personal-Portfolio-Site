@@ -1,105 +1,108 @@
-@use '../variables' as *;
+@use "../variables" as *;
 
 .Nav {
-    z-index: 2;
+  z-index: 2;
+  width: 100%;
+  .NavContainer > .NavBar {
+    height: 92px;
     width: 100%;
-    .NavContainer > .NavBar {
-        height: 92px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        // padding: 2em;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-/*     .MenuToggle {
-        cursor: pointer;
-    } */
+  .NavContainer > .NavOverlay {
+    position: fixed;
+    background: $SmokyBlack;
+    z-index: -2;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: $Transition-03;
+  }
 
-    .NavContainer > .NavOverlay {
-        position: fixed;
-        background:$SmokyBlack;
-        z-index: -2;
-        top: 0;
-        // left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        //padding: 4em;
-        //transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
-        // opacity: 1;
-        transition: $Transition-03;
-    }
+  .MenuToggle > .HamburgerContainer {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: $Transition-03;
+    padding: 2.4em;
+  }
+}
 
-    .MenuToggle > .HamburgerContainer {
-        position: relative;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        transition: $Transition-03;
-        padding: 2.4em;
-        /* .HamburgerContainerOpen {
-            background-color: $Grullo;
-        } */
-    }
+.MenuToggle {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; /* Use whatever font-family you want */
+  font-size: 1rem;
+  line-height: 1;
+  background: transparent;
+  cursor: none;
 }
 
 .HomePageLogoLink {
-    cursor: none;
+  cursor: none;
 }
 
 .LineTop,
 .LineBottom {
-    margin: 0 auto;
-    position: absolute;
-    display: block;
-    width: 1.5rem;
-    height: .125rem;
-    border-radius: .625rem;
-    background-color: $Argent;
-    left: 0;
-    right: 0;
-    transform: rotate(0deg);
-    transition: $Transition-03;
+  margin: 0 auto;
+  position: absolute;
+  display: block;
+  width: 1.5rem;
+  height: 0.125rem;
+  border-radius: 0.625rem;
+  background-color: $Argent;
+  left: 0;
+  right: 0;
+  transform: rotate(0deg);
+  transition: $Transition-03;
+  &:hover {
+    background-color: $Khaki;
+  }
 }
 
 .LineTop {
-    top: 40px;
+  top: 40px;
 }
 
 .LineTop.Spin {
-    top: 45px;
-    transform: rotate(135deg);
-    background-color: $Argent;
+  top: 45px;
+  transform: rotate(135deg);
+  background-color: $Argent;
 }
 
 .LineBottom {
-    bottom: 40px;
+  bottom: 40px;
 }
 
 .LineBottom.Spin {
-    bottom: 45px;
-    transform: rotate(225deg);
-    background-color: $Argent;
+  bottom: 45px;
+  transform: rotate(225deg);
+  background-color: $Argent;
 }
 
 .HireCTAHeader {
+  border: 1px solid $Khaki;
+  outline: none;
+  border-radius: 40px;
+  padding: 5px 10px;
+  font-family: "Anaheim", serif;
+  font-size: 21px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $VampireBlack;
+  background-color: $Khaki;
+  transition: $Transition-03;
+  cursor: none;
+  &:hover {
+    background-color: transparent;
     border: 1px solid $Khaki;
-    outline: none;
-    border-radius: 40px;
-    padding: 5px 10px;
-    font-family: 'Anaheim', serif;
-    font-size: 21px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $VampireBlack;
-    background-color: $Khaki;
+    color: $Khaki;
     transition: $Transition-03;
-    cursor: none;
-    &:hover {
-        background-color: transparent;
-        border: 1px solid $Khaki;
-        color: $Khaki;
-        transition: $Transition-03;
-    }
+  }
 }
