@@ -4,7 +4,7 @@
   z-index: 2;
   width: 100%;
   .NavContainer > .NavBar {
-    height: 92px;
+    height: 5.75rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -24,8 +24,8 @@
 
   .MenuToggle > .HamburgerContainer {
     position: relative;
-    width: 15px;
-    height: 15px;
+    width: 0.9375rem;
+    height: 0.9375rem;
     border-radius: 50%;
     transition: $Transition-03;
     padding: 2.4em;
@@ -71,7 +71,7 @@
 }
 
 .LineTop.Spin {
-  top: 40px;
+  top: 2.5rem;
   transform: rotate(135deg);
   background-color: $Argent;
 }
@@ -87,12 +87,12 @@
 }
 
 .HireCTAHeader {
-  border: 1px solid $Khaki;
+  border: 0.0625rem solid $Khaki;
   outline: none;
-  border-radius: 40px;
-  padding: 5px 10px;
+  border-radius: 2.5rem;
+  padding: 0.3125rem 0.625rem;
   font-family: "Anaheim", serif;
-  font-size: 21px;
+  font-size: 1.3125rem;
   text-transform: uppercase;
   text-decoration: none;
   color: $VampireBlack;
@@ -101,7 +101,7 @@
   cursor: none;
   &:hover {
     background-color: transparent;
-    border: 1px solid $Khaki;
+    border: 0.0625rem solid $Khaki;
     color: $Khaki;
     transition: $Transition-03;
   }

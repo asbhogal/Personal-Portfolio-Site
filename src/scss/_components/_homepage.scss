@@ -5,14 +5,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 55px;
-  height: calc(100vh - 92px);
+  gap: 3.4375rem;
+  height: calc(100vh - 5.75rem);
   .AwardsSection {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(14.0625rem, 1fr));
     justify-content: center;
     justify-items: center;
-    max-width: 595px;
+    max-width: 37.1875rem;
     width: 100%;
     margin: 0 auto;
     svg {
@@ -38,19 +38,19 @@
   }
   .HomePageProjectLogos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(7.8125rem, 1fr));
     justify-items: center;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
     background-color: $ChineseBlack-02;
     border-radius: $ImgBorderRadius;
-    padding: 15px 0;
+    padding: 0.9375rem 0;
     img {
       width: 50%;
       height: auto;
       opacity: 0.6;
       &:nth-child(5) {
-        height: 65px;
+        height: 4.0625rem;
       }
     }
   }
@@ -58,18 +58,18 @@
 
 .SkillsOffered {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
-  gap: 10px;
-  padding: 10px 0;
+  grid-template-columns: repeat(auto-fit, minmax(16.5625rem, 1fr));
+  gap: 0.625rem;
+  padding: 0.625rem 0;
   .SkillBox {
-    border-radius: 10px;
+    border-radius: 0.625rem;
     background: $ChineseBlack-01;
-    border: 1px solid $Khaki;
+    border: 0.0625rem solid $Khaki;
     display: grid;
-    grid-gap: 10px;
-    gap: 10px;
-    padding: 25px;
-    padding: 20px;
+    grid-gap: 0.625rem;
+    gap: 0.625rem;
+    padding: 1.5625rem;
+    padding: 1.25rem;
     p:first-child {
       font-family: "Questa Grande", serif;
       font-size: clamp(1.3125rem, 1.1162rem + 0.9813vw, 2rem);
@@ -84,9 +84,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
-      border-bottom: 1px solid $Khaki;
-      padding-bottom: 10px;
+      gap: 0.625rem;
+      border-bottom: 0.0625rem solid $Khaki;
+      padding-bottom: 0.625rem;
     }
   }
 }
@@ -94,7 +94,7 @@
 .ProjectScreens {
   @include HeadlineStyle;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
   .HomePageSectionBar {
     align-items: center;
     justify-content: space-between;
@@ -107,7 +107,7 @@
     cursor: none;
     > img {
       width: 100%;
-      height: 1100px;
+      height: 68.75rem;
       object-fit: cover;
       border-radius: $ImgBorderRadius;
       transition: $Transition-03;
@@ -124,13 +124,13 @@
   .ProjectTitle {
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid $Argent;
-    padding: 10px 0;
+    border-top: 0.0625rem solid $Argent;
+    padding: 0.625rem 0;
     h3 {
       font-family: "Questa Grande", serif;
       font-weight: 400;
       font-style: normal;
-      font-size: 21px;
+      font-size: 1.3125rem;
       text-transform: uppercase;
     }
   }
@@ -157,16 +157,16 @@
   background-color: #000000de;
   transition: $Transition-03;
   > img {
-    height: 50px;
-    width: 50px;
+    height: 3.125rem;
+    width: 3.125rem;
     object-fit: contain;
     transition: $Transition-03;
   }
 }
 
-@media only screen and (width <= 426px) {
+@media only screen and (width <= 26.625rem) {
   .ProjectLink > img {
-    height: 215px !important;
+    height: 13.4375rem !important;
   }
   .SkillLozenges {
     display: none !important;

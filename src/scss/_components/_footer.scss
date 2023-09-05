@@ -4,10 +4,10 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid $Argent;
-  padding: 35px 0;
+  border-top: 0.0625rem solid $Argent;
+  padding: 2.1875rem 0;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 0.9375rem;
   align-items: center;
   .Copyright {
     color: $Argent;
@@ -18,14 +18,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
     a {
       display: flex;
       color: $Argent;
       cursor: none;
       transition: $Transition-03;
       &:hover {
-        transform: translateY(-5px);
+        transform: translateY(-0.3125rem);
         transition: $Transition-03;
       }
     }

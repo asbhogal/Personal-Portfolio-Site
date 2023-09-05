@@ -1,8 +1,8 @@
 @use "../_partials/variables" as *;
 
 .Cursor {
-  width: 12px;
-  height: 12px;
+  width: 0.75rem;
+  height: 0.75rem;
   background-color: $Khaki;
   border-radius: 100%;
   position: fixed;
@@ -18,8 +18,8 @@
 }
 
 .CursorClicked {
-  width: 10px;
-  height: 10px;
+  width: 0.625rem;
+  height: 0.625rem;
   transition: $Transition-03;
   transform: translate(-50%, -50%) scale(0.9);
   background-color: $Khaki;
@@ -28,5 +28,5 @@
 .CursorLinkHovered {
   transform: translate(-50%, -50%) scale(1.25);
   background: none;
-  border: 1px solid $Argent;
+  border: 0.0625rem solid $Argent;
 }

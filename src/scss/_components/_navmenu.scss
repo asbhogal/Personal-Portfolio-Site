@@ -8,17 +8,17 @@
   }
   .NavLinks {
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
     font-family: "Questa Grande", serif;
-    font-size: 96px;
-    padding-top: 92px;
-    padding-right: 20px;
+    font-size: 6rem;
+    padding-top: 5.75rem;
+    padding-right: 1.25rem;
     list-style-type: none;
     .NavItems {
       // font-size: clamp(1.5rem, -0.8936rem + 7.6596vw, 6rem);
       //font-size: clamp(2.625rem, 1.875rem + 3.75vw, 5.25rem);
       font-size: clamp(2.375rem, 1.6607rem + 3.5714vw, 4.875rem);
-      border-top: 1px solid $Argent;
+      border-top: 0.0625rem solid $Argent;
     }
     .NavItems > a {
       text-decoration: none;
@@ -29,7 +29,7 @@
       &:hover {
         transition: $Transition-03;
         color: $Khaki;
-        padding-left: 8px;
+        padding-left: 0.5rem;
       }
     }
   }
@@ -40,12 +40,12 @@
     width: 100%;
     justify-content: flex-end;
     align-items: center;
-    padding: 10px 0;
+    padding: 0.625rem 0;
     > * {
       display: flex;
     }
     .NavFooterSocialLinks {
-      width: 450px;
+      width: 28.125rem;
       justify-content: space-between;
       list-style-type: none;
       font-family: "Switzer", sans-serif;
@@ -53,7 +53,7 @@
       li {
         transition: $Transition-03;
         &:hover {
-          transform: translateY(-2px);
+          transform: translateY(-0.125rem);
           transition: $Transition-03;
         }
         a {
