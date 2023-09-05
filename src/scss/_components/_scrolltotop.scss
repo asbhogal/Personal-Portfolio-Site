@@ -1,0 +1,19 @@
+@use "../_partials/variables" as *;
+
+.ScrollToTop {
+  position: fixed;
+  scroll-behavior: smooth;
+  bottom: 100px;
+  right: 20px;
+  font-size: 42px;
+  background: none;
+  border: none;
+  filter: invert(1);
+  mix-blend-mode: difference;
+  transition: $Transition-03;
+  cursor: none;
+  z-index: 5;
+  &:hover {
+    transform: translateY(-5px);
+  }
+}

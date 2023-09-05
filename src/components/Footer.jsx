@@ -29,6 +29,7 @@ const Footer = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           target="_blank"
+          rel="noreferrer"
           href="https://www.linkedin.com/in/amansinghbhogal"
           aria-label="Visit Aman's LinkedIn page"
         >
@@ -36,6 +37,7 @@ const Footer = () => {
         </m.a>
         <m.a
           target="_blank"
+          rel="noreferrer"
           href="https://www.github.com/asbhogal"
           aria-label="Visit Aman's GitHub page"
         >
@@ -43,6 +45,7 @@ const Footer = () => {
         </m.a>
         <m.a
           target="_blank"
+          rel="noreferrer"
           href="https://www.figma.com/@amansinghbhogal"
           aria-label="Visit Aman's Figma profile"
         >

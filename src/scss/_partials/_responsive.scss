@@ -1,29 +1,29 @@
-/****** WIDE - 1440px+ ******/
+/****** WIDE - 90rem+ ******/
 
-@media only screen and (1441px <= width) {
-  .MainContainer {
-    width: 1120px;
-  }
+@media only screen and (90.0625rem <= width) {
+  /* .MainContainer {
+    width: 70rem;
+  } */
   .FreeResourcesSection {
-    width: 1120px;
+    width: 70rem;
     margin: 0 auto;
   }
   .AdditionalServices {
-    width: 1120px;
+    width: 70rem;
     margin: 0 auto;
   }
   .TestimonialsSection {
-    width: 1365px;
+    width: 85.3125rem;
     margin: 0 auto;
   }
   .ProjectCover {
-    width: 1520px;
+    width: 95rem;
     margin: 0 auto;
   }
   .ProjectInfo {
-    width: 1110px;
+    width: 69.375rem;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 2.5rem 0;
   }
   .Guides {
     justify-content: space-between;
@@ -32,21 +32,21 @@
     justify-content: space-between !important;
   }
   .ErrorPage {
-    width: 1120px;
+    width: 70rem;
     margin: 0 auto;
     h2 {
       word-break: break-word;
-      width: 480px;
+      width: 30rem;
     }
   }
 }
 
-/****** DESKTOP - 1025PX -> 1440px ******/
+/****** DESKTOP - 1025PX -> 90rem ******/
 
-@media only screen and (1025px <= width <= 1440px) {
-  .MainContainer {
+@media only screen and (64.0625rem <= width <= 90rem) {
+  /* .MainContainer {
     padding: 0 150px;
-  }
+  } */
 
   .AdditionalServices {
     padding: 0 150px;
@@ -65,17 +65,17 @@
   }
 }
 
-/****** TABLET (LARGE) - 745px --> 1024px ******/
+/****** TABLET (LARGE) - 46.5625rem --> 64rem ******/
 
-@media only screen and (745px <= width <= 1024px) {
-  .MainContainer {
-    padding: 32px;
-  }
+@media only screen and (46.5625rem <= width <= 64rem) {
+  /* .MainContainer {
+    padding: 2rem;
+  } */
   .ProjectInfo {
-    padding: 32px;
+    padding: 2rem;
   }
   .TestimonialsSection {
-    padding: 0 32px;
+    padding: 0 2rem;
   }
   .Guides {
     flex-wrap: wrap;
@@ -87,12 +87,12 @@
   }
 }
 
-/****** TABLET (SMALL) - 376px --> 744px ******/
+/****** TABLET (SMALL) - 23.5rem --> 46.5rem ******/
 
-@media only screen and (376px <= width <= 744px) {
-  .MainContainer {
-    padding: 24px;
-  }
+@media only screen and (23.5rem <= width <= 46.5rem) {
+  /* .MainContainer {
+    padding: 1.5rem;
+  } */
   .HomePageSection {
     flex-direction: column;
   }
@@ -100,13 +100,13 @@
     height: 100vh;
   }
   .TestimonialsSection {
-    padding: 0 24px;
+    padding: 0 1.5rem;
   }
   .VerticalDivider {
     display: none !important;
   }
   .ProjectInfo {
-    padding: 24px;
+    padding: 1.5rem;
   }
   .ProjectTimeDuration {
     justify-content: center !important;
@@ -114,7 +114,7 @@
   .ProjectToolsAndTechStacks {
     flex-direction: column;
     text-align: center;
-    gap: 10px;
+    gap: 0.625rem;
   }
   .Guides {
     flex-wrap: wrap;
@@ -127,7 +127,7 @@
   #LiteLifeProjectGuideInfo {
     flex-direction: column;
     #LiteLifeProjectLogoMarks {
-      padding: 40px 0;
+      padding: 2.5rem 0;
     }
   }
   .ColorPalette {
@@ -138,26 +138,26 @@
   }
 }
 
-/****** TABLET (SMALL) - 0px -> 375px ******/
+/****** TABLET (SMALL) - 0rem -> 23.4375rem ******/
 
-@media only screen and (width <= 375px) {
+@media only screen and (width <= 23.4375rem) {
   .ProjectAssetsAndBrandingContainer {
     flex-direction: column;
   }
-  .MainContainer {
-    padding: 24px;
-  }
+  /* .MainContainer {
+    padding: 1.5rem;
+  } */
   .HomePageSection {
     flex-direction: column;
   }
   .ProjectInfo {
-    padding: 24px;
+    padding: 1.5rem;
   }
   .TestimonialsSection {
-    padding: 0 24px;
+    padding: 0 1.5rem;
   }
   .ProjectCover h1 {
-    font-size: 72px !important;
+    font-size: 4.5rem !important;
   }
   .Guides {
     flex-wrap: wrap;
@@ -167,7 +167,7 @@
   #LiteLifeProjectGuideInfo {
     flex-direction: column;
     #LiteLifeProjectLogoMarks {
-      padding: 40px 0;
+      padding: 2.5rem 0;
     }
   }
   .ColorPalette {
@@ -189,7 +189,7 @@
   }
 }
 
-@media only screen and (width <= 1060px) {
+@media only screen and (width <= 66.25rem) {
   .TypographyList {
     justify-content: center;
   }
@@ -197,16 +197,34 @@
 
 /*********************************************************************/
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 37.5rem) {
   .MainContainer {
     flex-direction: column !important;
   }
-}
+} */
 
 /*********************************************************************/
 
-@media screen and (width <= 1024px) {
+@media screen and (width <= 64rem) {
   .HomePageProjectLogos {
     display: none !important;
+  }
+}
+
+@media screen and (width >= 479px) {
+  .AwardsSection {
+    svg {
+      height: 85px;
+      width: 205px;
+    }
+  }
+}
+
+@media screen and (width <= 480px) {
+  .AwardsSection {
+    svg {
+      height: 45px;
+      width: 150px;
+    }
   }
 }

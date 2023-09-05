@@ -1,0 +1,21 @@
+@use "../_partials/mixins" as *;
+@use "../_partials/variables" as *;
+
+.carbonbadge {
+  display: flex;
+  div {
+    a {
+      border: 1px solid $Argent;
+      font-family: "Anaheim", serif;
+      color: $SmokyBlack;
+      &:nth-child(2) {
+        background-color: $SmokyBlack;
+        color: $Argent;
+        text-transform: uppercase;
+      }
+    }
+  }
+  span {
+    display: none;
+  }
+}

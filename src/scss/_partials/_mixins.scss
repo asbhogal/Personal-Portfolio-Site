@@ -27,15 +27,15 @@
   font-style: normal;
   font-size: clamp(2.25rem, 1.205rem + 3.8vw, 4.625rem);
   font-weight: 400;
-  line-height: 75px;
+  line-height: 4.6875rem;
 }
 
 @mixin HeadingTwoProject {
   font-family: "Questa Grande", serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 32px;
-  border-bottom: 1px solid red;
+  font-size: 2rem;
+  border-bottom: 0.0625rem solid red;
 }
 
 @mixin HeadingThreeProject {
@@ -46,11 +46,19 @@
   text-transform: uppercase;
 }
 
+@mixin MainBody {
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 @mixin BodyText {
   font-family: "Anaheim", serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 
@@ -64,8 +72,8 @@
 
 @mixin HeadlineStyle {
   flex-direction: column;
-  gap: 10px;
-  border-top: 1px solid $Argent;
+  gap: 0.625rem;
+  border-top: 0.0625rem solid $Argent;
   > * {
     display: flex;
   }

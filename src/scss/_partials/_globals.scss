@@ -1,3 +1,4 @@
+@use "./mixins" as *;
 @use "./variables" as *;
 
 * {
@@ -6,6 +7,7 @@
   &:is(&::after, &::before, *) {
     box-sizing: border-box;
   }
+  // outline: 1px solid red;
 }
 
 html {
@@ -42,10 +44,14 @@ html {
   border: none;
   cursor: none;
   color: $RaisinBlack;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 200;
   font-weight: 200;
-  font-size: 32px;
-  line-height: 42px;
+  font-size: 2rem;
+  line-height: 2.625rem;
   text-transform: lowercase;
+}
+
+.MainContainer {
+  @include MainBody;
 }

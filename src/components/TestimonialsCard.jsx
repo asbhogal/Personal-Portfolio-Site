@@ -35,7 +35,7 @@ const TestimonialsCard = () => {
           <div>
             <img
               className="TestimonialImage"
-              src={require(`/src/assets/images/TestimonialImg-${data.img}`)}
+              src={`/images/TestimonialImg-${data.img}`}
             ></img>
             <p className="TestimonialQuote">{data.description}</p>
             <div className="HorizontalDivider"></div>

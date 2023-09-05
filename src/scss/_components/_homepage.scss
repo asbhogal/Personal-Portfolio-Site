@@ -1,0 +1,174 @@
+@use "../_partials/mixins" as *;
+@use "../_partials/variables" as *;
+
+.HomePageSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 55px;
+  height: calc(100vh - 92px);
+  .AwardsSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    max-width: 595px;
+    width: 100%;
+    margin: 0 auto;
+    svg {
+      display: inherit;
+      cursor: none;
+    }
+  }
+  .MainHomeTitle {
+    font-family: "Questa Grande", serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: clamp(1.5rem, 0.822rem + 3.3898vw, 3.875rem);
+    text-align: center;
+    color: $Argent;
+    .HeadlineAccent {
+      font-size: clamp(2rem, 0.9295rem + 5.3524vw, 5.75rem);
+      font-style: italic;
+      color: $Khaki;
+    }
+    .HeadlineYear {
+      font-size: clamp(1.3125rem, 1.0449rem + 1.3381vw, 2.25rem);
+    }
+  }
+  .HomePageProjectLogos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    background-color: $ChineseBlack-02;
+    border-radius: $ImgBorderRadius;
+    padding: 15px 0;
+    img {
+      width: 50%;
+      height: auto;
+      opacity: 0.6;
+      &:nth-child(5) {
+        height: 65px;
+      }
+    }
+  }
+}
+
+.SkillsOffered {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+  gap: 10px;
+  padding: 10px 0;
+  .SkillBox {
+    border-radius: 10px;
+    background: $ChineseBlack-01;
+    border: 1px solid $Khaki;
+    display: grid;
+    grid-gap: 10px;
+    gap: 10px;
+    padding: 25px;
+    padding: 20px;
+    p:first-child {
+      font-family: "Questa Grande", serif;
+      font-size: clamp(1.3125rem, 1.1162rem + 0.9813vw, 2rem);
+      text-transform: uppercase;
+    }
+    p:nth-child(2) {
+      font-family: "Anaheim", serif;
+      text-transform: uppercase;
+      text-align: justify;
+    }
+    .SkillBoxTopRow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      border-bottom: 1px solid $Khaki;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.ProjectScreens {
+  @include HeadlineStyle;
+  flex-direction: column;
+  gap: 10px;
+  .HomePageSectionBar {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ProjectLink {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    transition: $Transition-03;
+    cursor: none;
+    > img {
+      width: 100%;
+      height: 1100px;
+      object-fit: cover;
+      border-radius: $ImgBorderRadius;
+      transition: $Transition-03;
+    }
+    &:hover .LinkOverlay {
+      display: flex;
+      z-index: 5;
+      transition: $Transition-03;
+    }
+    &:hover {
+      transition: $Transition-03;
+    }
+  }
+  .ProjectTitle {
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid $Argent;
+    padding: 10px 0;
+    h3 {
+      font-family: "Questa Grande", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 21px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.AllProjectsLink,
+.HomePageProjectLinks {
+  display: flex;
+  cursor: none;
+  transition: $Transition-03;
+  &:hover {
+    transform: rotate(45deg);
+    transition: $Transition-03;
+  }
+}
+
+.LinkOverlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000de;
+  transition: $Transition-03;
+  > img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    transition: $Transition-03;
+  }
+}
+
+@media only screen and (width <= 426px) {
+  .ProjectLink > img {
+    height: 215px !important;
+  }
+  .SkillLozenges {
+    display: none !important;
+  }
+}
