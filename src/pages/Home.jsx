@@ -52,6 +52,7 @@ const Home = () => {
           >
             <m.a
               target="_blank"
+              aria-label="Visit the CSSWinner portfolio page"
               rel="noopener noreferrer"
               href="https://www.csswinner.com/details/personal-portfolio/17436"
             >
@@ -92,6 +93,7 @@ const Home = () => {
             <m.a
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit the Frontend Mentor LinkedIn post"
               href="https://www.linkedin.com/posts/frontend-mentor_using-our-challenges-as-a-guide-but-adding-activity-7092496519299219456-5B_C?utm_source=share&utm_medium=member_desktop"
             >
               <svg
