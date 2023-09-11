@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: calc(100vh - 92px);
+  height: calc(100vh - 5.75rem);
   .PageHeaderTitle {
     display: flex;
     flex-direction: column;
@@ -23,13 +23,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 30px;
+  gap: 1.875rem;
   > * {
     display: flex;
   }
 
   .AboutContent {
-    gap: 20px;
+    gap: 1.25rem;
     flex-direction: column;
     justify-content: flex-start;
     #DesignSkills {
@@ -43,7 +43,7 @@
     .ExperienceList {
       display: flex;
       justify-content: flex-start;
-      gap: 25px;
+      gap: 1.5625rem;
       font-family: "Questa Grande", sans-serif;
       font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);
       text-align: left;
@@ -58,9 +58,9 @@
     .AboutExperience {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      border-top: 1px solid $Argent;
-      padding-bottom: 10px;
+      gap: 0.625rem;
+      border-top: 0.0625rem solid $Argent;
+      padding-bottom: 0.625rem;
       h3 {
         font-family: "Questa Grande", serif;
         font-style: normal;
@@ -71,29 +71,29 @@
       }
       .ExperienceContainer {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
-        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(16.5625rem, 1fr));
+        gap: 0.625rem;
         .ExperienceSection {
           display: flex;
           flex-direction: column;
-          gap: 10px;
-          padding: 10px;
+          gap: 0.625rem;
+          padding: 0.625rem;
           font-family: "Anaheim", serif;
           text-transform: uppercase;
           text-align: justify;
           color: $Argent;
-          border: 1px solid $Khaki;
+          border: 0.0625rem solid $Khaki;
           border-radius: $ImgBorderRadius;
           .ExperienceDate {
             font-family: "Anaheim", sans-serif;
-            font-size: 21px;
-            padding-left: 5px;
+            font-size: 1.3125rem;
+            padding-left: 0.3125rem;
           }
           .ExperienceTitle {
-            border: 1px solid $Khaki;
-            border-radius: 40px;
-            font-size: 18px;
-            padding: 10px 14px;
+            border: 0.0625rem solid $Khaki;
+            border-radius: 2.5rem;
+            font-size: 1.125rem;
+            padding: 0.625rem 0.875rem;
             background-color: $Khaki;
             color: $Black;
             text-align: left;
@@ -101,34 +101,34 @@
           .ExperienceInfo {
             .ListDot {
               display: flex;
-              width: 5px;
-              height: 5px;
+              width: 0.3125rem;
+              height: 0.3125rem;
               background-color: $Argent;
               border-radius: 50%;
             }
           }
 
           ul {
-            padding-left: 20px;
+            padding-left: 1.25rem;
           }
           .ExperienceSkills {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 0.625rem;
             span {
-              padding: 10px;
-              border: 1px solid $Khaki;
-              border-radius: 40px;
+              padding: 0.625rem;
+              border: 0.0625rem solid $Khaki;
+              border-radius: 2.5rem;
             }
           }
         }
         .WorkLinks {
           display: flex;
-          border: 1px solid $Khaki;
+          border: 0.0625rem solid $Khaki;
           outline: none;
           width: min-content;
-          border-radius: 40px;
-          padding: 5px 10px;
+          border-radius: 2.5rem;
+          padding: 0.3125rem 0.625rem;
           font-family: "Anaheim", serif;
           text-transform: uppercase;
           text-decoration: none;
@@ -138,7 +138,7 @@
           cursor: none;
           &:hover {
             background-color: transparent;
-            border: 1px solid $Khaki;
+            border: 0.0625rem solid $Khaki;
             color: $Khaki;
             -webkit-transition: all 0.3s ease-in;
             transition: all 0.3s ease-in;

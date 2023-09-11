@@ -15,10 +15,13 @@
     max-width: 37.1875rem;
     width: 100%;
     margin: 0 auto;
-    .CSSWinnerBadge,
+    cursor: none;
+    /* .CSSWinnerBadge,
     .FrontendMentorBadge {
-      width: 200px;
-      height: auto;
+      cursor: none;
+    } */
+    a {
+      cursor: none;
     }
   }
   .MainHomeTitle {
@@ -61,7 +64,7 @@
   width: 100%;
   height: auto;
   border-radius: $ImgBorderRadius;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .SkillsOffered {
@@ -119,7 +122,7 @@
       object-fit: cover;
       border-radius: $ImgBorderRadius;
       transition: $Transition-03;
-      margin-bottom: 10px;
+      margin-bottom: 0.625rem;
     }
     &:hover .LinkOverlay {
       display: flex;
@@ -153,10 +156,10 @@
     "c d";
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 0.625rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   .ProjectsContainer {
     grid-template-areas:
       "a"
@@ -165,6 +168,22 @@
       "d";
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr;
+  }
+  .AwardsSection {
+    gap: 0.625rem;
+  }
+  .CSSWinnerBadge,
+  .FrontendMentorBadge {
+    width: 8.125rem;
+    height: auto;
+  }
+}
+
+@media only screen and (width >= 37.5rem) {
+  .CSSWinnerBadge,
+  .FrontendMentorBadge {
+    width: 12.5rem;
+    height: auto;
   }
 }
 
@@ -196,7 +215,7 @@
   }
 }
 
-@media only screen and (width <= 700px) {
+@media only screen and (width <= 43.75rem) {
   .ProjectLink > img {
     height: 13.4375rem !important;
   }

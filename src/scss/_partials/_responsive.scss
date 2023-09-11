@@ -45,20 +45,20 @@
 
 @media only screen and (64.0625rem <= width <= 90rem) {
   /* .MainContainer {
-    padding: 0 150px;
+    padding: 0 9.375rem;
   } */
 
   .AdditionalServices {
-    padding: 0 150px;
+    padding: 0 9.375rem;
   }
   .FreeResourcesSection {
-    padding: 0 150px;
+    padding: 0 9.375rem;
   }
   .TestimonialsSection {
-    padding: 0 150px;
+    padding: 0 9.375rem;
   }
   .ProjectInfo {
-    padding: 40px 165px;
+    padding: 2.5rem 10.3125rem;
   }
   .TypographyList {
     justify-content: space-between !important;
@@ -211,20 +211,20 @@
   }
 }
 
-@media screen and (width >= 479px) {
+@media screen and (width >= 29.9375rem) {
   .AwardsSection {
     svg {
-      height: 85px;
-      width: 205px;
+      height: 5.3125rem;
+      width: 12.8125rem;
     }
   }
 }
 
-@media screen and (width <= 480px) {
+@media screen and (width <= 30rem) {
   .AwardsSection {
     svg {
-      height: 45px;
-      width: 150px;
+      height: 2.8125rem;
+      width: 9.375rem;
     }
   }
 }

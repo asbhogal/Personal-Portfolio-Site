@@ -4,7 +4,7 @@
 .ProjectsTitle {
   display: flex;
   justify-content: center;
-  height: calc(100vh - 92px);
+  height: calc(100vh - 5.75rem);
   h1 {
     @include HeadingOne;
     justify-content: center;
@@ -13,9 +13,9 @@
 
 .Projects {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 10px;
-  padding-bottom: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(18.125rem, 1fr));
+  gap: 0.625rem;
+  padding-bottom: 0.625rem;
   transition: 0.3s all ease-in-out;
   .ProjectSectionLink {
     position: relative;
@@ -58,7 +58,7 @@
         background-color: rgb(11 15 47 / 73%);
       }
       .ProjectImage {
-        filter: blur(5px);
+        filter: blur(0.3125rem);
         transition: $Transition-03;
       }
     }
@@ -66,7 +66,7 @@
 }
 
 .CursorLinkHovered {
-  border: 1px solid $Khaki !important;
+  border: 0.0625rem solid $Khaki !important;
 }
 
 #BrandProjectLinkOverlay > span,
@@ -83,7 +83,7 @@
 }
 
 #LiteLifeProjectLinkOverlay > .ProjectLogo {
-  width: 40px !important;
+  width: 2.5rem !important;
   height: auto;
 }
 
@@ -96,7 +96,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 0.9375rem;
   display: none;
   transition: $Transition-03;
   .ProjectLogo {
@@ -105,7 +105,7 @@
   }
   .ProjectIcons {
     display: flex;
-    width: 40px;
+    width: 2.5rem;
     > img {
       width: 100%;
       height: auto;
@@ -115,7 +115,7 @@
     text-transform: uppercase;
     outline: none;
     border: none;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     background-color: $RaisinBlack;
     color: $Argent;
   }
