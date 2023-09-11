@@ -15,9 +15,10 @@
     max-width: 37.1875rem;
     width: 100%;
     margin: 0 auto;
-    svg {
-      display: inherit;
-      cursor: none;
+    .CSSWinnerBadge,
+    .FrontendMentorBadge {
+      width: 200px;
+      height: auto;
     }
   }
   .MainHomeTitle {
@@ -54,6 +55,13 @@
       }
     }
   }
+}
+
+.PictureContainer img {
+  width: 100%;
+  height: auto;
+  border-radius: $ImgBorderRadius;
+  margin-bottom: 10px;
 }
 
 .SkillsOffered {
@@ -111,6 +119,7 @@
       object-fit: cover;
       border-radius: $ImgBorderRadius;
       transition: $Transition-03;
+      margin-bottom: 10px;
     }
     &:hover .LinkOverlay {
       display: flex;
@@ -122,6 +131,7 @@
     }
   }
   .ProjectTitle {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     border-top: 0.0625rem solid $Argent;
@@ -133,6 +143,28 @@
       font-size: 1.3125rem;
       text-transform: uppercase;
     }
+  }
+}
+
+.ProjectsContainer {
+  display: grid;
+  grid-template-areas:
+    "a b"
+    "c d";
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .ProjectsContainer {
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d";
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
@@ -164,7 +196,7 @@
   }
 }
 
-@media only screen and (width <= 26.625rem) {
+@media only screen and (width <= 700px) {
   .ProjectLink > img {
     height: 13.4375rem !important;
   }

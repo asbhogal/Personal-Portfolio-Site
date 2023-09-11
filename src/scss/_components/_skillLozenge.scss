@@ -2,14 +2,14 @@
 @use "../_partials/variables" as *;
 
 .SkillLozenges {
-  position: relative;
-  bottom: 5px;
+  bottom: 20px;
   display: flex;
   position: absolute;
   width: 100%;
   justify-content: space-between;
   font-family: "Anaheim", serif;
   text-transform: uppercase;
+  padding: 0 10px 0 10px;
   .SkillLozenge {
     display: flex;
     align-items: center;
