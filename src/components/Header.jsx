@@ -30,7 +30,11 @@ const Header = (props) => {
                 ></img>
               </Link>
             </div>
-            <button className="MenuToggle" onClick={() => setNavOpen(!navOpen)}>
+            <button
+              className="MenuToggle"
+              aria-label="Menu Toggle"
+              onClick={() => setNavOpen(!navOpen)}
+            >
               <div
                 className={
                   navOpen

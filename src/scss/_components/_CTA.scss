@@ -6,11 +6,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 1440px;
+  max-width: 90rem;
   width: 100%;
   margin: 0 auto;
-  height: 500px;
-  gap: 15px;
+  height: 31.25rem;
+  gap: 0.9375rem;
   > * {
     display: flex;
   }
@@ -22,19 +22,19 @@
     text-align: center;
   }
   div {
-    gap: 15px;
+    gap: 0.9375rem;
     button {
       border: none;
       outline: none;
-      border-radius: 40px;
-      padding: 10px 20px;
+      border-radius: 2.5rem;
+      padding: 0.625rem 1.25rem;
       font-family: "Anaheim", serif;
       text-transform: uppercase;
       text-decoration: none !important;
       cursor: none;
       a {
         cursor: none;
-        font-size: 24px;
+        font-size: 1.5rem;
         text-decoration: none !important;
       }
     }
@@ -44,17 +44,17 @@
 .CTAAgencyButton {
   font-family: "Anaheim", serif;
   background-color: $Argent;
-  border: 1px solid $Argent;
+  border: 0.0625rem solid $Argent;
   color: $SmokyBlack;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 5px 12px;
+  padding: 0.3125rem 0.75rem;
   transition: $Transition-03;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   cursor: none;
   &:hover {
     background-color: transparent !important;
-    border: 1px solid $Argent;
+    border: 0.0625rem solid $Argent;
     color: $Argent;
     transition: $Transition-03;
   }
@@ -62,17 +62,17 @@
 .CTAClientButton {
   font-family: "Anaheim", serif;
   background-color: $Khaki;
-  border: 1px solid $Khaki;
+  border: 0.0625rem solid $Khaki;
   color: $SmokyBlack;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 5px 12px;
+  padding: 0.3125rem 0.75rem;
   transition: $Transition-03;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   cursor: none;
   &:hover {
     background-color: transparent !important;
-    border: 1px solid $Argent;
+    border: 0.0625rem solid $Argent;
     color: $Khaki;
     transition: $Transition-03;
   }

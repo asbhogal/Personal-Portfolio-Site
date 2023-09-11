@@ -15,8 +15,12 @@
     max-width: 37.1875rem;
     width: 100%;
     margin: 0 auto;
-    svg {
-      display: inherit;
+    cursor: none;
+    /* .CSSWinnerBadge,
+    .FrontendMentorBadge {
+      cursor: none;
+    } */
+    a {
       cursor: none;
     }
   }
@@ -54,6 +58,13 @@
       }
     }
   }
+}
+
+.PictureContainer img {
+  width: 100%;
+  height: auto;
+  border-radius: $ImgBorderRadius;
+  margin-bottom: 0.625rem;
 }
 
 .SkillsOffered {
@@ -111,6 +122,7 @@
       object-fit: cover;
       border-radius: $ImgBorderRadius;
       transition: $Transition-03;
+      margin-bottom: 0.625rem;
     }
     &:hover .LinkOverlay {
       display: flex;
@@ -122,6 +134,7 @@
     }
   }
   .ProjectTitle {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     border-top: 0.0625rem solid $Argent;
@@ -133,6 +146,44 @@
       font-size: 1.3125rem;
       text-transform: uppercase;
     }
+  }
+}
+
+.ProjectsContainer {
+  display: grid;
+  grid-template-areas:
+    "a b"
+    "c d";
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.625rem;
+}
+
+@media (max-width: 37.5rem) {
+  .ProjectsContainer {
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d";
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+  }
+  .AwardsSection {
+    gap: 0.625rem;
+  }
+  .CSSWinnerBadge,
+  .FrontendMentorBadge {
+    width: 8.125rem;
+    height: auto;
+  }
+}
+
+@media only screen and (width >= 37.5rem) {
+  .CSSWinnerBadge,
+  .FrontendMentorBadge {
+    width: 12.5rem;
+    height: auto;
   }
 }
 
@@ -164,7 +215,7 @@
   }
 }
 
-@media only screen and (width <= 26.625rem) {
+@media only screen and (width <= 43.75rem) {
   .ProjectLink > img {
     height: 13.4375rem !important;
   }
