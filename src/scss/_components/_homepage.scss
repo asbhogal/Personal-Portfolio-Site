@@ -153,7 +153,8 @@
   display: grid;
   grid-template-areas:
     "a b"
-    "c d";
+    "c d"
+    "e f";
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
   gap: 0.625rem;
@@ -165,7 +166,9 @@
       "a"
       "b"
       "c"
-      "d";
+      "d"
+      "e"
+      "f";
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr;
   }
