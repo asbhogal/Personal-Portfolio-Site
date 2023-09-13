@@ -21,25 +21,6 @@
   .ProjectLinks {
     justify-content: space-between;
     gap: 2.8125rem;
-    .ProjectButton {
-      border: 0.0625rem solid $Argent;
-      outline: none;
-      background-color: $Argent;
-      color: $SmokyBlack;
-      border-radius: 2.5rem;
-      padding: 0.625rem 1.25rem;
-      font-family: "Anaheim", serif;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: $Transition-03;
-      &:hover {
-        background-color: transparent;
-        color: $Argent;
-        border: 0.0625rem solid $Argent;
-        transition: $Transition-03;
-        cursor: none;
-      }
-    }
   }
   .ProjectAbout {
     flex-direction: column;

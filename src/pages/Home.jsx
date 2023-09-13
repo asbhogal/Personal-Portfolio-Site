@@ -179,7 +179,7 @@ const Home = () => {
             className="ProjectsContainer"
           >
             <div className="ProjectBox">
-              <Link className="ProjectLink" to="/projects/brand">
+              <Link className="ProjectLink" to="/portfolio/brand">
                 <SkillLozenge />
                 <picture className="PictureContainer">
                   <source
@@ -218,7 +218,7 @@ const Home = () => {
               whileInView={{ opacity: 1 }}
               className="ProjectBox"
             >
-              <Link className="ProjectLink" to="/projects/litelife">
+              <Link className="ProjectLink" to="/portfolio/litelife">
                 <SkillLozenge />
                 <picture className="PictureContainer">
                   <source
@@ -257,7 +257,7 @@ const Home = () => {
               whileInView={{ opacity: 1 }}
               className="ProjectBox"
             >
-              <Link className="ProjectLink" to="/projects/oceanica">
+              <Link className="ProjectLink" to="/portfolio/oceanica">
                 <SkillLozenge />
                 <picture className="PictureContainer">
                   <source
@@ -296,7 +296,7 @@ const Home = () => {
               whileInView={{ opacity: 1 }}
               className="ProjectBox"
             >
-              <Link className="ProjectLink" to="/projects/cryptoverse">
+              <Link className="ProjectLink" to="/portfolio/cryptoverse">
                 <SkillLozenge />
                 <picture className="PictureContainer">
                   <source
