@@ -5,7 +5,9 @@ import Portfolio from "./pages/Portfolio";
 import Brand from "./pages/Brand";
 import LiteLife from "./pages/LiteLife";
 import Oceanica from "./pages/Oceanica";
+import Calculator from "./pages/Calculator";
 import Cryptoverse from "./pages/Cryptoverse";
+import LeDimanche from "./pages/LeDimanche";
 import ErrorPage from "./pages/404";
 import AdditionalServices from "./pages/AdditionalServices";
 import Testimonials from "./pages/Testimonials";
@@ -36,9 +38,11 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/brand" element={<Brand />} />
+        <Route path="/portfolio/calculator" element={<Calculator />} />
         <Route path="/portfolio/litelife" element={<LiteLife />} />
         <Route path="/portfolio/oceanica" element={<Oceanica />} />
         <Route path="/portfolio/cryptoverse" element={<Cryptoverse />} />
+        <Route path="/portfolio/ledimanche" element={<LeDimanche />} />
         <Route
           path="/AmanSinghBhogal-Brand-Manifesto.png"
           element={<FreeResources />}
