@@ -29,14 +29,8 @@ const Projects = () => {
           whileInView={{ opacity: 1 }}
           className="Projects"
         >
-          {/* BRAND */}
-
           <div className="ProjectSectionBox">
-            <Link
-              to="brand"
-              id="BrandProjectSectionLink"
-              className="ProjectSectionLink"
-            >
+            <Link to="brand" className="ProjectSectionLink">
               <picture className="PictureContainer">
                 <source
                   media="(min-width: 600px)"
@@ -101,11 +95,7 @@ const Projects = () => {
             </div>
           </div>
           <div className="ProjectSectionBox">
-            <Link
-              to="brand"
-              id="BrandProjectSectionLink"
-              className="ProjectSectionLink"
-            >
+            <Link to="oceanica" className="ProjectSectionLink">
               <picture className="PictureContainer">
                 <source
                   media="(min-width: 600px)"
@@ -172,11 +162,7 @@ const Projects = () => {
           </div>
 
           <div className="ProjectSectionBox">
-            <Link
-              to="brand"
-              id="BrandProjectSectionLink"
-              className="ProjectSectionLink"
-            >
+            <Link to="litelife" className="ProjectSectionLink">
               <picture className="PictureContainer">
                 <source
                   media="(min-width: 600px)"
@@ -242,11 +228,7 @@ const Projects = () => {
             </div>
           </div>
           <div className="ProjectSectionBox">
-            <Link
-              to="brand"
-              id="BrandProjectSectionLink"
-              className="ProjectSectionLink"
-            >
+            <Link to="cryptoverse" className="ProjectSectionLink">
               <picture className="PictureContainer">
                 <source
                   media="(min-width: 600px)"
@@ -311,11 +293,7 @@ const Projects = () => {
             </div>
           </div>
           <div className="ProjectSectionBox">
-            <Link
-              to="brand"
-              id="BrandProjectSectionLink"
-              className="ProjectSectionLink"
-            >
+            <Link to="calculator" className="ProjectSectionLink">
               <picture className="PictureContainer">
                 <source
                   media="(min-width: 600px)"
@@ -378,11 +356,7 @@ const Projects = () => {
             </div>
           </div>
           <div className="ProjectSectionBox">
-            <Link
-              to="brand"
-              id="BrandProjectSectionLink"
-              className="ProjectSectionLink"
-            >
+            <Link to="ledimanche" className="ProjectSectionLink">
               <picture className="PictureContainer">
                 <source
                   media="(min-width: 600px)"

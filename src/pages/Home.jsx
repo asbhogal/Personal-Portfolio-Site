@@ -269,15 +269,6 @@ const Home = () => {
                     alt="A Macbook with a website open on the screen, resting on a concrete surface next to a pool"
                   />
                 </picture>
-                {/* <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={oceanicaScreen}
-              alt="A Macbook with a website open on the screen, resting on a concrete surface next to a pool"
-            />
-            <div className="LinkOverlay">
-              <Arrow />
-            </div> */}
               </Link>
 
               <m.div
@@ -305,18 +296,9 @@ const Home = () => {
                   />
                   <img
                     src="/images/Home/Cryptoverse-HomePage-Mobile.jpg"
-                    alt="A Macbook with a website open on the screen, resting on a concrete surface next to a pool"
+                    alt="An iMac with a Crypo-related application on the screen, against a black backdrop"
                   />
                 </picture>
-                {/* <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={cryptoverseScreen}
-              alt="A Macbook with an application open on the screen, with a dark blue background"
-            />
-            <div className="LinkOverlay">
-              <Arrow />
-            </div> */}
               </Link>
 
               <m.div
@@ -339,7 +321,7 @@ const Home = () => {
               whileInView={{ opacity: 1 }}
               className="ProjectBox"
             >
-              <Link className="ProjectLink" to="/portfolio/cryptoverse">
+              <Link className="ProjectLink" to="/portfolio/calculator">
                 <SkillLozenge />
                 <picture className="PictureContainer">
                   <source
@@ -351,15 +333,6 @@ const Home = () => {
                     alt="A Macbook with a website open on the screen, resting on a concrete surface next to a pool"
                   />
                 </picture>
-                {/* <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={cryptoverseScreen}
-              alt="A Macbook with an application open on the screen, with a dark blue background"
-            />
-            <div className="LinkOverlay">
-              <Arrow />
-            </div> */}
               </Link>
 
               <m.div
@@ -368,10 +341,7 @@ const Home = () => {
                 className="ProjectTitle"
               >
                 <h3>Calculator</h3>
-                <Link
-                  to="projects/cryptoverse"
-                  className="HomePageProjectLinks"
-                >
+                <Link to="projects/calculator" className="HomePageProjectLinks">
                   <Arrow size={30} />
                 </Link>
               </m.div>
@@ -382,7 +352,7 @@ const Home = () => {
               whileInView={{ opacity: 1 }}
               className="ProjectBox"
             >
-              <Link className="ProjectLink" to="/portfolio/cryptoverse">
+              <Link className="ProjectLink" to="/portfolio/ledimanche">
                 <SkillLozenge />
                 <picture className="PictureContainer">
                   <source
@@ -394,15 +364,6 @@ const Home = () => {
                     alt="A Macbook with a website open on the screen, resting on a concrete surface next to a pool"
                   />
                 </picture>
-                {/* <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={cryptoverseScreen}
-              alt="A Macbook with an application open on the screen, with a dark blue background"
-            />
-            <div className="LinkOverlay">
-              <Arrow />
-            </div> */}
               </Link>
 
               <m.div
@@ -411,10 +372,7 @@ const Home = () => {
                 className="ProjectTitle"
               >
                 <h3>Le Dimanche</h3>
-                <Link
-                  to="projects/cryptoverse"
-                  className="HomePageProjectLinks"
-                >
+                <Link to="projects/ledimanche" className="HomePageProjectLinks">
                   <Arrow size={30} />
                 </Link>
               </m.div>

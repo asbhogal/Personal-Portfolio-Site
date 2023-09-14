@@ -83,7 +83,7 @@ const LeDimanche = () => {
                 Project Type: Personal
               </m.span>
               <m.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-                March 2023 - Present
+                July 2023 - July 2023
               </m.span>
             </m.div>
             <m.div
