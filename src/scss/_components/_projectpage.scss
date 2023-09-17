@@ -55,6 +55,11 @@
       font-size: clamp(1rem, 0.9108rem + 0.446vw, 1.3125rem);
       text-align: justify;
       text-transform: uppercase;
+      flex-direction: column;
+      gap: 10px;
+      ul {
+        margin-left: 25px;
+      }
     }
     .ProjectStacksAndTools {
       flex-wrap: wrap;
@@ -121,6 +126,9 @@
         > #Weight-200 {
           display: none !important;
         }
+      }
+      #CalculatorTypeface {
+        @extend #BrandTypeface;
       }
       .TypefaceWeights {
         display: flex;
@@ -209,6 +217,20 @@ $CryptoverseWeights: (
 
 @each $key, $weight in $CryptoverseWeights {
   #Crypto-Weight-#{ $weight } {
+    font-weight: $weight;
+  }
+}
+
+/****** CALCULATOR WEIGHTINGS ******/
+
+$CalculatorWeights: (
+  weight1: 400,
+  weight2: 500,
+  weight3: 700,
+);
+
+@each $key, $weight in $CalculatorWeights {
+  #Calculator-Weight-#{ $weight } {
     font-weight: $weight;
   }
 }

@@ -2,11 +2,11 @@ import { useEffect } from "react";
 import { motion as m } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import cryptoverseHeroImg from "/images/Cryptoverse/mockups/CryptoverseHeroImg.jpg";
+/* import cryptoverseHeroImg from "/images/Cryptoverse/mockups/CryptoverseHeroImg.jpg";
 import cryptoverseiMacImage from "/images/Cryptoverse/mockups/iMacMockup.jpg";
 import cryptoverseHPImage from "/images/Cryptoverse/mockups/HPMockup.jpg";
 import cryptoverseiPadImages from "/images/Cryptoverse/mockups/iPadMockups.jpg";
-import cryptoverseiPhoneImage from "/images/Cryptoverse/mockups/iPhoneMockup.jpg";
+import cryptoverseiPhoneImage from "/images/Cryptoverse/mockups/iPhoneMockup. */
 import CTA from "../components/CTA";
 import ScrollToTop from "../components/ScrollToTop";
 
@@ -51,7 +51,7 @@ const Calculator = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://github.com/asbhogal/Next.js-Cryptocurrency-App"
+              href="https://github.com/asbhogal/React-Calculator"
               className="ProjectButton"
             >
               code
@@ -59,7 +59,15 @@ const Calculator = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://next-js-cryptocurrency-app.vercel.app/"
+              href="https://www.frontendmentor.io/solutions/react-calculator-usereducer-chakra-ui-tdd-LKGyEpFp7Y"
+              className="ProjectButton"
+            >
+              challenge
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://react-calculator-asbhogal.vercel.app/"
               className="ProjectButton"
             >
               site
@@ -83,7 +91,7 @@ const Calculator = () => {
                 Project Type: Personal
               </m.span>
               <m.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-                March 2023 - Present
+                July 2023 - July 2023
               </m.span>
             </m.div>
             <m.div
@@ -128,15 +136,53 @@ const Calculator = () => {
               whileInView={{ opacity: 1 }}
               className="ProjectAboutContent"
             >
-              Cryptoverse is a conceptualised company which offers data on
-              different cryptocurrencies, including market capitalisation,
-              exchanges and current news. The application also allows users to
-              look up the current stats of a cryptocurrency, including its
-              ranking, price and market cap. The application was built using
-              Next.js and leveraged Redux RTK Query to manage API calls from
-              Coinranking, Coin Gecko and Bing News Search. The app was also
-              styled using SCSS, compiled as a production build using Webpack
-              and shipped via Vercel.
+              This project was a Frontend Mentor challenge which required
+              creating a fully functional Calculator app with three themes and
+              the ability to toggle between them from a brief and style guide.
+              The following changes were subsequently made to improve the
+              aesthetics, accessibility and UX of the app:
+              <ul>
+                <li>
+                  A redesigned UI complete with a light, dark and blue
+                  monochromatic theme and modern typeface
+                </li>
+                <li>
+                  ChakraUI to handle the accessibility and styling of components
+                  (Chakra UI has been used to style the components, with custom
+                  component variants used to couple the styling with the JSX
+                  markup and theme extensions)
+                </li>
+                <li>
+                  The ability to see the previous operands, as well as the
+                  current
+                </li>
+              </ul>
+            </m.p>
+          </m.section>
+
+          <m.section
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="DesignDecisions"
+          >
+            <m.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+              Design Decisions
+            </m.h2>
+            <m.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="ProjectAboutContent"
+            >
+              The decision was made to change the original design brief to
+              reflect something more contemporary. The Inter typeface was chosen
+              (weights 400, 500, 700) for a clear, clean, modern and affirmed
+              typography with accentuated x-heights for improved readability
+              with mixed-case and lower-case text. The three themes therefore
+              chosen instead also aligned with modern-day styling: a
+              conventional light (white) version, dark (black) version and blue
+              version, each following a monochromatic-set of shades for visual
+              consistency. Blue was chosen as the third and final theme for its
+              medium between the two, harmonious and muted.
             </m.p>
           </m.section>
 
@@ -156,14 +202,14 @@ const Calculator = () => {
               <m.span
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                id="CryptoverseTypeface"
+                id="CalculatorTypeface"
               >
-                Noto Sans
+                Inter
               </m.span>
               <m.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                id="CryptoverseTypeface"
+                id="CalculatorTypeface"
                 className="TypefaceWeights"
               >
                 <m.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
@@ -174,9 +220,9 @@ const Calculator = () => {
                   whileInView={{ opacity: 1 }}
                   className="TypefaceWeightsList"
                 >
-                  <li id="Crypto-Weight-200">02 Extra Light</li>⋅
-                  <li id="Crypto-Weight-300">03 Light</li>⋅
-                  <li id="Crypto-Weight-400">04 Regular</li>
+                  <li id="Calculator-Weight-400">04 Regular</li>⋅
+                  <li id="Calculator-Weight-500">05 Medium</li>⋅
+                  <li id="Calculator-Weight-700">07 Bold</li>
                 </m.ul>
               </m.div>
             </m.div>
@@ -190,30 +236,7 @@ const Calculator = () => {
             <m.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
               Screens
             </m.h2>
-            {/* <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={cryptoverseiMacImage}
-              alt="A mockup of a crypto application on an iMac"
-            />
-            <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={cryptoverseiPhoneImage}
-              alt="A mockup of a crypto application on an iPhone"
-            />
-            <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={cryptoverseiPadImages}
-              alt="A mockup of a crypto application on an iPad"
-            />
-            <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={cryptoverseHPImage}
-              alt="A mockup of a crypto application on an HP laptop"
-            /> */}
+
             <m.picture
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
