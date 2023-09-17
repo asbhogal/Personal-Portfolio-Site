@@ -28,10 +28,10 @@ const LeDimanche = () => {
             <picture className="PictureContainer">
               <source
                 media="(min-width: 600px)"
-                srcSet="/images/LeDimanche/LeDimanche-Desktop-1.jpg"
+                srcSet="/images/LeDimanche/LeDimanche-Desktop-Alt.jpg"
               />
               <img
-                src="/images/LeDimanche/LeDimanche-Mobile-1.jpg"
+                src="/images/LeDimanche/LeDimanche-Mobile-Alt.jpg"
                 alt="A series of iPhone screens with a calculator in three different themes"
               />
             </picture>

@@ -70,7 +70,7 @@ const Projects = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.figma.com/community/file/1190467806509137896/"
+                  href="https://github.com/asbhogal/React-Brand-Responsive-Web-Page"
                   className="ProjectButton"
                 >
                   CODE
@@ -78,7 +78,7 @@ const Projects = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.figma.com/community/file/1190467806509137896/"
+                  href="https://brand-responsive-web-page.vercel.app/"
                   className="ProjectButton"
                 >
                   SITE
@@ -86,7 +86,7 @@ const Projects = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.figma.com/community/file/1190467806509137896/"
+                  href="/portfolio/brand"
                   className="ProjectButton"
                 >
                   VIEW MORE
@@ -116,6 +116,7 @@ const Projects = () => {
               <div className="ProjectBoxContentListContainer">
                 <ul className="ProjectBoxContentList">
                   <li>Figma</li>
+                  <li>Logo Creation</li>
                   <li>Wireframing</li>
                   <li>UI Prototyping</li>
                   <li>Auto Layout</li>
@@ -136,7 +137,7 @@ const Projects = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.figma.com/community/file/1190467806509137896/"
+                  href="https://github.com/asbhogal/React-Oceanica-Responsive-Web-Page"
                   className="ProjectButton"
                 >
                   CODE
@@ -144,7 +145,7 @@ const Projects = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.figma.com/community/file/1190467806509137896/"
+                  href="https://oceanica.vercel.app/"
                   className="ProjectButton"
                 >
                   SITE
@@ -152,7 +153,7 @@ const Projects = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.figma.com/community/file/1190467806509137896/"
+                  href="/portfolio/oceanica"
                   className="ProjectButton"
                 >
                   VIEW MORE
@@ -186,7 +187,7 @@ const Projects = () => {
                   <li>React</li>
                   <li>React Hook Form</li>
                   <li>React Router</li>
-                  <li>React Hook Form</li>
+                  <li>DOMPurify</li>
                   <li>Commerce.js (Headless CMS)</li>
                   <li>RESTful APIs</li>
                 </ul>
@@ -203,7 +204,7 @@ const Projects = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.figma.com/community/file/1190467806509137896/"
+                  href="https://github.com/asbhogal/React-Tech-Commerce.Js-Site"
                   className="ProjectButton"
                 >
                   CODE
@@ -211,7 +212,7 @@ const Projects = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.figma.com/community/file/1190467806509137896/"
+                  href="https://litelife.vercel.app/"
                   className="ProjectButton"
                 >
                   SITE
@@ -219,7 +220,7 @@ const Projects = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.figma.com/community/file/1190467806509137896/"
+                  href="/portfolio/litelife"
                   className="ProjectButton"
                 >
                   VIEW MORE
