@@ -11,12 +11,6 @@ import blackMacBook from "/images/LiteLife/assets/BlackMacbook.jpg";
 import liteLifeColorPalette from "/images/LiteLife/assets/LiteLifePalette.svg";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import liteLifeHeroImg from "/images/LiteLife//mockups/LiteLifeHeroImg.jpg";
-import liteLifeGalaxyImage from "/images/LiteLife/mockups/GalaxyMockup.jpg";
-import liteLifeMacbookAndIphoneImage from "/images/LiteLife/mockups/MacbookAndiPhoneMockup.jpg";
-import liteLifeiPadImage from "/images/LiteLife/mockups/iPadMockup.jpg";
-import liteLifeiMacImage from "/images/LiteLife/mockups/iMacMockup.jpg";
-
 import CTA from "../components/CTA";
 import ScrollToTop from "../components/ScrollToTop";
 
@@ -35,12 +29,20 @@ const LiteLife = () => {
             whileInView={{ opacity: 1 }}
             className="ProjectHero"
           >
-            <m.img
+            <m.picture
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              src={liteLifeHeroImg}
-              alt="A top-down view of portrait and landscape oriented iPads with an ecommerce site on them"
-            />
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/LiteLife/mockups/LiteLife-Desktop-1.jpg"
+              />
+              <img
+                src="/images/LiteLife/mockups/LiteLife-Mobile-1.jpg"
+                alt="A top-down view of portrait and landscape oriented iPads with an ecommerce site on them"
+              />
+            </m.picture>
           </m.section>
 
           <m.section
@@ -113,11 +115,11 @@ const LiteLife = () => {
               minimalistic working environments. Design for this project was
               handled by Material UI. The project is a Single Page Application
               built using React and React Router with Commerce.js (a headless
-              CMS) and React Hook Form to handle the project catologue, cart
+              CMS) and React Hook Form to handle the project catalogue, cart
               system, ordering and customer data. Stripe payment gateway was
               also configured to handle the checkout process and order
-              confirmation. This project was compiled using Webpack then shipped
-              for production via Vercel.
+              confirmation. This project was compiled using Webpack then
+              deployed for production via Vercel.
             </m.p>
           </m.section>
 
@@ -296,30 +298,7 @@ const LiteLife = () => {
             <m.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
               Screens
             </m.h2>
-            {/* <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={liteLifeiMacImage}
-              alt="A white iMac with an ecommerce site open on the screen, on an office desk with a phone, coffee mug, plant and mouse"
-            />
-            <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={liteLifeGalaxyImage}
-              alt="A Galaxy smartphone with an ecommerce site open on the screen"
-            />
-            <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={liteLifeMacbookAndIphoneImage}
-              alt="A side view of a Macbook and iPhone with an ecommerce site open on the screens"
-            />
-            <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={liteLifeiPadImage}
-              alt="An iPad resting on a cushion with an ecommerce site open on the screen and a stylus pen next to it"
-            /> */}
+
             <m.picture
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -331,7 +310,7 @@ const LiteLife = () => {
               />
               <img
                 src="/images/LiteLife/mockups/LiteLife-Mobile-2.jpg"
-                alt="A Cryptocurrency application on an iPhone screen, lying next to a laptop keyboard"
+                alt="A white iMac with an ecommerce site open on the screen, on an office desk with a phone, coffee mug, plant and mouse"
               />
             </m.picture>
             <m.picture
@@ -345,7 +324,7 @@ const LiteLife = () => {
               />
               <img
                 src="/images/LiteLife/mockups/LiteLife-Mobile-3.jpg"
-                alt="A Cryptocurrency application on an iPhone screen, lying next to a laptop keyboard"
+                alt="A Galaxy smartphone with an ecommerce site open on the screen"
               />
             </m.picture>
             <m.picture
@@ -359,7 +338,7 @@ const LiteLife = () => {
               />
               <img
                 src="/images/LiteLife/mockups/LiteLife-Mobile-4.jpg"
-                alt="A Cryptocurrency application on an iPhone screen, lying next to a laptop keyboard"
+                alt="A side view of a Macbook and iPhone with an ecommerce site open on the screens"
               />
             </m.picture>
             <m.picture
@@ -373,7 +352,7 @@ const LiteLife = () => {
               />
               <img
                 src="/images/LiteLife/mockups/LiteLife-Mobile-5.jpg"
-                alt="A Cryptocurrency application on an iPhone screen, lying next to a laptop keyboard"
+                alt="An iPad resting on a cushion with an ecommerce site open on the screen and a stylus pen next to it"
               />
             </m.picture>
             <m.picture
@@ -387,7 +366,7 @@ const LiteLife = () => {
               />
               <img
                 src="/images/LiteLife/mockups/LiteLife-Mobile-6.jpg"
-                alt="A Cryptocurrency application on an iPhone screen, lying next to a laptop keyboard"
+                alt="A close up of an iPhone and Airpods with a website open on the screen"
               />
             </m.picture>
           </m.section>
