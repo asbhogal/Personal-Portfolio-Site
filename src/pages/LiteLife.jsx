@@ -296,7 +296,7 @@ const LiteLife = () => {
             <m.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
               Screens
             </m.h2>
-            <m.img
+            {/* <m.img
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               src={liteLifeiMacImage}
@@ -319,7 +319,77 @@ const LiteLife = () => {
               whileInView={{ opacity: 1 }}
               src={liteLifeiPadImage}
               alt="An iPad resting on a cushion with an ecommerce site open on the screen and a stylus pen next to it"
-            />
+            /> */}
+            <m.picture
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/LiteLife/mockups/LiteLife-Desktop-2.jpg"
+              />
+              <img
+                src="/images/LiteLife/mockups/LiteLife-Mobile-2.jpg"
+                alt="A Cryptocurrency application on an iPhone screen, lying next to a laptop keyboard"
+              />
+            </m.picture>
+            <m.picture
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/LiteLife/mockups/LiteLife-Desktop-3.jpg"
+              />
+              <img
+                src="/images/LiteLife/mockups/LiteLife-Mobile-3.jpg"
+                alt="A Cryptocurrency application on an iPhone screen, lying next to a laptop keyboard"
+              />
+            </m.picture>
+            <m.picture
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/LiteLife/mockups/LiteLife-Desktop-4.jpg"
+              />
+              <img
+                src="/images/LiteLife/mockups/LiteLife-Mobile-4.jpg"
+                alt="A Cryptocurrency application on an iPhone screen, lying next to a laptop keyboard"
+              />
+            </m.picture>
+            <m.picture
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/LiteLife/mockups/LiteLife-Desktop-5.jpg"
+              />
+              <img
+                src="/images/LiteLife/mockups/LiteLife-Mobile-5.jpg"
+                alt="A Cryptocurrency application on an iPhone screen, lying next to a laptop keyboard"
+              />
+            </m.picture>
+            <m.picture
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/LiteLife/mockups/LiteLife-Desktop-6.jpg"
+              />
+              <img
+                src="/images/LiteLife/mockups/LiteLife-Mobile-6.jpg"
+                alt="A Cryptocurrency application on an iPhone screen, lying next to a laptop keyboard"
+              />
+            </m.picture>
           </m.section>
           <CTA />
         </div>
