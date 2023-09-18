@@ -25,12 +25,27 @@ const Cryptoverse = () => {
             whileInView={{ opacity: 1 }}
             className="ProjectHero"
           >
-            <m.img
+            {/* <m.img
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               src={cryptoverseHeroImg}
               alt="A close up of a Macbook with an application interface on the screen against a dark blue background"
-            />
+            /> */}
+
+            <m.picture
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/Cryptoverse/mockups/Cryptoverse-Desktop-Alt.jpg"
+              />
+              <img
+                src="/images/Cryptoverse/mockups/Cryptoverse-Mobile-Alt.jpg"
+                alt="A close up of a Macbook with an application interface on the screen resting on the corner"
+              />
+            </m.picture>
           </m.section>
 
           <m.section
@@ -180,30 +195,77 @@ const Cryptoverse = () => {
             <m.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
               Screens
             </m.h2>
-            <m.img
+
+            <m.picture
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              src={cryptoverseiMacImage}
-              alt="A mockup of a crypto application on an iMac"
-            />
-            <m.img
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/Cryptoverse/mockups/Cryptoverse-Desktop-1.jpg"
+              />
+              <img
+                src="/images/Cryptoverse/mockups/Cryptoverse-Mobile-1.jpg"
+                alt="A mockup of a crypto application on an iMac"
+              />
+            </m.picture>
+            <m.picture
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              src={cryptoverseiPhoneImage}
-              alt="A mockup of a crypto application on an iPhone"
-            />
-            <m.img
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/Cryptoverse/mockups/Cryptoverse-Desktop-3.jpg"
+              />
+              <img
+                src="/images/Cryptoverse/mockups/Cryptoverse-Mobile-3.jpg"
+                alt="A mockup of a crypto application on an iMac"
+              />
+            </m.picture>
+            <m.picture
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              src={cryptoverseiPadImages}
-              alt="A mockup of a crypto application on an iPad"
-            />
-            <m.img
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/Cryptoverse/mockups/Cryptoverse-Desktop-2.jpg"
+              />
+              <img
+                src="/images/Cryptoverse/mockups/Cryptoverse-Mobile-2.jpg"
+                alt="A mockup of a crypto application on an iPad"
+              />
+            </m.picture>
+            <m.picture
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              src={cryptoverseHPImage}
-              alt="A mockup of a crypto application on an HP laptop"
-            />
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/Cryptoverse/mockups/Cryptoverse-Desktop-4.jpg"
+              />
+              <img
+                src="/images/Cryptoverse/mockups/Cryptoverse-Mobile-4.jpg"
+                alt="A mockup of a crypto application on an iPhone"
+              />
+            </m.picture>
+            <m.picture
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/Cryptoverse/mockups/Cryptoverse-Desktop-5.jpg"
+              />
+              <img
+                src="/images/Cryptoverse/mockups/Cryptoverse-Mobile-5.jpg"
+                alt="A mockup of a crypto application on an HP laptop"
+              />
+            </m.picture>
           </m.section>
 
           <CTA />

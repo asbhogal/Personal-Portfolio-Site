@@ -6,12 +6,12 @@ import oceanicaLogo from "/images/Oceanica/assets/Logo.svg";
 import oceanicaColorPalette from "/images/Oceanica/assets/oceanicaColorPalette.svg";
 import oceanicaTestimonialCard from "/images/Oceanica/assets/TestimonialCard.svg";
 import oceanicaPackagesCard from "/images/Oceanica/assets/PackagesCard.svg";
-import oceanicaHeroImg from "/images/Oceanica/mockups/OceanicaHeroImg.jpg";
-import oceanicaMockups from "/images/Oceanica/mockups/OceanicaTemplates.png";
+/* import oceanicaHeroImg from "/images/Oceanica/mockups/OceanicaHeroImg.jpg";
+ */ import oceanicaMockups from "/images/Oceanica/mockups/OceanicaTemplates.png";
 import oceanicaPrototypes from "/images/Oceanica/OceanicaPrototypes.png";
-import oceanicaiPhoneMockup from "/images/Oceanica/mockups/iPhoneMockup.jpg";
+/* import oceanicaiPhoneMockup from "/images/Oceanica/mockups/iPhoneMockup.jpg";
 import oceanicaiPadMockup from "/images/Oceanica/mockups/iPadMockup.jpg";
-import oceanicaMacbookMockup from "/images/Oceanica/mockups/MacbookMockup.jpg";
+import oceanicaMacbookMockup from "/images/Oceanica/mockups/MacbookMockup.jpg"; */
 import CTA from "../components/CTA";
 import ScrollToTop from "../components/ScrollToTop";
 
