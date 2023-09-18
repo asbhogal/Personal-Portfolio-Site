@@ -21,25 +21,6 @@
   .ProjectLinks {
     justify-content: space-between;
     gap: 2.8125rem;
-    .ProjectButton {
-      border: 0.0625rem solid $Argent;
-      outline: none;
-      background-color: $Argent;
-      color: $SmokyBlack;
-      border-radius: 2.5rem;
-      padding: 0.625rem 1.25rem;
-      font-family: "Anaheim", serif;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: $Transition-03;
-      &:hover {
-        background-color: transparent;
-        color: $Argent;
-        border: 0.0625rem solid $Argent;
-        transition: $Transition-03;
-        cursor: none;
-      }
-    }
   }
   .ProjectAbout {
     flex-direction: column;
@@ -74,6 +55,11 @@
       font-size: clamp(1rem, 0.9108rem + 0.446vw, 1.3125rem);
       text-align: justify;
       text-transform: uppercase;
+      flex-direction: column;
+      gap: 10px;
+      ul {
+        margin-left: 25px;
+      }
     }
     .ProjectStacksAndTools {
       flex-wrap: wrap;
@@ -139,6 +125,15 @@
         }
         > #Weight-200 {
           display: none !important;
+        }
+      }
+      #CalculatorTypeface {
+        @extend #BrandTypeface;
+      }
+      #LeDimancheTypeface {
+        font-family: "Poiret One", sans-serif;
+        &:first-child {
+          font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
         }
       }
       .TypefaceWeights {
@@ -228,6 +223,33 @@ $CryptoverseWeights: (
 
 @each $key, $weight in $CryptoverseWeights {
   #Crypto-Weight-#{ $weight } {
+    font-weight: $weight;
+  }
+}
+
+/****** CALCULATOR WEIGHTINGS ******/
+
+$CalculatorWeights: (
+  weight1: 400,
+  weight2: 500,
+  weight3: 700,
+);
+
+@each $key, $weight in $CalculatorWeights {
+  #Calculator-Weight-#{ $weight } {
+    font-weight: $weight;
+  }
+}
+
+/****** LE DIMANCHE WEIGHTINGS ******/
+
+$LeDimancheWeights: (
+  weight1: 400,
+  weight2: 600,
+);
+
+@each $key, $weight in $LeDimancheWeights {
+  #LeDimanche-Weight-#{ $weight } {
     font-weight: $weight;
   }
 }

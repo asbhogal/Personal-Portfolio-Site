@@ -64,33 +64,33 @@ const Header = (props) => {
           >
             <ul className="NavLinks">
               <li className="NavItems">
-                <Link to="/">home</Link>
+                <Link to="/">Home</Link>
                 <div className="NavItemWrapper"></div>
               </li>
               <li className="NavItems">
-                <Link to="/about">about</Link>
+                <Link to="/about">About</Link>
                 {/* <div className="NavItemWrapper"></div> */}
               </li>
               <li className="NavItems">
-                <Link to="/projects">projects</Link>
+                <Link to="/portfolio">Portfolio</Link>
                 {/* <div className="NavItemWrapper"></div> */}
               </li>
               <li className="NavItems">
                 <Link to="/AmanSinghBhogal-Brand-Manifesto.pdf" target="_blank">
-                  brand manifesto
+                  Brand Manifesto
                 </Link>
                 {/* <div className="NavItemWrapper"></div> */}
               </li>
               <li className="NavItems">
-                <Link to="/testimonials">testimonials</Link>
+                <Link to="/testimonials">Testimonials</Link>
                 {/* <div className="NavItemWrapper"></div> */}
               </li>
               <li className="NavItems">
-                <Link to="/additionalservices">additional services</Link>
+                <Link to="/additionalservices">Additional Services</Link>
                 {/* <div className="NavItemWrapper"></div> */}
               </li>
               <li className="NavItems">
-                <Link to="/freeresources">free resources</Link>
+                <Link to="/freeresources">Free Resources</Link>
                 {/* <div className="NavItemWrapper"></div> */}
               </li>
             </ul>

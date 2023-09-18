@@ -1,11 +1,13 @@
 import "./scss/index.scss";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Projects from "./pages/Projects";
+import Portfolio from "./pages/Portfolio";
 import Brand from "./pages/Brand";
 import LiteLife from "./pages/LiteLife";
 import Oceanica from "./pages/Oceanica";
+import Calculator from "./pages/Calculator";
 import Cryptoverse from "./pages/Cryptoverse";
+import LeDimanche from "./pages/LeDimanche";
 import ErrorPage from "./pages/404";
 import AdditionalServices from "./pages/AdditionalServices";
 import Testimonials from "./pages/Testimonials";
@@ -34,11 +36,13 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/brand" element={<Brand />} />
-        <Route path="/projects/litelife" element={<LiteLife />} />
-        <Route path="/projects/oceanica" element={<Oceanica />} />
-        <Route path="/projects/cryptoverse" element={<Cryptoverse />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio/brand" element={<Brand />} />
+        <Route path="/portfolio/calculator" element={<Calculator />} />
+        <Route path="/portfolio/litelife" element={<LiteLife />} />
+        <Route path="/portfolio/oceanica" element={<Oceanica />} />
+        <Route path="/portfolio/cryptoverse" element={<Cryptoverse />} />
+        <Route path="/portfolio/ledimanche" element={<LeDimanche />} />
         <Route
           path="/AmanSinghBhogal-Brand-Manifesto.png"
           element={<FreeResources />}

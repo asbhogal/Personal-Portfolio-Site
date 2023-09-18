@@ -6,12 +6,12 @@ import oceanicaLogo from "/images/Oceanica/assets/Logo.svg";
 import oceanicaColorPalette from "/images/Oceanica/assets/oceanicaColorPalette.svg";
 import oceanicaTestimonialCard from "/images/Oceanica/assets/TestimonialCard.svg";
 import oceanicaPackagesCard from "/images/Oceanica/assets/PackagesCard.svg";
-import oceanicaHeroImg from "/images/Oceanica/mockups/OceanicaHeroImg.jpg";
-import oceanicaMockups from "/images/Oceanica/mockups/OceanicaTemplates.png";
+/* import oceanicaHeroImg from "/images/Oceanica/mockups/OceanicaHeroImg.jpg";
+ */ import oceanicaMockups from "/images/Oceanica/mockups/OceanicaTemplates.png";
 import oceanicaPrototypes from "/images/Oceanica/OceanicaPrototypes.png";
-import oceanicaiPhoneMockup from "/images/Oceanica/mockups/iPhoneMockup.jpg";
+/* import oceanicaiPhoneMockup from "/images/Oceanica/mockups/iPhoneMockup.jpg";
 import oceanicaiPadMockup from "/images/Oceanica/mockups/iPadMockup.jpg";
-import oceanicaMacbookMockup from "/images/Oceanica/mockups/MacbookMockup.jpg";
+import oceanicaMacbookMockup from "/images/Oceanica/mockups/MacbookMockup.jpg"; */
 import CTA from "../components/CTA";
 import ScrollToTop from "../components/ScrollToTop";
 
@@ -30,12 +30,27 @@ const Oceanica = () => {
             whileInView={{ opacity: 1 }}
             className="ProjectHero"
           >
-            <m.img
+            {/* <m.img
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               src={oceanicaHeroImg}
               alt="An iPhone resting on a green platform in front of an archway with tall palm leaves in the backdrop"
             />
+ */}
+            <m.picture
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/Oceanica/mockups/Oceanica-Desktop-1.jpg"
+              />
+              <img
+                src="/images/Oceanica/mockups/Oceanica-Mobile-1.jpg"
+                alt="An iPhone resting on a green platform in front of an archway with tall palm leaves in the backdrop"
+              />
+            </m.picture>
           </m.section>
 
           <m.section
@@ -319,7 +334,63 @@ const Oceanica = () => {
             <m.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
               Screens
             </m.h2>
-            <m.img
+            <m.picture
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/Oceanica/mockups/Oceanica-Desktop-2.jpg"
+              />
+              <img
+                src="/images/Oceanica/mockups/Oceanica-Mobile-2.jpg"
+                alt="A mockup of a website on a Macbook"
+              />
+            </m.picture>
+            <m.picture
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/Oceanica/mockups/Oceanica-Desktop-3.jpg"
+              />
+              <img
+                src="/images/Oceanica/mockups/Oceanica-Mobile-3.jpg"
+                alt="A mockup of a website on an iPad"
+              />
+            </m.picture>
+            <m.picture
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/Oceanica/mockups/Oceanica-Desktop-4.jpg"
+              />
+              <img
+                src="/images/Oceanica/mockups/Oceanica-Mobile-4.jpg"
+                alt="A mockup of a website on an iPhone"
+              />
+            </m.picture>
+            <m.picture
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/Oceanica/mockups/Oceanica-Desktop-6.jpg"
+              />
+              <img
+                src="/images/Oceanica/mockups/Oceanica-Mobile-6.jpg"
+                alt="Different sections of a web page on four iPhone screens, laid side by side"
+              />
+            </m.picture>
+            {/* <m.img
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               src={oceanicaiPhoneMockup}
@@ -336,7 +407,7 @@ const Oceanica = () => {
               whileInView={{ opacity: 1 }}
               src={oceanicaMacbookMockup}
               alt="A mockup of a website on a Macbook"
-            />
+            /> */}
           </m.section>
 
           <CTA />

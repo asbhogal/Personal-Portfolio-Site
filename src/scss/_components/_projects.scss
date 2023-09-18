@@ -12,11 +12,44 @@
 }
 
 .Projects {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(18.125rem, 1fr));
+  display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(18.125rem, 1fr));
   gap: 0.625rem;
   padding-bottom: 0.625rem;
   transition: 0.3s all ease-in-out;
+  .ProjectSectionBox {
+    display: grid;
+    gap: 10px;
+    .ProjectBoxContent {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      color: $Argent;
+      border-top: 1px solid $Argent;
+      .ProjectBoxContentTitle {
+        @include HeadingThreeProject;
+      }
+      .ProjectBoxContentText {
+        @include BodyText;
+        /* max-width: 75%;
+        width: 100%; */
+        text-align: justify;
+      }
+      .ProjectBoxContentList {
+        @extend .ProjectBoxContentText;
+        margin-left: 15px;
+        text-align: left;
+      }
+      .ProjectBoxLinks {
+        display: flex;
+        gap: 10px;
+      }
+      .ProjectBoxContentListContainer {
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+    }
+  }
   .ProjectSectionLink {
     position: relative;
     height: 100%;
@@ -30,7 +63,7 @@
       border-radius: $ImgBorderRadius;
       transition: 0.3s all ease-in-out;
     }
-    &:hover {
+    /* &:hover {
       transition: $Transition-03;
       .ProjectLinkOverlay {
         display: flex;
@@ -42,7 +75,7 @@
           @include BodyText;
         }
       }
-      #BrandProjectLinkOverlay {
+      /* #BrandProjectLinkOverlay {
         background-color: rgba(255, 255, 255, 0.474);
       }
       #LiteLifeProjectLinkOverlay {
@@ -56,12 +89,12 @@
       }
       #KryptoProjectLinkOverlay {
         background-color: rgb(11 15 47 / 73%);
-      }
-      .ProjectImage {
+      } */
+    /* .ProjectImage {
         filter: blur(0.3125rem);
         transition: $Transition-03;
       }
-    }
+    } */
   }
 }
 
@@ -118,5 +151,25 @@
     padding: 0.625rem 1.25rem;
     background-color: $RaisinBlack;
     color: $Argent;
+  }
+}
+
+@media only screen and (width >= 900px) {
+  .ProjectSectionBox {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .ProjectBoxContent {
+    padding: 10px;
+  }
+}
+
+@media only screen and (width <= 899px) {
+  .ProjectSectionBox {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  .ProjectBoxContent {
+    padding: 10px 0;
   }
 }

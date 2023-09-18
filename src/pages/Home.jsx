@@ -179,7 +179,7 @@ const Home = () => {
             className="ProjectsContainer"
           >
             <div className="ProjectBox">
-              <Link className="ProjectLink" to="/projects/brand">
+              <Link className="ProjectLink" to="/portfolio/brand">
                 <SkillLozenge />
                 <picture className="PictureContainer">
                   <source
@@ -205,7 +205,7 @@ const Home = () => {
               <m.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="ProjectTitle"
+                className="ProjectTitle HomePageProjectTitle"
               >
                 <h3>Brand</h3>
                 <Link to="projects/brand" className="HomePageProjectLinks">
@@ -218,7 +218,7 @@ const Home = () => {
               whileInView={{ opacity: 1 }}
               className="ProjectBox"
             >
-              <Link className="ProjectLink" to="/projects/litelife">
+              <Link className="ProjectLink" to="/portfolio/litelife">
                 <SkillLozenge />
                 <picture className="PictureContainer">
                   <source
@@ -244,7 +244,7 @@ const Home = () => {
               <m.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="ProjectTitle"
+                className="ProjectTitle HomePageProjectTitle"
               >
                 <h3>Lite Life</h3>
                 <Link to="projects/litelife" className="HomePageProjectLinks">
@@ -257,7 +257,7 @@ const Home = () => {
               whileInView={{ opacity: 1 }}
               className="ProjectBox"
             >
-              <Link className="ProjectLink" to="/projects/oceanica">
+              <Link className="ProjectLink" to="/portfolio/oceanica">
                 <SkillLozenge />
                 <picture className="PictureContainer">
                   <source
@@ -269,21 +269,12 @@ const Home = () => {
                     alt="A Macbook with a website open on the screen, resting on a concrete surface next to a pool"
                   />
                 </picture>
-                {/* <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={oceanicaScreen}
-              alt="A Macbook with a website open on the screen, resting on a concrete surface next to a pool"
-            />
-            <div className="LinkOverlay">
-              <Arrow />
-            </div> */}
               </Link>
 
               <m.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="ProjectTitle"
+                className="ProjectTitle HomePageProjectTitle"
               >
                 <h3>Oceanica</h3>
                 <Link to="projects/oceanica" className="HomePageProjectLinks">
@@ -296,7 +287,7 @@ const Home = () => {
               whileInView={{ opacity: 1 }}
               className="ProjectBox"
             >
-              <Link className="ProjectLink" to="/projects/cryptoverse">
+              <Link className="ProjectLink" to="/portfolio/cryptoverse">
                 <SkillLozenge />
                 <picture className="PictureContainer">
                   <source
@@ -305,30 +296,83 @@ const Home = () => {
                   />
                   <img
                     src="/images/Home/Cryptoverse-HomePage-Mobile.jpg"
-                    alt="A Macbook with a website open on the screen, resting on a concrete surface next to a pool"
+                    alt="An iMac with a Crypo-related application on the screen, against a black backdrop"
                   />
                 </picture>
-                {/* <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={cryptoverseScreen}
-              alt="A Macbook with an application open on the screen, with a dark blue background"
-            />
-            <div className="LinkOverlay">
-              <Arrow />
-            </div> */}
               </Link>
 
               <m.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="ProjectTitle"
+                className="ProjectTitle HomePageProjectTitle"
               >
                 <h3>Cryptoverse</h3>
                 <Link
                   to="projects/cryptoverse"
                   className="HomePageProjectLinks"
                 >
+                  <Arrow size={30} />
+                </Link>
+              </m.div>
+            </m.div>
+
+            <m.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="ProjectBox"
+            >
+              <Link className="ProjectLink" to="/portfolio/calculator">
+                <SkillLozenge />
+                <picture className="PictureContainer">
+                  <source
+                    media="(min-width: 600px)"
+                    srcSet="/images/Home/Calculator-HomePage-Desktop.jpg"
+                  />
+                  <img
+                    src="/images/Home/Calculator-HomePage-Mobile.jpg"
+                    alt="A Macbook with a website open on the screen, resting on a concrete surface next to a pool"
+                  />
+                </picture>
+              </Link>
+
+              <m.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="ProjectTitle HomePageProjectTitle"
+              >
+                <h3>Calculator</h3>
+                <Link to="projects/calculator" className="HomePageProjectLinks">
+                  <Arrow size={30} />
+                </Link>
+              </m.div>
+            </m.div>
+
+            <m.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="ProjectBox"
+            >
+              <Link className="ProjectLink" to="/portfolio/ledimanche">
+                <SkillLozenge />
+                <picture className="PictureContainer">
+                  <source
+                    media="(min-width: 600px)"
+                    srcSet="/images/Home/LeDimanche-HomePage-Desktop.jpg"
+                  />
+                  <img
+                    src="/images/Home/LeDimanche-HomePage-Mobile.jpg"
+                    alt="A Macbook with a website open on the screen, resting on a concrete surface next to a pool"
+                  />
+                </picture>
+              </Link>
+
+              <m.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="ProjectTitle HomePageProjectTitle"
+              >
+                <h3>Le Dimanche</h3>
+                <Link to="projects/ledimanche" className="HomePageProjectLinks">
                   <Arrow size={30} />
                 </Link>
               </m.div>
