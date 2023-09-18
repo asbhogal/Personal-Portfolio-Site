@@ -130,6 +130,12 @@
       #CalculatorTypeface {
         @extend #BrandTypeface;
       }
+      #LeDimancheTypeface {
+        font-family: "Poiret One", sans-serif;
+        &:first-child {
+          font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
+        }
+      }
       .TypefaceWeights {
         display: flex;
         flex-direction: column;
@@ -231,6 +237,19 @@ $CalculatorWeights: (
 
 @each $key, $weight in $CalculatorWeights {
   #Calculator-Weight-#{ $weight } {
+    font-weight: $weight;
+  }
+}
+
+/****** LE DIMANCHE WEIGHTINGS ******/
+
+$LeDimancheWeights: (
+  weight1: 400,
+  weight2: 600,
+);
+
+@each $key, $weight in $LeDimancheWeights {
+  #LeDimanche-Weight-#{ $weight } {
     font-weight: $weight;
   }
 }

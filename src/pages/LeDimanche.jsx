@@ -156,14 +156,14 @@ const LeDimanche = () => {
               <m.span
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                id="CryptoverseTypeface"
+                id="LeDimancheTypeface"
               >
-                Noto Sans
+                Poiret One
               </m.span>
               <m.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                id="CryptoverseTypeface"
+                id="LeDimancheTypeface"
                 className="TypefaceWeights"
               >
                 <m.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
@@ -174,9 +174,8 @@ const LeDimanche = () => {
                   whileInView={{ opacity: 1 }}
                   className="TypefaceWeightsList"
                 >
-                  <li id="Crypto-Weight-200">02 Extra Light</li>⋅
-                  <li id="Crypto-Weight-300">03 Light</li>⋅
-                  <li id="Crypto-Weight-400">04 Regular</li>
+                  <li id="LeDimanche-Weight-400">04 Regular</li>⋅
+                  <li id="LeDimanche-Weight-600">06 Bold</li>
                 </m.ul>
               </m.div>
             </m.div>

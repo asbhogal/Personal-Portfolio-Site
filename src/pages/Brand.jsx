@@ -7,13 +7,13 @@ import brandComponents from "/images/BRAND/BrandComponents.svg";
 import brandColorPalette from "/images/BRAND/BrandColorPalette.svg";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import brandHeroImg from "/images/BRAND/mockups/BrandHeroImg.jpg";
-import brandMockups from "/images/BRAND/mockups/BrandMockups.png";
-import brandiPhoneToggleImage from "/images/BRAND/mockups/Brand-iPhoneToggleMockup.jpg";
-import brandiMacImage from "/images/BRAND/mockups/Brand-iMacMockup.jpg";
+/* import brandHeroImg from "/images/BRAND/mockups/BrandHeroImg.jpg";
+ */ import brandMockups from "/images/BRAND/mockups/BrandMockups.png";
+/* import brandiPhoneToggleImage from "/images/BRAND/mockups/Brand-iPhoneToggleMockup.jpg";
+ */ /* import brandiMacImage from "/images/BRAND/mockups/Brand-iMacMockup.jpg";
 import brandMacBookImage from "/images/BRAND/mockups/Brand-MacbookMockup.jpg";
 import brandiPadImage from "/images/BRAND/mockups/Brand-iPadMockup.jpg";
-import brandiPad2Image from "/images/BRAND/mockups/Brand-iPad2Mockup.jpg";
+import brandiPad2Image from "/images/BRAND/mockups/Brand-iPad2Mockup.jpg"; */
 import CTA from "../components/CTA";
 import ScrollToTop from "../components/ScrollToTop";
 

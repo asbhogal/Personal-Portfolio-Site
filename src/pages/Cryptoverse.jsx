@@ -2,11 +2,11 @@ import { useEffect } from "react";
 import { motion as m } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import cryptoverseHeroImg from "/images/Cryptoverse/mockups/CryptoverseHeroImg.jpg";
+/* import cryptoverseHeroImg from "/images/Cryptoverse/mockups/CryptoverseHeroImg.jpg";
 import cryptoverseiMacImage from "/images/Cryptoverse/mockups/iMacMockup.jpg";
 import cryptoverseHPImage from "/images/Cryptoverse/mockups/HPMockup.jpg";
 import cryptoverseiPadImages from "/images/Cryptoverse/mockups/iPadMockups.jpg";
-import cryptoverseiPhoneImage from "/images/Cryptoverse/mockups/iPhoneMockup.jpg";
+import cryptoverseiPhoneImage from "/images/Cryptoverse/mockups/iPhoneMockup.jpg"; */
 import CTA from "../components/CTA";
 import ScrollToTop from "../components/ScrollToTop";
 
