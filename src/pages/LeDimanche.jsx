@@ -116,6 +116,7 @@ const LeDimanche = () => {
               <span className="StackToolLozenge">Custom Hooks</span>
               <span className="StackToolLozenge">ChakraUI</span>
               <span className="StackToolLozenge">State Management</span>
+              <span className="StackToolLozenge">Single Page Application</span>
               <span className="StackToolLozenge">TDD</span>
               <span className="StackToolLozenge">RTL</span>
               <span className="StackToolLozenge">Jest</span>
@@ -128,9 +129,14 @@ const LeDimanche = () => {
               whileInView={{ opacity: 1 }}
               className="ProjectAboutContent"
             >
-              Le Dimanche, french for &quot;On Sundays&quot; and cherishes the
-              moment in life when ______. Before the gearing of the next week. A
-              chance to indulge ________
+              Le Demanche, French for &quot;On Sunday&quot;, is an exclusive
+              e-commerce store providing a gateway to a world of opulent
+              indulgence designed to enhance customer weekend retreats by
+              combining luxury with leisure. The store sells designer handbags,
+              finely-crafted timepieces and hand-made, small-batch spirits
+              geared towards helping the customer savor those precious moments
+              before the start of a new week. The site (SPA) has been built
+              using TypeScript with React, ChakraUI and Vite with ESLint.
             </m.p>
           </m.section>
 
@@ -191,10 +197,10 @@ const LeDimanche = () => {
             >
               <source
                 media="(min-width: 600px)"
-                srcSet="/images/LeDimanche/LeDimanche-Desktop-2.jpg"
+                srcSet="/images/LeDimanche/LeDimanche-Desktop-Alt3.jpg"
               />
               <img
-                src="/images/LeDimanche/LeDimanche-Mobile-2.jpg"
+                src="/images/LeDimanche/LeDimanche-Mobile-Alt3.jpg"
                 alt="A Cryptocurrency application on an iPhone screen, lying next to a laptop keyboard"
               />
             </m.picture>
@@ -212,7 +218,7 @@ const LeDimanche = () => {
                 alt="A Cryptocurrency application on an iPhone screen, lying next to a laptop keyboard"
               />
             </m.picture>
-            <m.picture
+            {/* <m.picture
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               className="PictureContainer"
@@ -225,7 +231,7 @@ const LeDimanche = () => {
                 src="/images/LeDimanche/LeDimanche-Mobile-3.jpg"
                 alt="A Cryptocurrency application on an iPhone screen, lying next to a laptop keyboard"
               />
-            </m.picture>
+            </m.picture> */}
             <m.picture
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}

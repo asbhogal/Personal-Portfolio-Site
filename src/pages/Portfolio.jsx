@@ -309,8 +309,9 @@ const Projects = () => {
             <div className="ProjectBoxContent">
               <h3 className="ProjectBoxContentTitle">Calculator</h3>
               <p className="ProjectBoxContentText">
-                A completely redesigned Calculator app from an initial brief,
-                including three modern themes
+                A completely redesigned Calculator app from an initial Frontend
+                Mentor brief, including three modern themes and the ability to
+                view the previous operands.
               </p>
               <div className="ProjectBoxContentListContainer">
                 <ul className="ProjectBoxContentList">
@@ -372,8 +373,10 @@ const Projects = () => {
             <div className="ProjectBoxContent">
               <h3 className="ProjectBoxContentTitle">Le Dimanche</h3>
               <p className="ProjectBoxContentText">
-                An e-commerce application which sells a range of high-end luxury
-                products, ranging from toiletries to electronics
+                An exclusive e-commerce store providing a gateway to a world of
+                opulent indulgence designed to enhance customer weekend retreats
+                by combining luxury with leisure. Built using TypeScript with
+                React, custom hooks and context, chakra UI and Vite.
               </p>
               <div className="ProjectBoxContentListContainer">
                 <ul className="ProjectBoxContentList">
