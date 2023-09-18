@@ -32,12 +32,20 @@ const Brand = () => {
             whileInView={{ opacity: 1 }}
             className="ProjectHero"
           >
-            <m.img
+            <m.picture
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              src={brandHeroImg}
-              alt="A series of iPhones face-down, with one in the middle faced-up, showing a website page"
-            />
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/BRAND/mockups/Brand-Desktop-1.jpg"
+              />
+              <img
+                src="/images/BRAND/mockups/Brand-Mobile-1.jpg"
+                alt="A series of iPhones face-down, with one in the middle faced-up, showing a website page"
+              />
+            </m.picture>
           </m.section>
 
           <m.section
@@ -307,36 +315,77 @@ const Brand = () => {
             <m.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
               Screens
             </m.h2>
-            <m.img
+            <m.picture
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              src={brandiPhoneToggleImage}
-              alt="A mockup of a website menu toggle on an iPhone"
-            />
-            <m.img
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/BRAND/mockups/Brand-Desktop-3.jpg"
+              />
+              <img
+                src="/images/BRAND/mockups/Brand-Mobile-3.jpg"
+                alt="A mockup of a website menu toggle on an iPhone"
+              />
+            </m.picture>
+            <m.picture
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              src={brandiMacImage}
-              alt="A mockup of a website on an iMac"
-            />
-            <m.img
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/BRAND/mockups/Brand-Desktop-4.jpg"
+              />
+              <img
+                src="/images/BRAND/mockups/Brand-Mobile-4.jpg"
+                alt="A mockup of a website on an iMac"
+              />
+            </m.picture>
+            <m.picture
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              src={brandMacBookImage}
-              alt="A mockup of a website on a Macbook"
-            />
-            <m.img
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/BRAND/mockups/Brand-Desktop-5.jpg"
+              />
+              <img
+                src="/images/BRAND/mockups/Brand-Mobile-5.jpg"
+                alt="A mockup of a website on a Macbook"
+              />
+            </m.picture>
+
+            <m.picture
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              src={brandiPadImage}
-              alt="A mockup of a website on an iPad"
-            />
-            <m.img
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/BRAND/mockups/Brand-Desktop-7.jpg"
+              />
+              <img
+                src="/images/BRAND/mockups/Brand-Mobile-7.jpg"
+                alt="A mockup of a website on an iPad"
+              />
+            </m.picture>
+            <m.picture
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              src={brandiPad2Image}
-              alt="A mockup of a website on an iPad"
-            />
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/BRAND/mockups/Brand-Desktop-8.jpg"
+              />
+              <img
+                src="/images/BRAND/mockups/Brand-Mobile-8.jpg"
+                alt="A mockup of a website on an iPad"
+              />
+            </m.picture>
           </m.section>
 
           <CTA />

@@ -42,13 +42,15 @@
 }
 
 .CTAAgencyButton {
+  display: flex;
+  align-items: center;
   font-family: "Anaheim", serif;
   background-color: $Argent;
   border: 0.0625rem solid $Argent;
   color: $SmokyBlack;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 0.3125rem 0.75rem;
+  padding: 0.625rem;
   transition: $Transition-03;
   border-radius: 2.5rem;
   cursor: none;
@@ -60,6 +62,8 @@
   }
 }
 .CTAClientButton {
+  display: flex;
+  align-items: center;
   font-family: "Anaheim", serif;
   background-color: $Khaki;
   border: 0.0625rem solid $Khaki;

@@ -51,7 +51,7 @@ const LeDimanche = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://github.com/asbhogal/Next.js-Cryptocurrency-App"
+              href="https://github.com/asbhogal/TypeScript-Shopping-Cart"
               className="ProjectButton"
             >
               code
@@ -59,7 +59,7 @@ const LeDimanche = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://next-js-cryptocurrency-app.vercel.app/"
+              href="https://typescript-ecommerce-shop.vercel.app/shop"
               className="ProjectButton"
             >
               site
@@ -128,15 +128,9 @@ const LeDimanche = () => {
               whileInView={{ opacity: 1 }}
               className="ProjectAboutContent"
             >
-              Cryptoverse is a conceptualised company which offers data on
-              different cryptocurrencies, including market capitalisation,
-              exchanges and current news. The application also allows users to
-              look up the current stats of a cryptocurrency, including its
-              ranking, price and market cap. The application was built using
-              Next.js and leveraged Redux RTK Query to manage API calls from
-              Coinranking, Coin Gecko and Bing News Search. The app was also
-              styled using SCSS, compiled as a production build using Webpack
-              and shipped via Vercel.
+              Le Dimanche, french for &quot;On Sundays&quot; and cherishes the
+              moment in life when ______. Before the gearing of the next week. A
+              chance to indulge ________
             </m.p>
           </m.section>
 
@@ -190,30 +184,6 @@ const LeDimanche = () => {
             <m.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
               Screens
             </m.h2>
-            {/* <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={cryptoverseiMacImage}
-              alt="A mockup of a crypto application on an iMac"
-            />
-            <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={cryptoverseiPhoneImage}
-              alt="A mockup of a crypto application on an iPhone"
-            />
-            <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={cryptoverseiPadImages}
-              alt="A mockup of a crypto application on an iPad"
-            />
-            <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={cryptoverseHPImage}
-              alt="A mockup of a crypto application on an HP laptop"
-            /> */}
             <m.picture
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -225,6 +195,20 @@ const LeDimanche = () => {
               />
               <img
                 src="/images/LeDimanche/LeDimanche-Mobile-2.jpg"
+                alt="A Cryptocurrency application on an iPhone screen, lying next to a laptop keyboard"
+              />
+            </m.picture>
+            <m.picture
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="PictureContainer"
+            >
+              <source
+                media="(min-width: 600px)"
+                srcSet="/images/LeDimanche/LeDimanche-Desktop-Alt2.jpg"
+              />
+              <img
+                src="/images/LeDimanche/LeDimanche-Mobile-Alt2.jpg"
                 alt="A Cryptocurrency application on an iPhone screen, lying next to a laptop keyboard"
               />
             </m.picture>

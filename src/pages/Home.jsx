@@ -205,7 +205,7 @@ const Home = () => {
               <m.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="ProjectTitle"
+                className="ProjectTitle HomePageProjectTitle"
               >
                 <h3>Brand</h3>
                 <Link to="projects/brand" className="HomePageProjectLinks">
@@ -244,7 +244,7 @@ const Home = () => {
               <m.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="ProjectTitle"
+                className="ProjectTitle HomePageProjectTitle"
               >
                 <h3>Lite Life</h3>
                 <Link to="projects/litelife" className="HomePageProjectLinks">
@@ -274,7 +274,7 @@ const Home = () => {
               <m.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="ProjectTitle"
+                className="ProjectTitle HomePageProjectTitle"
               >
                 <h3>Oceanica</h3>
                 <Link to="projects/oceanica" className="HomePageProjectLinks">
@@ -304,7 +304,7 @@ const Home = () => {
               <m.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="ProjectTitle"
+                className="ProjectTitle HomePageProjectTitle"
               >
                 <h3>Cryptoverse</h3>
                 <Link
@@ -338,7 +338,7 @@ const Home = () => {
               <m.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="ProjectTitle"
+                className="ProjectTitle HomePageProjectTitle"
               >
                 <h3>Calculator</h3>
                 <Link to="projects/calculator" className="HomePageProjectLinks">
@@ -369,7 +369,7 @@ const Home = () => {
               <m.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="ProjectTitle"
+                className="ProjectTitle HomePageProjectTitle"
               >
                 <h3>Le Dimanche</h3>
                 <Link to="projects/ledimanche" className="HomePageProjectLinks">
