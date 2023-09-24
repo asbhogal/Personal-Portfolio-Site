@@ -42,7 +42,7 @@
   line-height: 1;
   background: transparent;
   cursor: none;
-  &:focus {
+  &:focus-visible {
     outline: 2px solid $Khaki;
     border-radius: 5px;
   }
@@ -75,7 +75,7 @@
 }
 
 .LineTop.Spin {
-  top: 2.5625rem;
+  top: 37px;
   transform: rotate(135deg);
   background-color: $Argent;
 }
@@ -85,7 +85,7 @@
 }
 
 .LineBottom.Spin {
-  top: 53%;
+  top: 37px;
   transform: rotate(225deg);
   background-color: $Argent;
 }
@@ -109,7 +109,7 @@
     color: $Khaki;
     transition: $Transition-03;
   }
-  &:focus {
-    outline: 2px solid $Argent;
+  &:focus-visible {
+    outline: 2px solid $Argent !important;
   }
 }
