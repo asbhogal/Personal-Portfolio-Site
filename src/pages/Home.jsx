@@ -178,7 +178,11 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             className="ProjectsContainer"
           >
-            <div className="ProjectBox">
+            <m.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="ProjectBox"
+            >
               <Link className="ProjectLink" to="/portfolio/brand">
                 <SkillLozenge />
                 <picture className="PictureContainer">
@@ -212,7 +216,7 @@ const Home = () => {
                   <Arrow size={30} />
                 </Link>
               </m.div>
-            </div>
+            </m.div>
             <m.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
