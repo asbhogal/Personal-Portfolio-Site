@@ -212,7 +212,7 @@ const Home = () => {
                 className="ProjectTitle HomePageProjectTitle"
               >
                 <h3>Brand</h3>
-                <Link to="projects/brand" className="HomePageProjectLinks">
+                <Link to="portfolio/brand" className="HomePageProjectLinks">
                   <Arrow size={30} />
                 </Link>
               </m.div>
@@ -251,7 +251,7 @@ const Home = () => {
                 className="ProjectTitle HomePageProjectTitle"
               >
                 <h3>Lite Life</h3>
-                <Link to="projects/litelife" className="HomePageProjectLinks">
+                <Link to="portfolio/litelife" className="HomePageProjectLinks">
                   <Arrow size={30} />
                 </Link>
               </m.div>
@@ -281,7 +281,7 @@ const Home = () => {
                 className="ProjectTitle HomePageProjectTitle"
               >
                 <h3>Oceanica</h3>
-                <Link to="projects/oceanica" className="HomePageProjectLinks">
+                <Link to="portfolio/oceanica" className="HomePageProjectLinks">
                   <Arrow size={30} />
                 </Link>
               </m.div>
@@ -312,7 +312,7 @@ const Home = () => {
               >
                 <h3>Cryptoverse</h3>
                 <Link
-                  to="projects/cryptoverse"
+                  to="portfolio/cryptoverse"
                   className="HomePageProjectLinks"
                 >
                   <Arrow size={30} />
@@ -345,7 +345,10 @@ const Home = () => {
                 className="ProjectTitle HomePageProjectTitle"
               >
                 <h3>Calculator</h3>
-                <Link to="projects/calculator" className="HomePageProjectLinks">
+                <Link
+                  to="portfolio/calculator"
+                  className="HomePageProjectLinks"
+                >
                   <Arrow size={30} />
                 </Link>
               </m.div>
@@ -376,7 +379,10 @@ const Home = () => {
                 className="ProjectTitle HomePageProjectTitle"
               >
                 <h3>Le Dimanche</h3>
-                <Link to="projects/ledimanche" className="HomePageProjectLinks">
+                <Link
+                  to="portfolio/ledimanche"
+                  className="HomePageProjectLinks"
+                >
                   <Arrow size={30} />
                 </Link>
               </m.div>
