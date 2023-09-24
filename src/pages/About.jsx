@@ -548,8 +548,7 @@ const About = () => {
                   <m.a
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    target="_blank"
-                    href="https://www.amansinghbhogal.com/projects"
+                    href="https://www.amansinghbhogal.com/portfolio"
                     className="WorkLinks"
                   >
                     work

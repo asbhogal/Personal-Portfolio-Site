@@ -128,7 +128,7 @@
           outline: none;
           width: min-content;
           border-radius: 2.5rem;
-          padding: 0.3125rem 0.625rem;
+          padding: 0.625rem 0.825rem;
           font-family: "Anaheim", serif;
           text-transform: uppercase;
           text-decoration: none;
@@ -142,6 +142,9 @@
             color: $Khaki;
             -webkit-transition: all 0.3s ease-in;
             transition: all 0.3s ease-in;
+          }
+          &:focus {
+            outline: 2px solid $Argent;
           }
         }
       }
