@@ -169,7 +169,7 @@ const Home = () => {
             className="HomePageSectionBar"
           >
             <h2>Selected Work</h2>
-            <Link to="projects" className="AllProjectsLink">
+            <Link to="portfolio" className="AllProjectsLink">
               <Arrow size={40} />
             </Link>
           </m.div>
