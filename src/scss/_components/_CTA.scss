@@ -15,7 +15,7 @@
     display: flex;
   }
   p {
-    font-family: "Questa Grande", serif;
+    font-family: $HeadingFont;
     font-style: italic;
     font-size: clamp(2rem, 0.9652rem + 5.174vw, 5.625rem);
     text-transform: uppercase;
@@ -23,7 +23,7 @@
   }
   div {
     gap: 0.9375rem;
-    button {
+    /* button {
       border: none;
       outline: none;
       border-radius: 2.5rem;
@@ -37,47 +37,43 @@
         font-size: 1.5rem;
         text-decoration: none !important;
       }
-    }
+    } */
   }
 }
 
 .CTAAgencyButton {
-  display: flex;
-  align-items: center;
-  font-family: "Anaheim", serif;
   background-color: $Argent;
   border: 0.0625rem solid $Argent;
-  color: $SmokyBlack;
-  text-decoration: none;
-  text-transform: uppercase;
   padding: 0.625rem;
   transition: $Transition-03;
-  border-radius: 2.5rem;
-  cursor: none;
   &:hover {
-    background-color: transparent !important;
     border: 0.0625rem solid $Argent;
     color: $Argent;
-    transition: $Transition-03;
   }
 }
 .CTAClientButton {
-  display: flex;
-  align-items: center;
-  font-family: "Anaheim", serif;
   background-color: $Khaki;
   border: 0.0625rem solid $Khaki;
-  color: $SmokyBlack;
-  text-decoration: none;
-  text-transform: uppercase;
   padding: 0.3125rem 0.75rem;
   transition: $Transition-03;
+  &:hover {
+    border: 0.0625rem solid $Khaki;
+    color: $Khaki;
+  }
+}
+
+.CTAAgencyButton,
+.CTAClientButton {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $SmokyBlack;
   border-radius: 2.5rem;
+  font-family: $BodyFont;
   cursor: none;
   &:hover {
     background-color: transparent !important;
-    border: 0.0625rem solid $Khaki;
-    color: $Khaki;
     transition: $Transition-03;
   }
 }

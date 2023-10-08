@@ -30,7 +30,7 @@
     }
   }
   .TestimonialName {
-    font-family: "Questa Grande", serif;
+    font-family: $HeadingFont;
     font-style: normal;
     font-weight: 400;
     text-transform: uppercase;
@@ -42,7 +42,7 @@
     text-align: justify;
   }
   .TestimonialTitle {
-    font-family: "Anaheim", serif;
+    font-family: $BodyFont;
     text-transform: uppercase;
     text-align: justify;
   }
@@ -63,7 +63,7 @@
 .TestimonialsPageTitle {
   display: flex;
   flex-direction: column;
-  font-family: "Questa Grande", serif;
+  font-family: $HeadingFont;
   font-style: italic;
   font-weight: 400;
   font-size: clamp(2.625rem, -2.6221rem + 16.7906vw, 12.5rem);

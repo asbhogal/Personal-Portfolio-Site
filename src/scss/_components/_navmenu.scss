@@ -9,7 +9,7 @@
   .NavLinks {
     flex-direction: column;
     gap: 0.625rem;
-    font-family: "Questa Grande", serif;
+    font-family: $HeadingFont;
     font-size: 6rem;
     padding-top: 5.75rem;
     padding-right: 1.25rem;
@@ -44,7 +44,7 @@
     > * {
       display: flex;
     }
-    .NavFooterSocialLinks {
+    /*  .NavFooterSocialLinks {
       width: 28.125rem;
       justify-content: space-between;
       list-style-type: none;
@@ -61,6 +61,6 @@
           color: $Argent;
         }
       }
-    }
+    } */
   }
 }

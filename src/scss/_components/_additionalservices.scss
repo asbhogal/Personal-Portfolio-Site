@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: "Questa Grande", serif;
+    font-family: $HeadingFont;
     font-style: italic;
     font-weight: 400;
     font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
@@ -26,7 +26,7 @@
   align-items: center;
   gap: 1.875rem;
   h3 {
-    font-family: "Questa Grande", serif;
+    font-family: $HeadingFont;
     font-weight: 400;
     text-transform: uppercase;
     padding-bottom: 1.875rem;
@@ -40,7 +40,7 @@
   margin: 0 auto;
   gap: 0.625rem;
   h2 {
-    font-family: "Questa Grande", serif;
+    font-family: $HeadingFont;
     font-weight: 400;
     text-transform: uppercase;
     border-bottom: 0.0625rem solid $Argent;

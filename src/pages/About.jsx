@@ -43,11 +43,11 @@ const About = () => {
               whileInView={{ opacity: 1 }}
               className="AboutText"
             >
-              Aman Singh Bhogal is a UI Engineer with 3 years of client side
-              experience in Front End Development. His work covers designing,
-              building and optimising CMS-based websites (WordPress and Hubspot)
-              and static applications using vanilla HTML5, CSS3, SASS and
-              JavaScript.{" "}
+              Aman Singh Bhogal is an Award-Winning Creative Front End Developer
+              with 3 years of client side experience in Front End Development.
+              His work covers designing, building and optimising CMS-based
+              websites (WordPress and Hubspot) static applications using HTML,
+              CSS and JavaScript.
             </m.p>
             <m.p
               initial={{ opacity: 0 }}
@@ -378,7 +378,7 @@ const About = () => {
                     whileInView={{ opacity: 1 }}
                     className="ExperienceTitle"
                   >
-                    Front End Developer & UI Engineer
+                    Creative Front End Developer
                   </m.span>
                   <m.span
                     initial={{ opacity: 0 }}
@@ -500,7 +500,19 @@ const About = () => {
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                     >
-                      API
+                      Tailwind CSS
+                    </m.span>
+                    <m.span
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                    >
+                      REST API
+                    </m.span>
+                    <m.span
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                    >
+                      ESLint
                     </m.span>
                     <m.span
                       initial={{ opacity: 0 }}
@@ -513,6 +525,12 @@ const About = () => {
                       whileInView={{ opacity: 1 }}
                     >
                       Parcel
+                    </m.span>
+                    <m.span
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                    >
+                      Vite
                     </m.span>
                     <m.span
                       initial={{ opacity: 0 }}

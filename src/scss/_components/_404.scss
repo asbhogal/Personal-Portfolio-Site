@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: "Questa Grande", serif;
+    font-family: $HeadingFont;
     font-style: italic;
     font-weight: 400;
     font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
@@ -34,7 +34,7 @@
       @include BodyText;
     }
     .ReturnHomeButton {
-      font-family: "Anaheim", serif;
+      font-family: $BodyFont;
       text-transform: uppercase;
       text-decoration: none;
       background-color: $Khaki;

@@ -37,14 +37,13 @@
   border: none;
   margin: 0;
   padding: 0;
-  font-family: sans-serif; /* Use whatever font-family you want */
   font-size: 1rem;
   line-height: 1;
   background: transparent;
   cursor: none;
   &:focus-visible {
-    outline: 2px solid $Khaki;
-    border-radius: 5px;
+    outline: 0.125rem solid $Khaki;
+    border-radius: 0.3125rem;
   }
 }
 
@@ -75,7 +74,7 @@
 }
 
 .LineTop.Spin {
-  top: 37px;
+  top: 2.3125rem;
   transform: rotate(135deg);
   background-color: $Argent;
 }
@@ -85,7 +84,7 @@
 }
 
 .LineBottom.Spin {
-  top: 37px;
+  top: 2.3125rem;
   transform: rotate(225deg);
   background-color: $Argent;
 }
@@ -95,7 +94,7 @@
   outline: none;
   border-radius: 2.5rem;
   padding: 0.3125rem 0.625rem;
-  font-family: "Anaheim", serif;
+  font-family: $BodyFont;
   font-size: 1.3125rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -110,6 +109,6 @@
     transition: $Transition-03;
   }
   &:focus-visible {
-    outline: 2px solid $Argent !important;
+    outline: 0.125rem solid $Argent !important;
   }
 }

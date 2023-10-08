@@ -37,7 +37,7 @@ html {
   }
 }
 
-.ViewProjects,
+/* .ViewProjects,
 .Contact {
   font-family: "Switzer", sans-serif;
   background: none;
@@ -50,7 +50,7 @@ html {
   font-size: 2rem;
   line-height: 2.625rem;
   text-transform: lowercase;
-}
+} */
 
 .MainContainer {
   @include MainBody;
@@ -63,7 +63,7 @@ html {
   color: $SmokyBlack;
   border-radius: 2.5rem;
   padding: 0.625rem 1.25rem;
-  font-family: "Anaheim", serif;
+  font-family: $BodyFont;
   text-transform: uppercase;
   text-decoration: none;
   transition: $Transition-03;
@@ -75,6 +75,6 @@ html {
     cursor: none;
   }
   &:focus {
-    outline: 2px solid $Khaki;
+    outline: 0.125rem solid $Khaki;
   }
 }

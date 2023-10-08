@@ -6,7 +6,7 @@
   div {
     a {
       border: 0.0625rem solid $Argent;
-      font-family: "Anaheim", serif;
+      font-family: $BodyFont;
       color: $SmokyBlack;
       &:nth-child(2) {
         background-color: $SmokyBlack;

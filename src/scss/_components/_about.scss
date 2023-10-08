@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: "Questa Grande", serif;
+    font-family: $HeadingFont;
     font-style: italic;
     font-weight: 400;
     font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
@@ -44,13 +44,13 @@
       display: flex;
       justify-content: flex-start;
       gap: 1.5625rem;
-      font-family: "Questa Grande", sans-serif;
+      font-family: $HeadingFont;
       font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);
       text-align: left;
       text-transform: uppercase;
     }
     .AboutText {
-      font-family: "Anaheim", sans-serif;
+      font-family: $BodyFont;
       font-size: clamp(1rem, 0.9108rem + 0.446vw, 1.3125rem);
       text-transform: uppercase;
       text-align: justify;
@@ -62,7 +62,7 @@
       border-top: 0.0625rem solid $Argent;
       padding-bottom: 0.625rem;
       h3 {
-        font-family: "Questa Grande", serif;
+        font-family: $HeadingFont;
         font-style: normal;
         font-weight: 400;
         font-size: clamp(1.5rem, 0.7864rem + 3.5682vw, 4rem);
@@ -78,14 +78,13 @@
           flex-direction: column;
           gap: 0.625rem;
           padding: 0.625rem;
-          font-family: "Anaheim", serif;
+          font-family: $BodyFont;
           text-transform: uppercase;
           text-align: justify;
           color: $Argent;
           border: 0.0625rem solid $Khaki;
           border-radius: $ImgBorderRadius;
           .ExperienceDate {
-            font-family: "Anaheim", sans-serif;
             font-size: 1.3125rem;
             padding-left: 0.3125rem;
           }
@@ -129,7 +128,6 @@
           width: min-content;
           border-radius: 2.5rem;
           padding: 0.625rem 0.825rem;
-          font-family: "Anaheim", serif;
           text-transform: uppercase;
           text-decoration: none;
           color: $SmokyBlack;
@@ -144,7 +142,7 @@
             transition: all 0.3s ease-in;
           }
           &:focus {
-            outline: 2px solid $Argent;
+            outline: 0.125rem solid $Argent;
           }
         }
       }

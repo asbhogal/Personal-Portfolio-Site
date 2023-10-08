@@ -30,7 +30,7 @@
       display: flex;
     }
     h2 {
-      font-family: "Questa Grande", serif;
+      font-family: $HeadingFont;
       font-style: normal;
       font-weight: 400;
       font-size: clamp(1.5rem, 0.7864rem + 3.5682vw, 4rem);
@@ -41,9 +41,16 @@
     .ProjectStacksAndTools,
     .ProjectLozenges {
       justify-content: space-between;
-      font-family: "Anaheim", serif;
+      font-family: $BodyFont;
       text-transform: uppercase;
       font-size: clamp(1rem, 0.9108rem + 0.446vw, 1.3125rem);
+    }
+    .ProjectDateAndType {
+      span {
+        &:nth-child(2) {
+          text-align: right;
+        }
+      }
     }
     .ProjectLozenge {
       border: 0.0625rem solid $Argent;
@@ -51,14 +58,14 @@
       padding: 0.625rem 1.25rem;
     }
     .ProjectAboutContent {
-      font-family: "Anaheim", serif;
+      font-family: $BodyFont;
       font-size: clamp(1rem, 0.9108rem + 0.446vw, 1.3125rem);
       text-align: justify;
       text-transform: uppercase;
       flex-direction: column;
-      gap: 10px;
+      gap: 0.625rem;
       ul {
-        margin-left: 25px;
+        margin-left: 1.5625rem;
       }
     }
     .ProjectStacksAndTools {
