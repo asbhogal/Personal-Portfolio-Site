@@ -195,15 +195,6 @@ const Home = () => {
                     alt="An iPhone resting on a concrete surface at an angle, with a website on the screen"
                   />
                 </picture>
-                {/* <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={brandScreen}
-              alt="An iPhone resting on a concrete surface at an angle, with a website on the screen"
-            /> */}
-                {/* <div className="LinkOverlay">
-              <Arrow />
-            </div> */}
               </Link>
 
               <m.div
@@ -234,15 +225,6 @@ const Home = () => {
                     alt="A close up of an iPhone and Airpods with a website open on the screen"
                   />
                 </picture>
-                {/* <m.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src={liteLifeScreen}
-              alt="A close up of an iPhone and Airpods with a website open on the screen"
-            />
-            <div className="LinkOverlay">
-              <Arrow />
-            </div> */}
               </Link>
 
               <m.div

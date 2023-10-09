@@ -132,7 +132,7 @@ const LeDimancheAbout = () => {
           whileInView={{ opacity: 1 }}
           className="ProjectAboutContent"
         >
-          Le Demanche, French for &quot;On Sunday&quot;, is an exclusive
+          Le Dimanche, French for &quot;On Sunday&quot;, is an exclusive
           e-commerce store providing a gateway to a world of opulent indulgence
           designed to enhance customer weekend retreats by combining luxury with
           leisure. The store sells designer handbags, finely-crafted timepieces
