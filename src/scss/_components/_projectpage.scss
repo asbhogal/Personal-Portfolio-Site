@@ -4,7 +4,7 @@
 .Project {
   display: flex;
   flex-direction: column;
-  gap: 0.625rem;
+  gap: 1.25rem;
   > * {
     display: flex;
   }
@@ -24,7 +24,7 @@
   }
   .ProjectAbout {
     flex-direction: column;
-    gap: 0.625rem;
+    gap: 1.25rem;
     border-top: 0.0625rem solid $Argent;
     > * {
       display: flex;
@@ -85,7 +85,7 @@
         text-align: center;
         border: 0.0625rem solid $Khaki;
         border-radius: 3.125rem;
-        padding: 0.625rem;
+        padding: 0.625rem 1.25rem;
       }
     }
     #SingleRowStacksAndTools {
