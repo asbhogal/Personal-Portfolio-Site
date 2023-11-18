@@ -369,6 +369,52 @@ const Home = () => {
                 </Link>
               </m.div>
             </m.div>
+
+            <m.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="ProjectBox"
+            >
+              <Link className="ProjectLink" to="/portfolio/fyrremagazine">
+                <m.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  className="SkillLozenges"
+                >
+                  <m.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="SkillLozenge"
+                  >
+                    WEB DEVELOPMENT
+                  </m.span>
+                </m.div>
+                <picture className="PictureContainer">
+                  <source
+                    media="(min-width: 600px)"
+                    srcSet="/images/Home/FyrreMagazine-HomePage-Desktop.jpg"
+                  />
+                  <img
+                    src="/images/Home/FyrreMagazine-HomePage-Mobile.jpg"
+                    alt="An iPhone standing upright on an elevated concrete platform with showing a magazine site on the display. The title 'Art & Life' is seen in bold uppercase on the screen"
+                  />
+                </picture>
+              </Link>
+
+              <m.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="ProjectTitle HomePageProjectTitle"
+              >
+                <h3>Fyrre Magazine</h3>
+                <Link
+                  to="portfolio/fyrremagazine"
+                  className="HomePageProjectLinks"
+                >
+                  <Arrow size={30} />
+                </Link>
+              </m.div>
+            </m.div>
           </m.div>
         </m.section>
 

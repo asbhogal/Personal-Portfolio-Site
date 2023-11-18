@@ -143,6 +143,12 @@
           font-size: clamp(1.5rem, -3.781rem + 26.405vw, 20rem);
         }
       }
+      #FyrreMagazineTypeface {
+        font-family: "General Sans", sans-serif;
+        &:first-child {
+          font-size: clamp(3rem, 1.1964rem + 9.0179vw, 15.625rem);
+        }
+      }
       .TypefaceWeights {
         display: flex;
         flex-direction: column;
@@ -257,6 +263,20 @@ $LeDimancheWeights: (
 
 @each $key, $weight in $LeDimancheWeights {
   #LeDimanche-Weight-#{ $weight } {
+    font-weight: $weight;
+  }
+}
+
+/****** FYRRE MAGAZINE WEIGHTINGS ******/
+
+$FyrreMagazineWeights: (
+  weight1: 400,
+  weight2: 500,
+  weight3: 600,
+);
+
+@each $key, $weight in $FyrreMagazineWeights {
+  #FyrreMagazine-Weight-#{ $weight } {
     font-weight: $weight;
   }
 }

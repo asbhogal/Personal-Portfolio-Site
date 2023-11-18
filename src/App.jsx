@@ -8,6 +8,7 @@ import Oceanica from "./pages/Oceanica";
 import Calculator from "./pages/Calculator";
 import Cryptoverse from "./pages/Cryptoverse";
 import LeDimanche from "./pages/LeDimanche";
+import FyrreMagazine from "./pages/FyrreMagazine";
 import ErrorPage from "./pages/404";
 import AdditionalServices from "./pages/AdditionalServices";
 import Testimonials from "./pages/Testimonials";
@@ -43,6 +44,7 @@ const App = () => {
         <Route path="/portfolio/oceanica" element={<Oceanica />} />
         <Route path="/portfolio/cryptoverse" element={<Cryptoverse />} />
         <Route path="/portfolio/ledimanche" element={<LeDimanche />} />
+        <Route path="/portfolio/fyrremagazine" element={<FyrreMagazine />} />
         <Route
           path="/AmanSinghBhogal-Brand-Manifesto.png"
           element={<FreeResources />}

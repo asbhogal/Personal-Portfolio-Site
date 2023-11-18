@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import CTA from "../components/CTA";
 import ScrollToTop from "../components/ScrollToTop";
 
-const LeDimancheHero = () => {
+const FyrreMagazineHero = () => {
   return (
     <m.section
       initial={{ opacity: 0 }}
@@ -15,18 +15,18 @@ const LeDimancheHero = () => {
       <picture className="PictureContainer">
         <source
           media="(min-width: 600px)"
-          srcSet="/images/LeDimanche/LeDimanche-Desktop-Alt.jpg"
+          srcSet="/images/FyrreMagazine/FyrreMagazine-Desktop-1.jpg"
         />
         <img
-          src="/images/LeDimanche/LeDimanche-Mobile-Alt.jpg"
-          alt="A laptop with a luxury e-commerce site, resting on a grey block"
+          src="/images/FyrreMagazine/FyrreMagazine-Mobile-1.jpg"
+          alt="An iPhone standing upright on an elevated concrete platform with showing a magazine site on the display. The title 'Art & Life' is seen in bold uppercase on the screen"
         />
       </picture>
     </m.section>
   );
 };
 
-const LeDimancheLinks = () => {
+const FyrreMagazineLinks = () => {
   return (
     <m.section
       initial={{ opacity: 0 }}
@@ -36,7 +36,15 @@ const LeDimancheLinks = () => {
       <a
         target="_blank"
         rel="noreferrer"
-        href="https://github.com/asbhogal/TypeScript-Shopping-Cart"
+        href="https://www.figma.com/community/file/1136023191939170511/fyrre-magazine-website-webflow-template"
+        className="ProjectButton"
+      >
+        design
+      </a>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://github.com/asbhogal/Fyrre-Magazine"
         className="ProjectButton"
       >
         code
@@ -44,7 +52,7 @@ const LeDimancheLinks = () => {
       <a
         target="_blank"
         rel="noreferrer"
-        href="https://typescript-ecommerce-shop.vercel.app/shop"
+        href="https://fyrre-magazine.vercel.app/"
         className="ProjectButton"
       >
         site
@@ -53,19 +61,18 @@ const LeDimancheLinks = () => {
   );
 };
 
-const LeDimancheAbout = () => {
+const FyrreMagazineAbout = () => {
   const stackTools = [
+    "Next.js",
     "React",
-    "useReducer",
-    "Custom Hooks",
-    "ChakraUI",
-    "State Management",
-    "Single Page Application",
-    "TDD",
-    "RTL",
-    "Jest",
-    "Vite",
-    "Git",
+    "React Server Components",
+    "TypeScript",
+    "Tailwind CSS",
+    "Shadcn",
+    "GSAP",
+    "E2E",
+    "Playwright",
+    "ESLint",
     "Vercel",
   ];
 
@@ -88,7 +95,7 @@ const LeDimancheAbout = () => {
             Project Type: Personal
           </m.span>
           <m.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-            July 2023 - July 2023
+            October 2023 - November 2023
           </m.span>
         </m.div>
         <m.div
@@ -132,14 +139,21 @@ const LeDimancheAbout = () => {
           whileInView={{ opacity: 1 }}
           className="ProjectAboutContent"
         >
-          Le Dimanche, French for &quot;On Sunday&quot;, is an exclusive
-          e-commerce store providing a gateway to a world of opulent indulgence
-          designed to enhance customer weekend retreats by combining luxury with
-          leisure. The store sells designer handbags, finely-crafted timepieces
-          and hand-made, small-batch spirits geared towards helping the customer
-          savor those precious moments before the start of a new week. The site
-          (SPA) has been built using TypeScript with React, ChakraUI and Vite
-          with ESLint.
+          Fyrre Magazine is a bold, striking arts and life-focused website
+          focused on articles and podcasts regarding the European culture and
+          arts scene. The app was developed from initial Figma designs created
+          by Webflow Designer Pawel Gola. Next.js and RSC were used to handle
+          the data fetching of the dynamic content (articles, podcasts and
+          authors) from JSON data created to simulate an API endpoint. The site
+          was built using the now-stable app router in Next.js, with TypeScript
+          for type safety, Shadcn for accessible components, Tailwind for
+          responsive styling and GSAP for horizontal scrolling animations. E2E
+          testing using playwright was implemented, as well as React Suspense
+          for UI loading states during data fetching. Context API and Custom
+          Hooks were initially used for the child components, which stored the
+          data fetched at a higher level. This was then refactored to have each
+          component fetch directly via async/await and subsequently converted
+          back to Server Components. The site was deployed using Vercel.
         </m.p>
       </m.section>
 
@@ -159,14 +173,14 @@ const LeDimancheAbout = () => {
           <m.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            id="LeDimancheTypeface"
+            id="FyrreMagazineTypeface"
           >
-            Poiret One
+            General Sans
           </m.span>
           <m.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            id="LeDimancheTypeface"
+            id="FyrreMagazineTypeface"
             className="TypefaceWeights"
           >
             <m.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
@@ -177,8 +191,9 @@ const LeDimancheAbout = () => {
               whileInView={{ opacity: 1 }}
               className="TypefaceWeightsList"
             >
-              <li id="LeDimanche-Weight-400">04 Regular ⋅ </li>
-              <li id="LeDimanche-Weight-600">06 Bold</li>
+              <li id="FyrreMagazine-Weight-400">04 Regular ⋅ </li>
+              <li id="FyrreMagazine-Weight-500">05 Medium ⋅ </li>
+              <li id="FyrreMagazine-Weight-600">06 Semibold</li>
             </m.ul>
           </m.div>
         </m.div>
@@ -187,7 +202,7 @@ const LeDimancheAbout = () => {
   );
 };
 
-const LeDimancheMockups = () => {
+const FyrreMagazineMockups = () => {
   return (
     <m.section
       initial={{ opacity: 0 }}
@@ -197,6 +212,7 @@ const LeDimancheMockups = () => {
       <m.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
         Screens
       </m.h2>
+
       <m.picture
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -204,25 +220,11 @@ const LeDimancheMockups = () => {
       >
         <source
           media="(min-width: 600px)"
-          srcSet="/images/LeDimanche/LeDimanche-Desktop-Alt3.jpg"
+          srcSet="/images/FyrreMagazine/FyrreMagazine-Desktop-2.jpg"
         />
         <img
-          src="/images/LeDimanche/LeDimanche-Mobile-Alt3.jpg"
-          alt="A luxury e-commerce website on a Macbook resting on a grey couch"
-        />
-      </m.picture>
-      <m.picture
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        className="PictureContainer"
-      >
-        <source
-          media="(min-width: 600px)"
-          srcSet="/images/LeDimanche/LeDimanche-Desktop-Alt2.jpg"
-        />
-        <img
-          src="/images/LeDimanche/LeDimanche-Mobile-Alt2.jpg"
-          alt="A luxury e-commerce site on a HTC phone, resting next to a laptop, both on a table"
+          src="/images/FyrreMagazine/FyrreMagazine-Mobile-2.jpg"
+          alt="A magazine article about 'The Best Art Museums' on a MacBook, resting on a bed with pillows and daylight behind"
         />
       </m.picture>
 
@@ -233,11 +235,26 @@ const LeDimancheMockups = () => {
       >
         <source
           media="(min-width: 600px)"
-          srcSet="/images/LeDimanche/LeDimanche-Desktop-4.jpg"
+          srcSet="/images/FyrreMagazine/FyrreMagazine-Desktop-3.jpg"
         />
         <img
-          src="/images/LeDimanche/LeDimanche-Mobile-4.jpg"
-          alt="A luxury e-commerce site on an iPad against a white backdrop"
+          src="/images/FyrreMagazine/FyrreMagazine-Mobile-3.jpg"
+          alt="A magazine website on an iPad in horizontal orientation, resting at an angle on a dark backdrop. The title 'Art & Life' is seen in bold uppercase on the screen"
+        />
+      </m.picture>
+
+      <m.picture
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className="PictureContainer"
+      >
+        <source
+          media="(min-width: 600px)"
+          srcSet="/images/FyrreMagazine/FyrreMagazine-Desktop-4.jpg"
+        />
+        <img
+          src="/images/FyrreMagazine/FyrreMagazine-Mobile-4.jpg"
+          alt="A podcast article on an iPad in vertical orientation. The title 'The Art of Movement' is seen in bold uppercase, with podcast information"
         />
       </m.picture>
       <m.picture
@@ -247,11 +264,11 @@ const LeDimancheMockups = () => {
       >
         <source
           media="(min-width: 600px)"
-          srcSet="/images/LeDimanche/LeDimanche-Desktop-5.jpg"
+          srcSet="/images/FyrreMagazine/FyrreMagazine-Desktop-7.jpg"
         />
         <img
-          src="/images/LeDimanche/LeDimanche-Mobile-5.jpg"
-          alt="A luxury e-commerce site on an iMac, sitting on a desk with a vase to the right and a journal with a pen on the left"
+          src="/images/FyrreMagazine/FyrreMagazine-Mobile-7.jpg"
+          alt="A magazine article on an iPad in vertical orientation and the same screen on an iPhone resting to the left of it. The title 'The Devil Is The Details' is seen in bold uppercase, with article information. Both devices rest on a desk."
         />
       </m.picture>
       <m.picture
@@ -261,20 +278,34 @@ const LeDimancheMockups = () => {
       >
         <source
           media="(min-width: 600px)"
-          srcSet="/images/LeDimanche/LeDimanche-Desktop-6.jpg"
+          srcSet="/images/FyrreMagazine/FyrreMagazine-Desktop-5.jpg"
         />
         <img
-          src="/images/LeDimanche/LeDimanche-Mobile-6.jpg"
-          alt="A luxury e-commerce site on a mobile device, standing upright on top of rocks, with a branch next to it and a biege backdrop"
+          src="/images/FyrreMagazine/FyrreMagazine-Mobile-5.jpg"
+          alt="A magazine website on an iMac with the tower standing next to it. The title 'Art & Life' is seen in bold uppercase on the screen"
+        />
+      </m.picture>
+      <m.picture
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className="PictureContainer"
+      >
+        <source
+          media="(min-width: 600px)"
+          srcSet="/images/FyrreMagazine/FyrreMagazine-Desktop-6.jpg"
+        />
+        <img
+          src="/images/FyrreMagazine/FyrreMagazine-Mobile-6.jpg"
+          alt="A magazine article on a Nothing Phone elevated and at a slight angle. The title 'Street Art Festival' is seen in bold uppercase on the screen, as well as article info underneath it"
         />
       </m.picture>
     </m.section>
   );
 };
 
-const LeDimanche = () => {
+const FyrreMagazine = () => {
   useEffect(() => {
-    document.title = "Le Dimanche | Aman Singh Bhogal";
+    document.title = "Fyrre Magazine | Aman Singh Bhogal";
   });
 
   return (
@@ -282,10 +313,10 @@ const LeDimanche = () => {
       <Header />
       <main className="MainContainer">
         <div className="Project">
-          <LeDimancheHero />
-          <LeDimancheLinks />
-          <LeDimancheAbout />
-          <LeDimancheMockups />
+          <FyrreMagazineHero />
+          <FyrreMagazineLinks />
+          <FyrreMagazineAbout />
+          <FyrreMagazineMockups />
           <CTA />
         </div>
       </main>
@@ -295,4 +326,4 @@ const LeDimanche = () => {
   );
 };
 
-export default LeDimanche;
+export default FyrreMagazine;

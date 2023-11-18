@@ -817,6 +817,141 @@ const Projects = () => {
               </m.div>
             </m.div>
           </m.div>
+          <m.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="ProjectSectionBox"
+          >
+            <Link to="fyrremagazine" className="ProjectSectionLink">
+              <picture className="PictureContainer">
+                <m.source
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  media="(min-width: 600px)"
+                  srcSet="/images/Portfolio/FyrreMagazine-PortfolioPage-Desktop.jpg"
+                />
+                <m.img
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  src="/images/Portfolio/FyrreMagazine-PortfolioPage-Mobile.jpg"
+                  alt="An iPhone standing upright on an elevated concrete platform with showing a magazine site on the display. The title 'Art & Life' is seen in bold uppercase on the screen"
+                />
+              </picture>
+            </Link>
+            <m.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="ProjectBoxContent"
+            >
+              <m.h3
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="ProjectBoxContentTitle"
+              >
+                Fyrre Magazine
+              </m.h3>
+              <m.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="ProjectBoxContentText"
+              >
+                A bold, striking SPA arts and life-focused magazine website
+                developed from Figma designs using Next.js, TypeScript React
+                Server Components, Shadcn, Tailwind CSS, GSAP and E2E testing
+                with Playwright.
+              </m.p>
+              <m.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="ProjectBoxContentListContainer"
+              >
+                <m.ul
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  className="ProjectBoxContentList"
+                >
+                  <m.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                    Next.js
+                  </m.li>
+                  <m.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                    React Server Components
+                  </m.li>
+                  <m.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                    TypeScript
+                  </m.li>
+                  <m.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                    SPA
+                  </m.li>
+                  <m.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                    Shadcn
+                  </m.li>
+                  <m.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                    Tailwind CSS
+                  </m.li>
+                </m.ul>
+                <m.ul
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  className="ProjectBoxContentList"
+                >
+                  <m.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                    React Suspense
+                  </m.li>
+                  <m.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                    GSAP
+                  </m.li>
+                  <m.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                    E2E Testing
+                  </m.li>
+                  <m.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                    Playwright
+                  </m.li>
+                  <m.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                    Git
+                  </m.li>
+                  <m.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                    Vercel
+                  </m.li>
+                </m.ul>
+              </m.div>
+              <m.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="ProjectBoxLinks"
+              >
+                <m.a
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://github.com/asbhogal/Fyrre-Magazine"
+                  className="ProjectButton"
+                >
+                  CODE
+                </m.a>
+                <m.a
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://fyrremagazine.vercel.app/"
+                  className="ProjectButton"
+                >
+                  SITE
+                </m.a>
+                <m.a
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  target="_blank"
+                  rel="noreferrer"
+                  href="/portfolio/fyrremagazine"
+                  className="ProjectButton"
+                >
+                  VIEW MORE
+                </m.a>
+              </m.div>
+            </m.div>
+          </m.div>
         </m.section>
       </main>
       <Footer />
