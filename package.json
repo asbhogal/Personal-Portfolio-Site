@@ -23,6 +23,7 @@
   "homepage": "https://www.amansinghbhogal.com/",
   "dependencies": {
     "@vercel/analytics": "^0.1.8",
+    "@vercel/speed-insights": "^1.0.1",
     "classnames": "^2.3.2",
     "framer-motion": "^9.0.3",
     "react": "^18.2.0",

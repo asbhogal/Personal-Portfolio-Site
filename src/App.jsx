@@ -19,6 +19,7 @@ import ScrollRestoration from "./components/ScrollRestoration";
 
 import { Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 /* function Home() {
     useDocumentTitle('Aman Singh Bhogal | Front End Developer')
@@ -34,6 +35,7 @@ const App = () => {
       <Analytics />
       <Cursor />
       <ScrollRestoration />
+      <SpeedInsights />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
