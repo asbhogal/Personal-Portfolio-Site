@@ -1,8 +1,7 @@
 {
   "name": "personal-portfolio-website",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "A personal portfolio site created for the repo owner (Aman Singh Bhogal.)",
-  "main": "index.js",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -31,8 +30,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.8.0",
-    "react-websitecarbon-badge": "^1.0.5",
-    "swiper": "^9.0.5"
+    "react-websitecarbon-badge": "^1.0.5"
   },
   "devDependencies": {
     "@types/node": "^20",
