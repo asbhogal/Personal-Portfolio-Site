@@ -5,14 +5,13 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion as m } from "framer-motion";
 
-const Header = (props) => {
+const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
     <m.header
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      id={props.HeaderPosition}
       className="Header"
     >
       <nav className="Nav">
