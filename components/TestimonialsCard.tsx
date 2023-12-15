@@ -1,14 +1,12 @@
-import testimonialData from "../js/testimonialData";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, FreeMode, Pagination, Thumbs, A11y } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import { useEffect } from "react";
 
 const TestimonialsCard = () => {
-  return (
-    <Swiper
+  useEffect(() => {
+    fetch("/api/testimonials")
+      .then((res) => res.json())
+      .then((testimonials) => console.log(testimonials));
+  }, []);
+  /*  <Swiper
       modules={[Autoplay, FreeMode, Pagination, Thumbs, A11y]}
       spaceBetween={50}
       pagination={{ clickable: true }}
@@ -44,8 +42,7 @@ const TestimonialsCard = () => {
           </div>
         </SwiperSlide>
       ))}
-    </Swiper>
-  );
+    </Swiper> */
 };
 
 export default TestimonialsCard;

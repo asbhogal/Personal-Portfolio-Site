@@ -1,4 +1,4 @@
-import "./scss/index.scss";
+/* import "./scss/index.scss";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
@@ -19,7 +19,7 @@ import ScrollRestoration from "./components/ScrollRestoration";
 
 import { Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/react";
+import { SpeedInsights } from "@vercel/speed-insights/react"; */
 
 /* function Home() {
     useDocumentTitle('Aman Singh Bhogal | Front End Developer')
@@ -29,7 +29,7 @@ function About() {
     useDocumentTitle('About | Aman Singh Bhogal')
 } */
 
-const App = () => {
+/* const App = () => {
   return (
     <>
       <Analytics />
@@ -60,4 +60,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App; */

@@ -1,3 +1,7 @@
+import "../src/scss/index.scss";
+import Header from "@/components/Header";
+import Cursor from "@/components/Cursor";
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +9,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        <Cursor />
+        {children}
+      </body>
     </html>
   );
 }

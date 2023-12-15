@@ -1,27 +1,34 @@
+"use client";
+
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import classNames from "classnames";
+import { usePathname } from "next/navigation";
+
+type Position = {
+  x: number;
+  y: number;
+};
 
 const isMobile = () => {
   const ua = navigator.userAgent;
   return /Android|Mobi/i.test(ua);
 };
 
-const Cursor = () => {
+const Cursor: React.FC = () => {
   if (typeof navigator !== "undefined" && isMobile()) return null;
 
-  const [position, setPosition] = useState({ x: 0, y: 0 }),
+  const [position, setPosition] = useState<Position>({ x: 0, y: 0 }),
     [hidden, setHidden] = useState(false),
     [clicked, setClicked] = useState(false),
     [linkHovered, setLinkHovered] = useState(false);
 
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     addEventListeners();
     handleLinkHoverEvents();
     return () => removeEventListeners();
-  }, [location]);
+  }, [pathname]);
 
   const addEventListeners = () => {
     document.addEventListener("mousemove", onMouseMove);
@@ -39,7 +46,7 @@ const Cursor = () => {
     document.removeEventListener("mousedown", onMouseDown);
   };
 
-  const onMouseMove = (e) => {
+  const onMouseMove = (e: MouseEvent) => {
     setPosition({ x: e.clientX, y: e.clientY });
   };
 
