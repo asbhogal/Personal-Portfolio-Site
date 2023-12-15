@@ -1,12 +1,21 @@
 "use client";
 
 //import navLogo from "/images/logos/Portfolio-Logo.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion as m } from "framer-motion";
+import { MenuType } from "@/utils/types";
 
-const Header = () => {
+export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/menu").then((res) =>
+      res.json().then((menu: MenuType) => {
+        console.log(menu);
+      })
+    );
+  }, []);
 
   return (
     <m.header
@@ -123,6 +132,4 @@ const Header = () => {
       </nav>
     </m.header>
   );
-};
-
-export default Header;
+}

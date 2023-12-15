@@ -30,7 +30,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.8.0",
-    "react-websitecarbon-badge": "^1.0.5"
+    "react-websitecarbon-badge": "^1.0.5",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^20",
