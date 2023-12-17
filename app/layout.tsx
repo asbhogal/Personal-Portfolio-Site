@@ -11,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="root">
         <Header />
         <Cursor />
         <ScrollToTop />
