@@ -1,3 +1,5 @@
+"use client";
+
 import { motion as m } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -5,19 +7,21 @@ const ScrollToTop = () => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 300) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
-    });
+    const handleScroll = () => {
+      setShowButton(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behaviour: "smooth",
+      behavior: "smooth",
     });
   };
 
