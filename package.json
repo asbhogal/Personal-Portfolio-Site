@@ -21,6 +21,7 @@
   },
   "homepage": "https://www.amansinghbhogal.com/",
   "dependencies": {
+    "@splidejs/react-splide": "^0.7.12",
     "@vercel/analytics": "^0.1.8",
     "@vercel/speed-insights": "^1.0.1",
     "classnames": "^2.3.2",
@@ -31,6 +32,7 @@
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.8.0",
     "react-websitecarbon-badge": "^1.0.5",
+    "swr": "^2.2.4",
     "zod": "^3.22.4"
   },
   "devDependencies": {

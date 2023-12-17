@@ -1,21 +1,11 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import "../scss/index.scss";
+"use client";
 
 import { motion as m } from "framer-motion";
-import { useEffect } from "react";
-
 import TestimonialsCard from "../components/TestimonialsCard";
-import ScrollToTop from "../components/ScrollToTop";
 
 const Testimonials = () => {
-  useEffect(() => {
-    document.title = "Testimonials | Aman Singh Bhogal";
-  });
-
   return (
     <>
-      <Header />
       <main className="MainContainer">
         <m.section
           initial={{ opacity: 0 }}
@@ -32,9 +22,6 @@ const Testimonials = () => {
           <TestimonialsCard />
         </m.section>
       </main>
-      <Footer />
-
-      <ScrollToTop />
     </>
   );
 };

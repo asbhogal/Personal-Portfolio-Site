@@ -1,48 +1,38 @@
-import { useEffect } from "react";
+import { fetcher } from "@/utils/fetcher";
+import useSWR from "swr";
 
-const TestimonialsCard = () => {
-  useEffect(() => {
-    fetch("/api/testimonials")
-      .then((res) => res.json())
-      .then((testimonials) => console.log(testimonials));
-  }, []);
-  /*  <Swiper
-      modules={[Autoplay, FreeMode, Pagination, Thumbs, A11y]}
-      spaceBetween={50}
-      pagination={{ clickable: true }}
-      autoplay={true}
-      loop={true}
-      freeMode={true}
-      breakpoints={{
-        1440: {
-          slidesPerView: 3,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-        744: {
-          slidesPerView: 2,
-        },
-        375: {
-          slidesPerView: 1,
-        },
-      }}
-    >
-      {testimonialData.map((data) => (
-        <SwiperSlide className="TestimonialCard" key={data.id}>
-          <div>
-            <img
-              className="TestimonialImage"
-              src={`/images/TestimonialImg-${data.img}`}
-            ></img>
-            <p className="TestimonialQuote">{data.description}</p>
-            <div className="HorizontalDivider"></div>
-            <p className="TestimonialName">{data.name}</p>
-            <p className="TestimonialTitle">{data.title}</p>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper> */
+type TestimonialsType = {
+  id: number;
+  img: string;
+  imgAlt: string;
+  description: string;
+  name: string;
+  title: string;
 };
 
-export default TestimonialsCard;
+export default function TestimonialsCard() {
+  const { data, error } = useSWR("/api/testimonials", fetcher);
+
+  if (error) return <div>failed to load</div>;
+  if (!data) return <div>loading...</div>;
+
+  console.log(data);
+
+  return (
+    <div>
+      {data.testimonials.map((testimonial: TestimonialsType) => (
+        <div className="TestimonialCard" key={testimonial.id}>
+          <img
+            className="TestimonialImage"
+            src={`/images/TestimonialImg-${testimonial.img}`}
+            alt={testimonial.imgAlt}
+          ></img>
+          <p className="TestimonialQuote">{testimonial.description}</p>
+          <div className="HorizontalDivider"></div>
+          <p className="TestimonialName">{testimonial.name}</p>
+          <p className="TestimonialTitle">{testimonial.title}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
