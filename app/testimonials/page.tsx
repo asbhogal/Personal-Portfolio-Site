@@ -9,9 +9,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <main className="MainContainer">
-        <TestimonialsContent />
-      </main>
+      <TestimonialsContent />
     </>
   );
 }

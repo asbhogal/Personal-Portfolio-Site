@@ -15,7 +15,7 @@ export default function RootLayout({
         <Header />
         <Cursor />
         <ScrollToTop />
-        {children}
+        <main className="MainContainer">{children}</main>
         <Footer />
       </body>
     </html>
