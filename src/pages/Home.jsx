@@ -1,24 +1,12 @@
 import { useEffect } from "react";
 
-import "../scss/index.scss";
-import Navbar from "../components/Header";
-import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
-/* import brandScreen from "/images/Home/BrandScreen.jpg";
-import liteLifeScreen from "/images/Home/LiteLifeScreen.jpg";
-import oceanicaScreen from "/images/Home/OceanicaScreen.jpg";
-import cryptoverseScreen from "/images/Home/CryptoverseScreen.jpg"; */
 import CSSWinnerBadge from "/images/star-white2.png";
 import FrontendMentorBadge from "/images/FrontendMentorBadge.png";
 import CTA from "../components/CTA";
 import SkillLozenge from "../components/SkillLozenge";
-import CodeIcon from "../components/CodeIcon";
 import Arrow from "../components/Arrow";
-import PaintIcon from "../components/PaintIcon";
-import RulerIcon from "../components/RulerIcon";
-import SpeedIcon from "../components/SpeedIcon";
-import ScrollToTop from "../components/ScrollToTop";
 
 const Home = () => {
   useEffect(() => {
@@ -28,7 +16,6 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
       <main className="MainContainer">
         <m.section
           initial={{ opacity: 0 }}
@@ -76,85 +63,6 @@ const Home = () => {
                 alt="Frontend Mentor logo with the words 'As Featured By' above it"
               />
             </m.a>
-          </m.div>
-        </m.section>
-
-        <m.section
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="SkillsOffered"
-        >
-          <m.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="SkillBox"
-          >
-            <m.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              className="SkillBoxTopRow"
-            >
-              <p>Logos & Branding</p>
-              <PaintIcon />
-            </m.div>
-            <m.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-              Developing strong, consistent and recognisable branding which
-              evokes emotions through visualisations and mood boards.
-            </m.p>
-          </m.div>
-          <m.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="SkillBox"
-          >
-            <m.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              className="SkillBoxTopRow"
-            >
-              <p>Web Design</p>
-              <RulerIcon />
-            </m.div>
-            <m.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-              Designing high fidelity, responsive and interactive mockups from
-              sketches/wireframes and existing branding using Figma and Adobe CC
-            </m.p>
-          </m.div>
-          <m.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="SkillBox"
-          >
-            <m.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              className="SkillBoxTopRow"
-            >
-              <p>Web Development</p>
-              <CodeIcon />
-            </m.div>
-            <m.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-              Developing modern, front-end applications and websites from
-              scratch or existing mockups using React, Next.js, SASS and Webpack
-            </m.p>
-          </m.div>
-          <m.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="SkillBox"
-          >
-            <m.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              className="SkillBoxTopRow"
-            >
-              <p>Site Optimisation</p>
-              <SpeedIcon />
-            </m.div>
-            <m.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-              Optimising React and WordPress website builds across performance,
-              accessibility, SEO and stability
-            </m.p>
           </m.div>
         </m.section>
 
@@ -417,12 +325,8 @@ const Home = () => {
             </m.div>
           </m.div>
         </m.section>
-
         <CTA />
       </main>
-      <Footer />
-
-      <ScrollToTop />
     </>
   );
 };
