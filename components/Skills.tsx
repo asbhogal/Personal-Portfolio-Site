@@ -4,6 +4,7 @@ import CodeIcon from "../components/CodeIcon";
 import PaintIcon from "../components/PaintIcon";
 import RulerIcon from "../components/RulerIcon";
 import SpeedIcon from "../components/SpeedIcon";
+import { ServicesType } from "@/utils/types";
 
 const services: ServicesType[] = [
   {
@@ -35,13 +36,6 @@ const services: ServicesType[] = [
     icon: <SpeedIcon />,
   },
 ];
-
-type ServicesType = {
-  id: number;
-  skill: string;
-  description: string;
-  icon: React.ReactNode;
-};
 
 export default function Services() {
   return (

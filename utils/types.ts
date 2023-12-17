@@ -3,3 +3,10 @@ export type MenuType = {
   name: string;
   href: string;
 };
+
+export type ServicesType = {
+  id: number;
+  skill: string;
+  description: string;
+  icon: React.ReactNode;
+};
