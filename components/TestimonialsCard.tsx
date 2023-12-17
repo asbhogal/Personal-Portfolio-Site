@@ -14,7 +14,7 @@ export default function TestimonialsCard() {
         <div className="TestimonialCard" key={testimonial.id}>
           <img
             className="TestimonialImage"
-            src={`/images/TestimonialImg-${testimonial.img}`}
+            src={`/images/${testimonial.img}`}
             alt={testimonial.imgAlt}
           ></img>
           <p className="TestimonialQuote">{testimonial.description}</p>
