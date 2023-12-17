@@ -1,6 +1,7 @@
 import "../src/scss/index.scss";
 import Header from "@/components/Header";
 import Cursor from "@/components/Cursor";
+import Footer from "@/components/Footer";
 
 export default function RootLayout({
   children,
@@ -13,6 +14,7 @@ export default function RootLayout({
         <Header />
         <Cursor />
         {children}
+        <Footer />
       </body>
     </html>
   );
