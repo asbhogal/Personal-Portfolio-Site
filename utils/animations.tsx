@@ -7,11 +7,11 @@ type FadeInProps = {
   className?: string;
 };
 
-export const FadeIn = ({
+export default function FadeIn({
   children,
   as = "div",
   className = "",
-}: FadeInProps) => {
+}: FadeInProps) {
   const MotionComponent = motion[as as keyof typeof motion];
 
   return (
@@ -23,4 +23,4 @@ export const FadeIn = ({
       {children}
     </MotionComponent>
   );
-};
+}
