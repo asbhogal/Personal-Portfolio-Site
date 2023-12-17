@@ -2,12 +2,24 @@
 
 import { motion as m } from "framer-motion";
 import TestimonialsCard from "@/components/TestimonialsCard";
+import type { Metadata } from "next";
+import { FadeIn } from "@/utils/animations";
+
+const metadata: Metadata = {
+  title: "Testimonials | Aman Singh Bhogal",
+  description: "Testimonials from clients",
+};
 
 export default function Page() {
   return (
     <>
       <main className="MainContainer">
-        <m.section
+        <FadeIn as="section" className="TestimonialsCover">
+          <FadeIn as="h1" className="TestimonialsPageTitle">
+            testimonials
+          </FadeIn>
+        </FadeIn>
+        {/* <m.section
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="TestimonialsCover"
@@ -19,7 +31,7 @@ export default function Page() {
           >
             testimonials
           </m.h1>
-        </m.section>
+        </m.section> */}
         <m.section
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
