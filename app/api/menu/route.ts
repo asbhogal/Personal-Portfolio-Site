@@ -39,5 +39,5 @@ export async function GET(request: Request) {
     },
   ];
 
-  return NextResponse.json({ data: menu }, { status: 200 });
+  return NextResponse.json({ menu }, { status: 200 });
 }

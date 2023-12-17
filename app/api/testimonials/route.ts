@@ -35,5 +35,5 @@ export async function GET(request: Request) {
     },
   ];
 
-  return NextResponse.json({ data: testimonials }, { status: 200 });
+  return NextResponse.json({ testimonials }, { status: 200 });
 }
