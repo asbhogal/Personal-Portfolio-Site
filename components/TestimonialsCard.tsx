@@ -1,22 +1,12 @@
 import { fetcher } from "@/utils/fetcher";
+import { TestimonialsType } from "@/utils/types";
 import useSWR from "swr";
-
-type TestimonialsType = {
-  id: number;
-  img: string;
-  imgAlt: string;
-  description: string;
-  name: string;
-  title: string;
-};
 
 export default function TestimonialsCard() {
   const { data, error } = useSWR("/api/testimonials", fetcher);
 
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
-
-  console.log(data);
 
   return (
     <div>

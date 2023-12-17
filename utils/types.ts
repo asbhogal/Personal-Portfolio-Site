@@ -10,3 +10,12 @@ export type ServicesType = {
   description: string;
   icon: React.ReactNode;
 };
+
+export type TestimonialsType = {
+  id: number;
+  img: string;
+  imgAlt: string;
+  description: string;
+  name: string;
+  title: string;
+};
