@@ -18,6 +18,16 @@ export async function GET(request: Request) {
       site: "https://brand-responsive-web-page.vercel.app/",
       more: "https://www.amansinghbhogal.com/portfolio/brand",
       details: {
+        hero: {
+          desktop: "/images/BRAND/mockups/Brand-Desktop-1.jpg",
+          mobile: "/images/BRAND/mockups/Brand-Mobile-1.jpg",
+        },
+        links: {
+          templates:
+            "https://www.figma.com/community/file/1187868244670810561/",
+          code: "https://github.com/asbhogal/React-Brand-Responsive-Web-Page",
+          site: "https://brand-responsive-web-page.vercel.app/",
+        },
         description:
           "Brand is a conceptualised company which offers minimalistic interior decorating options inspired by Milanese design. Logos and assets were provided and from these, five responsive templates (for 5 breakpoints) were created using Figma. A responsive Web page from these was then built using React with SCSS, Babel and JS, compiled as a production build using Webpack and then shipped using Vercel.",
         design:
@@ -44,7 +54,28 @@ export async function GET(request: Request) {
           palette: "/images/BRAND/BrandColorPalette.svg",
         },
         templates: "/images/BRAND/mockups/BrandMockups.png",
-        mockups: [],
+        mockups: [
+          {
+            desktop: "/images/BRAND/mockups/Brand-Desktop-3.jpg",
+            mobile: "/images/BRAND/mockups/Brand-Mobile-3.jpg",
+          },
+          {
+            desktop: "/images/BRAND/mockups/Brand-Desktop-4.jpg",
+            mobile: "/images/BRAND/mockups/Brand-Mobile-4.jpg",
+          },
+          {
+            desktop: "/images/BRAND/mockups/Brand-Desktop-5.jpg",
+            mobile: "/images/BRAND/mockups/Brand-Mobile-5.jpg",
+          },
+          {
+            desktop: "/images/BRAND/mockups/Brand-Desktop-7.jpg",
+            mobile: "/images/BRAND/mockups/Brand-Mobile-7.jpg",
+          },
+          {
+            desktop: "/images/BRAND/mockups/Brand-Desktop-8.jpg",
+            mobile: "/images/BRAND/mockups/Brand-Mobile-8.jpg",
+          },
+        ],
       },
     },
   ];
