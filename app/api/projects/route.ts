@@ -5,8 +5,8 @@ export async function GET(request: Request) {
     {
       id: 1,
       project: "brand",
-      imageDesktop: "/home/Brand-HomePage-Desktop.jpg",
-      imageMobile: "/home/Brand-HomePage-Mobile.jpg",
+      imageDesktop: "/images/home/Brand-HomePage-Desktop.jpg",
+      imageMobile: "/images/home/Brand-HomePage-Mobile.jpg",
       imgAlt:
         "An iPhone resting on a concrete surface at an angle, with a website on the screen",
       summary:

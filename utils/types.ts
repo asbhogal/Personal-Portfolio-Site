@@ -19,3 +19,53 @@ export type TestimonialsType = {
   name: string;
   title: string;
 };
+
+export type ProjectType = {
+  id: number;
+  project: string;
+  imageDesktop: string;
+  imageMobile: string;
+  imgAlt: string;
+  summary: string;
+  stacks: string[][];
+  skills: string[];
+  code: string;
+  site: string;
+  more: string;
+  details: {
+    hero: {
+      desktop: string;
+      mobile: string;
+      alt: string;
+    };
+    links: {
+      templates?: string;
+      code: string;
+      site: string;
+    };
+    description: string;
+    design: string;
+    typeface: {
+      font: string;
+      type: string;
+      weights: string[];
+    };
+    branding?: {
+      images: string;
+      logos: string[];
+      components: string;
+      palette: string;
+    };
+    templates?: {
+      img: string;
+      alt: string;
+    };
+    mockups: [
+      {
+        desktop: string;
+        mobile: string;
+        alt: string;
+      }
+    ];
+  };
+};

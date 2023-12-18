@@ -1,3 +1,5 @@
+import Projects from "@/components/Projects";
+
 export default function Page() {
-  return <p>Test</p>;
+  return <Projects />;
 }
