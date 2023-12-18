@@ -46,7 +46,7 @@ export default function Projects() {
           });
 
           return (
-            <FadeIn as="div" className="ProjectBox">
+            <FadeIn as="div" className="ProjectBox" key={project.id}>
               <Link
                 href={`/portfolio/${project.project}`}
                 className="ProjectLink"

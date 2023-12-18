@@ -89,7 +89,7 @@ export async function GET(request: Request) {
       },
     },
     {
-      id: 1,
+      id: 2,
       project: "brand",
       imageDesktop: "/images/home/Brand-HomePage-Desktop.jpg",
       imageMobile: "/images/home/Brand-HomePage-Mobile.jpg",
