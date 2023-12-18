@@ -185,6 +185,109 @@ export async function GET(request: Request) {
         ],
       },
     },
+    {
+      id: 3,
+      project: "oceanica",
+      link: "oceanica",
+      imageDesktop: "/images/Home/Oceanica-HomePage-Desktop.jpg",
+      imageMobile: "/images/Home/Oceanica-HomePage-Mobile.jpg",
+      imgAlt:
+        "A Macbook with a website open on the screen, resting on a concrete surface next to a pool",
+      summary:
+        "A conceptualised page created from a series of responsive wireframes in Figma. Built using React, SASS and Webpack.",
+      stacks: [
+        [
+          "Figma",
+          "Logo Creation",
+          "Masking",
+          "Wireframing",
+          "UI Prototyping",
+          "Auto Layouts",
+          "Components",
+        ],
+        ["React", "Babel", "SASS", "PostCSS", "Webpack", "Git", "Vercel"],
+      ],
+      skills: ["web design", "web development"],
+      code: "https://github.com/asbhogal/React-Oceanica-Responsive-Web-Page",
+      site: "https://oceanica.vercel.app/",
+      more: "https://www.amansinghbhogal.com/portfolio/oceanica",
+      details: {
+        hero: {
+          desktop: "/images/Oceanica/mockups/Oceanica-Desktop-1.jpg",
+          mobile: "/images/Oceanica/mockups/Oceanica-Mobile-1.jpg",
+          alt: "An iPhone resting on a green platform in front of an archway with tall palm leaves in the backdrop",
+        },
+        links: {
+          templates:
+            "https://www.figma.com/community/file/1190467806509137896/",
+          code: "https://github.com/asbhogal/React-Oceanica-Responsive-Web-Page",
+          site: "https://oceanica.vercel.app/",
+        },
+        type: "personal",
+        date: "Dec 2022 - Feb 2023",
+        description:
+          "Oceanica is a conceptualised company which offers luxury travel resorts and activities around the world. Logos, assets and responsive templates (for 5 breakpoints) were created using Figma, including prototypes to simulate a booking screen. A responsive Web page from these was then built using React with SCSS, Babel and JS, compiled as a production build using Webpack and then shipped using Vercel.",
+        design: [
+          [
+            "Luxury and allure were key factors behind the message of this brand. The font used symbolises the nature of the sea and open waters; vast and spacious yet defined and affirmed, further reinforced by the semi bold and bold weightings, broad shoulders and wide leading. The logo of a wave is simplistic and therefore easily memorable; it's character parallels that of the typography leveraged and against the rich black backdrop rings true the message of style and class, with its elliptical nature replicating that of the shape of the Earth and the wave line flowing into the brand name. The background calligraphic words carry this theme throughout the page with its swashes leaning on an axis akin to the Earth's own orbit, as the user is enveloped in this magnetism during their journey.",
+          ],
+        ],
+        typeface: {
+          font: "manrope",
+          type: "singular",
+          weights: ["04 Regular", "05 Medium", "06 Semi Bold", "07 Bold"],
+        },
+        branding: {
+          logos: [
+            {
+              img: "/images/Oceanica/assets/Logo.svg",
+              alt: "The words 'Oceanica' with a wave-shaped half circle to the left of it",
+            },
+          ],
+          images: [
+            {
+              img1: "/images/Oceanica/assets/TestimonialCard.svg",
+              alt: "A testimonial card, with an image, placeholder text and name underneath",
+            },
+            {
+              img2: "/images/Oceanica/assets/PackagesCard.svg",
+              alt: "A snapshot of a package offer, with an image, title, placeholder text and price",
+            },
+          ],
+          palette: "/images/Oceanica/assets/oceanicaColorPalette.svg",
+        },
+        templates: {
+          img: "/images/Oceanica/mockups/OceanicaTemplates.png",
+          alt: "5 templates of a website design",
+        },
+        prototypes: {
+          img: "/images/Oceanica/OceanicaPrototypes.png",
+          alt: "6 screens showing prototype interaction",
+        },
+        mockups: [
+          {
+            desktop: "/images/Oceanica/mockups/Oceanica-Desktop-2.jpg",
+            mobile: "/images/Oceanica/mockups/Oceanica-Mobile-2.jpg",
+            alt: "A mockup of a website on a Macbook",
+          },
+          {
+            desktop: "/images/Oceanica/mockups/Oceanica-Desktop-3.jpg",
+            mobile: "/images/Oceanica/mockups/Oceanica-Mobile-3.jpg",
+            alt: "A mockup of a website on an iPad",
+          },
+          {
+            desktop: "/images/Oceanica/mockups/Oceanica-Desktop-4.jpg",
+            mobile: "/images/Oceanica/mockups/Oceanica-Mobile-4.jpg",
+            alt: "A mockup of a website on an iPhone",
+          },
+          {
+            desktop: "/images/Oceanica/mockups/Oceanica-Desktop-6.jpg",
+            mobile: "/images/Oceanica/mockups/Oceanica-Mobile-6.jpg",
+            alt: "Different sections of a web page on four iPhone screens, laid side by side",
+          },
+        ],
+      },
+    },
   ];
   return NextResponse.json({ projects }, { status: 200 });
 }

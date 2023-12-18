@@ -63,6 +63,10 @@ export type ProjectType = {
       img?: string;
       alt?: string;
     };
+    prototypes?: {
+      img?: string;
+      alt?: string;
+    };
     mockups: [
       {
         desktop: string;
