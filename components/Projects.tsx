@@ -57,6 +57,16 @@ export default function Projects() {
                   <img src={mobile} alt={project.imgAlt} />
                 </picture>
               </Link>
+
+              <FadeIn as="div" className="ProjectTitle HomePageProjectTitle">
+                <FadeIn as="h3">{project.project}</FadeIn>
+                <Link
+                  href={`/portfolio/${project.project}`}
+                  className="HomePageProjectLinks"
+                >
+                  <Arrow size={30} />
+                </Link>
+              </FadeIn>
             </FadeIn>
           );
         })}
