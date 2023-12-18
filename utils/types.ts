@@ -1,3 +1,10 @@
+export type FooterLinksType = {
+  id: number;
+  href: string;
+  ariaLabel: string;
+  icon: React.ReactNode;
+};
+
 export type MenuType = {
   id: number;
   name: string;

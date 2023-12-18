@@ -3,59 +3,52 @@
 import { FaLinkedinIn } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { FiFigma } from "react-icons/fi";
-
-import { motion as m } from "framer-motion";
 import { WebsiteCarbonBadge } from "react-websitecarbon-badge";
+import FadeIn from "@/utils/animations";
+import { FooterLinksType } from "@/utils/types";
 
-const Footer = () => {
+const FooterLinks: FooterLinksType[] = [
+  {
+    id: 1,
+    href: "https://www.linkedin.com/in/amansinghbhogal",
+    ariaLabel: "LinkedIn page",
+    icon: <FaLinkedinIn />,
+  },
+  {
+    id: 2,
+    href: "https://www.github.com/asbhogal",
+    ariaLabel: "GitHub page",
+    icon: <BsGithub />,
+  },
+  {
+    id: 3,
+    href: "https://www.figma.com/@amansinghbhogal",
+    ariaLabel: "Figma profile",
+    icon: <FiFigma />,
+  },
+];
+
+export default function Footer() {
   return (
-    <m.footer
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      className="Footer"
-    >
-      <m.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        className="Copyright"
-      >
-        <p>©Aman Singh Bhogal - 2023</p>
-      </m.div>
+    <FadeIn as="footer" className="Footer">
+      <FadeIn as="div" className="Copyright">
+        <FadeIn as="p">©Aman Singh Bhogal 2023</FadeIn>
+      </FadeIn>
       <WebsiteCarbonBadge url="www.amansinghbhogal.com" />
-      <m.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        className="SocialIcons"
-      >
-        <m.a
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.linkedin.com/in/amansinghbhogal"
-          aria-label="Visit Aman's LinkedIn page"
-        >
-          <FaLinkedinIn />
-        </m.a>
-        <m.a
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.github.com/asbhogal"
-          aria-label="Visit Aman's GitHub page"
-        >
-          <BsGithub />
-        </m.a>
-        <m.a
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.figma.com/@amansinghbhogal"
-          aria-label="Visit Aman's Figma profile"
-        >
-          <FiFigma />
-        </m.a>
-      </m.div>
-    </m.footer>
+      <FadeIn as="div" className="SocialIcons">
+        {FooterLinks.map((link) => (
+          <FadeIn
+            as="a"
+            target="_blank"
+            rel="noopener noreferrer"
+            key={link.id}
+            href={link.href}
+            aria-label={link.ariaLabel}
+          >
+            {link.icon}
+          </FadeIn>
+        ))}
+      </FadeIn>
+    </FadeIn>
   );
-};
-
-export default Footer;
+}

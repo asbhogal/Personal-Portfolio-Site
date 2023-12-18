@@ -6,6 +6,8 @@ type FadeInProps = {
   as?: keyof JSX.IntrinsicElements;
   className?: string;
   href?: string;
+  target?: string;
+  rel?: string;
 };
 
 export default function FadeIn({
@@ -13,6 +15,8 @@ export default function FadeIn({
   as = "div",
   className = "",
   href,
+  target,
+  rel,
 }: FadeInProps) {
   const MotionComponent = motion[as as keyof typeof motion];
 
@@ -22,6 +26,8 @@ export default function FadeIn({
       whileInView={{ opacity: 1 }}
       className={className}
       href={href}
+      target={target}
+      rel={rel}
     >
       {children}
     </MotionComponent>
