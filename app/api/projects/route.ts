@@ -7,6 +7,8 @@ export async function GET(request: Request) {
       project: "brand",
       imageDesktop: "/home/Brand-HomePage-Desktop.jpg",
       imageMobile: "/home/Brand-HomePage-Mobile.jpg",
+      imgAlt:
+        "An iPhone resting on a concrete surface at an angle, with a website on the screen",
       summary:
         "A conceptualised page created from a series of responsive wireframes in Figma. Built using React, SASS and Webpack.",
       stacks: [
@@ -21,6 +23,7 @@ export async function GET(request: Request) {
         hero: {
           desktop: "/images/BRAND/mockups/Brand-Desktop-1.jpg",
           mobile: "/images/BRAND/mockups/Brand-Mobile-1.jpg",
+          alt: "A series of iPhones face-down, with one in the middle faced-up, showing a website page",
         },
         links: {
           templates:
@@ -43,7 +46,6 @@ export async function GET(request: Request) {
             "09 Black",
           ],
         },
-
         branding: {
           images: "/images/BRAND/BrandImages.png",
           logos: [
@@ -53,27 +55,35 @@ export async function GET(request: Request) {
           components: "/images/BRAND/BrandComponents.svg",
           palette: "/images/BRAND/BrandColorPalette.svg",
         },
-        templates: "/images/BRAND/mockups/BrandMockups.png",
+        templates: {
+          img: "/images/BRAND/mockups/BrandMockups.png",
+          alt: "5 templates of a website design",
+        },
         mockups: [
           {
             desktop: "/images/BRAND/mockups/Brand-Desktop-3.jpg",
             mobile: "/images/BRAND/mockups/Brand-Mobile-3.jpg",
+            alt: "A mockup of a website menu toggle on an iPhone",
           },
           {
             desktop: "/images/BRAND/mockups/Brand-Desktop-4.jpg",
             mobile: "/images/BRAND/mockups/Brand-Mobile-4.jpg",
+            alt: "A mockup of a website on an iMac",
           },
           {
             desktop: "/images/BRAND/mockups/Brand-Desktop-5.jpg",
             mobile: "/images/BRAND/mockups/Brand-Mobile-5.jpg",
+            alt: "A mockup of a website on a Macbook",
           },
           {
             desktop: "/images/BRAND/mockups/Brand-Desktop-7.jpg",
             mobile: "/images/BRAND/mockups/Brand-Mobile-7.jpg",
+            alt: "A mockup of a website on an iPad",
           },
           {
             desktop: "/images/BRAND/mockups/Brand-Desktop-8.jpg",
             mobile: "/images/BRAND/mockups/Brand-Mobile-8.jpg",
+            alt: "A mockup of a website on an iPad",
           },
         ],
       },
