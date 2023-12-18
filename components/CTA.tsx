@@ -1,37 +1,27 @@
 "use client";
 
-import { motion as m } from "framer-motion";
+import FadeIn from "@/utils/animations";
 
-const CTA = () => {
+export default function CTA() {
   return (
-    <m.section
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      className="CTA"
-    >
-      <m.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-        Available for agency and freelance work
-      </m.p>
-      <m.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-        <m.a
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+    <FadeIn as="section" className="CTA">
+      <FadeIn as="p">Available for agency and freelance work</FadeIn>
+      <FadeIn as="div">
+        <FadeIn
+          as="a"
           className="CTAAgencyButton"
           href="mailto:careers@amansinghbhogal.com"
         >
           For Agencies
-        </m.a>
-        <m.a
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+        </FadeIn>
+        <FadeIn
+          as="a"
           className="CTAClientButton"
           href="mailto:business@amansinghbhogal.com"
         >
           For Clients
-        </m.a>
-      </m.div>
-    </m.section>
+        </FadeIn>
+      </FadeIn>
+    </FadeIn>
   );
-};
-
-export default CTA;
+}

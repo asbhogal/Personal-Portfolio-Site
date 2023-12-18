@@ -1,10 +1,11 @@
-import { motion as m } from "framer-motion";
+"use client";
 
 import CodeIcon from "../components/CodeIcon";
 import PaintIcon from "../components/PaintIcon";
 import RulerIcon from "../components/RulerIcon";
 import SpeedIcon from "../components/SpeedIcon";
 import { ServicesType } from "@/utils/types";
+import FadeIn from "@/utils/animations";
 
 const services: ServicesType[] = [
   {
@@ -39,31 +40,16 @@ const services: ServicesType[] = [
 
 export default function Services() {
   return (
-    <m.section
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      className="SkillsOffered"
-    >
+    <FadeIn as="section" className="SkillsOffered">
       {services.map((service) => (
-        <m.div
-          key={service.id}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="SkillBox"
-        >
-          <m.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="SkillBoxTopRow"
-          >
+        <FadeIn as="div" key={service.id} className="SkillBox">
+          <FadeIn as="div" className="SkillBoxTopRow">
             <p>{service.skill}</p>
             {service.icon}
-          </m.div>
-          <m.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-            {service.description}
-          </m.p>
-        </m.div>
+          </FadeIn>
+          <FadeIn as="p">{service.description}</FadeIn>
+        </FadeIn>
       ))}
-    </m.section>
+    </FadeIn>
   );
 }
