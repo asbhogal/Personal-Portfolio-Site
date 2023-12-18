@@ -23,6 +23,7 @@ export type TestimonialsType = {
 export type ProjectType = {
   id: number;
   project: string;
+  link: string;
   imageDesktop: string;
   imageMobile: string;
   imgAlt: string;
@@ -43,22 +44,24 @@ export type ProjectType = {
       code: string;
       site: string;
     };
+    type: string;
+    date: string;
     description: string;
-    design: string;
+    design?: string[][];
     typeface: {
       font: string;
       type: string;
       weights: string[];
     };
     branding?: {
-      images: string;
-      logos: string[];
-      components: string;
-      palette: string;
+      images?: string[];
+      logos?: string[];
+      components?: string;
+      palette?: string;
     };
     templates?: {
-      img: string;
-      alt: string;
+      img?: string;
+      alt?: string;
     };
     mockups: [
       {

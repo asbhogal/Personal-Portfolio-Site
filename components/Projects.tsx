@@ -47,10 +47,7 @@ export default function Projects() {
 
           return (
             <FadeIn as="div" className="ProjectBox" key={project.id}>
-              <Link
-                href={`/portfolio/${project.project}`}
-                className="ProjectLink"
-              >
+              <Link href={`/portfolio/${project.link}`} className="ProjectLink">
                 <SkillLozenge />
                 <picture className="PictureContainer">
                   <source media="(min-width: 600px)" srcSet={desktop} />
@@ -61,7 +58,7 @@ export default function Projects() {
               <FadeIn as="div" className="ProjectTitle HomePageProjectTitle">
                 <FadeIn as="h3">{project.project}</FadeIn>
                 <Link
-                  href={`/portfolio/${project.project}`}
+                  href={`/portfolio/${project.link}`}
                   className="HomePageProjectLinks"
                 >
                   <Arrow size={30} />
