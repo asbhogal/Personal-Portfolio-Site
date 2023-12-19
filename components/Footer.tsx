@@ -43,7 +43,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             key={link.id}
             href={link.href}
-            aria-label={link.ariaLabel}
+            aria-label={`${link.ariaLabel} (opens in new tab)`}
           >
             {link.icon}
           </FadeIn>
