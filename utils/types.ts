@@ -73,15 +73,32 @@ export type ProjectType = {
     description: string;
     design?: string[][];
     typeface: {
+      id: string;
       font: string;
       type: string;
       weights: string[];
     };
     branding?: {
-      images?: string[];
-      logos?: string[];
-      components?: string;
-      palette?: string;
+      images: [
+        {
+          img: string;
+          alt: string;
+        }
+      ][];
+      logos: [
+        {
+          img: string;
+          alt: string;
+        }
+      ][];
+      components: {
+        img: string;
+        alt: string;
+      };
+      palette: {
+        img: string;
+        alt: string;
+      };
     };
     templates?: {
       img?: string;

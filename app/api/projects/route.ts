@@ -40,6 +40,7 @@ export async function GET(request: Request) {
           "The templates were kept consistent in design, aesthetic and layout. The clean, minimalistic structure with attention to whitespacing, legibility and heirarchy was also respected, paralleling the affluence communicated by the brand. The logo itself is assured, sharp and rigid, to emphasise the nature and quality of their products. The anti-flash white provides a medium through which the two extremes of black and white fuse in different elements at play and merge across various content typesets, yet still manage to become two distinct entities in their own right, emboldened by the contrasting logos used.",
         ],
         typeface: {
+          id: "BrandTypeface",
           font: "Inter",
           type: "singular",
           weights: [
@@ -51,13 +52,30 @@ export async function GET(request: Request) {
           ],
         },
         branding: {
-          images: ["/images/BRAND/BrandImages.png"],
-          logos: [
-            "/images/logos/brand-logo-black.svg",
-            "/images/logos/brand-logo-white.svg",
+          images: [
+            {
+              img1: "/images/BRAND/BrandImages.png",
+              alt: "Images of Milanese-designed furniture",
+            },
           ],
-          components: "/images/BRAND/BrandComponents.svg",
-          palette: "/images/BRAND/BrandColorPalette.svg",
+          logos: [
+            {
+              img1: "/images/logos/brand-logo-black.svg",
+              alt: "The word BRAND in bold, black lettering",
+            },
+            {
+              img2: "/images/logos/brand-logo-white.svg",
+              alt: "The word BRAND in bold, white lettering",
+            },
+          ],
+          components: {
+            img: "/images/BRAND/BrandComponents.svg",
+            alt: "Various page components, including a testimonial card and buttons",
+          },
+          palette: {
+            img: "/images/BRAND/BrandColorPalette.svg",
+            alt: "A color palette",
+          },
         },
         templates: {
           img: "/images/BRAND/mockups/BrandMockups.png",
@@ -139,22 +157,26 @@ export async function GET(request: Request) {
           ],
         ],
         typeface: {
+          id: "LiteLifeTypeface",
           font: "Roboto",
           type: "singular",
           weights: ["04 Regular"],
         },
         branding: {
           images: [
-            "/images/LiteLife/assets/Yamaha.jpg",
-            "/images/LiteLife/assets/Screwdriver.jpg",
-            "/images/LiteLife/assets/Cord.jpg",
-            "/images/LiteLife/assets/DeskLamp.jpg",
-            "/images/LiteLife/assets/ChargingBank.jpg",
-            "/images/LiteLife/assets/iMacWhite.jpg",
-            "/images/LiteLife/assets/BlackMacbook.jpg",
-            "/images/LiteLife/assets/Earphones.jpg",
+            { img: "/images/LiteLife/assets/Yamaha.jpg" },
+            { img: "/images/LiteLife/assets/Screwdriver.jpg" },
+            { img: "/images/LiteLife/assets/Cord.jpg" },
+            { img: "/images/LiteLife/assets/DeskLamp.jpg" },
+            { img: "/images/LiteLife/assets/ChargingBank.jpg" },
+            { img: "/images/LiteLife/assets/iMacWhite.jpg" },
+            { img: "/images/LiteLife/assets/BlackMacbook.jpg" },
+            { img: "/images/LiteLife/assets/Earphones.jpg" },
           ],
-          palette: "/images/LiteLife/assets/LiteLifePalette.svg",
+          palette: {
+            img: "/images/LiteLife/assets/LiteLifePalette.svg",
+            alt: "A color palette",
+          },
         },
         mockups: [
           {
@@ -233,17 +255,12 @@ export async function GET(request: Request) {
           ],
         ],
         typeface: {
+          id: "OceanicaTypeface",
           font: "manrope",
           type: "singular",
           weights: ["04 Regular", "05 Medium", "06 Semi Bold", "07 Bold"],
         },
         branding: {
-          logos: [
-            {
-              img: "/images/Oceanica/assets/Logo.svg",
-              alt: "The words 'Oceanica' with a wave-shaped half circle to the left of it",
-            },
-          ],
           images: [
             {
               img1: "/images/Oceanica/assets/TestimonialCard.svg",
@@ -254,7 +271,14 @@ export async function GET(request: Request) {
               alt: "A snapshot of a package offer, with an image, title, placeholder text and price",
             },
           ],
-          palette: "/images/Oceanica/assets/oceanicaColorPalette.svg",
+          logos: {
+            img: "/images/Oceanica/assets/Logo.svg",
+            alt: "The words 'Oceanica' with a wave-shaped half circle to the left of it",
+          },
+          palette: {
+            img: "/images/Oceanica/assets/oceanicaColorPalette.svg",
+            alt: "A color palette",
+          },
         },
         templates: {
           img: "/images/Oceanica/mockups/OceanicaTemplates.png",
