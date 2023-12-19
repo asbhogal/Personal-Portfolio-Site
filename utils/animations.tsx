@@ -10,6 +10,7 @@ type FadeInProps = {
   rel?: string;
   src?: string;
   alt?: string;
+  "aria-label"?: string;
 };
 
 export default function FadeIn({
@@ -21,6 +22,7 @@ export default function FadeIn({
   rel,
   src,
   alt,
+  "aria-label": ariaLabel,
 }: FadeInProps) {
   const MotionComponent = motion[as as keyof typeof motion];
 
@@ -34,6 +36,7 @@ export default function FadeIn({
       rel={rel}
       src={src}
       alt={alt}
+      aria-label={ariaLabel}
     >
       {children}
     </MotionComponent>
