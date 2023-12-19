@@ -2,12 +2,14 @@ import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
 type FadeInProps = {
-  children: ReactNode;
+  children?: ReactNode;
   as?: keyof JSX.IntrinsicElements;
   className?: string;
   href?: string;
   target?: string;
   rel?: string;
+  src?: string;
+  alt?: string;
 };
 
 export default function FadeIn({
@@ -17,6 +19,8 @@ export default function FadeIn({
   href,
   target,
   rel,
+  src,
+  alt,
 }: FadeInProps) {
   const MotionComponent = motion[as as keyof typeof motion];
 
@@ -28,6 +32,8 @@ export default function FadeIn({
       href={href}
       target={target}
       rel={rel}
+      src={src}
+      alt={alt}
     >
       {children}
     </MotionComponent>

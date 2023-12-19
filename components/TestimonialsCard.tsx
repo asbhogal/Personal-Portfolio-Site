@@ -1,3 +1,5 @@
+"use client";
+
 import { fetcher } from "@/utils/fetcher";
 import { TestimonialsType } from "@/utils/types";
 import useSWR from "swr";
@@ -5,6 +7,7 @@ import "@splidejs/react-splide/css";
 import { splideOptions } from "@/utils/options";
 // @ts-ignore - suppress type checking for missing types
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import FadeIn from "@/utils/animations";
 
 export default function TestimonialsCard() {
   const { data, error } = useSWR("/api/testimonials", fetcher);
@@ -16,17 +19,24 @@ export default function TestimonialsCard() {
     <Splide aria-label="testimonials" options={splideOptions}>
       {data.testimonials.map((testimonial: TestimonialsType) => (
         <SplideSlide className="TestimonialCard" key={testimonial.id}>
-          <div>
-            <img
+          <FadeIn>
+            <FadeIn
+              as="img"
               className="TestimonialImage"
               src={`/images/${testimonial.img}`}
               alt={testimonial.imgAlt}
-            ></img>
-            <p className="TestimonialQuote">{testimonial.description}</p>
-            <div className="HorizontalDivider"></div>
-            <p className="TestimonialName">{testimonial.name}</p>
-            <p className="TestimonialTitle">{testimonial.title}</p>
-          </div>
+            ></FadeIn>
+            <FadeIn as="p" className="TestimonialQuote">
+              {testimonial.description}
+            </FadeIn>
+            <FadeIn as="div" className="HorizontalDivider"></FadeIn>
+            <FadeIn as="p" className="TestimonialName">
+              {testimonial.name}
+            </FadeIn>
+            <FadeIn as="p" className="TestimonialTitle">
+              {testimonial.title}
+            </FadeIn>
+          </FadeIn>
         </SplideSlide>
       ))}
     </Splide>
