@@ -312,6 +312,78 @@ export async function GET(request: Request) {
         ],
       },
     },
+    {
+      id: 4,
+      project: "cryptoverse",
+      link: "cryptoverse",
+      imageDesktop: "/images/Home/Cryptoverse-HomePage-Desktop.jpg",
+      imageMobile: "/images/Home/Cryptoverse-HomePage-Mobile.jpg",
+      imgAlt:
+        "An iMac with a Crypo-related application on the screen, against a black backdrop",
+      summary:
+        "A single page application which returns a range of crypto-related data, including currently top-trending currencies, market value, exchange rates and news. Built using Next.js with Redux RTK Query to handle multiple API calls.",
+      stacks: [
+        ["Next.js", "React", "Redux", "RTK Query", "RESTful APIs", "Axios"],
+        ["SPA", "SASS", "PostCSS", "Webpack", "Git", "Vercel"],
+      ],
+      skills: ["web design", "web development"],
+      code: "https://github.com/asbhogal/Next.js-Cryptocurrency-App",
+      site: "https://next-js-cryptocurrency-app.vercel.app/",
+      more: "https://www.amansinghbhogal.com/portfolio/cryptoverse",
+      details: {
+        hero: {
+          desktop: "/images/Cryptoverse/mockups/Cryptoverse-Desktop-Alt.jpg",
+          mobile: "/images/Cryptoverse/mockups/Cryptoverse-Mobile-Alt.jpg",
+          alt: "A close up of a Macbook with an application interface on the screen resting on its corner",
+        },
+        links: {
+          code: "https://github.com/asbhogal/Next.js-Cryptocurrency-App",
+          site: "https://next-js-cryptocurrency-app.vercel.app/",
+        },
+        type: "personal",
+        date: "March 2023 - April 2023",
+        description:
+          "A single page application which returns a range of crypto-related data, including currently top-trending currencies, market value, exchange rates and news. Built using Next.js with Redux RTK Query to handle multiple API calls",
+        design: [
+          [
+            "Cryptoverse is a conceptualised company which offers data on different cryptocurrencies, including market capitalisation, exchanges and current news. The application also allows users to look up the current stats of a cryptocurrency, including its ranking, price and market cap. The application was built using Next.js and leveraged Redux RTK Query to manage API calls from Coinranking, Coin Gecko and Bing News Search. The app was also styled using SCSS, compiled as a production build using Webpack and shipped via Vercel.",
+          ],
+        ],
+        typeface: {
+          id: "CryptoverseTypeface",
+          font: "Noto Sans",
+          type: "singular",
+          weights: ["02 Extra Light", "03 Light", "04 Regular"],
+        },
+        mockups: [
+          {
+            desktop: "/images/Cryptoverse/mockups/Cryptoverse-Desktop-1.jpg",
+            mobile: "/images/Cryptoverse/mockups/Cryptoverse-Mobile-1.jpg",
+            alt: "A mockup of a crypto application on an iMac",
+          },
+          {
+            desktop: "/images/Cryptoverse/mockups/Cryptoverse-Desktop-3.jpg",
+            mobile: "/images/Cryptoverse/mockups/Cryptoverse-Mobile-3.jpg",
+            alt: "A mockup of a crypto application on an iMac",
+          },
+          {
+            desktop: "/images/Cryptoverse/mockups/Cryptoverse-Desktop-2.jpg",
+            mobile: "/images/Cryptoverse/mockups/Cryptoverse-Mobile-2.jpg",
+            alt: "A mockup of a crypto application on two iPads, one in landscape and the other in portrait orientation",
+          },
+          {
+            desktop: "/images/Cryptoverse/mockups/Cryptoverse-Desktop-4.jpg",
+            mobile: "/images/Cryptoverse/mockups/Cryptoverse-Mobile-4.jpg",
+            alt: "A mockup of a crypto application on an iPhone resting at an angle next to a laptop keyboard",
+          },
+          {
+            desktop: "/images/Cryptoverse/mockups/Cryptoverse-Desktop-5.jpg",
+            mobile: "/images/Cryptoverse/mockups/Cryptoverse-Mobile-5.jpg",
+            alt: "A mockup of a crypto application on an HP laptop",
+          },
+        ],
+      },
+    },
   ];
   return NextResponse.json({ projects }, { status: 200 });
 }
