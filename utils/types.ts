@@ -65,6 +65,7 @@ export type ProjectType = {
     };
     links: {
       templates?: string;
+      challenge?: string;
       code: string;
       site: string;
     };
@@ -81,26 +82,10 @@ export type ProjectType = {
       weights: string[];
     };
     branding?: {
-      images: [
-        {
-          img: string;
-          alt: string;
-        }
-      ][];
-      logos: [
-        {
-          img: string;
-          alt: string;
-        }
-      ][];
-      components: {
-        img: string;
-        alt: string;
-      };
-      palette: {
-        img: string;
-        alt: string;
-      };
+      images?: { img: string; alt: string }[];
+      logos?: { img: string; alt: string }[];
+      components?: { img: string; alt: string };
+      palette?: { img: string; alt: string };
     };
     templates?: {
       img?: string;
@@ -110,12 +95,6 @@ export type ProjectType = {
       img?: string;
       alt?: string;
     };
-    mockups: [
-      {
-        desktop: string;
-        mobile: string;
-        alt: string;
-      }
-    ];
+    mockups: { desktop: string; mobile: string; alt: string }[];
   };
 };

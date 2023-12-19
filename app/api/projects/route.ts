@@ -1,7 +1,8 @@
+import { ProjectType } from "@/utils/types";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
-  const projects = [
+  const projects: ProjectType[] = [
     {
       id: 1,
       project: "brand",
@@ -38,7 +39,9 @@ export async function GET(request: Request) {
         description:
           "Brand is a conceptualised company which offers minimalistic interior decorating options inspired by Milanese design. Logos and assets were provided and from these, five responsive templates (for 5 breakpoints) were created using Figma. A responsive Web page from these was then built using React with SCSS, Babel and JS, compiled as a production build using Webpack and then shipped using Vercel.",
         design: [
-          "The templates were kept consistent in design, aesthetic and layout. The clean, minimalistic structure with attention to whitespacing, legibility and heirarchy was also respected, paralleling the affluence communicated by the brand. The logo itself is assured, sharp and rigid, to emphasise the nature and quality of their products. The anti-flash white provides a medium through which the two extremes of black and white fuse in different elements at play and merge across various content typesets, yet still manage to become two distinct entities in their own right, emboldened by the contrasting logos used.",
+          [
+            "The templates were kept consistent in design, aesthetic and layout. The clean, minimalistic structure with attention to whitespacing, legibility and heirarchy was also respected, paralleling the affluence communicated by the brand. The logo itself is assured, sharp and rigid, to emphasise the nature and quality of their products. The anti-flash white provides a medium through which the two extremes of black and white fuse in different elements at play and merge across various content typesets, yet still manage to become two distinct entities in their own right, emboldened by the contrasting logos used.",
+          ],
         ],
         typeface: {
           id: "BrandTypeface",
@@ -55,17 +58,17 @@ export async function GET(request: Request) {
         branding: {
           images: [
             {
-              img1: "/images/BRAND/BrandImages.png",
+              img: "/images/BRAND/BrandImages.png",
               alt: "Images of Milanese-designed furniture",
             },
           ],
           logos: [
             {
-              img1: "/images/logos/brand-logo-black.svg",
+              img: "/images/logos/brand-logo-black.svg",
               alt: "The word BRAND in bold, black lettering",
             },
             {
-              img2: "/images/logos/brand-logo-white.svg",
+              img: "/images/logos/brand-logo-white.svg",
               alt: "The word BRAND in bold, white lettering",
             },
           ],
@@ -166,14 +169,38 @@ export async function GET(request: Request) {
         },
         branding: {
           images: [
-            { img: "/images/LiteLife/assets/Yamaha.jpg" },
-            { img: "/images/LiteLife/assets/Screwdriver.jpg" },
-            { img: "/images/LiteLife/assets/Cord.jpg" },
-            { img: "/images/LiteLife/assets/DeskLamp.jpg" },
-            { img: "/images/LiteLife/assets/ChargingBank.jpg" },
-            { img: "/images/LiteLife/assets/iMacWhite.jpg" },
-            { img: "/images/LiteLife/assets/BlackMacbook.jpg" },
-            { img: "/images/LiteLife/assets/Earphones.jpg" },
+            {
+              img: "/images/LiteLife/assets/Yamaha.jpg",
+              alt: "",
+            },
+            {
+              img: "/images/LiteLife/assets/Screwdriver.jpg",
+              alt: "",
+            },
+            {
+              img: "/images/LiteLife/assets/Cord.jpg",
+              alt: "",
+            },
+            {
+              img: "/images/LiteLife/assets/DeskLamp.jpg",
+              alt: "",
+            },
+            {
+              img: "/images/LiteLife/assets/ChargingBank.jpg",
+              alt: "",
+            },
+            {
+              img: "/images/LiteLife/assets/iMacWhite.jpg",
+              alt: "",
+            },
+            {
+              img: "/images/LiteLife/assets/BlackMacbook.jpg",
+              alt: "",
+            },
+            {
+              img: "/images/LiteLife/assets/Earphones.jpg",
+              alt: "",
+            },
           ],
           palette: {
             img: "/images/LiteLife/assets/LiteLifePalette.svg",
@@ -266,18 +293,20 @@ export async function GET(request: Request) {
         branding: {
           images: [
             {
-              img1: "/images/Oceanica/assets/TestimonialCard.svg",
+              img: "/images/Oceanica/assets/TestimonialCard.svg",
               alt: "A testimonial card, with an image, placeholder text and name underneath",
             },
             {
-              img2: "/images/Oceanica/assets/PackagesCard.svg",
+              img: "/images/Oceanica/assets/PackagesCard.svg",
               alt: "A snapshot of a package offer, with an image, title, placeholder text and price",
             },
           ],
-          logos: {
-            img: "/images/Oceanica/assets/Logo.svg",
-            alt: "The words 'Oceanica' with a wave-shaped half circle to the left of it",
-          },
+          logos: [
+            {
+              img: "/images/Oceanica/assets/Logo.svg",
+              alt: "The words 'Oceanica' with a wave-shaped half circle to the left of it",
+            },
+          ],
           palette: {
             img: "/images/Oceanica/assets/oceanicaColorPalette.svg",
             alt: "A color palette",
