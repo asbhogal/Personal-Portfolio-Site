@@ -5,10 +5,6 @@ import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
 
 const errorPage = () => {
-  useEffect(() => {
-    document.title = "Error 404 | Aman Singh Bhogal";
-  }, []);
-
   return (
     <>
       <Header />

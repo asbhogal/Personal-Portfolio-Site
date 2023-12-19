@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import classNames from "classnames";
 import { usePathname } from "next/navigation";
 
@@ -15,8 +15,6 @@ const isMobile = () => {
 };
 
 const Cursor: React.FC = () => {
-  if (typeof navigator !== "undefined" && isMobile()) return null;
-
   const [position, setPosition] = useState<Position>({ x: 0, y: 0 }),
     [hidden, setHidden] = useState(false),
     [clicked, setClicked] = useState(false),
@@ -24,27 +22,21 @@ const Cursor: React.FC = () => {
 
   const pathname = usePathname();
 
-  useEffect(() => {
-    addEventListeners();
-    handleLinkHoverEvents();
-    return () => removeEventListeners();
-  }, [pathname]);
-
-  const addEventListeners = () => {
+  const addEventListeners = useCallback(() => {
     document.addEventListener("mousemove", onMouseMove);
     document.addEventListener("mouseenter", onMouseEnter);
     document.addEventListener("mouseleave", onMouseLeave);
     document.addEventListener("mouseup", onMouseUp);
     document.addEventListener("mousedown", onMouseDown);
-  };
+  }, []);
 
-  const removeEventListeners = () => {
+  const removeEventListeners = useCallback(() => {
     document.removeEventListener("mousemove", onMouseMove);
     document.removeEventListener("mouseenter", onMouseEnter);
     document.removeEventListener("mouseleave", onMouseLeave);
     document.removeEventListener("mouseup", onMouseUp);
     document.removeEventListener("mousedown", onMouseDown);
-  };
+  }, []);
 
   const onMouseMove = (e: MouseEvent) => {
     setPosition({ x: e.clientX, y: e.clientY });
@@ -67,12 +59,21 @@ const Cursor: React.FC = () => {
   };
 
   const handleLinkHoverEvents = () => {
-    document.querySelectorAll("a, button, svg").forEach((el) => {
+    document.querySelectorAll("a, button").forEach((el) => {
       el.addEventListener("mouseover", () => setLinkHovered(true));
       el.addEventListener("mouseout", () => setLinkHovered(false));
       el.addEventListener("click", () => setLinkHovered(false));
     });
   };
+
+  useEffect(() => {
+    if (typeof navigator !== "undefined" && isMobile()) {
+      return;
+    }
+    addEventListeners();
+    handleLinkHoverEvents();
+    return () => removeEventListeners();
+  }, [pathname, addEventListeners, removeEventListeners]);
 
   const cursorClasses = classNames("Cursor", {
     CursorHidden: hidden,
