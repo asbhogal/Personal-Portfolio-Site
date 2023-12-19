@@ -22,11 +22,11 @@ export type FooterLinksType = {
   icon: React.ReactNode;
 };
 
-export type MenuType = {
+export type MenuType = Array<{
   id: number;
   name: string;
   href: string;
-};
+}>;
 
 export type ServicesType = {
   id: number;

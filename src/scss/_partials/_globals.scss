@@ -7,7 +7,7 @@
   &:is(&::after, &::before, *) {
     box-sizing: border-box;
   }
-  // outline: 0.0625rem solid red;
+  outline: 0.0625rem solid red;
 }
 
 html {
