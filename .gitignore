@@ -37,3 +37,7 @@ next-env.d.ts
 
 /notes
 /omitted-code
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
