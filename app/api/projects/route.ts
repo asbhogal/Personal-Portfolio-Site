@@ -117,7 +117,7 @@ export async function GET(request: Request) {
     {
       id: 2,
       project: "lite life",
-      link: "litelife",
+      link: "lite-life",
       imageDesktop: "/images/home/LiteLife-HomePage-Desktop.jpg",
       imageMobile: "/images/home/LiteLife-HomePage-Mobile.jpg",
       imgAlt:
@@ -503,6 +503,74 @@ export async function GET(request: Request) {
             desktop: "/images/Calculator/Calculator-Desktop-8.jpg",
             mobile: "/images/Calculator/Calculator-Mobile-8.jpg",
             alt: "Two iPhones standing upright on a stair-like surface, showing two different themes of a calculator app",
+          },
+        ],
+      },
+    },
+    {
+      id: 6,
+      project: "le dimanche",
+      link: "le-dimanche",
+      imageDesktop: "/images/Home/LeDimanche-HomePage-Desktop.jpg",
+      imageMobile: "/images/Home/LeDimanche-HomePage-Mobile.jpg",
+      imgAlt:
+        "A luxury e-commerce site on a HTC phone, resting next to a laptop, both on a table",
+      summary:
+        "An exclusive e-commerce store designed to enhance customer weekend retreats by combining luxury with leisure. Built using TypeScript with React, custom hooks and context, local storage, Chakra UI and Vite.",
+      stacks: [
+        ["TypeScript", "React", "useReducer", "Custom Hooks", "Chakra UI"],
+        ["Local Storage API", "ES Lint", "Vite", "Git", "Vercel"],
+      ],
+      skills: ["web design", "web development"],
+      code: "https://github.com/asbhogal/TypeScript-Shopping-Cart",
+      site: "https://typescript-ecommerce-shop.vercel.app/shop",
+      more: "https://www.amansinghbhogal.com/portfolio/ledimanche",
+      details: {
+        hero: {
+          desktop: "/images/LeDimanche/LeDimanche-Desktop-Alt.jpg",
+          mobile: "/images/LeDimanche/LeDimanche-Mobile-Alt.jpg",
+          alt: "A laptop with a luxury e-commerce site, resting on a grey block",
+        },
+        links: {
+          code: "https://github.com/asbhogal/TypeScript-Shopping-Cart",
+          site: "https://typescript-ecommerce-shop.vercel.app/shop",
+        },
+        type: "personal",
+        date: "July 2023 - July 2023",
+        discipline: ["design", "development"],
+        description:
+          "Le Dimanche, French for 'On Sunday', is an exclusive e-commerce store providing a gateway to a world of opulent indulgence designed to enhance customer weekend retreats by combining luxury with leisure. The store sells designer handbags, finely-crafted timepieces and hand-made, small-batch spirits geared towards helping the customer savor those precious moments before the start of a new week. The site (SPA) has been built using TypeScript with React, ChakraUI and Vite with ESLint.",
+        typeface: {
+          id: "LeDimancheTypeface",
+          font: "Poiret One",
+          type: "singular",
+          weights: ["04 Regular", "06 Bold"],
+        },
+        mockups: [
+          {
+            desktop: "/images/LeDimanche/LeDimanche-Desktop-Alt3.jpg",
+            mobile: "/images/LeDimanche/LeDimanche-Mobile-Alt3.jpg",
+            alt: "A luxury e-commerce website on a Macbook resting on a grey couch",
+          },
+          {
+            desktop: "/images/LeDimanche/LeDimanche-Desktop-Alt2.jpg",
+            mobile: "/images/LeDimanche/LeDimanche-Mobile-Alt2.jpg",
+            alt: "A luxury e-commerce site on a HTC phone, resting next to a laptop, both on a table",
+          },
+          {
+            desktop: "/images/LeDimanche/LeDimanche-Desktop-4.jpg",
+            mobile: "/images/LeDimanche/LeDimanche-Mobile-4.jpg",
+            alt: "A luxury e-commerce site on an iPad against a white backdrop",
+          },
+          {
+            desktop: "/images/LeDimanche/LeDimanche-Desktop-5.jpg",
+            mobile: "/images/LeDimanche/LeDimanche-Mobile-5.jpg",
+            alt: "A luxury e-commerce site on an iMac, sitting on a desk with a vase to the right and a journal with a pen on the left",
+          },
+          {
+            desktop: "/images/LeDimanche/LeDimanche-Desktop-6.jpg",
+            mobile: "/images/LeDimanche/LeDimanche-Mobile-6.jpg",
+            alt: "A luxury e-commerce site on a mobile device, standing upright on top of rocks, with a branch next to it and a biege backdrop",
           },
         ],
       },
