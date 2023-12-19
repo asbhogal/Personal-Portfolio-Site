@@ -1,3 +1,20 @@
+export type AboutType = {
+  about: {
+    summary: string;
+    summary2: string;
+    experience: {
+      id: number;
+      position: string;
+      dates: string;
+      duties: string[];
+      stacks: string[];
+      link: {
+        href: string;
+      };
+    }[];
+  };
+};
+
 export type FooterLinksType = {
   id: number;
   href: string;
