@@ -15,7 +15,9 @@ A personal portfolio site created for the repo owner to showcase his projects, b
   - Next.js API routes for dynamic content
   - SWR for client-side data fetching
   - SASS for styling
-  - Framer Motion for animations
+  - Framer Motion for animations (custom component)
+  - Playwright for testing (incl. a11y)
+  - Husky to run linting and testing prior to commit
   - Fully responsive
   - Optimised for the web
 
