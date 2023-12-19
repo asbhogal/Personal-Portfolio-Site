@@ -34,6 +34,7 @@ export async function GET(request: Request) {
         },
         type: "personal",
         date: "Jan 2023 - Feb 2023",
+        discipline: ["design", "development"],
         description:
           "Brand is a conceptualised company which offers minimalistic interior decorating options inspired by Milanese design. Logos and assets were provided and from these, five responsive templates (for 5 breakpoints) were created using Figma. A responsive Web page from these was then built using React with SCSS, Babel and JS, compiled as a production build using Webpack and then shipped using Vercel.",
         design: [
@@ -146,6 +147,7 @@ export async function GET(request: Request) {
         },
         type: "personal",
         date: "Jan 2023 - Feb 2023",
+        discipline: ["design", "development"],
         description:
           "Lite Life is a conceptualised e-commerce company which specialises in selling high quality, simplistic technological products for minimalistic working environments. Design for this project was handled by Material UI. The project is a Single Page Application built using React and React Router with Commerce.js (a headless CMS) and React Hook Form to handle the project catalogue, cart system, ordering and customer data. Stripe payment gateway was also configured to handle the checkout process and order confirmation. This project was compiled using Webpack then deployed for production via Vercel.",
         design: [
@@ -247,6 +249,7 @@ export async function GET(request: Request) {
         },
         type: "personal",
         date: "Dec 2022 - Feb 2023",
+        discipline: ["design", "development"],
         description:
           "Oceanica is a conceptualised company which offers luxury travel resorts and activities around the world. Logos, assets and responsive templates (for 5 breakpoints) were created using Figma, including prototypes to simulate a booking screen. A responsive Web page from these was then built using React with SCSS, Babel and JS, compiled as a production build using Webpack and then shipped using Vercel.",
         design: [
@@ -342,6 +345,7 @@ export async function GET(request: Request) {
         },
         type: "personal",
         date: "March 2023 - April 2023",
+        discipline: ["design", "development"],
         description:
           "A single page application which returns a range of crypto-related data, including currently top-trending currencies, market value, exchange rates and news. Built using Next.js with Redux RTK Query to handle multiple API calls",
         design: [
@@ -380,6 +384,96 @@ export async function GET(request: Request) {
             desktop: "/images/Cryptoverse/mockups/Cryptoverse-Desktop-5.jpg",
             mobile: "/images/Cryptoverse/mockups/Cryptoverse-Mobile-5.jpg",
             alt: "A mockup of a crypto application on an HP laptop",
+          },
+        ],
+      },
+    },
+    {
+      id: 5,
+      project: "calculator",
+      link: "calculator",
+      imageDesktop: "/images/Home/Calculator-HomePage-Desktop.jpg",
+      imageMobile: "/images/Home/Calculator-HomePage-Mobile.jpg",
+      imgAlt:
+        "Two iPhones standing upright on a stair-like surface, showing two different themes of a calculator app",
+      summary:
+        "A completely redesigned Calculator app from an initial Frontend Mentor brief, including three modern themes and the ability to view the previous operands.",
+      stacks: [
+        ["React", "useReducer", "Custom Hooks", "Chakra UI", "Unit Testing"],
+        ["React Testing Library", "Jest", "Vite", "Git", "Vercel"],
+      ],
+      skills: ["web design", "web development"],
+      code: "https://github.com/asbhogal/React-Calculator",
+      site: "https://react-calculator-asbhogal.vercel.app/",
+      more: "https://www.amansinghbhogal.com/portfolio/calculator",
+      details: {
+        hero: {
+          desktop: "/images/Calculator/Calculator-Desktop-1.jpg",
+          mobile: "/images/Calculator/Calculator-Mobile-1.jpg",
+          alt: "A series of iPhone screens with a calculator in three different themes",
+        },
+        links: {
+          code: "https://github.com/asbhogal/Next.js-Cryptocurrency-App",
+          challenge:
+            "https://www.frontendmentor.io/solutions/react-calculator-usereducer-chakra-ui-tdd-LKGyEpFp7Y",
+          site: "https://react-calculator-asbhogal.vercel.app/",
+        },
+        type: "personal",
+        date: "July 2023 - July 2023",
+        discipline: ["design", "development"],
+        description:
+          "This project was a Frontend Mentor challenge which required creating a fully functional Calculator app with three themes and the ability to toggle between them from a brief and style guide. The following changes were subsequently made to improve the aesthetics, accessibility and UX of the app:",
+        list: [
+          "A redesigned UI complete with a light, dark and blue monochromatic theme and modern typeface",
+          "ChakraUI to handle the accessibility and styling of components (Chakra UI has been used to style the components, with custom component variants used to couple the styling with the JSX markup and theme extensions)",
+          "The ability to see the previous operands, as well as the current",
+        ],
+        design: [
+          [
+            "The decision was made to change the original design brief to reflect something more contemporary. The Inter typeface was chosen (weights 400, 500, 700) for a clear, clean, modern and affirmed typography with accentuated x-heights for improved readability with mixed-case and lower-case text. The three themes therefore chosen instead also aligned with modern-day styling: a conventional light (white) version, dark (black) version and blue version, each following a monochromatic-set of shades for visual consistency. Blue was chosen as the third and final theme for its medium between the two, harmonious and muted.",
+          ],
+        ],
+        typeface: {
+          id: "CalculatorTypeface",
+          font: "Inter",
+          type: "singular",
+          weights: ["04 Regular", "05 Medium", "07 Bold"],
+        },
+        mockups: [
+          {
+            desktop: "/images/Calculator/Calculator-Desktop-2.jpg",
+            mobile: "/images/Calculator/Calculator-Mobile-2.jpg",
+            alt: "A white-themed calculator application on an iPhone screen, resting next to a laptop",
+          },
+          {
+            desktop: "/images/Calculator/Calculator-Desktop-3.jpg",
+            mobile: "/images/Calculator/Calculator-Mobile-3.jpg",
+            alt: "A blue-themed calculator application on a tablet screen, with a white stylus pen and keyboard, resting on a small coffee table with a black coffee cup on the right",
+          },
+          {
+            desktop: "/images/Calculator/Calculator-Desktop-4.jpg",
+            mobile: "/images/Calculator/Calculator-Mobile-4.jpg",
+            alt: "A dark-themed calculator application on an iMac screen",
+          },
+          {
+            desktop: "/images/Calculator/Calculator-Desktop-5.jpg",
+            mobile: "/images/Calculator/Calculator-Mobile-5.jpg",
+            alt: "A dark-themed calculator application on a tablet screen, with a keyboard attached against a deep grey background",
+          },
+          {
+            desktop: "/images/Calculator/Calculator-Desktop-6.jpg",
+            mobile: "/images/Calculator/Calculator-Mobile-6.jpg",
+            alt: "A blue-themed calculator application on a Macbook screen against a white backdrop",
+          },
+          {
+            desktop: "/images/Calculator/Calculator-Desktop-7.jpg",
+            mobile: "/images/Calculator/Calculator-Mobile-7.jpg",
+            alt: "A dark-themed calculator application on an Android screen against a white backdrop",
+          },
+          {
+            desktop: "/images/Calculator/Calculator-Desktop-8.jpg",
+            mobile: "/images/Calculator/Calculator-Mobile-8.jpg",
+            alt: "Two iPhones standing upright on a stair-like surface, showing two different themes of a calculator app",
           },
         ],
       },

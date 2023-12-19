@@ -70,7 +70,9 @@ export type ProjectType = {
     };
     type: string;
     date: string;
+    discipline: string[];
     description: string;
+    list?: string[];
     design?: string[][];
     typeface: {
       id: string;
