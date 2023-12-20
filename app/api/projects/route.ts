@@ -663,7 +663,7 @@ export async function GET(request: Request) {
         },
         type: "personal",
         date: "October 2023 - November 2023",
-        discipline: ["design", "development"],
+        discipline: ["development"],
         description:
           "Fyrre Magazine is a bold, striking arts and life-focused website focused on articles and podcasts regarding the European culture and arts scene. The app was developed from initial Figma designs created by Webflow Designer Pawel Gola. Next.js and RSC were used to handle the data fetching of the dynamic content (articles, podcasts and authors) from JSON data created to simulate an API endpoint. The site was built using the now-stable app router in Next.js, with TypeScript for type safety, Shadcn for accessible components, Tailwind for responsive styling and GSAP for horizontal scrolling animations. E2E testing using playwright was implemented, as well as React Suspense for UI loading states during data fetching. Context API and Custom Hooks were initially used for the child components, which stored the data fetched at a higher level. This was then refactored to have each component fetch directly via async/await and subsequently converted back to Server Components. The site was deployed using Vercel.",
         typeface: {
