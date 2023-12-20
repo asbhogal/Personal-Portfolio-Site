@@ -52,7 +52,7 @@ export default function Projects() {
           return (
             <FadeIn as="div" className="ProjectBox" key={project.id}>
               <Link
-                href={`/portfolio/${project.link}`}
+                href={`/portfolio/${project.slug}`}
                 className="ProjectLink"
                 aria-label={project.project}
               >
@@ -66,7 +66,7 @@ export default function Projects() {
               <FadeIn as="div" className="ProjectTitle HomePageProjectTitle">
                 <FadeIn as="h3">{project.project}</FadeIn>
                 <Link
-                  href={`/portfolio/${project.link}`}
+                  href={`/portfolio/${project.slug}`}
                   className="HomePageProjectLinks"
                   aria-label={project.project}
                 >

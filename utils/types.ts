@@ -47,7 +47,7 @@ export type TestimonialsType = {
 export type ProjectType = {
   id: number;
   project: string;
-  link: string;
+  slug: string;
   imageDesktop: string;
   imageMobile: string;
   imgAlt: string;

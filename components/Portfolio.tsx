@@ -41,7 +41,7 @@ export default function Portfolio() {
             <FadeIn
               as="a"
               className="ProjectSectionLink"
-              href={`/${project.link}`}
+              href={`/${project.slug}`}
               aria-label={project.project}
             >
               <picture className="PictureContainer">

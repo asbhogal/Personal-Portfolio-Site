@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     {
       id: 1,
       project: "brand",
-      link: "brand",
+      slug: "brand",
       imageDesktop: "/images/home/Brand-HomePage-Desktop.jpg",
       imageMobile: "/images/home/Brand-HomePage-Mobile.jpg",
       imgAlt:
@@ -122,7 +122,7 @@ export async function GET(request: Request) {
     {
       id: 2,
       project: "lite life",
-      link: "lite-life",
+      slug: "lite-life",
       imageDesktop: "/images/home/LiteLife-HomePage-Desktop.jpg",
       imageMobile: "/images/home/LiteLife-HomePage-Mobile.jpg",
       imgAlt:
@@ -250,7 +250,7 @@ export async function GET(request: Request) {
     {
       id: 3,
       project: "oceanica",
-      link: "oceanica",
+      slug: "oceanica",
       imageDesktop: "/images/Home/Oceanica-HomePage-Desktop.jpg",
       imageMobile: "/images/Home/Oceanica-HomePage-Mobile.jpg",
       imgAlt:
@@ -363,7 +363,7 @@ export async function GET(request: Request) {
     {
       id: 4,
       project: "cryptoverse",
-      link: "cryptoverse",
+      slug: "cryptoverse",
       imageDesktop: "/images/Home/Cryptoverse-HomePage-Desktop.jpg",
       imageMobile: "/images/Home/Cryptoverse-HomePage-Mobile.jpg",
       imgAlt:
@@ -441,7 +441,7 @@ export async function GET(request: Request) {
     {
       id: 5,
       project: "calculator",
-      link: "calculator",
+      slug: "calculator",
       imageDesktop: "/images/Home/Calculator-HomePage-Desktop.jpg",
       imageMobile: "/images/Home/Calculator-HomePage-Mobile.jpg",
       imgAlt:
@@ -536,7 +536,7 @@ export async function GET(request: Request) {
     {
       id: 6,
       project: "le dimanche",
-      link: "le-dimanche",
+      slug: "le-dimanche",
       imageDesktop: "/images/Home/LeDimanche-HomePage-Desktop.jpg",
       imageMobile: "/images/Home/LeDimanche-HomePage-Mobile.jpg",
       imgAlt:
@@ -609,7 +609,7 @@ export async function GET(request: Request) {
     {
       id: 7,
       project: "fyrre magazine",
-      link: "fyrre-magazine",
+      slug: "fyrre-magazine",
       imageDesktop: "/images/Home/FyrreMagazine-HomePage-Desktop.jpg",
       imageMobile: "/images/Home/FyrreMagazine-HomePage-Mobile.jpg",
       imgAlt:
