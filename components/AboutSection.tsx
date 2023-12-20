@@ -59,6 +59,7 @@ export default function AboutSection() {
                   rel="noreferrer noopener"
                   href={experiences.link.href}
                   className="WorkLinks"
+                  aria-label="work"
                 >
                   work
                 </FadeIn>
