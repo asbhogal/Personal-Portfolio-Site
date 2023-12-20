@@ -63,7 +63,10 @@ export default function Header() {
               href="/"
               aria-label="Return to the home page"
             >
+              <span className="sr-only">Return to the home page</span>
               <svg
+                aria-hidden="true"
+                focusable="false"
                 width="45"
                 height="45"
                 viewBox="0 0 69 86"
