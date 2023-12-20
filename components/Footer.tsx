@@ -12,19 +12,19 @@ const FooterLinks: FooterLinksType[] = [
     id: 1,
     href: "https://www.linkedin.com/in/amansinghbhogal",
     ariaLabel: "LinkedIn page",
-    icon: <FaLinkedinIn />,
+    icon: <FaLinkedinIn aria-hidden="true" focusable="false" />,
   },
   {
     id: 2,
     href: "https://www.github.com/asbhogal",
     ariaLabel: "GitHub page",
-    icon: <BsGithub />,
+    icon: <BsGithub aria-hidden="true" focusable="false" />,
   },
   {
     id: 3,
     href: "https://www.figma.com/@amansinghbhogal",
     ariaLabel: "Figma profile",
-    icon: <FiFigma />,
+    icon: <FiFigma aria-hidden="true" focusable="false" />,
   },
 ];
 
@@ -46,6 +46,9 @@ export default function Footer() {
             aria-label={`${link.ariaLabel} (opens in new tab)`}
           >
             {link.icon}
+            <FadeIn as="span" className="sr-only">
+              {link.ariaLabel}
+            </FadeIn>
           </FadeIn>
         ))}
       </FadeIn>
