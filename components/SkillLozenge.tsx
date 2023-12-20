@@ -1,28 +1,21 @@
 "use client";
 
+import FadeIn from "@/utils/animations";
+import { ProjectType } from "@/utils/types";
 import { motion as m } from "framer-motion";
 
-const SkillLozenge = () => {
+const SkillLozenge = ({ skills }: { skills: string[] }) => {
   return (
     <m.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       className="SkillLozenges"
     >
-      <m.span
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        className="SkillLozenge"
-      >
-        WEB DESIGN
-      </m.span>
-      <m.span
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        className="SkillLozenge"
-      >
-        WEB DEVELOPMENT
-      </m.span>
+      {skills.map((skill) => (
+        <FadeIn as="span" className="SkillLozenge" key={skill}>
+          {skill}
+        </FadeIn>
+      ))}
     </m.div>
   );
 };

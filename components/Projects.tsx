@@ -56,7 +56,7 @@ export default function Projects() {
                 className="ProjectLink"
                 aria-label={project.project}
               >
-                <SkillLozenge />
+                <SkillLozenge skills={project.skills} />
                 <picture className="PictureContainer">
                   <source media="(min-width: 600px)" srcSet={desktop} />
                   <img src={mobile} alt={project.imgAlt} />
