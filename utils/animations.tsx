@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 type FadeInProps = {
   children?: ReactNode;
   as?: keyof JSX.IntrinsicElements;
+  id?: string;
   className?: string;
   href?: string;
   target?: string;
@@ -17,6 +18,7 @@ export default function FadeIn({
   children,
   as = "div",
   className = "",
+  id,
   href,
   target,
   rel,
@@ -31,6 +33,7 @@ export default function FadeIn({
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       className={className}
+      id={id}
       href={href}
       target={target}
       rel={rel}

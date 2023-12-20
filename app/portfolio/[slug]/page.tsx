@@ -96,6 +96,38 @@ export default function Page({ params }: { params: { slug: string } }) {
           )}
         </FadeIn>
       </FadeIn>
+
+      {projectData.details.design && (
+        <FadeIn as="section" className="DesignDecisions">
+          <FadeIn as="h2">Design Decisions</FadeIn>
+          <FadeIn as="p" className="ProjectAboutContent">
+            {projectData.details.design}
+          </FadeIn>
+        </FadeIn>
+      )}
+
+      <FadeIn as="section" className="ProjectTypefaces">
+        <FadeIn as="h2">Typeface</FadeIn>
+        <FadeIn as="div" className="ProjectTypefaceInfo">
+          <FadeIn as="span" id={projectData.details.typeface.id}>
+            {projectData.details.typeface.font}
+          </FadeIn>
+          <FadeIn
+            as="div"
+            id={projectData.details.typeface.id}
+            className="TypefaceWeights"
+          >
+            <FadeIn as="span">{projectData.details.typeface.type}</FadeIn>
+            <FadeIn as="ul" className="TypefaceWeightsList">
+              {projectData.details.typeface.weights.map((weight) => (
+                <FadeIn as="li" key={weight}>
+                  {weight}
+                </FadeIn>
+              ))}
+            </FadeIn>
+          </FadeIn>
+        </FadeIn>
+      </FadeIn>
     </div>
   );
 }
