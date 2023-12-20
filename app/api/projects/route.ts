@@ -575,6 +575,101 @@ export async function GET(request: Request) {
         ],
       },
     },
+    {
+      id: 7,
+      project: "fyrre magazine",
+      link: "fyrre-magazine",
+      imageDesktop: "/images/Home/FyrreMagazine-HomePage-Desktop.jpg",
+      imageMobile: "/images/Home/FyrreMagazine-HomePage-Mobile.jpg",
+      imgAlt:
+        "An iPhone standing upright on an elevated concrete platform with showing a magazine site on the display. The title 'Art & Life' is seen in bold uppercase on the screen",
+      summary:
+        "A bold, striking SPA arts and life-focused magazine website developed from Figma designs using Next.js, TypeScript React Server Components, Shadcn, Tailwind CSS, GSAP and E2E testing with Playwright.",
+      stacks: [
+        [
+          "Next.js",
+          "React Server Components",
+          "TypeScript",
+          "React Suspense",
+          "Context API",
+          "Custom Hooks",
+          "React Hook Form",
+          "Zod",
+          "Server Actions",
+        ],
+        [
+          "SPA",
+          "Tailwind CSS",
+          "Shadcn",
+          "GSAP",
+          "E2E Testing",
+          "Playwright",
+          "Husky",
+          "Git",
+          "Vercel",
+        ],
+      ],
+      skills: ["web development"],
+      code: "https://github.com/asbhogal/Fyrre-Magazine",
+      site: "https://fyrremagazine.vercel.app/",
+      more: "https://www.amansinghbhogal.com/portfolio/fyrremagazine",
+      details: {
+        hero: {
+          desktop: "/images/FyrreMagazine/FyrreMagazine-Desktop-1.jpg",
+          mobile: "/images/FyrreMagazine/FyrreMagazine-Mobile-1.jpg",
+          alt: "An iPhone standing upright on an elevated concrete platform with showing a magazine site on the display. The title 'Art & Life' is seen in bold uppercase on the screen",
+        },
+        links: {
+          templates:
+            "https://www.figma.com/community/file/1136023191939170511/fyrre-magazine-website-webflow-template",
+          code: "https://github.com/asbhogal/Fyrre-Magazine",
+          site: "https://fyrre-magazine.vercel.app/",
+        },
+        type: "personal",
+        date: "October 2023 - November 2023",
+        discipline: ["design", "development"],
+        description:
+          "Fyrre Magazine is a bold, striking arts and life-focused website focused on articles and podcasts regarding the European culture and arts scene. The app was developed from initial Figma designs created by Webflow Designer Pawel Gola. Next.js and RSC were used to handle the data fetching of the dynamic content (articles, podcasts and authors) from JSON data created to simulate an API endpoint. The site was built using the now-stable app router in Next.js, with TypeScript for type safety, Shadcn for accessible components, Tailwind for responsive styling and GSAP for horizontal scrolling animations. E2E testing using playwright was implemented, as well as React Suspense for UI loading states during data fetching. Context API and Custom Hooks were initially used for the child components, which stored the data fetched at a higher level. This was then refactored to have each component fetch directly via async/await and subsequently converted back to Server Components. The site was deployed using Vercel.",
+        typeface: {
+          id: "FyrreMagazineTypeface",
+          font: "General Sans",
+          type: "singular",
+          weights: ["04 Regular", "05 Medium", "06 Semi Bold"],
+        },
+        mockups: [
+          {
+            desktop: "/images/FyrreMagazine/FyrreMagazine-Desktop-2.jpg",
+            mobile: "/images/FyrreMagazine/FyrreMagazine-Mobile-2.jpg",
+            alt: "A magazine article with the words 'The Best Art Museums' on a MacBook, resting on a bed with pillows and daylight behind",
+          },
+          {
+            desktop: "/images/FyrreMagazine/FyrreMagazine-Desktop-3.jpg",
+            mobile: "/images/FyrreMagazine/FyrreMagazine-Mobile-3.jpg",
+            alt: "A magazine website on an iPad in horizontal orientation, resting at an angle on a dark backdrop. The title 'Art & Life' is seen in bold uppercase on the screen",
+          },
+          {
+            desktop: "/images/FyrreMagazine/FyrreMagazine-Desktop-4.jpg",
+            mobile: "/images/FyrreMagazine/FyrreMagazine-Mobile-4.jpg",
+            alt: "A podcast article on an iPad in vertical orientation. The title 'The Art of Movement' is seen in bold uppercase, with podcast information",
+          },
+          {
+            desktop: "/images/FyrreMagazine/FyrreMagazine-Desktop-7.jpg",
+            mobile: "/images/FyrreMagazine/FyrreMagazine-Mobile-7.jpg",
+            alt: "A magazine article on an iPad in vertical orientation and the same screen on an iPhone resting to the left of it. The title 'The Devil Is The Details' is seen in bold uppercase, with article information. Both devices rest on a desk.",
+          },
+          {
+            desktop: "/images/FyrreMagazine/FyrreMagazine-Desktop-5.jpg",
+            mobile: "/images/FyrreMagazine/FyrreMagazine-Mobile-5.jpg",
+            alt: "A magazine website on an iMac with the tower standing next to it. The title 'Art & Life' is seen in bold uppercase on the screen",
+          },
+          {
+            desktop: "/images/FyrreMagazine/FyrreMagazine-Desktop-6.jpg",
+            mobile: "/images/FyrreMagazine/FyrreMagazine-Mobile-6.jpg",
+            alt: "A magazine article on a Nothing Phone elevated and at a slight angle. The title 'Street Art Festival' is seen in bold uppercase on the screen, as well as article info underneath it",
+          },
+        ],
+      },
+    },
   ];
   return NextResponse.json({ projects }, { status: 200 });
 }
