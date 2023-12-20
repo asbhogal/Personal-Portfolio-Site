@@ -57,6 +57,11 @@ export type ProjectType = {
   code: string;
   site: string;
   more: string;
+  portfolioImg: {
+    desktop: string;
+    mobile: string;
+    alt: string;
+  };
   details: {
     hero: {
       desktop: string;

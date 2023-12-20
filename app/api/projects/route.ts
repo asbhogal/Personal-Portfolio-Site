@@ -21,6 +21,11 @@ export async function GET(request: Request) {
       code: "https://github.com/asbhogal/React-Brand-Responsive-Web-Page",
       site: "https://brand-responsive-web-page.vercel.app/",
       more: "https://www.amansinghbhogal.com/portfolio/brand",
+      portfolioImg: {
+        desktop: "/images/Portfolio/Brand-PortfolioPage-Desktop.jpg",
+        mobile: "/images/Portfolio/Brand-PortfolioPage-Mobile.jpg",
+        alt: "A series of iPhones face down, with one faced-up and a website on its screen",
+      },
       details: {
         hero: {
           desktop: "/images/BRAND/mockups/Brand-Desktop-1.jpg",
@@ -131,6 +136,7 @@ export async function GET(request: Request) {
           "React Router",
           "DOMPurify",
           "Commerce.js (Headless CMS)",
+          "RESTful APIs",
         ],
         ["SPA", "Stripe", "Material UI", "Webpack", "Git", "Vercel"],
       ],
@@ -138,6 +144,11 @@ export async function GET(request: Request) {
       code: "https://github.com/asbhogal/React-Tech-Commerce.Js-Site",
       site: "https://litelife.vercel.app/",
       more: "https://www.amansinghbhogal.com/portfolio/litelife",
+      portfolioImg: {
+        desktop: "/images/Portfolio/LiteLife-PortfolioPage-Desktop.jpg",
+        mobile: "/images/Portfolio/LiteLife-PortfolioPage-Mobile.jpg",
+        alt: "A Galaxy phone with an e-commerce site on the screen",
+      },
       details: {
         hero: {
           desktop: "/images/LiteLife/mockups/LiteLife-Desktop-1.jpg",
@@ -262,6 +273,11 @@ export async function GET(request: Request) {
       code: "https://github.com/asbhogal/React-Oceanica-Responsive-Web-Page",
       site: "https://oceanica.vercel.app/",
       more: "https://www.amansinghbhogal.com/portfolio/oceanica",
+      portfolioImg: {
+        desktop: "/images/Portfolio/Oceanica-PortfolioPage-Desktop.jpg",
+        mobile: "/images/Portfolio/Oceanica-PortfolioPage-Mobile.jpg",
+        alt: "A MacBook in front of a pool showing a website",
+      },
       details: {
         hero: {
           desktop: "/images/Oceanica/mockups/Oceanica-Desktop-1.jpg",
@@ -362,6 +378,11 @@ export async function GET(request: Request) {
       code: "https://github.com/asbhogal/Next.js-Cryptocurrency-App",
       site: "https://next-js-cryptocurrency-app.vercel.app/",
       more: "https://www.amansinghbhogal.com/portfolio/cryptoverse",
+      portfolioImg: {
+        desktop: "/images/Portfolio/Cryptoverse-PortfolioPage-Desktop.jpg",
+        mobile: "/images/Portfolio/Cryptoverse-PortfolioPage-Mobile.jpg",
+        alt: "A Cryptocurrency application on an iPhone screen, lying next to a Macbook keyboard",
+      },
       details: {
         hero: {
           desktop: "/images/Cryptoverse/mockups/Cryptoverse-Desktop-Alt.jpg",
@@ -435,6 +456,11 @@ export async function GET(request: Request) {
       code: "https://github.com/asbhogal/React-Calculator",
       site: "https://react-calculator-asbhogal.vercel.app/",
       more: "https://www.amansinghbhogal.com/portfolio/calculator",
+      portfolioImg: {
+        desktop: "/images/Portfolio/Calculator-PortfolioPage-Desktop.jpg",
+        mobile: "/images/Portfolio/Calculator-PortfolioPage-Mobile.jpg",
+        alt: "Two iPhones standing upright on a stair-like surface showing two different themes of a calculator app",
+      },
       details: {
         hero: {
           desktop: "/images/Calculator/Calculator-Desktop-1.jpg",
@@ -525,6 +551,11 @@ export async function GET(request: Request) {
       code: "https://github.com/asbhogal/TypeScript-Shopping-Cart",
       site: "https://typescript-ecommerce-shop.vercel.app/shop",
       more: "https://www.amansinghbhogal.com/portfolio/ledimanche",
+      portfolioImg: {
+        desktop: "/images/Portfolio/LeDimanche-PortfolioPage-Desktop.jpg",
+        mobile: "/images/Portfolio/LeDimanche-PortfolioPage-Mobile.jpg",
+        alt: "A luxury shopping site on a Macbook, resting on a white table with a mobile next to it",
+      },
       details: {
         hero: {
           desktop: "/images/LeDimanche/LeDimanche-Desktop-Alt.jpg",
@@ -613,6 +644,11 @@ export async function GET(request: Request) {
       code: "https://github.com/asbhogal/Fyrre-Magazine",
       site: "https://fyrremagazine.vercel.app/",
       more: "https://www.amansinghbhogal.com/portfolio/fyrremagazine",
+      portfolioImg: {
+        desktop: "/images/Portfolio/FyrreMagazine-PortfolioPage-Desktop.jpg",
+        mobile: "/images/Portfolio/FyrreMagazine-PortfolioPage-Mobile.jpg",
+        alt: "An iPhone standing upright on an elevated concrete platform with showing a magazine site on the display. The title 'Art & Life' is seen in bold uppercase on the screen",
+      },
       details: {
         hero: {
           desktop: "/images/FyrreMagazine/FyrreMagazine-Desktop-1.jpg",
