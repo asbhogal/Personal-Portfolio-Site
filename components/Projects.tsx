@@ -19,7 +19,11 @@ export default function Projects() {
     <FadeIn as="section" className="ProjectScreens">
       <FadeIn as="div" className="HomePageSectionBar">
         <FadeIn as="h2">Selected Work</FadeIn>
-        <Link href="/portfolio" className="AllProjectsLink">
+        <Link
+          href="/portfolio"
+          className="AllProjectsLink"
+          aria-label="Portfolio"
+        >
           <Arrow size={40} />
         </Link>
       </FadeIn>
@@ -47,7 +51,11 @@ export default function Projects() {
 
           return (
             <FadeIn as="div" className="ProjectBox" key={project.id}>
-              <Link href={`/portfolio/${project.link}`} className="ProjectLink">
+              <Link
+                href={`/portfolio/${project.link}`}
+                className="ProjectLink"
+                aria-label={project.project}
+              >
                 <SkillLozenge />
                 <picture className="PictureContainer">
                   <source media="(min-width: 600px)" srcSet={desktop} />
@@ -60,6 +68,7 @@ export default function Projects() {
                 <Link
                   href={`/portfolio/${project.link}`}
                   className="HomePageProjectLinks"
+                  aria-label={project.project}
                 >
                   <Arrow size={30} />
                 </Link>

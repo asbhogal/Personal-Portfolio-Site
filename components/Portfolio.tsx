@@ -38,14 +38,19 @@ export default function Portfolio() {
 
         return (
           <FadeIn as="div" className="ProjectSectionBox" key={project.id}>
-            <FadeIn as="a" className="ProjectSectionLink">
+            <FadeIn
+              as="a"
+              className="ProjectSectionLink"
+              href={`/${project.link}`}
+              aria-label={project.project}
+            >
               <picture className="PictureContainer">
                 <source media="(min-width: 600px)" srcSet={desktop} />
                 <img src={mobile} alt={project.portfolioImg.alt} />
               </picture>
             </FadeIn>
             <FadeIn as="div" className="ProjectBoxContent">
-              <FadeIn as="h3" className="ProjectBoxContentTitle">
+              <FadeIn as="h2" className="ProjectBoxContentTitle">
                 {project.project}
               </FadeIn>
               <FadeIn as="p" className="ProjectBoxContentText">
@@ -68,13 +73,28 @@ export default function Portfolio() {
                 </FadeIn>
               </FadeIn>
               <FadeIn as="div" className="ProjectBoxLinks">
-                <FadeIn as="a" className="ProjectButton" href={project.code}>
+                <FadeIn
+                  as="a"
+                  className="ProjectButton"
+                  href={project.code}
+                  aria-label={`Code for ${project.project} project`}
+                >
                   Code
                 </FadeIn>
-                <FadeIn as="a" className="ProjectButton" href={project.site}>
+                <FadeIn
+                  as="a"
+                  className="ProjectButton"
+                  href={project.site}
+                  aria-label={`Site for ${project.project} project`}
+                >
                   Site
                 </FadeIn>
-                <FadeIn as="a" className="ProjectButton" href={project.more}>
+                <FadeIn
+                  as="a"
+                  className="ProjectButton"
+                  href={project.more}
+                  aria-label={`View more about ${project.project} project`}
+                >
                   View More
                 </FadeIn>
               </FadeIn>
