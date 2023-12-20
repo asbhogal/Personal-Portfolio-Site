@@ -11,6 +11,7 @@ export default function CTA() {
           as="a"
           className="CTAAgencyButton"
           href="mailto:careers@amansinghbhogal.com"
+          aria-label="for agencies"
         >
           For Agencies
         </FadeIn>
@@ -18,6 +19,7 @@ export default function CTA() {
           as="a"
           className="CTAClientButton"
           href="mailto:business@amansinghbhogal.com"
+          aria-label="for clients"
         >
           For Clients
         </FadeIn>

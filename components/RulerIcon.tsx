@@ -1,12 +1,15 @@
-const RulerIcon = () => {
+export default function RulerIcon() {
   return (
     <svg
+      role="img"
+      aria-labelledby="icon-title"
       width="35"
       height="35"
       viewBox="0 0 256 256"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title id="icon-title">Triangular ruler in a circle</title>
       <path
         d="M96.1693 119.864C90.5738 114.263 81 118.231 81 126.146V163.667C81 166.407 82.0887 169.036 84.0266 170.974C85.9644 172.911 88.5928 174 91.3333 174H128.854C136.769 174 140.737 164.426 135.136 158.831L96.1693 119.864ZM125.361 163.667H91.3333V129.639L125.361 163.667Z"
         fill="#C6C0C4"
@@ -26,6 +29,4 @@ const RulerIcon = () => {
       />
     </svg>
   );
-};
-
-export default RulerIcon;
+}

@@ -1,12 +1,15 @@
-const CodeIcon = () => {
+export default function CodeIcon() {
   return (
     <svg
+      role="img"
+      aria-labelledby="icon-title"
       width="35"
       height="35"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title id="icon-title">Code syntax in a circle</title>
       <path
         d="M12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22Z"
         stroke="#C6C0C4"
@@ -18,6 +21,4 @@ const CodeIcon = () => {
       />
     </svg>
   );
-};
-
-export default CodeIcon;
+}

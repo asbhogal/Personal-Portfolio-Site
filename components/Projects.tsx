@@ -71,6 +71,7 @@ export default function Projects() {
                   aria-label={project.project}
                 >
                   <Arrow size={30} />
+                  <span className="sr-only">{project.project}</span>
                 </Link>
               </FadeIn>
             </FadeIn>

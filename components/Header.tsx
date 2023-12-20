@@ -100,6 +100,7 @@ export default function Header() {
             <span className={navOpen ? "LineBottom Spin" : "LineBottom"}></span>
           </button>
           <a
+            aria-label="hire"
             className="HireCTAHeader"
             href="mailto:business@amansinghbhogal.com"
           >

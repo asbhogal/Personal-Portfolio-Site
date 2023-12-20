@@ -46,9 +46,7 @@ export default function Footer() {
             aria-label={`${link.ariaLabel} (opens in new tab)`}
           >
             {link.icon}
-            <FadeIn as="span" className="sr-only">
-              {link.ariaLabel}
-            </FadeIn>
+            <span className="sr-only">{link.ariaLabel}</span>
           </FadeIn>
         ))}
       </FadeIn>
