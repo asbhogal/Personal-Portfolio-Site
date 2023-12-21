@@ -36,6 +36,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div className="Project">
+      <h1 className="sr-only">{projectData.project}</h1>
       <FadeIn as="section" className="ProjectHero">
         <picture className="PictureContainer">
           <source media="(min-width: 600px)" srcSet={desktop} />

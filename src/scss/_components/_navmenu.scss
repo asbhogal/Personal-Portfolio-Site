@@ -8,6 +8,7 @@
 
 .NavItems {
   font-size: clamp(2.375rem, 1.6607rem + 3.5714vw, 4.875rem);
+  line-height: 1.2;
 }
 
 .NavLinks {
@@ -34,6 +35,7 @@
 
 .NavOverlay {
   opacity: 0;
+  visibility: hidden;
   position: absolute;
   background: $SmokyBlack;
   left: 0;
@@ -47,6 +49,7 @@
 
 .NavOverlayOpen {
   opacity: 1;
+  visibility: visible;
   z-index: 2;
   display: block;
   transition: $Transition-03;
