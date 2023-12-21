@@ -77,10 +77,12 @@ export async function GET(request: Request) {
               alt: "The word BRAND in bold, white lettering",
             },
           ],
-          components: {
-            img: "/images/BRAND/BrandComponents.svg",
-            alt: "Various page components, including a testimonial card and buttons",
-          },
+          components: [
+            {
+              img: "/images/BRAND/BrandComponents.svg",
+              alt: "Various page components, including a testimonial card and buttons",
+            },
+          ],
           palette: {
             img: "/images/BRAND/BrandColorPalette.svg",
             alt: "A color palette",
@@ -307,7 +309,7 @@ export async function GET(request: Request) {
           weights: ["04 Regular", "05 Medium", "06 Semi Bold", "07 Bold"],
         },
         branding: {
-          images: [
+          components: [
             {
               img: "/images/Oceanica/assets/TestimonialCard.svg",
               alt: "A testimonial card, with an image, placeholder text and name underneath",

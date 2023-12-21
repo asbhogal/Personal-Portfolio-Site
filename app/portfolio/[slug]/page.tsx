@@ -4,7 +4,8 @@ import { ProjectType } from "@/utils/types";
 import { fetcher } from "@/utils/fetcher";
 import useSWR from "swr";
 import FadeIn from "@/utils/animations";
-import { unstable_getImgProps as getImgProps } from "next/image";
+import Image, { unstable_getImgProps as getImgProps } from "next/image";
+import CTA from "@/components/CTA";
 
 export default function Page({ params }: { params: { slug: string } }) {
   const { data, error } = useSWR("/api/projects", fetcher);
@@ -128,6 +129,53 @@ export default function Page({ params }: { params: { slug: string } }) {
           </FadeIn>
         </FadeIn>
       </FadeIn>
+
+      {projectData.details.branding && (
+        <FadeIn as="section" className="ProjectAssetsAndBranding">
+          <FadeIn as="h2">Branding & Assets</FadeIn>
+          <FadeIn as="div" className="ProjectAssetsAndBrandingContainer">
+            {projectData.details.branding &&
+              (projectData.details.branding.images ||
+                projectData.details.branding.logos) && (
+                <FadeIn as="div" className="AssetsAndBranding">
+                  {(projectData.details.branding.images || [])
+                    .concat(projectData.details.branding.logos || [])
+                    .map((image, index) => (
+                      <Image
+                        key={index}
+                        src={image.img}
+                        alt={image.alt}
+                        width={500}
+                        height={1000}
+                      />
+                    ))}
+                </FadeIn>
+              )}
+            {projectData.details.branding.components &&
+              projectData.details.branding.components.map((image, index) => (
+                <FadeIn as="div" className="AssetsAndBranding" key={index}>
+                  <Image
+                    src={image.img}
+                    alt={image.alt}
+                    width={500}
+                    height={1000}
+                  />
+                </FadeIn>
+              ))}
+            {projectData.details.branding.palette && (
+              <FadeIn as="div" className="AssetsAndBranding">
+                <Image
+                  src={projectData.details.branding.palette.img}
+                  alt={projectData.details.branding.palette.alt}
+                  width={500}
+                  height={1000}
+                />
+              </FadeIn>
+            )}
+          </FadeIn>
+        </FadeIn>
+      )}
+      <CTA />
     </div>
   );
 }

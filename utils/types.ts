@@ -89,7 +89,7 @@ export type ProjectType = {
     branding?: {
       images?: { img: string; alt: string }[];
       logos?: { img: string; alt: string }[];
-      components?: { img: string; alt: string };
+      components?: { img: string; alt: string }[];
       palette?: { img: string; alt: string };
     };
     templates?: {
