@@ -176,6 +176,55 @@ export default function Page({ params }: { params: { slug: string } }) {
           </FadeIn>
         </FadeIn>
       )}
+
+      {projectData.details.templates && (
+        <FadeIn as="section" className="ProjectMockups">
+          <FadeIn as="h2">Mockups</FadeIn>
+          <FadeIn
+            as="img"
+            src={projectData.details.templates.img}
+            alt={projectData.details.templates.alt}
+          />
+        </FadeIn>
+      )}
+
+      {projectData.details.prototypes && (
+        <FadeIn as="section" className="ProjectPrototypes">
+          <FadeIn as="h2">Prototypes</FadeIn>
+          <FadeIn
+            as="img"
+            src={projectData.details.prototypes.img}
+            alt={projectData.details.prototypes.alt}
+            className="Prototypes"
+          />
+        </FadeIn>
+      )}
+
+      <FadeIn as="section" className="ProjectScreens">
+        <FadeIn as="h2">Screens</FadeIn>
+        {projectData.details.mockups.map((mockup, index) => {
+          const common = {
+            alt: mockup.alt,
+            width: 1920,
+            height: 1440,
+          };
+
+          const {
+            props: { srcSet: desktop },
+          } = getImgProps({
+            ...common,
+            src: mockup.mobile,
+          });
+
+          return (
+            <picture key={index} className="PictureContainer">
+              <source media="(min-width: 600px)" srcSet={desktop} />
+              <img src={mobile} alt={mockup.alt} />
+            </picture>
+          );
+        })}
+      </FadeIn>
+
       <CTA />
     </div>
   );
