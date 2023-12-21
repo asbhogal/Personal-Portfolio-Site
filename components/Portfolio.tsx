@@ -12,7 +12,6 @@ export default function Portfolio() {
   if (error) return <p>Failed to fetch data</p>;
   if (!data) return <p>Loading...</p>;
 
-  console.log(data.projects);
   return (
     <FadeIn as="section" className="Projects">
       {data.projects.map((project: ProjectType) => {
@@ -41,7 +40,7 @@ export default function Portfolio() {
             <FadeIn
               as="a"
               className="ProjectSectionLink"
-              href={`/${project.slug}`}
+              href={`portfolio/${project.slug}`}
               aria-label={project.project}
             >
               <picture className="PictureContainer">

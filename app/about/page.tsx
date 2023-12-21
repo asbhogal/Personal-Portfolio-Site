@@ -1,5 +1,6 @@
 import AboutSection from "@/components/AboutSection";
 import { Metadata } from "next";
+import AboutCover from "./AboutCover";
 
 export const metadata: Metadata = {
   title: "About | Aman Singh Bhogal",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1>About</h1>
+      <AboutCover />
       <AboutSection />
     </>
   );
