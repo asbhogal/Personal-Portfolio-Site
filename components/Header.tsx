@@ -78,7 +78,9 @@ export default function Header() {
           <ul className="NavLinks">
             {navMenu.map((item) => (
               <li className="NavItems" key={item.id}>
-                <Link href={item.href}>{item.name}</Link>
+                <Link href={item.href} onClick={() => setNavOpen(false)}>
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
