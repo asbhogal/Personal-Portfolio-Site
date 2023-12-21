@@ -73,30 +73,21 @@ export default function Portfolio() {
                 </FadeIn>
               </FadeIn>
               <FadeIn as="div" className="ProjectBoxLinks">
-                <FadeIn
-                  as="a"
-                  className="ProjectButton"
-                  href={project.code}
-                  aria-label={`Code for ${project.project} project`}
-                >
-                  Code
-                </FadeIn>
-                <FadeIn
-                  as="a"
-                  className="ProjectButton"
-                  href={project.site}
-                  aria-label={`Site for ${project.project} project`}
-                >
-                  Site
-                </FadeIn>
-                <FadeIn
-                  as="a"
-                  className="ProjectButton"
-                  href={project.more}
-                  aria-label={`View more about ${project.project} project`}
-                >
-                  View More
-                </FadeIn>
+                {Object.entries({
+                  Code: project.code,
+                  Site: project.site,
+                  "View More": project.more,
+                }).map(([key, value]) => (
+                  <FadeIn
+                    as="a"
+                    className="ProjectButton"
+                    href={value}
+                    aria-label={`${key} for ${project.project} project`}
+                    key={key}
+                  >
+                    {key}
+                  </FadeIn>
+                ))}
               </FadeIn>
             </FadeIn>
           </FadeIn>
