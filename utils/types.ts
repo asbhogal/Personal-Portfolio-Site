@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type AboutType = {
   about: {
     summary: string;
@@ -13,6 +15,19 @@ export type AboutType = {
       };
     }[];
   };
+};
+
+export type FadeInProps = {
+  children?: ReactNode;
+  as?: keyof JSX.IntrinsicElements;
+  id?: string;
+  className?: string;
+  href?: string;
+  target?: string;
+  rel?: string;
+  src?: string;
+  alt?: string;
+  "aria-label"?: string;
 };
 
 export type FooterLinksType = {

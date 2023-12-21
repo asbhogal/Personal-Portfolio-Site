@@ -1,18 +1,5 @@
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
-
-type FadeInProps = {
-  children?: ReactNode;
-  as?: keyof JSX.IntrinsicElements;
-  id?: string;
-  className?: string;
-  href?: string;
-  target?: string;
-  rel?: string;
-  src?: string;
-  alt?: string;
-  "aria-label"?: string;
-};
+import { FadeInProps } from "./types";
 
 export default function FadeIn({
   children,
