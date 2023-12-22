@@ -65,6 +65,13 @@ export type TestimonialsType = {
   title: string;
 };
 
+export type ResourcesType = {
+  id: number;
+  resource: string;
+  description: string;
+  link: string;
+};
+
 export type ProjectType = {
   id: number;
   project: string;
