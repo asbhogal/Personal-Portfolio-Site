@@ -2,6 +2,7 @@ import { getResourcesData } from "@/utils/functions";
 import FreeResourcesSection from "./FreeResourcesSection";
 import FreeResourcesCover from "./FreeResourcesCover";
 import { Metadata } from "next";
+import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "Free Resources | Aman Singh Bhogal",
@@ -14,6 +15,7 @@ export default async function Page() {
     <>
       <FreeResourcesCover />
       <FreeResourcesSection resourcesData={resourcesData} />
+      <CTA />
     </>
   );
 }

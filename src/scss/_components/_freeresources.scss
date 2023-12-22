@@ -21,10 +21,13 @@
 }
 
 .FreeResourcesSection {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(26.125rem, 1fr));
+  display: grid;
+  grid-template-areas:
+    "a b"
+    "c d";
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.625rem;
-  padding-bottom: 0.625rem;
+  padding: 0.625rem 0;
   .ResourcesCard {
     display: flex;
     flex-direction: column;
@@ -32,11 +35,22 @@
     img {
       height: 100%;
       width: 100%;
+      border-radius: $ImgBorderRadius;
     }
     p {
       @include BodyText;
       text-align: justify;
     }
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .FreeResourcesSection {
+    grid-template-areas:
+      "a"
+      "b"
+      "c";
+    grid-template-columns: 1fr;
   }
 }
 
