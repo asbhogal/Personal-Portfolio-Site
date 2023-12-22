@@ -8,6 +8,16 @@ export async function getProjectData() {
   return res.json();
 }
 
+export async function getServicesData() {
+  const res = await fetch(`${process.env.API_BASE_URL}/api/services`);
+
+  if (!res.ok) {
+    throw new Error("Error fetching services data");
+  }
+
+  return res.json();
+}
+
 function titleCase(str: string) {
   return str
     .split(" ")

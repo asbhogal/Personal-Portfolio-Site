@@ -17,6 +17,12 @@ export type AboutType = {
   };
 };
 
+export type AdditionalServicesType = {
+  id: number;
+  service: string;
+  list: string[];
+};
+
 export type FadeInProps = {
   children?: ReactNode;
   as?: keyof JSX.IntrinsicElements;

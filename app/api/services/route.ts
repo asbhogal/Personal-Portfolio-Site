@@ -1,7 +1,8 @@
+import { AdditionalServicesType } from "@/utils/types";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
-  const services = [
+  const services: AdditionalServicesType[] = [
     {
       id: 1,
       service: "WordPress Design",
