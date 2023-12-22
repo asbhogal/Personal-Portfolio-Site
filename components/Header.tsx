@@ -18,7 +18,7 @@ export default function Header() {
   }, [navOpen]);
 
   return (
-    <FadeIn as="div" className="Header">
+    <FadeIn as="header" className="Header">
       <nav className="Nav">
         <div className="NavBar">
           <div className="MainLogo">
