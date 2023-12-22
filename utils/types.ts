@@ -69,6 +69,7 @@ export type ResourcesType = {
   id: number;
   resource: string;
   description: string;
+  img: string;
   link: string;
 };
 

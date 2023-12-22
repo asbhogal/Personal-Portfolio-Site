@@ -1,3 +1,13 @@
+export async function getResourcesData() {
+  const res = await fetch(`${process.env.API_BASE_URL}/api/resources`);
+
+  if (!res.ok) {
+    throw new Error("Error fetching resources data");
+  }
+
+  return res.json();
+}
+
 export async function getProjectData() {
   const res = await fetch(`${process.env.API_BASE_URL}/api/projects`);
 
