@@ -23,7 +23,7 @@ export default function AboutSection() {
           {data.about.summary2}
         </FadeIn>
         <FadeIn as="div" className="AboutExperience">
-          <FadeIn as="h3">Professional Experience</FadeIn>
+          <FadeIn as="h2">Professional Experience</FadeIn>
           <FadeIn as="div" className="ExperienceContainer">
             {data.about.experience.map((experiences) => (
               <FadeIn
