@@ -1,6 +1,5 @@
 import { ProjectType } from "@/utils/types";
 import ProjectContent from "./ProjectContent";
-import { unstable_getImgProps as getImgProps } from "next/image";
 import { Metadata } from "next";
 import { generateProjectName, getProjectData } from "@/utils/functions";
 
@@ -27,28 +26,5 @@ export default async function Page({ params }: { params: { slug: string } }) {
     (project: ProjectType) => project.slug === params.slug
   );
 
-  const common = {
-    alt: projectData.details.hero.alt,
-    height: 1440,
-    width: 2560,
-  };
-
-  const {
-    props: { srcSet: desktop },
-  } = getImgProps({
-    ...common,
-    src: projectData.details.hero.desktop,
-  });
-
-  const {
-    props: { src: mobile, ...rest },
-  } = getImgProps({ ...common, src: projectData.details.hero.mobile });
-
-  return (
-    <ProjectContent
-      projectData={projectData}
-      mobile={mobile}
-      desktop={desktop}
-    />
-  );
+  return <ProjectContent projectData={projectData} />;
 }

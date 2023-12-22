@@ -7,13 +7,26 @@ import CTA from "@/components/CTA";
 
 export default function ProjectContent({
   projectData,
-  mobile,
-  desktop,
 }: {
   projectData: ProjectType;
-  mobile: string;
-  desktop: string;
 }) {
+  const common = {
+    alt: projectData.details.hero.alt,
+    height: 1440,
+    width: 2560,
+  };
+
+  const {
+    props: { srcSet: desktop },
+  } = getImgProps({
+    ...common,
+    src: projectData.details.hero.desktop,
+  });
+
+  const {
+    props: { src: mobile, ...rest },
+  } = getImgProps({ ...common, src: projectData.details.hero.mobile });
+
   return (
     <div className="Project">
       <h1 className="sr-only">{projectData.project}</h1>
@@ -185,16 +198,20 @@ export default function ProjectContent({
         {projectData.details.mockups.map((mockup, index) => {
           const common = {
             alt: mockup.alt,
-            width: 1920,
             height: 1440,
+            width: 2560,
           };
 
           const {
             props: { srcSet: desktop },
           } = getImgProps({
             ...common,
-            src: mockup.mobile,
+            src: mockup.desktop,
           });
+
+          const {
+            props: { src: mobile, ...rest },
+          } = getImgProps({ ...common, src: mockup.mobile });
 
           return (
             <picture key={index} className="PictureContainer">
