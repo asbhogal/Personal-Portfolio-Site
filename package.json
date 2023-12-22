@@ -4,7 +4,7 @@
   "description": "A personal portfolio site created for the repo owner (Aman Singh Bhogal.)",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

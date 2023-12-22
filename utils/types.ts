@@ -70,6 +70,7 @@ export type ResourcesType = {
   resource: string;
   description: string;
   img: string;
+  imgAlt: string;
   link: string;
 };
 
