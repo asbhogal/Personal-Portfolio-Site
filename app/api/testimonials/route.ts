@@ -1,7 +1,8 @@
+import { TestimonialsType } from "@/utils/types";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
-  const testimonials = [
+  const testimonials: TestimonialsType[] = [
     {
       id: 1,
       img: "gen-kelsang-leksang.png",
