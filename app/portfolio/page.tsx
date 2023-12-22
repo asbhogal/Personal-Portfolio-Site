@@ -1,5 +1,6 @@
 import Portfolio from "@/components/Portfolio";
 import PortfolioTitle from "@/components/PortfolioTitle";
+import { getProjectData } from "@/utils/functions";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,11 +8,13 @@ export const metadata: Metadata = {
   description: "A list of portfolio projects created by Aman Singh Bhogal",
 };
 
-export default function Page() {
+export default async function Page() {
+  const { projects: portfolioData } = await getProjectData();
+
   return (
     <>
       <PortfolioTitle />
-      <Portfolio />
+      <Portfolio portfolioData={portfolioData} />
     </>
   );
 }

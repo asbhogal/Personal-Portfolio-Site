@@ -1,20 +1,18 @@
 "use client";
 
-import useSWR from "swr";
-import { fetcher } from "@/utils/fetcher";
 import FadeIn from "@/utils/animations";
 import { ProjectType } from "@/utils/types";
 import { unstable_getImgProps as getImgProps } from "next/image";
 
-export default function Portfolio() {
-  const { data, error } = useSWR("/api/projects", fetcher);
-
-  if (error) return <p>Failed to fetch data</p>;
-  if (!data) return <p>Loading...</p>;
-
+export default function Portfolio({
+  portfolioData,
+}: {
+  portfolioData: ProjectType[];
+}) {
+  console.log(portfolioData);
   return (
     <FadeIn as="section" className="Projects">
-      {data.projects.map((project: ProjectType) => {
+      {portfolioData.map((project: ProjectType) => {
         const common = {
           alt: project.portfolioImg.alt,
           width: 500,
