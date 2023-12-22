@@ -29,11 +29,11 @@ export const navMenu: MenuType = [
   {
     id: 6,
     name: "additional services",
-    href: "/additionalservices",
+    href: "/additional-services",
   },
   {
     id: 7,
     name: "free resources",
-    href: "/freeresources",
+    href: "/free-resources",
   },
 ];
