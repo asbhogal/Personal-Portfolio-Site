@@ -2,19 +2,16 @@
 
 import { unstable_getImgProps as getImgProps } from "next/image";
 import FadeIn from "@/utils/animations";
-import { fetcher } from "@/utils/fetcher";
 import Link from "next/link";
-import useSWR from "swr";
 import Arrow from "./Arrow";
 import SkillLozenge from "./SkillLozenge";
 import { ProjectType } from "@/utils/types";
 
-export default function Projects() {
-  const { data, error } = useSWR("/api/projects", fetcher);
-
-  if (error) return <div>failed to load</div>;
-  if (!data) return <div>loading...</div>;
-
+export default function Projects({
+  projectData,
+}: {
+  projectData: ProjectType[];
+}) {
   return (
     <FadeIn as="section" className="ProjectScreens">
       <FadeIn as="div" className="HomePageSectionBar">
@@ -28,9 +25,9 @@ export default function Projects() {
         </Link>
       </FadeIn>
       <FadeIn as="div" className="ProjectsContainer">
-        {data.projects.map((project: ProjectType) => {
+        {projectData.map((project: ProjectType) => {
           const common = {
-            alt: data.projects.imgAlt,
+            alt: project.imgAlt,
             width: 500,
             height: 900,
           };

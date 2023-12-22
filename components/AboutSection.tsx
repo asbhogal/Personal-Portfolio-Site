@@ -1,31 +1,22 @@
 "use client";
 
 import FadeIn from "@/utils/animations";
-import useSWR from "swr";
-import { fetcher } from "@/utils/fetcher";
 import { AboutType } from "@/utils/types";
 
-export default function AboutSection() {
-  const { data, error } = useSWR<AboutType>("/api/about", fetcher);
-
-  if (error) return <div>failed to load</div>;
-  if (!data) return <div>loading...</div>;
-
-  console.log(data);
-
+export default function AboutSection({ aboutData }: { aboutData: AboutType }) {
   return (
     <FadeIn as="section" className="AboutSection">
       <FadeIn as="div" className="AboutContent">
         <FadeIn as="p" className="AboutText">
-          {data.about.summary}
+          {aboutData.about.summary}
         </FadeIn>
         <FadeIn as="p" className="AboutText">
-          {data.about.summary2}
+          {aboutData.about.summary2}
         </FadeIn>
         <FadeIn as="div" className="AboutExperience">
           <FadeIn as="h2">Professional Experience</FadeIn>
           <FadeIn as="div" className="ExperienceContainer">
-            {data.about.experience.map((experiences) => (
+            {aboutData.about.experience.map((experiences) => (
               <FadeIn
                 as="div"
                 className="ExperienceSection"

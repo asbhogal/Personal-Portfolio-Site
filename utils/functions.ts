@@ -1,3 +1,13 @@
+export async function getAboutData() {
+  const res = await fetch(`${process.env.API_BASE_URL}/api/about`);
+
+  if (!res.ok) {
+    throw new Error("Error fetching about data");
+  }
+
+  return res.json();
+}
+
 export async function getResourcesData() {
   const res = await fetch(`${process.env.API_BASE_URL}/api/resources`);
 
