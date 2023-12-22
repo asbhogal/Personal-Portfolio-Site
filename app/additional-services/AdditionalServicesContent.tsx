@@ -12,7 +12,7 @@ export default function AdditionalServicesContent({
   return (
     <FadeIn as="section" className="AdditionalServicesSection">
       <FadeIn as="div" className="AdditionalServicesContent">
-        {servicesData.services.map((service) => (
+        {servicesData.map((service) => (
           <FadeIn as="div" key={service.id}>
             <FadeIn as="h2">{service.service}</FadeIn>
             <FadeIn as="ul">
