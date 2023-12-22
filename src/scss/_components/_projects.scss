@@ -13,7 +13,6 @@
 
 .Projects {
   display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(18.125rem, 1fr));
   gap: 0.625rem;
   padding-bottom: 0.625rem;
   transition: 0.3s all ease-in-out;
@@ -31,8 +30,6 @@
       }
       .ProjectBoxContentText {
         @include BodyText;
-        /* max-width: 75%;
-        width: 100%; */
         text-align: justify;
       }
       .ProjectBoxContentList {
@@ -63,38 +60,6 @@
       border-radius: $ImgBorderRadius;
       transition: 0.3s all ease-in-out;
     }
-    /* &:hover {
-      transition: $Transition-03;
-      .ProjectLinkOverlay {
-        display: flex;
-        transition: $Transition-03;
-        text-align: center;
-        border-radius: $ImgBorderRadius;
-        span {
-          color: $Argent;
-          @include BodyText;
-        }
-      }
-      /* #BrandProjectLinkOverlay {
-        background-color: rgba(255, 255, 255, 0.474);
-      }
-      #LiteLifeProjectLinkOverlay {
-        background-color: rgba(209, 208, 208, 0.554);
-      }
-      #OceanicaProjectLinkOverlay {
-        background-color: #1e2a34d2;
-      }
-      #MetaverseProjectLinkOverlay {
-        background-color: rgb(26 35 46 / 89%);
-      }
-      #KryptoProjectLinkOverlay {
-        background-color: rgb(11 15 47 / 73%);
-      } */
-    /* .ProjectImage {
-        filter: blur(0.3125rem);
-        transition: $Transition-03;
-      }
-    } */
   }
 }
 
