@@ -23,6 +23,8 @@ export type AdditionalServicesType = {
   list: string[];
 };
 
+export type IconName = "CodeIcon" | "PaintIcon" | "RulerIcon" | "SpeedIcon";
+
 export type FadeInProps = {
   children?: ReactNode;
   as?: keyof JSX.IntrinsicElements;
@@ -53,7 +55,7 @@ export type ServicesType = {
   id: number;
   skill: string;
   description: string;
-  icon: React.ReactNode;
+  icon: string;
 };
 
 export type TestimonialsType = {

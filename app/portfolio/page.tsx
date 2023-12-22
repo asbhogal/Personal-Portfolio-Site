@@ -1,5 +1,5 @@
-import Portfolio from "@/components/Portfolio";
-import PortfolioTitle from "@/components/PortfolioTitle";
+import Portfolio from "@/components/sections/Portfolio";
+import PortfolioTitle from "@/components/covers/PortfolioTitle";
 import { getProjectData } from "@/utils/functions";
 import { Metadata } from "next";
 

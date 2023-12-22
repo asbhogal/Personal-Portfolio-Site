@@ -9,7 +9,6 @@ export default function Portfolio({
 }: {
   portfolioData: ProjectType[];
 }) {
-  console.log(portfolioData);
   return (
     <FadeIn as="section" className="Projects">
       {portfolioData.map((project: ProjectType) => {

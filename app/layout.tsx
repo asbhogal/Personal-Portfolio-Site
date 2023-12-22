@@ -1,8 +1,8 @@
 import "../src/scss/index.scss";
-import Header from "@/components/Header";
-import Cursor from "@/components/Cursor";
-import ScrollToTop from "@/components/ScrollToTop";
-import Footer from "@/components/Footer";
+import Header from "@/components/sections/Header";
+import Cursor from "@/components/features/Cursor";
+import ScrollToTop from "@/components/features/ScrollToTop";
+import Footer from "@/components/sections/Footer";
 
 export default function RootLayout({
   children,

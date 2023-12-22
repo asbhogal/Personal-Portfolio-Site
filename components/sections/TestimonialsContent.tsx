@@ -1,6 +1,6 @@
 "use client";
 
-import TestimonialsCard from "@/components/TestimonialsCard";
+import TestimonialsCard from "@/components/sections/TestimonialsCard";
 import FadeIn from "@/utils/animations";
 
 export default function TestimonialsContent() {

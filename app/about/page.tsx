@@ -1,6 +1,6 @@
-import AboutSection from "@/components/AboutSection";
+import AboutSection from "@/components/sections/AboutSection";
 import { Metadata } from "next";
-import AboutCover from "./AboutCover";
+import AboutCover from "@/components/covers/AboutCover";
 import { getAboutData } from "@/utils/functions";
 
 export const metadata: Metadata = {

@@ -3,9 +3,9 @@
 import { ProjectType } from "@/utils/types";
 import FadeIn from "@/utils/animations";
 import Image, { unstable_getImgProps as getImgProps } from "next/image";
-import CTA from "@/components/CTA";
+import CTA from "@/components/sections/CTA";
 
-export default function ProjectContent({
+export default function ProjectPage({
   projectData,
 }: {
   projectData: ProjectType;

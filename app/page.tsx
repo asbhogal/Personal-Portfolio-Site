@@ -1,8 +1,8 @@
-import CTA from "@/components/CTA";
-import Heading from "@/components/Heading";
-import Projects from "@/components/Projects";
+import CTA from "@/components/sections/CTA";
+import Heading from "@/components/covers/Heading";
+import Projects from "@/components/sections/Projects";
 import Skills from "@/components/Skills";
-import { getProjectData } from "@/utils/functions";
+import { getOffersData, getProjectData } from "@/utils/functions";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 
 export default async function Page() {
   const { projects: projectData } = await getProjectData();
-
+  const { offers: offersData } = await getOffersData();
   return (
     <>
       <Heading />
-      <Skills />
+      <Skills offersData={offersData} />
       <Projects projectData={projectData} />
       <CTA />
     </>

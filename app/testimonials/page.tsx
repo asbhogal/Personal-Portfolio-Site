@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TestimonialsContent from "@/components/TestimonialsContent";
+import TestimonialsContent from "@/components/sections/TestimonialsContent";
 
 export const metadata: Metadata = {
   title: "Testimonials | Aman Singh Bhogal",

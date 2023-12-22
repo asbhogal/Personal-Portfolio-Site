@@ -3,8 +3,8 @@
 import { unstable_getImgProps as getImgProps } from "next/image";
 import FadeIn from "@/utils/animations";
 import Link from "next/link";
-import Arrow from "./Arrow";
-import SkillLozenge from "./SkillLozenge";
+import Arrow from "../icons/Arrow";
+import SkillLozenge from "../features/SkillLozenge";
 import { ProjectType } from "@/utils/types";
 
 export default function Projects({

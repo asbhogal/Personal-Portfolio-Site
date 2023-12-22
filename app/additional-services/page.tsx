@@ -1,6 +1,6 @@
 import { getServicesData } from "@/utils/functions";
-import AdditionalServicesContent from "./AdditionalServicesContent";
-import AdditionalServicesCover from "./AdditionalServicesCover";
+import AdditionalServicesContent from "@/components/sections/AdditionalServicesContent";
+import AdditionalServicesCover from "@/components/covers/AdditionalServicesCover";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

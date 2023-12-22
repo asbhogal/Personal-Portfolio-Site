@@ -1,5 +1,5 @@
 import { ProjectType } from "@/utils/types";
-import ProjectContent from "./ProjectContent";
+import ProjectPage from "@/components/sections/ProjectPage";
 import { Metadata } from "next";
 import { generateProjectName, getProjectData } from "@/utils/functions";
 
@@ -26,5 +26,5 @@ export default async function Page({ params }: { params: { slug: string } }) {
     (project: ProjectType) => project.slug === params.slug
   );
 
-  return <ProjectContent projectData={projectData} />;
+  return <ProjectPage projectData={projectData} />;
 }
