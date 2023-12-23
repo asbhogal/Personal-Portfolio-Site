@@ -1,4 +1,4 @@
-import { motion as m } from "framer-motion";
+/* import { motion as m } from "framer-motion";
 import { useEffect } from "react";
 import CTA from "../components/CTA";
 import ScrollToTop from "../components/ScrollToTop";
@@ -421,3 +421,4 @@ const Brand = () => {
 };
 
 export default Brand;
+ */

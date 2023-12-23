@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+/* import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../scss/index.scss";
 
@@ -146,3 +146,4 @@ const FreeResources = () => {
 };
 
 export default FreeResources;
+ */

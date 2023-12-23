@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+/* import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { useEffect } from "react";
 
@@ -203,3 +203,4 @@ const AdditionalServices = () => {
 };
 
 export default AdditionalServices;
+ */

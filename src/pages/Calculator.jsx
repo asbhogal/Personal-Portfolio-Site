@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+/* import { useEffect } from "react";
 import { motion as m } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -369,3 +369,4 @@ const Calculator = () => {
 };
 
 export default Calculator;
+ */

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+/* import { useEffect } from "react";
 
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
@@ -332,3 +332,4 @@ const Home = () => {
 };
 
 export default Home;
+ */

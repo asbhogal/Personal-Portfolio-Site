@@ -1,4 +1,4 @@
-import "../scss/index.scss";
+/* import "../scss/index.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
@@ -585,3 +585,4 @@ const About = () => {
 };
 
 export default About;
+ */

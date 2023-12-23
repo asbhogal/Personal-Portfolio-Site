@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+/* import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { motion as m } from "framer-motion";
 import Footer from "../components/Footer";
@@ -962,3 +962,4 @@ const Projects = () => {
 };
 
 export default Projects;
+ */
