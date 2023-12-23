@@ -7,8 +7,8 @@ export async function GET(request: Request) {
       id: 1,
       project: "brand",
       slug: "brand",
-      imageDesktop: "/images/home/Brand-HomePage-Desktop.jpg",
-      imageMobile: "/images/home/Brand-HomePage-Mobile.jpg",
+      imageDesktop: "/images/Home/Brand-HomePage-Desktop.jpg",
+      imageMobile: "/images/Home/Brand-HomePage-Mobile.jpg",
       imgAlt:
         "An iPhone resting on a concrete surface at an angle, with a website on the screen",
       summary:
@@ -127,8 +127,8 @@ export async function GET(request: Request) {
       id: 2,
       project: "lite life",
       slug: "lite-life",
-      imageDesktop: "/images/home/LiteLife-HomePage-Desktop.jpg",
-      imageMobile: "/images/home/LiteLife-HomePage-Mobile.jpg",
+      imageDesktop: "/images/Home/LiteLife-HomePage-Desktop.jpg",
+      imageMobile: "/images/Home/LiteLife-HomePage-Mobile.jpg",
       imgAlt:
         "A close up of an iPhone and Airpods with a website open on the screen",
       summary:
