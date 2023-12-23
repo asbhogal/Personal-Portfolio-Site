@@ -11,7 +11,6 @@
 @use "_components/header" as *;
 @use "_components/navmenu" as *;
 @use "_components/additionalservices" as *;
-@use "_components/horizontaldivider" as *;
 @use "_components/homepage" as *;
 @use "_components/about" as *;
 @use "_components/CTA" as *;
@@ -22,3 +21,5 @@
 @use "_components/freeresources" as *;
 @use "_components/scrolltotop" as *;
 @use "_components/footer" as *;
+
+@use "./reset.scss" as *;

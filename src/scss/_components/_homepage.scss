@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 3.4375rem;
-  height: calc(100vh - 5.75rem);
+  height: calc(100vh - 4.8125rem);
   .AwardsSection {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14.0625rem, 1fr));
@@ -16,10 +16,6 @@
     width: 100%;
     margin: 0 auto;
     cursor: none;
-    /* .CSSWinnerBadge,
-    .FrontendMentorBadge {
-      cursor: none;
-    } */
     a {
       cursor: none;
     }

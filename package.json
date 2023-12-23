@@ -1,14 +1,15 @@
 {
   "name": "personal-portfolio-website",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "A personal portfolio site created for the repo owner (Aman Singh Bhogal.)",
-  "main": "index.js",
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "playwright test",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -22,26 +23,30 @@
   },
   "homepage": "https://www.amansinghbhogal.com/",
   "dependencies": {
+    "@axe-core/playwright": "^4.8.2",
+    "@splidejs/react-splide": "^0.7.12",
     "@vercel/analytics": "^0.1.8",
     "@vercel/speed-insights": "^1.0.1",
     "classnames": "^2.3.2",
     "framer-motion": "^9.0.3",
+    "next": "^14.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.8.0",
     "react-websitecarbon-badge": "^1.0.5",
-    "swiper": "^9.0.5"
+    "swr": "^2.2.4",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@types/react": "^18.2.21",
-    "@types/react-dom": "^18.2.7",
-    "@vitejs/plugin-react": "^4.0.4",
-    "eslint": "^8.47.0",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.3",
     "sass": "^1.57.1",
-    "vite": "^4.4.9"
+    "typescript": "^5",
+    "husky": "^8.0.0"
   }
 }

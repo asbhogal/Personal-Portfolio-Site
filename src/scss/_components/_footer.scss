@@ -1,6 +1,7 @@
 @use "../_partials/variables" as *;
 
 .Footer {
+  display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-between;
