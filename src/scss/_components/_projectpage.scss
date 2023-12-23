@@ -64,9 +64,14 @@
       text-transform: uppercase;
       flex-direction: column;
       gap: 0.625rem;
-      ul {
-        margin-left: 1.5625rem;
-      }
+    }
+    .ProjectAboutContentList {
+      font-family: $BodyFont;
+      font-size: clamp(1rem, 0.9108rem + 0.446vw, 1.3125rem);
+      text-align: justify;
+      text-transform: uppercase;
+      flex-direction: column;
+      margin-left: 1.5625rem;
     }
     .ProjectStacksAndTools {
       flex-wrap: wrap;
@@ -211,6 +216,14 @@
   }
 }
 
+#OceanicaBackgroundColor {
+  background-color: #47513f6b;
+}
+
+#BrandBackgroundColor {
+  background-color: #3b3a3acc;
+}
+
 .Prototypes {
   border-radius: $ImgBorderRadius;
 }
@@ -240,7 +253,7 @@ $CryptoverseWeights: (
 );
 
 @each $key, $weight in $CryptoverseWeights {
-  #Crypto-Weight-#{ $weight } {
+  #Weight-#{ $weight } {
     font-weight: $weight;
   }
 }
@@ -254,7 +267,7 @@ $CalculatorWeights: (
 );
 
 @each $key, $weight in $CalculatorWeights {
-  #Calculator-Weight-#{ $weight } {
+  #Weight-#{ $weight } {
     font-weight: $weight;
   }
 }

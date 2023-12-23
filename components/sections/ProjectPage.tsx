@@ -31,10 +31,10 @@ export default function ProjectPage({
     <div className="Project">
       <h1 className="sr-only">{projectData.project}</h1>
       <FadeIn as="section" className="ProjectHero">
-        <picture className="PictureContainer">
+        <FadeIn as="picture" className="PictureContainer">
           <source media="(min-width: 600px)" srcSet={desktop} />
-          <img src={mobile} alt={projectData.details.hero.alt} />
-        </picture>
+          <FadeIn as="img" src={mobile} alt={projectData.details.hero.alt} />
+        </FadeIn>
       </FadeIn>
 
       <FadeIn as="section" className="ProjectLinks">
@@ -80,16 +80,16 @@ export default function ProjectPage({
         </FadeIn>
         <FadeIn as="p" className="ProjectAboutContent">
           {projectData.details.description}
-          {projectData.details.list && (
-            <FadeIn as="ul">
-              {projectData.details.list.map((list) => (
-                <FadeIn as="li" key={list}>
-                  {list}
-                </FadeIn>
-              ))}
-            </FadeIn>
-          )}
         </FadeIn>
+        {projectData.details.list && (
+          <FadeIn as="ul" className="ProjectAboutContentList">
+            {projectData.details.list.map((list) => (
+              <FadeIn as="li" key={list}>
+                {list}
+              </FadeIn>
+            ))}
+          </FadeIn>
+        )}
       </FadeIn>
 
       {projectData.details.design && (
@@ -114,8 +114,12 @@ export default function ProjectPage({
           >
             <FadeIn as="span">{projectData.details.typeface.type}</FadeIn>
             <FadeIn as="ul" className="TypefaceWeightsList">
-              {projectData.details.typeface.weights.map((weight) => (
-                <FadeIn as="li" key={weight}>
+              {projectData.details.typeface.weights.map((weight, index) => (
+                <FadeIn
+                  as="li"
+                  key={weight}
+                  id={`Weight-${projectData.details.typeface.fontWeights[index]}`}
+                >
                   {weight}
                 </FadeIn>
               ))}
@@ -127,7 +131,11 @@ export default function ProjectPage({
       {projectData.details.branding && (
         <FadeIn as="section" className="ProjectAssetsAndBranding">
           <FadeIn as="h2">Branding & Assets</FadeIn>
-          <FadeIn as="div" className="ProjectAssetsAndBrandingContainer">
+          <FadeIn
+            as="div"
+            className="ProjectAssetsAndBrandingContainer"
+            id={projectData.details.branding?.backgroundColor}
+          >
             {projectData.details.branding &&
               (projectData.details.branding.images ||
                 projectData.details.branding.logos) && (
@@ -214,10 +222,10 @@ export default function ProjectPage({
           } = getImgProps({ ...common, src: mockup.mobile });
 
           return (
-            <picture key={index} className="PictureContainer">
+            <FadeIn as="picture" key={index} className="PictureContainer">
               <source media="(min-width: 600px)" srcSet={desktop} />
-              <img src={mobile} alt={mockup.alt} />
-            </picture>
+              <FadeIn as="img" src={mobile} alt={mockup.alt} />
+            </FadeIn>
           );
         })}
       </FadeIn>

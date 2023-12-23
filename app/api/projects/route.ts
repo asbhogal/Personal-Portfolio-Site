@@ -59,8 +59,10 @@ export async function GET(request: Request) {
             "07 Bold",
             "09 Black",
           ],
+          fontWeights: [400, 500, 600, 700, 900],
         },
         branding: {
+          backgroundColor: "BrandBackgroundColor",
           images: [
             {
               img: "/images/BRAND/BrandImages.png",
@@ -179,6 +181,7 @@ export async function GET(request: Request) {
           font: "Roboto",
           type: "singular",
           weights: ["04 Regular"],
+          fontWeights: [400],
         },
         branding: {
           images: [
@@ -307,8 +310,10 @@ export async function GET(request: Request) {
           font: "manrope",
           type: "singular",
           weights: ["04 Regular", "05 Medium", "06 Semi Bold", "07 Bold"],
+          fontWeights: [400, 500, 600, 700],
         },
         branding: {
+          backgroundColor: "OceanicaBackgroundColor",
           components: [
             {
               img: "/images/Oceanica/assets/TestimonialCard.svg",
@@ -410,6 +415,7 @@ export async function GET(request: Request) {
           font: "Noto Sans",
           type: "singular",
           weights: ["02 Extra Light", "03 Light", "04 Regular"],
+          fontWeights: [200, 300, 400],
         },
         mockups: [
           {
@@ -495,6 +501,7 @@ export async function GET(request: Request) {
           font: "Inter",
           type: "singular",
           weights: ["04 Regular", "05 Medium", "07 Bold"],
+          fontWeights: [400, 500, 700],
         },
         mockups: [
           {
@@ -578,6 +585,7 @@ export async function GET(request: Request) {
           font: "Poiret One",
           type: "singular",
           weights: ["04 Regular", "06 Bold"],
+          fontWeights: [400, 600],
         },
         mockups: [
           {
@@ -673,6 +681,7 @@ export async function GET(request: Request) {
           font: "General Sans",
           type: "singular",
           weights: ["04 Regular", "05 Medium", "06 Semi Bold"],
+          fontWeights: [400, 500, 600],
         },
         mockups: [
           {

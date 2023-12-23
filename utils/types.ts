@@ -120,8 +120,10 @@ export type ProjectType = {
       font: string;
       type: string;
       weights: string[];
+      fontWeights: number[];
     };
     branding?: {
+      backgroundColor?: string;
       images?: { img: string; alt: string }[];
       logos?: { img: string; alt: string }[];
       components?: { img: string; alt: string }[];
