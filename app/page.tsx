@@ -1,7 +1,7 @@
 import CTA from "@/components/sections/CTA";
 import Heading from "@/components/covers/Heading";
 import Projects from "@/components/sections/Projects";
-import Skills from "@/components/Skills";
+import Skills from "@/components/sections/Skills";
 import { getOffersData, getProjectData } from "@/utils/functions";
 import { Metadata } from "next";
 

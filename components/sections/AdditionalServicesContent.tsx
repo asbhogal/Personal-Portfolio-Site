@@ -8,7 +8,6 @@ export default function AdditionalServicesContent({
 }: {
   servicesData: AdditionalServicesType[];
 }) {
-  console.log(servicesData);
   return (
     <FadeIn as="section" className="AdditionalServicesSection">
       <FadeIn as="div" className="AdditionalServicesContent">

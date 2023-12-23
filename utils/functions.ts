@@ -8,6 +8,16 @@ export async function getAboutData() {
   return res.json();
 }
 
+export async function getFooterData() {
+  const res = await fetch(`${process.env.API_BASE_URL}/api/footer`);
+
+  if (!res.ok) {
+    throw new Error("Error fetching footer data");
+  }
+
+  return res.json();
+}
+
 export async function getOffersData() {
   const res = await fetch(`${process.env.API_BASE_URL}/api/offers`);
 

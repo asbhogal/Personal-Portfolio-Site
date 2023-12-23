@@ -42,7 +42,7 @@ export type FooterLinksType = {
   id: number;
   href: string;
   ariaLabel: string;
-  icon: React.ReactNode;
+  icon: string;
 };
 
 export type MenuType = Array<{

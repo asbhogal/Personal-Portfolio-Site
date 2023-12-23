@@ -6,29 +6,23 @@ import { FiFigma } from "react-icons/fi";
 import { WebsiteCarbonBadge } from "react-websitecarbon-badge";
 import FadeIn from "@/utils/animations";
 import { FooterLinksType } from "@/utils/types";
+import useSWR from "swr";
+import { fetcher } from "@/utils/fetcher";
 
-const FooterLinks: FooterLinksType[] = [
-  {
-    id: 1,
-    href: "https://www.linkedin.com/in/amansinghbhogal",
-    ariaLabel: "LinkedIn page",
-    icon: <FaLinkedinIn aria-hidden="true" focusable="false" />,
-  },
-  {
-    id: 2,
-    href: "https://www.github.com/asbhogal",
-    ariaLabel: "GitHub page",
-    icon: <BsGithub aria-hidden="true" focusable="false" />,
-  },
-  {
-    id: 3,
-    href: "https://www.figma.com/@amansinghbhogal",
-    ariaLabel: "Figma profile",
-    icon: <FiFigma aria-hidden="true" focusable="false" />,
-  },
-];
+const footerIconComponents: Record<FooterIconName, React.ComponentType> = {
+  FaLinkedinIn,
+  BsGithub,
+  FiFigma,
+};
+
+type FooterIconName = "FaLinkedinIn" | "BsGithub" | "FiFigma";
 
 export default function Footer() {
+  const { data, error } = useSWR("/api/footer", fetcher);
+  if (error) return <div>failed to load</div>;
+  if (!data) return <div>loading...</div>;
+
+  console.log(data);
   return (
     <FadeIn as="footer" className="Footer">
       <FadeIn as="div" className="Copyright">
@@ -36,19 +30,22 @@ export default function Footer() {
       </FadeIn>
       <WebsiteCarbonBadge url="www.amansinghbhogal.com" />
       <FadeIn as="div" className="SocialIcons">
-        {FooterLinks.map((link) => (
-          <FadeIn
-            as="a"
-            target="_blank"
-            rel="noopener noreferrer"
-            key={link.id}
-            href={link.href}
-            aria-label={`${link.ariaLabel} (opens in new tab)`}
-          >
-            {link.icon}
-            <span className="sr-only">{link.ariaLabel}</span>
-          </FadeIn>
-        ))}
+        {data.footerLinks.map((link: FooterLinksType) => {
+          const Icon = footerIconComponents[link.icon as FooterIconName];
+          return (
+            <FadeIn
+              as="a"
+              target="_blank"
+              rel="noopener noreferrer"
+              key={link.id}
+              href={link.href}
+              aria-label={`${link.ariaLabel} (opens in new tab)`}
+            >
+              {Icon && <Icon aria-hidden="true" />}
+              <span className="sr-only">{link.ariaLabel}</span>
+            </FadeIn>
+          );
+        })}
       </FadeIn>
     </FadeIn>
   );

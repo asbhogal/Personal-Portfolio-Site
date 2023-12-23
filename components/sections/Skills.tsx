@@ -1,9 +1,9 @@
 "use client";
 
-import CodeIcon from "./icons/CodeIcon";
-import PaintIcon from "./icons/PaintIcon";
-import RulerIcon from "./icons/RulerIcon";
-import SpeedIcon from "./icons/SpeedIcon";
+import CodeIcon from "@/components/icons/CodeIcon";
+import PaintIcon from "@/components/icons/PaintIcon";
+import RulerIcon from "@/components/icons/RulerIcon";
+import SpeedIcon from "@/components/icons/SpeedIcon";
 import { IconName, ServicesType } from "@/utils/types";
 import FadeIn from "@/utils/animations";
 
