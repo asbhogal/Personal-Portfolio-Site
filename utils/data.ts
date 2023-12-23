@@ -34,6 +34,6 @@ export const navMenu: MenuType = [
   {
     id: 7,
     name: "free resources",
-    href: "/freeresources",
+    href: "/free-resources",
   },
 ];
