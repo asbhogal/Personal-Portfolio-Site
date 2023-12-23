@@ -38,6 +38,8 @@ export type FadeInProps = {
   "aria-label"?: string;
 };
 
+export type FooterIconName = "FaLinkedinIn" | "BsGithub" | "FiFigma";
+
 export type FooterLinksType = {
   id: number;
   href: string;

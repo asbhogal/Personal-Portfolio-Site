@@ -5,7 +5,7 @@ import { BsGithub } from "react-icons/bs";
 import { FiFigma } from "react-icons/fi";
 import { WebsiteCarbonBadge } from "react-websitecarbon-badge";
 import FadeIn from "@/utils/animations";
-import { FooterLinksType } from "@/utils/types";
+import { FooterIconName, FooterLinksType } from "@/utils/types";
 import useSWR from "swr";
 import { fetcher } from "@/utils/fetcher";
 
@@ -14,8 +14,6 @@ const footerIconComponents: Record<FooterIconName, React.ComponentType> = {
   BsGithub,
   FiFigma,
 };
-
-type FooterIconName = "FaLinkedinIn" | "BsGithub" | "FiFigma";
 
 export default function Footer() {
   const { data, error } = useSWR("/api/footer", fetcher);

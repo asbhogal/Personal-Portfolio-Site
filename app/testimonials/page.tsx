@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import TestimonialsContent from "@/components/sections/TestimonialsContent";
+import CTA from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
   title: "Testimonials | Aman Singh Bhogal",
@@ -7,5 +8,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <TestimonialsContent />;
+  return (
+    <>
+      <TestimonialsContent />
+      <CTA />
+    </>
+  );
 }
