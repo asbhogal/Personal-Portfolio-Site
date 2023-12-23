@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  // const { resources: resourcesData } = await getResourcesData();
+  const { resources: resourcesData } = await getResourcesData();
   return (
     <>
       <FreeResourcesCover />
-      {/* <FreeResourcesSection resourcesData={resourcesData} /> */}
+      <FreeResourcesSection resourcesData={resourcesData} />
       <CTA />
     </>
   );

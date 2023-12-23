@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  //  const { projects: projectData } = await getProjectData();
-  //  const { offers: offersData } = await getOffersData();
+  const { projects: projectData } = await getProjectData();
+  const { offers: offersData } = await getOffersData();
   return (
     <>
       <Heading />
-      {/* <Skills offersData={offersData} />
-      <Projects projectData={projectData} /> */}
+      <Skills offersData={offersData} />
+      <Projects projectData={projectData} />
       <CTA />
     </>
   );

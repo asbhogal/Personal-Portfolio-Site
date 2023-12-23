@@ -9,12 +9,12 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  // const { projects: portfolioData } = await getProjectData();
+  const { projects: portfolioData } = await getProjectData();
 
   return (
     <>
       <PortfolioTitle />
-      {/* <Portfolio portfolioData={portfolioData} /> */}
+      <Portfolio portfolioData={portfolioData} />
     </>
   );
 }

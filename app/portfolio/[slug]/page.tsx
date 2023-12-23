@@ -1,4 +1,4 @@
-/* import { ProjectType } from "@/utils/types";
+import { ProjectType } from "@/utils/types";
 import ProjectPage from "@/components/sections/ProjectPage";
 import { Metadata } from "next";
 import { generateProjectName, getProjectData } from "@/utils/functions";
@@ -27,9 +27,4 @@ export default async function Page({ params }: { params: { slug: string } }) {
   );
 
   return <ProjectPage projectData={projectData} />;
-}
- */
-
-export default async function Page() {
-  return <p>test</p>;
 }

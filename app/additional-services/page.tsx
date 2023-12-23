@@ -9,12 +9,11 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  // const { services: servicesData } = await getServicesData();
+  const { services: servicesData } = await getServicesData();
   return (
     <>
       <AdditionalServicesCover />
-      {/*       <AdditionalServicesContent servicesData={servicesData} />
-       */}{" "}
+      <AdditionalServicesContent servicesData={servicesData} />
     </>
   );
 }

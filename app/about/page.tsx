@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  // const { about: aboutData } = await getAboutData();
+  const { about: aboutData } = await getAboutData();
   return (
     <>
       <AboutCover />
-      {/* <AboutSection /> */}
+      <AboutSection />
     </>
   );
 }
