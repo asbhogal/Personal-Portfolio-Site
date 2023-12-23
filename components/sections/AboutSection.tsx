@@ -3,7 +3,7 @@
 import FadeIn from "@/utils/animations";
 import { AboutType } from "@/utils/types";
 
-export default function AboutSection({ aboutData }: { aboutData: AboutType }) {
+const AboutSection = ({ aboutData }: { aboutData: AboutType }) => {
   return (
     <FadeIn as="section" className="AboutSection">
       <FadeIn as="div" className="AboutContent">
@@ -61,4 +61,6 @@ export default function AboutSection({ aboutData }: { aboutData: AboutType }) {
       </FadeIn>
     </FadeIn>
   );
-}
+};
+
+export default AboutSection;

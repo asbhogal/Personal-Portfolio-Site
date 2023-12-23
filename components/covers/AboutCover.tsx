@@ -2,7 +2,7 @@
 
 import FadeIn from "@/utils/animations";
 
-export default function AboutCover() {
+const AboutCover = () => {
   return (
     <FadeIn as="section" className="AboutCover">
       <FadeIn as="h1" className="PageHeaderTitle">
@@ -10,4 +10,6 @@ export default function AboutCover() {
       </FadeIn>
     </FadeIn>
   );
-}
+};
+
+export default AboutCover;
