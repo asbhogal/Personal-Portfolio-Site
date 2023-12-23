@@ -14,7 +14,7 @@ export default async function Page() {
   return (
     <>
       <PortfolioTitle />
-      <Portfolio portfolioData={portfolioData} />
+      {/* <Portfolio portfolioData={portfolioData} /> */}
     </>
   );
 }

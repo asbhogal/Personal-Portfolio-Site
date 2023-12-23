@@ -14,7 +14,7 @@ export default async function Page() {
   return (
     <>
       <FreeResourcesCover />
-      <FreeResourcesSection resourcesData={resourcesData} />
+      {/* <FreeResourcesSection resourcesData={resourcesData} /> */}
       <CTA />
     </>
   );

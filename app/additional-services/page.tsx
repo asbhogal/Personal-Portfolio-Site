@@ -13,7 +13,8 @@ export default async function Page() {
   return (
     <>
       <AdditionalServicesCover />
-      <AdditionalServicesContent servicesData={servicesData} />
+      {/*       <AdditionalServicesContent servicesData={servicesData} />
+       */}{" "}
     </>
   );
 }

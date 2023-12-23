@@ -17,8 +17,8 @@ export default async function Page() {
   return (
     <>
       <Heading />
-      <Skills offersData={offersData} />
-      <Projects projectData={projectData} />
+      {/* <Skills offersData={offersData} />
+      <Projects projectData={projectData} /> */}
       <CTA />
     </>
   );
