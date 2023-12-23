@@ -23,46 +23,48 @@ const AboutSection = () => {
         <FadeIn as="div" className="AboutExperience">
           <FadeIn as="h2">Professional Experience</FadeIn>
           <FadeIn as="div" className="ExperienceContainer">
-            {data.about.about.experience.map((experiences) => (
-              <FadeIn
-                as="div"
-                className="ExperienceSection"
-                key={experiences.id}
-              >
-                <FadeIn as="span" className="ExperienceTitle">
-                  {experiences.position}
-                </FadeIn>
-                <FadeIn as="span" className="ExperienceDate">
-                  {experiences.dates}
-                </FadeIn>
-                <FadeIn as="span" className="ExperienceInfo">
-                  <FadeIn as="ul">
-                    {experiences.duties.map((duty) => (
-                      <FadeIn as="li" key={duty}>
-                        {duty}
+            {data.about.about.experience.map(
+              (experiences: AboutType["about"]["experience"][0]) => (
+                <FadeIn
+                  as="div"
+                  className="ExperienceSection"
+                  key={experiences.id}
+                >
+                  <FadeIn as="span" className="ExperienceTitle">
+                    {experiences.position}
+                  </FadeIn>
+                  <FadeIn as="span" className="ExperienceDate">
+                    {experiences.dates}
+                  </FadeIn>
+                  <FadeIn as="span" className="ExperienceInfo">
+                    <FadeIn as="ul">
+                      {experiences.duties.map((duty) => (
+                        <FadeIn as="li" key={duty}>
+                          {duty}
+                        </FadeIn>
+                      ))}
+                    </FadeIn>
+                  </FadeIn>
+                  <FadeIn as="div" className="ExperienceSkills">
+                    {experiences.stacks.map((stack) => (
+                      <FadeIn as="span" key={stack}>
+                        {stack}
                       </FadeIn>
                     ))}
                   </FadeIn>
+                  <FadeIn
+                    as="a"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    href={experiences.link.href}
+                    className="WorkLinks"
+                    aria-label="work"
+                  >
+                    work
+                  </FadeIn>
                 </FadeIn>
-                <FadeIn as="div" className="ExperienceSkills">
-                  {experiences.stacks.map((stack) => (
-                    <FadeIn as="span" key={stack}>
-                      {stack}
-                    </FadeIn>
-                  ))}
-                </FadeIn>
-                <FadeIn
-                  as="a"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  href={experiences.link.href}
-                  className="WorkLinks"
-                  aria-label="work"
-                >
-                  work
-                </FadeIn>
-              </FadeIn>
-            ))}
+              )
+            )}
           </FadeIn>
         </FadeIn>
       </FadeIn>
