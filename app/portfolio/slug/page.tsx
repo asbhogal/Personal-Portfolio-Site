@@ -29,3 +29,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   return <ProjectPage projectData={projectData} />;
 }
  */
+
+export default async function Page() {
+  return <p>test</p>;
+}
