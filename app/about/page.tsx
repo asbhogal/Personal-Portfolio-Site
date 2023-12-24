@@ -13,7 +13,7 @@ export default async function Page() {
   return (
     <>
       <AboutCover />
-      <AboutSection />
+      <AboutSection aboutData={aboutData} />
     </>
   );
 }
