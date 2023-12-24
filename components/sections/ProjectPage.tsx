@@ -31,10 +31,22 @@ export default function ProjectPage({
     <div className="Project">
       <h1 className="sr-only">{projectData.project}</h1>
       <FadeIn as="section" className="ProjectHero">
-        <FadeIn as="picture" className="PictureContainer">
-          <source media="(min-width: 600px)" srcSet={desktop} />
-          <FadeIn as="img" src={mobile} alt={projectData.details.hero.alt} />
-        </FadeIn>
+        <Image
+          className="ProjectHeroDesktop"
+          src={projectData.details.hero.desktop}
+          alt={projectData.details.hero.alt}
+          width={2560}
+          height={1920}
+          priority
+        />
+        <Image
+          className="ProjectHeroMobile"
+          src={projectData.details.hero.mobile}
+          alt={projectData.details.hero.alt}
+          width={900}
+          height={675}
+          priority
+        />
       </FadeIn>
 
       <FadeIn as="section" className="ProjectLinks">

@@ -228,3 +228,21 @@
     }
   }
 }
+
+@media screen and (width <= 37.5rem) {
+  .ProjectHeroDesktop {
+    display: none;
+  }
+  .ProjectHeroMobile {
+    display: block;
+  }
+}
+
+@media screen and (width > 37.5rem) {
+  .ProjectHeroDesktop {
+    display: block;
+  }
+  .ProjectHeroMobile {
+    display: none;
+  }
+}
