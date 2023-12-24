@@ -20,7 +20,6 @@ export default function Footer() {
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
 
-  console.log(data);
   return (
     <FadeIn as="footer" className="Footer">
       <FadeIn as="div" className="Copyright">
