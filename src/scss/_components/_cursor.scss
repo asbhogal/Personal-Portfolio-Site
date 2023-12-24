@@ -30,3 +30,9 @@
   background: none;
   border: 0.0625rem solid $Argent;
 }
+
+@media only screen and (width <= 64rem) {
+  .Cursor {
+    display: none;
+  }
+}

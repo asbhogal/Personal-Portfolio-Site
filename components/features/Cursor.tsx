@@ -9,16 +9,12 @@ type Position = {
   y: number;
 };
 
-const isMobile = () => {
-  const ua = navigator.userAgent;
-  return /Android|Mobi/i.test(ua);
-};
-
 const Cursor: React.FC = () => {
-  const [position, setPosition] = useState<Position>({ x: 0, y: 0 }),
-    [hidden, setHidden] = useState(false),
-    [clicked, setClicked] = useState(false),
-    [linkHovered, setLinkHovered] = useState(false);
+  const [position, setPosition] = useState<Position>({ x: 0, y: 0 });
+  const [hidden, setHidden] = useState(false);
+  const [clicked, setClicked] = useState(false);
+  const [linkHovered, setLinkHovered] = useState(false);
+  const [isSelecting, setIsSelecting] = useState(false);
 
   const pathname = usePathname();
 
@@ -52,10 +48,12 @@ const Cursor: React.FC = () => {
 
   const onMouseUp = () => {
     setClicked(false);
+    setIsSelecting(false);
   };
 
   const onMouseDown = () => {
     setClicked(true);
+    setIsSelecting(true);
   };
 
   const handleLinkHoverEvents = () => {
@@ -67,9 +65,6 @@ const Cursor: React.FC = () => {
   };
 
   useEffect(() => {
-    if (typeof navigator !== "undefined" && isMobile()) {
-      return;
-    }
     addEventListeners();
     handleLinkHoverEvents();
     return () => removeEventListeners();
@@ -83,8 +78,12 @@ const Cursor: React.FC = () => {
 
   return (
     <div
-      className={cursorClasses}
-      style={{ left: `${position.x}px`, top: `${position.y}px` }}
+      className={`${cursorClasses} Cursor${isSelecting ? "Hidden" : ""}`}
+      style={{
+        left: `${position.x}px`,
+        top: `${position.y}px`,
+        visibility: position.x === 0 && position.y === 0 ? "hidden" : "visible",
+      }}
     />
   );
 };
