@@ -378,8 +378,26 @@ export async function GET(request: Request) {
       summary:
         "A single page application which returns a range of crypto-related data, including currently top-trending currencies, market value, exchange rates and news. Built using Next.js with Redux RTK Query to handle multiple API calls.",
       stacks: [
-        ["Next.js", "React", "Redux", "RTK Query", "RESTful APIs", "Axios"],
-        ["SPA", "SASS", "PostCSS", "Webpack", "Git", "Vercel"],
+        [
+          "TypeSript",
+          "Next.js",
+          "React",
+          "Redux",
+          "RTK Query",
+          "RESTful APIs",
+          "Axios",
+          "SPA",
+        ],
+        [
+          "SASS",
+          "PostCSS",
+          "Playwright",
+          "E2E Testing",
+          "Husky",
+          "ESLint",
+          "Git",
+          "Vercel",
+        ],
       ],
       skills: ["web design", "web development"],
       code: "https://github.com/asbhogal/Next.js-Cryptocurrency-App",
@@ -404,12 +422,7 @@ export async function GET(request: Request) {
         date: "March 2023 - April 2023",
         discipline: ["design", "development"],
         description:
-          "A single page application which returns a range of crypto-related data, including currently top-trending currencies, market value, exchange rates and news. Built using Next.js with Redux RTK Query to handle multiple API calls",
-        design: [
-          [
-            "Cryptoverse is a conceptualised company which offers data on different cryptocurrencies, including market capitalisation, exchanges and current news. The application also allows users to look up the current stats of a cryptocurrency, including its ranking, price and market cap. The application was built using Next.js and leveraged Redux RTK Query to manage API calls from Coinranking, Coin Gecko and Bing News Search. The app was also styled using SCSS, compiled as a production build using Webpack and shipped via Vercel.",
-          ],
-        ],
+          "Cryptoverse is a conceptualised company which offers data on different cryptocurrencies, including market capitalisation, exchanges and current news. The application also allows users to look up the current stats of a cryptocurrency, including its ranking, price and market cap. The application was built using TypeScript and Next.js and leveraged Redux RTK Query to manage API calls from Coinranking, Coin Gecko and The News. The app was also styled using SCSS, tested using Playwright E2E and a111y testing, leverages husky for pre-commit linting and testing and compiled as a production build using Webpack and shipped via Vercel.",
         typeface: {
           id: "CryptoverseTypeface",
           font: "Noto Sans",
