@@ -4,6 +4,7 @@ import Cursor from "@/components/features/Cursor";
 import ScrollToTop from "@/components/features/ScrollToTop";
 import Footer from "@/components/sections/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function RootLayout({
   children,
@@ -13,6 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="root">
+        <Analytics />
         <SpeedInsights />
         <Header />
         <Cursor />
