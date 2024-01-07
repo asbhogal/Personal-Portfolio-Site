@@ -135,6 +135,7 @@ export async function GET(request: Request) {
         "A fully-functioning, Single Page e-commerce application which sells a range of minimalist, high-end products. Built using React with Stripe, Material UI for styling and Webpack.",
       stacks: [
         [
+          "TypeScript",
           "React",
           "React Hook Form",
           "React Router",
@@ -142,7 +143,7 @@ export async function GET(request: Request) {
           "Commerce.js (Headless CMS)",
           "RESTful APIs",
         ],
-        ["SPA", "Stripe", "Material UI", "Webpack", "Git", "Vercel"],
+        ["SPA", "Stripe", "Material UI", "Babel", "Webpack", "Git", "Vercel"],
       ],
       skills: ["web design", "web development"],
       code: "https://github.com/asbhogal/React-Tech-Commerce.Js-Site",
@@ -187,35 +188,35 @@ export async function GET(request: Request) {
           images: [
             {
               img: "/images/LiteLife/assets/Yamaha.jpg",
-              alt: "",
+              alt: "A close-up of a Yamaha keyboard, with the brand in clear view",
             },
             {
               img: "/images/LiteLife/assets/Screwdriver.jpg",
-              alt: "",
+              alt: "A cordless screwdriver with a temperature display on the rear, surrounded by drill bits",
             },
             {
               img: "/images/LiteLife/assets/Cord.jpg",
-              alt: "",
+              alt: "A fibre-weaved cord, wrapped into a circle on top of a laptop keyboard",
             },
             {
               img: "/images/LiteLife/assets/DeskLamp.jpg",
-              alt: "",
+              alt: "A black desk lamp, on and facing the surface",
             },
             {
               img: "/images/LiteLife/assets/ChargingBank.jpg",
-              alt: "",
+              alt: "A powerbank charging, with the brand 'ANKER' printed on the cable",
             },
             {
               img: "/images/LiteLife/assets/iMacWhite.jpg",
-              alt: "",
+              alt: "An iMac, with a keyboard and keypad, against a white backdrop",
             },
             {
               img: "/images/LiteLife/assets/BlackMacbook.jpg",
-              alt: "",
+              alt: "A black Macbook against a white backdrop",
             },
             {
               img: "/images/LiteLife/assets/Earphones.jpg",
-              alt: "",
+              alt: "A rear-view of an earphones charging box, with the lid upright",
             },
           ],
           palette: {
@@ -379,7 +380,7 @@ export async function GET(request: Request) {
         "A single page application which returns a range of crypto-related data, including currently top-trending currencies, market value, exchange rates and news. Built using Next.js with Redux RTK Query to handle multiple API calls.",
       stacks: [
         [
-          "TypeSript",
+          "TypeScript",
           "Next.js",
           "React",
           "Redux",
