@@ -1,5 +1,7 @@
 export async function getAboutData() {
-  const res = await fetch(`${process.env.API_BASE_URL}/api/about`);
+  const res = await fetch(`${process.env.API_BASE_URL}/api/about`, {
+    next: { revalidate: 60 },
+  });
 
   if (!res.ok) {
     throw new Error("Error fetching about data");
@@ -29,7 +31,9 @@ export async function getOffersData() {
 }
 
 export async function getResourcesData() {
-  const res = await fetch(`${process.env.API_BASE_URL}/api/resources`);
+  const res = await fetch(`${process.env.API_BASE_URL}/api/resources`, {
+    next: { revalidate: 60 },
+  });
 
   if (!res.ok) {
     throw new Error("Error fetching resources data");
@@ -39,7 +43,9 @@ export async function getResourcesData() {
 }
 
 export async function getProjectData() {
-  const res = await fetch(`${process.env.API_BASE_URL}/api/projects`);
+  const res = await fetch(`${process.env.API_BASE_URL}/api/projects`, {
+    next: { revalidate: 60 },
+  });
 
   if (!res.ok) {
     throw new Error("Error fetching project data");
@@ -49,7 +55,9 @@ export async function getProjectData() {
 }
 
 export async function getServicesData() {
-  const res = await fetch(`${process.env.API_BASE_URL}/api/services`);
+  const res = await fetch(`${process.env.API_BASE_URL}/api/services`, {
+    next: { revalidate: 60 },
+  });
 
   if (!res.ok) {
     throw new Error("Error fetching services data");
