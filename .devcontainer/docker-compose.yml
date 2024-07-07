@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  client:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../..:/workspaces:cached
+      - ~/.ssh:/home/node/.ssh:cached
+    command: sleep infinity
+    working_dir: /workspaces/personal-portfolio-site
