@@ -2,7 +2,7 @@
 
 import { ProjectType } from "@/utils/types";
 import FadeIn from "@/utils/animations";
-import Image, { unstable_getImgProps as getImgProps } from "next/image";
+import Image, { getImageProps } from "next/image";
 import CTA from "@/components/sections/CTA";
 
 export default function ProjectPage({
@@ -207,14 +207,14 @@ export default function ProjectPage({
 
           const {
             props: { srcSet: desktop },
-          } = getImgProps({
+          } = getImageProps({
             ...common,
             src: mockup.desktop,
           });
 
           const {
             props: { src: mobile, ...rest },
-          } = getImgProps({ ...common, src: mockup.mobile });
+          } = getImageProps({ ...common, src: mockup.mobile });
 
           return (
             <FadeIn as="picture" key={index} className="PictureContainer">

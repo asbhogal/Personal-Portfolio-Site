@@ -1,4 +1,4 @@
-import "../src/scss/index.scss";
+import "../../src/scss/index.scss";
 import Header from "@/components/sections/Header";
 import Cursor from "@/components/features/Cursor";
 import ScrollToTop from "@/components/features/ScrollToTop";

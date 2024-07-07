@@ -1,6 +1,6 @@
 "use client";
 
-import { unstable_getImgProps as getImgProps } from "next/image";
+import { getImageProps } from 'next/image'
 import FadeIn from "@/utils/animations";
 import { ResourcesType } from "@/utils/types";
 
@@ -20,14 +20,14 @@ export default function FreeResourcesSection({
 
         const {
           props: { srcSet: desktop },
-        } = getImgProps({
+        } = getImageProps({
           ...common,
           src: resource.images.desktop,
         });
 
         const {
           props: { src: mobile, ...rest },
-        } = getImgProps({
+        } = getImageProps({
           ...common,
           src: resource.images.mobile,
         });

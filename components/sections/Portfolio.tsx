@@ -2,7 +2,7 @@
 
 import FadeIn from "@/utils/animations";
 import { ProjectType } from "@/utils/types";
-import { unstable_getImgProps as getImgProps } from "next/image";
+import { getImageProps } from 'next/image'
 
 export default function Portfolio({
   portfolioData,
@@ -20,14 +20,14 @@ export default function Portfolio({
 
         const {
           props: { srcSet: desktop },
-        } = getImgProps({
+        } = getImageProps({
           ...common,
           src: project.portfolioImg.desktop,
         });
 
         const {
           props: { src: mobile, ...rest },
-        } = getImgProps({
+        } = getImageProps({
           ...common,
           src: project.portfolioImg.mobile,
         });
