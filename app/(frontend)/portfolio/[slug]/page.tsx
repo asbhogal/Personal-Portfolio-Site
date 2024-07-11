@@ -10,7 +10,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const data = await getProjectData();
   const projectData: ProjectType = data.projects.find(
-    (project: ProjectType) => project.slug === params.slug
+    (project: ProjectType) => project.slug === params.slug,
   );
 
   return {
@@ -23,7 +23,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const data = await getProjectData();
 
   const projectData: ProjectType = data.projects.find(
-    (project: ProjectType) => project.slug === params.slug
+    (project: ProjectType) => project.slug === params.slug,
   );
 
   return <ProjectPage projectData={projectData} />;

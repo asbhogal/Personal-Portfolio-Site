@@ -56,7 +56,7 @@ const AboutSection = ({ aboutData }: { aboutData: AboutType }) => {
                     work
                   </FadeIn>
                 </FadeIn>
-              )
+              ),
             )}
           </FadeIn>
         </FadeIn>

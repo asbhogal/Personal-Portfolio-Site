@@ -11,15 +11,16 @@
 A personal portfolio site created for the repo owner to showcase his projects, built using Next.js, TypeScript, SASS and Framer Motion and deployed via Vercel.
 
 <strong>Features:</strong><br>
-  - TypeScript for type safety
-  - Next.js API routes for dynamic content
-  - SWR for client-side data fetching
-  - SASS for styling
-  - Framer Motion for animations (custom component)
-  - Playwright for testing (incl. a11y)
-  - Husky to run linting and testing prior to commit
-  - Fully responsive
-  - Optimised for the web
+
+- TypeScript for type safety
+- Next.js API routes for dynamic content
+- SWR for client-side data fetching
+- SASS for styling
+- Framer Motion for animations (custom component)
+- Playwright for testing (incl. a11y)
+- Husky to run linting and testing prior to commit
+- Fully responsive
+- Optimised for the web
 
 <strong>Stacks &#38; Tools Used:</strong><br>
 <br>
@@ -33,4 +34,5 @@ A personal portfolio site created for the repo owner to showcase his projects, b
 <a target="_blank" rel="noopener noreferrer" href="https://playwright.dev/img/playwright-logo.svg"><img src="https://playwright.dev/img/playwright-logo.svg" alt="Playwright logo" width="50" height="50" style="max-width:100%;"></a>
 
 <strong>Links</strong><br>
- - <a target="_blank" href="https://amansinghbhogal.com">Portfolio Site</a>
+
+- <a target="_blank" href="https://amansinghbhogal.com">Portfolio Site</a>

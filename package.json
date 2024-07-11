@@ -7,9 +7,10 @@
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev --turbo",
     "build": "next build",
     "start": "next start",
+    "format": "npx prettier . --write",
     "lint": "next lint",
     "test": "playwright test",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,7 @@
   },
   "keywords": [],
   "author": "Aman Singh Bhogal",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/asbhogal/Personal-Portfolio-Site/issues"
   },
@@ -61,7 +62,11 @@
     "@types/react-dom": "npm:types-react-dom@19.0.0-beta.2",
     "eslint": "^8.57.0",
     "eslint-config-next": "15.0.0-rc.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
     "husky": "^8.0.0",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.2",
     "sass": "^1.57.1",
     "typescript": "^5"
   },

@@ -1,6 +1,6 @@
 "use client";
 
-import { getImageProps } from 'next/image'
+import { getImageProps } from "next/image";
 import FadeIn from "@/utils/animations";
 import Link from "next/link";
 import Arrow from "../icons/Arrow";

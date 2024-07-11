@@ -2,7 +2,7 @@
 
 import FadeIn from "@/utils/animations";
 import { ProjectType } from "@/utils/types";
-import { getImageProps } from 'next/image'
+import { getImageProps } from "next/image";
 
 export default function Portfolio({
   portfolioData,

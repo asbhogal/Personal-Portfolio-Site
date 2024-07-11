@@ -23,11 +23,10 @@
  */
 
 @font-face {
-    font-family: '2-questa_grande_regular_31';
-    src: url('2-questa_grande_regular_31-webfont.woff2') format('woff2'),
-         url('2-questa_grande_regular_31-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "2-questa_grande_regular_31";
+  src:
+    url("2-questa_grande_regular_31-webfont.woff2") format("woff2"),
+    url("2-questa_grande_regular_31-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-

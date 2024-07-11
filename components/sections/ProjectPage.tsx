@@ -70,7 +70,7 @@ export default function ProjectPage({
               >
                 {stack}
               </FadeIn>
-            ))
+            )),
           )}
         </FadeIn>
         <FadeIn as="p" className="ProjectAboutContent">
