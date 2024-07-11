@@ -6,6 +6,9 @@ const nextConfig = {
   experimental: {
     reactCompiler: false,
   },
+  eslint: {
+    dirs: ["components", "src", "utils", "app"],
+  },
 };
 
 export default withPayload(nextConfig);
