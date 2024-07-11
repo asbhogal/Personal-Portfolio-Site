@@ -23,6 +23,7 @@ export default function FadeIn({
       id={id}
       href={href}
       target={target}
+      // @ts-expect-error type mismatch with latest rc version
       rel={rel}
       src={src}
       alt={alt}
