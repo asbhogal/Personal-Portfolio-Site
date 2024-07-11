@@ -1,7 +1,7 @@
 import { TestimonialsType } from "@/utils/types";
 import { NextResponse } from "next/server";
 
-export async function GET(request: Request) {
+export async function GET() {
   const testimonials: TestimonialsType[] = [
     {
       id: 1,

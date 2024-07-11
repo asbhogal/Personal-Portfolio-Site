@@ -40,7 +40,7 @@ export default function Projects({
           });
 
           const {
-            props: { src: mobile, ...rest },
+            props: { src: mobile },
           } = getImageProps({
             ...common,
             src: project.imageMobile,

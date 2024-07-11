@@ -5,7 +5,7 @@ import { TestimonialsType } from "@/utils/types";
 import useSWR from "swr";
 import "@splidejs/react-splide/css";
 import { splideOptions } from "@/utils/options";
-// @ts-ignore - suppress type checking for missing types
+// @ts-expect-error - suppress type checking for missing types
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import FadeIn from "@/utils/animations";
 

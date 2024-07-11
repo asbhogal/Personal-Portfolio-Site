@@ -1,7 +1,7 @@
 import { ProjectType } from "@/utils/types";
 import { NextResponse } from "next/server";
 
-export async function GET(request: Request) {
+export async function GET() {
   const projects: ProjectType[] = [
     {
       id: 1,

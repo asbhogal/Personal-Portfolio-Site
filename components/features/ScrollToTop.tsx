@@ -31,7 +31,7 @@ const ScrollToTop = () => {
         <m.button
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          // @ts-ignore
+          // @ts-expect-error type mismatch with latest rc version
           onClick={scrollToTop}
           className="ScrollToTop"
         >

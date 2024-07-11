@@ -26,7 +26,7 @@ export default function FreeResourcesSection({
         });
 
         const {
-          props: { src: mobile, ...rest },
+          props: { src: mobile },
         } = getImageProps({
           ...common,
           src: resource.images.mobile,

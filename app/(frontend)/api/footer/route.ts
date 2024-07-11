@@ -1,7 +1,7 @@
 import { FooterLinksType } from "@/utils/types";
 import { NextResponse } from "next/server";
 
-export async function GET(request: Request) {
+export async function GET() {
   const footerLinks: FooterLinksType[] = [
     {
       id: 1,

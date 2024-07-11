@@ -26,7 +26,7 @@ export default function Portfolio({
         });
 
         const {
-          props: { src: mobile, ...rest },
+          props: { src: mobile },
         } = getImageProps({
           ...common,
           src: project.portfolioImg.mobile,

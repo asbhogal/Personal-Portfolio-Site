@@ -213,7 +213,7 @@ export default function ProjectPage({
           });
 
           const {
-            props: { src: mobile, ...rest },
+            props: { src: mobile },
           } = getImageProps({ ...common, src: mockup.mobile });
 
           return (
