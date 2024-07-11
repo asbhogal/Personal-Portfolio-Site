@@ -31,6 +31,7 @@ const ScrollToTop = () => {
         <m.button
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          // @ts-ignore
           onClick={scrollToTop}
           className="ScrollToTop"
         >
