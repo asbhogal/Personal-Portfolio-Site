@@ -7,7 +7,8 @@ export const Media: CollectionConfig = {
       type: "text",
     },
     {
-      name: "alt text",
+      label: "Alt Text",
+      name: "altText",
       type: "text",
     },
   ],

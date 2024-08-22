@@ -3,6 +3,7 @@
   "version": "3.0.0",
   "description": "A personal portfolio site created for the repo owner (Aman Singh Bhogal.)",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "cross-env NODE_OPTIONS=\"${NODE_OPTIONS} --no-deprecation\" next dev",
     "devturbo": "pnpm dev --turbo",

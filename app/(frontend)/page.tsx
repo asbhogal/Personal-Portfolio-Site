@@ -1,25 +1,36 @@
-import CTA from "@/components/sections/CTA";
 import Heading from "@/components/covers/Heading";
-import Projects from "@/components/sections/Projects";
-import Skills from "@/components/sections/Skills";
-import { getOffersData, getProjectData } from "@/utils/functions";
 import { Metadata } from "next";
+import React from "react";
+import { getPayloadHMR } from "@payloadcms/next/utilities";
+import config from "@payload-config";
+import { Page as PageProps } from "@/payload-types";
 
 export const metadata: Metadata = {
-  title: "Aman Singh Bhogal | Award Winning Creative Front End Developer",
   description:
     "The portfolio site of Aman Singh Bhogal, Creative Front End Developer with over three and a half years of experience in designing and building user interfaces",
+  title: "Aman Singh Bhogal | Award Winning Creative Front End Developer",
 };
 
 export default async function Page() {
-  const { projects: projectData } = await getProjectData();
-  const { offers: offersData } = await getOffersData();
+  const payload = await getPayloadHMR({
+    config,
+  });
+
+  const data: PageProps = await payload
+    .find({
+      collection: "pages",
+    })
+    .then((results) => results.docs[0]);
+
+  // @ts-expect-error resolve type mismatch
+  const title = data?.content?.root?.children[0]?.children[0]?.text ?? "";
+
   return (
-    <>
-      <Heading />
-      <Skills offersData={offersData} />
+    <React.Fragment>
+      <Heading title={title} />
+      {/*  <Skills offersData={offersData} />
       <Projects projectData={projectData} />
-      <CTA />
-    </>
+      <CTA /> */}
+    </React.Fragment>
   );
 }

@@ -17,6 +17,9 @@ export interface Config {
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
+  db: {
+    defaultIDType: string;
+  };
   globals: {};
   locale: null;
   user: User & {
@@ -26,12 +29,17 @@ export interface Config {
 export interface UserAuthOperations {
   forgotPassword: {
     email: string;
+    password: string;
   };
   login: {
-    password: string;
     email: string;
+    password: string;
   };
   registerFirstUser: {
+    email: string;
+    password: string;
+  };
+  unlock: {
     email: string;
     password: string;
   };
@@ -76,6 +84,10 @@ export interface Page {
     };
     [k: string]: unknown;
   } | null;
+  SEO?: {
+    title?: string | null;
+    description?: string | null;
+  };
   updatedAt: string;
   createdAt: string;
 }
@@ -86,7 +98,7 @@ export interface Page {
 export interface Media {
   id: string;
   text?: string | null;
-  'alt text'?: string | null;
+  altText?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
