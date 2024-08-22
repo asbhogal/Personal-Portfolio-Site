@@ -5,6 +5,9 @@ import { mongooseAdapter } from "@payloadcms/db-mongodb";
 import { buildConfig } from "payload";
 import sharp from "sharp";
 import { fileURLToPath } from "url";
+import { Users } from "./app/(payload)/collections/users";
+import { Pages } from "./app/(payload)/collections/pages";
+import { Media } from "./app/(payload)/collections/media";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -15,43 +18,7 @@ if (!process.env.ADMIN_EMAIL || !process.env.ADMIN_PASSWORD) {
 
 export default buildConfig({
   editor: lexicalEditor(),
-  collections: [
-    {
-      slug: "users",
-      auth: true,
-      access: {
-        delete: () => false,
-        update: () => false,
-      },
-      fields: [],
-    },
-    {
-      slug: "pages",
-      admin: {
-        useAsTitle: "title",
-      },
-      fields: [
-        {
-          name: "title",
-          type: "text",
-        },
-        {
-          name: "content",
-          type: "richText",
-        },
-      ],
-    },
-    {
-      slug: "media",
-      upload: true,
-      fields: [
-        {
-          name: "text",
-          type: "text",
-        },
-      ],
-    },
-  ],
+  collections: [Users, Pages, Media],
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {
     outputFile: path.resolve(dirname, "payload-types.ts"),
@@ -70,6 +37,10 @@ export default buildConfig({
       email: process.env.ADMIN_EMAIL,
       password: process.env.ADMIN_PASSWORD,
       prefillOnly: true,
+    },
+    livePreview: {
+      url: "http://localhost:3000",
+      collections: ["pages"],
     },
   },
   async onInit(payload) {
