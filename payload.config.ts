@@ -17,21 +17,6 @@ if (!process.env.ADMIN_EMAIL || !process.env.ADMIN_PASSWORD) {
 }
 
 export default buildConfig({
-  editor: lexicalEditor(),
-  collections: [Users, Pages, Media],
-  secret: process.env.PAYLOAD_SECRET || "",
-  typescript: {
-    outputFile: path.resolve(dirname, "payload-types.ts"),
-  },
-
-  db: mongooseAdapter({
-    url: process.env.MONGODB_URI || "",
-  }),
-
-  i18n: {
-    supportedLanguages: { en },
-  },
-
   admin: {
     autoLogin: {
       email: process.env.ADMIN_EMAIL,
@@ -39,10 +24,20 @@ export default buildConfig({
       prefillOnly: true,
     },
     livePreview: {
-      url: "http://localhost:3000",
       collections: ["pages"],
+      url: "http://localhost:3000",
     },
   },
+  collections: [Users, Pages, Media],
+  db: mongooseAdapter({
+    url: process.env.MONGODB_URI || "",
+  }),
+  editor: lexicalEditor(),
+
+  i18n: {
+    supportedLanguages: { en },
+  },
+
   async onInit(payload) {
     const existingUsers = await payload.find({
       collection: "users",
@@ -59,5 +54,10 @@ export default buildConfig({
       });
     }
   },
+
+  secret: process.env.PAYLOAD_SECRET || "",
   sharp,
+  typescript: {
+    outputFile: path.resolve(dirname, "payload-types.ts"),
+  },
 });

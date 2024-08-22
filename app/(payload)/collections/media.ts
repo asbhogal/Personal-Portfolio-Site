@@ -1,8 +1,6 @@
 import { CollectionConfig } from "payload";
 
 export const Media: CollectionConfig = {
-  slug: "media",
-  upload: true,
   fields: [
     {
       name: "text",
@@ -13,4 +11,6 @@ export const Media: CollectionConfig = {
       type: "text",
     },
   ],
+  slug: "media",
+  upload: true,
 };
