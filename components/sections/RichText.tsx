@@ -1,4 +1,7 @@
+'use client';
+
 import { Page } from '@/payload-types';
+import FadeIn from '@/utils/animations';
 import { LexicalReactRender } from '@/utils/serialize';
 
 interface RichTextProps {
@@ -11,5 +14,5 @@ export default function RichText({ content }: RichTextProps) {
   }
 
   // @ts-expect-error resolve content mismatch
-  return <div className="RichText">{LexicalReactRender({ content })}</div>;
+  return <FadeIn className="RichText">{LexicalReactRender({ content })}</FadeIn>;
 }
