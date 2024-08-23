@@ -3,32 +3,48 @@
 .Footer {
   display: flex;
   width: 100%;
-  align-items: center;
   justify-content: space-between;
-  border-top: 0.0625rem solid $Argent;
-  padding: 2.1875rem 0;
+  padding: 435px 0;
   flex-wrap: wrap;
   gap: 0.9375rem;
-  align-items: center;
+  position: relative;
+  flex-direction: column;
+  height: 100%;
   .Copyright {
     color: $Argent;
     text-transform: uppercase;
-    font-family: $BodyFont;
+    font-family: 'Cardillac';
+    position: absolute;
+    bottom: 40px
   }
-  .SocialIcons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.625rem;
-    a {
-      display: flex;
-      color: $Argent;
-      cursor: none;
-      transition: $Transition-03;
-      &:hover {
-        transform: translateY(-0.3125rem);
-        transition: $Transition-03;
-      }
-    }
-  }
+ .FooterUl {
+  list-style-type: none;
+  flex: 1;
+ }
+ .FooterLi {
+  display: flex;
+  gap: 0.9375rem;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+ }
+ .FooterLink {
+   color: $Argent;
+   text-decoration: none;
+   font-family: "Cardillac";
+   text-transform: uppercase;
+   font-size: 24px;
+ }
+ .FooterLogo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+ }
+ .FooterLinks {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  max-width: 460px;
+  width: 100%;;
+ }
 }
