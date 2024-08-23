@@ -324,6 +324,7 @@ type Page {
   title: String
   content(depth: Int): JSON
   SEO: Page_SEO
+  layout: [Page_Layout!]
   updatedAt: DateTime
   createdAt: DateTime
 }
@@ -336,6 +337,15 @@ scalar JSON @specifiedBy(url: "http://www.ecma-international.org/publications/fi
 type Page_SEO {
   title: String
   description: String
+}
+
+union Page_Layout = ContentBlock
+
+type ContentBlock {
+  Content(depth: Int): JSON
+  id: String
+  blockName: String
+  blockType: String
 }
 
 type Pages {
@@ -478,6 +488,7 @@ type PagesDocAccessFields {
   title: PagesDocAccessFields_title
   content: PagesDocAccessFields_content
   SEO: PagesDocAccessFields_SEO
+  layout: PagesDocAccessFields_layout
   updatedAt: PagesDocAccessFields_updatedAt
   createdAt: PagesDocAccessFields_createdAt
 }
@@ -600,6 +611,29 @@ type PagesDocAccessFields_SEO_description_Update {
 }
 
 type PagesDocAccessFields_SEO_description_Delete {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_layout {
+  create: PagesDocAccessFields_layout_Create
+  read: PagesDocAccessFields_layout_Read
+  update: PagesDocAccessFields_layout_Update
+  delete: PagesDocAccessFields_layout_Delete
+}
+
+type PagesDocAccessFields_layout_Create {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_layout_Read {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_layout_Update {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_layout_Delete {
   permission: Boolean!
 }
 
@@ -2009,6 +2043,7 @@ type PagesFields {
   title: PagesFields_title
   content: PagesFields_content
   SEO: PagesFields_SEO
+  layout: PagesFields_layout
   updatedAt: PagesFields_updatedAt
   createdAt: PagesFields_createdAt
 }
@@ -2131,6 +2166,29 @@ type PagesFields_SEO_description_Update {
 }
 
 type PagesFields_SEO_description_Delete {
+  permission: Boolean!
+}
+
+type PagesFields_layout {
+  create: PagesFields_layout_Create
+  read: PagesFields_layout_Read
+  update: PagesFields_layout_Update
+  delete: PagesFields_layout_Delete
+}
+
+type PagesFields_layout_Create {
+  permission: Boolean!
+}
+
+type PagesFields_layout_Read {
+  permission: Boolean!
+}
+
+type PagesFields_layout_Update {
+  permission: Boolean!
+}
+
+type PagesFields_layout_Delete {
   permission: Boolean!
 }
 
@@ -3045,6 +3103,7 @@ input mutationPageInput {
   title: String
   content: JSON
   SEO: mutationPage_SEOInput
+  layout: JSON
   updatedAt: String
   createdAt: String
 }
@@ -3058,6 +3117,7 @@ input mutationPageUpdateInput {
   title: String
   content: JSON
   SEO: mutationPageUpdate_SEOInput
+  layout: JSON
   updatedAt: String
   createdAt: String
 }
