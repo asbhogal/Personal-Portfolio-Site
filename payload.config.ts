@@ -41,23 +41,6 @@ export default buildConfig({
     supportedLanguages: { en },
   },
 
-  async onInit(payload) {
-    const existingUsers = await payload.find({
-      collection: 'users',
-      limit: 1,
-    });
-
-    if (existingUsers.docs.length === 0) {
-      await payload.create({
-        collection: 'users',
-        data: {
-          email: 'process.env.ADMIN_EMAIL',
-          password: process.env.ADMIN_PASSWORD,
-        },
-      });
-    }
-  },
-
   secret: process.env.PAYLOAD_SECRET || '',
   sharp,
   typescript: {
