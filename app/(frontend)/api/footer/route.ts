@@ -1,27 +1,14 @@
-import { FooterLinksType } from "@/utils/types";
-import { NextResponse } from "next/server";
+import { getPayloadHMR } from '@payloadcms/next/utilities';
+import configPromise from '@payload-config';
 
-export async function GET() {
-  const footerLinks: FooterLinksType[] = [
-    {
-      id: 1,
-      href: "https://www.linkedin.com/in/amansinghbhogal",
-      ariaLabel: "LinkedIn page",
-      icon: "FaLinkedinIn",
-    },
-    {
-      id: 2,
-      href: "https://www.github.com/asbhogal",
-      ariaLabel: "GitHub page",
-      icon: "BsGithub",
-    },
-    {
-      id: 3,
-      href: "https://www.figma.com/@amansinghbhogal",
-      ariaLabel: "Figma profile",
-      icon: "FiFigma",
-    },
-  ];
+export const GET = async () => {
+  const payload = await getPayloadHMR({
+    config: configPromise,
+  });
 
-  return NextResponse.json({ footerLinks }, { status: 200 });
-}
+  const data = await payload.findGlobal({
+    slug: 'footer-menu',
+  });
+
+  return Response.json(data);
+};

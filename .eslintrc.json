@@ -9,9 +9,7 @@
     "@innovixx/eslint-config/configs/react",
     "@innovixx/eslint-config/configs/typescript",
     "next/core-web-vitals",
-    "prettier",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+    "plugin:@typescript-eslint/recommended"
   ],
   "settings": {
     "jsx-a11y/strict": true
