@@ -5,6 +5,7 @@ import ScrollToTop from '@/components/features/ScrollToTop';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import Footer from '@/components/sections/Footer';
+import '@splidejs/react-splide/css';
 
 export default function RootLayout({
   children,

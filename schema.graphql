@@ -339,13 +339,530 @@ type Page_SEO {
   description: String
 }
 
-union Page_Layout = ContentBlock | SubheadingBlock
+union Page_Layout = ContentBlock | SliderBlock | SubheadingBlock
 
 type ContentBlock {
   Content(depth: Int): JSON
   id: String
   blockName: String
   blockType: String
+}
+
+type SliderBlock {
+  title: String
+  description: String
+  cards: [SliderBlock_Cards!]
+  id: String
+  blockName: String
+  blockType: String
+}
+
+type SliderBlock_Cards {
+  title: String
+  description: String
+  image(where: SliderBlock_Cards_Image_where): Media
+  subheading: String
+  id: String
+}
+
+type Media {
+  id: String
+  text: String
+  altText: String
+  updatedAt: DateTime
+  createdAt: DateTime
+  url: String
+  thumbnailURL: String
+  filename: String
+  mimeType: String
+  filesize: Float
+  width: Float
+  height: Float
+  focalX: Float
+  focalY: Float
+  sizes: Media_Sizes
+}
+
+type Media_Sizes {
+  desktop: Media_Sizes_Desktop
+  mobile: Media_Sizes_Mobile
+  tablet: Media_Sizes_Tablet
+}
+
+type Media_Sizes_Desktop {
+  url: String
+  width: Float
+  height: Float
+  mimeType: String
+  filesize: Float
+  filename: String
+}
+
+type Media_Sizes_Mobile {
+  url: String
+  width: Float
+  height: Float
+  mimeType: String
+  filesize: Float
+  filename: String
+}
+
+type Media_Sizes_Tablet {
+  url: String
+  width: Float
+  height: Float
+  mimeType: String
+  filesize: Float
+  filename: String
+}
+
+input SliderBlock_Cards_Image_where {
+  text: SliderBlock_Cards_Image_text_operator
+  altText: SliderBlock_Cards_Image_altText_operator
+  updatedAt: SliderBlock_Cards_Image_updatedAt_operator
+  createdAt: SliderBlock_Cards_Image_createdAt_operator
+  url: SliderBlock_Cards_Image_url_operator
+  thumbnailURL: SliderBlock_Cards_Image_thumbnailURL_operator
+  filename: SliderBlock_Cards_Image_filename_operator
+  mimeType: SliderBlock_Cards_Image_mimeType_operator
+  filesize: SliderBlock_Cards_Image_filesize_operator
+  width: SliderBlock_Cards_Image_width_operator
+  height: SliderBlock_Cards_Image_height_operator
+  focalX: SliderBlock_Cards_Image_focalX_operator
+  focalY: SliderBlock_Cards_Image_focalY_operator
+  sizes__desktop__url: SliderBlock_Cards_Image_sizes__desktop__url_operator
+  sizes__desktop__width: SliderBlock_Cards_Image_sizes__desktop__width_operator
+  sizes__desktop__height: SliderBlock_Cards_Image_sizes__desktop__height_operator
+  sizes__desktop__mimeType: SliderBlock_Cards_Image_sizes__desktop__mimeType_operator
+  sizes__desktop__filesize: SliderBlock_Cards_Image_sizes__desktop__filesize_operator
+  sizes__desktop__filename: SliderBlock_Cards_Image_sizes__desktop__filename_operator
+  sizes__mobile__url: SliderBlock_Cards_Image_sizes__mobile__url_operator
+  sizes__mobile__width: SliderBlock_Cards_Image_sizes__mobile__width_operator
+  sizes__mobile__height: SliderBlock_Cards_Image_sizes__mobile__height_operator
+  sizes__mobile__mimeType: SliderBlock_Cards_Image_sizes__mobile__mimeType_operator
+  sizes__mobile__filesize: SliderBlock_Cards_Image_sizes__mobile__filesize_operator
+  sizes__mobile__filename: SliderBlock_Cards_Image_sizes__mobile__filename_operator
+  sizes__tablet__url: SliderBlock_Cards_Image_sizes__tablet__url_operator
+  sizes__tablet__width: SliderBlock_Cards_Image_sizes__tablet__width_operator
+  sizes__tablet__height: SliderBlock_Cards_Image_sizes__tablet__height_operator
+  sizes__tablet__mimeType: SliderBlock_Cards_Image_sizes__tablet__mimeType_operator
+  sizes__tablet__filesize: SliderBlock_Cards_Image_sizes__tablet__filesize_operator
+  sizes__tablet__filename: SliderBlock_Cards_Image_sizes__tablet__filename_operator
+  id: SliderBlock_Cards_Image_id_operator
+  AND: [SliderBlock_Cards_Image_where_and]
+  OR: [SliderBlock_Cards_Image_where_or]
+}
+
+input SliderBlock_Cards_Image_text_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_altText_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_updatedAt_operator {
+  equals: DateTime
+  not_equals: DateTime
+  greater_than_equal: DateTime
+  greater_than: DateTime
+  less_than_equal: DateTime
+  less_than: DateTime
+  like: DateTime
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_createdAt_operator {
+  equals: DateTime
+  not_equals: DateTime
+  greater_than_equal: DateTime
+  greater_than: DateTime
+  less_than_equal: DateTime
+  less_than: DateTime
+  like: DateTime
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_thumbnailURL_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_focalX_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_focalY_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__desktop__url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__desktop__width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__desktop__height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__desktop__mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__desktop__filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__desktop__filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__mobile__url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__mobile__width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__mobile__height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__mobile__mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__mobile__filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__mobile__filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__tablet__url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__tablet__width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__tablet__height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__tablet__mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__tablet__filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_sizes__tablet__filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_id_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input SliderBlock_Cards_Image_where_and {
+  text: SliderBlock_Cards_Image_text_operator
+  altText: SliderBlock_Cards_Image_altText_operator
+  updatedAt: SliderBlock_Cards_Image_updatedAt_operator
+  createdAt: SliderBlock_Cards_Image_createdAt_operator
+  url: SliderBlock_Cards_Image_url_operator
+  thumbnailURL: SliderBlock_Cards_Image_thumbnailURL_operator
+  filename: SliderBlock_Cards_Image_filename_operator
+  mimeType: SliderBlock_Cards_Image_mimeType_operator
+  filesize: SliderBlock_Cards_Image_filesize_operator
+  width: SliderBlock_Cards_Image_width_operator
+  height: SliderBlock_Cards_Image_height_operator
+  focalX: SliderBlock_Cards_Image_focalX_operator
+  focalY: SliderBlock_Cards_Image_focalY_operator
+  sizes__desktop__url: SliderBlock_Cards_Image_sizes__desktop__url_operator
+  sizes__desktop__width: SliderBlock_Cards_Image_sizes__desktop__width_operator
+  sizes__desktop__height: SliderBlock_Cards_Image_sizes__desktop__height_operator
+  sizes__desktop__mimeType: SliderBlock_Cards_Image_sizes__desktop__mimeType_operator
+  sizes__desktop__filesize: SliderBlock_Cards_Image_sizes__desktop__filesize_operator
+  sizes__desktop__filename: SliderBlock_Cards_Image_sizes__desktop__filename_operator
+  sizes__mobile__url: SliderBlock_Cards_Image_sizes__mobile__url_operator
+  sizes__mobile__width: SliderBlock_Cards_Image_sizes__mobile__width_operator
+  sizes__mobile__height: SliderBlock_Cards_Image_sizes__mobile__height_operator
+  sizes__mobile__mimeType: SliderBlock_Cards_Image_sizes__mobile__mimeType_operator
+  sizes__mobile__filesize: SliderBlock_Cards_Image_sizes__mobile__filesize_operator
+  sizes__mobile__filename: SliderBlock_Cards_Image_sizes__mobile__filename_operator
+  sizes__tablet__url: SliderBlock_Cards_Image_sizes__tablet__url_operator
+  sizes__tablet__width: SliderBlock_Cards_Image_sizes__tablet__width_operator
+  sizes__tablet__height: SliderBlock_Cards_Image_sizes__tablet__height_operator
+  sizes__tablet__mimeType: SliderBlock_Cards_Image_sizes__tablet__mimeType_operator
+  sizes__tablet__filesize: SliderBlock_Cards_Image_sizes__tablet__filesize_operator
+  sizes__tablet__filename: SliderBlock_Cards_Image_sizes__tablet__filename_operator
+  id: SliderBlock_Cards_Image_id_operator
+  AND: [SliderBlock_Cards_Image_where_and]
+  OR: [SliderBlock_Cards_Image_where_or]
+}
+
+input SliderBlock_Cards_Image_where_or {
+  text: SliderBlock_Cards_Image_text_operator
+  altText: SliderBlock_Cards_Image_altText_operator
+  updatedAt: SliderBlock_Cards_Image_updatedAt_operator
+  createdAt: SliderBlock_Cards_Image_createdAt_operator
+  url: SliderBlock_Cards_Image_url_operator
+  thumbnailURL: SliderBlock_Cards_Image_thumbnailURL_operator
+  filename: SliderBlock_Cards_Image_filename_operator
+  mimeType: SliderBlock_Cards_Image_mimeType_operator
+  filesize: SliderBlock_Cards_Image_filesize_operator
+  width: SliderBlock_Cards_Image_width_operator
+  height: SliderBlock_Cards_Image_height_operator
+  focalX: SliderBlock_Cards_Image_focalX_operator
+  focalY: SliderBlock_Cards_Image_focalY_operator
+  sizes__desktop__url: SliderBlock_Cards_Image_sizes__desktop__url_operator
+  sizes__desktop__width: SliderBlock_Cards_Image_sizes__desktop__width_operator
+  sizes__desktop__height: SliderBlock_Cards_Image_sizes__desktop__height_operator
+  sizes__desktop__mimeType: SliderBlock_Cards_Image_sizes__desktop__mimeType_operator
+  sizes__desktop__filesize: SliderBlock_Cards_Image_sizes__desktop__filesize_operator
+  sizes__desktop__filename: SliderBlock_Cards_Image_sizes__desktop__filename_operator
+  sizes__mobile__url: SliderBlock_Cards_Image_sizes__mobile__url_operator
+  sizes__mobile__width: SliderBlock_Cards_Image_sizes__mobile__width_operator
+  sizes__mobile__height: SliderBlock_Cards_Image_sizes__mobile__height_operator
+  sizes__mobile__mimeType: SliderBlock_Cards_Image_sizes__mobile__mimeType_operator
+  sizes__mobile__filesize: SliderBlock_Cards_Image_sizes__mobile__filesize_operator
+  sizes__mobile__filename: SliderBlock_Cards_Image_sizes__mobile__filename_operator
+  sizes__tablet__url: SliderBlock_Cards_Image_sizes__tablet__url_operator
+  sizes__tablet__width: SliderBlock_Cards_Image_sizes__tablet__width_operator
+  sizes__tablet__height: SliderBlock_Cards_Image_sizes__tablet__height_operator
+  sizes__tablet__mimeType: SliderBlock_Cards_Image_sizes__tablet__mimeType_operator
+  sizes__tablet__filesize: SliderBlock_Cards_Image_sizes__tablet__filesize_operator
+  sizes__tablet__filename: SliderBlock_Cards_Image_sizes__tablet__filename_operator
+  id: SliderBlock_Cards_Image_id_operator
+  AND: [SliderBlock_Cards_Image_where_and]
+  OR: [SliderBlock_Cards_Image_where_or]
 }
 
 type SubheadingBlock {
@@ -710,23 +1227,6 @@ type PagesDeleteDocAccess {
   where: JSONObject
 }
 
-type Media {
-  id: String
-  text: String
-  altText: String
-  updatedAt: DateTime
-  createdAt: DateTime
-  url: String
-  thumbnailURL: String
-  filename: String
-  mimeType: String
-  filesize: Float
-  width: Float
-  height: Float
-  focalX: Float
-  focalY: Float
-}
-
 type allMedia {
   docs: [Media]
   hasNextPage: Boolean
@@ -755,6 +1255,24 @@ input Media_where {
   height: Media_height_operator
   focalX: Media_focalX_operator
   focalY: Media_focalY_operator
+  sizes__desktop__url: Media_sizes__desktop__url_operator
+  sizes__desktop__width: Media_sizes__desktop__width_operator
+  sizes__desktop__height: Media_sizes__desktop__height_operator
+  sizes__desktop__mimeType: Media_sizes__desktop__mimeType_operator
+  sizes__desktop__filesize: Media_sizes__desktop__filesize_operator
+  sizes__desktop__filename: Media_sizes__desktop__filename_operator
+  sizes__mobile__url: Media_sizes__mobile__url_operator
+  sizes__mobile__width: Media_sizes__mobile__width_operator
+  sizes__mobile__height: Media_sizes__mobile__height_operator
+  sizes__mobile__mimeType: Media_sizes__mobile__mimeType_operator
+  sizes__mobile__filesize: Media_sizes__mobile__filesize_operator
+  sizes__mobile__filename: Media_sizes__mobile__filename_operator
+  sizes__tablet__url: Media_sizes__tablet__url_operator
+  sizes__tablet__width: Media_sizes__tablet__width_operator
+  sizes__tablet__height: Media_sizes__tablet__height_operator
+  sizes__tablet__mimeType: Media_sizes__tablet__mimeType_operator
+  sizes__tablet__filesize: Media_sizes__tablet__filesize_operator
+  sizes__tablet__filename: Media_sizes__tablet__filename_operator
   id: Media_id_operator
   AND: [Media_where_and]
   OR: [Media_where_or]
@@ -898,6 +1416,195 @@ input Media_focalY_operator {
   exists: Boolean
 }
 
+input Media_sizes__desktop__url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Media_sizes__desktop__width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Media_sizes__desktop__height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Media_sizes__desktop__mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Media_sizes__desktop__filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Media_sizes__desktop__filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Media_sizes__mobile__url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Media_sizes__mobile__width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Media_sizes__mobile__height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Media_sizes__mobile__mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Media_sizes__mobile__filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Media_sizes__mobile__filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Media_sizes__tablet__url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Media_sizes__tablet__width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Media_sizes__tablet__height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Media_sizes__tablet__mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Media_sizes__tablet__filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Media_sizes__tablet__filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
 input Media_id_operator {
   equals: String
   not_equals: String
@@ -923,6 +1630,24 @@ input Media_where_and {
   height: Media_height_operator
   focalX: Media_focalX_operator
   focalY: Media_focalY_operator
+  sizes__desktop__url: Media_sizes__desktop__url_operator
+  sizes__desktop__width: Media_sizes__desktop__width_operator
+  sizes__desktop__height: Media_sizes__desktop__height_operator
+  sizes__desktop__mimeType: Media_sizes__desktop__mimeType_operator
+  sizes__desktop__filesize: Media_sizes__desktop__filesize_operator
+  sizes__desktop__filename: Media_sizes__desktop__filename_operator
+  sizes__mobile__url: Media_sizes__mobile__url_operator
+  sizes__mobile__width: Media_sizes__mobile__width_operator
+  sizes__mobile__height: Media_sizes__mobile__height_operator
+  sizes__mobile__mimeType: Media_sizes__mobile__mimeType_operator
+  sizes__mobile__filesize: Media_sizes__mobile__filesize_operator
+  sizes__mobile__filename: Media_sizes__mobile__filename_operator
+  sizes__tablet__url: Media_sizes__tablet__url_operator
+  sizes__tablet__width: Media_sizes__tablet__width_operator
+  sizes__tablet__height: Media_sizes__tablet__height_operator
+  sizes__tablet__mimeType: Media_sizes__tablet__mimeType_operator
+  sizes__tablet__filesize: Media_sizes__tablet__filesize_operator
+  sizes__tablet__filename: Media_sizes__tablet__filename_operator
   id: Media_id_operator
   AND: [Media_where_and]
   OR: [Media_where_or]
@@ -942,6 +1667,24 @@ input Media_where_or {
   height: Media_height_operator
   focalX: Media_focalX_operator
   focalY: Media_focalY_operator
+  sizes__desktop__url: Media_sizes__desktop__url_operator
+  sizes__desktop__width: Media_sizes__desktop__width_operator
+  sizes__desktop__height: Media_sizes__desktop__height_operator
+  sizes__desktop__mimeType: Media_sizes__desktop__mimeType_operator
+  sizes__desktop__filesize: Media_sizes__desktop__filesize_operator
+  sizes__desktop__filename: Media_sizes__desktop__filename_operator
+  sizes__mobile__url: Media_sizes__mobile__url_operator
+  sizes__mobile__width: Media_sizes__mobile__width_operator
+  sizes__mobile__height: Media_sizes__mobile__height_operator
+  sizes__mobile__mimeType: Media_sizes__mobile__mimeType_operator
+  sizes__mobile__filesize: Media_sizes__mobile__filesize_operator
+  sizes__mobile__filename: Media_sizes__mobile__filename_operator
+  sizes__tablet__url: Media_sizes__tablet__url_operator
+  sizes__tablet__width: Media_sizes__tablet__width_operator
+  sizes__tablet__height: Media_sizes__tablet__height_operator
+  sizes__tablet__mimeType: Media_sizes__tablet__mimeType_operator
+  sizes__tablet__filesize: Media_sizes__tablet__filesize_operator
+  sizes__tablet__filename: Media_sizes__tablet__filename_operator
   id: Media_id_operator
   AND: [Media_where_and]
   OR: [Media_where_or]
@@ -973,6 +1716,7 @@ type MediaDocAccessFields {
   height: MediaDocAccessFields_height
   focalX: MediaDocAccessFields_focalX
   focalY: MediaDocAccessFields_focalY
+  sizes: MediaDocAccessFields_sizes
 }
 
 type MediaDocAccessFields_text {
@@ -1271,6 +2015,549 @@ type MediaDocAccessFields_focalY_Update {
 }
 
 type MediaDocAccessFields_focalY_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes {
+  create: MediaDocAccessFields_sizes_Create
+  read: MediaDocAccessFields_sizes_Read
+  update: MediaDocAccessFields_sizes_Update
+  delete: MediaDocAccessFields_sizes_Delete
+  fields: MediaDocAccessFields_sizes_Fields
+}
+
+type MediaDocAccessFields_sizes_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_Fields {
+  desktop: MediaDocAccessFields_sizes_desktop
+  mobile: MediaDocAccessFields_sizes_mobile
+  tablet: MediaDocAccessFields_sizes_tablet
+}
+
+type MediaDocAccessFields_sizes_desktop {
+  create: MediaDocAccessFields_sizes_desktop_Create
+  read: MediaDocAccessFields_sizes_desktop_Read
+  update: MediaDocAccessFields_sizes_desktop_Update
+  delete: MediaDocAccessFields_sizes_desktop_Delete
+  fields: MediaDocAccessFields_sizes_desktop_Fields
+}
+
+type MediaDocAccessFields_sizes_desktop_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_Fields {
+  url: MediaDocAccessFields_sizes_desktop_url
+  width: MediaDocAccessFields_sizes_desktop_width
+  height: MediaDocAccessFields_sizes_desktop_height
+  mimeType: MediaDocAccessFields_sizes_desktop_mimeType
+  filesize: MediaDocAccessFields_sizes_desktop_filesize
+  filename: MediaDocAccessFields_sizes_desktop_filename
+}
+
+type MediaDocAccessFields_sizes_desktop_url {
+  create: MediaDocAccessFields_sizes_desktop_url_Create
+  read: MediaDocAccessFields_sizes_desktop_url_Read
+  update: MediaDocAccessFields_sizes_desktop_url_Update
+  delete: MediaDocAccessFields_sizes_desktop_url_Delete
+}
+
+type MediaDocAccessFields_sizes_desktop_url_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_url_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_url_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_url_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_width {
+  create: MediaDocAccessFields_sizes_desktop_width_Create
+  read: MediaDocAccessFields_sizes_desktop_width_Read
+  update: MediaDocAccessFields_sizes_desktop_width_Update
+  delete: MediaDocAccessFields_sizes_desktop_width_Delete
+}
+
+type MediaDocAccessFields_sizes_desktop_width_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_width_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_width_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_width_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_height {
+  create: MediaDocAccessFields_sizes_desktop_height_Create
+  read: MediaDocAccessFields_sizes_desktop_height_Read
+  update: MediaDocAccessFields_sizes_desktop_height_Update
+  delete: MediaDocAccessFields_sizes_desktop_height_Delete
+}
+
+type MediaDocAccessFields_sizes_desktop_height_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_height_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_height_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_height_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_mimeType {
+  create: MediaDocAccessFields_sizes_desktop_mimeType_Create
+  read: MediaDocAccessFields_sizes_desktop_mimeType_Read
+  update: MediaDocAccessFields_sizes_desktop_mimeType_Update
+  delete: MediaDocAccessFields_sizes_desktop_mimeType_Delete
+}
+
+type MediaDocAccessFields_sizes_desktop_mimeType_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_mimeType_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_mimeType_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_mimeType_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_filesize {
+  create: MediaDocAccessFields_sizes_desktop_filesize_Create
+  read: MediaDocAccessFields_sizes_desktop_filesize_Read
+  update: MediaDocAccessFields_sizes_desktop_filesize_Update
+  delete: MediaDocAccessFields_sizes_desktop_filesize_Delete
+}
+
+type MediaDocAccessFields_sizes_desktop_filesize_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_filesize_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_filesize_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_filesize_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_filename {
+  create: MediaDocAccessFields_sizes_desktop_filename_Create
+  read: MediaDocAccessFields_sizes_desktop_filename_Read
+  update: MediaDocAccessFields_sizes_desktop_filename_Update
+  delete: MediaDocAccessFields_sizes_desktop_filename_Delete
+}
+
+type MediaDocAccessFields_sizes_desktop_filename_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_filename_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_filename_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_desktop_filename_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile {
+  create: MediaDocAccessFields_sizes_mobile_Create
+  read: MediaDocAccessFields_sizes_mobile_Read
+  update: MediaDocAccessFields_sizes_mobile_Update
+  delete: MediaDocAccessFields_sizes_mobile_Delete
+  fields: MediaDocAccessFields_sizes_mobile_Fields
+}
+
+type MediaDocAccessFields_sizes_mobile_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_Fields {
+  url: MediaDocAccessFields_sizes_mobile_url
+  width: MediaDocAccessFields_sizes_mobile_width
+  height: MediaDocAccessFields_sizes_mobile_height
+  mimeType: MediaDocAccessFields_sizes_mobile_mimeType
+  filesize: MediaDocAccessFields_sizes_mobile_filesize
+  filename: MediaDocAccessFields_sizes_mobile_filename
+}
+
+type MediaDocAccessFields_sizes_mobile_url {
+  create: MediaDocAccessFields_sizes_mobile_url_Create
+  read: MediaDocAccessFields_sizes_mobile_url_Read
+  update: MediaDocAccessFields_sizes_mobile_url_Update
+  delete: MediaDocAccessFields_sizes_mobile_url_Delete
+}
+
+type MediaDocAccessFields_sizes_mobile_url_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_url_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_url_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_url_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_width {
+  create: MediaDocAccessFields_sizes_mobile_width_Create
+  read: MediaDocAccessFields_sizes_mobile_width_Read
+  update: MediaDocAccessFields_sizes_mobile_width_Update
+  delete: MediaDocAccessFields_sizes_mobile_width_Delete
+}
+
+type MediaDocAccessFields_sizes_mobile_width_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_width_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_width_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_width_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_height {
+  create: MediaDocAccessFields_sizes_mobile_height_Create
+  read: MediaDocAccessFields_sizes_mobile_height_Read
+  update: MediaDocAccessFields_sizes_mobile_height_Update
+  delete: MediaDocAccessFields_sizes_mobile_height_Delete
+}
+
+type MediaDocAccessFields_sizes_mobile_height_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_height_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_height_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_height_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_mimeType {
+  create: MediaDocAccessFields_sizes_mobile_mimeType_Create
+  read: MediaDocAccessFields_sizes_mobile_mimeType_Read
+  update: MediaDocAccessFields_sizes_mobile_mimeType_Update
+  delete: MediaDocAccessFields_sizes_mobile_mimeType_Delete
+}
+
+type MediaDocAccessFields_sizes_mobile_mimeType_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_mimeType_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_mimeType_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_mimeType_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_filesize {
+  create: MediaDocAccessFields_sizes_mobile_filesize_Create
+  read: MediaDocAccessFields_sizes_mobile_filesize_Read
+  update: MediaDocAccessFields_sizes_mobile_filesize_Update
+  delete: MediaDocAccessFields_sizes_mobile_filesize_Delete
+}
+
+type MediaDocAccessFields_sizes_mobile_filesize_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_filesize_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_filesize_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_filesize_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_filename {
+  create: MediaDocAccessFields_sizes_mobile_filename_Create
+  read: MediaDocAccessFields_sizes_mobile_filename_Read
+  update: MediaDocAccessFields_sizes_mobile_filename_Update
+  delete: MediaDocAccessFields_sizes_mobile_filename_Delete
+}
+
+type MediaDocAccessFields_sizes_mobile_filename_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_filename_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_filename_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_mobile_filename_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet {
+  create: MediaDocAccessFields_sizes_tablet_Create
+  read: MediaDocAccessFields_sizes_tablet_Read
+  update: MediaDocAccessFields_sizes_tablet_Update
+  delete: MediaDocAccessFields_sizes_tablet_Delete
+  fields: MediaDocAccessFields_sizes_tablet_Fields
+}
+
+type MediaDocAccessFields_sizes_tablet_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_Fields {
+  url: MediaDocAccessFields_sizes_tablet_url
+  width: MediaDocAccessFields_sizes_tablet_width
+  height: MediaDocAccessFields_sizes_tablet_height
+  mimeType: MediaDocAccessFields_sizes_tablet_mimeType
+  filesize: MediaDocAccessFields_sizes_tablet_filesize
+  filename: MediaDocAccessFields_sizes_tablet_filename
+}
+
+type MediaDocAccessFields_sizes_tablet_url {
+  create: MediaDocAccessFields_sizes_tablet_url_Create
+  read: MediaDocAccessFields_sizes_tablet_url_Read
+  update: MediaDocAccessFields_sizes_tablet_url_Update
+  delete: MediaDocAccessFields_sizes_tablet_url_Delete
+}
+
+type MediaDocAccessFields_sizes_tablet_url_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_url_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_url_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_url_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_width {
+  create: MediaDocAccessFields_sizes_tablet_width_Create
+  read: MediaDocAccessFields_sizes_tablet_width_Read
+  update: MediaDocAccessFields_sizes_tablet_width_Update
+  delete: MediaDocAccessFields_sizes_tablet_width_Delete
+}
+
+type MediaDocAccessFields_sizes_tablet_width_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_width_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_width_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_width_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_height {
+  create: MediaDocAccessFields_sizes_tablet_height_Create
+  read: MediaDocAccessFields_sizes_tablet_height_Read
+  update: MediaDocAccessFields_sizes_tablet_height_Update
+  delete: MediaDocAccessFields_sizes_tablet_height_Delete
+}
+
+type MediaDocAccessFields_sizes_tablet_height_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_height_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_height_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_height_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_mimeType {
+  create: MediaDocAccessFields_sizes_tablet_mimeType_Create
+  read: MediaDocAccessFields_sizes_tablet_mimeType_Read
+  update: MediaDocAccessFields_sizes_tablet_mimeType_Update
+  delete: MediaDocAccessFields_sizes_tablet_mimeType_Delete
+}
+
+type MediaDocAccessFields_sizes_tablet_mimeType_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_mimeType_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_mimeType_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_mimeType_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_filesize {
+  create: MediaDocAccessFields_sizes_tablet_filesize_Create
+  read: MediaDocAccessFields_sizes_tablet_filesize_Read
+  update: MediaDocAccessFields_sizes_tablet_filesize_Update
+  delete: MediaDocAccessFields_sizes_tablet_filesize_Delete
+}
+
+type MediaDocAccessFields_sizes_tablet_filesize_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_filesize_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_filesize_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_filesize_Delete {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_filename {
+  create: MediaDocAccessFields_sizes_tablet_filename_Create
+  read: MediaDocAccessFields_sizes_tablet_filename_Read
+  update: MediaDocAccessFields_sizes_tablet_filename_Update
+  delete: MediaDocAccessFields_sizes_tablet_filename_Delete
+}
+
+type MediaDocAccessFields_sizes_tablet_filename_Create {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_filename_Read {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_filename_Update {
+  permission: Boolean!
+}
+
+type MediaDocAccessFields_sizes_tablet_filename_Delete {
   permission: Boolean!
 }
 
@@ -2287,6 +3574,7 @@ type MediaFields {
   height: MediaFields_height
   focalX: MediaFields_focalX
   focalY: MediaFields_focalY
+  sizes: MediaFields_sizes
 }
 
 type MediaFields_text {
@@ -2585,6 +3873,549 @@ type MediaFields_focalY_Update {
 }
 
 type MediaFields_focalY_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes {
+  create: MediaFields_sizes_Create
+  read: MediaFields_sizes_Read
+  update: MediaFields_sizes_Update
+  delete: MediaFields_sizes_Delete
+  fields: MediaFields_sizes_Fields
+}
+
+type MediaFields_sizes_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_Fields {
+  desktop: MediaFields_sizes_desktop
+  mobile: MediaFields_sizes_mobile
+  tablet: MediaFields_sizes_tablet
+}
+
+type MediaFields_sizes_desktop {
+  create: MediaFields_sizes_desktop_Create
+  read: MediaFields_sizes_desktop_Read
+  update: MediaFields_sizes_desktop_Update
+  delete: MediaFields_sizes_desktop_Delete
+  fields: MediaFields_sizes_desktop_Fields
+}
+
+type MediaFields_sizes_desktop_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_Fields {
+  url: MediaFields_sizes_desktop_url
+  width: MediaFields_sizes_desktop_width
+  height: MediaFields_sizes_desktop_height
+  mimeType: MediaFields_sizes_desktop_mimeType
+  filesize: MediaFields_sizes_desktop_filesize
+  filename: MediaFields_sizes_desktop_filename
+}
+
+type MediaFields_sizes_desktop_url {
+  create: MediaFields_sizes_desktop_url_Create
+  read: MediaFields_sizes_desktop_url_Read
+  update: MediaFields_sizes_desktop_url_Update
+  delete: MediaFields_sizes_desktop_url_Delete
+}
+
+type MediaFields_sizes_desktop_url_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_url_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_url_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_url_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_width {
+  create: MediaFields_sizes_desktop_width_Create
+  read: MediaFields_sizes_desktop_width_Read
+  update: MediaFields_sizes_desktop_width_Update
+  delete: MediaFields_sizes_desktop_width_Delete
+}
+
+type MediaFields_sizes_desktop_width_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_width_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_width_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_width_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_height {
+  create: MediaFields_sizes_desktop_height_Create
+  read: MediaFields_sizes_desktop_height_Read
+  update: MediaFields_sizes_desktop_height_Update
+  delete: MediaFields_sizes_desktop_height_Delete
+}
+
+type MediaFields_sizes_desktop_height_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_height_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_height_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_height_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_mimeType {
+  create: MediaFields_sizes_desktop_mimeType_Create
+  read: MediaFields_sizes_desktop_mimeType_Read
+  update: MediaFields_sizes_desktop_mimeType_Update
+  delete: MediaFields_sizes_desktop_mimeType_Delete
+}
+
+type MediaFields_sizes_desktop_mimeType_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_mimeType_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_mimeType_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_mimeType_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_filesize {
+  create: MediaFields_sizes_desktop_filesize_Create
+  read: MediaFields_sizes_desktop_filesize_Read
+  update: MediaFields_sizes_desktop_filesize_Update
+  delete: MediaFields_sizes_desktop_filesize_Delete
+}
+
+type MediaFields_sizes_desktop_filesize_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_filesize_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_filesize_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_filesize_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_filename {
+  create: MediaFields_sizes_desktop_filename_Create
+  read: MediaFields_sizes_desktop_filename_Read
+  update: MediaFields_sizes_desktop_filename_Update
+  delete: MediaFields_sizes_desktop_filename_Delete
+}
+
+type MediaFields_sizes_desktop_filename_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_filename_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_filename_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_desktop_filename_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile {
+  create: MediaFields_sizes_mobile_Create
+  read: MediaFields_sizes_mobile_Read
+  update: MediaFields_sizes_mobile_Update
+  delete: MediaFields_sizes_mobile_Delete
+  fields: MediaFields_sizes_mobile_Fields
+}
+
+type MediaFields_sizes_mobile_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_Fields {
+  url: MediaFields_sizes_mobile_url
+  width: MediaFields_sizes_mobile_width
+  height: MediaFields_sizes_mobile_height
+  mimeType: MediaFields_sizes_mobile_mimeType
+  filesize: MediaFields_sizes_mobile_filesize
+  filename: MediaFields_sizes_mobile_filename
+}
+
+type MediaFields_sizes_mobile_url {
+  create: MediaFields_sizes_mobile_url_Create
+  read: MediaFields_sizes_mobile_url_Read
+  update: MediaFields_sizes_mobile_url_Update
+  delete: MediaFields_sizes_mobile_url_Delete
+}
+
+type MediaFields_sizes_mobile_url_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_url_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_url_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_url_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_width {
+  create: MediaFields_sizes_mobile_width_Create
+  read: MediaFields_sizes_mobile_width_Read
+  update: MediaFields_sizes_mobile_width_Update
+  delete: MediaFields_sizes_mobile_width_Delete
+}
+
+type MediaFields_sizes_mobile_width_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_width_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_width_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_width_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_height {
+  create: MediaFields_sizes_mobile_height_Create
+  read: MediaFields_sizes_mobile_height_Read
+  update: MediaFields_sizes_mobile_height_Update
+  delete: MediaFields_sizes_mobile_height_Delete
+}
+
+type MediaFields_sizes_mobile_height_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_height_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_height_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_height_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_mimeType {
+  create: MediaFields_sizes_mobile_mimeType_Create
+  read: MediaFields_sizes_mobile_mimeType_Read
+  update: MediaFields_sizes_mobile_mimeType_Update
+  delete: MediaFields_sizes_mobile_mimeType_Delete
+}
+
+type MediaFields_sizes_mobile_mimeType_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_mimeType_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_mimeType_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_mimeType_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_filesize {
+  create: MediaFields_sizes_mobile_filesize_Create
+  read: MediaFields_sizes_mobile_filesize_Read
+  update: MediaFields_sizes_mobile_filesize_Update
+  delete: MediaFields_sizes_mobile_filesize_Delete
+}
+
+type MediaFields_sizes_mobile_filesize_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_filesize_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_filesize_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_filesize_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_filename {
+  create: MediaFields_sizes_mobile_filename_Create
+  read: MediaFields_sizes_mobile_filename_Read
+  update: MediaFields_sizes_mobile_filename_Update
+  delete: MediaFields_sizes_mobile_filename_Delete
+}
+
+type MediaFields_sizes_mobile_filename_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_filename_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_filename_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_mobile_filename_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet {
+  create: MediaFields_sizes_tablet_Create
+  read: MediaFields_sizes_tablet_Read
+  update: MediaFields_sizes_tablet_Update
+  delete: MediaFields_sizes_tablet_Delete
+  fields: MediaFields_sizes_tablet_Fields
+}
+
+type MediaFields_sizes_tablet_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_Fields {
+  url: MediaFields_sizes_tablet_url
+  width: MediaFields_sizes_tablet_width
+  height: MediaFields_sizes_tablet_height
+  mimeType: MediaFields_sizes_tablet_mimeType
+  filesize: MediaFields_sizes_tablet_filesize
+  filename: MediaFields_sizes_tablet_filename
+}
+
+type MediaFields_sizes_tablet_url {
+  create: MediaFields_sizes_tablet_url_Create
+  read: MediaFields_sizes_tablet_url_Read
+  update: MediaFields_sizes_tablet_url_Update
+  delete: MediaFields_sizes_tablet_url_Delete
+}
+
+type MediaFields_sizes_tablet_url_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_url_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_url_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_url_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_width {
+  create: MediaFields_sizes_tablet_width_Create
+  read: MediaFields_sizes_tablet_width_Read
+  update: MediaFields_sizes_tablet_width_Update
+  delete: MediaFields_sizes_tablet_width_Delete
+}
+
+type MediaFields_sizes_tablet_width_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_width_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_width_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_width_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_height {
+  create: MediaFields_sizes_tablet_height_Create
+  read: MediaFields_sizes_tablet_height_Read
+  update: MediaFields_sizes_tablet_height_Update
+  delete: MediaFields_sizes_tablet_height_Delete
+}
+
+type MediaFields_sizes_tablet_height_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_height_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_height_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_height_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_mimeType {
+  create: MediaFields_sizes_tablet_mimeType_Create
+  read: MediaFields_sizes_tablet_mimeType_Read
+  update: MediaFields_sizes_tablet_mimeType_Update
+  delete: MediaFields_sizes_tablet_mimeType_Delete
+}
+
+type MediaFields_sizes_tablet_mimeType_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_mimeType_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_mimeType_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_mimeType_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_filesize {
+  create: MediaFields_sizes_tablet_filesize_Create
+  read: MediaFields_sizes_tablet_filesize_Read
+  update: MediaFields_sizes_tablet_filesize_Update
+  delete: MediaFields_sizes_tablet_filesize_Delete
+}
+
+type MediaFields_sizes_tablet_filesize_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_filesize_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_filesize_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_filesize_Delete {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_filename {
+  create: MediaFields_sizes_tablet_filename_Create
+  read: MediaFields_sizes_tablet_filename_Read
+  update: MediaFields_sizes_tablet_filename_Update
+  delete: MediaFields_sizes_tablet_filename_Delete
+}
+
+type MediaFields_sizes_tablet_filename_Create {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_filename_Read {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_filename_Update {
+  permission: Boolean!
+}
+
+type MediaFields_sizes_tablet_filename_Delete {
   permission: Boolean!
 }
 
@@ -3148,6 +4979,40 @@ input mutationMediaInput {
   height: Float
   focalX: Float
   focalY: Float
+  sizes: mutationMedia_SizesInput
+}
+
+input mutationMedia_SizesInput {
+  desktop: mutationMedia_Sizes_DesktopInput
+  mobile: mutationMedia_Sizes_MobileInput
+  tablet: mutationMedia_Sizes_TabletInput
+}
+
+input mutationMedia_Sizes_DesktopInput {
+  url: String
+  width: Float
+  height: Float
+  mimeType: String
+  filesize: Float
+  filename: String
+}
+
+input mutationMedia_Sizes_MobileInput {
+  url: String
+  width: Float
+  height: Float
+  mimeType: String
+  filesize: Float
+  filename: String
+}
+
+input mutationMedia_Sizes_TabletInput {
+  url: String
+  width: Float
+  height: Float
+  mimeType: String
+  filesize: Float
+  filename: String
 }
 
 input mutationMediaUpdateInput {
@@ -3164,6 +5029,40 @@ input mutationMediaUpdateInput {
   height: Float
   focalX: Float
   focalY: Float
+  sizes: mutationMediaUpdate_SizesInput
+}
+
+input mutationMediaUpdate_SizesInput {
+  desktop: mutationMediaUpdate_Sizes_DesktopInput
+  mobile: mutationMediaUpdate_Sizes_MobileInput
+  tablet: mutationMediaUpdate_Sizes_TabletInput
+}
+
+input mutationMediaUpdate_Sizes_DesktopInput {
+  url: String
+  width: Float
+  height: Float
+  mimeType: String
+  filesize: Float
+  filename: String
+}
+
+input mutationMediaUpdate_Sizes_MobileInput {
+  url: String
+  width: Float
+  height: Float
+  mimeType: String
+  filesize: Float
+  filename: String
+}
+
+input mutationMediaUpdate_Sizes_TabletInput {
+  url: String
+  width: Float
+  height: Float
+  mimeType: String
+  filesize: Float
+  filename: String
 }
 
 input mutationPayloadPreferenceInput {

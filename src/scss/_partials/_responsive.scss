@@ -236,6 +236,9 @@
   .ProjectHeroMobile {
     display: block;
   }
+  .Cover {
+    flex-direction: column !important;
+  }
 }
 
 @media screen and (width > 37.5rem) {

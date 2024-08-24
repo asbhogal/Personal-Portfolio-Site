@@ -8,6 +8,7 @@ import Arrow from '@/components/icons/Arrow';
 import RichText from '@/components/typography/RichText';
 import Subheading from '@/components/typography/Subheading';
 import Cover from '@/components/sections/Cover';
+import Slider from '@/components/features/Slider';
 
 export const metadata: Metadata = {
   description:
@@ -26,10 +27,12 @@ export default async function Page() {
     })
     .then((results) => results.docs[0]);
 
-  // @ts-expect-error resolve type mismatch
+  /* @ts-expect-error resolve content mismatch */
   const title = data?.content?.root?.children[0]?.children[0]?.text ?? '';
 
-  console.log(data);
+  if (!data || !title) {
+    throw new Error('Failed to load page data');
+  }
 
   return (
     <React.Fragment>
@@ -40,6 +43,8 @@ export default async function Page() {
       <Cover>
         {/* @ts-expect-error resolve content mismatch */}
         <Subheading subheading={data?.layout[1]?.subheading || ''} />
+        {/* @ts-expect-error resolve content mismatch */}
+        <Slider sliderContent={data?.layout?.[2]?.cards ?? []} />
       </Cover>
       {/*  <Skills offersData={offersData} />
       <Projects projectData={projectData} />

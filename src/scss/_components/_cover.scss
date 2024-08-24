@@ -2,4 +2,11 @@
   height: 100dvh;
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
+}
+
+@media screen and (width <= 37.5rem) {
+  .Cover {
+    flex-direction: column;
+  }
 }

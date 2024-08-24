@@ -40,7 +40,6 @@ export default buildConfig({
   i18n: {
     supportedLanguages: { en },
   },
-
   secret: process.env.PAYLOAD_SECRET || '',
   sharp,
   typescript: {

@@ -113,6 +113,22 @@ export interface Page {
             blockType: 'content-block';
           }
         | {
+            title?: string | null;
+            description?: string | null;
+            cards?:
+              | {
+                  title?: string | null;
+                  description?: string | null;
+                  image?: string | Media | null;
+                  subheading?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'slider-block';
+          }
+        | {
             subheading?: string | null;
             id?: string | null;
             blockName?: string | null;
@@ -142,6 +158,32 @@ export interface Media {
   height?: number | null;
   focalX?: number | null;
   focalY?: number | null;
+  sizes?: {
+    desktop?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    mobile?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    tablet?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+  };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
