@@ -91,26 +91,34 @@ export interface Page {
     description?: string | null;
   };
   layout?:
-    | {
-        Content?: {
-          root: {
-            type: string;
-            children: {
-              type: string;
-              version: number;
+    | (
+        | {
+            Content?: {
+              root: {
+                type: string;
+                children: {
+                  type: string;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
               [k: string]: unknown;
-            }[];
-            direction: ('ltr' | 'rtl') | null;
-            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-            indent: number;
-            version: number;
-          };
-          [k: string]: unknown;
-        } | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'content-block';
-      }[]
+            } | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'content-block';
+          }
+        | {
+            subheading?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'subheading-block';
+          }
+      )[]
     | null;
   updatedAt: string;
   createdAt: string;

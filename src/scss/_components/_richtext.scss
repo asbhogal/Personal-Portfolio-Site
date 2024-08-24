@@ -3,6 +3,9 @@
   width: 100%;
   display: block;
   margin-left: auto;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
   > p {
     font-family: 'Cardillac';
     text-align: justify;

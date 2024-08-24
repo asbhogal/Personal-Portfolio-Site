@@ -222,3 +222,10 @@
   src: url(/fonts/general-sans/GeneralSans-Semibold.woff2) format(woff2);
   font-display: swap;
 }
+
+h2 {
+  font-family: 'Newsreader';
+  font-weight: 300;
+  color: $Khaki;
+  font-size: clamp(2rem, 1.1429rem + 4.2857vw, 8rem);;
+}

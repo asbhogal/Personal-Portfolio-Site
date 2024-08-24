@@ -1,22 +1,26 @@
-const Arrow = ({ size }: { size: number }) => {
-  return (
-    <svg
-      aria-hidden="true"
-      focusable="false"
-      aria-labelledby="icon-title"
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title id="icon-title">Arrow in a circle</title>
-      <path
-        d="M12 3.97C7.59 3.97 3.97 7.59 3.97 12C3.97 16.41 7.59 20.03 12 20.03C16.41 20.03 20.03 16.41 20.03 12C20.03 7.59 16.41 3.97 12 3.97ZM12 2C17.54 2 22 6.46 22 12C22 17.54 17.54 22 12 22C6.46 22 2 17.54 2 12C2 6.46 6.46 2 12 2ZM13.88 11.53L16 13.64V8H10.36L12.47 10.12L7.5 15.1L8.9 16.5"
-        fill="#C6C0C4"
-      />
-    </svg>
-  );
-};
+
+interface ArrowProps {
+  fill?: string;
+  width?: number;
+}
+
+const Arrow = ({ width = 23, fill = '#ffffff' }: ArrowProps) => (
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    aria-labelledby="icon-title"
+    width={width}
+    height={width * (238 / 16)}
+    viewBox="0 0 16 238"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title id="icon-title">Arrow facing downwards</title>
+    <path
+      d="M7.30141 237.711C7.69193 238.102 8.3251 238.102 8.71562 237.711L15.0796 231.347C15.4701 230.957 15.4701 230.324 15.0796 229.933C14.6891 229.543 14.0559 229.543 13.6654 229.933L8.00851 235.59L2.35166 229.933C1.96114 229.543 1.32797 229.543 0.937447 229.933C0.546922 230.324 0.546922 230.957 0.937447 231.347L7.30141 237.711ZM9.00851 237.004L9.00851 -0.00427246H7.00851L7.00851 237.004H9.00851Z"
+      fill={fill}
+    />
+  </svg>
+);
 
 export default Arrow;

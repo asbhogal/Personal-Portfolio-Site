@@ -339,10 +339,17 @@ type Page_SEO {
   description: String
 }
 
-union Page_Layout = ContentBlock
+union Page_Layout = ContentBlock | SubheadingBlock
 
 type ContentBlock {
   Content(depth: Int): JSON
+  id: String
+  blockName: String
+  blockType: String
+}
+
+type SubheadingBlock {
+  subheading: String
   id: String
   blockName: String
   blockType: String

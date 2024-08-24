@@ -4,7 +4,10 @@ import React from 'react';
 import { getPayloadHMR } from '@payloadcms/next/utilities';
 import config from '@payload-config';
 import { Page as PageProps } from '@/payload-types';
-import RichText from '@/components/sections/RichText';
+import Arrow from '@/components/icons/Arrow';
+import RichText from '@/components/typography/RichText';
+import Subheading from '@/components/typography/Subheading';
+import Cover from '@/components/sections/Cover';
 
 export const metadata: Metadata = {
   description:
@@ -33,6 +36,11 @@ export default async function Page() {
       <Heading title={title} />
       {/* @ts-expect-error resolve content mismatch */}
       <RichText content={data?.layout[0].Content || ''} />
+      <Arrow />
+      <Cover>
+        {/* @ts-expect-error resolve content mismatch */}
+        <Subheading subheading={data?.layout[1]?.subheading || ''} />
+      </Cover>
       {/*  <Skills offersData={offersData} />
       <Projects projectData={projectData} />
       <CTA /> */}
