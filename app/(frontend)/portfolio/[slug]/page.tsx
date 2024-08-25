@@ -1,7 +1,7 @@
-import { ProjectType } from "@/utils/types";
-import ProjectPage from "@/components/sections/ProjectPage";
-import { Metadata } from "next";
-import { generateProjectName, getProjectData } from "@/utils/functions";
+import { ProjectType } from '@/utils/types';
+import ProjectPage from '@/components/sections/ProjectPage';
+import { Metadata } from 'next';
+import { generateProjectName, getProjectData } from '@/utils/functions';
 
 export async function generateMetadata({
   params,
@@ -14,8 +14,8 @@ export async function generateMetadata({
   );
 
   return {
-    title: generateProjectName(projectData.project),
     description: projectData.summary,
+    title: generateProjectName(projectData.project),
   };
 }
 

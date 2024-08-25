@@ -9,6 +9,7 @@ import { Users } from './app/(payload)/collections/users';
 import { Pages } from './app/(payload)/collections/pages';
 import { Media } from './app/(payload)/collections/media';
 import { Footer } from './app/(payload)/globals/footer';
+import { Projects } from './app/(payload)/collections/projects';
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -29,7 +30,7 @@ export default buildConfig({
       url: 'http://localhost:3000',
     },
   },
-  collections: [Users, Pages, Media],
+  collections: [Users, Pages, Projects, Media],
   db: mongooseAdapter({
     url: process.env.MONGODB_URI || '',
   }),

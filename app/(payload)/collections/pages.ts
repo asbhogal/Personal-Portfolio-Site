@@ -2,6 +2,8 @@ import { CollectionConfig } from 'payload';
 import { ContentBlock } from '../blocks/content';
 import { SubheadingBlock } from '../blocks/subheading';
 import { SliderBlock } from '../blocks/slider';
+import { AccoladesBlock } from '../blocks/accolades';
+import { SectionBlock } from '../blocks/section';
 
 export const Pages: CollectionConfig = {
   admin: {
@@ -31,7 +33,13 @@ export const Pages: CollectionConfig = {
       type: 'group',
     },
     {
-      blocks: [ContentBlock, SliderBlock, SubheadingBlock],
+      blocks: [
+        AccoladesBlock,
+        ContentBlock,
+        SectionBlock,
+        SliderBlock,
+        SubheadingBlock,
+      ],
       label: 'Page Layout',
       minRows: 1,
       name: 'layout',

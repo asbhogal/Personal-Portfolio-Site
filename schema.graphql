@@ -9,6 +9,10 @@ type Query {
   Pages(draft: Boolean, where: Page_where, limit: Int, page: Int, sort: String): Pages
   countPages(draft: Boolean, where: Page_where): countPages
   docAccessPage(id: String!): pagesDocAccess
+  Project(id: String!, draft: Boolean): Project
+  Projects(draft: Boolean, where: Project_where, limit: Int, page: Int, sort: String): Projects
+  countProjects(draft: Boolean, where: Project_where): countProjects
+  docAccessProject(id: String!): projectsDocAccess
   Media(id: String!, draft: Boolean): Media
   allMedia(draft: Boolean, where: Media_where, limit: Int, page: Int, sort: String): allMedia
   countallMedia(draft: Boolean, where: Media_where): countallMedia
@@ -339,10 +343,42 @@ type Page_SEO {
   description: String
 }
 
-union Page_Layout = ContentBlock | SliderBlock | SubheadingBlock
+union Page_Layout = AccoladesBlock | ContentBlock | SectionBlock | SliderBlock | SubheadingBlock
+
+type AccoladesBlock {
+  accolade: [AccoladesBlock_Accolade!]
+  id: String
+  blockName: String
+  blockType: String
+}
+
+type AccoladesBlock_Accolade {
+  award: String
+  awardingBody: String
+  date: DateTime
+  id: String
+}
 
 type ContentBlock {
   Content(depth: Int): JSON
+  id: String
+  blockName: String
+  blockType: String
+}
+
+type SectionBlock {
+  subheadingBlock: [SectionBlock_SubheadingBlock!]
+  title: String
+  description: String
+  id: String
+  blockName: String
+  blockType: String
+}
+
+union SectionBlock_SubheadingBlock = SubheadingBlock
+
+type SubheadingBlock {
+  subheading: String
   id: String
   blockName: String
   blockType: String
@@ -865,13 +901,6 @@ input SliderBlock_Cards_Image_where_or {
   OR: [SliderBlock_Cards_Image_where_or]
 }
 
-type SubheadingBlock {
-  subheading: String
-  id: String
-  blockName: String
-  blockType: String
-}
-
 type Pages {
   docs: [Page]
   hasNextPage: Boolean
@@ -1223,6 +1252,1442 @@ type PagesUpdateDocAccess {
 }
 
 type PagesDeleteDocAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type Project {
+  id: String
+  heroImage(where: Project_HeroImage_where): Media!
+  title: String
+  stacks: [Project_Stacks!]
+  description: [Project_Description!]
+  slug: String
+  typeface: [Project_Typeface!]
+  layout: [Project_Layout!]
+  showcase: [Project_Showcase!]
+  SEO: Project_SEO
+  updatedAt: DateTime
+  createdAt: DateTime
+}
+
+input Project_HeroImage_where {
+  text: Project_HeroImage_text_operator
+  altText: Project_HeroImage_altText_operator
+  updatedAt: Project_HeroImage_updatedAt_operator
+  createdAt: Project_HeroImage_createdAt_operator
+  url: Project_HeroImage_url_operator
+  thumbnailURL: Project_HeroImage_thumbnailURL_operator
+  filename: Project_HeroImage_filename_operator
+  mimeType: Project_HeroImage_mimeType_operator
+  filesize: Project_HeroImage_filesize_operator
+  width: Project_HeroImage_width_operator
+  height: Project_HeroImage_height_operator
+  focalX: Project_HeroImage_focalX_operator
+  focalY: Project_HeroImage_focalY_operator
+  sizes__desktop__url: Project_HeroImage_sizes__desktop__url_operator
+  sizes__desktop__width: Project_HeroImage_sizes__desktop__width_operator
+  sizes__desktop__height: Project_HeroImage_sizes__desktop__height_operator
+  sizes__desktop__mimeType: Project_HeroImage_sizes__desktop__mimeType_operator
+  sizes__desktop__filesize: Project_HeroImage_sizes__desktop__filesize_operator
+  sizes__desktop__filename: Project_HeroImage_sizes__desktop__filename_operator
+  sizes__mobile__url: Project_HeroImage_sizes__mobile__url_operator
+  sizes__mobile__width: Project_HeroImage_sizes__mobile__width_operator
+  sizes__mobile__height: Project_HeroImage_sizes__mobile__height_operator
+  sizes__mobile__mimeType: Project_HeroImage_sizes__mobile__mimeType_operator
+  sizes__mobile__filesize: Project_HeroImage_sizes__mobile__filesize_operator
+  sizes__mobile__filename: Project_HeroImage_sizes__mobile__filename_operator
+  sizes__tablet__url: Project_HeroImage_sizes__tablet__url_operator
+  sizes__tablet__width: Project_HeroImage_sizes__tablet__width_operator
+  sizes__tablet__height: Project_HeroImage_sizes__tablet__height_operator
+  sizes__tablet__mimeType: Project_HeroImage_sizes__tablet__mimeType_operator
+  sizes__tablet__filesize: Project_HeroImage_sizes__tablet__filesize_operator
+  sizes__tablet__filename: Project_HeroImage_sizes__tablet__filename_operator
+  id: Project_HeroImage_id_operator
+  AND: [Project_HeroImage_where_and]
+  OR: [Project_HeroImage_where_or]
+}
+
+input Project_HeroImage_text_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_HeroImage_altText_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_HeroImage_updatedAt_operator {
+  equals: DateTime
+  not_equals: DateTime
+  greater_than_equal: DateTime
+  greater_than: DateTime
+  less_than_equal: DateTime
+  less_than: DateTime
+  like: DateTime
+  exists: Boolean
+}
+
+input Project_HeroImage_createdAt_operator {
+  equals: DateTime
+  not_equals: DateTime
+  greater_than_equal: DateTime
+  greater_than: DateTime
+  less_than_equal: DateTime
+  less_than: DateTime
+  like: DateTime
+  exists: Boolean
+}
+
+input Project_HeroImage_url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_HeroImage_thumbnailURL_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_HeroImage_filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_HeroImage_mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_HeroImage_filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Project_HeroImage_width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Project_HeroImage_height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Project_HeroImage_focalX_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Project_HeroImage_focalY_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__desktop__url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__desktop__width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__desktop__height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__desktop__mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__desktop__filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__desktop__filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__mobile__url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__mobile__width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__mobile__height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__mobile__mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__mobile__filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__mobile__filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__tablet__url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__tablet__width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__tablet__height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__tablet__mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__tablet__filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Project_HeroImage_sizes__tablet__filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_HeroImage_id_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_HeroImage_where_and {
+  text: Project_HeroImage_text_operator
+  altText: Project_HeroImage_altText_operator
+  updatedAt: Project_HeroImage_updatedAt_operator
+  createdAt: Project_HeroImage_createdAt_operator
+  url: Project_HeroImage_url_operator
+  thumbnailURL: Project_HeroImage_thumbnailURL_operator
+  filename: Project_HeroImage_filename_operator
+  mimeType: Project_HeroImage_mimeType_operator
+  filesize: Project_HeroImage_filesize_operator
+  width: Project_HeroImage_width_operator
+  height: Project_HeroImage_height_operator
+  focalX: Project_HeroImage_focalX_operator
+  focalY: Project_HeroImage_focalY_operator
+  sizes__desktop__url: Project_HeroImage_sizes__desktop__url_operator
+  sizes__desktop__width: Project_HeroImage_sizes__desktop__width_operator
+  sizes__desktop__height: Project_HeroImage_sizes__desktop__height_operator
+  sizes__desktop__mimeType: Project_HeroImage_sizes__desktop__mimeType_operator
+  sizes__desktop__filesize: Project_HeroImage_sizes__desktop__filesize_operator
+  sizes__desktop__filename: Project_HeroImage_sizes__desktop__filename_operator
+  sizes__mobile__url: Project_HeroImage_sizes__mobile__url_operator
+  sizes__mobile__width: Project_HeroImage_sizes__mobile__width_operator
+  sizes__mobile__height: Project_HeroImage_sizes__mobile__height_operator
+  sizes__mobile__mimeType: Project_HeroImage_sizes__mobile__mimeType_operator
+  sizes__mobile__filesize: Project_HeroImage_sizes__mobile__filesize_operator
+  sizes__mobile__filename: Project_HeroImage_sizes__mobile__filename_operator
+  sizes__tablet__url: Project_HeroImage_sizes__tablet__url_operator
+  sizes__tablet__width: Project_HeroImage_sizes__tablet__width_operator
+  sizes__tablet__height: Project_HeroImage_sizes__tablet__height_operator
+  sizes__tablet__mimeType: Project_HeroImage_sizes__tablet__mimeType_operator
+  sizes__tablet__filesize: Project_HeroImage_sizes__tablet__filesize_operator
+  sizes__tablet__filename: Project_HeroImage_sizes__tablet__filename_operator
+  id: Project_HeroImage_id_operator
+  AND: [Project_HeroImage_where_and]
+  OR: [Project_HeroImage_where_or]
+}
+
+input Project_HeroImage_where_or {
+  text: Project_HeroImage_text_operator
+  altText: Project_HeroImage_altText_operator
+  updatedAt: Project_HeroImage_updatedAt_operator
+  createdAt: Project_HeroImage_createdAt_operator
+  url: Project_HeroImage_url_operator
+  thumbnailURL: Project_HeroImage_thumbnailURL_operator
+  filename: Project_HeroImage_filename_operator
+  mimeType: Project_HeroImage_mimeType_operator
+  filesize: Project_HeroImage_filesize_operator
+  width: Project_HeroImage_width_operator
+  height: Project_HeroImage_height_operator
+  focalX: Project_HeroImage_focalX_operator
+  focalY: Project_HeroImage_focalY_operator
+  sizes__desktop__url: Project_HeroImage_sizes__desktop__url_operator
+  sizes__desktop__width: Project_HeroImage_sizes__desktop__width_operator
+  sizes__desktop__height: Project_HeroImage_sizes__desktop__height_operator
+  sizes__desktop__mimeType: Project_HeroImage_sizes__desktop__mimeType_operator
+  sizes__desktop__filesize: Project_HeroImage_sizes__desktop__filesize_operator
+  sizes__desktop__filename: Project_HeroImage_sizes__desktop__filename_operator
+  sizes__mobile__url: Project_HeroImage_sizes__mobile__url_operator
+  sizes__mobile__width: Project_HeroImage_sizes__mobile__width_operator
+  sizes__mobile__height: Project_HeroImage_sizes__mobile__height_operator
+  sizes__mobile__mimeType: Project_HeroImage_sizes__mobile__mimeType_operator
+  sizes__mobile__filesize: Project_HeroImage_sizes__mobile__filesize_operator
+  sizes__mobile__filename: Project_HeroImage_sizes__mobile__filename_operator
+  sizes__tablet__url: Project_HeroImage_sizes__tablet__url_operator
+  sizes__tablet__width: Project_HeroImage_sizes__tablet__width_operator
+  sizes__tablet__height: Project_HeroImage_sizes__tablet__height_operator
+  sizes__tablet__mimeType: Project_HeroImage_sizes__tablet__mimeType_operator
+  sizes__tablet__filesize: Project_HeroImage_sizes__tablet__filesize_operator
+  sizes__tablet__filename: Project_HeroImage_sizes__tablet__filename_operator
+  id: Project_HeroImage_id_operator
+  AND: [Project_HeroImage_where_and]
+  OR: [Project_HeroImage_where_or]
+}
+
+union Project_Stacks = ListBlock
+
+type ListBlock {
+  title: String
+  items: [ListBlock_Items!]
+  id: String
+  blockName: String
+  blockType: String
+}
+
+type ListBlock_Items {
+  item: String
+  id: String
+}
+
+union Project_Description = ContentBlock
+
+union Project_Typeface = ContentBlock
+
+union Project_Layout = ListBlock
+
+union Project_Showcase = ImageGridBlock
+
+type ImageGridBlock {
+  images: [ImageGridBlock_Images!]
+  id: String
+  blockName: String
+  blockType: String
+}
+
+type ImageGridBlock_Images {
+  image(where: ImageGridBlock_Images_Image_where): Media
+  id: String
+}
+
+input ImageGridBlock_Images_Image_where {
+  text: ImageGridBlock_Images_Image_text_operator
+  altText: ImageGridBlock_Images_Image_altText_operator
+  updatedAt: ImageGridBlock_Images_Image_updatedAt_operator
+  createdAt: ImageGridBlock_Images_Image_createdAt_operator
+  url: ImageGridBlock_Images_Image_url_operator
+  thumbnailURL: ImageGridBlock_Images_Image_thumbnailURL_operator
+  filename: ImageGridBlock_Images_Image_filename_operator
+  mimeType: ImageGridBlock_Images_Image_mimeType_operator
+  filesize: ImageGridBlock_Images_Image_filesize_operator
+  width: ImageGridBlock_Images_Image_width_operator
+  height: ImageGridBlock_Images_Image_height_operator
+  focalX: ImageGridBlock_Images_Image_focalX_operator
+  focalY: ImageGridBlock_Images_Image_focalY_operator
+  sizes__desktop__url: ImageGridBlock_Images_Image_sizes__desktop__url_operator
+  sizes__desktop__width: ImageGridBlock_Images_Image_sizes__desktop__width_operator
+  sizes__desktop__height: ImageGridBlock_Images_Image_sizes__desktop__height_operator
+  sizes__desktop__mimeType: ImageGridBlock_Images_Image_sizes__desktop__mimeType_operator
+  sizes__desktop__filesize: ImageGridBlock_Images_Image_sizes__desktop__filesize_operator
+  sizes__desktop__filename: ImageGridBlock_Images_Image_sizes__desktop__filename_operator
+  sizes__mobile__url: ImageGridBlock_Images_Image_sizes__mobile__url_operator
+  sizes__mobile__width: ImageGridBlock_Images_Image_sizes__mobile__width_operator
+  sizes__mobile__height: ImageGridBlock_Images_Image_sizes__mobile__height_operator
+  sizes__mobile__mimeType: ImageGridBlock_Images_Image_sizes__mobile__mimeType_operator
+  sizes__mobile__filesize: ImageGridBlock_Images_Image_sizes__mobile__filesize_operator
+  sizes__mobile__filename: ImageGridBlock_Images_Image_sizes__mobile__filename_operator
+  sizes__tablet__url: ImageGridBlock_Images_Image_sizes__tablet__url_operator
+  sizes__tablet__width: ImageGridBlock_Images_Image_sizes__tablet__width_operator
+  sizes__tablet__height: ImageGridBlock_Images_Image_sizes__tablet__height_operator
+  sizes__tablet__mimeType: ImageGridBlock_Images_Image_sizes__tablet__mimeType_operator
+  sizes__tablet__filesize: ImageGridBlock_Images_Image_sizes__tablet__filesize_operator
+  sizes__tablet__filename: ImageGridBlock_Images_Image_sizes__tablet__filename_operator
+  id: ImageGridBlock_Images_Image_id_operator
+  AND: [ImageGridBlock_Images_Image_where_and]
+  OR: [ImageGridBlock_Images_Image_where_or]
+}
+
+input ImageGridBlock_Images_Image_text_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_altText_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_updatedAt_operator {
+  equals: DateTime
+  not_equals: DateTime
+  greater_than_equal: DateTime
+  greater_than: DateTime
+  less_than_equal: DateTime
+  less_than: DateTime
+  like: DateTime
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_createdAt_operator {
+  equals: DateTime
+  not_equals: DateTime
+  greater_than_equal: DateTime
+  greater_than: DateTime
+  less_than_equal: DateTime
+  less_than: DateTime
+  like: DateTime
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_thumbnailURL_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_focalX_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_focalY_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__desktop__url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__desktop__width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__desktop__height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__desktop__mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__desktop__filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__desktop__filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__mobile__url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__mobile__width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__mobile__height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__mobile__mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__mobile__filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__mobile__filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__tablet__url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__tablet__width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__tablet__height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__tablet__mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__tablet__filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_sizes__tablet__filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_id_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input ImageGridBlock_Images_Image_where_and {
+  text: ImageGridBlock_Images_Image_text_operator
+  altText: ImageGridBlock_Images_Image_altText_operator
+  updatedAt: ImageGridBlock_Images_Image_updatedAt_operator
+  createdAt: ImageGridBlock_Images_Image_createdAt_operator
+  url: ImageGridBlock_Images_Image_url_operator
+  thumbnailURL: ImageGridBlock_Images_Image_thumbnailURL_operator
+  filename: ImageGridBlock_Images_Image_filename_operator
+  mimeType: ImageGridBlock_Images_Image_mimeType_operator
+  filesize: ImageGridBlock_Images_Image_filesize_operator
+  width: ImageGridBlock_Images_Image_width_operator
+  height: ImageGridBlock_Images_Image_height_operator
+  focalX: ImageGridBlock_Images_Image_focalX_operator
+  focalY: ImageGridBlock_Images_Image_focalY_operator
+  sizes__desktop__url: ImageGridBlock_Images_Image_sizes__desktop__url_operator
+  sizes__desktop__width: ImageGridBlock_Images_Image_sizes__desktop__width_operator
+  sizes__desktop__height: ImageGridBlock_Images_Image_sizes__desktop__height_operator
+  sizes__desktop__mimeType: ImageGridBlock_Images_Image_sizes__desktop__mimeType_operator
+  sizes__desktop__filesize: ImageGridBlock_Images_Image_sizes__desktop__filesize_operator
+  sizes__desktop__filename: ImageGridBlock_Images_Image_sizes__desktop__filename_operator
+  sizes__mobile__url: ImageGridBlock_Images_Image_sizes__mobile__url_operator
+  sizes__mobile__width: ImageGridBlock_Images_Image_sizes__mobile__width_operator
+  sizes__mobile__height: ImageGridBlock_Images_Image_sizes__mobile__height_operator
+  sizes__mobile__mimeType: ImageGridBlock_Images_Image_sizes__mobile__mimeType_operator
+  sizes__mobile__filesize: ImageGridBlock_Images_Image_sizes__mobile__filesize_operator
+  sizes__mobile__filename: ImageGridBlock_Images_Image_sizes__mobile__filename_operator
+  sizes__tablet__url: ImageGridBlock_Images_Image_sizes__tablet__url_operator
+  sizes__tablet__width: ImageGridBlock_Images_Image_sizes__tablet__width_operator
+  sizes__tablet__height: ImageGridBlock_Images_Image_sizes__tablet__height_operator
+  sizes__tablet__mimeType: ImageGridBlock_Images_Image_sizes__tablet__mimeType_operator
+  sizes__tablet__filesize: ImageGridBlock_Images_Image_sizes__tablet__filesize_operator
+  sizes__tablet__filename: ImageGridBlock_Images_Image_sizes__tablet__filename_operator
+  id: ImageGridBlock_Images_Image_id_operator
+  AND: [ImageGridBlock_Images_Image_where_and]
+  OR: [ImageGridBlock_Images_Image_where_or]
+}
+
+input ImageGridBlock_Images_Image_where_or {
+  text: ImageGridBlock_Images_Image_text_operator
+  altText: ImageGridBlock_Images_Image_altText_operator
+  updatedAt: ImageGridBlock_Images_Image_updatedAt_operator
+  createdAt: ImageGridBlock_Images_Image_createdAt_operator
+  url: ImageGridBlock_Images_Image_url_operator
+  thumbnailURL: ImageGridBlock_Images_Image_thumbnailURL_operator
+  filename: ImageGridBlock_Images_Image_filename_operator
+  mimeType: ImageGridBlock_Images_Image_mimeType_operator
+  filesize: ImageGridBlock_Images_Image_filesize_operator
+  width: ImageGridBlock_Images_Image_width_operator
+  height: ImageGridBlock_Images_Image_height_operator
+  focalX: ImageGridBlock_Images_Image_focalX_operator
+  focalY: ImageGridBlock_Images_Image_focalY_operator
+  sizes__desktop__url: ImageGridBlock_Images_Image_sizes__desktop__url_operator
+  sizes__desktop__width: ImageGridBlock_Images_Image_sizes__desktop__width_operator
+  sizes__desktop__height: ImageGridBlock_Images_Image_sizes__desktop__height_operator
+  sizes__desktop__mimeType: ImageGridBlock_Images_Image_sizes__desktop__mimeType_operator
+  sizes__desktop__filesize: ImageGridBlock_Images_Image_sizes__desktop__filesize_operator
+  sizes__desktop__filename: ImageGridBlock_Images_Image_sizes__desktop__filename_operator
+  sizes__mobile__url: ImageGridBlock_Images_Image_sizes__mobile__url_operator
+  sizes__mobile__width: ImageGridBlock_Images_Image_sizes__mobile__width_operator
+  sizes__mobile__height: ImageGridBlock_Images_Image_sizes__mobile__height_operator
+  sizes__mobile__mimeType: ImageGridBlock_Images_Image_sizes__mobile__mimeType_operator
+  sizes__mobile__filesize: ImageGridBlock_Images_Image_sizes__mobile__filesize_operator
+  sizes__mobile__filename: ImageGridBlock_Images_Image_sizes__mobile__filename_operator
+  sizes__tablet__url: ImageGridBlock_Images_Image_sizes__tablet__url_operator
+  sizes__tablet__width: ImageGridBlock_Images_Image_sizes__tablet__width_operator
+  sizes__tablet__height: ImageGridBlock_Images_Image_sizes__tablet__height_operator
+  sizes__tablet__mimeType: ImageGridBlock_Images_Image_sizes__tablet__mimeType_operator
+  sizes__tablet__filesize: ImageGridBlock_Images_Image_sizes__tablet__filesize_operator
+  sizes__tablet__filename: ImageGridBlock_Images_Image_sizes__tablet__filename_operator
+  id: ImageGridBlock_Images_Image_id_operator
+  AND: [ImageGridBlock_Images_Image_where_and]
+  OR: [ImageGridBlock_Images_Image_where_or]
+}
+
+type Project_SEO {
+  title: String
+  description: String
+}
+
+type Projects {
+  docs: [Project]
+  hasNextPage: Boolean
+  hasPrevPage: Boolean
+  limit: Int
+  nextPage: Int
+  offset: Int
+  page: Int
+  pagingCounter: Int
+  prevPage: Int
+  totalDocs: Int
+  totalPages: Int
+}
+
+input Project_where {
+  heroImage: Project_heroImage_operator
+  title: Project_title_operator
+  slug: Project_slug_operator
+  SEO__title: Project_SEO__title_operator
+  SEO__description: Project_SEO__description_operator
+  updatedAt: Project_updatedAt_operator
+  createdAt: Project_createdAt_operator
+  id: Project_id_operator
+  AND: [Project_where_and]
+  OR: [Project_where_or]
+}
+
+input Project_heroImage_operator {
+  equals: String
+  not_equals: String
+}
+
+input Project_title_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_slug_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_SEO__title_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_SEO__description_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  exists: Boolean
+}
+
+input Project_updatedAt_operator {
+  equals: DateTime
+  not_equals: DateTime
+  greater_than_equal: DateTime
+  greater_than: DateTime
+  less_than_equal: DateTime
+  less_than: DateTime
+  like: DateTime
+  exists: Boolean
+}
+
+input Project_createdAt_operator {
+  equals: DateTime
+  not_equals: DateTime
+  greater_than_equal: DateTime
+  greater_than: DateTime
+  less_than_equal: DateTime
+  less_than: DateTime
+  like: DateTime
+  exists: Boolean
+}
+
+input Project_id_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Project_where_and {
+  heroImage: Project_heroImage_operator
+  title: Project_title_operator
+  slug: Project_slug_operator
+  SEO__title: Project_SEO__title_operator
+  SEO__description: Project_SEO__description_operator
+  updatedAt: Project_updatedAt_operator
+  createdAt: Project_createdAt_operator
+  id: Project_id_operator
+  AND: [Project_where_and]
+  OR: [Project_where_or]
+}
+
+input Project_where_or {
+  heroImage: Project_heroImage_operator
+  title: Project_title_operator
+  slug: Project_slug_operator
+  SEO__title: Project_SEO__title_operator
+  SEO__description: Project_SEO__description_operator
+  updatedAt: Project_updatedAt_operator
+  createdAt: Project_createdAt_operator
+  id: Project_id_operator
+  AND: [Project_where_and]
+  OR: [Project_where_or]
+}
+
+type countProjects {
+  totalDocs: Int
+}
+
+type projectsDocAccess {
+  fields: ProjectsDocAccessFields
+  create: ProjectsCreateDocAccess
+  read: ProjectsReadDocAccess
+  update: ProjectsUpdateDocAccess
+  delete: ProjectsDeleteDocAccess
+}
+
+type ProjectsDocAccessFields {
+  heroImage: ProjectsDocAccessFields_heroImage
+  title: ProjectsDocAccessFields_title
+  stacks: ProjectsDocAccessFields_stacks
+  description: ProjectsDocAccessFields_description
+  slug: ProjectsDocAccessFields_slug
+  typeface: ProjectsDocAccessFields_typeface
+  layout: ProjectsDocAccessFields_layout
+  showcase: ProjectsDocAccessFields_showcase
+  SEO: ProjectsDocAccessFields_SEO
+  updatedAt: ProjectsDocAccessFields_updatedAt
+  createdAt: ProjectsDocAccessFields_createdAt
+}
+
+type ProjectsDocAccessFields_heroImage {
+  create: ProjectsDocAccessFields_heroImage_Create
+  read: ProjectsDocAccessFields_heroImage_Read
+  update: ProjectsDocAccessFields_heroImage_Update
+  delete: ProjectsDocAccessFields_heroImage_Delete
+}
+
+type ProjectsDocAccessFields_heroImage_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_heroImage_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_heroImage_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_heroImage_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_title {
+  create: ProjectsDocAccessFields_title_Create
+  read: ProjectsDocAccessFields_title_Read
+  update: ProjectsDocAccessFields_title_Update
+  delete: ProjectsDocAccessFields_title_Delete
+}
+
+type ProjectsDocAccessFields_title_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_title_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_title_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_title_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_stacks {
+  create: ProjectsDocAccessFields_stacks_Create
+  read: ProjectsDocAccessFields_stacks_Read
+  update: ProjectsDocAccessFields_stacks_Update
+  delete: ProjectsDocAccessFields_stacks_Delete
+}
+
+type ProjectsDocAccessFields_stacks_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_stacks_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_stacks_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_stacks_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_description {
+  create: ProjectsDocAccessFields_description_Create
+  read: ProjectsDocAccessFields_description_Read
+  update: ProjectsDocAccessFields_description_Update
+  delete: ProjectsDocAccessFields_description_Delete
+}
+
+type ProjectsDocAccessFields_description_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_description_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_description_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_description_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_slug {
+  create: ProjectsDocAccessFields_slug_Create
+  read: ProjectsDocAccessFields_slug_Read
+  update: ProjectsDocAccessFields_slug_Update
+  delete: ProjectsDocAccessFields_slug_Delete
+}
+
+type ProjectsDocAccessFields_slug_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_slug_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_slug_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_slug_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_typeface {
+  create: ProjectsDocAccessFields_typeface_Create
+  read: ProjectsDocAccessFields_typeface_Read
+  update: ProjectsDocAccessFields_typeface_Update
+  delete: ProjectsDocAccessFields_typeface_Delete
+}
+
+type ProjectsDocAccessFields_typeface_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_typeface_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_typeface_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_typeface_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_layout {
+  create: ProjectsDocAccessFields_layout_Create
+  read: ProjectsDocAccessFields_layout_Read
+  update: ProjectsDocAccessFields_layout_Update
+  delete: ProjectsDocAccessFields_layout_Delete
+}
+
+type ProjectsDocAccessFields_layout_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_layout_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_layout_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_layout_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_showcase {
+  create: ProjectsDocAccessFields_showcase_Create
+  read: ProjectsDocAccessFields_showcase_Read
+  update: ProjectsDocAccessFields_showcase_Update
+  delete: ProjectsDocAccessFields_showcase_Delete
+}
+
+type ProjectsDocAccessFields_showcase_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_showcase_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_showcase_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_showcase_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_SEO {
+  create: ProjectsDocAccessFields_SEO_Create
+  read: ProjectsDocAccessFields_SEO_Read
+  update: ProjectsDocAccessFields_SEO_Update
+  delete: ProjectsDocAccessFields_SEO_Delete
+  fields: ProjectsDocAccessFields_SEO_Fields
+}
+
+type ProjectsDocAccessFields_SEO_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_SEO_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_SEO_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_SEO_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_SEO_Fields {
+  title: ProjectsDocAccessFields_SEO_title
+  description: ProjectsDocAccessFields_SEO_description
+}
+
+type ProjectsDocAccessFields_SEO_title {
+  create: ProjectsDocAccessFields_SEO_title_Create
+  read: ProjectsDocAccessFields_SEO_title_Read
+  update: ProjectsDocAccessFields_SEO_title_Update
+  delete: ProjectsDocAccessFields_SEO_title_Delete
+}
+
+type ProjectsDocAccessFields_SEO_title_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_SEO_title_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_SEO_title_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_SEO_title_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_SEO_description {
+  create: ProjectsDocAccessFields_SEO_description_Create
+  read: ProjectsDocAccessFields_SEO_description_Read
+  update: ProjectsDocAccessFields_SEO_description_Update
+  delete: ProjectsDocAccessFields_SEO_description_Delete
+}
+
+type ProjectsDocAccessFields_SEO_description_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_SEO_description_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_SEO_description_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_SEO_description_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_updatedAt {
+  create: ProjectsDocAccessFields_updatedAt_Create
+  read: ProjectsDocAccessFields_updatedAt_Read
+  update: ProjectsDocAccessFields_updatedAt_Update
+  delete: ProjectsDocAccessFields_updatedAt_Delete
+}
+
+type ProjectsDocAccessFields_updatedAt_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_updatedAt_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_updatedAt_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_updatedAt_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_createdAt {
+  create: ProjectsDocAccessFields_createdAt_Create
+  read: ProjectsDocAccessFields_createdAt_Read
+  update: ProjectsDocAccessFields_createdAt_Update
+  delete: ProjectsDocAccessFields_createdAt_Delete
+}
+
+type ProjectsDocAccessFields_createdAt_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_createdAt_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_createdAt_Delete {
+  permission: Boolean!
+}
+
+type ProjectsCreateDocAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type ProjectsReadDocAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type ProjectsUpdateDocAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type ProjectsDeleteDocAccess {
   permission: Boolean!
   where: JSONObject
 }
@@ -3163,6 +4628,7 @@ type Access {
   canAccessAdmin: Boolean!
   users: usersAccess
   pages: pagesAccess
+  projects: projectsAccess
   media: mediaAccess
   payload_preferences: payload_preferencesAccess
   footer_menu: footer_menuAccess
@@ -3548,6 +5014,353 @@ type PagesUpdateAccess {
 }
 
 type PagesDeleteAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type projectsAccess {
+  fields: ProjectsFields
+  create: ProjectsCreateAccess
+  read: ProjectsReadAccess
+  update: ProjectsUpdateAccess
+  delete: ProjectsDeleteAccess
+}
+
+type ProjectsFields {
+  heroImage: ProjectsFields_heroImage
+  title: ProjectsFields_title
+  stacks: ProjectsFields_stacks
+  description: ProjectsFields_description
+  slug: ProjectsFields_slug
+  typeface: ProjectsFields_typeface
+  layout: ProjectsFields_layout
+  showcase: ProjectsFields_showcase
+  SEO: ProjectsFields_SEO
+  updatedAt: ProjectsFields_updatedAt
+  createdAt: ProjectsFields_createdAt
+}
+
+type ProjectsFields_heroImage {
+  create: ProjectsFields_heroImage_Create
+  read: ProjectsFields_heroImage_Read
+  update: ProjectsFields_heroImage_Update
+  delete: ProjectsFields_heroImage_Delete
+}
+
+type ProjectsFields_heroImage_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_heroImage_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_heroImage_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_heroImage_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_title {
+  create: ProjectsFields_title_Create
+  read: ProjectsFields_title_Read
+  update: ProjectsFields_title_Update
+  delete: ProjectsFields_title_Delete
+}
+
+type ProjectsFields_title_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_title_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_title_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_title_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_stacks {
+  create: ProjectsFields_stacks_Create
+  read: ProjectsFields_stacks_Read
+  update: ProjectsFields_stacks_Update
+  delete: ProjectsFields_stacks_Delete
+}
+
+type ProjectsFields_stacks_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_stacks_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_stacks_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_stacks_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_description {
+  create: ProjectsFields_description_Create
+  read: ProjectsFields_description_Read
+  update: ProjectsFields_description_Update
+  delete: ProjectsFields_description_Delete
+}
+
+type ProjectsFields_description_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_description_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_description_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_description_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_slug {
+  create: ProjectsFields_slug_Create
+  read: ProjectsFields_slug_Read
+  update: ProjectsFields_slug_Update
+  delete: ProjectsFields_slug_Delete
+}
+
+type ProjectsFields_slug_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_slug_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_slug_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_slug_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_typeface {
+  create: ProjectsFields_typeface_Create
+  read: ProjectsFields_typeface_Read
+  update: ProjectsFields_typeface_Update
+  delete: ProjectsFields_typeface_Delete
+}
+
+type ProjectsFields_typeface_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_typeface_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_typeface_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_typeface_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_layout {
+  create: ProjectsFields_layout_Create
+  read: ProjectsFields_layout_Read
+  update: ProjectsFields_layout_Update
+  delete: ProjectsFields_layout_Delete
+}
+
+type ProjectsFields_layout_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_layout_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_layout_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_layout_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_showcase {
+  create: ProjectsFields_showcase_Create
+  read: ProjectsFields_showcase_Read
+  update: ProjectsFields_showcase_Update
+  delete: ProjectsFields_showcase_Delete
+}
+
+type ProjectsFields_showcase_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_showcase_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_showcase_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_showcase_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_SEO {
+  create: ProjectsFields_SEO_Create
+  read: ProjectsFields_SEO_Read
+  update: ProjectsFields_SEO_Update
+  delete: ProjectsFields_SEO_Delete
+  fields: ProjectsFields_SEO_Fields
+}
+
+type ProjectsFields_SEO_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_SEO_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_SEO_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_SEO_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_SEO_Fields {
+  title: ProjectsFields_SEO_title
+  description: ProjectsFields_SEO_description
+}
+
+type ProjectsFields_SEO_title {
+  create: ProjectsFields_SEO_title_Create
+  read: ProjectsFields_SEO_title_Read
+  update: ProjectsFields_SEO_title_Update
+  delete: ProjectsFields_SEO_title_Delete
+}
+
+type ProjectsFields_SEO_title_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_SEO_title_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_SEO_title_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_SEO_title_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_SEO_description {
+  create: ProjectsFields_SEO_description_Create
+  read: ProjectsFields_SEO_description_Read
+  update: ProjectsFields_SEO_description_Update
+  delete: ProjectsFields_SEO_description_Delete
+}
+
+type ProjectsFields_SEO_description_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_SEO_description_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_SEO_description_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_SEO_description_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_updatedAt {
+  create: ProjectsFields_updatedAt_Create
+  read: ProjectsFields_updatedAt_Read
+  update: ProjectsFields_updatedAt_Update
+  delete: ProjectsFields_updatedAt_Delete
+}
+
+type ProjectsFields_updatedAt_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_updatedAt_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_updatedAt_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_updatedAt_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_createdAt {
+  create: ProjectsFields_createdAt_Create
+  read: ProjectsFields_createdAt_Read
+  update: ProjectsFields_createdAt_Update
+  delete: ProjectsFields_createdAt_Delete
+}
+
+type ProjectsFields_createdAt_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_createdAt_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_createdAt_Delete {
+  permission: Boolean!
+}
+
+type ProjectsCreateAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type ProjectsReadAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type ProjectsUpdateAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type ProjectsDeleteAccess {
   permission: Boolean!
   where: JSONObject
 }
@@ -4876,6 +6689,10 @@ type Mutation {
   updatePage(id: String!, autosave: Boolean, data: mutationPageUpdateInput!, draft: Boolean): Page
   deletePage(id: String!): Page
   duplicatePage(id: String!): Page
+  createProject(data: mutationProjectInput!, draft: Boolean): Project
+  updateProject(id: String!, autosave: Boolean, data: mutationProjectUpdateInput!, draft: Boolean): Project
+  deleteProject(id: String!): Project
+  duplicateProject(id: String!): Project
   createMedia(data: mutationMediaInput!, draft: Boolean): Media
   updateMedia(id: String!, autosave: Boolean, data: mutationMediaUpdateInput!, draft: Boolean): Media
   deleteMedia(id: String!): Media
@@ -4961,6 +6778,44 @@ input mutationPageUpdateInput {
 }
 
 input mutationPageUpdate_SEOInput {
+  title: String
+  description: String
+}
+
+input mutationProjectInput {
+  heroImage: String!
+  title: String
+  stacks: JSON
+  description: JSON
+  slug: String
+  typeface: JSON
+  layout: JSON
+  showcase: JSON
+  SEO: mutationProject_SEOInput
+  updatedAt: String
+  createdAt: String
+}
+
+input mutationProject_SEOInput {
+  title: String
+  description: String
+}
+
+input mutationProjectUpdateInput {
+  heroImage: String
+  title: String
+  stacks: JSON
+  description: JSON
+  slug: String
+  typeface: JSON
+  layout: JSON
+  showcase: JSON
+  SEO: mutationProjectUpdate_SEOInput
+  updatedAt: String
+  createdAt: String
+}
+
+input mutationProjectUpdate_SEOInput {
   title: String
   description: String
 }

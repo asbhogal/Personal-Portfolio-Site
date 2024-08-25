@@ -13,6 +13,7 @@ export interface Config {
   collections: {
     users: User;
     pages: Page;
+    projects: Project;
     media: Media;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -93,6 +94,19 @@ export interface Page {
   layout?:
     | (
         | {
+            accolade?:
+              | {
+                  award?: string | null;
+                  awardingBody?: string | null;
+                  date?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'accolades-block';
+          }
+        | {
             Content?: {
               root: {
                 type: string;
@@ -111,6 +125,21 @@ export interface Page {
             id?: string | null;
             blockName?: string | null;
             blockType: 'content-block';
+          }
+        | {
+            subheadingBlock?:
+              | {
+                  subheading?: string | null;
+                  id?: string | null;
+                  blockName?: string | null;
+                  blockType: 'subheading-block';
+                }[]
+              | null;
+            title?: string | null;
+            description?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'section-block';
           }
         | {
             title?: string | null;
@@ -184,6 +213,107 @@ export interface Media {
       filename?: string | null;
     };
   };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projects".
+ */
+export interface Project {
+  id: string;
+  heroImage: string | Media;
+  title?: string | null;
+  stacks?:
+    | {
+        title?: string | null;
+        items?:
+          | {
+              item?: string | null;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'list-block';
+      }[]
+    | null;
+  description?:
+    | {
+        Content?: {
+          root: {
+            type: string;
+            children: {
+              type: string;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        } | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'content-block';
+      }[]
+    | null;
+  slug?: string | null;
+  typeface?:
+    | {
+        Content?: {
+          root: {
+            type: string;
+            children: {
+              type: string;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        } | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'content-block';
+      }[]
+    | null;
+  layout?:
+    | {
+        title?: string | null;
+        items?:
+          | {
+              item?: string | null;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'list-block';
+      }[]
+    | null;
+  showcase?:
+    | {
+        images?:
+          | {
+              image?: string | Media | null;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'image-grid-block';
+      }[]
+    | null;
+  SEO?: {
+    title?: string | null;
+    description?: string | null;
+  };
+  updatedAt: string;
+  createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

@@ -6,9 +6,7 @@ import config from '@payload-config';
 import { Page as PageProps } from '@/payload-types';
 import Arrow from '@/components/icons/Arrow';
 import RichText from '@/components/typography/RichText';
-import Subheading from '@/components/typography/Subheading';
-import Cover from '@/components/sections/Cover';
-import Slider from '@/components/features/Slider';
+import RenderBlocks from '@/components/sections/RenderBlocks';
 
 export const metadata: Metadata = {
   description:
@@ -40,15 +38,7 @@ export default async function Page() {
       {/* @ts-expect-error resolve content mismatch */}
       <RichText content={data?.layout[0].Content || ''} />
       <Arrow />
-      <Cover>
-        {/* @ts-expect-error resolve content mismatch */}
-        <Subheading subheading={data?.layout[1]?.subheading || ''} />
-        {/* @ts-expect-error resolve content mismatch */}
-        <Slider sliderContent={data?.layout?.[2]?.cards ?? []} />
-      </Cover>
-      {/*  <Skills offersData={offersData} />
-      <Projects projectData={projectData} />
-      <CTA /> */}
+      <RenderBlocks blocks={data.layout} />
     </React.Fragment>
   );
 }
