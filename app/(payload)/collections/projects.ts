@@ -5,7 +5,11 @@ import { ImageGridBlock } from '../blocks/image-grid';
 
 export const Projects: CollectionConfig = {
   access: {
+    create: (): boolean => true,
     read: (): boolean => true,
+  },
+  admin: {
+    useAsTitle: 'title',
   },
   fields: [
     {

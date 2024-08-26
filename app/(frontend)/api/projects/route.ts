@@ -12,3 +12,18 @@ export const GET = async () => {
 
   return Response.json(data);
 };
+
+export const POST = async () => {
+  const payload = await getPayloadHMR({
+    config: configPromise,
+  });
+
+  const data = await payload.create({
+    collection: 'projects',
+    data: {
+      heroImage: 'Test',
+    },
+  });
+
+  return Response.json(data);
+};
