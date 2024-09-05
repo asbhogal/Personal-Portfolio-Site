@@ -1,21 +1,34 @@
-import AboutSection from "@/components/sections/AboutSection";
-import { Metadata } from "next";
-import AboutCover from "@/components/covers/AboutCover";
-import { getAboutData } from "@/utils/functions";
-import CTA from "@/components/sections/CTA";
+import { Metadata } from 'next';
+import { getPayloadHMR } from '@payloadcms/next/utilities';
+import config from '@payload-config';
+import React from 'react';
 
 export const metadata: Metadata = {
-  title: "About | Aman Singh Bhogal",
-  description: "About Aman Singh Bhogal",
+  description: 'About Aman Singh Bhogal',
+  title: 'About | Aman Singh Bhogal',
 };
 
 export default async function Page() {
-  const { about: aboutData } = await getAboutData();
+  // const { about: aboutData } = await getAboutData();
+
+  const payload = await getPayloadHMR({
+    config,
+  });
+
+  const data = await payload
+    .find({
+      collection: 'pages',
+    })
+    .then((results) => results.docs[2]);
+
+  // eslint-disable-next-line no-console
+  console.log(data);
   return (
-    <>
-      <AboutCover />
+    <React.Fragment>
+      <p>About</p>
+      {/*  <AboutCover />
       <AboutSection aboutData={aboutData} />
-      <CTA />
-    </>
+      <CTA /> */}
+    </React.Fragment>
   );
 }

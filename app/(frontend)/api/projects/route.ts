@@ -1,5 +1,6 @@
 import { getPayloadHMR } from '@payloadcms/next/utilities';
 import configPromise from '@payload-config';
+import { NextResponse } from 'next/server';
 
 export const GET = async () => {
   const payload = await getPayloadHMR({
@@ -10,20 +11,21 @@ export const GET = async () => {
     collection: 'projects',
   });
 
-  return Response.json(data);
+  return NextResponse.json(data);
 };
 
-export const POST = async () => {
+/* export const POST = async (req: NextRequest) => {
   const payload = await getPayloadHMR({
     config: configPromise,
   });
 
-  const data = await payload.create({
+  const requestBody = await req.json();
+
+  const result = await payload.create({
     collection: 'projects',
-    data: {
-      heroImage: 'Test',
-    },
+    data: requestBody,
   });
 
-  return Response.json(data);
+  return NextResponse.json(result);
 };
+ */
