@@ -16,6 +16,7 @@
     "test": "playwright test",
     "prepare": "husky",
     "payload": "payload",
+    "codegen": "cross-env TS_NODE_PROJECT=tsconfig.codegen.json graphql-codegen --config codegen.ts",
     "generate:types": "payload generate:types",
     "generate:schema": "payload-graphql generate:schema",
     "standalone-script": "payload run ./src/scripts/standalone-script.ts",
@@ -51,6 +52,8 @@
     "cross-env": "^7.0.3",
     "framer-motion": "^9.0.3",
     "graphql": "^16.8.2",
+    "graphql-request": "^7.1.0",
+    "graphql-tag": "^2.12.6",
     "mongodb": "^6.8.0",
     "next": "15.0.0-canary.104",
     "payload": "3.0.0-beta.80",
@@ -64,6 +67,11 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/client-preset": "^4.3.3",
+    "@graphql-codegen/typescript": "^4.0.9",
+    "@graphql-codegen/typescript-graphql-request": "^6.2.0",
+    "@graphql-codegen/typescript-operations": "^4.2.3",
     "@innovixx/eslint-config": "^1.3.3",
     "@payloadcms/graphql": "3.0.0-beta.80",
     "@playwright/test": "^1.40.1",

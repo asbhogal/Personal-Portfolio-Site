@@ -11,6 +11,18 @@ import RenderBlocks from '@/components/sections/RenderBlocks';
 export const metadata: Metadata = {
   description:
     'The portfolio site of Aman Singh Bhogal, Creative Front End Developer with over three and a half years of experience in designing and building user interfaces',
+  icons: {
+    icon: [
+      {
+        media: '(prefers-color-scheme: light)',
+        url: '/icons/favicon-dark.svg',
+      },
+      {
+        media: '(prefers-color-scheme: dark)',
+        url: '/icons/favicon-light.svg',
+      },
+    ],
+  },
   title: 'Aman Singh Bhogal | Award Winning Creative Front End Developer',
 };
 
