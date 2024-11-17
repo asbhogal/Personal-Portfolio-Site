@@ -1,0 +1,9 @@
+export declare const freeResourcesCover: string;
+export declare const freeResourcesSection: string;
+export declare const imageSnapshot: string;
+export declare const pageHeaderTitle: string;
+export declare const resourceDownload: string;
+export declare const resourceLinks: string;
+export declare const resourcesCard: string;
+export declare const resourcesSnapshot: string;
+export declare const resourcesTitle: string;

@@ -1,0 +1,251 @@
+/****** WIDE - 90rem+ ******/
+
+@media only screen and (90.0625rem <= width) {
+  /* .MainContainer {
+    width: 70rem;
+  } */
+  .FreeResourcesSection {
+    margin: 0 auto;
+    width: 70rem;
+  }
+  .AdditionalServices {
+    margin: 0 auto;
+    width: 70rem;
+  }
+  .TestimonialsSection {
+    margin: 0 auto;
+    width: 85.3125rem;
+  }
+  .ProjectCover {
+    margin: 0 auto;
+    width: 95rem;
+  }
+  .ProjectInfo {
+    margin: 0 auto;
+    padding: 2.5rem 0;
+    width: 69.375rem;
+  }
+  .Guides {
+    justify-content: space-between;
+  }
+  .TypographyList {
+    justify-content: space-between !important;
+  }
+  .ErrorPage {
+    margin: 0 auto;
+    width: 70rem;
+    h2 {
+      width: 30rem;
+      word-break: break-word;
+    }
+  }
+}
+
+/****** DESKTOP - 1025PX -> 90rem ******/
+
+@media only screen and (64.0625rem <= width <= 90rem) {
+  /* .MainContainer {
+    padding: 0 9.375rem;
+  } */
+
+  .AdditionalServices {
+    padding: 0 9.375rem;
+  }
+  .FreeResourcesSection {
+    padding: 0 9.375rem;
+  }
+  .TestimonialsSection {
+    padding: 0 9.375rem;
+  }
+  .ProjectInfo {
+    padding: 2.5rem 10.3125rem;
+  }
+  .TypographyList {
+    justify-content: space-between !important;
+  }
+}
+
+/****** TABLET (LARGE) - 46.5625rem --> 64rem ******/
+
+@media only screen and (46.5625rem <= width <= 64rem) {
+  /* .MainContainer {
+    padding: 2rem;
+  } */
+  .ProjectInfo {
+    padding: 2rem;
+  }
+  .TestimonialsSection {
+    padding: 0 2rem;
+  }
+  .Guides {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .TypographyList {
+    justify-content: space-between;
+  }
+}
+
+/****** TABLET (SMALL) - 23.5rem --> 46.5rem ******/
+
+@media only screen and (23.5rem <= width <= 46.5rem) {
+  /* .MainContainer {
+    padding: 1.5rem;
+  } */
+  .HomePageSection {
+    flex-direction: column;
+  }
+  .ProjectSection {
+    height: 100vh;
+  }
+  .TestimonialsSection {
+    padding: 0 1.5rem;
+  }
+  .VerticalDivider {
+    display: none !important;
+  }
+  .ProjectInfo {
+    padding: 1.5rem;
+  }
+  .ProjectTimeDuration {
+    justify-content: center !important;
+  }
+  .ProjectToolsAndTechStacks {
+    flex-direction: column;
+    gap: 0.625rem;
+    text-align: center;
+  }
+  .Guides {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  #BrandGuideInfo {
+    flex-direction: column;
+  }
+  #LiteLifeProjectGuideInfo {
+    flex-direction: column;
+    #LiteLifeProjectLogoMarks {
+      padding: 2.5rem 0;
+    }
+  }
+  .ColorPalette {
+    justify-content: center;
+  }
+  .TypographyList {
+    justify-content: space-between;
+  }
+}
+
+/****** TABLET (SMALL) - 0rem -> 23.4375rem ******/
+
+@media only screen and (width <= 23.4375rem) {
+  .ProjectAssetsAndBrandingContainer {
+    flex-direction: column;
+  }
+  /* .MainContainer {
+    padding: 1.5rem;
+  } */
+  .HomePageSection {
+    flex-direction: column;
+  }
+  .ProjectInfo {
+    padding: 1.5rem;
+  }
+  .TestimonialsSection {
+    padding: 0 1.5rem;
+  }
+  .ProjectCover h1 {
+    font-size: 4.5rem !important;
+  }
+  .Guides {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  #LiteLifeProjectGuideInfo {
+    flex-direction: column;
+    #LiteLifeProjectLogoMarks {
+      padding: 2.5rem 0;
+    }
+  }
+  .ColorPalette {
+    justify-content: center;
+  }
+  .CTAButtons {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  #TechSkills {
+    flex-direction: column;
+  }
+  .SocialLinkNames {
+    height: auto;
+    text-align: right;
+    .NavFooterSocialLinks {
+      flex-direction: column;
+    }
+  }
+}
+
+@media only screen and (width <= 66.25rem) {
+  .TypographyList {
+    justify-content: center;
+  }
+}
+
+/*********************************************************************/
+
+/* @media screen and (max-width: 37.5rem) {
+  .MainContainer {
+    flex-direction: column !important;
+  }
+} */
+
+/*********************************************************************/
+
+@media screen and (width <= 64rem) {
+  .HomePageProjectLogos {
+    display: none !important;
+  }
+}
+
+@media screen and (width >= 29.9375rem) {
+  .AwardsSection {
+    svg {
+      height: 5.3125rem;
+      width: 12.8125rem;
+    }
+  }
+}
+
+@media screen and (width <= 30rem) {
+  .AwardsSection {
+    svg {
+      height: 2.8125rem;
+      width: 9.375rem;
+    }
+  }
+}
+
+@media screen and (width <= 37.5rem) {
+  .ProjectHeroDesktop {
+    display: none;
+  }
+  .ProjectHeroMobile {
+    display: block;
+  }
+  .Cover {
+    flex-direction: column !important;
+  }
+}
+
+@media screen and (width > 37.5rem) {
+  .ProjectHeroDesktop {
+    display: block;
+  }
+  .ProjectHeroMobile {
+    display: none;
+  }
+}

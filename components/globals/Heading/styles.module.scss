@@ -1,0 +1,70 @@
+@use "../../../scss/index.scss" as *;
+
+.HomePageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 3.4375rem;
+  height: calc(100dvh - 4.8125rem);
+  justify-content: center;
+  padding-bottom: 3.125rem;
+
+  .AwardsSection {
+    cursor: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14.0625rem, 1fr));
+    justify-content: center;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 37.1875rem;
+    width: 100%;
+
+    a {
+      cursor: none;
+    }
+  }
+
+  .MainHomeTitle {
+    color: $Argent;
+    font-family: $HeadingFont;
+    font-size: clamp(2rem, 0.0536rem + 9.7321vw, 15.625rem);
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+
+    .HeadlineAccent {
+      color: $Khaki;
+      font-size: clamp(2rem, 0.9295rem + 5.3524vw, 5.75rem);
+      font-style: italic;
+    }
+
+    .HeadlineYear {
+      font-size: clamp(1.3125rem, 1.0449rem + 1.3381vw, 2.25rem);
+    }
+  }
+
+  .HomePageImage {
+    height: 100%;
+    width: 100%;
+  }
+
+  .HomePageProjectLogos {
+    align-items: center;
+    background-color: $ChineseBlack-02;
+    border-radius: $ImgBorderRadius;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(7.8125rem, 1fr));
+    justify-items: center;
+    padding: 0.9375rem 0;
+
+    img {
+      height: auto;
+      opacity: 0.6;
+      width: 50%;
+
+      &:nth-child(5) {
+        height: 4.0625rem;
+      }
+    }
+  }
+}

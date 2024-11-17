@@ -1,0 +1,9 @@
+export declare const hireCtaHeader: string;
+export declare const homePageLogoLink: string;
+export declare const lineBottom: string;
+export declare const lineTop: string;
+export declare const mainLogo: string;
+export declare const menuToggle: string;
+export declare const nav: string;
+export declare const navBar: string;
+export declare const spin: string;

@@ -1,0 +1,17 @@
+export declare const brandProjectLinkOverlay: string;
+export declare const cryptoverseProjectSectionLink: string;
+export declare const cursorLinkHovered: string;
+export declare const liteLifeProjectLinkOverlay: string;
+export declare const projectBoxContent: string;
+export declare const projectBoxContentList: string;
+export declare const projectBoxContentListContainer: string;
+export declare const projectBoxContentText: string;
+export declare const projectBoxContentTitle: string;
+export declare const projectBoxLinks: string;
+export declare const projectIcons: string;
+export declare const projectLinkOverlay: string;
+export declare const projectLogo: string;
+export declare const projects: string;
+export declare const projectSectionBox: string;
+export declare const projectSectionLink: string;
+export declare const projectsTitle: string;

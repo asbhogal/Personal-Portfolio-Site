@@ -1,0 +1,57 @@
+@use "../../../scss/index.scss" as *;
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.9375rem;
+  height: 100%;
+  justify-content: space-between;
+  padding: 27.1875rem 0;
+  position: relative;
+  width: 100%;
+
+  .Copyright {
+    bottom: 2.5rem;
+    color: $Argent;
+    font-family: Cardillac, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    text-transform: uppercase
+  }
+
+  .FooterUl {
+    flex: 1;
+    list-style-type: none;
+  }
+
+  .FooterLi {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9375rem;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .FooterLink {
+    color: $Argent;
+    font-family: Cardillac, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .FooterLogo {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+  }
+
+  .FooterLinks {
+    display: flex;
+    gap: .9375rem;
+    justify-content: center;
+    max-width: 28.75rem;
+    width: 100%;
+    ;
+  }
+}

@@ -1,12 +1,10 @@
-import Heading from '@/components/covers/Heading';
 import { Metadata } from 'next';
 import React from 'react';
 import { getPayloadHMR } from '@payloadcms/next/utilities';
 import config from '@payload-config';
 import { Page as PageProps } from '@/payload-types';
-import Arrow from '@/components/icons/Arrow';
-import RichText from '@/components/typography/RichText';
-import RenderBlocks from '@/components/sections/RenderBlocks';
+import { Heading, RenderBlocks } from '@/components/globals';
+import { RichText } from '@/components/typography';
 
 export const metadata: Metadata = {
   description:
@@ -49,7 +47,6 @@ export default async function Page() {
       <Heading title={title} />
       {/* @ts-expect-error resolve content mismatch */}
       <RichText content={data?.layout[0].Content || ''} />
-      <Arrow />
       <RenderBlocks blocks={data.layout} />
     </React.Fragment>
   );

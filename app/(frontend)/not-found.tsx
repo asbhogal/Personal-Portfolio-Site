@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import Error from "@/components/sections/Error";
+import { Error } from '@/components/sections';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Error 404 | Aman Singh Bhogal",
   description: "Error 404. The page you're looking for does not exist.",
+  title: 'Error 404 | Aman Singh Bhogal',
 };
 
 export default function NotFound() {

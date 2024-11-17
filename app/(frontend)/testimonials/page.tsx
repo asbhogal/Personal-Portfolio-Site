@@ -1,17 +1,16 @@
-import type { Metadata } from "next";
-import TestimonialsContent from "@/components/sections/TestimonialsContent";
-import CTA from "@/components/sections/CTA";
+import { TestimonialsContent } from '@/components/sections/Testimonials';
+import type { Metadata } from 'next';
+import React from 'react';
 
 export const metadata: Metadata = {
-  title: "Testimonials | Aman Singh Bhogal",
-  description: "Testimonials from clients",
+  description: 'Testimonials from clients',
+  title: 'Testimonials | Aman Singh Bhogal',
 };
 
 export default function Page() {
   return (
-    <>
+    <React.Fragment>
       <TestimonialsContent />
-      <CTA />
-    </>
+    </React.Fragment>
   );
 }

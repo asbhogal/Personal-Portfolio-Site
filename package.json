@@ -3,9 +3,8 @@
   "version": "3.0.0",
   "description": "A personal portfolio site created for the repo owner (Aman Singh Bhogal.)",
   "private": true,
-  "type": "module",
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS=\"${NODE_OPTIONS} --no-deprecation\" next dev",
+    "dev": "concurrently \"next dev --turbopack\" \"stylelint\" \"typed-scss-modules '**/*.scss' --watch\"",
     "devturbo": "pnpm dev --turbo",
     "devsafe": "rm -rf .next && pnpm dev",
     "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
@@ -68,9 +67,8 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@eslint/compat": "^1.2.2",
     "@eslint/eslintrc": "^3.1.0",
-    "@eslint/js": "^9.14.0",
+    "@eslint/js": "9.14.0",
     "@graphql-codegen/cli": "^5.0.3",
     "@graphql-codegen/client-preset": "^4.5.0",
     "@graphql-codegen/typescript": "^4.1.1",
@@ -85,22 +83,20 @@
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.0",
     "@typescript-eslint/eslint-plugin": "^8.14.0",
     "@typescript-eslint/parser": "^8.14.0",
+    "concurrently": "^9.1.0",
     "eslint": "^9.14.0",
-    "eslint-config-next": "14.0.4",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-next": "^15.0.3",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.14",
+    "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-sort-export-all": "^1.4.1",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
-    "sass": "^1.80.7",
+    "sass": "^1.81.0",
     "stylelint": "^16.10.0",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recommended-scss": "^14.1.0",
@@ -108,7 +104,8 @@
     "stylelint-prettier": "^5.0.2",
     "stylelint-scss": "^6.9.0",
     "typescript": "^5.6.3",
-    "typescript-eslint": "^8.14.0"
+    "typescript-eslint": "^8.14.0",
+    "typed-scss-modules": "^8.0.1"
   },
   "pnpm": {
     "overrides": {

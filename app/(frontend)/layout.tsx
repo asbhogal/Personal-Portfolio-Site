@@ -1,11 +1,12 @@
 import '@/scss/index.scss';
-import Header from '@/components/sections/Header';
 import Cursor from '@/components/features/Cursor';
 import ScrollToTop from '@/components/features/ScrollToTop';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
-import Footer from '@/components/sections/Footer';
+import { Footer, Header } from '@/components/globals';
 import '@splidejs/react-splide/css';
+import '@/scss/globals/globals.scss';
+import '@/scss/reset.scss';
 
 export default function RootLayout({
   children,

@@ -1,0 +1,169 @@
+@use "../../../scss/index.scss" as *;
+
+.AboutCover {
+  display: flex;
+  flex-direction: column;
+  height: calc(100dvh - 4.8125rem);
+  justify-content: center;
+
+  .PageHeaderTitle {
+    color: $Argent;
+    display: flex;
+    flex-direction: column;
+    font-family: $HeadingFont;
+    font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
+    font-style: italic;
+    font-weight: 400;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.AboutSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  justify-content: center;
+
+  >* {
+    display: flex;
+  }
+
+  .AboutContent {
+    flex-direction: column;
+    gap: 1.25rem;
+    justify-content: flex-start;
+
+    #DesignSkills {
+      justify-content: center;
+      text-align: center;
+    }
+
+    #TechSkills {
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .ExperienceList {
+      display: flex;
+      font-family: $HeadingFont;
+      font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);
+      gap: 1.5625rem;
+      justify-content: flex-start;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    .AboutText {
+      font-family: $BodyFont;
+      font-size: clamp(1rem, 0.9108rem + 0.446vw, 1.3125rem);
+      text-align: justify;
+      text-transform: uppercase;
+    }
+
+    .AboutExperience {
+      border-top: 0.0625rem solid $Argent;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      padding-bottom: 0.625rem;
+
+      h2 {
+        color: $Argent;
+        font-family: $HeadingFont;
+        font-size: clamp(1.5rem, 0.7864rem + 3.5682vw, 4rem);
+        font-style: normal;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+
+      .ExperienceContainer {
+        display: grid;
+        gap: 0.625rem;
+        grid-template-columns: repeat(auto-fit, minmax(16.5625rem, 1fr));
+
+        .ExperienceSection {
+          border: 0.0625rem solid $Khaki;
+          border-radius: $ImgBorderRadius;
+          color: $Argent;
+          display: flex;
+          flex-direction: column;
+          font-family: $BodyFont;
+          gap: 0.625rem;
+          padding: 0.625rem;
+          text-align: justify;
+          text-transform: uppercase;
+
+          .ExperienceDate {
+            font-size: 1.3125rem;
+            padding-left: 0.3125rem;
+          }
+
+          .ExperienceTitle {
+            background-color: $Khaki;
+            border: 0.0625rem solid $Khaki;
+            border-radius: 2.5rem;
+            color: $Black;
+            font-size: 1.125rem;
+            padding: 0.625rem 0.875rem;
+            text-align: left;
+          }
+
+          .ExperienceInfo {
+            .ListDot {
+              background-color: $Argent;
+              border-radius: 50%;
+              display: flex;
+              height: 0.3125rem;
+              width: 0.3125rem;
+            }
+          }
+
+          ul {
+            padding-left: 1.25rem;
+          }
+
+          .ExperienceSkills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.625rem;
+
+            span {
+              border: 0.0625rem solid $Khaki;
+              border-radius: 2.5rem;
+              padding: 0.625rem;
+            }
+          }
+        }
+
+        .WorkLinks {
+          background-color: $Khaki;
+          border: 0.0625rem solid $Khaki;
+          border-radius: 2.5rem;
+          color: $SmokyBlack;
+          cursor: none;
+          display: flex;
+          outline: none;
+          padding: 0.625rem 0.825rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: all 0.3s ease-in;
+          width: min-content;
+
+          &:hover {
+            background-color: transparent;
+            border: 0.0625rem solid $Khaki;
+            color: $Khaki;
+            -webkit-transition: all 0.3s ease-in;
+            transition: all 0.3s ease-in;
+          }
+
+          &:focus {
+            outline: 0.125rem solid $Argent;
+          }
+        }
+      }
+    }
+  }
+}
