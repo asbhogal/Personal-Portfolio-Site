@@ -1,0 +1,82 @@
+@use "../variables/index.module.scss" as *;
+
+@mixin HeadingOneTitle {
+  color: $Argent;
+  font-family: $HeadingFont;
+  font-size: clamp(4.25rem, -9.5rem + 24.4444vw, 12.5rem);
+  font-style: normal;
+  font-weight: 400;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+@mixin HeadingOne {
+  color: $Argent;
+  display: flex;
+  flex-direction: column;
+  font-family: $HeadingFont;
+  font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@mixin HeadingTwoProject {
+  border-bottom: 0.0625rem solid red;
+  font-family: $HeadingFont;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin HeadingThreeProject {
+  font-family: $HeadingFont;
+  font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@mixin MainBody {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 120rem;
+  width: 100%;
+}
+
+@mixin BodyText {
+  font-family: $BodyFont;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@mixin ProjectStructure {
+  .Projects {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@mixin HeadlineStyle {
+  border-top: 0.0625rem solid $Argent;
+  flex-direction: column;
+  gap: 0.625rem;
+
+  >* {
+    display: flex;
+  }
+
+  .h2 {
+    color: $Argent;
+    font-family: $HeadingFont;
+    font-size: clamp(1.5rem, 0.7864rem + 3.5682vw, 4rem);
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,87 @@
+@use "../mixins/index.module.scss" as *;
+@use "../variables/index.module.scss" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+
+  &:is(&::after, &::before, *) {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  background-color: $SmokyBlack;
+}
+
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 0.625rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $RaisinBlack;
+  border-radius: 0.625rem;
+}
+
+.CTAButtons {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+
+  >* {
+    display: flex;
+  }
+}
+
+h2 {
+  color: $Khaki;
+  font-family: Newsreader, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: clamp(2rem, 0.8rem + 6vw, 8rem);
+  font-weight: 300;
+}
+
+.sr-only {
+  border-width: 0;
+  clip: rect(0, 0, 0, 0);
+  height: .0625rem;
+  margin: -0.0625rem;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: .0625rem;
+}
+
+.MainContainer {
+  @include MainBody;
+}
+
+.ProjectButton {
+  background-color: $Argent;
+  border: 0.0625rem solid $Argent;
+  border-radius: 2.5rem;
+  color: $SmokyBlack;
+  font-family: $BodyFont;
+  outline: none;
+  padding: 0.625rem 1.25rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: $Transition-03;
+
+  &:hover {
+    background-color: transparent;
+    border: 0.0625rem solid $Argent;
+    color: $Argent;
+    cursor: none;
+    transition: $Transition-03;
+  }
+
+  &:focus {
+    outline: 0.125rem solid $Khaki;
+  }
+}

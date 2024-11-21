@@ -5,11 +5,11 @@ import { mongooseAdapter } from '@payloadcms/db-mongodb';
 import { buildConfig } from 'payload';
 import sharp from 'sharp';
 import { fileURLToPath } from 'url';
-import { Users } from './app/(payload)/collections/users';
-import { Pages } from './app/(payload)/collections/pages';
-import { Media } from './app/(payload)/collections/media';
-import { Footer } from './app/(payload)/globals/footer';
-import { Projects } from './app/(payload)/collections/projects';
+import { Users } from './src/collections/users';
+import { Pages } from './src/collections/pages';
+import { Media } from './src/collections/media';
+import { Projects } from './src/collections/projects';
+import { Footer } from './src/globals/footer';
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);

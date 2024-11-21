@@ -15,8 +15,19 @@ export interface Config {
     pages: Page;
     projects: Project;
     media: Media;
+    'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
+  };
+  collectionsJoins: {};
+  collectionsSelect: {
+    users: UsersSelect<false> | UsersSelect<true>;
+    pages: PagesSelect<false> | PagesSelect<true>;
+    projects: ProjectsSelect<false> | ProjectsSelect<true>;
+    media: MediaSelect<false> | MediaSelect<true>;
+    'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
+    'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
+    'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
   };
   db: {
     defaultIDType: string;
@@ -24,9 +35,16 @@ export interface Config {
   globals: {
     'footer-menu': FooterMenu;
   };
+  globalsSelect: {
+    'footer-menu': FooterMenuSelect<false> | FooterMenuSelect<true>;
+  };
   locale: null;
   user: User & {
     collection: 'users';
+  };
+  jobs: {
+    tasks: unknown;
+    workflows: unknown;
   };
 }
 export interface UserAuthOperations {
@@ -148,7 +166,7 @@ export interface Page {
               | {
                   title?: string | null;
                   description?: string | null;
-                  image?: string | Media | null;
+                  image?: (string | null) | Media;
                   subheading?: string | null;
                   id?: string | null;
                 }[]
@@ -299,7 +317,7 @@ export interface Project {
     | {
         images?:
           | {
-              image?: string | Media | null;
+              image?: (string | null) | Media;
               id?: string | null;
             }[]
           | null;
@@ -311,6 +329,37 @@ export interface Project {
   SEO?: {
     title?: string | null;
     description?: string | null;
+  };
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-locked-documents".
+ */
+export interface PayloadLockedDocument {
+  id: string;
+  document?:
+    | ({
+        relationTo: 'users';
+        value: string | User;
+      } | null)
+    | ({
+        relationTo: 'pages';
+        value: string | Page;
+      } | null)
+    | ({
+        relationTo: 'projects';
+        value: string | Project;
+      } | null)
+    | ({
+        relationTo: 'media';
+        value: string | Media;
+      } | null);
+  globalSlug?: string | null;
+  user: {
+    relationTo: 'users';
+    value: string | User;
   };
   updatedAt: string;
   createdAt: string;
@@ -351,6 +400,280 @@ export interface PayloadMigration {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "users_select".
+ */
+export interface UsersSelect<T extends boolean = true> {
+  name?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  email?: T;
+  resetPasswordToken?: T;
+  resetPasswordExpiration?: T;
+  salt?: T;
+  hash?: T;
+  loginAttempts?: T;
+  lockUntil?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages_select".
+ */
+export interface PagesSelect<T extends boolean = true> {
+  title?: T;
+  content?: T;
+  SEO?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+      };
+  layout?:
+    | T
+    | {
+        'accolades-block'?:
+          | T
+          | {
+              accolade?:
+                | T
+                | {
+                    award?: T;
+                    awardingBody?: T;
+                    date?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        'content-block'?:
+          | T
+          | {
+              Content?: T;
+              id?: T;
+              blockName?: T;
+            };
+        'section-block'?:
+          | T
+          | {
+              subheadingBlock?:
+                | T
+                | {
+                    'subheading-block'?:
+                      | T
+                      | {
+                          subheading?: T;
+                          id?: T;
+                          blockName?: T;
+                        };
+                  };
+              title?: T;
+              description?: T;
+              id?: T;
+              blockName?: T;
+            };
+        'slider-block'?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              cards?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    image?: T;
+                    subheading?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        'subheading-block'?:
+          | T
+          | {
+              subheading?: T;
+              id?: T;
+              blockName?: T;
+            };
+      };
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projects_select".
+ */
+export interface ProjectsSelect<T extends boolean = true> {
+  heroImage?: T;
+  title?: T;
+  stacks?:
+    | T
+    | {
+        'list-block'?:
+          | T
+          | {
+              title?: T;
+              items?:
+                | T
+                | {
+                    item?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+      };
+  description?:
+    | T
+    | {
+        'content-block'?:
+          | T
+          | {
+              Content?: T;
+              id?: T;
+              blockName?: T;
+            };
+      };
+  slug?: T;
+  typeface?:
+    | T
+    | {
+        'content-block'?:
+          | T
+          | {
+              Content?: T;
+              id?: T;
+              blockName?: T;
+            };
+      };
+  layout?:
+    | T
+    | {
+        'list-block'?:
+          | T
+          | {
+              title?: T;
+              items?:
+                | T
+                | {
+                    item?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+      };
+  showcase?:
+    | T
+    | {
+        'image-grid-block'?:
+          | T
+          | {
+              images?:
+                | T
+                | {
+                    image?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+      };
+  SEO?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "media_select".
+ */
+export interface MediaSelect<T extends boolean = true> {
+  text?: T;
+  altText?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
+  sizes?:
+    | T
+    | {
+        desktop?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+        mobile?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+        tablet?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+      };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-locked-documents_select".
+ */
+export interface PayloadLockedDocumentsSelect<T extends boolean = true> {
+  document?: T;
+  globalSlug?: T;
+  user?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-preferences_select".
+ */
+export interface PayloadPreferencesSelect<T extends boolean = true> {
+  user?: T;
+  key?: T;
+  value?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-migrations_select".
+ */
+export interface PayloadMigrationsSelect<T extends boolean = true> {
+  name?: T;
+  batch?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "footer-menu".
  */
 export interface FooterMenu {
@@ -372,6 +695,32 @@ export interface FooterMenu {
     | null;
   updatedAt?: string | null;
   createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "footer-menu_select".
+ */
+export interface FooterMenuSelect<T extends boolean = true> {
+  footerMenu?:
+    | T
+    | {
+        footerMenuItem?:
+          | T
+          | {
+              footerMenuItemText?: T;
+              footerLinks?:
+                | T
+                | {
+                    footerLink?: T;
+                    footerLinkUrl?: T;
+                    id?: T;
+                  };
+            };
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

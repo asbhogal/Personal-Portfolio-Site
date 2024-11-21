@@ -1,0 +1,8 @@
+#custom-css {
+  background-image: url("/placeholder.png");
+  font-family: monospace;
+}
+
+#custom-css::after {
+  content: "custom-css";
+}

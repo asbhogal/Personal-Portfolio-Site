@@ -38,6 +38,8 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "src/components/typography/RichText/serialize.tsx",
+    "src/components/typography/RichText/nodeFormat.tsx"
   ]
 }
