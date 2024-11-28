@@ -1,24 +1,22 @@
-'use client';
-
-import FadeIn from '@/utils/animations';
-import useSWR from 'swr';
-import { fetcher } from '@/utils/fetcher';
-import { FooterMenu } from '@/payload-types';
 import Link from 'next/link';
 import Image from 'next/image';
+import { getPayload } from 'payload';
+import configPromise from '@payload-config';
 import styles from './styles.module.scss';
 
-export const Footer = () => {
-  const { data: footerMenu, error } = useSWR<FooterMenu>(
-    '/api/footer',
-    fetcher,
-  );
-  if (error) return <div>failed to load</div>;
-  if (!footerMenu) return <div>loading...</div>;
+export const Footer = async () => {
+  const payload = await getPayload({
+    config: configPromise,
+  });
+
+  const data = await payload.findGlobal({
+    slug: 'footer-menu',
+  });
+
+  const { footerMenu } = data;
 
   return (
-    <FadeIn
-      as="footer"
+    <footer
       className={styles.footer}
     >
       <Image
@@ -35,7 +33,7 @@ export const Footer = () => {
       {' '}
       <div className={styles.footerLinks}>
         <ul className={styles.footerUl}>
-          {footerMenu?.footerMenu?.map((footerItem) => (footerItem.footerMenuItem?.footerMenuItemText === 'Primary'
+          {footerMenu?.map((footerItem) => (footerItem.footerMenuItem?.footerMenuItemText === 'Primary'
             ? footerItem?.footerMenuItem?.footerLinks?.map((primary) => (
               <li
                 className={styles.footerLi}
@@ -52,7 +50,7 @@ export const Footer = () => {
             : null))}
         </ul>
         <ul className={styles.footerUl}>
-          {footerMenu?.footerMenu?.map((footerItem) => (footerItem.footerMenuItem?.footerMenuItemText === 'Secondary'
+          {footerMenu?.map((footerItem) => (footerItem.footerMenuItem?.footerMenuItemText === 'Secondary'
             ? footerItem?.footerMenuItem?.footerLinks?.map((secondary) => (
               <li
                 className={styles.footerLi}
@@ -69,15 +67,14 @@ export const Footer = () => {
             : null))}
         </ul>
       </div>
-      <FadeIn
-        as="div"
+      <div
         className={styles.copyright}
       >
-        <FadeIn as="p">
+        <p>
           ©Aman Singh Bhogal
           {new Date().getFullYear()}
-        </FadeIn>
-      </FadeIn>
-    </FadeIn>
+        </p>
+      </div>
+    </footer>
   );
 };

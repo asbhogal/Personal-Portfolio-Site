@@ -1,0 +1,39 @@
+@use "../mixins/index.module.scss" as *;
+@use "../variables/index.module.scss" as *;
+
+html {
+  background-color: $SmokyBlack;
+}
+
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 0.625rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $RaisinBlack;
+  border-radius: 0.625rem;
+}
+
+h2 {
+  color: $Khaki;
+  font-family: Newsreader, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: clamp(2rem, 0.8rem + 6vw, 8rem);
+  font-weight: 300;
+}
+
+.sr-only {
+  border-width: 0;
+  clip: rect(0, 0, 0, 0);
+  height: .0625rem;
+  margin: -0.0625rem;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: .0625rem;
+}

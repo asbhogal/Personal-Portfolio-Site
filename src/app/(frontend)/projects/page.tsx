@@ -1,10 +1,9 @@
-import { getPayloadHMR } from '@payloadcms/next/utilities';
 import config from '@payload-config';
 import { Project } from '@/payload-types';
-import { PaginatedDocs } from 'payload';
+import { getPayload, PaginatedDocs } from 'payload';
 
 export default async function Page() {
-  const payload = await getPayloadHMR({
+  const payload = await getPayload({
     config,
   });
 

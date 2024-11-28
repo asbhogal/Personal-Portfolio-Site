@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 import React from 'react';
-import { getPayloadHMR } from '@payloadcms/next/utilities';
 import config from '@payload-config';
 import { Page as PageProps } from '@/payload-types';
 import { Heading, RenderBlocks } from '@/src/components/globals';
 import RichText from '@/src/components/typography/RichText';
+import { getPayload } from 'payload';
 
 export const metadata: Metadata = {
   description:
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const payload = await getPayloadHMR({
+  const payload = await getPayload({
     config,
   });
 

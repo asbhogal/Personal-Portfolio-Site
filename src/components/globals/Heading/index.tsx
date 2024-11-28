@@ -2,6 +2,7 @@
 
 import FadeIn from '@/utils/animations';
 import Image from 'next/image';
+import styles from './styles.module.scss';
 
 interface Props {
   title: string;
@@ -10,7 +11,7 @@ interface Props {
 export const Heading = ({ title }: Props) => (
   <FadeIn
     as="section"
-    className="HomePageSection"
+    className={styles.homePageSection}
   >
     <Image
       src="/images/Home/PageTitle.svg"
@@ -18,7 +19,7 @@ export const Heading = ({ title }: Props) => (
       width={2560}
       height={600}
       priority
-      className="HomePageImage"
+      className={styles.homePageImage}
     />
     <FadeIn
       as="h1"

@@ -1,0 +1,13 @@
+@use "../../styles/index.scss" as *;
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 120rem;
+  width: 100%;
+
+  @media only screen and (width <=64rem) {
+    padding: 0 .625rem;
+  }
+}

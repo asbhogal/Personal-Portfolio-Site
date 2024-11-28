@@ -33,9 +33,11 @@ export interface Config {
     defaultIDType: string;
   };
   globals: {
+    'header-menu': HeaderMenu;
     'footer-menu': FooterMenu;
   };
   globalsSelect: {
+    'header-menu': HeaderMenuSelect<false> | HeaderMenuSelect<true>;
     'footer-menu': FooterMenuSelect<false> | FooterMenuSelect<true>;
   };
   locale: null;
@@ -674,6 +676,22 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "header-menu".
+ */
+export interface HeaderMenu {
+  id: string;
+  headerMenu?:
+    | {
+        linkText?: string | null;
+        linkUrl?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "footer-menu".
  */
 export interface FooterMenu {
@@ -695,6 +713,22 @@ export interface FooterMenu {
     | null;
   updatedAt?: string | null;
   createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "header-menu_select".
+ */
+export interface HeaderMenuSelect<T extends boolean = true> {
+  headerMenu?:
+    | T
+    | {
+        linkText?: T;
+        linkUrl?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

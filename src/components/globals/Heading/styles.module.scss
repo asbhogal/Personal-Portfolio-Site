@@ -1,14 +1,13 @@
-@use "../../../scss/index.scss" as *;
+@use "../../../styles/index.scss" as *;
 
-.HomePageSection {
+.homePageSection {
   display: flex;
   flex-direction: column;
   gap: 3.4375rem;
-  height: calc(100dvh - 4.8125rem);
+  height: calc(100dvh - 3.75rem);
   justify-content: center;
-  padding-bottom: 3.125rem;
 
-  .AwardsSection {
+  .awardsSection {
     cursor: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14.0625rem, 1fr));
@@ -23,7 +22,7 @@
     }
   }
 
-  .MainHomeTitle {
+  .mainHomeTitle {
     color: $Argent;
     font-family: $HeadingFont;
     font-size: clamp(2rem, 0.0536rem + 9.7321vw, 15.625rem);
@@ -31,23 +30,23 @@
     text-align: center;
     text-transform: uppercase;
 
-    .HeadlineAccent {
+    .headlineAccent {
       color: $Khaki;
       font-size: clamp(2rem, 0.9295rem + 5.3524vw, 5.75rem);
       font-style: italic;
     }
 
-    .HeadlineYear {
+    .headlineYear {
       font-size: clamp(1.3125rem, 1.0449rem + 1.3381vw, 2.25rem);
     }
   }
 
-  .HomePageImage {
+  .homePageImage {
     height: 100%;
     width: 100%;
   }
 
-  .HomePageProjectLogos {
+  .homePageProjectLogos {
     align-items: center;
     background-color: $ChineseBlack-02;
     border-radius: $ImgBorderRadius;

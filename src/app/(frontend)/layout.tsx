@@ -1,10 +1,10 @@
-import '@/src/scss/index.scss';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import '../../styles/index.scss';
 import { Analytics } from '@vercel/analytics/react';
 import { Footer, Header } from '@/src/components/globals';
 import '@splidejs/react-splide/css';
-import '@/src/scss/globals/globals.scss';
-import '@/src/scss/reset.scss';
+import '@/src/styles/globals/globals.scss';
+import '@/src/styles/reset.scss';
+import styles from './styles.module.scss';
 
 export default function RootLayout({
   children,
@@ -14,11 +14,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="root">
-        <Analytics />
-        <SpeedInsights />
         <Header />
-        <main className="MainContainer">{children}</main>
+        <main
+          className={styles.mainContainer}
+        >
+          {children}
+        </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Page } from '@/payload-types';
 import { Subheading } from '@/src/components/typography';
-import { AccoladesBlock } from '@/src/blocks/accolades';
-import { SliderBlock } from '@/src/blocks/slider';
+import { AccoladesBlock } from '@/src/payload/blocks/accolades';
+import { SliderBlock } from '@/src/payload/blocks/slider';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const blockComponents: Record<string, any> = {

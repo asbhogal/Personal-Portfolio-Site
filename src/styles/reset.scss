@@ -3,6 +3,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Prevent font size inflation */
@@ -59,7 +61,6 @@ h4 {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  color: currentColor;
   text-decoration-skip-ink: auto;
 }
 

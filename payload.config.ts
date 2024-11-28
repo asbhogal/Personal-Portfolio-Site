@@ -5,11 +5,12 @@ import { mongooseAdapter } from '@payloadcms/db-mongodb';
 import { buildConfig } from 'payload';
 import sharp from 'sharp';
 import { fileURLToPath } from 'url';
-import { Users } from './src/collections/users';
-import { Pages } from './src/collections/pages';
-import { Media } from './src/collections/media';
-import { Projects } from './src/collections/projects';
-import { Footer } from './src/globals/footer';
+import { Users } from './src/payload/collections/users';
+import { Pages } from './src/payload/collections/pages';
+import { Media } from './src/payload/collections/media';
+import { Projects } from './src/payload/collections/projects';
+import { Footer } from './src/payload/globals/footer';
+import { Header } from './src/payload/globals/header';
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -36,7 +37,7 @@ export default buildConfig({
   }),
   editor: lexicalEditor(),
 
-  globals: [Footer],
+  globals: [Header, Footer],
 
   i18n: {
     supportedLanguages: { en },

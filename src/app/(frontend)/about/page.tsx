@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
-import { getPayloadHMR } from '@payloadcms/next/utilities';
 import config from '@payload-config';
 import React from 'react';
+import { getPayload } from 'payload';
 
 export const metadata: Metadata = {
   description: 'About Aman Singh Bhogal',
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default async function Page() {
   // const { about: aboutData } = await getAboutData();
 
-  const payload = await getPayloadHMR({
+  const payload = await getPayload({
     config,
   });
 
