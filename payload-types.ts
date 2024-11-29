@@ -183,6 +183,17 @@ export interface Page {
             blockName?: string | null;
             blockType: 'subheading-block';
           }
+        | {
+            images?:
+              | {
+                  image?: (string | null) | Media;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'image-grid-block';
+          }
       )[]
     | null;
   updatedAt: string;
@@ -493,6 +504,18 @@ export interface PagesSelect<T extends boolean = true> {
           | T
           | {
               subheading?: T;
+              id?: T;
+              blockName?: T;
+            };
+        'image-grid-block'?:
+          | T
+          | {
+              images?:
+                | T
+                | {
+                    image?: T;
+                    id?: T;
+                  };
               id?: T;
               blockName?: T;
             };

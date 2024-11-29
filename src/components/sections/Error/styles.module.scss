@@ -30,12 +30,7 @@
     }
 
     h2 {
-      @include HeadingThreeProject;
       font-size: clamp(1.3125rem, 1.1161rem + 0.9821vw, 2rem);
-    }
-
-    p {
-      @include BodyText;
     }
 
     .ReturnHomeButton {

@@ -72,6 +72,7 @@ export const Footer = async () => {
       >
         <p>
           ©Aman Singh Bhogal
+          {' '}
           {new Date().getFullYear()}
         </p>
       </div>

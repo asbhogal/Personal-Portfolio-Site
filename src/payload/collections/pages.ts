@@ -4,6 +4,7 @@ import { SubheadingBlock } from '../blocks/subheading';
 import { SliderBlock } from '../blocks/slider';
 import { AccoladesBlock } from '../blocks/accolades';
 import { SectionBlock } from '../blocks/section';
+import { ImageGridBlock } from '../blocks/image-grid';
 
 export const Pages: CollectionConfig = {
   admin: {
@@ -19,6 +20,9 @@ export const Pages: CollectionConfig = {
       type: 'richText',
     },
     {
+      admin: {
+        position: 'sidebar',
+      },
       fields: [
         {
           name: 'title',
@@ -26,7 +30,7 @@ export const Pages: CollectionConfig = {
         },
         {
           name: 'description',
-          type: 'text',
+          type: 'textarea',
         },
       ],
       name: 'SEO',
@@ -39,6 +43,7 @@ export const Pages: CollectionConfig = {
         SectionBlock,
         SliderBlock,
         SubheadingBlock,
+        ImageGridBlock,
       ],
       label: 'Page Layout',
       minRows: 1,
