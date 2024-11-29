@@ -19,7 +19,7 @@ export default async function Page() {
     config,
   });
 
-  const { docs }: PaginatedDocs<Project> = await payload.find({
+  const { docs }: PaginatedDocs = await payload.find({
     collection: 'projects',
   });
 

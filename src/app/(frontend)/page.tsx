@@ -1,10 +1,9 @@
 import { Metadata } from 'next';
 import React from 'react';
-import config from '@payload-config';
-import { Page as PageProps } from '@/payload-types';
-import { Heading, RenderBlocks } from '@/src/components/globals';
+import { Heading } from '@/src/components/globals';
 import RichText from '@/src/components/typography/RichText';
-import { getPayload } from 'payload';
+import { getPayload, PaginatedDocs } from 'payload';
+import configPromise from '@payload-config';
 
 export const metadata: Metadata = {
   description:
@@ -26,28 +25,30 @@ export const metadata: Metadata = {
 
 export default async function Page() {
   const payload = await getPayload({
-    config,
+    config: configPromise,
   });
 
-  const data: PageProps = await payload
-    .find({
-      collection: 'pages',
-    })
-    .then((results) => results.docs[0]);
+  const data: PaginatedDocs = await payload.find({
+    collection: 'pages',
+    where: {
+      title: {
+        equals: 'Home Page',
+      },
+    },
+  });
 
-  /* @ts-expect-error resolve content mismatch */
-  const title = data?.content?.root?.children[0]?.children[0]?.text ?? '';
-
-  if (!data || !title) {
-    throw new Error('Failed to load page data');
-  }
+  const { docs } = data;
 
   return (
     <React.Fragment>
-      <Heading title={title} />
-      {/* @ts-expect-error resolve content mismatch */}
-      <RichText content={data?.layout[0].Content || ''} />
-      <RenderBlocks blocks={data.layout || []} />
+      <Heading title={
+        docs[0]?.title || 'Aman Singh Bhogal'
+      }
+      />
+      <RichText content={
+        docs[0]?.layout?.Content || []
+      }
+      />
     </React.Fragment>
   );
 }

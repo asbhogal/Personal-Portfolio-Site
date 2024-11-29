@@ -1,10 +1,11 @@
 import React from 'react';
 
+import { Page } from '@/payload-types';
+import { DefaultNodeTypes } from '@payloadcms/richtext-lexical';
 import { serializeLexical } from './serialize';
 
 type Props = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  content: Record<string, any>
+  content: Page['content'];
 }
 
 const RichText: React.FC<Props> = ({
@@ -20,7 +21,7 @@ const RichText: React.FC<Props> = ({
         && !Array.isArray(content)
         && typeof content === 'object'
         && 'root' in content
-        && serializeLexical({ nodes: content?.root?.children })}
+        && serializeLexical({ nodes: content?.root?.children as DefaultNodeTypes[] })}
     </div>
   );
 };

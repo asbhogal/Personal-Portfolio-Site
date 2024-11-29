@@ -1,0 +1,15 @@
+.imageContainer {
+  height: calc(100dvh - 3.75rem);
+  padding-bottom: .625rem;
+  width: 100%;
+}
+
+.image {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+}
