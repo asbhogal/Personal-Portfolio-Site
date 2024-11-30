@@ -30,21 +30,25 @@
   gap: .625rem;
   height: 100dvh;
   margin-left: auto;
-  max-width: 30.3125rem;
+  max-width: 38.75rem;
   width: 100%;
+
+  @media only screen and (width <=48rem) {
+    height: auto;
+  }
 }
 
 .RichTextSpan {
   color: $Argent;
   font-family: Newsreader, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 1.275rem + 1.125vw, 2.625rem);
   text-transform: lowercase !important;
 }
 
 .RichTextParagraph {
   color: $Argent;
   font-family: Cardillac, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 2.625rem;
+  font-size: clamp(1.5rem, 1.275rem + 1.125vw, 2.625rem);
   line-height: normal;
   text-align: justify;
   text-transform: uppercase;

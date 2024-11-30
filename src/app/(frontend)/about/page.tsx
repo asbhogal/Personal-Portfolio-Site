@@ -1,7 +1,9 @@
 import { Metadata } from 'next';
-import config from '@payload-config';
 import React from 'react';
 import { getPayload } from 'payload';
+import { RichText } from '@/src/components/typography';
+import configPromise from '@payload-config';
+import { AboutBlock } from '@/src/components/blocks';
 
 export const metadata: Metadata = {
   description: 'About Aman Singh Bhogal',
@@ -9,26 +11,28 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  // const { about: aboutData } = await getAboutData();
-
   const payload = await getPayload({
-    config,
+    config: configPromise,
   });
 
-  const data = await payload
-    .find({
-      collection: 'pages',
-    })
-    .then((results) => results.docs[2]);
+  const data = await payload.find({
+    collection: 'pages',
+    where: {
+      title: {
+        equals: 'About',
+      },
+    },
+  });
 
-  // eslint-disable-next-line no-console
-  console.log(data);
+  const { docs } = data;
+
   return (
-    <React.Fragment>
-      <p>About</p>
-      {/*  <AboutCover />
-      <AboutSection aboutData={aboutData} />
-      <CTA /> */}
-    </React.Fragment>
+    <div>
+      <h1>{docs[0].title}</h1>
+      {/* @ts-expect-error resolve type mismatch */}
+      <RichText content={docs[0]?.layout?.[0].Content || []} />
+      {/* @ts-expect-error resolve type mismatch */}
+      <AboutBlock history={docs[0]?.layout?.[1].about} />
+    </div>
   );
 }

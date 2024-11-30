@@ -2,8 +2,9 @@ import { getPayload, PaginatedDocs } from 'payload';
 import configPromise from '@payload-config';
 import { Metadata, ResolvingMetadata } from 'next';
 import Image from 'next/image';
-import { ListBlock } from '@/src/components/blocks';
+import { ListBlock, ProjectShowcaseBlock, TypefaceBlock } from '@/src/components/blocks';
 import { RichText } from '@/src/components/typography';
+import { ArrowDown } from '@/src/components/graphics';
 import styles from './styles.module.scss';
 
 interface Props {
@@ -49,21 +50,29 @@ export default async function Page({ params }: Props) {
     },
   });
 
+  const { docs } = data;
+
   return (
     <div>
       <div className={styles.imageContainer}>
         <Image
           className={styles.image}
-          width={data.docs[0].heroImage.width as number}
-          height={data.docs[0].heroImage.height as number}
-          src={data.docs[0].heroImage.url as string}
-          alt={data.docs[0].heroImage.altText as string}
+          width={docs[0].heroImage.width as number}
+          height={docs[0].heroImage.height as number}
+          src={docs[0].heroImage.url as string}
+          alt={docs[0].heroImage.altText as string}
           priority
         />
       </div>
-      <h1 className={styles.title}>{data.docs[0].title}</h1>
-      <ListBlock stacks={data.docs[0].stacks} />
-      <RichText content={data.docs[0].description.Content} />
+      <h1 className={styles.title}>{docs[0].title}</h1>
+      <ListBlock
+        className={styles.stacksList}
+        stacks={docs[0].stacks}
+      />
+      <RichText content={docs[0].description[0].Content} />
+      <ArrowDown className={styles.arrowDown} />
+      <TypefaceBlock typeface={docs[0].typeface} />
+      <ProjectShowcaseBlock images={docs[0].showcase} />
     </div>
   );
 }

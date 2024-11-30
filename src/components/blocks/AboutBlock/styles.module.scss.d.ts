@@ -1,0 +1,10 @@
+export declare const company: string;
+export declare const container: string;
+export declare const containerInner: string;
+export declare const containerOuter: string;
+export declare const date: string;
+export declare const position: string;
+export declare const responsibilities: string;
+export declare const responsibility: string;
+export declare const stack: string;
+export declare const stacks: string;

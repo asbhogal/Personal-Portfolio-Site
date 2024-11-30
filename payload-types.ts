@@ -114,6 +114,31 @@ export interface Page {
   layout?:
     | (
         | {
+            about?:
+              | {
+                  date?: string | null;
+                  position?: string | null;
+                  company?: string | null;
+                  stacks?:
+                    | {
+                        stack?: string | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  responsibilities?:
+                    | {
+                        responsibility?: string | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'about-block';
+          }
+        | {
             accolade?:
               | {
                   award?: string | null;
@@ -289,43 +314,16 @@ export interface Project {
         blockType: 'content-block';
       }[]
     | null;
-  slug?: string | null;
   typeface?:
     | {
-        Content?: {
-          root: {
-            type: string;
-            children: {
-              type: string;
-              version: number;
-              [k: string]: unknown;
-            }[];
-            direction: ('ltr' | 'rtl') | null;
-            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-            indent: number;
-            version: number;
-          };
-          [k: string]: unknown;
-        } | null;
+        typeface?: string | null;
+        image?: (string | null) | Media;
         id?: string | null;
         blockName?: string | null;
-        blockType: 'content-block';
+        blockType: 'typeface';
       }[]
     | null;
-  layout?:
-    | {
-        title?: string | null;
-        items?:
-          | {
-              item?: string | null;
-              id?: string | null;
-            }[]
-          | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'list-block';
-      }[]
-    | null;
+  slug?: string | null;
   showcase?:
     | {
         images?:
@@ -443,6 +441,32 @@ export interface PagesSelect<T extends boolean = true> {
   layout?:
     | T
     | {
+        'about-block'?:
+          | T
+          | {
+              about?:
+                | T
+                | {
+                    date?: T;
+                    position?: T;
+                    company?: T;
+                    stacks?:
+                      | T
+                      | {
+                          stack?: T;
+                          id?: T;
+                        };
+                    responsibilities?:
+                      | T
+                      | {
+                          responsibility?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
         'accolades-block'?:
           | T
           | {
@@ -558,35 +582,19 @@ export interface ProjectsSelect<T extends boolean = true> {
               blockName?: T;
             };
       };
-  slug?: T;
   typeface?:
     | T
     | {
-        'content-block'?:
+        typeface?:
           | T
           | {
-              Content?: T;
+              typeface?: T;
+              image?: T;
               id?: T;
               blockName?: T;
             };
       };
-  layout?:
-    | T
-    | {
-        'list-block'?:
-          | T
-          | {
-              title?: T;
-              items?:
-                | T
-                | {
-                    item?: T;
-                    id?: T;
-                  };
-              id?: T;
-              blockName?: T;
-            };
-      };
+  slug?: T;
   showcase?:
     | T
     | {

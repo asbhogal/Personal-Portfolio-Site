@@ -2,6 +2,7 @@ import { CollectionConfig } from 'payload';
 import { ListBlock } from '../blocks/list';
 import { ContentBlock } from '../blocks/content';
 import { ImageGridBlock } from '../blocks/image-grid';
+import { TypefaceBlock } from '../blocks/typeface';
 
 export const Projects: CollectionConfig = {
   access: {
@@ -33,22 +34,17 @@ export const Projects: CollectionConfig = {
       type: 'blocks',
     },
     {
+      blocks: [TypefaceBlock],
+      name: 'typeface',
+      type: 'blocks',
+    },
+    {
       admin: {
         position: 'sidebar',
       },
       label: 'Slug',
       name: 'slug',
       type: 'text',
-    },
-    {
-      blocks: [ContentBlock],
-      name: 'typeface',
-      type: 'blocks',
-    },
-    {
-      blocks: [ListBlock],
-      name: 'layout',
-      type: 'blocks',
     },
     {
       blocks: [ImageGridBlock],

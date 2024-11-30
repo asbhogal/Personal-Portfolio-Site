@@ -48,3 +48,17 @@
   font-size: 2.5rem;
   text-transform: uppercase;
 }
+
+.li {
+  align-items: center;
+  display: flex;
+
+  &:not(:last-child) {
+    &::after {
+      color: $Khaki;
+      content: '⋅';
+      font-size: 3rem;
+      margin-left: 3.75rem;
+    }
+  }
+}

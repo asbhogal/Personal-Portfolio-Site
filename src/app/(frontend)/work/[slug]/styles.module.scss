@@ -13,3 +13,21 @@
 .title {
   text-align: center;
 }
+
+.stacksList {
+  margin-bottom: 4.6875rem;
+
+  @media only screen and (width <=48rem) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.arrowDown {
+  height: 22.25rem;
+  margin: 0 auto;
+  width: 100%;
+
+  @media only screen and (width <=48rem) {
+    height: 9.375rem;
+  }
+}

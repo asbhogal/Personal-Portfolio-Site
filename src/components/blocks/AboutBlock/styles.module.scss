@@ -1,0 +1,73 @@
+@use "../../../styles/index.scss" as *;
+
+.container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  gap: 3.75rem;
+  list-style-type: none;
+
+  &:not(:last-child) {
+    margin-bottom: 3.75rem;
+  }
+}
+
+.containerInner {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: .9375rem;
+}
+
+.containerOuter {
+  margin: 0 auto;
+  max-width: 71rem;
+  width: 100%;
+}
+
+.position {
+  color: $Khaki;
+  font-family: Cardillac, serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.company,
+.responsibility {
+  color: $Argent;
+  font-family: Newsreader, serif;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+}
+
+.stacks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.responsibilities {
+  display: flex;
+  flex-direction: column;
+  list-style: disc;
+  margin-left: 1.25rem;
+}
+
+.stack,
+.date {
+  color: $Argent;
+  font-family: Cardillac, serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.stack {
+  &:not(:last-child) {
+    &::after {
+      content: ',';
+    }
+
+    margin-right: .625rem;
+  }
+}

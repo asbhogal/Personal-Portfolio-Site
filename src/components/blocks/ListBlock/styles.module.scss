@@ -5,26 +5,33 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
+  justify-content: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
 
   @media only screen and (max-width: 48rem) {
+    gap: 0.5rem;
     justify-content: center;
   }
 }
 
 .li {
+  align-items: center;
   color: $Argent;
+  display: flex;
+  flex-direction: row;
   font-family: Cardillac, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 2.25rem;
+  font-size: clamp(1.5rem, 1.35rem + 0.75vw, 2.25rem);
   font-weight: 300;
   text-transform: uppercase;
-}
 
-.separator {
-  background-color: $Khaki;
-  border-radius: 50%;
-  height: .3125rem;
-  width: .3125rem;
+  &:not(:last-child) {
+    &::after {
+      color: $Khaki;
+      content: '⋅';
+      font-size: 3rem;
+      margin-left: 1.25rem;
+    }
+  }
 }

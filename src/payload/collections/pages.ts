@@ -5,6 +5,7 @@ import { SliderBlock } from '../blocks/slider';
 import { AccoladesBlock } from '../blocks/accolades';
 import { SectionBlock } from '../blocks/section';
 import { ImageGridBlock } from '../blocks/image-grid';
+import { AboutBlock } from '../blocks/about';
 
 export const Pages: CollectionConfig = {
   admin: {
@@ -38,6 +39,7 @@ export const Pages: CollectionConfig = {
     },
     {
       blocks: [
+        AboutBlock,
         AccoladesBlock,
         ContentBlock,
         SectionBlock,
