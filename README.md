@@ -14,8 +14,9 @@ A personal portfolio site created for the repo owner to showcase his projects, b
 
 - TypeScript for type safety
 - Next.js API routes for dynamic content
-- SWR for client-side data fetching
-- SASS for styling
+- Payload CMS and MongoDB for content management
+- Mongoose for validation and schema
+- SASS modules for styling
 - Framer Motion for animations (custom component)
 - Playwright for testing (incl. a11y)
 - Husky to run linting and testing prior to commit
@@ -27,9 +28,9 @@ A personal portfolio site created for the repo owner to showcase his projects, b
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original.svg"><img src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original.svg" alt="nextjs logo" width="50" height="50" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg"><img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" alt="react logo" width="50" height="50" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg"><img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" alt="TypeScript logo" width="50" height="50" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://payloadcms.com/favicon.ico"><img src="https://payloadcms.com/favicon.ico" alt="Payload CMS logo" width="50" height="50" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg"><img src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg" alt="sass logo" width="50" height="50" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://www.framer.com/images/favicons/favicon.svg"><img src="https://www.framer.com/images/favicons/favicon.svg" alt="Framer Motion logo" width="50" height="50" style="max-width:100%;"></a>
-<a target="_blank" rel="noopener noreferrer" href="https://swr.vercel.app/favicon/favicon.svg"><img src="https://swr.vercel.app/favicon/favicon.svg" alt="SWR logo" width="50" height="50" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/eslint/eslint-original.svg"><img src="https://github.com/devicons/devicon/blob/master/icons/eslint/eslint-original.svg" alt="ES Lint logo" width="50" height="50" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://playwright.dev/img/playwright-logo.svg"><img src="https://playwright.dev/img/playwright-logo.svg" alt="Playwright logo" width="50" height="50" style="max-width:100%;"></a>
 
