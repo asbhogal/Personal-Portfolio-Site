@@ -8,3 +8,29 @@
   padding: 0 .625rem;
   width: 100%;
 }
+
+.arrow {
+  left: calc(100dvw / 8);
+  position: absolute;
+}
+
+.container {
+  position: relative;
+}
+
+.containerInner {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  height: 100dvh;
+  justify-content: space-between;
+
+  &>div {
+    flex: 1;
+  }
+
+  @media only screen and (width <=48rem) {
+    align-items: center;
+    flex-direction: column;
+  }
+}

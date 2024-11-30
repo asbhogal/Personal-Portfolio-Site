@@ -2,8 +2,8 @@ import { getPayload, PaginatedDocs } from 'payload';
 import configPromise from '@payload-config';
 import { Metadata, ResolvingMetadata } from 'next';
 import Image from 'next/image';
-import RichText from '@/src/components/typography/RichText';
 import { ListBlock } from '@/src/components/blocks';
+import { RichText } from '@/src/components/typography';
 import styles from './styles.module.scss';
 
 interface Props {

@@ -8,7 +8,7 @@ type Props = {
   content: Page['content'];
 }
 
-const RichText: React.FC<Props> = ({
+export const RichText: React.FC<Props> = ({
   content,
 }) => {
   if (!content) {
@@ -25,5 +25,3 @@ const RichText: React.FC<Props> = ({
     </div>
   );
 };
-
-export default RichText;

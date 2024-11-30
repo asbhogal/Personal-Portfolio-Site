@@ -1,0 +1,50 @@
+@use "../../../styles/index.scss" as *;
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 3.75rem;
+  justify-content: space-between;
+  list-style-type: none;
+
+  @media only screen and (max-width: 48rem) {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}
+
+.date {
+  color: $Argent;
+  font-family: Cardillac, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.separator {
+  background-color: $Khaki;
+  border-radius: 50%;
+  height: .3125rem;
+  margin: 1.25rem 0;
+  width: .3125rem;
+
+  @media only screen and (max-width: 48rem) {
+    display: none;
+  }
+}
+
+.award {
+  color: $Argent;
+  font-family: Newsreader, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+.body {
+  color: $Khaki;
+  font-family: Cardillac, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
