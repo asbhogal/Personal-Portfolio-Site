@@ -1,9 +1,11 @@
 interface Props {
+  className?: string;
   width?: number;
 }
 
-export const Logo = ({ width = 88 }: Props) => (
+export const Logo = ({ className, width = 88 }: Props) => (
   <svg
+    className={className}
     width={width}
     height={width * (85 / 88)}
     viewBox="0 0 88 85"

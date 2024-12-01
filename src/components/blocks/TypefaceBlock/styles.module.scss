@@ -4,4 +4,13 @@
   flex-direction: column;
   gap: 2.25rem;
   justify-content: center;
+  margin-bottom: 21.875rem;
+  position: relative;
+}
+
+.logo {
+  left: 0;
+  opacity: 0.05;
+  position: absolute;
+  transform: translateX(-50%);
 }

@@ -40,7 +40,7 @@ export const SliderBlock = ({ items }: Props) => (
           <Image
             className={styles.image}
             aria-label={item.title ?? ''}
-            src={typeof item.image === 'string' ? item.image : item.image?.url ?? ''}
+            src={typeof item.image === 'string' ? item.image : `/images/media/${item.image?.filename}`}
             alt={typeof item.image === 'string' ? '' : item.image?.altText ?? ''}
             width={676}
             height={900}

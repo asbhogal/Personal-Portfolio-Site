@@ -1,9 +1,21 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .splideSlide {
   height: 100%;
   width: 100%;
 }
 
 .image {
-  object-fit: cover;
+  height: 80dvh;
+  object-fit: contain;
   width: 100%;
+
+  @media (width <=48rem) {
+    height: 50dvh;
+  }
 }

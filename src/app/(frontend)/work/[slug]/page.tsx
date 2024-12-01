@@ -59,7 +59,7 @@ export default async function Page({ params }: Props) {
           className={styles.image}
           width={docs[0].heroImage.width as number}
           height={docs[0].heroImage.height as number}
-          src={docs[0].heroImage.url as string}
+          src={`/images/media/${docs[0].heroImage.filename}`}
           alt={docs[0].heroImage.altText as string}
           priority
         />
