@@ -17,16 +17,12 @@ export const SliderBlock: Block = {
           type: 'text',
         },
         {
-          name: 'description',
-          type: 'textarea',
-        },
-        {
           name: 'image',
           relationTo: 'media',
           type: 'upload',
         },
         {
-          name: 'subheading',
+          name: 'link',
           type: 'text',
         },
       ],

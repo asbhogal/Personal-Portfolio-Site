@@ -193,9 +193,8 @@ export interface Page {
             cards?:
               | {
                   title?: string | null;
-                  description?: string | null;
                   image?: (string | null) | Media;
-                  subheading?: string | null;
+                  link?: string | null;
                   id?: string | null;
                 }[]
               | null;
@@ -518,9 +517,8 @@ export interface PagesSelect<T extends boolean = true> {
                 | T
                 | {
                     title?: T;
-                    description?: T;
                     image?: T;
-                    subheading?: T;
+                    link?: T;
                     id?: T;
                   };
               id?: T;

@@ -43,15 +43,15 @@
 
 .position {
   color: $Khaki;
-  font-family: Cardillac, serif;
-  font-size: 2.5rem;
+  font-family: $Cardillac;
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
   text-transform: uppercase;
 }
 
 .company,
 .responsibility {
   color: $Argent;
-  font-family: Newsreader, serif;
+  font-family: $Newsreader;
   font-size: 1.5rem;
   text-transform: lowercase;
 }
@@ -74,7 +74,7 @@
 .stack,
 .date {
   color: $Argent;
-  font-family: Cardillac, serif;
+  font-family: $Cardillac;
   font-size: 1.5rem;
   text-transform: uppercase;
 }

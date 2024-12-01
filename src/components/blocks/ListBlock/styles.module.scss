@@ -21,7 +21,7 @@
   color: $Argent;
   display: flex;
   flex-direction: row;
-  font-family: Cardillac, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: $Cardillac;
   font-size: clamp(1.5rem, 1.35rem + 0.75vw, 2.25rem);
   font-weight: 300;
   text-transform: uppercase;

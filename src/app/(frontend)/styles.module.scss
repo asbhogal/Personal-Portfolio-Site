@@ -15,6 +15,7 @@
 
   @media only screen and (width <=48rem) {
     margin: 0 auto;
+    width: 100%;
   }
 }
 
@@ -36,5 +37,7 @@
   @media only screen and (width <=48rem) {
     align-items: center;
     flex-direction: column;
+    gap: 1.25rem;
+    height: auto;
   }
 }

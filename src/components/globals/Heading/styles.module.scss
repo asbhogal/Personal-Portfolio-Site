@@ -7,24 +7,9 @@
   height: calc(100dvh - 3.75rem);
   justify-content: center;
 
-  .awardsSection {
-    cursor: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(14.0625rem, 1fr));
-    justify-content: center;
-    justify-items: center;
-    margin: 0 auto;
-    max-width: 37.1875rem;
-    width: 100%;
-
-    a {
-      cursor: none;
-    }
-  }
-
   .mainHomeTitle {
     color: $Argent;
-    font-family: $HeadingFont;
+    font-family: $Cardillac;
     font-size: clamp(2rem, 0.0536rem + 9.7321vw, 15.625rem);
     font-weight: 400;
     text-align: center;
@@ -44,26 +29,5 @@
   .homePageImage {
     height: 100%;
     width: 100%;
-  }
-
-  .homePageProjectLogos {
-    align-items: center;
-    background-color: $ChineseBlack-02;
-    border-radius: $ImgBorderRadius;
-    display: grid;
-    gap: 1.25rem;
-    grid-template-columns: repeat(auto-fit, minmax(7.8125rem, 1fr));
-    justify-items: center;
-    padding: 0.9375rem 0;
-
-    img {
-      height: auto;
-      opacity: 0.6;
-      width: 50%;
-
-      &:nth-child(5) {
-        height: 4.0625rem;
-      }
-    }
   }
 }

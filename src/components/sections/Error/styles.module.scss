@@ -11,7 +11,7 @@
     color: $Argent;
     display: flex;
     flex-direction: column;
-    font-family: $HeadingFont;
+    font-family: $Cardillac;
     font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
     font-style: italic;
     font-weight: 400;
@@ -39,18 +39,15 @@
       border-radius: 2.5rem;
       color: $SmokyBlack;
       cursor: none;
-      font-family: $BodyFont;
       padding: 0.3125rem 0.625rem;
       text-decoration: none;
       text-transform: uppercase;
-      transition: $Transition-03;
       width: min-content;
 
       &:hover {
         background-color: $SmokyBlack;
         border: 0.0625rem solid $Khaki;
         color: $Khaki;
-        transition: $Transition-03;
       }
     }
   }

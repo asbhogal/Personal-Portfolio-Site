@@ -15,13 +15,13 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $RaisinBlack;
+  background-color: #1d1d1d;
   border-radius: .625rem;
 }
 
 h1 {
   color: $Khaki;
-  font-family: Cardillac, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: $Cardillac;
   font-size: clamp(4rem, 1.675rem + 11.625vw, 15.625rem);
   font-weight: 300;
   text-transform: uppercase;
@@ -29,7 +29,7 @@ h1 {
 
 h2 {
   color: $Khaki;
-  font-family: Newsreader, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: $Newsreader;
   font-size: clamp(2rem, .8rem + 6vw, 8rem);
   font-weight: 300;
 }

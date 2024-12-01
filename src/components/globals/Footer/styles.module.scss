@@ -21,7 +21,7 @@
 .copyright {
   bottom: 2.5rem;
   color: $Argent;
-  font-family: Cardillac, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: $Cardillac;
   position: absolute;
   text-transform: uppercase
 }
@@ -49,7 +49,7 @@
 
 .footerLink {
   color: $Argent;
-  font-family: Cardillac, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: $Cardillac;
   font-size: 1.5rem;
   text-decoration: none;
   text-transform: uppercase;

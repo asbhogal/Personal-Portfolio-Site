@@ -12,13 +12,14 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 1.25rem;
+    width: 100%;
   }
 }
 
 .date {
   color: $Argent;
-  font-family: Cardillac, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 1.5rem;
+  font-family: $Cardillac;
+  font-size: clamp(1.125rem, 1.05rem + 0.375vw, 1.5rem);
   text-transform: uppercase;
 }
 
@@ -36,16 +37,16 @@
 
 .award {
   color: $Argent;
-  font-family: Newsreader, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 1.5rem;
+  font-family: $Newsreader;
+  font-size: clamp(1.125rem, 1.05rem + 0.375vw, 1.5rem);
   font-style: italic;
   text-transform: lowercase;
 }
 
 .body {
   color: $Khaki;
-  font-family: Cardillac, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 2.5rem;
+  font-family: $Cardillac;
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
   text-transform: uppercase;
 }
 
@@ -59,6 +60,14 @@
       content: '⋅';
       font-size: 3rem;
       margin-left: 3.75rem;
+    }
+  }
+
+  @media only screen and (max-width: 48rem) {
+    &:not(:last-child) {
+      &::after {
+        display: none;
+      }
     }
   }
 }
