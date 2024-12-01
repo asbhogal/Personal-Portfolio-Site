@@ -10,6 +10,15 @@
   &:not(:last-child) {
     margin-bottom: 3.75rem;
   }
+
+  @media only screen and (width <=48rem) {
+    flex-direction: column;
+    gap: 1.25rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1.25rem;
+    }
+  }
 }
 
 .containerInner {
@@ -19,9 +28,16 @@
   gap: .9375rem;
 }
 
+.containerInnerHeader {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: .625rem;
+}
+
 .containerOuter {
   margin: 0 auto;
-  max-width: 71rem;
+  max-width: 75rem;
   width: 100%;
 }
 
@@ -52,6 +68,7 @@
   flex-direction: column;
   list-style: disc;
   margin-left: 1.25rem;
+  text-align: justify;
 }
 
 .stack,

@@ -28,27 +28,29 @@ export const Footer = async () => {
         height={500}
         alt="The letter 'A' in elegant notation"
       />
-      {/*       <WebsiteCarbonBadge url="www.amansinghbhogal.com" />
- */}
-      {' '}
       <div className={styles.footerLinks}>
-        <ul className={styles.footerUl}>
-          {footerMenu?.map((footerItem) => (footerItem.footerMenuItem?.footerMenuItemText === 'Primary'
-            ? footerItem?.footerMenuItem?.footerLinks?.map((primary) => (
-              <li
-                className={styles.footerLi}
-                key={primary.id}
-              >
-                <Link
-                  className={styles.footerLink}
-                  href={primary.footerLinkUrl || ''}
+        {footerMenu?.map((footerItem) => (footerItem.footerMenuItem?.footerMenuItemText === 'Primary' && (
+          <ul
+            className={styles.footerUl}
+            key={footerItem.id}
+          >
+            {footerMenu?.map((primaryFooterItem) => (primaryFooterItem.footerMenuItem?.footerMenuItemText === 'Primary'
+              ? primaryFooterItem?.footerMenuItem?.footerLinks?.map((primary) => (
+                <li
+                  className={styles.footerLi}
+                  key={primary.id}
                 >
-                  {primary.footerLink}
-                </Link>
-              </li>
-            ))
-            : null))}
-        </ul>
+                  <Link
+                    className={styles.footerLink}
+                    href={primary.footerLinkUrl || ''}
+                  >
+                    {primary.footerLink}
+                  </Link>
+                </li>
+              ))
+              : null))}
+          </ul>
+        )))}
         <ul className={styles.footerUl}>
           {footerMenu?.map((footerItem) => (footerItem.footerMenuItem?.footerMenuItemText === 'Secondary'
             ? footerItem?.footerMenuItem?.footerLinks?.map((secondary) => (

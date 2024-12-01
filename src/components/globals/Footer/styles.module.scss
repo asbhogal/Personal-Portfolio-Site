@@ -12,6 +12,10 @@
   padding: 27.1875rem .625rem;
   position: relative;
   width: 100%;
+
+  @media only screen and (width <=48rem) {
+    align-items: center;
+  }
 }
 
 .copyright {
@@ -25,6 +29,14 @@
 .footerUl {
   flex: 1;
   list-style-type: none;
+
+  @media only screen and (width <=48rem) {
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .footerLi {

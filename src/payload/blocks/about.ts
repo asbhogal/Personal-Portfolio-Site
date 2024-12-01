@@ -9,6 +9,10 @@ export const AboutBlock: Block = {
           type: 'date',
         },
         {
+          name: 'endDate',
+          type: 'date',
+        },
+        {
           name: 'position',
           type: 'text',
         },

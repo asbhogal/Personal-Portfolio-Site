@@ -54,7 +54,7 @@ export default async function Page() {
       }
       />
       <ArrowDown className={styles.arrow} />
-      <Spacer height={300} />
+      <Spacer height={10} />
       <div className={styles.containerInner}>
         <Subheading subheading={docs[0]?.layout?.[1].subheading} />
         <AccoladesBlock accolades={docs[0]?.layout?.[2].accolade} />

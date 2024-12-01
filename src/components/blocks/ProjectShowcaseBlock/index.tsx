@@ -1,6 +1,5 @@
 'use client';
 
-/* @ts-expect-error missing declaration files */
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { Media } from '@/payload-types';
 import Image from 'next/image';

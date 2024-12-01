@@ -117,6 +117,7 @@ export interface Page {
             about?:
               | {
                   date?: string | null;
+                  endDate?: string | null;
                   position?: string | null;
                   company?: string | null;
                   stacks?:
@@ -448,6 +449,7 @@ export interface PagesSelect<T extends boolean = true> {
                 | T
                 | {
                     date?: T;
+                    endDate?: T;
                     position?: T;
                     company?: T;
                     stacks?:

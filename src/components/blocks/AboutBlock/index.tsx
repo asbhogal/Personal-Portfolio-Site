@@ -16,7 +16,13 @@ export const AboutBlock = ({ history }: Props) => (
         key={event.id}
       >
         <div className={styles.containerInner}>
-          <p className={styles.date}>{dayjs(event.date).format('MMM YYYY')}</p>
+          <div className={styles.containerInnerHeader}>
+            <p className={styles.date}>{dayjs(event.date).format('MMM YYYY')}</p>
+            <span>-</span>
+            <p className={styles.date}>
+              {event.endDate ? (dayjs(event.endDate).format('MMM YYYY')) : 'Present'}
+            </p>
+          </div>
           <p className={styles.position}>
             {event.position}
           </p>

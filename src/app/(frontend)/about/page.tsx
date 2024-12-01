@@ -4,6 +4,8 @@ import { getPayload } from 'payload';
 import { RichText } from '@/src/components/typography';
 import configPromise from '@payload-config';
 import { AboutBlock } from '@/src/components/blocks';
+import { ArrowDown } from '@/src/components/graphics';
+import styles from './styles.module.scss';
 
 export const metadata: Metadata = {
   description: 'About Aman Singh Bhogal',
@@ -27,10 +29,11 @@ export default async function Page() {
   const { docs } = data;
 
   return (
-    <div>
-      <h1>{docs[0].title}</h1>
+    <div className={styles.container}>
+      <h1 className={styles.title}>{docs[0].title}</h1>
       {/* @ts-expect-error resolve type mismatch */}
       <RichText content={docs[0]?.layout?.[0].Content || []} />
+      <ArrowDown className={styles.arrowDown} />
       {/* @ts-expect-error resolve type mismatch */}
       <AboutBlock history={docs[0]?.layout?.[1].about} />
     </div>

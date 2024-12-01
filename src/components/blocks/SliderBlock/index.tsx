@@ -1,6 +1,5 @@
 'use client';
 
-/* @ts-expect-error missing declaration files */
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { Page } from '@/payload-types';
 import Image from 'next/image';
@@ -14,12 +13,15 @@ interface Props {
 }
 
 export const SliderBlock = ({ items }: Props) => (
-  <Splide options={{
-    autoplay: true,
-  }}
+  <Splide
+    tag="div"
+    options={{
+      autoplay: true,
+    }}
   >
     {items.cards?.map((item) => (
       <SplideSlide
+        tag="div"
         className={styles.splideSlide}
         key={item.id}
       >

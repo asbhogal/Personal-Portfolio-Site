@@ -6,4 +6,8 @@
 .image {
   object-fit: cover;
   width: 100%;
+
+  @media only screen and (width <=48rem) {
+    height: 50dvh;
+  }
 }

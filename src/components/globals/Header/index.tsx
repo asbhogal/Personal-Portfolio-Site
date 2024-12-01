@@ -17,7 +17,12 @@ export const Header = async () => {
 
   return (
     <header className={styles.header}>
-      <Logo width={40} />
+      <Link
+        aria-label="Home"
+        href="/"
+      >
+        <Logo width={40} />
+      </Link>
       <nav>
         <ul className={styles.headerUl}>
           {headerMenu?.map((headerItem) => (
