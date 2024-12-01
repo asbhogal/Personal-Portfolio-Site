@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { ListBlock, ProjectShowcaseBlock, TypefaceBlock } from '@/src/components/blocks';
 import { RichText } from '@/src/components/typography';
 import { ArrowDown } from '@/src/components/graphics';
+import { Suspense } from 'react';
+import Loading from '@/src/components/globals/Loading';
 import styles from './styles.module.scss';
 
 interface Props {
@@ -53,7 +55,7 @@ export default async function Page({ params }: Props) {
   const { docs } = data;
 
   return (
-    <div>
+    <Suspense fallback={<Loading />}>
       <div className={styles.imageContainer}>
         <Image
           className={styles.image}
@@ -73,6 +75,6 @@ export default async function Page({ params }: Props) {
       <ArrowDown className={styles.arrowDown} />
       <TypefaceBlock typeface={docs[0].typeface} />
       <ProjectShowcaseBlock images={docs[0].showcase} />
-    </div>
+    </Suspense>
   );
 }

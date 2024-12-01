@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { ArrowRight } from '@/src/components/graphics';
 import { Suspense } from 'react';
 import Image from 'next/image';
+import Loading from '@/src/components/globals/Loading';
 import styles from './styles.module.scss';
-import Loading from './loading';
 
 export const metadata: Metadata = {
   description: 'A collection of projects',
@@ -24,9 +24,9 @@ export default async function Page() {
   });
 
   return (
-    <div>
-      <h1 className={styles.title}>Projects</h1>
-      <Suspense fallback={<Loading />}>
+    <Suspense fallback={<Loading />}>
+      <div>
+        <h1 className={styles.title}>Projects</h1>
         <ul className={styles.grid}>
           {docs.map((project: Project) => (
             <li
@@ -53,7 +53,7 @@ export default async function Page() {
             </li>
           ))}
         </ul>
-      </Suspense>
-    </div>
+      </div>
+    </Suspense>
   );
 }
