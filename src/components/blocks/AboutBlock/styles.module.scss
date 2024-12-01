@@ -1,0 +1,90 @@
+@use "../../../styles/index.scss" as *;
+
+.container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  gap: 3.75rem;
+  list-style-type: none;
+
+  &:not(:last-child) {
+    margin-bottom: 3.75rem;
+  }
+
+  @media only screen and (width <=48rem) {
+    flex-direction: column;
+    gap: 1.25rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1.25rem;
+    }
+  }
+}
+
+.containerInner {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: .9375rem;
+}
+
+.containerInnerHeader {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: .625rem;
+}
+
+.containerOuter {
+  margin: 0 auto;
+  max-width: 75rem;
+  width: 100%;
+}
+
+.position {
+  color: $Khaki;
+  font-family: $Cardillac;
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
+  text-transform: uppercase;
+}
+
+.company,
+.responsibility {
+  color: $Argent;
+  font-family: $Newsreader;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+}
+
+.stacks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.responsibilities {
+  display: flex;
+  flex-direction: column;
+  list-style: disc;
+  margin-left: 1.25rem;
+  text-align: justify;
+}
+
+.stack,
+.date {
+  color: $Argent;
+  font-family: $Cardillac;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.stack {
+  &:not(:last-child) {
+    &::after {
+      content: ',';
+    }
+
+    margin-right: .625rem;
+  }
+}

@@ -1,0 +1,73 @@
+@use "../../../styles/index.scss" as *;
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 3.75rem;
+  justify-content: space-between;
+  list-style-type: none;
+
+  @media only screen and (max-width: 48rem) {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+  }
+}
+
+.date {
+  color: $Argent;
+  font-family: $Cardillac;
+  font-size: clamp(1.125rem, 1.05rem + 0.375vw, 1.5rem);
+  text-transform: uppercase;
+}
+
+.separator {
+  background-color: $Khaki;
+  border-radius: 50%;
+  height: .3125rem;
+  margin: 1.25rem 0;
+  width: .3125rem;
+
+  @media only screen and (max-width: 48rem) {
+    display: none;
+  }
+}
+
+.award {
+  color: $Argent;
+  font-family: $Newsreader;
+  font-size: clamp(1.125rem, 1.05rem + 0.375vw, 1.5rem);
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+.body {
+  color: $Khaki;
+  font-family: $Cardillac;
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
+  text-transform: uppercase;
+}
+
+.li {
+  align-items: center;
+  display: flex;
+
+  &:not(:last-child) {
+    &::after {
+      color: $Khaki;
+      content: '⋅';
+      font-size: 3rem;
+      margin-left: 3.75rem;
+    }
+  }
+
+  @media only screen and (max-width: 48rem) {
+    &:not(:last-child) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

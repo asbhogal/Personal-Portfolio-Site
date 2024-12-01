@@ -1,0 +1,33 @@
+@use "../../../styles/index.scss" as *;
+
+.homePageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 3.4375rem;
+  height: calc(100dvh - 3.75rem);
+  justify-content: center;
+
+  .mainHomeTitle {
+    color: $Argent;
+    font-family: $Cardillac;
+    font-size: clamp(2rem, 0.0536rem + 9.7321vw, 15.625rem);
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+
+    .headlineAccent {
+      color: $Khaki;
+      font-size: clamp(2rem, 0.9295rem + 5.3524vw, 5.75rem);
+      font-style: italic;
+    }
+
+    .headlineYear {
+      font-size: clamp(1.3125rem, 1.0449rem + 1.3381vw, 2.25rem);
+    }
+  }
+
+  .homePageImage {
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,71 @@
+@use "../../../styles/index.scss" as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.9375rem;
+  height: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 120rem;
+  padding: 27.1875rem .625rem;
+  position: relative;
+  width: 100%;
+
+  @media only screen and (width <=48rem) {
+    align-items: center;
+  }
+}
+
+.copyright {
+  bottom: 2.5rem;
+  color: $Argent;
+  font-family: $Cardillac;
+  position: absolute;
+  text-transform: uppercase
+}
+
+.footerUl {
+  flex: 1;
+  list-style-type: none;
+
+  @media only screen and (width <=48rem) {
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.footerLi {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.footerLink {
+  color: $Argent;
+  font-family: $Cardillac;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.footerLogo {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+
+.footerLinks {
+  display: flex;
+  gap: .9375rem;
+  justify-content: center;
+  max-width: 28.75rem;
+  width: 100%;
+  ;
+}

@@ -1,0 +1,57 @@
+@use "../../../styles/index.scss" as *;
+
+.RichText {
+  align-items: center;
+  display: flex;
+  height: 100dvh;
+  margin-left: auto;
+  max-width: 30.3125rem;
+  width: 100%;
+
+  >p {
+    font-family: $Cardillac;
+    font-size: 2.625rem;
+    line-height: normal;
+    text-align: justify;
+    text-transform: uppercase;
+
+    >span {
+      font-family: $Newsreader;
+      font-size: 3rem;
+      text-transform: none !important;
+    }
+  }
+}
+
+.RichTextContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: .625rem;
+  height: 100dvh;
+  margin-left: auto;
+  max-width: 38.75rem;
+  width: 100%;
+
+  @media only screen and (width <=48rem) {
+    height: auto;
+  }
+}
+
+.RichTextSpan {
+  color: $Argent;
+  font-family: $Newsreader;
+  font-size: clamp(1.5rem, 1.275rem + 1.125vw, 2.625rem);
+  font-style: italic;
+  font-weight: 300;
+  text-transform: lowercase !important;
+}
+
+.RichTextParagraph {
+  color: $Argent;
+  font-family: $Cardillac;
+  font-size: clamp(1.5rem, 1.275rem + 1.125vw, 2.625rem);
+  line-height: normal;
+  text-align: justify;
+  text-transform: uppercase;
+}

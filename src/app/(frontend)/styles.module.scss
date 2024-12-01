@@ -1,0 +1,43 @@
+@use "../../styles/index.scss" as *;
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 120rem;
+  padding: 0 .625rem;
+  width: 100%;
+}
+
+.arrow {
+  margin-bottom: 14.375rem;
+  margin-left: calc(100dvw / 7);
+
+  @media only screen and (width <=48rem) {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.containerInner {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  height: 100dvh;
+  justify-content: space-between;
+
+  &>div {
+    flex: 1;
+  }
+
+  @media only screen and (width <=48rem) {
+    align-items: center;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: auto;
+  }
+}

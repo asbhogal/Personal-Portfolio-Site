@@ -1,0 +1,8 @@
+@use "../variables/index.module.scss" as *;
+
+@mixin subtitle {
+  color: $Argent;
+  font-family: Newsreader, serif;
+  font-size: clamp(1.3125rem, 1.125rem + 0.9375vw, 2.25rem);
+  text-transform: lowercase;
+}

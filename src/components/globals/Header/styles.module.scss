@@ -1,0 +1,33 @@
+@use "../../../styles/index.scss" as *;
+
+.header {
+  align-items: center;
+  display: flex;
+  gap: 1.875rem;
+  height: 3.75rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 120rem;
+  padding: .625rem;
+  width: 100%;
+}
+
+.headerUl {
+  display: flex;
+  gap: 1.875rem;
+  list-style-type: none;
+  margin: 0;
+}
+
+.headerLi {
+  display: flex;
+  gap: 1.875rem;
+
+  a {
+    color: $Argent;
+    font-family: $Cardillac;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
