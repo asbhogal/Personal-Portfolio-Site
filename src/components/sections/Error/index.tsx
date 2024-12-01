@@ -10,7 +10,6 @@ export const Error = () => (
   >
     <FadeIn
       as="h1"
-      className="PageHeaderTitle"
     >
       404
     </FadeIn>
@@ -19,14 +18,21 @@ export const Error = () => (
       className={styles.errorPageContainer}
     >
       <FadeIn as="h2">The page you&apos;re looking for does not exist</FadeIn>
-      <FadeIn as="p">Click below to return home</FadeIn>
       <FadeIn
-        as="a"
-        href="/"
-        className={styles.returnHomeButton}
+        className={styles.text}
+        as="p"
       >
-        Home
+        Click
+        <FadeIn
+          as="a"
+          href="/"
+        >
+          here
+        </FadeIn>
+        {' '}
+        to return home
       </FadeIn>
+
     </FadeIn>
   </FadeIn>
 );

@@ -32,6 +32,7 @@ h2 {
   font-family: $Newsreader;
   font-size: clamp(2rem, .8rem + 6vw, 8rem);
   font-weight: 300;
+  text-transform: lowercase;
 }
 
 .sr-only {
@@ -52,5 +53,22 @@ ul,
 ol,
 li {
   color: $Argent;
+  font-family: $Newsreader;
+  font-size: 1.125rem;
   line-height: 1.2;
+}
+
+a {
+  color: $Khaki;
+  font-family: $Cardillac;
+  font-size: 1.125rem;
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color .3s;
+
+  &:hover {
+    color: $Argent;
+    transition: color .3s;
+  }
 }
