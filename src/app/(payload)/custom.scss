@@ -6,3 +6,11 @@
 #custom-css::after {
   content: "custom-css";
 }
+
+* {
+  padding: .125rem;
+}
+
+.collapsible__header-wrap {
+  width: min-content;
+}
