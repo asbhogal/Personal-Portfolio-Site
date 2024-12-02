@@ -45,6 +45,7 @@ export default async function Page({ params }: Props) {
 
   const data: PaginatedDocs = await payload.find({
     collection: 'projects',
+    limit: 1,
     where: {
       slug: {
         equals: slug,
@@ -52,29 +53,29 @@ export default async function Page({ params }: Props) {
     },
   });
 
-  const { docs } = data;
+  const project = data.docs[0];
 
   return (
     <Suspense fallback={<Loading />}>
       <div className={styles.imageContainer}>
         <Image
           className={styles.image}
-          width={docs[0].heroImage.width as number}
-          height={docs[0].heroImage.height as number}
-          src={`/images/media/${docs[0].heroImage.filename}`}
-          alt={docs[0].heroImage.altText as string}
+          width={project.heroImage.width as number}
+          height={project.heroImage.height as number}
+          src={`/images/media/${project.heroImage.filename}`}
+          alt={project.heroImage.altText as string}
           priority
         />
       </div>
-      <h1 className={styles.title}>{docs[0].title}</h1>
+      <h1 className={styles.title}>{project.title}</h1>
       <ListBlock
         className={styles.stacksList}
-        stacks={docs[0].stacks}
+        stacks={project.stacks}
       />
-      <RichText content={docs[0].description[0].Content} />
+      <RichText content={project.description[0].Content} />
       <ArrowDown className={styles.arrowDown} />
-      <TypefaceBlock typeface={docs[0].typeface} />
-      <ProjectShowcaseBlock images={docs[0].showcase} />
+      <TypefaceBlock typeface={project.typeface} />
+      <ProjectShowcaseBlock images={project.showcase} />
     </Suspense>
   );
 }

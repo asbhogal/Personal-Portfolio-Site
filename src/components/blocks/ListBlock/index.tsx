@@ -11,11 +11,12 @@ export const ListBlock = ({ className, stacks }: Props) => (
   <ul className={`${styles.ul} ${className}`}>
     {stacks?.map((stack) => (
       stack?.items?.map((item) => (
-        <React.Fragment key={stack.id}>
-          <li className={styles.li}>
-            {item.item}
-          </li>
-        </React.Fragment>
+        <li
+          key={item.id}
+          className={styles.li}
+        >
+          {item.item}
+        </li>
       ))
     ))}
   </ul>

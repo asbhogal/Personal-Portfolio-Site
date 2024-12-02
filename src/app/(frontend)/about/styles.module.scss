@@ -1,3 +1,7 @@
+.aboutContainer {
+  position: relative;
+}
+
 .arrowDown {
   margin-bottom: 14.375rem;
   margin-left: calc(100dvw / 7);
@@ -13,4 +17,11 @@
 
 .title {
   margin-bottom: 2.8125rem;
+}
+
+.logo {
+  left: 0;
+  opacity: 0.05;
+  position: absolute;
+  transform: translateX(-50%);
 }

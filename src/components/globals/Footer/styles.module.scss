@@ -13,6 +13,12 @@
   position: relative;
   width: 100%;
 
+  p {
+    font-family: $Cardillac;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
   @media only screen and (width <=48rem) {
     align-items: center;
   }

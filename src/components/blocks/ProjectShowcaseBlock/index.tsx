@@ -15,6 +15,7 @@ export const ProjectShowcaseBlock = ({ images }: Props) => (
   <div className={styles.container}>
     <Subheading subheading="showcase" />
     <Splide options={{
+      arrows: false,
       autoplay: true,
       breakpoints: {
         1024: {
