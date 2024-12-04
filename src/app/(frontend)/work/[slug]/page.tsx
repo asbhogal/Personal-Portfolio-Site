@@ -3,10 +3,11 @@ import configPromise from '@payload-config';
 import { Metadata, ResolvingMetadata } from 'next';
 import Image from 'next/image';
 import { ListBlock, ProjectShowcaseBlock, TypefaceBlock } from '@/src/components/blocks';
-import { RichText } from '@/src/components/typography';
+import { RichText, VisuallyHidden } from '@/src/components/typography';
 import { ArrowDown } from '@/src/components/graphics';
 import { Suspense } from 'react';
 import Loading from '@/src/components/globals/Loading';
+import { Spacer } from '@/src/components/globals';
 import styles from './styles.module.scss';
 
 interface Props {
@@ -57,6 +58,9 @@ export default async function Page({ params }: Props) {
 
   return (
     <Suspense fallback={<Loading />}>
+      <VisuallyHidden>
+        <h1 className={styles.title}>{project.title}</h1>
+      </VisuallyHidden>
       <div className={styles.imageContainer}>
         <Image
           className={styles.image}
@@ -67,12 +71,21 @@ export default async function Page({ params }: Props) {
           priority
         />
       </div>
-      <h1 className={styles.title}>{project.title}</h1>
+      <div className={styles.titleImageContainer}>
+        <img
+          className={styles.titleImage}
+          src={`/images/media/${project.titleImage.filename}`}
+          alt={project.titleImage.altText}
+          width={project.titleImage.width}
+          height={project.titleImage.height}
+        />
+      </div>
       <ListBlock
         className={styles.stacksList}
         stacks={project.stacks}
       />
       <RichText content={project.description[0].Content} />
+      <Spacer height={400} />
       <ArrowDown className={styles.arrowDown} />
       <TypefaceBlock typeface={project.typeface} />
       <ProjectShowcaseBlock images={project.showcase} />

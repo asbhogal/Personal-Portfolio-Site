@@ -6,12 +6,9 @@ export const Media: CollectionConfig = {
   },
   fields: [
     {
-      name: 'text',
-      type: 'text',
-    },
-    {
       label: 'Alt Text',
       name: 'altText',
+      required: true,
       type: 'text',
     },
   ],

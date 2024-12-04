@@ -39,7 +39,7 @@ export default async function Page() {
                     width={project.heroImage.width as number}
                     height={project.heroImage.height as number}
                     className={styles.image}
-                    src={project.heroImage.url as string}
+                    src={`/images/media/${project.heroImage.filename}`}
                     alt={project.heroImage.altText as string}
                   />
                 )}

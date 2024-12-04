@@ -8,9 +8,17 @@
 }
 
 * {
+  font-size: revert;
   padding: .125rem;
+  ;
 }
 
 .collapsible__header-wrap {
   width: min-content;
+}
+
+span,
+a,
+button {
+  font-family: Arial, Helvetica, sans-serif
 }

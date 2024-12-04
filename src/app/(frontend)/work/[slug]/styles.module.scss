@@ -1,5 +1,6 @@
 .imageContainer {
   height: calc(100dvh - 3.75rem);
+  margin-bottom: 1.25rem;
   padding-bottom: .625rem;
   width: 100%;
 }
@@ -30,4 +31,16 @@
   @media only screen and (width <=48rem) {
     height: 9.375rem;
   }
+}
+
+.titleImageContainer {
+  height: 100%;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.titleImage {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
 }

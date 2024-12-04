@@ -230,8 +230,7 @@ export interface Page {
  */
 export interface Media {
   id: string;
-  text?: string | null;
-  altText?: string | null;
+  altText: string;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -277,7 +276,8 @@ export interface Media {
 export interface Project {
   id: string;
   heroImage: string | Media;
-  title?: string | null;
+  title: string;
+  titleImage: string | Media;
   stacks?:
     | {
         title?: string | null;
@@ -554,6 +554,7 @@ export interface PagesSelect<T extends boolean = true> {
 export interface ProjectsSelect<T extends boolean = true> {
   heroImage?: T;
   title?: T;
+  titleImage?: T;
   stacks?:
     | T
     | {
@@ -625,7 +626,6 @@ export interface ProjectsSelect<T extends boolean = true> {
  * via the `definition` "media_select".
  */
 export interface MediaSelect<T extends boolean = true> {
-  text?: T;
   altText?: T;
   updatedAt?: T;
   createdAt?: T;

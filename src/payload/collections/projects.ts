@@ -21,7 +21,14 @@ export const Projects: CollectionConfig = {
     },
     {
       name: 'title',
+      required: true,
       type: 'text',
+    },
+    {
+      name: 'titleImage',
+      relationTo: 'media',
+      required: true,
+      type: 'upload',
     },
     {
       blocks: [ListBlock],
