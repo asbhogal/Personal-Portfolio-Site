@@ -16,8 +16,8 @@ export const AccoladesBlock = ({ accolades }: Props) => (
         <li className={styles.li}>
           <div>
             <p className={styles.date}>{dayjs(accolade.date).format('MMM YY')}</p>
-            <p className={styles.body}>{accolade.awardingBody}</p>
             <p className={styles.award}>{accolade.award}</p>
+            <p className={styles.body}>{accolade.awardingBody}</p>
           </div>
         </li>
       </React.Fragment>

@@ -3,5 +3,8 @@ interface Props {
 }
 
 export const Spacer = ({ height }: Props) => (
-  <div style={{ height }} />
+  <div style={{
+    height: `calc(100dvw * (${height} / 500))`,
+  }}
+  />
 );

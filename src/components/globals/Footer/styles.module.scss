@@ -13,11 +13,6 @@
   position: relative;
   width: 100%;
 
-  p {
-    font-family: $Cardillac;
-    font-weight: 300;
-    text-transform: uppercase;
-  }
 
   @media only screen and (width <=48rem) {
     align-items: center;
@@ -51,14 +46,6 @@
   gap: 0.9375rem;
   justify-content: center;
   text-decoration: none;
-}
-
-.footerLink {
-  color: $Argent;
-  font-family: $Cardillac;
-  font-size: 1.5rem;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
 .footerLogo {

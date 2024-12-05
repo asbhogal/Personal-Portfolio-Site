@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import React from 'react';
-import { Heading, Spacer } from '@/src/components/globals';
+import { FadeIn, Heading, Spacer } from '@/src/components/globals';
 import { getPayload, PaginatedDocs } from 'payload';
 import configPromise from '@payload-config';
 import { RichText, Subheading } from '@/src/components/typography';
@@ -48,21 +48,32 @@ export default async function Page() {
         docs[0]?.title || 'Aman Singh Bhogal'
       }
       />
-      <Spacer height={300} />
-      <RichText content={
-        docs[0]?.layout?.[0].Content || []
-      }
-      />
-      <ArrowDown className={styles.arrow} />
-      <Spacer height={10} />
+      <Spacer height={150} />
+      <FadeIn>
+        <RichText content={
+          docs[0]?.layout?.[0].Content || []
+        }
+        />
+      </FadeIn>
+      <FadeIn>
+        <ArrowDown className={styles.arrow} />
+      </FadeIn>
       <div className={styles.containerInner}>
-        <Subheading subheading={docs[0]?.layout?.[1].subheading} />
-        <AccoladesBlock accolades={docs[0]?.layout?.[2].accolade} />
+        <FadeIn>
+          <Subheading subheading={docs[0]?.layout?.[1].subheading} />
+        </FadeIn>
+        <FadeIn>
+          <AccoladesBlock accolades={docs[0]?.layout?.[2].accolade} />
+        </FadeIn>
       </div>
-      <Spacer height={364} />
+      <Spacer height={120} />
       <div className={styles.containerInner}>
-        <Subheading subheading={docs[0]?.layout?.[4].title} />
-        <SliderBlock items={docs[0]?.layout?.[4]} />
+        <FadeIn>
+          <Subheading subheading={docs[0]?.layout?.[4].title} />
+        </FadeIn>
+        <FadeIn>
+          <SliderBlock items={docs[0]?.layout?.[4]} />
+        </FadeIn>
       </div>
     </div>
   );

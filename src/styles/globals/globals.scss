@@ -20,19 +20,15 @@ html {
 }
 
 h1 {
-  color: $Khaki;
-  font-family: $Cardillac;
-  font-size: clamp(4rem, 1.675rem + 11.625vw, 15.625rem);
-  font-weight: 300;
-  text-transform: uppercase;
+  @include h1;
 }
 
 h2 {
-  color: $Khaki;
-  font-family: $Newsreader;
-  font-size: clamp(2rem, .8rem + 6vw, 8rem);
-  font-weight: 300;
-  text-transform: lowercase;
+  @include h2;
+}
+
+h3 {
+  @include h3;
 }
 
 .sr-only {

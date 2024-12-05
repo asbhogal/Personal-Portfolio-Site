@@ -1,0 +1,10 @@
+@use "../../../styles/index.scss" as *;
+
+.primary {
+  color: $Argent
+}
+
+.secondary {
+  border-bottom: .0625rem solid $Khaki;
+  color: $Khaki;
+}

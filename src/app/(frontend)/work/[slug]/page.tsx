@@ -7,7 +7,7 @@ import { RichText, VisuallyHidden } from '@/src/components/typography';
 import { ArrowDown } from '@/src/components/graphics';
 import { Suspense } from 'react';
 import Loading from '@/src/components/globals/Loading';
-import { Spacer } from '@/src/components/globals';
+import { FadeIn, Spacer } from '@/src/components/globals';
 import styles from './styles.module.scss';
 
 interface Props {
@@ -61,34 +61,53 @@ export default async function Page({ params }: Props) {
       <VisuallyHidden>
         <h1 className={styles.title}>{project.title}</h1>
       </VisuallyHidden>
-      <div className={styles.imageContainer}>
-        <Image
-          className={styles.image}
-          width={project.heroImage.width as number}
-          height={project.heroImage.height as number}
-          src={`/images/media/${project.heroImage.filename}`}
-          alt={project.heroImage.altText as string}
-          priority
+      <FadeIn>
+        <div className={styles.imageContainer}>
+          <Image
+            className={styles.image}
+            width={project.heroImage.width as number}
+            height={project.heroImage.height as number}
+            src={`/images/media/${project.heroImage.filename}`}
+            alt={project.heroImage.altText as string}
+            priority
+          />
+        </div>
+      </FadeIn>
+      <FadeIn>
+        <div className={styles.titleImageContainer}>
+          <img
+            className={styles.titleImage}
+            src={`/images/media/${project.titleImage.filename}`}
+            alt={project.titleImage.altText}
+            width={project.titleImage.width}
+            height={project.titleImage.height}
+          />
+        </div>
+      </FadeIn>
+      <FadeIn>
+        <ListBlock
+          className={styles.stacksList}
+          stacks={project.stacks}
         />
-      </div>
-      <div className={styles.titleImageContainer}>
-        <img
-          className={styles.titleImage}
-          src={`/images/media/${project.titleImage.filename}`}
-          alt={project.titleImage.altText}
-          width={project.titleImage.width}
-          height={project.titleImage.height}
-        />
-      </div>
-      <ListBlock
-        className={styles.stacksList}
-        stacks={project.stacks}
-      />
-      <RichText content={project.description[0].Content} />
-      <Spacer height={400} />
-      <ArrowDown className={styles.arrowDown} />
-      <TypefaceBlock typeface={project.typeface} />
-      <ProjectShowcaseBlock images={project.showcase} />
+      </FadeIn>
+      <FadeIn>
+        <RichText content={project.description[0].Content} />
+      </FadeIn>
+      <Spacer height={30} />
+      <FadeIn>
+        <ArrowDown className={styles.arrowDown} />
+      </FadeIn>
+      <Spacer height={10} />
+      <FadeIn>
+        <TypefaceBlock typeface={project.typeface} />
+      </FadeIn>
+      {
+        project.showcase && project.showcase.length > 0 && (
+          <FadeIn>
+            <ProjectShowcaseBlock images={project.showcase} />
+          </FadeIn>
+        )
+      }
     </Suspense>
   );
 }

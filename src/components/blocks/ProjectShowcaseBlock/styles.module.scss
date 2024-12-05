@@ -12,10 +12,11 @@
 
 .image {
   height: 80dvh;
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
 
   @media (width <=48rem) {
     height: 50dvh;
+    object-fit: contain;
   }
 }

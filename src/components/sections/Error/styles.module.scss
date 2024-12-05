@@ -7,17 +7,6 @@
   height: calc(100dvh - 4.8125rem);
   justify-content: space-around;
 
-  h1 {
-    align-items: center;
-    color: $Khaki;
-    display: flex;
-    flex-direction: column;
-    font-family: $Cardillac;
-    height: 100dvh;
-    justify-content: center;
-    text-transform: uppercase;
-  }
-
   .errorPageContainer {
     align-items: center;
     display: flex;
@@ -39,12 +28,7 @@
 }
 
 .text {
-  color: $Argent;
   display: flex;
   flex-direction: row;
-  font-family: $Cardillac;
-  font-size: 1.125rem;
   gap: .25rem;
-  line-height: 1.2;
-  text-transform: uppercase;
 }

@@ -3,7 +3,7 @@ import { Project } from '@/payload-types';
 import { getPayload, PaginatedDocs } from 'payload';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight } from '@/src/components/graphics';
+import { ArrowRight, Logo } from '@/src/components/graphics';
 import { Suspense } from 'react';
 import Image from 'next/image';
 import Loading from '@/src/components/globals/Loading';
@@ -25,8 +25,12 @@ export default async function Page() {
 
   return (
     <Suspense fallback={<Loading />}>
-      <div>
+      <div className={styles.container}>
         <h1 className={styles.title}>Projects</h1>
+        <Logo
+          className={styles.logo}
+          width={500}
+        />
         <ul className={styles.grid}>
           {docs.map((project: Project) => (
             <li

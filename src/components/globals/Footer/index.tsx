@@ -1,8 +1,9 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import { getPayload } from 'payload';
 import configPromise from '@payload-config';
 import styles from './styles.module.scss';
+import { Link } from '../Link';
+import { FadeIn } from '../FadeIn';
 
 export const Footer = async () => {
   const payload = await getPayload({
@@ -19,15 +20,17 @@ export const Footer = async () => {
     <footer
       className={styles.footer}
     >
-      <Image
-        className={styles.footerLogo}
-        src="/logos/logo-faint.svg"
-        role="img"
-        aria-hidden="true"
-        width={500}
-        height={500}
-        alt="The letter 'A' in elegant notation"
-      />
+      <FadeIn>
+        <Image
+          className={styles.footerLogo}
+          src="/logos/logo-faint.svg"
+          role="img"
+          aria-hidden="true"
+          width={500}
+          height={500}
+          alt="The letter 'A' in elegant notation"
+        />
+      </FadeIn>
       <div className={styles.footerLinks}>
         {footerMenu?.map((footerItem) => (footerItem.footerMenuItem?.footerMenuItemText === 'Primary' && (
           <ul
@@ -36,17 +39,17 @@ export const Footer = async () => {
           >
             {footerMenu?.map((primaryFooterItem) => (primaryFooterItem.footerMenuItem?.footerMenuItemText === 'Primary'
               ? primaryFooterItem?.footerMenuItem?.footerLinks?.map((primary) => (
-                <li
-                  className={styles.footerLi}
-                  key={primary.id}
-                >
-                  <Link
-                    className={styles.footerLink}
-                    href={primary.footerLinkUrl || ''}
+                <FadeIn key={primary.id}>
+                  <li
+                    className={styles.footerLi}
                   >
-                    {primary.footerLink}
-                  </Link>
-                </li>
+                    <Link
+                      href={primary.footerLinkUrl || ''}
+                    >
+                      {primary.footerLink}
+                    </Link>
+                  </li>
+                </FadeIn>
               ))
               : null))}
           </ul>
@@ -54,30 +57,33 @@ export const Footer = async () => {
         <ul className={styles.footerUl}>
           {footerMenu?.map((footerItem) => (footerItem.footerMenuItem?.footerMenuItemText === 'Secondary'
             ? footerItem?.footerMenuItem?.footerLinks?.map((secondary) => (
-              <li
-                className={styles.footerLi}
-                key={secondary.id}
-              >
-                <Link
-                  className={styles.footerLink}
-                  href={secondary.footerLinkUrl || ''}
+              <FadeIn key={secondary.id}>
+                <li
+                  className={styles.footerLi}
+                  key={secondary.id}
                 >
-                  {secondary.footerLink}
-                </Link>
-              </li>
+                  <Link
+                    href={secondary.footerLinkUrl || ''}
+                  >
+                    {secondary.footerLink}
+                  </Link>
+                </li>
+              </FadeIn>
             ))
             : null))}
         </ul>
       </div>
-      <div
-        className={styles.copyright}
-      >
-        <p>
-          ©Aman Singh Bhogal
-          {' '}
-          {new Date().getFullYear()}
-        </p>
-      </div>
+      <FadeIn>
+        <div
+          className={styles.copyright}
+        >
+          <p>
+            ©Aman Singh Bhogal
+            {' '}
+            {new Date().getFullYear()}
+          </p>
+        </div>
+      </FadeIn>
     </footer>
   );
 };

@@ -17,10 +17,7 @@
 }
 
 .date {
-  color: $Argent;
-  font-family: $Cardillac;
-  font-size: clamp(1.125rem, 1.05rem + 0.375vw, 1.5rem);
-  text-transform: uppercase;
+  @include h4;
 }
 
 .separator {
@@ -36,18 +33,11 @@
 }
 
 .award {
-  color: $Argent;
-  font-family: $Newsreader;
-  font-size: clamp(1.125rem, 1.05rem + 0.375vw, 1.5rem);
-  font-style: italic;
-  text-transform: lowercase;
+  @include accent;
 }
 
 .body {
-  color: $Khaki;
-  font-family: $Cardillac;
-  font-size: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
-  text-transform: uppercase;
+  @include body-large;
 }
 
 .li {

@@ -8,6 +8,19 @@
   }
 }
 
+.container {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.logo {
+  opacity: 0.05;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(20%, -20%);
+}
+
 .projectTitle {
   @include subtitle;
 }

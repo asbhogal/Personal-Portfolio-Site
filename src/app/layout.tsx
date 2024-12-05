@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="root">
+      <body>
         <Header />
         <main
           className={styles.mainContainer}

@@ -1,8 +1,8 @@
 'use client';
 
-import FadeIn from '@/utils/animations';
 import Image from 'next/image';
 import styles from './styles.module.scss';
+import { FadeIn } from '../FadeIn';
 
 interface Props {
   title: string;
@@ -10,7 +10,6 @@ interface Props {
 
 export const Heading = ({ title }: Props) => (
   <FadeIn
-    as="section"
     className={styles.homePageSection}
   >
     <Image
@@ -22,7 +21,6 @@ export const Heading = ({ title }: Props) => (
       className={styles.homePageImage}
     />
     <FadeIn
-      as="h1"
       className="sr-only"
     >
       {title}
