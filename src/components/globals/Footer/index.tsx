@@ -4,6 +4,7 @@ import configPromise from '@payload-config';
 import styles from './styles.module.scss';
 import { Link } from '../Link';
 import { FadeIn } from '../FadeIn';
+import { WebsiteCarbon } from '../WebsiteCarbon';
 
 export const Footer = async () => {
   const payload = await getPayload({
@@ -39,17 +40,18 @@ export const Footer = async () => {
           >
             {footerMenu?.map((primaryFooterItem) => (primaryFooterItem.footerMenuItem?.footerMenuItemText === 'Primary'
               ? primaryFooterItem?.footerMenuItem?.footerLinks?.map((primary) => (
-                <FadeIn key={primary.id}>
-                  <li
-                    className={styles.footerLi}
-                  >
+                <li
+                  key={primary.id}
+                  className={styles.footerLi}
+                >
+                  <FadeIn>
                     <Link
                       href={primary.footerLinkUrl || ''}
                     >
                       {primary.footerLink}
                     </Link>
-                  </li>
-                </FadeIn>
+                  </FadeIn>
+                </li>
               ))
               : null))}
           </ul>
@@ -57,23 +59,23 @@ export const Footer = async () => {
         <ul className={styles.footerUl}>
           {footerMenu?.map((footerItem) => (footerItem.footerMenuItem?.footerMenuItemText === 'Secondary'
             ? footerItem?.footerMenuItem?.footerLinks?.map((secondary) => (
-              <FadeIn key={secondary.id}>
-                <li
-                  className={styles.footerLi}
-                  key={secondary.id}
-                >
+              <li
+                className={styles.footerLi}
+                key={secondary.id}
+              >
+                <FadeIn>
                   <Link
                     href={secondary.footerLinkUrl || ''}
                   >
                     {secondary.footerLink}
                   </Link>
-                </li>
-              </FadeIn>
+                </FadeIn>
+              </li>
             ))
             : null))}
         </ul>
       </div>
-      <FadeIn>
+      <FadeIn className={styles.footerBottom}>
         <div
           className={styles.copyright}
         >
@@ -83,6 +85,7 @@ export const Footer = async () => {
             {new Date().getFullYear()}
           </p>
         </div>
+        <WebsiteCarbon />
       </FadeIn>
     </footer>
   );

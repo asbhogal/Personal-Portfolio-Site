@@ -5,3 +5,4 @@ export * from './Heading';
 export * from './Link';
 export * from './RenderBlocks';
 export * from './Spacer';
+export * from './WebsiteCarbon';

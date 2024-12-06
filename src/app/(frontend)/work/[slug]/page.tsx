@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props, _: ResolvingMetadata):
   });
 
   return {
-    description: data.docs.find((doc) => doc.slug === slug)?.description?.toString() || '',
+    description: data.docs.find((doc) => doc.slug === slug)?.SEO?.description || '',
     title: `${data.docs.find((doc) => doc.slug === slug)?.title} | Aman Singh Bhogal`,
   };
 }

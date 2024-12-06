@@ -19,12 +19,26 @@
   }
 }
 
-.copyright {
+.footerBottom {
+  align-items: center;
   bottom: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.9375rem;
+  justify-content: center;
+  position: absolute;
+}
+
+.copyright {
   color: $Argent;
   font-family: $Cardillac;
-  position: absolute;
-  text-transform: uppercase
+
+  p {
+    font-size: 1rem !important;
+    text-transform: capitalize !important;
+    @include h4;
+  }
 }
 
 .footerUl {
