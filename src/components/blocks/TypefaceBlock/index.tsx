@@ -16,7 +16,11 @@ export const TypefaceBlock = ({ typeface }: Props) => (
     <Subheading subheading="typeface" />
     {typeface && typeface[0]?.typeface && typeface[0].image && (
       <img
-        src={`/images/media/${typeof typeface[0].image === 'object' && 'filename' in typeface[0].image ? typeface[0].image.filename : ''}`}
+        src={
+          typeof typeface[0].image === 'string'
+            ? typeface[0].image
+            : typeface[0].image?.url || ''
+        }
         alt={
           typeof typeface[0].image === 'string'
             ? ''

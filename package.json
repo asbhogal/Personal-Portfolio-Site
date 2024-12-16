@@ -45,6 +45,7 @@
     "@payloadcms/plugin-search": "latest",
     "@payloadcms/plugin-seo": "latest",
     "@payloadcms/richtext-lexical": "latest",
+    "@payloadcms/storage-vercel-blob": "^3.7.0",
     "@payloadcms/ui": "latest",
     "@splidejs/react-splide": "^0.7.12",
     "@vercel/analytics": "^0.1.11",

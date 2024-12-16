@@ -38,7 +38,7 @@ export const ProjectShowcaseBlock = ({ images }: Props) => (
               <Image
                 className={styles.image}
                 aria-label={mediaImage.altText ?? ''}
-                src={`/images/media/${mediaImage.filename}`}
+                src={`${mediaImage.url}`}
                 alt={mediaImage.altText ?? ''}
                 width={676}
                 height={900}

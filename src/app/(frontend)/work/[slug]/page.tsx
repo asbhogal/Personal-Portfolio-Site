@@ -67,7 +67,7 @@ export default async function Page({ params }: Props) {
             className={styles.image}
             width={project.heroImage.width as number}
             height={project.heroImage.height as number}
-            src={`/images/media/${project.heroImage.filename}`}
+            src={project.heroImage.url}
             alt={project.heroImage.altText as string}
             priority
           />
@@ -77,7 +77,7 @@ export default async function Page({ params }: Props) {
         <div className={styles.titleImageContainer}>
           <img
             className={styles.titleImage}
-            src={`/images/media/${project.titleImage.filename}`}
+            src={project.titleImage.url}
             alt={project.titleImage.altText}
             width={project.titleImage.width}
             height={project.titleImage.height}
