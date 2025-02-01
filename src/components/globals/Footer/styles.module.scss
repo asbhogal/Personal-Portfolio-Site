@@ -14,8 +14,8 @@
   width: 100%;
 
 
-  @media only screen and (width <=48rem) {
-    align-items: center;
+  @include queries(md) {
+    text-align: center;
   }
 }
 
@@ -27,12 +27,20 @@
   align-items: flex-end;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @include queries(md) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .footerBottom {
   display: flex;
   flex-direction: column;
   gap: 0.9375rem;
+
+  @include queries(md) {
+    align-items: center;
+  }
 }
 
 .copyright {

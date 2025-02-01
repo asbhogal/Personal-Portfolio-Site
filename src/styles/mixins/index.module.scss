@@ -11,7 +11,7 @@
 @mixin h2 {
   color: $Argent;
   font-family: "kepler-3-display-variable", sans-serif;
-  font-size: 12.5rem;
+  font-size: clamp(2.25rem, 0.2rem + 10.25vw, 12.5rem);
   font-variation-settings: "wght" 200, "wdth" 80;
   line-height: 1;
   text-transform: uppercase;
