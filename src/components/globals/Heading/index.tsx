@@ -4,6 +4,7 @@ import Image from 'next/image';
 import styles from './styles.module.scss';
 import { FadeIn } from '../FadeIn';
 import { Marquee } from '../Marquee';
+import { Link } from '../Link';
 
 interface Props {
   title: string;
@@ -27,6 +28,10 @@ export const Heading = ({ title }: Props) => (
     >
       {title}
     </FadeIn>
+    <div className={styles.linksContainer}>
+      <Link href="/about">About</Link>
+      <Link href="/work">Work</Link>
+    </div>
     <Marquee
       direction="right"
       text="Award Winning Creative Developer"
