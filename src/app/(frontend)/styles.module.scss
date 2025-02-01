@@ -18,6 +18,7 @@
 }
 
 .gridContainer {
+  border-bottom: .0625rem solid $Khaki;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   position: relative;

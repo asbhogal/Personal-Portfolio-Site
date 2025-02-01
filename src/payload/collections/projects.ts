@@ -25,12 +25,6 @@ export const Projects: CollectionConfig = {
       type: 'text',
     },
     {
-      name: 'titleImage',
-      relationTo: 'media',
-      required: true,
-      type: 'upload',
-    },
-    {
       admin: {
         date: {
           displayFormat: 'dd MM yyyy',
@@ -47,6 +41,7 @@ export const Projects: CollectionConfig = {
     {
       blocks: [ContentBlock],
       name: 'description',
+      required: true,
       type: 'blocks',
     },
     {
