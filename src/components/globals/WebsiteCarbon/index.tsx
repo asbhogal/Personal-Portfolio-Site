@@ -26,7 +26,7 @@ export interface WebsiteCarbonData {
 }
 
 export const WebsiteCarbon = async () => {
-  const data = await fetch('https://api.websitecarbon.com/site?url=https%3A%2F%2Fwoodandhorn.studio%2F', {
+  const data = await fetch(`https://api.websitecarbon.com/site?url=${process.env.API_BASE_URL}`, {
     cache: 'force-cache',
   });
 
@@ -41,7 +41,7 @@ export const WebsiteCarbon = async () => {
         <Link
           title="View the carbon footprint of this website"
           aria-label="View the carbon footprint of this website"
-          href="https://www.websitecarbon.com/website/woodandhorn-studio/"
+          href={`https://www.websitecarbon.com/website/${process.env.API_BASE_URL}/`}
           target="_blank"
         >
           {json.statistics.co2.grid.grams.toFixed(2)}
