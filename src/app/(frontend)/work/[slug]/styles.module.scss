@@ -1,18 +1,38 @@
+@use '../../../../styles/index.scss' as *;
+
 .imageContainer {
-  height: calc(100dvh - 3.75rem);
-  margin-bottom: 1.25rem;
-  padding-bottom: .625rem;
   width: 100%;
 }
 
 .image {
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
 }
 
-.title {
-  text-align: center;
+.pageHeader {
+  align-items: flex-end;
+  border-top: 0.0625rem solid $Argent;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr 1fr;
+
+  @include queries(md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.descriptionContainer {
+  border-bottom: 0.0625rem solid $Argent;
+  border-top: 0.0625rem solid $Argent;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr 1fr;
+  padding: 1.25rem 0;
+
+  @include queries(md) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .stacksList {

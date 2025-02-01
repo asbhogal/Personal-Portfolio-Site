@@ -31,6 +31,10 @@ html {
   width: .0625rem;
 }
 
+h1 {
+  @include h1;
+}
+
 h2 {
   @include h2;
 }
@@ -53,7 +57,6 @@ li {
 a {
   color: $Khaki;
   font-size: 1.125rem;
-  font-weight: 300;
   text-decoration: none;
   text-transform: uppercase;
   transition: color .3s;
