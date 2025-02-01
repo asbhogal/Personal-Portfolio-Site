@@ -5,10 +5,11 @@ import React from 'react';
 import styles from './styles.module.scss';
 
 interface Props {
+  direction?: 'left' | 'right';
   text: string;
 }
 
-const marqueeVariants: Variants = {
+const getMarqueeVariants = (direction: 'left' | 'right'): Variants => ({
   animate: {
     transition: {
       duration: 15,
@@ -16,20 +17,20 @@ const marqueeVariants: Variants = {
       repeat: Infinity,
       repeatType: 'loop',
     },
-    x: [0, -1035],
+    x: direction === 'left' ? [0, -1035] : [-1035, 0],
   },
-};
+});
 
-export const Marquee = ({ text }: Props) => (
+export const Marquee = ({ text, direction = 'left' }: Props) => (
   <div className={styles.marquee}>
     <motion.div
-      variants={marqueeVariants}
+      variants={getMarqueeVariants(direction)}
       initial="initial"
       animate="animate"
       className={styles.track}
     >
       {
-        Array.from({ length: 10 }).map((_, index) => (
+        Array.from({ length: 16 }).map((_, index) => (
           <p key={index}>{text}</p>
         ))
       }

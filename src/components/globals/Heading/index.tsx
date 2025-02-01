@@ -27,6 +27,9 @@ export const Heading = ({ title }: Props) => (
     >
       {title}
     </FadeIn>
-    <Marquee text="Award Winning Creative Developer" />
+    <Marquee
+      direction="right"
+      text="Award Winning Creative Developer"
+    />
   </FadeIn>
 );
