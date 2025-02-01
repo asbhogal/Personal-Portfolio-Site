@@ -23,7 +23,7 @@
   grid-template-columns: repeat(2, 1fr);
   position: relative;
 
-  @media only screen and (width <=48rem) {
+  @include queries(md) {
     grid-template-columns: 1fr;
   }
 }
@@ -55,6 +55,10 @@
   top: 0;
   transform: translateX(-50%);
   width: .0625rem;
+
+  @media only screen and (width < 55rem) {
+    display: none;
+  }
 }
 
 .gridItem {
