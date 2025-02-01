@@ -9,7 +9,7 @@
   justify-content: space-between;
   margin: 0 auto;
   max-width: 120rem;
-  padding: 27.1875rem .625rem;
+  padding: 7.5rem .625rem .625rem .625rem;
   position: relative;
   width: 100%;
 
@@ -19,15 +19,20 @@
   }
 }
 
+.name {
+  @include h2;
+}
+
+.footerLeftContent {
+  align-items: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .footerBottom {
-  align-items: center;
-  bottom: 2.5rem;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 0.9375rem;
-  justify-content: center;
-  position: absolute;
 }
 
 .copyright {

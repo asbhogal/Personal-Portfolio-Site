@@ -35,7 +35,7 @@ export const WebsiteCarbon = async () => {
   return (
     <div className={styles.container}>
       <div className={styles.containerInner}>
-        <p className={styles.title}>Website Carbon</p>
+        <p className={styles.title}>Website Carbon: </p>
       </div>
       <p className={styles.carbonCount}>
         <Link

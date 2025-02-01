@@ -32,61 +32,66 @@ export const Footer = async () => {
           alt="The letter 'A' in elegant notation"
         />
       </FadeIn>
-      <div className={styles.footerLinks}>
-        {footerMenu?.map((footerItem) => (footerItem.footerMenuItem?.footerMenuItemText === 'Primary' && (
-          <ul
-            className={styles.footerUl}
-            key={footerItem.id}
-          >
-            {footerMenu?.map((primaryFooterItem) => (primaryFooterItem.footerMenuItem?.footerMenuItemText === 'Primary'
-              ? primaryFooterItem?.footerMenuItem?.footerLinks?.map((primary) => (
+      <div className={styles.footerLeftContent}>
+        <div>
+          <p className={styles.name}>Aman Singh Bhogal</p>
+          <FadeIn className={styles.footerBottom}>
+            <div
+              className={styles.copyright}
+            >
+              <p>
+                ©Aman Singh Bhogal
+                {' '}
+                {new Date().getFullYear()}
+              </p>
+            </div>
+            <WebsiteCarbon />
+          </FadeIn>
+        </div>
+        <div className={styles.footerLinks}>
+          {footerMenu?.map((footerItem) => (footerItem.footerMenuItem?.footerMenuItemText === 'Primary' && (
+            <ul
+              className={styles.footerUl}
+              key={footerItem.id}
+            >
+              {footerMenu?.map((primaryFooterItem) => (primaryFooterItem.footerMenuItem?.footerMenuItemText === 'Primary'
+                ? primaryFooterItem?.footerMenuItem?.footerLinks?.map((primary) => (
+                  <li
+                    key={primary.id}
+                    className={styles.footerLi}
+                  >
+                    <FadeIn>
+                      <Link
+                        href={primary.footerLinkUrl || ''}
+                      >
+                        {primary.footerLink}
+                      </Link>
+                    </FadeIn>
+                  </li>
+                ))
+                : null))}
+            </ul>
+          )))}
+          <ul className={styles.footerUl}>
+            {footerMenu?.map((footerItem) => (footerItem.footerMenuItem?.footerMenuItemText === 'Secondary'
+              ? footerItem?.footerMenuItem?.footerLinks?.map((secondary) => (
                 <li
-                  key={primary.id}
                   className={styles.footerLi}
+                  key={secondary.id}
                 >
                   <FadeIn>
                     <Link
-                      href={primary.footerLinkUrl || ''}
+                      href={secondary.footerLinkUrl || ''}
                     >
-                      {primary.footerLink}
+                      {secondary.footerLink}
                     </Link>
                   </FadeIn>
                 </li>
               ))
               : null))}
           </ul>
-        )))}
-        <ul className={styles.footerUl}>
-          {footerMenu?.map((footerItem) => (footerItem.footerMenuItem?.footerMenuItemText === 'Secondary'
-            ? footerItem?.footerMenuItem?.footerLinks?.map((secondary) => (
-              <li
-                className={styles.footerLi}
-                key={secondary.id}
-              >
-                <FadeIn>
-                  <Link
-                    href={secondary.footerLinkUrl || ''}
-                  >
-                    {secondary.footerLink}
-                  </Link>
-                </FadeIn>
-              </li>
-            ))
-            : null))}
-        </ul>
-      </div>
-      <FadeIn className={styles.footerBottom}>
-        <div
-          className={styles.copyright}
-        >
-          <p>
-            ©Aman Singh Bhogal
-            {' '}
-            {new Date().getFullYear()}
-          </p>
         </div>
-        <WebsiteCarbon />
-      </FadeIn>
+      </div>
     </footer>
   );
 };
