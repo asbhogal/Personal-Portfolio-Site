@@ -42,12 +42,12 @@
 }
 
 .position {
-  @include accent;
+  font: 1.25em sans-serif;
 }
 
 .company,
 .responsibility {
-  @include body-large;
+  font: 1em sans-serif;
 }
 
 .stacks {
@@ -67,7 +67,7 @@
 
 .stack,
 .date {
-  @include h4;
+  font: 1em sans-serif;
 }
 
 .stack {

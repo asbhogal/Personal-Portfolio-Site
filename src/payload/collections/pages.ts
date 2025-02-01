@@ -21,6 +21,11 @@ export const Pages: CollectionConfig = {
       type: 'richText',
     },
     {
+      name: 'headerImage',
+      relationTo: 'media',
+      type: 'upload',
+    },
+    {
       admin: {
         position: 'sidebar',
       },

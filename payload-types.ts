@@ -107,6 +107,7 @@ export interface Page {
     };
     [k: string]: unknown;
   } | null;
+  headerImage?: (string | null) | Media;
   SEO?: {
     title?: string | null;
     description?: string | null;
@@ -278,6 +279,7 @@ export interface Project {
   heroImage: string | Media;
   title: string;
   titleImage: string | Media;
+  date?: string | null;
   stacks?:
     | {
         title?: string | null;
@@ -432,6 +434,7 @@ export interface UsersSelect<T extends boolean = true> {
 export interface PagesSelect<T extends boolean = true> {
   title?: T;
   content?: T;
+  headerImage?: T;
   SEO?:
     | T
     | {
@@ -555,6 +558,7 @@ export interface ProjectsSelect<T extends boolean = true> {
   heroImage?: T;
   title?: T;
   titleImage?: T;
+  date?: T;
   stacks?:
     | T
     | {

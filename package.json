@@ -57,8 +57,8 @@
     "motion": "12.0.0-alpha.2",
     "next": "15.0.3",
     "payload": "latest",
-    "react": "19.0.0-rc-65a56d0e-20241020",
-    "react-dom": "19.0.0-rc-65a56d0e-20241020",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.28.0",
     "react-websitecarbon-badge": "^1.0.6",
@@ -71,10 +71,10 @@
     "@playwright/test": "^1.48.2",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.17.6",
-    "@types/react": "npm:types-react@19.0.0-rc.0",
-    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.0",
-    "@typescript-eslint/eslint-plugin": "^8.14.0",
-    "@typescript-eslint/parser": "^8.14.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
     "concurrently": "^9.1.0",
     "eslint": "9.14.0",
     "eslint-config-next": "^15.0.3",
@@ -96,16 +96,6 @@
     "stylelint-scss": "^6.9.0",
     "typed-scss-modules": "^8.0.1",
     "typescript": "^5.6.3"
-  },
-  "pnpm": {
-    "overrides": {
-      "@types/react": "npm:types-react@19.0.0-rc.0",
-      "@types/react-dom": "npm:types-react-dom@19.0.0-rc.0"
-    }
-  },
-  "overrides": {
-    "@types/react": "npm:types-react@19.0.0-rc.0",
-    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.0"
   },
   "lint-staged": {
     "**/*.scss": "stylelint --fix",

@@ -11,6 +11,12 @@
   .homePageImage {
     height: 100%;
     object-fit: contain;
+    position: relative;
     width: 100%;
+    z-index: 10;
+
+    @include queries(sm) {
+      visibility: hidden;
+    }
   }
 }

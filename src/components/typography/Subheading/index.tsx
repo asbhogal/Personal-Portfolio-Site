@@ -5,7 +5,11 @@ interface Props {
 }
 
 export const Subheading = ({ subheading }: Props) => (
-  <h2 className={styles.subheading}>
-    {subheading}
-  </h2>
+  <div className={styles.container}>
+    <div className={styles.separator} />
+    <h2 className={styles.subheading}>
+      {subheading}
+    </h2>
+    <div className={styles.separator} />
+  </div>
 );

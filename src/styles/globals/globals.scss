@@ -19,18 +19,6 @@ html {
   border-radius: .625rem;
 }
 
-h1 {
-  @include h1;
-}
-
-h2 {
-  @include h2;
-}
-
-h3 {
-  @include h3;
-}
-
 .sr-only {
   border-width: 0;
   clip: rect(0, 0, 0, 0);
@@ -43,25 +31,33 @@ h3 {
   width: .0625rem;
 }
 
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
+}
+
 p,
 span,
 ul,
 ol,
 li {
   color: $Argent;
-  font-family: $Newsreader;
   font-size: 1.125rem;
   line-height: 1.2;
+  @include body;
 }
 
 a {
   color: $Khaki;
-  font-family: $Cardillac;
   font-size: 1.125rem;
   font-weight: 300;
   text-decoration: none;
   text-transform: uppercase;
   transition: color .3s;
+  @include body;
 
   &:hover {
     color: $Argent;

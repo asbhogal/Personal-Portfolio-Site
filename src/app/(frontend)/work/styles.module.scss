@@ -22,7 +22,8 @@
 }
 
 .projectTitle {
-  @include subtitle;
+  font: 2.5em sans-serif;
+  margin-bottom: 1.25rem;
 }
 
 .image {

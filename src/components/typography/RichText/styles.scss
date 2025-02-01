@@ -9,14 +9,12 @@
   width: 100%;
 
   >p {
-    font-family: $Cardillac;
     font-size: 2.625rem;
     line-height: normal;
     text-align: justify;
     text-transform: uppercase;
 
     >span {
-      font-family: $Newsreader;
       font-size: 3rem;
       text-transform: none !important;
     }
@@ -40,7 +38,6 @@
 
 .RichTextSpan {
   color: $Argent;
-  font-family: $Newsreader;
   font-size: clamp(1.5rem, 1.275rem + 1.125vw, 2.625rem);
   font-style: italic;
   font-weight: 300;
@@ -49,7 +46,6 @@
 
 .RichTextParagraph {
   color: $Argent;
-  font-family: $Cardillac;
   font-size: clamp(1.5rem, 1.275rem + 1.125vw, 2.625rem);
   font-weight: 300;
   line-height: normal;

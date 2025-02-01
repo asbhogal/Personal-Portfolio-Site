@@ -17,7 +17,7 @@
 }
 
 .date {
-  @include h4;
+  font: 1em sans-serif;
 }
 
 .separator {
@@ -33,11 +33,11 @@
 }
 
 .award {
-  @include accent;
+  font: 1em sans-serif;
 }
 
 .body {
-  @include body-large;
+  font: 1em sans-serif;
 }
 
 .li {

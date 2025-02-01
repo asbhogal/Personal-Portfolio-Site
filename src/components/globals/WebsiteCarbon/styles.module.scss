@@ -18,7 +18,6 @@
 .title {
   font-size: 1rem !important;
   text-transform: uppercase;
-  @include accent;
 }
 
 .carbonCount {
@@ -27,6 +26,5 @@
   a {
     font-size: 1rem !important;
     text-transform: none !important;
-    @include h4;
   }
 }

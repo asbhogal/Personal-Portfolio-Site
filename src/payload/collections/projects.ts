@@ -31,6 +31,15 @@ export const Projects: CollectionConfig = {
       type: 'upload',
     },
     {
+      admin: {
+        date: {
+          displayFormat: 'dd MM yyyy',
+        },
+      },
+      name: 'date',
+      type: 'date',
+    },
+    {
       blocks: [ListBlock],
       name: 'stacks',
       type: 'blocks',

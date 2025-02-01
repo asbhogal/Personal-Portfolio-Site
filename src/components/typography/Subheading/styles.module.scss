@@ -1,5 +1,18 @@
 @use "../../../styles/index.scss" as *;
 
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
 .subheading {
-  flex: 1;
+  margin: 0 1.25rem;
+}
+
+.separator {
+  background-color: $Khaki;
+  height: .0625rem;
+  margin: 1.25rem 0;
+  width: 100%;
 }

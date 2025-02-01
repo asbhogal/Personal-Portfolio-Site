@@ -32,12 +32,10 @@
 
 .copyright {
   color: $Argent;
-  font-family: $Cardillac;
 
   p {
     font-size: 1rem !important;
     text-transform: capitalize !important;
-    @include h4;
   }
 }
 
