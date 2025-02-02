@@ -1,0 +1,44 @@
+@use '../../../../../styles/index.scss' as *;
+
+.closeButton {
+  position: absolute;
+  right: .9375rem;
+  top: .625rem;
+}
+
+.nav {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    list-style-type: none;
+    margin: 0;
+
+    li {
+
+      a {
+        @include h1;
+
+        &:hover {
+          font-style: italic;
+          text-transform: lowercase;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  background-color: colors(smokyBlack);
+  display: flex;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  transform: translateY(-100%);
+  width: 100%;
+  z-index: 100;
+}
+
+.containerOpen {
+  transform: translateY(0%);
+}

@@ -1,9 +1,10 @@
 @use "../../../styles/index.scss" as *;
 
 .marquee {
+  height: 5.625rem;
   max-width: 100%;
   overflow-x: hidden;
-  width: 100vw;
+  width: 100dvw;
 }
 
 .track {

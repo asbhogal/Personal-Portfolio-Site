@@ -1,0 +1,11 @@
+@use '../../../styles/index.scss' as *;
+
+.button {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+
+  &:focus-visible {
+    outline: .0625rem solid colors(argent);
+  }
+}

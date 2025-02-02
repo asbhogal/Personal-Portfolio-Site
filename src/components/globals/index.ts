@@ -1,3 +1,4 @@
+export * from './Button';
 export * from './FadeIn';
 export * from './Footer';
 export * from './Header';

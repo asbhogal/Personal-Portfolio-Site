@@ -1,7 +1,7 @@
-@use "../variables/index.module.scss" as *;
+@use "../colors/index.module.scss" as *;
 
 @mixin h1 {
-  color: $Argent;
+  color: colors(argent);
   font-family: "kepler-3-display-variable", sans-serif;
   font-size: clamp(2.625rem, 0.025rem + 13vw, 15.625rem);
   font-variation-settings: "wght" 200, "wdth" 80;  
@@ -9,7 +9,7 @@
 }
 
 @mixin h2 {
-  color: $Argent;
+  color: colors(argent);
   font-family: "kepler-3-display-variable", sans-serif;
   font-size: clamp(2.25rem, 0.2rem + 10.25vw, 12.5rem);
   font-variation-settings: "wght" 200, "wdth" 80;
@@ -18,10 +18,10 @@
 }
 
 @mixin h3 {
-  color: $Argent;
+  color: colors(argent);
   font-family: "kepler-3-display-variable", sans-serif;
   font-size: 6.25rem;
-font-variation-settings: "wght" 200, "wdth" 80;
+  font-variation-settings: "wght" 200, "wdth" 80;
   text-transform: uppercase;
 }
 

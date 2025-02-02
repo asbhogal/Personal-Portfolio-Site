@@ -1,9 +1,13 @@
 import { getPayload } from 'payload';
 import configPromise from '@payload-config';
+import { HiMenuAlt3 } from 'react-icons/hi';
 import styles from './styles.module.scss';
+import colors from '../../../styles/colors/index.module.scss';
 import { Logo } from '../../graphics';
 import { Link } from '../Link';
 import { FadeIn } from '../FadeIn';
+import { Button } from '../Button';
+import { NavMenu } from './components';
 
 export const Header = async () => {
   const payload = await getPayload({
@@ -23,22 +27,20 @@ export const Header = async () => {
           aria-label="Home"
           href="/"
         >
-          <Logo width={40} />
+          <Logo
+            className={styles.headerLogo}
+            width={34}
+          />
         </Link>
-        <nav>
-          <ul className={styles.headerUl}>
-            {headerMenu?.map((headerItem) => (
-              <li
-                key={headerItem.id}
-                className={styles.headerLi}
-              >
-                <Link href={headerItem.linkUrl || ''}>
-                  {headerItem.linkText}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <Button
+          name="menu"
+          title="Menu"
+        >
+          <HiMenuAlt3 color={colors.argent} />
+        </Button>
+        <NavMenu
+          headerMenu={headerMenu}
+        />
       </header>
     </FadeIn>
   );

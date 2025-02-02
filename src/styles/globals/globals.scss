@@ -1,5 +1,5 @@
 @use "../mixins/index.module.scss" as *;
-@use "../variables/index.module.scss" as *;
+@use "../colors/index.module.scss" as *;
 
 html {
   background-color: $SmokyBlack;
@@ -55,7 +55,7 @@ li {
 }
 
 a {
-  color: $Khaki;
+  color: colors(khaki);
   font-size: 1.125rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -63,7 +63,7 @@ a {
   @include body;
 
   &:hover {
-    color: $Argent;
+    color: colors(argent);
     transition: color .3s;
   }
 }

@@ -1,3 +1,4 @@
+export declare const argent: string;
 export declare const container: string;
 export declare const gridContainer: string;
 export declare const gridContent: string;
@@ -6,6 +7,8 @@ export declare const headerContainer: string;
 export declare const headerImage: string;
 export declare const image: string;
 export declare const imageContainer: string;
+export declare const khaki: string;
 export declare const mainContainer: string;
 export declare const pageHeader: string;
+export declare const smokyBlack: string;
 export declare const verticalDivider: string;

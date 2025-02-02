@@ -5,7 +5,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"next dev --turbopack\" \"stylelint\" \"typed-scss-modules './src/**/*.scss' --watch\"",
+    "dev": "concurrently \"next dev\" \"stylelint\" \"typed-scss-modules './src/**/*.scss' --watch\"",
     "devsafe": "rm -rf .next && pnpm dev",
     "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start",

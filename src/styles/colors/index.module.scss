@@ -1,0 +1,21 @@
+@use 'sass:map';
+
+$SmokyBlack: #0d0c0b;
+$Khaki: #c5b29a;
+$Argent: #c6c0c4;
+
+$colors: (
+  smokyBlack: $SmokyBlack,
+  khaki: $Khaki,
+  argent: $Argent
+);
+
+@function colors($key) {
+  @return map.get($colors, $key);
+}
+
+:export {
+  @each $key, $value in $colors {
+    #{"" + $key}: $value;
+  }
+}
