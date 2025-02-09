@@ -1,36 +1,26 @@
 
 'use client';
 
-import React, { useState } from 'react';
-import { IoCloseOutline } from 'react-icons/io5';
+import React from 'react';
 import { constructClassName } from '@/utils/constructClassName';
 import type { JSX } from 'react';
 import type { HeaderMenu } from '@/payload-types';
 import { Link } from '../../../Link';
 import styles from './styles.module.scss';
-import { Button } from '../../../Button';
-import colors from '../../../../../styles/colors/index.module.scss';
 
 interface Props {
   className?: string;
-  headerMenu: HeaderMenu['headerMenu'];
+  data: HeaderMenu;
+  isOpen: boolean;
 }
 
-export const NavMenu = ({ className, headerMenu }: Props): JSX.Element => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-
-  // const openNav = () => {
-  //   setIsNavOpen(true);
-  // };
-
-  const closeNav = (): void => {
-    setIsNavOpen(false);
-  };
+export const NavMenu = ({ className, data, isOpen }: Props): JSX.Element => {
+  const { headerMenu } = data;
 
   return (
     <div className={constructClassName([
       className,
-      isNavOpen ? styles.containerOpen : styles.container,
+      isOpen ? styles.containerOpen : styles.container,
     ])}
     >
       <nav className={styles.nav}>
@@ -44,15 +34,6 @@ export const NavMenu = ({ className, headerMenu }: Props): JSX.Element => {
           ))}
         </ul>
       </nav>
-      <Button
-        name="closeButton"
-        className={constructClassName([
-          styles.closeButton,
-        ])}
-        onClick={() => closeNav}
-      >
-        <IoCloseOutline color={colors.argent} />
-      </Button>
     </div>
   );
 };

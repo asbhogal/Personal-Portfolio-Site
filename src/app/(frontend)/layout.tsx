@@ -6,7 +6,18 @@ import '@/src/styles/globals/globals.scss';
 import '@/src/styles/reset.scss';
 import type { JSX } from 'react';
 import React from 'react';
+import { getPayload } from 'payload';
+import payloadConfig from '@/payload.config';
 import styles from './styles.module.scss';
+
+const payload = await getPayload({
+  config: payloadConfig,
+});
+
+const data = await payload.findGlobal({
+  depth: 5,
+  slug: 'header-menu',
+});
 
 export default function RootLayout({
   children,
@@ -22,7 +33,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Header />
+        <Header data={data} />
         <main
           className={styles.mainContainer}
         >

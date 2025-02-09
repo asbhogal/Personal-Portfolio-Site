@@ -90,9 +90,13 @@ export default async function Page({ params }: Props): Promise<JSX.Element> {
         <ArrowDown className={styles.arrowDown} />
       </FadeIn>
       <Spacer height={10} />
-      <FadeIn>
-        <TypefaceBlock typeface={project.typeface} />
-      </FadeIn>
+      {
+        project.typeface && (
+          <FadeIn>
+            <TypefaceBlock typeface={project.typeface} />
+          </FadeIn>
+        )
+      }
       {
         project.showcase && project.showcase.length > 0 && (
           <FadeIn>
