@@ -1,4 +1,4 @@
-import { CollectionConfig } from 'payload';
+import type { CollectionConfig } from 'payload';
 import { ContentBlock } from '../blocks/content';
 import { SubheadingBlock } from '../blocks/subheading';
 import { SliderBlock } from '../blocks/slider';

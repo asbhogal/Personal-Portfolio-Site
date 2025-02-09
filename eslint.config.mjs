@@ -34,6 +34,11 @@ export const rootEslintConfig = [
     files: ['**/*.{js,jsx,ts,tsx}'],
   },
   {
+    rules: {
+      'no-undef': 'off',
+    }
+  },
+  {
     plugins: {
       esLintNodePlugin,
     },

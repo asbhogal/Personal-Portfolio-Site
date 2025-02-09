@@ -1,4 +1,6 @@
 import { constructClassName } from '@/utils/constructClassName';
+import type { JSX } from 'react';
+import React from 'react';
 import styles from './styles.module.scss';
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -7,7 +9,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   name: string;
 }
 
-export const Button = ({ children, className, name, ...props }: Props) => (
+export const Button = ({ children, className, name, ...props }: Props): JSX.Element => (
   <button
     className={constructClassName([
       className,

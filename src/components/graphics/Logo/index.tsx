@@ -1,9 +1,12 @@
+import type { JSX } from 'react';
+import React from 'react';
+
 interface Props {
   className?: string;
   width?: number;
 }
 
-export const Logo = ({ className, width = 88 }: Props) => (
+export const Logo = ({ className, width = 88 }: Props): JSX.Element => (
   <svg
     className={className}
     width={width}

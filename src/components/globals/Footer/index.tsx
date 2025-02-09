@@ -1,12 +1,14 @@
+import React from 'react';
 import Image from 'next/image';
 import { getPayload } from 'payload';
 import configPromise from '@payload-config';
+import type { JSX } from 'react';
 import styles from './styles.module.scss';
 import { Link } from '../Link';
 import { FadeIn } from '../FadeIn';
 import { WebsiteCarbon } from '../WebsiteCarbon';
 
-export const Footer = async () => {
+export const Footer = async (): Promise<JSX.Element> => {
   const payload = await getPayload({
     config: configPromise,
   });
@@ -54,15 +56,15 @@ export const Footer = async () => {
               className={styles.footerUl}
               key={footerItem.id}
             >
-              {footerMenu?.map((primaryFooterItem) => (primaryFooterItem.footerMenuItem?.footerMenuItemText === 'Primary'
-                ? primaryFooterItem?.footerMenuItem?.footerLinks?.map((primary) => (
+              {footerMenu.map((primaryFooterItem) => (primaryFooterItem.footerMenuItem?.footerMenuItemText === 'Primary'
+                ? primaryFooterItem.footerMenuItem.footerLinks?.map((primary) => (
                   <li
                     key={primary.id}
                     className={styles.footerLi}
                   >
                     <FadeIn>
                       <Link
-                        href={primary.footerLinkUrl || ''}
+                        href={primary.footerLinkUrl ?? ''}
                       >
                         {primary.footerLink}
                       </Link>
@@ -74,14 +76,14 @@ export const Footer = async () => {
           )))}
           <ul className={styles.footerUl}>
             {footerMenu?.map((footerItem) => (footerItem.footerMenuItem?.footerMenuItemText === 'Secondary'
-              ? footerItem?.footerMenuItem?.footerLinks?.map((secondary) => (
+              ? footerItem.footerMenuItem.footerLinks?.map((secondary) => (
                 <li
                   className={styles.footerLi}
                   key={secondary.id}
                 >
                   <FadeIn>
                     <Link
-                      href={secondary.footerLinkUrl || ''}
+                      href={secondary.footerLinkUrl ?? ''}
                     >
                       {secondary.footerLink}
                     </Link>

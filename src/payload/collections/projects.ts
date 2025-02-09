@@ -1,4 +1,4 @@
-import { CollectionConfig } from 'payload';
+import type { CollectionConfig } from 'payload';
 import { ListBlock } from '../blocks/list';
 import { ContentBlock } from '../blocks/content';
 import { ImageGridBlock } from '../blocks/image-grid';

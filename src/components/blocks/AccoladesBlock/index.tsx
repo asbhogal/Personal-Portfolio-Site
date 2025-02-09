@@ -1,15 +1,16 @@
-import { Page } from '@/payload-types';
+import type { Page } from '@/payload-types';
 import dayjs from 'dayjs';
+import type { JSX } from 'react';
 import React from 'react';
 import styles from './styles.module.scss';
 
-type AccoladesBlock = Extract<NonNullable<Page['layout']>[number], { blockType: 'accolades-block' }>;
+type AccoladesBlockType = Extract<NonNullable<Page['layout']>[number], { blockType: 'accolades-block' }>;
 
 interface Props {
-  accolades: AccoladesBlock['accolade'];
+  accolades: AccoladesBlockType['accolade'];
 }
 
-export const AccoladesBlock = ({ accolades }: Props) => (
+export const AccoladesBlock = ({ accolades }: Props): JSX.Element => (
   <ul className={styles.container}>
     {accolades?.map((accolade) => (
       <React.Fragment key={accolade.id}>

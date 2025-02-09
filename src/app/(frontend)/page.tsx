@@ -1,10 +1,11 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import React from 'react';
 import { Heading } from '@/src/components/globals';
-import { getPayload, PaginatedDocs } from 'payload';
+import type { PaginatedDocs } from 'payload';
+import { getPayload } from 'payload';
 import configPromise from '@payload-config';
 import Image from 'next/image';
-import { Project } from '@/payload-types';
+import type { Page, Project } from '@/payload-types';
 import { Subheading } from '@/src/components/typography';
 import dayjs from 'dayjs';
 import Link from 'next/link';
@@ -29,12 +30,12 @@ export const metadata: Metadata = {
   title: 'Aman Singh Bhogal | Award Winning Creative Front End Developer',
 };
 
-export default async function Page() {
+export default async function Home(): Promise<React.ReactNode> {
   const payload = await getPayload({
     config: configPromise,
   });
 
-  const { docs }: PaginatedDocs = await payload.find({
+  const { docs }: PaginatedDocs<Page> = await payload.find({
     collection: 'pages',
     where: {
       title: {
@@ -71,11 +72,11 @@ export default async function Page() {
               <div className={styles.imageContainer}>
                 {typeof project.heroImage === 'object' && (
                   <Image
-                    width={project.heroImage.width as number}
-                    height={project.heroImage.height as number}
+                    width={project.heroImage.width ?? 500}
+                    height={project.heroImage.height ?? 500}
                     className={styles.image}
                     src={`${project.heroImage.url}`}
-                    alt={project.heroImage.altText as string}
+                    alt={project.heroImage.altText}
                   />
                 )}
                 <Link

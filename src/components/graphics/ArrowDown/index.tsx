@@ -1,9 +1,12 @@
+import type { JSX } from 'react';
+import React from 'react';
+
 interface Props {
   className?: string;
   width?: number;
 }
 
-export const ArrowDown = ({ className, width = 16 }: Props) => (
+export const ArrowDown = ({ className, width = 16 }: Props): JSX.Element => (
   <svg
     className={className}
     width={width}

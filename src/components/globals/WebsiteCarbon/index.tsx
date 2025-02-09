@@ -1,4 +1,6 @@
 
+import React from 'react';
+import type { JSX } from 'react';
 import { Link } from '../Link';
 import styles from './styles.module.scss';
 
@@ -25,12 +27,13 @@ export interface WebsiteCarbonData {
   }
 }
 
-export const WebsiteCarbon = async () => {
+export const WebsiteCarbon = async (): Promise<JSX.Element> => {
   const data = await fetch(`https://api.websitecarbon.com/site?url=${process.env.API_BASE_URL}`, {
     cache: 'force-cache',
   });
 
-  const json: WebsiteCarbonData = await data.json();
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
+  const json = await data.json() as unknown as WebsiteCarbonData;
 
   return (
     <div className={styles.container}>
@@ -44,7 +47,8 @@ export const WebsiteCarbon = async () => {
           href={`https://www.websitecarbon.com/website/${process.env.API_BASE_URL}/`}
           target="_blank"
         >
-          {json.statistics.co2.grid.grams.toFixed(2)}
+          { }
+          {typeof json.statistics.co2.grid.grams === 'number' ? json.statistics.co2.grid.grams.toFixed(2) : ''}
           g
           {' '}
           of  CO₂

@@ -35,12 +35,12 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     "src/components/typography/RichText/serialize.tsx",
     "src/components/typography/RichText/nodeFormat.tsx",
-    "payload-types.ts"
+    "payload-types.ts",
+    ".next/types/**/*.ts"
   ]
 }

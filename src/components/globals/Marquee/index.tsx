@@ -1,6 +1,8 @@
 'use client';
 
-import { motion, Variants } from 'motion/react';
+import { motion } from 'motion/react';
+import type { Variants } from 'motion/react';
+import type { JSX } from 'react';
 import React from 'react';
 import styles from './styles.module.scss';
 
@@ -21,7 +23,7 @@ const getMarqueeVariants = (direction: 'left' | 'right'): Variants => ({
   },
 });
 
-export const Marquee = ({ text, direction = 'left' }: Props) => (
+export const Marquee = ({ text, direction = 'left' }: Props): JSX.Element => (
   <div className={styles.marquee}>
     <motion.div
       variants={getMarqueeVariants(direction)}

@@ -1,10 +1,12 @@
 'use client';
 
+import type { JSX } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { PaginatedDocs } from 'payload';
-import { useEffect, useState } from 'react';
+import type { PaginatedDocs } from 'payload';
 import { VscDash } from 'react-icons/vsc';
 import colors from '@/src/styles/colors/index.module.scss';
+import type { Media } from '@/payload-types';
 import styles from './styles.module.scss';
 import { FadeIn } from '../FadeIn';
 import { Marquee } from '../Marquee';
@@ -17,22 +19,24 @@ interface Props {
   title: string;
 }
 
-export const Heading = ({ headerImage, title }: Props) => {
+export const Heading = ({ headerImage, title }: Props): JSX.Element => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
 
-    const handleResize = () => {
+    const handleResize = (): void => {
       setWindowWidth(window.innerWidth);
     };
 
     window.addEventListener('resize', handleResize);
 
-    return () => {
+    return (): void => {
       window.removeEventListener('resize', handleResize);
     };
   }, [windowWidth]);
+
+  const isMedia = (image: unknown): image is Media => typeof image === 'object' && image !== null && 'url' in image && 'altText' in image;
 
   return (
     <div
@@ -51,13 +55,15 @@ export const Heading = ({ headerImage, title }: Props) => {
             )
           }
           <div className={styles.headerImageContainer}>
-            <Image
-              className={styles.headerImage}
-              src={headerImage.url}
-              alt={headerImage.altText}
-              width={headerImage.width}
-              height={headerImage.height}
-            />
+            {isMedia(headerImage) && (
+              <Image
+                className={styles.headerImage}
+                src={`${headerImage.url}`}
+                alt={headerImage.altText}
+                width={headerImage.width ?? 1000}
+                height={headerImage.height ?? 1000}
+              />
+            )}
           </div>
           <div className={styles.linksContainer}>
             <Link href="/about">

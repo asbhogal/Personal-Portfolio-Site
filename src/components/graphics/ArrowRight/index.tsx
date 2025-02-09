@@ -1,8 +1,11 @@
+import type { JSX } from 'react';
+import React from 'react';
+
 interface Props {
   width?: number;
 }
 
-export const ArrowRight = ({ width = 18 }: Props) => (
+export const ArrowRight = ({ width = 18 }: Props): JSX.Element => (
   <svg
     width={width}
     height={width * (10 / 18)}
