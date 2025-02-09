@@ -1,14 +1,16 @@
 import React from 'react';
 
-import { Page } from '@/payload-types';
-import { DefaultNodeTypes } from '@payloadcms/richtext-lexical';
+import type { Page } from '@/payload-types';
+import type { DefaultNodeTypes } from '@payloadcms/richtext-lexical';
 import { serializeLexical } from './serialize';
 
-type Props = {
+interface Props {
+  className?: string;
   content: Page['content'];
 }
 
 export const RichText: React.FC<Props> = ({
+  className,
   content,
 }) => {
   if (!content) {
@@ -16,12 +18,12 @@ export const RichText: React.FC<Props> = ({
   }
 
   return (
-    <div className="RichTextContainer">
-      {content
-        && !Array.isArray(content)
+    <div className={['RichTextContainer', className].filter(Boolean).join(' ')}>
+      {!Array.isArray(content)
         && typeof content === 'object'
         && 'root' in content
-        && serializeLexical({ nodes: content?.root?.children as DefaultNodeTypes[] })}
+        // eslint-disable-next-line
+        && serializeLexical({ nodes: content.root.children as DefaultNodeTypes[] })}
     </div>
   );
 };

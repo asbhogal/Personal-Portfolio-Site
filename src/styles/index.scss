@@ -1,3 +1,4 @@
+@forward './breakpoints/index.module';
+@forward './colors/index.module';
 @forward "./mixins/index.module";
-@forward "./variables/index.module";
 @forward "./typography/index.module";

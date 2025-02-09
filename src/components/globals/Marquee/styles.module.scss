@@ -1,0 +1,27 @@
+@use "../../../styles/index.scss" as *;
+
+.marquee {
+  max-width: 100%;
+  overflow-x: hidden;
+  width: 100dvw;
+}
+
+.track {
+  background-color: $SmokyBlack;
+  display: flex;
+  gap: .3125rem;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.track > p {
+  color: $Argent;
+  font-size: 1.3125rem;
+  margin: 1.25rem 0;
+  text-transform: uppercase;
+
+  &::before {
+    content: "|";
+    margin-right: .625rem;
+  }
+}

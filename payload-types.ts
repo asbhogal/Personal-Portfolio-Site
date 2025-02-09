@@ -107,6 +107,7 @@ export interface Page {
     };
     [k: string]: unknown;
   } | null;
+  headerImage?: (string | null) | Media;
   SEO?: {
     title?: string | null;
     description?: string | null;
@@ -277,7 +278,7 @@ export interface Project {
   id: string;
   heroImage: string | Media;
   title: string;
-  titleImage: string | Media;
+  date?: string | null;
   stacks?:
     | {
         title?: string | null;
@@ -292,28 +293,26 @@ export interface Project {
         blockType: 'list-block';
       }[]
     | null;
-  description?:
-    | {
-        Content?: {
-          root: {
-            type: string;
-            children: {
-              type: string;
-              version: number;
-              [k: string]: unknown;
-            }[];
-            direction: ('ltr' | 'rtl') | null;
-            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-            indent: number;
-            version: number;
-          };
+  description: {
+    Content?: {
+      root: {
+        type: string;
+        children: {
+          type: string;
+          version: number;
           [k: string]: unknown;
-        } | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'content-block';
-      }[]
-    | null;
+        }[];
+        direction: ('ltr' | 'rtl') | null;
+        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+        indent: number;
+        version: number;
+      };
+      [k: string]: unknown;
+    } | null;
+    id?: string | null;
+    blockName?: string | null;
+    blockType: 'content-block';
+  }[];
   typeface?:
     | {
         typeface?: string | null;
@@ -432,6 +431,7 @@ export interface UsersSelect<T extends boolean = true> {
 export interface PagesSelect<T extends boolean = true> {
   title?: T;
   content?: T;
+  headerImage?: T;
   SEO?:
     | T
     | {
@@ -554,7 +554,7 @@ export interface PagesSelect<T extends boolean = true> {
 export interface ProjectsSelect<T extends boolean = true> {
   heroImage?: T;
   title?: T;
-  titleImage?: T;
+  date?: T;
   stacks?:
     | T
     | {

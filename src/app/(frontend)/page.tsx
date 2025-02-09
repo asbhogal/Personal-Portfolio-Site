@@ -1,11 +1,15 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import React from 'react';
-import { FadeIn, Heading, Spacer } from '@/src/components/globals';
-import { getPayload, PaginatedDocs } from 'payload';
+import { Heading } from '@/src/components/globals';
+import type { PaginatedDocs } from 'payload';
+import { getPayload } from 'payload';
 import configPromise from '@payload-config';
-import { RichText, Subheading } from '@/src/components/typography';
-import { ArrowDown } from '@/src/components/graphics';
-import { AccoladesBlock, SliderBlock } from '@/src/components/blocks';
+import Image from 'next/image';
+import type { Page, Project } from '@/payload-types';
+import { Subheading } from '@/src/components/typography';
+import dayjs from 'dayjs';
+import Link from 'next/link';
+import { MdArrowOutward } from 'react-icons/md';
 import styles from './styles.module.scss';
 
 export const metadata: Metadata = {
@@ -26,12 +30,12 @@ export const metadata: Metadata = {
   title: 'Aman Singh Bhogal | Award Winning Creative Front End Developer',
 };
 
-export default async function Page() {
+export default async function Home(): Promise<React.ReactNode> {
   const payload = await getPayload({
     config: configPromise,
   });
 
-  const data: PaginatedDocs = await payload.find({
+  const { docs }: PaginatedDocs<Page> = await payload.find({
     collection: 'pages',
     where: {
       title: {
@@ -40,41 +44,56 @@ export default async function Page() {
     },
   });
 
-  const { docs } = data;
+  const { docs: projectDocs } = await payload.find({
+    collection: 'projects',
+
+  });
 
   return (
-    <div className={styles.container}>
-      <Heading title={
-        docs[0]?.title || 'Aman Singh Bhogal'
-      }
-      />
-      <Spacer height={150} />
-      <FadeIn>
-        <RichText content={
-          docs[0]?.layout?.[0].Content || []
-        }
+    <React.Fragment>
+      <div className={styles.pageHeader}>
+        <Heading
+          title="Aman Singh Bhogal"
+          headerImage={docs[0]?.headerImage}
         />
-      </FadeIn>
-      <FadeIn>
-        <ArrowDown className={styles.arrow} />
-      </FadeIn>
-      <div className={styles.containerInner}>
-        <FadeIn>
-          <Subheading subheading={docs[0]?.layout?.[1].subheading} />
-        </FadeIn>
-        <FadeIn>
-          <AccoladesBlock accolades={docs[0]?.layout?.[2].accolade} />
-        </FadeIn>
       </div>
-      <Spacer height={120} />
-      <div className={styles.containerInner}>
-        <FadeIn>
-          <Subheading subheading={docs[0]?.layout?.[4].title} />
-        </FadeIn>
-        <FadeIn>
-          <SliderBlock items={docs[0]?.layout?.[4]} />
-        </FadeIn>
+      <Subheading subheading="Work" />
+      <div className={styles.gridContainer}>
+        <div className={styles.verticalDivider} />
+        {projectDocs
+          .sort((a: Project, b: Project) => (
+            dayjs(b.date).unix() - dayjs(a.date).unix()
+          ))
+          .map((project: Project) => (
+            <div
+              key={project.id}
+              className={styles.gridItem}
+            >
+              <div className={styles.imageContainer}>
+                {typeof project.heroImage === 'object' && (
+                  <Image
+                    width={project.heroImage.width ?? 500}
+                    height={project.heroImage.height ?? 500}
+                    className={styles.image}
+                    src={`${project.heroImage.url}`}
+                    alt={project.heroImage.altText}
+                  />
+                )}
+                <Link
+                  className={styles.projectLink}
+                  href={`/work/${project.slug}`}
+                >
+                  <p>Visit</p>
+                  <MdArrowOutward />
+                </Link>
+              </div>
+              <div className={styles.gridContent}>
+                <h3>{project.title}</h3>
+                <p>{dayjs(project.date).format('MMMM YYYY')}</p>
+              </div>
+            </div>
+          ))}
       </div>
-    </div>
+    </React.Fragment>
   );
 }

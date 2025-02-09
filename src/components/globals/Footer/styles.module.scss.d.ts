@@ -1,7 +1,12 @@
+export declare const argent: string;
 export declare const copyright: string;
 export declare const footer: string;
 export declare const footerBottom: string;
+export declare const footerLeftContent: string;
 export declare const footerLi: string;
 export declare const footerLinks: string;
 export declare const footerLogo: string;
 export declare const footerUl: string;
+export declare const khaki: string;
+export declare const name: string;
+export declare const smokyBlack: string;

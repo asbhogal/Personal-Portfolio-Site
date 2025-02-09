@@ -2,21 +2,19 @@
   position: relative;
 }
 
-.arrowDown {
-  margin-bottom: 14.375rem;
-  margin-left: calc(100dvw / 7);
-
-  @media only screen and (width <=48rem) {
-    margin: 0 auto;
-  }
-}
-
 .container {
   position: relative;
 }
 
 .title {
   margin-bottom: 2.8125rem;
+}
+
+.aboutSummary {
+  margin-bottom: 3.75rem;
+  margin-left: auto;
+  max-width: 50rem;
+  width: 100%;
 }
 
 .logo {

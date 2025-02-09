@@ -1,2 +1,10 @@
+export declare const argent: string;
+export declare const headerContainer: string;
+export declare const headerImage: string;
+export declare const headerImageContainer: string;
 export declare const homePageImage: string;
 export declare const homePageSection: string;
+export declare const khaki: string;
+export declare const linksContainer: string;
+export declare const logo: string;
+export declare const smokyBlack: string;

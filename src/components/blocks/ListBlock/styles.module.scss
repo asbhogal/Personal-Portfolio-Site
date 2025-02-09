@@ -17,7 +17,6 @@
 }
 
 .li {
-  @include h3;
 
   &:not(:last-child) {
     &::after {

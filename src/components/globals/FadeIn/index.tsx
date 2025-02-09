@@ -1,6 +1,8 @@
 'use client';
 
 import { motion } from 'motion/react';
+import type { JSX } from 'react';
+import React from 'react';
 
 interface Props {
   children: React.ReactNode;
@@ -10,7 +12,7 @@ interface Props {
 export const FadeIn = ({
   children,
   className,
-}: Props) => (
+}: Props): JSX.Element => (
   <motion.div
     className={className}
     initial={{ opacity: 0 }}

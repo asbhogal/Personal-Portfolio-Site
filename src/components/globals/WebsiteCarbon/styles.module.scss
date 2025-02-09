@@ -3,7 +3,6 @@
 .container {
   align-items: center;
   background-color: transparent;
-  border: .0313rem solid $Khaki;
   display: flex;
   flex-direction: row;
   width: fit-content;
@@ -12,13 +11,10 @@
 .containerInner {
   background-color: transparent;
   color: $Khaki;
-  padding: 0.5rem;
 }
 
 .title {
   font-size: 1rem !important;
-  text-transform: uppercase;
-  @include accent;
 }
 
 .carbonCount {
@@ -27,6 +23,5 @@
   a {
     font-size: 1rem !important;
     text-transform: none !important;
-    @include h4;
   }
 }

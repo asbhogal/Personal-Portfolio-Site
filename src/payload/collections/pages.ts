@@ -1,4 +1,4 @@
-import { CollectionConfig } from 'payload';
+import type { CollectionConfig } from 'payload';
 import { ContentBlock } from '../blocks/content';
 import { SubheadingBlock } from '../blocks/subheading';
 import { SliderBlock } from '../blocks/slider';
@@ -19,6 +19,11 @@ export const Pages: CollectionConfig = {
     {
       name: 'content',
       type: 'richText',
+    },
+    {
+      name: 'headerImage',
+      relationTo: 'media',
+      type: 'upload',
     },
     {
       admin: {

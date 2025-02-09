@@ -1,14 +1,16 @@
-import { Page } from '@/payload-types';
+import type { JSX } from 'react';
+import React from 'react';
+import type { Page } from '@/payload-types';
 import dayjs from 'dayjs';
 import styles from './styles.module.scss';
 
-type AboutBlock = Extract<NonNullable<Page['layout']>[number], { blockType: 'about-block' }>;
+type AboutBlockType = Extract<NonNullable<Page['layout']>[number], { blockType: 'about-block' }>;
 
 interface Props {
-  history: AboutBlock['about'];
+  history: AboutBlockType['about'];
 }
 
-export const AboutBlock = ({ history }: Props) => (
+export const AboutBlock = ({ history }: Props): JSX.Element => (
   <ul className={styles.containerOuter}>
     {history?.map((event) => (
       <li
@@ -16,41 +18,34 @@ export const AboutBlock = ({ history }: Props) => (
         key={event.id}
       >
         <div className={styles.containerInner}>
-          <div className={styles.containerInnerHeader}>
-            <p className={styles.date}>{dayjs(event.date).format('MMM YYYY')}</p>
+          <div className={styles.dateContainer}>
+            <p>{dayjs(event.date).format('MMM YYYY')}</p>
             <span>-</span>
-            <p className={styles.date}>
-              {event.endDate ? (dayjs(event.endDate).format('MMM YYYY')) : 'Present'}
+            <p>
+              {(event.endDate ?? '') ? (dayjs(event.endDate).format('MMM YYYY')) : 'Present'}
             </p>
           </div>
-          <p className={styles.position}>
-            {event.position}
-          </p>
-          <p className={styles.company}>{event.company}</p>
+          <div className={styles.containerInnerHeader}>
+            <h2>
+              {event.position}
+            </h2>
+            <div>
+              <h3>{event.company}</h3>
+              <div className={styles.containerInner}>
+                <ul className={styles.stacks}>
+                  {event.stacks?.map((stack) => (
+                    <li
+                      className={styles.stack}
+                      key={stack.id}
+                    >
+                      {stack.stack}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className={styles.containerInner}>
-          <ul className={styles.stacks}>
-            {event?.stacks?.map((stack) => (
-              <li
-                className={styles.stack}
-                key={stack.id}
-              >
-                {stack.stack}
-              </li>
-            ))}
-          </ul>
-          <ul className={styles.responsibilities}>
-            {event?.responsibilities?.map((responsibility) => (
-              <li
-                className={styles.responsibility}
-                key={responsibility.id}
-              >
-                {responsibility.responsibility}
-              </li>
-            ))}
-          </ul>
-        </div>
-
       </li>
     ))}
   </ul>

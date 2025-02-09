@@ -1,7 +1,9 @@
+import type { JSX } from 'react';
+import React from 'react';
 import { FadeIn } from '../../globals';
 import styles from './styles.module.scss';
 
-export const Error = () => (
+export const Error = (): JSX.Element => (
   <FadeIn
     className={styles.errorPage}
   >

@@ -9,34 +9,101 @@
   width: 100%;
 }
 
-.arrow {
-  margin-bottom: 14.375rem;
-  margin-left: calc(100dvw / 7);
-
-  @media only screen and (width <=48rem) {
-    margin: 0 auto;
-    width: 100%;
-  }
-}
-
 .container {
   position: relative;
 }
 
-.containerInner {
-  align-items: flex-end;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.pageHeader {
+  position: relative;
 
-  &>div {
-    flex: 1;
+  @include queries(sm) {
+    height: calc(100dvh - 3.75rem);
+  }
+}
+
+.gridContainer {
+  border-bottom: .0625rem solid $Khaki;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+
+  @include queries(md) {
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+.projectLink {
+  align-items: center;
+  background-color: $SmokyBlack;
+  bottom: 0;
+  cursor: pointer;
+  display: flex;
+  gap: .125rem;
+  opacity: 0;
+  padding: .3125rem;
+  position: absolute;
+  right: 0;
+  transition: opacity .3s;
+  visibility: hidden;
+}
+
+.imageContainer {
+  height: 100%;
+  position: relative;
+  width: 100%;
+
+  &:hover .projectLink {
+    opacity: 1;
+    transition: opacity .3s;
+    visibility: visible;
+  }
+}
+
+.verticalDivider {
+  background-color: $Khaki;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: .0625rem;
+
+  @media only screen and (width < 55rem) {
+    display: none;
+  }
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 50dvh;
+  padding: 1.25rem;
+
+  &:not(:last-child) {
+    border-bottom: .0625rem solid $Khaki;
   }
 
-  @media only screen and (width <=48rem) {
-    align-items: center;
-    flex-direction: column;
-    gap: 1.25rem;
-    height: auto;
+  @include queries(md) {
+    padding: 0;
+  }
+}
+
+.image {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.gridContent {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include queries(md) {
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
   }
 }

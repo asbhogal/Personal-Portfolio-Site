@@ -11,12 +11,12 @@
     margin-bottom: 3.75rem;
   }
 
-  @media only screen and (width <=48rem) {
+  @include queries(md) {
     flex-direction: column;
     gap: 1.25rem;
 
     &:not(:last-child) {
-      margin-bottom: 1.25rem;
+      margin-bottom: 3.25rem;
     }
   }
 }
@@ -30,9 +30,14 @@
 
 .containerInnerHeader {
   align-items: center;
-  display: flex;
-  flex-direction: row;
-  gap: .625rem;
+  display: grid;
+  gap: 3.625rem;
+  grid-template-columns: auto auto;
+
+  @include queries(md) {
+    gap: 1.25rem;
+    grid-template-columns: auto;
+  }
 }
 
 .containerOuter {
@@ -41,13 +46,10 @@
   width: 100%;
 }
 
-.position {
-  @include accent;
-}
-
-.company,
-.responsibility {
-  @include body-large;
+.dateContainer {
+  display: flex;
+  flex-direction: row;
+  gap: .625rem;
 }
 
 .stacks {
@@ -55,19 +57,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   list-style-type: none;
-}
-
-.responsibilities {
-  display: flex;
-  flex-direction: column;
-  list-style: disc;
-  margin-left: 1.25rem;
-  text-align: justify;
-}
-
-.stack,
-.date {
-  @include h4;
 }
 
 .stack {

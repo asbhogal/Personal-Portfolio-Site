@@ -12,6 +12,10 @@
   width: 100%;
 }
 
+.headerLogo {
+  display: flex;
+}
+
 .headerUl {
   display: flex;
   gap: 1.875rem;
@@ -22,4 +26,10 @@
 .headerLi {
   display: flex;
   gap: 1.875rem;
+}
+
+.toggleButton {
+  cursor: pointer;
+  position: relative !important;
+  z-index: 99999999999999 !important;
 }

@@ -1,4 +1,4 @@
-import { CollectionConfig } from 'payload';
+import type { CollectionConfig } from 'payload';
 import { ListBlock } from '../blocks/list';
 import { ContentBlock } from '../blocks/content';
 import { ImageGridBlock } from '../blocks/image-grid';
@@ -25,10 +25,13 @@ export const Projects: CollectionConfig = {
       type: 'text',
     },
     {
-      name: 'titleImage',
-      relationTo: 'media',
-      required: true,
-      type: 'upload',
+      admin: {
+        date: {
+          displayFormat: 'dd MM yyyy',
+        },
+      },
+      name: 'date',
+      type: 'date',
     },
     {
       blocks: [ListBlock],
@@ -38,6 +41,7 @@ export const Projects: CollectionConfig = {
     {
       blocks: [ContentBlock],
       name: 'description',
+      required: true,
       type: 'blocks',
     },
     {

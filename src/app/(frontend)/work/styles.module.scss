@@ -9,7 +9,6 @@
 }
 
 .container {
-  overflow-x: hidden;
   position: relative;
 }
 
@@ -22,7 +21,7 @@
 }
 
 .projectTitle {
-  @include subtitle;
+  text-align: right;
 }
 
 .image {
@@ -37,19 +36,20 @@
 }
 
 .projectContainer {
-  display: flex;
-  flex-direction: column;
-  gap: .625rem;
+  align-items: flex-end;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr 1fr;
+
+  @include queries(md) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .grid {
-  display: grid;
-  gap: 2.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(31.25rem, 1fr));
-
-  @media only screen and (width <=37.5rem) {
-    grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 .info {

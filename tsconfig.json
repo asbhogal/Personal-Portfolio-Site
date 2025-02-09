@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "ES2024",
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "ES2024"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -32,14 +32,17 @@
     }
   },
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "next-env.d.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     "src/components/typography/RichText/serialize.tsx",
-    "src/components/typography/RichText/nodeFormat.tsx"
+    "src/components/typography/RichText/nodeFormat.tsx",
+    "payload-types.ts",
+    ".next/types/**/*.ts",
+    "src/app/(payload)/**"
   ]
 }

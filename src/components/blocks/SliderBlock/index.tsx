@@ -1,25 +1,26 @@
 'use client';
 
+import type { JSX } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import { Page } from '@/payload-types';
+import type { Page } from '@/payload-types';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 import '@splidejs/react-splide/css';
 
-type SliderBlock = Extract<NonNullable<Page['layout']>[number], { blockType: 'slider-block' }>;
+type SliderBlockType = Extract<NonNullable<Page['layout']>[number], { blockType: 'slider-block' }>;
 
 interface Props {
-  items: SliderBlock;
+  items: SliderBlockType;
 }
 
-export const SliderBlock = ({ items }: Props) => {
+export const SliderBlock = ({ items }: Props): JSX.Element => {
   const [direction, setDirection] = useState<'ltr' | 'rtl' | 'ttb' | 'btt'>('ttb');
   const [wheel, setWheel] = useState<boolean | undefined>(undefined);
 
   useEffect(() => {
-    const handleResize = () => {
+    const handleResize = (): void => {
       if (window.innerWidth < 768) {
         setDirection('ltr');
         setWheel(false);
@@ -32,7 +33,7 @@ export const SliderBlock = ({ items }: Props) => {
     handleResize();
     window.addEventListener('resize', handleResize);
 
-    return () => {
+    return (): void => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
