@@ -28,6 +28,9 @@ export const rootEslintConfig = [
       'src/components/typography/RichText/nodeFormat.tsx',
       'payload-types.ts',
       'eslint.config.mjs',
+      'src/app/admin/**',
+      'src/app/api/**',
+      'src/app/(payload)/**'
     ],
   },
   {
