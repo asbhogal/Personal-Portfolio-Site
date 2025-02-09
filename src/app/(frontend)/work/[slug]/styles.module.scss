@@ -1,6 +1,8 @@
 @use '../../../../styles/index.scss' as *;
+@use 'sass:color';
 
 .imageContainer {
+  height: 50%;
   width: 100%;
 }
 
@@ -12,7 +14,6 @@
 
 .pageHeader {
   align-items: flex-end;
-  border-top: 0.0625rem solid $Argent;
   display: grid;
   gap: 1.25rem;
   grid-template-columns: 1fr 1fr;
@@ -23,8 +24,7 @@
 }
 
 .descriptionContainer {
-  border-bottom: 0.0625rem solid $Argent;
-  border-top: 0.0625rem solid $Argent;
+  background-color: color.adjust($SmokyBlack, $lightness: 1%);
   display: grid;
   gap: 1.25rem;
   grid-template-columns: 1fr 1fr;

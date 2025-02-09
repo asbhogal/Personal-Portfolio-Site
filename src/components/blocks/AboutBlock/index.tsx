@@ -23,10 +23,10 @@ export const AboutBlock = ({ history }: Props) => (
               {event.endDate ? (dayjs(event.endDate).format('MMM YYYY')) : 'Present'}
             </p>
           </div>
-          <p className={styles.position}>
+          <h2>
             {event.position}
-          </p>
-          <p className={styles.company}>{event.company}</p>
+          </h2>
+          <h3>{event.company}</h3>
         </div>
         <div className={styles.containerInner}>
           <ul className={styles.stacks}>
@@ -36,16 +36,6 @@ export const AboutBlock = ({ history }: Props) => (
                 key={stack.id}
               >
                 {stack.stack}
-              </li>
-            ))}
-          </ul>
-          <ul className={styles.responsibilities}>
-            {event?.responsibilities?.map((responsibility) => (
-              <li
-                className={styles.responsibility}
-                key={responsibility.id}
-              >
-                {responsibility.responsibility}
               </li>
             ))}
           </ul>

@@ -3,7 +3,7 @@ import configPromise from '@payload-config';
 import { Metadata, ResolvingMetadata } from 'next';
 import Image from 'next/image';
 import { ProjectShowcaseBlock, TypefaceBlock } from '@/src/components/blocks';
-import { RichText } from '@/src/components/typography';
+import { RichText, VisuallyHidden } from '@/src/components/typography';
 import { ArrowDown } from '@/src/components/graphics';
 import { Suspense } from 'react';
 import Loading from '@/src/components/globals/Loading';
@@ -59,7 +59,6 @@ export default async function Page({ params }: Props) {
   return (
     <Suspense fallback={<Loading />}>
       <FadeIn className={styles.pageHeader}>
-        <h1>{project.title}</h1>
         <FadeIn>
           <div className={styles.imageContainer}>
             <Image
@@ -72,9 +71,12 @@ export default async function Page({ params }: Props) {
             />
           </div>
         </FadeIn>
+        <h1>{project.title}</h1>
       </FadeIn>
       <FadeIn className={styles.descriptionContainer}>
-        <h2>About</h2>
+        <VisuallyHidden>
+          <h2>About</h2>
+        </VisuallyHidden>
         <RichText content={project.description[0].Content} />
       </FadeIn>
       <Spacer height={30} />

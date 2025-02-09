@@ -1,7 +1,6 @@
 @use "../../../styles/index.scss" as *;
 
 .RichText {
-  align-items: center;
   display: flex;
   font-weight: 200;
   @include body;
@@ -19,7 +18,6 @@
 }
 
 .RichTextContainer {
-  align-items: center;
   display: flex;
   flex-direction: column;
   gap: .625rem;

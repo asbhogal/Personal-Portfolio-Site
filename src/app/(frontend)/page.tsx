@@ -7,6 +7,8 @@ import Image from 'next/image';
 import { Project } from '@/payload-types';
 import { Subheading } from '@/src/components/typography';
 import dayjs from 'dayjs';
+import Link from 'next/link';
+import { MdArrowOutward } from 'react-icons/md';
 import styles from './styles.module.scss';
 
 export const metadata: Metadata = {
@@ -47,21 +49,12 @@ export default async function Page() {
   });
 
   return (
-    <div className={styles.container}>
+    <React.Fragment>
       <div className={styles.pageHeader}>
-        <Heading title={
-          docs[0]?.title || 'Aman Singh Bhogal'
-        }
+        <Heading
+          title="Aman Singh Bhogal"
+          headerImage={docs[0]?.headerImage}
         />
-        <div className={styles.headerContainer}>
-          <Image
-            className={styles.headerImage}
-            src={docs[0]?.headerImage.url}
-            alt={docs[0]?.headerImage.altText}
-            width={docs[0]?.headerImage.width}
-            height={docs[0]?.headerImage.height}
-          />
-        </div>
       </div>
       <Subheading subheading="Work" />
       <div className={styles.gridContainer}>
@@ -85,6 +78,13 @@ export default async function Page() {
                     alt={project.heroImage.altText as string}
                   />
                 )}
+                <Link
+                  className={styles.projectLink}
+                  href={`/work/${project.slug}`}
+                >
+                  <p>Visit</p>
+                  <MdArrowOutward />
+                </Link>
               </div>
               <div className={styles.gridContent}>
                 <h3>{project.title}</h3>
@@ -93,6 +93,6 @@ export default async function Page() {
             </div>
           ))}
       </div>
-    </div>
+    </React.Fragment>
   );
 }

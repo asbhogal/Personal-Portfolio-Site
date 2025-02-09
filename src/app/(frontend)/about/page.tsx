@@ -4,7 +4,7 @@ import { getPayload } from 'payload';
 import { RichText } from '@/src/components/typography';
 import configPromise from '@payload-config';
 import { AboutBlock } from '@/src/components/blocks';
-import { ArrowDown, Logo } from '@/src/components/graphics';
+import { Logo } from '@/src/components/graphics';
 import { FadeIn } from '@/src/components/globals';
 import styles from './styles.module.scss';
 
@@ -38,7 +38,6 @@ export default async function Page() {
         {/* @ts-expect-error resolve type mismatch */}
         <RichText content={docs[0]?.layout?.[0].Content || []} />
       </FadeIn>
-      <ArrowDown className={styles.arrowDown} />
       <div className={styles.aboutContainer}>
         <Logo
           className={styles.logo}

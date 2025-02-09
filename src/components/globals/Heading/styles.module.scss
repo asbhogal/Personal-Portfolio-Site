@@ -3,10 +3,10 @@
 .homePageSection {
   display: flex;
   flex-direction: column;
-  gap: 3.4375rem;
-  height: calc(100dvh - 3.75rem);
   justify-content: center;
+  position: relative;
   width: 100%;
+  z-index: 5;
 
   .homePageImage {
     height: 100%;
@@ -21,10 +21,51 @@
   }
 }
 
-.linksContainer {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
+.headerContainer {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+
+  @include queries(sm) {
+    grid-template-columns: 1fr;
+    width: 100%;
+
+    h1 {
+      visibility: hidden;
+    }
+  }
+}
+
+.headerImageContainer {
+  position: relative;
+  width: 100%;        
+}
+
+.headerImage {
+  height: 100%;
+  object-fit: contain;
   width: 100%;
-  z-index: 10;
+}
+
+.linksContainer {
+  bottom: 25%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+
+  @include queries(sm) {
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 10;
+  }
+}
+
+.logo{
+  opacity: 0.05;
+  position: absolute;
+  z-index: -1;
 }

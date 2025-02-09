@@ -41,28 +41,11 @@
   width: 100%;
 }
 
-.position {
-  font: 1.25em sans-serif;
-}
-
-.company,
-.responsibility {
-  font: 1em sans-serif;
-}
-
 .stacks {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   list-style-type: none;
-}
-
-.responsibilities {
-  display: flex;
-  flex-direction: column;
-  list-style: disc;
-  margin-left: 1.25rem;
-  text-align: justify;
 }
 
 .stack,
