@@ -60,6 +60,7 @@ export const Heading = ({ headerImage, title }: Props): JSX.Element => {
               alt={headerImage.altText}
               width={headerImage.width ?? 1000}
               height={headerImage.height ?? 1000}
+              priority
             />
           )}
         </div>

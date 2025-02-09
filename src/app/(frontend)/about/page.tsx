@@ -49,10 +49,12 @@ export default async function About(): Promise<JSX.Element> {
           width={500}
         />
         <FadeIn>
-          <AboutBlock history={
-            docs[0]?.layout?.[0].blockName === 'about-block' && 'about' in docs[0]?.layout?.[0] ? docs[0]?.layout?.[0].about : []
-          }
-          />
+          {docs[0]?.layout?.[0]?.blockType === 'about-block' && (
+            <AboutBlock history={
+              docs[0]?.layout?.[0]?.about
+            }
+            />
+          )}
         </FadeIn>
       </div>
     </div>
