@@ -8,7 +8,6 @@ import { VscDash } from 'react-icons/vsc';
 import colors from '@/src/styles/colors/index.module.scss';
 import type { Media } from '@/payload-types';
 import styles from './styles.module.scss';
-import { FadeIn } from '../FadeIn';
 import { Marquee } from '../Marquee';
 import { Link } from '../Link';
 import { Logo } from '../../graphics';
@@ -42,59 +41,57 @@ export const Heading = ({ headerImage, title }: Props): JSX.Element => {
     <div
       className={styles.homePageSection}
     >
-      <FadeIn>
-        <Marquee text="Award Winning Creative Developer" />
-        <div className={styles.headerContainer}>
-          {
-            windowWidth < 577 ? (
-              <VisuallyHidden>
-                <h1>{title}</h1>
-              </VisuallyHidden>
-            ) : (
+      <Marquee text="Award Winning Creative Developer" />
+      <div className={styles.headerContainer}>
+        {
+          windowWidth < 577 ? (
+            <VisuallyHidden>
               <h1>{title}</h1>
-            )
-          }
-          <div className={styles.headerImageContainer}>
-            {isMedia(headerImage) && (
-              <Image
-                className={styles.headerImage}
-                src={`${headerImage.url}`}
-                alt={headerImage.altText}
-                width={headerImage.width ?? 1000}
-                height={headerImage.height ?? 1000}
-              />
-            )}
-          </div>
-          <div className={styles.linksContainer}>
-            <Link href="/about">
-              {
-                windowWidth > 577 && (
-                  <VscDash
-                    size={20}
-                    color={colors.argent}
-                  />
-                )
-              }
-              About
-            </Link>
-            <Link href="/work">
-              {
-                windowWidth > 577 && (
-                  <VscDash
-                    size={20}
-                    color={colors.argent}
-                  />
-                )
-              }
-              Work
-            </Link>
-          </div>
+            </VisuallyHidden>
+          ) : (
+            <h1>{title}</h1>
+          )
+        }
+        <div className={styles.headerImageContainer}>
+          {isMedia(headerImage) && (
+            <Image
+              className={styles.headerImage}
+              src={`${headerImage.url}`}
+              alt={headerImage.altText}
+              width={headerImage.width ?? 1000}
+              height={headerImage.height ?? 1000}
+            />
+          )}
         </div>
-        <Marquee
-          direction="right"
-          text="Award Winning Creative Developer"
-        />
-      </FadeIn>
+        <div className={styles.linksContainer}>
+          <Link href="/about">
+            {
+              windowWidth > 577 && (
+                <VscDash
+                  size={20}
+                  color={colors.argent}
+                />
+              )
+            }
+            About
+          </Link>
+          <Link href="/work">
+            {
+              windowWidth > 577 && (
+                <VscDash
+                  size={20}
+                  color={colors.argent}
+                />
+              )
+            }
+            Work
+          </Link>
+        </div>
+      </div>
+      <Marquee
+        direction="right"
+        text="Award Winning Creative Developer"
+      />
       {
         windowWidth > 577 && (
           <Logo

@@ -15,6 +15,10 @@
 
 .pageHeader {
   position: relative;
+
+  @include queries(sm) {
+    height: calc(100dvh - 3.75rem);
+  }
 }
 
 .gridContainer {

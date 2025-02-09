@@ -19,6 +19,11 @@
       visibility: hidden;
     }
   }
+
+  @include queries(sm) {
+    height: 100%;
+    justify-content: space-between;
+  }
 }
 
 .headerContainer {
@@ -38,8 +43,13 @@
 }
 
 .headerImageContainer {
+  height: 75dvh;
   position: relative;
-  width: 100%;        
+  width: 100%;   
+  
+  @include queries(lg) {
+    height: 50dvh;
+  }
 }
 
 .headerImage {
@@ -49,10 +59,8 @@
 }
 
 .linksContainer {
-  bottom: 25%;
   display: flex;
   flex-direction: column;
-  position: absolute;
 
   a {
     align-items: center;
@@ -73,4 +81,8 @@
   opacity: 0.05;
   position: absolute;
   z-index: -1;
+
+  @include queries(sm) {
+    display: none;
+  }
 }
