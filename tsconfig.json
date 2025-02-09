@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "ES2024",
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "ES2024"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -15,7 +15,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {
@@ -35,11 +35,12 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
   ],
   "exclude": [
     "node_modules",
     "src/components/typography/RichText/serialize.tsx",
-    "src/components/typography/RichText/nodeFormat.tsx"
+    "src/components/typography/RichText/nodeFormat.tsx",
+    "payload-types.ts",
   ]
 }
