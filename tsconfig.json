@@ -32,9 +32,10 @@
     }
   },
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
@@ -42,6 +43,6 @@
     "src/components/typography/RichText/nodeFormat.tsx",
     "payload-types.ts",
     ".next/types/**/*.ts",
-    "src/app/(payload)/**",
+    "src/app/(payload)/**"
   ]
 }
