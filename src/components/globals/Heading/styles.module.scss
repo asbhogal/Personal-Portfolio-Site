@@ -54,6 +54,11 @@
   flex-direction: column;
   position: absolute;
 
+  a {
+    align-items: center;
+    display: flex;
+  }
+
   @include queries(sm) {
     flex-direction: row;
     justify-content: space-between;

@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import { PaginatedDocs } from 'payload';
 import { useEffect, useState } from 'react';
+import { VscDash } from 'react-icons/vsc';
+import colors from '@/src/styles/colors/index.module.scss';
 import styles from './styles.module.scss';
 import { FadeIn } from '../FadeIn';
 import { Marquee } from '../Marquee';
@@ -58,8 +60,28 @@ export const Heading = ({ headerImage, title }: Props) => {
             />
           </div>
           <div className={styles.linksContainer}>
-            <Link href="/about">- About</Link>
-            <Link href="/work">- Work</Link>
+            <Link href="/about">
+              {
+                windowWidth > 577 && (
+                  <VscDash
+                    size={20}
+                    color={colors.argent}
+                  />
+                )
+              }
+              About
+            </Link>
+            <Link href="/work">
+              {
+                windowWidth > 577 && (
+                  <VscDash
+                    size={20}
+                    color={colors.argent}
+                  />
+                )
+              }
+              Work
+            </Link>
           </div>
         </div>
         <Marquee
@@ -67,10 +89,14 @@ export const Heading = ({ headerImage, title }: Props) => {
           text="Award Winning Creative Developer"
         />
       </FadeIn>
-      <Logo
-        className={styles.logo}
-        width={1000}
-      />
+      {
+        windowWidth > 577 && (
+          <Logo
+            className={styles.logo}
+            width={1000}
+          />
+        )
+      }
     </div>
   );
 };
