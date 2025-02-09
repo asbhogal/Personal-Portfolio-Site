@@ -24,6 +24,7 @@
   position: relative;
 
   @include queries(md) {
+    gap: 1.25rem;
     grid-template-columns: 1fr;
   }
 }
@@ -79,6 +80,10 @@
   &:not(:last-child) {
     border-bottom: .0625rem solid $Khaki;
   }
+
+  @include queries(md) {
+    padding: 0;
+  }
 }
 
 .image {
@@ -93,4 +98,9 @@
   flex-direction: column;
   gap: 1.25rem;
   justify-content: center;
+
+  @include queries(md) {
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+  }
 }
