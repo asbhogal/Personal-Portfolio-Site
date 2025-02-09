@@ -1,19 +1,23 @@
-import { getPayload, PaginatedDocs } from 'payload';
+import React, { Suspense } from 'react';
+import type { PaginatedDocs } from 'payload';
+import { getPayload } from 'payload';
 import configPromise from '@payload-config';
-import { Metadata, ResolvingMetadata } from 'next';
+import type { Metadata, ResolvingMetadata } from 'next';
 import Image from 'next/image';
 import { ProjectShowcaseBlock, TypefaceBlock } from '@/src/components/blocks';
 import { RichText, VisuallyHidden } from '@/src/components/typography';
 import { ArrowDown } from '@/src/components/graphics';
-import { Suspense } from 'react';
+import type { JSX } from 'react';
 import Loading from '@/src/components/globals/Loading';
 import { FadeIn, Spacer } from '@/src/components/globals';
+import type { Project } from '@/payload-types';
 import styles from './styles.module.scss';
 
 interface Props {
   params: Promise<{ slug: string }>
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function generateMetadata({ params }: Props, _: ResolvingMetadata): Promise<Metadata> {
   const { slug } = await params;
 
@@ -32,19 +36,19 @@ export async function generateMetadata({ params }: Props, _: ResolvingMetadata):
   });
 
   return {
-    description: data.docs.find((doc) => doc.slug === slug)?.SEO?.description || '',
+    description: data.docs.find((doc) => doc.slug === slug)?.SEO?.description ?? '',
     title: `${data.docs.find((doc) => doc.slug === slug)?.title} | Aman Singh Bhogal`,
   };
 }
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params }: Props): Promise<JSX.Element> {
   const { slug } = await params;
 
   const payload = await getPayload({
     config: configPromise,
   });
 
-  const data: PaginatedDocs = await payload.find({
+  const data: PaginatedDocs<Project> = await payload.find({
     collection: 'projects',
     limit: 1,
     where: {
@@ -54,21 +58,23 @@ export default async function Page({ params }: Props) {
     },
   });
 
-  const project = data.docs[0];
+  const [project] = data.docs;
 
   return (
     <Suspense fallback={<Loading />}>
       <FadeIn className={styles.pageHeader}>
         <FadeIn>
           <div className={styles.imageContainer}>
-            <Image
-              className={styles.image}
-              width={project.heroImage.width as number}
-              height={project.heroImage.height as number}
-              src={project.heroImage.url}
-              alt={project.heroImage.altText as string}
-              priority
-            />
+            {typeof project.heroImage !== 'string' && (
+              <Image
+                className={styles.image}
+                width={project.heroImage.width ?? 500}
+                height={project.heroImage.height ?? 500}
+                src={project.heroImage.url ?? ''}
+                alt={project.heroImage.altText}
+                priority
+              />
+            )}
           </div>
         </FadeIn>
         <h1>{project.title}</h1>

@@ -1,6 +1,8 @@
+import type { JSX } from 'react';
+import React from 'react';
 import { Link } from '@/src/components/globals';
 
-export default function Page() {
+export default function Page(): JSX.Element {
   return (
     <div>
       <h1>Heading One</h1>

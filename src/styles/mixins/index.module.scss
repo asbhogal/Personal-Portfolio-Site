@@ -20,7 +20,7 @@
 @mixin h3 {
   color: colors(argent);
   font-family: "kepler-3-display-variable", sans-serif;
-  font-size: 6.25rem;
+  font-size: clamp(1.75rem, 0.075rem + 8.375vw, 10.125rem);
   font-variation-settings: "wght" 200, "wdth" 80;
   text-transform: uppercase;
 }

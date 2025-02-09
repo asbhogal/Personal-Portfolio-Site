@@ -5,10 +5,12 @@ import type { DefaultNodeTypes } from '@payloadcms/richtext-lexical';
 import { serializeLexical } from './serialize';
 
 interface Props {
+  className?: string;
   content: Page['content'];
 }
 
 export const RichText: React.FC<Props> = ({
+  className,
   content,
 }) => {
   if (!content) {
@@ -16,7 +18,7 @@ export const RichText: React.FC<Props> = ({
   }
 
   return (
-    <div className="RichTextContainer">
+    <div className={['RichTextContainer', className].filter(Boolean).join(' ')}>
       {!Array.isArray(content)
         && typeof content === 'object'
         && 'root' in content

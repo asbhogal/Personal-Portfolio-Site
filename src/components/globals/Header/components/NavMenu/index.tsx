@@ -1,10 +1,11 @@
 
 'use client';
 
+import React, { useState } from 'react';
 import { IoCloseOutline } from 'react-icons/io5';
 import { constructClassName } from '@/utils/constructClassName';
-import { useState } from 'react';
-import { HeaderMenu } from '@/payload-types';
+import type { JSX } from 'react';
+import type { HeaderMenu } from '@/payload-types';
 import { Link } from '../../../Link';
 import styles from './styles.module.scss';
 import { Button } from '../../../Button';
@@ -15,14 +16,14 @@ interface Props {
   headerMenu: HeaderMenu['headerMenu'];
 }
 
-export const NavMenu = ({ className, headerMenu }: Props) => {
+export const NavMenu = ({ className, headerMenu }: Props): JSX.Element => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   // const openNav = () => {
   //   setIsNavOpen(true);
   // };
 
-  const closeNav = () => {
+  const closeNav = (): void => {
     setIsNavOpen(false);
   };
 
@@ -36,7 +37,7 @@ export const NavMenu = ({ className, headerMenu }: Props) => {
         <ul>
           {headerMenu?.map((headerItem) => (
             <li key={headerItem.id}>
-              <Link href={headerItem.linkUrl || ''}>
+              <Link href={headerItem.linkUrl ?? ''}>
                 {headerItem.linkText}
               </Link>
             </li>

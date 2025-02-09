@@ -41,6 +41,7 @@
     "src/components/typography/RichText/serialize.tsx",
     "src/components/typography/RichText/nodeFormat.tsx",
     "payload-types.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "src/app/(payload)/**",
   ]
 }

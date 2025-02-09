@@ -1,11 +1,14 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
+import type { JSX } from 'react';
 import React from 'react';
+import type { PaginatedDocs } from 'payload';
 import { getPayload } from 'payload';
 import { RichText } from '@/src/components/typography';
 import configPromise from '@payload-config';
 import { AboutBlock } from '@/src/components/blocks';
 import { Logo } from '@/src/components/graphics';
 import { FadeIn } from '@/src/components/globals';
+import type { Page } from '@/payload-types';
 import styles from './styles.module.scss';
 
 export const metadata: Metadata = {
@@ -13,12 +16,12 @@ export const metadata: Metadata = {
   title: 'About | Aman Singh Bhogal',
 };
 
-export default async function Page() {
+export default async function About(): Promise<JSX.Element> {
   const payload = await getPayload({
     config: configPromise,
   });
 
-  const data = await payload.find({
+  const data: PaginatedDocs<Page> = await payload.find({
     collection: 'pages',
     where: {
       title: {
@@ -35,8 +38,10 @@ export default async function Page() {
         <h1 className={styles.title}>{docs[0].title}</h1>
       </FadeIn>
       <FadeIn>
-        {/* @ts-expect-error resolve type mismatch */}
-        <RichText content={docs[0]?.layout?.[0].Content || []} />
+        <RichText
+          className={styles.aboutSummary}
+          content={docs[0]?.content}
+        />
       </FadeIn>
       <div className={styles.aboutContainer}>
         <Logo
@@ -44,8 +49,10 @@ export default async function Page() {
           width={500}
         />
         <FadeIn>
-          {/* @ts-expect-error resolve type mismatch */}
-          <AboutBlock history={docs[0]?.layout?.[1].about} />
+          <AboutBlock history={
+            docs[0]?.layout?.[0].blockName === 'about-block' && 'about' in docs[0]?.layout?.[0] ? docs[0]?.layout?.[0].about : []
+          }
+          />
         </FadeIn>
       </div>
     </div>

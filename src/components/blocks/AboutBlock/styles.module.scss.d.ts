@@ -3,7 +3,7 @@ export declare const container: string;
 export declare const containerInner: string;
 export declare const containerInnerHeader: string;
 export declare const containerOuter: string;
-export declare const date: string;
+export declare const dateContainer: string;
 export declare const khaki: string;
 export declare const smokyBlack: string;
 export declare const stack: string;

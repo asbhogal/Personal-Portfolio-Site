@@ -1,10 +1,12 @@
+import type { JSX } from 'react';
+import React, { Suspense } from 'react';
 import config from '@payload-config';
-import { Project } from '@/payload-types';
-import { getPayload, PaginatedDocs } from 'payload';
-import { Metadata } from 'next';
+import type { Project } from '@/payload-types';
+import type { PaginatedDocs } from 'payload';
+import { getPayload } from 'payload';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Logo } from '@/src/components/graphics';
-import { Suspense } from 'react';
 import Image from 'next/image';
 import Loading from '@/src/components/globals/Loading';
 import styles from './styles.module.scss';
@@ -14,7 +16,7 @@ export const metadata: Metadata = {
   title: 'Work | Aman Singh Bhogal',
 };
 
-export default async function Page() {
+export default async function Page(): Promise<JSX.Element> {
   const payload = await getPayload({
     config,
   });
@@ -40,11 +42,11 @@ export default async function Page() {
               <div className={styles.imageContainer}>
                 {typeof project.heroImage === 'object' && (
                   <Image
-                    width={project.heroImage.width as number}
-                    height={project.heroImage.height as number}
+                    width={project.heroImage.width ?? 500}
+                    height={project.heroImage.height ?? 500}
                     className={styles.image}
                     src={`${project.heroImage.url}`}
-                    alt={project.heroImage.altText as string}
+                    alt={project.heroImage.altText}
                   />
                 )}
               </div>
