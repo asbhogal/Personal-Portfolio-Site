@@ -58,6 +58,10 @@
     transition: opacity .3s;
     visibility: visible;
   }
+
+  @include queries(sm) {
+    margin-bottom: 1.25rem;
+  }
 }
 
 .verticalDivider {

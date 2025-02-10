@@ -36,6 +36,12 @@
   font-style: italic;
   font-variation-settings: "wght" 200, "wdth" 80;
   text-transform: lowercase;
+
+  @include queries(sm) {
+    font-style: normal;
+    font-variation-settings: "wght" 200, "wdth" 85;
+    text-transform: uppercase;
+  }
 }
 
 .RichTextParagraph {
@@ -44,4 +50,8 @@
   line-height: normal;
   text-align: justify;
   text-transform: uppercase;
+
+  @include queries(sm) {
+    text-transform: none;
+  }
 }
