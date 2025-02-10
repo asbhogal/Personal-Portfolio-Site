@@ -19,13 +19,17 @@ export const metadata: Metadata = {
     icon: [
       {
         media: '(prefers-color-scheme: light)',
-        url: '/icons/favicon-dark.svg',
+        url: '/icons/Favicon-Dark-Mode-Version.svg',
       },
       {
         media: '(prefers-color-scheme: dark)',
-        url: '/icons/favicon-light.svg',
+        url: '/icons/Favicon-Light-Mode-Version.svg',
       },
     ],
+  },
+  metadataBase: new URL('https://amansinghbhogal.com/'),
+  openGraph: {
+    images: '/opengraph-image.png',
   },
   title: 'Aman Singh Bhogal | Award Winning Creative Front End Developer',
 };
