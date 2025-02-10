@@ -43,15 +43,17 @@ export const Heading = ({ headerImage, title }: Props): JSX.Element => {
     >
       <Marquee text="Award Winning Creative Developer" />
       <div className={styles.headerContainer}>
-        {
-          windowWidth < 577 ? (
-            <VisuallyHidden>
-              <h1>{title}</h1>
-            </VisuallyHidden>
-          ) : (
-            <h1>{title}</h1>
-          )
-        }
+        <VisuallyHidden>
+          <h1>{title}</h1>
+        </VisuallyHidden>
+        <div className={styles.imageContainer}>
+          <Image
+            src="/images/Home/PageTitle.svg"
+            alt="Page Title"
+            width={1000}
+            height={1000}
+          />
+        </div>
         <div className={styles.headerImageContainer}>
           {isMedia(headerImage) && (
             <Image
@@ -97,7 +99,7 @@ export const Heading = ({ headerImage, title }: Props): JSX.Element => {
         windowWidth > 577 && (
           <Logo
             className={styles.logo}
-            width={1000}
+            width={1200}
           />
         )
       }

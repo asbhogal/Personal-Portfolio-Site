@@ -28,8 +28,7 @@
 
 .headerContainer {
   align-items: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   position: relative;
 
   @include queries(sm) {
@@ -46,9 +45,21 @@
   height: 75dvh;
   position: relative;
   width: 100%;   
-  
-  @include queries(lg) {
-    height: 50dvh;
+}
+
+.imageContainer {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 2000;
+
+  img {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+  }
+  @include queries(sm) {
+    display: none;
   }
 }
 
@@ -56,11 +67,16 @@
   height: 100%;
   object-fit: contain;
   width: 100%;
+
+  @include queries(sm) {
+    object-fit: cover;
+  }
 }
 
 .linksContainer {
   display: flex;
   flex-direction: column;
+  position: absolute;
 
   a {
     align-items: center;
@@ -70,7 +86,6 @@
   @include queries(sm) {
     flex-direction: row;
     justify-content: space-between;
-    position: absolute;
     top: 50%;
     width: 100%;
     z-index: 10;
@@ -78,8 +93,10 @@
 }
 
 .logo{
-  opacity: 0.05;
+  left: 50%;
+  opacity: 0.02;
   position: absolute;
+  transform: translateX(-50%);
   z-index: -1;
 
   @include queries(sm) {
