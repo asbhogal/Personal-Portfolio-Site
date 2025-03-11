@@ -86,15 +86,17 @@ export default async function Page({ params }: Props): Promise<JSX.Element> {
         <RichText content={project.description[0].Content} />
       </FadeIn>
       <Spacer height={30} />
-      <FadeIn>
-        <ArrowDown className={styles.arrowDown} />
-      </FadeIn>
-      <Spacer height={10} />
       {
-        project.typeface && (
-          <FadeIn>
-            <TypefaceBlock typeface={project.typeface} />
-          </FadeIn>
+        project.typeface && project.typeface.length > 0 && (
+          <React.Fragment>
+            <FadeIn>
+              <ArrowDown className={styles.arrowDown} />
+            </FadeIn>
+            <Spacer height={10} />
+            <FadeIn>
+              <TypefaceBlock typeface={project.typeface} />
+            </FadeIn>
+          </React.Fragment>
         )
       }
       {

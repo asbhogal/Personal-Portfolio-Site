@@ -92,7 +92,7 @@ export default async function Home(): Promise<React.ReactNode> {
                 </Link>
               </div>
               <div className={styles.gridContent}>
-                <h3>{project.title}</h3>
+                <h3 className={styles.projectTitle}>{project.title}</h3>
                 <p>{dayjs(project.date).format('MMMM YYYY')}</p>
               </div>
             </div>

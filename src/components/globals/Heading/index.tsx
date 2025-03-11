@@ -52,14 +52,15 @@ export const Heading = ({ headerImage, title }: Props): JSX.Element => {
             alt="Page Title"
             width={1000}
             height={1000}
+            loading="eager"
           />
         </div>
         <div className={styles.headerImageContainer}>
           {isMedia(headerImage) && (
             <Image
               className={styles.headerImage}
-              src={`${headerImage.url}`}
-              alt={headerImage.altText}
+              src="/images/aman-picture.jpg"
+              alt="A side headshot of a young man with a beard looking to the side in black and white"
               width={headerImage.width ?? 1000}
               height={headerImage.height ?? 1000}
               priority

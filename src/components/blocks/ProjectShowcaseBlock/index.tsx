@@ -26,7 +26,7 @@ export const ProjectShowcaseBlock = ({ images }: Props): JSX.Element => (
           perPage: 1,
         },
       },
-      gap: '1rem',
+      gap: '10px',
       perPage: 3,
       type: 'loop',
     }}

@@ -9,5 +9,6 @@ export declare const khaki: string;
 export declare const mainContainer: string;
 export declare const pageHeader: string;
 export declare const projectLink: string;
+export declare const projectTitle: string;
 export declare const smokyBlack: string;
 export declare const verticalDivider: string;

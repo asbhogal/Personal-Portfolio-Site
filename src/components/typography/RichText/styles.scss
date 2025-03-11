@@ -49,9 +49,4 @@
   font-size: clamp(1.5rem, 1.275rem + 1.125vw, 2.625rem);
   line-height: normal;
   text-align: justify;
-  text-transform: uppercase;
-
-  @include queries(sm) {
-    text-transform: none;
-  }
 }
