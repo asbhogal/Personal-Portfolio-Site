@@ -1,9 +1,14 @@
 @use "../../../styles/index.scss" as *;
 
 .marquee {
+  display: none;
   max-width: 100%;
   overflow-x: hidden;
   width: 100dvw;
+
+  @include queries(sm) {
+    display: block;
+  }
 }
 
 .track {

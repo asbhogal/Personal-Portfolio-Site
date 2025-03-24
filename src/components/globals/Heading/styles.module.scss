@@ -27,12 +27,15 @@
 }
 
 .headerContainer {
-  align-items: center;
+  align-items: flex-end;
   display: flex;
+  height: calc(100dvh - 5rem);
+  margin-bottom: 2rem;
   position: relative;
 
   @include queries(sm) {
     grid-template-columns: 1fr;
+    margin-bottom: 0;
     width: 100%;
 
     h1 {
@@ -41,31 +44,15 @@
   }
 }
 
-.headerImageContainer {
-  height: 75dvh;
-  position: relative;
-  width: 100%;   
-}
-
-.imageContainer {
+.headerImageContainer {   
   height: 100%;
-  position: absolute;
+  position: relative;
   width: 100%;
-  z-index: 2000;
-
-  img {
-    height: 100%;
-    object-fit: contain;
-    width: 100%;
-  }
-  @include queries(sm) {
-    display: none;
-  }
 }
 
 .headerImage {
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
 
   @include queries(sm) {

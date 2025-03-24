@@ -10,7 +10,6 @@ import type { Media } from '@/payload-types';
 import styles from './styles.module.scss';
 import { Marquee } from '../Marquee';
 import { Link } from '../Link';
-import { Logo } from '../../graphics';
 import { VisuallyHidden } from '../../typography';
 
 interface Props {
@@ -43,18 +42,15 @@ export const Heading = ({ headerImage, title }: Props): JSX.Element => {
     >
       <Marquee text="Award Winning Creative Developer" />
       <div className={styles.headerContainer}>
-        <VisuallyHidden>
-          <h1>{title}</h1>
-        </VisuallyHidden>
-        <div className={styles.imageContainer}>
-          <Image
-            src="/images/Home/PageTitle.svg"
-            alt="Page Title"
-            width={1000}
-            height={1000}
-            loading="eager"
-          />
-        </div>
+        {
+          windowWidth >= 577 ? (
+            <h1>{title}</h1>
+          ) : (
+            <VisuallyHidden>
+              <h1>{title}</h1>
+            </VisuallyHidden>
+          )
+        }
         <div className={styles.headerImageContainer}>
           {isMedia(headerImage) && (
             <Image
@@ -96,14 +92,6 @@ export const Heading = ({ headerImage, title }: Props): JSX.Element => {
         direction="right"
         text="Award Winning Creative Developer"
       />
-      {
-        windowWidth > 577 && (
-          <Logo
-            className={styles.logo}
-            width={1200}
-          />
-        )
-      }
     </div>
   );
 };
