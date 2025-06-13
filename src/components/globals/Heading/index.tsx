@@ -55,7 +55,7 @@ export const Heading = ({ headerImage, title }: Props): JSX.Element => {
           {isMedia(headerImage) && (
             <Image
               className={styles.headerImage}
-              src="/images/aman-picture.jpg"
+              src="/images/aman-picture.jpeg"
               alt="A side headshot of a young man with a beard looking to the side in black and white"
               width={headerImage.width ?? 1000}
               height={headerImage.height ?? 1000}
