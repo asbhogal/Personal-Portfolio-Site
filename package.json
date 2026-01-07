@@ -62,7 +62,7 @@
     "sharp": "0.32.6"
   },
   "devDependencies": {
-    "@innovixx/eslint-config": "3.0.1",
+    "@innovixx/eslint-config": "3.0.6",
     "@playwright/test": "^1.48.2",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.17.6",

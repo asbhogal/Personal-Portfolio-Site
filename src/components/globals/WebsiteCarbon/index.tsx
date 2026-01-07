@@ -32,7 +32,7 @@ export const WebsiteCarbon = async (): Promise<JSX.Element> => {
     cache: 'force-cache',
   });
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
+
   const json = await data.json() as unknown as WebsiteCarbonData;
 
   return (
@@ -48,7 +48,7 @@ export const WebsiteCarbon = async (): Promise<JSX.Element> => {
           target="_blank"
         >
           { }
-          {typeof json.statistics.co2.grid.grams === 'number' ? json.statistics.co2.grid.grams.toFixed(2) : ''}
+          {typeof json.statistics?.co2.grid.grams === 'number' ? json.statistics.co2.grid.grams.toFixed(2) : ''}
           g
           {' '}
           of  CO₂
