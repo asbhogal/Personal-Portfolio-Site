@@ -27,6 +27,8 @@
   align-items: flex-end;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  position: relative;
+  z-index: 5;
 
   @include queries(md) {
     grid-template-columns: 1fr;
