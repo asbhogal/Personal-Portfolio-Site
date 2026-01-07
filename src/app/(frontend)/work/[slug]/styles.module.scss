@@ -1,14 +1,19 @@
 @use '../../../../styles/index.scss' as *;
 @use 'sass:color';
 
+.imageWrapper {
+  height: 100%;
+  width: 100%;
+}
+
 .imageContainer {
-  height: 50%;
+  height: 100%;
   width: 100%;
 }
 
 .image {
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
 }
 
@@ -32,6 +37,10 @@
 
   @include queries(md) {
     grid-template-columns: 1fr;
+
+    p {
+      font-size: 1.125rem !important;
+    }
   }
 }
 

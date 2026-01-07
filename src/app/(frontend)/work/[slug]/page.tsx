@@ -17,7 +17,7 @@ interface Props {
   params: Promise<{ slug: string }>
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 export async function generateMetadata({ params }: Props, _: ResolvingMetadata): Promise<Metadata> {
   const { slug } = await params;
 
@@ -63,7 +63,7 @@ export default async function Page({ params }: Props): Promise<JSX.Element> {
   return (
     <Suspense fallback={<Loading />}>
       <FadeIn className={styles.pageHeader}>
-        <FadeIn>
+        <FadeIn className={styles.imageWrapper}>
           <div className={styles.imageContainer}>
             {typeof project.heroImage !== 'string' && (
               <Image
